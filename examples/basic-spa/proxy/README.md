@@ -153,10 +153,10 @@ Follow these steps to deploy your application to Netlify. The deployed site can 
       ```
       - Sample configuration for use within the context of [xmcloud-foundation-head](https://github.com/sitecorelabs/xmcloud-foundation-head): 
       ```
-      Base directory: /headapps/spa-starters/
+      Base directory: /examples/basic-spa/
       Build command: npm run build
-      Publish directory:  /headapps/spa-starters/proxy/dist
-      Functions directory:  /headapps/spa-starters/proxy/src
+      Publish directory:  /examples/basic-spa/proxy/dist
+      Functions directory:  /examples/basic-spa/proxy/src
       ```
    NOTE: If `proxy/dist` folder is not picked up properly by Netlify make sure that the `PROXY_BUILD_PATH` env variable is unix style path e.g. `../proxy/dist`
 

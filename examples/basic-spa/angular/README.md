@@ -69,7 +69,7 @@ npm install
 npm run start
 ```
 
-For additional information on how to set up and run a SPA app in production mode against an XM Cloud instance you can check the [spa-starters monorepo](https://github.com/sitecorelabs/xmcloud-foundation-head/tree/main/headapps/spa-starter) in the XM Cloud Foundation Starter Kit.
+For additional information on how to set up and run a SPA app in production mode against an XM Cloud instance you can check the [spa-starters monorepo](https://github.com/sitecorelabs/xmcloud-foundation-head/tree/main/examples/basic-spa) in the XM Cloud Foundation Starter Kit.
 
 ## Environment Variables
 
