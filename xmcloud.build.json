@@ -1,7 +1,7 @@
 {
     "renderingHosts": {
       "nextjsstarter": {
-        "path": "./headapps/nextjs-starter",
+        "path": "./examples/bacis-nextjs",
         "nodeVersion": "22.11.0",
         "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
         "enabled": true,
@@ -10,7 +10,7 @@
         "runCommand": "next:start"
       },
       "angularstarter": {
-        "path": "./headapps/spa-starters",
+        "path": "./examples/basic-angular",
         "nodeVersion": "22.11.0",
         "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
         "enabled": false,
