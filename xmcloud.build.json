@@ -17,7 +17,7 @@
         "type": "sxa",
         "buildCommand": "install-build:angular",
         "runCommand": "start:angular"
-      }
+      }i
     },
     "postActions": {
         "actions":{

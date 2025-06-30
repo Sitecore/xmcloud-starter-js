@@ -1,0 +1,43 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+exports.default = {
+  width: {
+    "0": "var(--width-0)",
+    "1": "var(--width-1)",
+    "2": "var(--width-2)",
+    "3": "var(--width-3)",
+    "4": "var(--width-4)",
+    "5": "var(--width-5)",
+    "6": "var(--width-6)",
+    "7": "var(--width-7)",
+    "8": "var(--width-8)",
+    "9": "var(--width-9)",
+    "10": "var(--width-10)",
+    "11": "var(--width-11)",
+    "12": "var(--width-12)",
+    "14": "var(--width-14)",
+    "16": "var(--width-16)",
+    "20": "var(--width-20)",
+    "24": "var(--width-24)",
+    "28": "var(--width-28)",
+    "32": "var(--width-32)",
+    "36": "var(--width-36)",
+    "40": "var(--width-40)",
+    "44": "var(--width-44)",
+    "48": "var(--width-48)",
+    "52": "var(--width-52)",
+    "56": "var(--width-56)",
+    "60": "var(--width-60)",
+    "64": "var(--width-64)",
+    "72": "var(--width-72)",
+    "80": "var(--width-80)",
+    "96": "var(--width-96)",
+    "0-5": "var(--width-0-5)",
+    "1-5": "var(--width-1-5)",
+    "2-5": "var(--width-2-5)",
+    "3-5": "var(--width-3-5)",
+    px: "var(--width-px)",
+  },
+};

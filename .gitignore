@@ -42,3 +42,9 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
+
+#Ignore system files
+.DS_Store
+
+# VS Code settings
+.vscode/

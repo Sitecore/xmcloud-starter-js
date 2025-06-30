@@ -1,0 +1,43 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+exports.default = {
+  spacing: {
+    "0": "var(--spacing-0)",
+    "1": "var(--spacing-1)",
+    "2": "var(--spacing-2)",
+    "3": "var(--spacing-3)",
+    "4": "var(--spacing-4)",
+    "5": "var(--spacing-5)",
+    "6": "var(--spacing-6)",
+    "7": "var(--spacing-7)",
+    "8": "var(--spacing-8)",
+    "9": "var(--spacing-9)",
+    "10": "var(--spacing-10)",
+    "11": "var(--spacing-11)",
+    "12": "var(--spacing-12)",
+    "14": "var(--spacing-14)",
+    "16": "var(--spacing-16)",
+    "20": "var(--spacing-20)",
+    "24": "var(--spacing-24)",
+    "28": "var(--spacing-28)",
+    "32": "var(--spacing-32)",
+    "36": "var(--spacing-36)",
+    "40": "var(--spacing-40)",
+    "44": "var(--spacing-44)",
+    "48": "var(--spacing-48)",
+    "52": "var(--spacing-52)",
+    "56": "var(--spacing-56)",
+    "60": "var(--spacing-60)",
+    "64": "var(--spacing-64)",
+    "72": "var(--spacing-72)",
+    "80": "var(--spacing-80)",
+    "96": "var(--spacing-96)",
+    px: "var(--spacing-px)",
+    "0-5": "var(--spacing-0-5)",
+    "1-5": "var(--spacing-1-5)",
+    "2-5": "var(--spacing-2-5)",
+    "3-5": "var(--spacing-3-5)",
+  },
+};

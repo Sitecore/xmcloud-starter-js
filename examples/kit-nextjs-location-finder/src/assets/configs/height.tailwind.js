@@ -1,0 +1,43 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+exports.default = {
+  height: {
+    "0": "var(--height-0)",
+    "1": "var(--height-1)",
+    "2": "var(--height-2)",
+    "3": "var(--height-3)",
+    "4": "var(--height-4)",
+    "5": "var(--height-5)",
+    "6": "var(--height-6)",
+    "7": "var(--height-7)",
+    "8": "var(--height-8)",
+    "9": "var(--height-9)",
+    "10": "var(--height-10)",
+    "11": "var(--height-11)",
+    "12": "var(--height-12)",
+    "14": "var(--height-14)",
+    "16": "var(--height-16)",
+    "20": "var(--height-20)",
+    "24": "var(--height-24)",
+    "28": "var(--height-28)",
+    "32": "var(--height-32)",
+    "36": "var(--height-36)",
+    "40": "var(--height-40)",
+    "44": "var(--height-44)",
+    "48": "var(--height-48)",
+    "52": "var(--height-52)",
+    "56": "var(--height-56)",
+    "60": "var(--height-60)",
+    "64": "var(--height-64)",
+    "72": "var(--height-72)",
+    "80": "var(--height-80)",
+    "96": "var(--height-96)",
+    "0-5": "var(--height-0-5)",
+    "1-5": "var(--height-1-5)",
+    "2-5": "var(--height-2-5)",
+    "3-5": "var(--height-3-5)",
+    px: "var(--height-px)",
+  },
+};
