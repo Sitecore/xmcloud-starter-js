@@ -19,25 +19,6 @@ interface ArticleHeaderParams {
   [key: string]: any; // eslint-disable-line
 }
 
-type ReferenceField = {
-  id: string;
-  name: string;
-  url?: string;
-  displayName?: string;
-  fields?: {
-    [key: string]: Field | ReferenceField | null;
-  };
-};
-
-type AuthorReferenceField = ReferenceField & {
-  fields: PersonItem;
-};
-
-type AuthorItemFields = {
-  name: Field<string>;
-  jobTitle: Field<string>;
-};
-
 interface ArticleHeaderFields {
   imageRequired?: ImageField;
   eyebrowOptional?: Field<string>;
