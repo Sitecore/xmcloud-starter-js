@@ -17,7 +17,34 @@
         "type": "sxa",
         "buildCommand": "install-build:angular",
         "runCommand": "start:angular"
-      }i
+      },
+      "kit-nextjs-article-starter": {
+        "path": "./headapps/site3",
+        "nodeVersion": "22.11.0",
+        "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+        "enabled": true,
+        "type": "sxa",
+        "buildCommand": "install-build",
+        "runCommand": "next:start"
+      },
+      "kit-nextjs-location-starter": {
+        "path": "./headapps/site2",
+        "nodeVersion": "22.11.0",
+        "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+        "enabled": true,
+        "type": "sxa",
+        "buildCommand": "install-build",
+        "runCommand": "next:start"
+      },
+      "kit-nextjs-product-starter": {
+        "path": "./headapps/site1",
+        "nodeVersion": "22.11.0",
+        "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+        "enabled": true,
+        "type": "sxa",
+        "buildCommand": "install-build",
+        "runCommand": "next:start"
+      }  
     },
     "postActions": {
         "actions":{

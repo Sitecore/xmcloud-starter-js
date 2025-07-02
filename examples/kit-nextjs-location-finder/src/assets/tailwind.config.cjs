@@ -1,33 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-function gcd(a, b) {
-    return b === 0 ? a : gcd(b, a % b);
-}
-function generateFractionsWithDuplicates(maxDenominator) {
-    const allFractions = {};
-    const uniqueFractionsSet = {};
-    /*
-we are creating a list of all possible fractions with a denominator up to maxDenominator
-if we want to just output unique fractions we can use unique fraction instead of all fractions
-*/
-    for (let denominator = 2; denominator <= maxDenominator; denominator++) {
-        for (let numerator = 1; numerator < denominator; numerator++) {
-            const fullFraction = `${numerator}/${denominator}`;
-            allFractions[`${numerator}/${denominator}`] = eval(fullFraction) * 100 + '%'; // Add the unsimplified fraction
-
-            // Simplify the fraction
-            const divisor = gcd(numerator, denominator);
-            const simplified = `${numerator / divisor}/${denominator / divisor}`;
-            uniqueFractionsSet[simplified] = eval(simplified) * 100 + '%'; // Add the unsimplified fraction
-        }
-    }
-    return {
-        allFractions: allFractions, // Full list of unsimplified fractions
-        uniqueFractions: uniqueFractionsSet, // List of unique simplified fractions
-    };
-}
-const { allFractions } = generateFractionsWithDuplicates(16);
-
 // "Decoloring" prose
 const proseVars = [
     '--tw-prose-body',
@@ -112,9 +84,6 @@ module.exports = {
                     from: { opacity: '0' },
                     to: { opacity: '1' },
                 },
-            },
-            spacing: {
-                ...allFractions,
             },
             typography: ({ theme }) => ({
                 DEFAULT: {
