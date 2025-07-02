@@ -1,0 +1,28 @@
+﻿---
+ID: "b6ecbd5f-cbb1-46d6-9b24-c0f6a8a7fe45"
+Parent: "26d9bbeb-8766-40c6-ad67-83c9da93fa14"
+Template: "a9919790-3389-4fc2-abc8-24f73c847c8e"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Pages/Detail Page/$name"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{1373DF0D-5BBC-4C71-872C-B954D6BA3327}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240326T164515Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "97a3059c-da8f-4524-859b-0a45d2c2daad"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240326T171050Z

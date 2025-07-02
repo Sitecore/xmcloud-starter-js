@@ -1,0 +1,47 @@
+﻿---
+ID: "b7622f66-6da0-4527-ab02-11d4579c87ec"
+Parent: "bc1512d7-afb1-44be-afd7-60392ce909e7"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: "/sitecore/templates/Project/click-click-launch/Site/JSS Settings"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/gearwheels.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {EC848505-D30C-4BDC-A0AA-7CC9D320085E}
+    {6175F4C7-F87F-4F7F-928E-4C5CA5DFFAF4}
+    {CBC14160-BED0-4AA2-9387-4C13179205B9}
+    {2AF2DC09-057F-48C2-A9F4-9779ADF83659}
+    {30869218-C3AD-40F9-BCFF-6837127ECD8F}
+    {A7228B46-610D-4A17-9F61-649F3A30AAAE}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{C924E228-9E10-470A-86F8-EDFE21B6F79E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240304T205006Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "25850a39-c74a-4499-8db3-ea0eaee6ca5c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240401T151320Z

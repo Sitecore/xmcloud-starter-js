@@ -1,0 +1,31 @@
+﻿---
+ID: "da211e1d-6c70-47e4-8407-2f91f33247fc"
+Parent: "c7c393da-945f-4d98-b482-b0435360a420"
+Template: "c3b037a0-46e5-4b67-ac7a-a144b962a56f"
+Path: "/sitecore/layout/Placeholder Settings/Project/click-click-launch/Page Structure/Container 60 40"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240325T202629Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5a8f2301-93f1-4e28-9f3e-418e2865347e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240325T202629Z

@@ -1,0 +1,48 @@
+﻿---
+ID: "ff8a6e05-d844-49f4-b4df-96ed215dfc06"
+Parent: "b95141e4-c224-468d-973d-a77ff8cea41e"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Page Structure/Page Structure Placeholder Settings/$name/Container 70"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "container-seventy-{*}"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: |
+    {1D2998C5-170A-433A-B1EF-90ADB86BB594}
+    {E7B031D3-161F-4391-8B23-785FC8445D1E}
+    {D806DDF7-39A7-4A6D-8E0A-D138BC53845D}
+    {945776A1-8F30-4749-A668-4FCC434A60ED}
+    {50B36874-8C4E-4958-9DD6-8B95C6AFD09A}
+    {A563BE98-85FA-4DD5-94BD-9D9C937799F6}
+    {7CB831E8-C889-4193-B822-A1131CB0B755}
+    {B4CBCB8F-9096-4888-AC6E-34DF687276FB}
+    {C78595D2-0892-4EC6-9FF8-B71EDBF17861}
+    {0E00B26F-4E11-4536-B814-1F0D72A4C058}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250312T203253Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\dylan.young@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\dylan.young@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bc1d8240-7018-490e-87ff-a139e6489e73"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\dylan.young@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250313T005331Z

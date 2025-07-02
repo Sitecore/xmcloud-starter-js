@@ -1,0 +1,40 @@
+﻿---
+ID: "d36c6bab-a009-4143-be2a-3b952ec6c562"
+Parent: "c0afa130-cf65-42ec-91dd-7b634bc03c34"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Page Structure/Available Headless Page Structure Renderings/$name"
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {02340885-3692-4CAD-AC11-ED61206501A3}
+    {E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}
+    {E164E3B5-0FF9-438A-A947-63F1CDD95B78}
+    {1D2998C5-170A-433A-B1EF-90ADB86BB594}
+    {4D4B9940-6E2D-452D-942B-778FF7C248B6}
+    {7DCDED99-2841-4638-AD8F-9C3312F4C661}
+    {688FA7E2-563E-4BA0-B3A8-6EC445C9F78F}
+    {20F3EF33-0762-45C4-83C7-0F56A384FFCB}
+    {3F9CCCB1-7BD7-4245-A3E9-91ED43575D98}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171113T104335Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4954acd7-8281-4d5d-acab-d7df5a8780ec"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\dylan.young@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250312T202659Z

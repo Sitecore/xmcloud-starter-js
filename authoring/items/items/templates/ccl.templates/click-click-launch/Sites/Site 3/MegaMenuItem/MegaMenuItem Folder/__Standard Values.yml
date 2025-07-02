@@ -1,0 +1,36 @@
+﻿---
+ID: "2860b187-2310-4de8-b5c8-bbca7e01d03a"
+Parent: "0dc44a7b-37bb-44e4-9a6e-4f15b5e373eb"
+Template: "0dc44a7b-37bb-44e4-9a6e-4f15b5e373eb"
+Path: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/MegaMenuItem/MegaMenuItem Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {6FE9F9E9-5ECB-4333-B270-326B701B5352}
+    {0DC44A7B-37BB-44E4-9A6E-4F15B5E373EB}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "28b18641-bd53-4855-a1f9-480be00f542c"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "75d100cf-a6a4-4d9a-b602-e9b11d31c0e8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250612T093818Z

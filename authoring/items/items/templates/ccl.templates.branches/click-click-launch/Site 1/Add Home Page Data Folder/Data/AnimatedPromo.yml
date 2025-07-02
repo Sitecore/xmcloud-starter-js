@@ -1,0 +1,45 @@
+﻿---
+ID: "52e1d4e1-91e3-447c-941c-6b04bbf01dd9"
+Parent: "9da02cd6-13d0-41c5-8d24-620d673cd3c0"
+Template: "bd372d9d-6e4f-4ae9-a54c-dbc2acdebe2a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Site 1/Add Home Page Data Folder/Data/AnimatedPromo"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T202707Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
+      Hint: image
+      Value: |
+        <image mediaid="e0d46c29-cd99-4def-932f-430eb4335f54" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e0bf348c-bb30-4178-8cb5-fb021b153e28"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "c00d4bd2-a452-4067-a861-e8c6d47201a7"
+      Hint: description
+      Value: "Stay in the loop with our Green Horizon newsletter, where we deliver bite-sized insights into the latest green energy solutions."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250410T134134Z
+    - ID: "da7db0f2-08eb-47c5-af07-ed12a1e998db"
+      Hint: title
+      Value: Start your career at Solterra & Co.
+    - ID: "e9e9c847-e0f0-497d-8e41-5211a087029a"
+      Hint: primaryLink
+      Value: |
+        <link linktype="external" url="www.sitecore.com" target="_blank" text="Explore Careers"/>

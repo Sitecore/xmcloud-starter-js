@@ -1,0 +1,36 @@
+﻿---
+ID: "a9432a3e-5a44-4689-a5ed-05dddad9ea03"
+Parent: "91f1954f-86d9-4859-9885-3e42e8d8a2a9"
+Template: "91f1954f-86d9-4859-9885-3e42e8d8a2a9"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Hero ST/HeroST Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {C241957A-B7CC-4BDD-962F-BF8652ED595C}
+    {91F1954F-86D9-4859-9885-3E42E8D8A2A9}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "892d8795-7f15-48b3-ae40-c3afc0477895"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "23c2d216-423e-48dc-bd90-bf696c378f17"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250527T071111Z

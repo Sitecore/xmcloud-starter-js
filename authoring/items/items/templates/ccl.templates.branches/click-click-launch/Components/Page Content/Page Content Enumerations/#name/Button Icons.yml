@@ -1,0 +1,23 @@
+﻿---
+ID: "6a629f76-e58f-4f5e-98b3-0b0517a8c536"
+Parent: "8ca91001-85be-4a4d-946e-1e7c989c2833"
+Template: "b04ab8f4-2bdc-42d0-b8e1-87186dc8bf9c"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Page Content/Page Content Enumerations/$name/Button Icons"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240920T143506Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "109dab00-86fd-457a-8acc-cca0f32eec51"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20241112T202630Z

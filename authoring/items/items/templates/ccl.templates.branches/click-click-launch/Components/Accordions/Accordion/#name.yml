@@ -1,0 +1,23 @@
+﻿---
+ID: "4d283b5c-2806-4424-8442-91f65f125e0e"
+Parent: "cf2ad172-df62-4f0f-b90f-8241b4f1fd40"
+Template: "4dddcbac-a737-4c55-8ec8-508f1550d44a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Accordions/Accordion/$name"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250214T201505Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "53eda6d5-da0d-4aa1-9098-d2dfb19852bb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250214T201505Z

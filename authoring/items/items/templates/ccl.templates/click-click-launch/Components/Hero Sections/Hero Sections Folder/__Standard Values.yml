@@ -1,0 +1,33 @@
+﻿---
+ID: "3d9e0887-878b-42ed-8d7a-8605ba645106"
+Parent: "7a962f97-5083-4559-8b83-e2b8a6337e6d"
+Template: "7a962f97-5083-4559-8b83-e2b8a6337e6d"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Hero Sections/Hero Sections Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {00F06C82-8BC5-498E-BD1D-E5A6AD827B61}
+    {7A962F97-5083-4559-8B83-E2B8A6337E6D}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eb12059c-66f4-48ae-b0ff-041febe7594d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250214T173740Z

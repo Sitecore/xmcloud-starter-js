@@ -1,0 +1,35 @@
+﻿---
+ID: "b2103c94-9fbf-4bc6-94db-5eb8bf8ae55a"
+Parent: "875e30d2-2da2-4940-9619-bd334844ae17"
+Template: "754d4fd3-aa54-46d0-84bd-0bb43f8aeba0"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Site 2/Add Products/Products/Aero/Data/Page Header 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250404T184941Z
+    - ID: "31ada09a-aeeb-4807-9ad2-eccd3ad7e40a"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="ec4f5431-5a7a-4025-950d-a3cfd6d0c944" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "08d95e7d-1311-4eae-b42f-00eda3507349"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250404T185000Z

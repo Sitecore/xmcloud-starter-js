@@ -1,0 +1,38 @@
+﻿---
+ID: "4a83b71b-3963-4555-811d-78457b114b98"
+Parent: "5956c1a0-d244-4d7f-8dd5-c466271cd51f"
+Template: "4507e405-6110-4e56-af58-27b65b58268f"
+Path: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/FeatureBanner/FeatureBanner Branch/$name/Feature1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21aae250-ac81-46a1-a336-29a030bfc511"
+      Hint: heading
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250212T201644Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "477ab37e-fe97-4308-9070-462d9277a957"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250602T125808Z
+    - ID: "f8f97c78-419a-431b-82e7-e46a39c7393f"
+      Hint: image
+      Value: |
+        <image mediaid="{9B0311DC-F62F-4DB5-BAC3-0040BBFC7370}" />

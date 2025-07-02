@@ -1,0 +1,35 @@
+﻿---
+ID: "80689a1c-78ee-4fd2-82e8-c1a5383bc298"
+Parent: "abb2ac17-b211-4332-96d4-87588b7735d1"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Page Content/Available Headless Page Content Renderings/$name"
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {9C6D53E3-FE57-4638-AF7B-6D68304C7A94}
+    {0E00B26F-4E11-4536-B814-1F0D72A4C058}
+    {14CA65A5-8661-4195-AC0E-51C0E58C695D}
+    {D890160D-BD57-42EF-9FBD-F9666F385004}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171113T104335Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "91e25677-5c55-4df1-8ad4-a6a0ee268e1b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\minyie.diaz@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250305T203945Z

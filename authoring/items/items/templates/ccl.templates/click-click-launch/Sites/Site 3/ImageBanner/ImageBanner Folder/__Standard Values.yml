@@ -1,0 +1,36 @@
+﻿---
+ID: "83567595-1104-4e23-b8fc-cc66c7fce777"
+Parent: "141a1fa1-0d12-4cf2-875e-a78fdab36b01"
+Template: "141a1fa1-0d12-4cf2-875e-a78fdab36b01"
+Path: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/ImageBanner/ImageBanner Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {B754CB40-D82D-46E5-B001-E7F4434FD399}
+    {141A1FA1-0D12-4CF2-875E-A78FDAB36B01}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "699209f4-3c31-4159-bb77-141f683098af"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "721eb1a5-ad9c-4c50-beb4-5343e2a5f1f0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250604T125701Z

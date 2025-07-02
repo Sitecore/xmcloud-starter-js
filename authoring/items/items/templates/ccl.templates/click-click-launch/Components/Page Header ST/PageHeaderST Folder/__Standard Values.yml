@@ -1,0 +1,36 @@
+﻿---
+ID: "4d586abb-2a69-4080-826a-872fd56eb3fd"
+Parent: "13af1218-0a09-4b54-a7a1-b49070afd0e3"
+Template: "13af1218-0a09-4b54-a7a1-b49070afd0e3"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Page Header ST/PageHeaderST Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {C2DC5C8B-6B22-4BB3-BDC5-01BFC65E3C53}
+    {13AF1218-0A09-4B54-A7A1-B49070AFD0E3}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "605c5ce2-0e32-460c-ae0a-d9f6871c7c31"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b04c3391-0de1-41fd-821f-f0ff8961878b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250523T080456Z

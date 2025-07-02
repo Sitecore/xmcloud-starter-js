@@ -1,0 +1,43 @@
+﻿---
+ID: "bbf4f50e-f3cd-42f9-8f42-8ec0622c4f7a"
+Parent: "36fbcc76-dfb1-4e92-81d1-291f205b40b4"
+Template: "f24978e9-cab5-4a7f-a836-d423ff20b830"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Site 2/Add Partial Designs/Global/Footer/Data/Global Footer/Instagram"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 93
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250316T004239Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\minyie.diaz@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\minyie.diaz@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b7649eb2-3bea-4aa5-9054-a5aa8ff64bf2"
+    - ID: "9eb14315-948f-4ada-b8e9-029f42c6fdca"
+      Hint: link
+      Value: |
+        <link linktype="external" url="https://instagram.com" text="Instagram"/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\claudia.pereira@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250317T210348Z
+    - ID: "e11f29f8-4940-4273-962a-5c598a9dc6bf"
+      Hint: socialIcon
+      Value: |
+        <image mediaid="83adda15-d97f-4b76-a90c-6a639ca903a8" />

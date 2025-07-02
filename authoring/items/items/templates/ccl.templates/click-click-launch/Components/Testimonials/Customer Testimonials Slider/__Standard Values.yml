@@ -1,0 +1,27 @@
+﻿---
+ID: "dc998b88-ef34-4688-9db3-be6bfb9dcae7"
+Parent: "715d20bd-471b-4d65-a30b-d3b58c8b997d"
+Template: "715d20bd-471b-4d65-a30b-d3b58c8b997d"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Testimonials/Customer Testimonials Slider/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{FD50AD08-3773-4AD8-AFE7-A2C3DC34AFF0}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20111206T092520Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e86fc02c-c9d7-45bd-9143-e8c0e75f7980"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250213T213138Z

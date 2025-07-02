@@ -1,0 +1,23 @@
+﻿---
+ID: "e74e8704-4b1e-4f06-a21b-72334db63638"
+Parent: "d65d917d-0e12-4545-b3fc-4fc8df5490cb"
+Template: "d65d917d-0e12-4545-b3fc-4fc8df5490cb"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Page Headers/Rendering Parameters/Hero Parameters/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211020T140508Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a978be8e-ca85-4a92-98aa-654748fe3cfe"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250130T202636Z
