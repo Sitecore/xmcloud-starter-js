@@ -1,24 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { GraphQLRobotsService } from '@sitecore-jss/sitecore-jss-nextjs';
-import { siteResolver } from 'lib/site-resolver';
-import clientFactory from 'lib/graphql-client-factory';
+import { RobotsMiddleware } from '@sitecore-content-sdk/nextjs/middleware';
+import scClient from 'lib/sitecore-client';
 
-const robotsApi = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
-  res.setHeader('Content-Type', 'text/plain');
+/**
+ * API route for serving robots.txt
+ *
+ * This Next.js API route generates and returns the robots.txt content dynamically
+ * based on the resolved site name. It is commonly
+ * used by search engine crawlers to determine crawl and indexing rules.
+ */
 
-  // Resolve site based on hostname
-  const hostName = req.headers['host']?.split(':')[0] || 'localhost';
-  const site = siteResolver.getByHost(hostName);
+// Wire up the RobotsMiddleware handler
+const handler = new RobotsMiddleware(scClient).getHandler();
 
-  // create robots graphql service
-  const robotsService = new GraphQLRobotsService({
-    clientFactory,
-    siteName: site.name,
-  });
-
-  const robotsResult = await robotsService.fetchRobots();
-
-  return res.status(200).send(robotsResult);
-};
-
-export default robotsApi;
+export default handler;
