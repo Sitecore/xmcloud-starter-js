@@ -3,11 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { MediaSectionProps } from './media-section.props';
-import {
-  useSitecore,
-  ImageField,
-  LayoutServicePageState,
-} from '@sitecore-content-sdk/nextjs';
+import { useSitecore, ImageField, LayoutServicePageState } from '@sitecore-content-sdk/nextjs';
 import { getImageProps } from 'next/image';
 import { cn } from '@/lib/utils';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
