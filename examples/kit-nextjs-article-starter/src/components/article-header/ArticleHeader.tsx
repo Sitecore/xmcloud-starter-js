@@ -31,8 +31,8 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields }) => {
   const [copySuccess, setCopySuccess] = useState(false);
   const [forceCollapse] = useState(true);
   const copyNotificationRef = useRef<HTMLDivElement>(null);
-  const { sitecoreProvider } = useSitecore();
-  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
   const { t } = useI18n();
   const dictionary = {
     ARTICLE_HEADER_BACKTONEWS: t(dictionaryKeys.ARTICLE_HEADER_BACKTONEWS),

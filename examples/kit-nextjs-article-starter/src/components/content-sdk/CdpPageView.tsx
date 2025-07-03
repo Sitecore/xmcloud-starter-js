@@ -12,7 +12,7 @@ import { JSX } from 'react';
  */
 const CdpPageView = (): JSX.Element => {
   const {
-    sitecoreProvider: { pageState, route, variantId, site },
+    pageContext: { pageState, route, variantId, site },
   } = useSitecore();
 
   /**

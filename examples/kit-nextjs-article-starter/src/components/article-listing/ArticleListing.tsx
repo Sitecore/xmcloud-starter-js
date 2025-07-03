@@ -21,8 +21,8 @@ export const Default: React.FC<ArticleListingProps> = ({
   isPageEditing: propIsEditing,
 }) => {
   const { titleOptional, descriptionOptional, linkOptional, featuredContent } = fields;
-  const { sitecoreProvider } = useSitecore();
-  const contextIsEditing = sitecoreProvider?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const contextIsEditing = pageContext?.pageEditing ?? false;
 
   // Use the prop value if provided, otherwise fall back to the context value
   const isPageEditing = propIsEditing !== undefined ? propIsEditing : contextIsEditing;

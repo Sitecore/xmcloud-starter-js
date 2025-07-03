@@ -11,9 +11,9 @@ import { cn } from '@/lib/utils';
 export const Default: React.FC<Container7030Props> = (props) => {
   const { rendering, left, right } = props;
 
-  const { sitecoreProvider } = useSitecore();
+  const { pageContext } = useSitecore();
 
-  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   const leftPlaceholders = getContainerPlaceholderProps('container-seventy-left', props.params);
   const rightPlaceholders = getContainerPlaceholderProps('container-thirty-right', props.params);

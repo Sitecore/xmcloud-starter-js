@@ -10,46 +10,33 @@ type PageContentProps = {
   fields: Fields;
 };
 
-type ComponentContentProps = {
-  id: string;
-  styles: string;
-  children: JSX.Element;
-};
-
-const ComponentContent = (props: ComponentContentProps) => {
-  const id = props.id;
-  return (
-    <div className={`component content ${props.styles}`} id={id ? id : undefined}>
-      <div className="component-content">
-        <div className="field-content">{props.children}</div>
-      </div>
-    </div>
-  );
-};
-
 export const Default = (props: PageContentProps): JSX.Element => {
-  const { sitecoreProvider } = useSitecore();
-  const id = props.params.RenderingIdentifier;
+  const { pageContext } = useSitecore();
+  const sxaStyles = props.params?.Styles ?? '';
+  const id = props.params?.RenderingIdentifier ?? null;
 
-  if (!(props.fields && props.fields.Content) && !sitecoreProvider?.route?.fields?.Content) {
+  if (!(props.fields && props.fields.Content) && !pageContext?.route?.fields?.Content) {
     return (
-      <div className={`component content ${props.params.styles}`} id={id ? id : undefined}>
+      <div className={`component page-content ${sxaStyles}`} id={id ? id : undefined}>
         <div className="component-content">
-          <div className="field-content">[Content]</div>
+          <div className="field-content">[Page Content]</div>
         </div>
       </div>
     );
   }
 
-  const field = (
-    props.fields && props.fields.Content
-      ? props.fields.Content
-      : sitecoreProvider?.route?.fields?.Content
-  ) as RichTextField;
-
   return (
-    <ComponentContent styles={props.params.styles} id={id}>
-      <JssRichText field={field} />
-    </ComponentContent>
+    <div className={`component page-content ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="component-content">
+        <JssRichText
+          field={
+            (props.fields && props.fields.Content
+              ? props.fields.Content
+              : pageContext?.route?.fields?.Content) as RichTextField
+          }
+          className="field-content"
+        />
+      </div>
+    </div>
   );
 };

@@ -19,8 +19,8 @@ import { useSitecore } from '@sitecore-content-sdk/nextjs';
 export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageEditing }) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [isExpanding, setIsExpanding] = useState(false);
-  const { sitecoreProvider } = useSitecore();
-  const isEditMode = isPageEditing || sitecoreProvider?.pageEditing || false;
+  const { pageContext } = useSitecore();
+  const isEditMode = isPageEditing || pageContext?.pageEditing || false;
 
   if (!fields?.data?.datasource) {
     return <NoDataFallback componentName="VerticalImageAccordion" />;

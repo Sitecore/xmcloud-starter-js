@@ -1,5 +1,5 @@
 // Below are built-in components that are available in the app, it's recommended to keep them as is
-import { BYOCWrapper, NextjsJssComponent, FEaaSWrapper } from '@sitecore-content-sdk/nextjs';
+import { BYOCWrapper, NextjsContentSdkComponent, FEaaSWrapper } from '@sitecore-content-sdk/nextjs';
 import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 
@@ -67,7 +67,7 @@ import * as VerticalImageAccordion from 'components/vertical-image-accordion/Ver
 import * as Video from 'components/video/Video';
 
 // Components must be registered with to match the string key with component name in Sitecore
-export const componentMap = new Map<string, NextjsJssComponent>([
+export const componentMap = new Map<string, NextjsContentSdkComponent>([
   // Built-in components
   ['BYOCWrapper', BYOCWrapper],
   ['FEaaSWrapper', FEaaSWrapper],

@@ -1,4 +1,4 @@
-import { Link, LinkField, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import React, { JSX } from 'react';
 
 interface Fields {
@@ -35,52 +35,48 @@ type TitleProps = {
   fields: Fields;
 };
 
-type ComponentContentProps = {
-  id: string;
-  styles: string;
-  children: JSX.Element;
-};
-
-const ComponentContent = (props: ComponentContentProps) => {
-  const id = props.id;
-  return (
-    <div className={`component title ${props.styles}`} id={id ? id : undefined}>
-      <div className="component-content">
-        <div className="field-title">{props.children}</div>
-      </div>
-    </div>
-  );
-};
-
 export const Default = (props: TitleProps): JSX.Element => {
+  const { pageContext } = useSitecore();
   const datasource = props.fields?.data?.datasource || props.fields?.data?.contextItem;
-  const { sitecoreProvider } = useSitecore();
   const text: TextField = datasource?.field?.jsonValue || {};
-  const link: LinkField = {
-    value: {
-      href: datasource?.url?.path,
-      title: datasource?.field?.jsonValue?.value,
-    },
+  const isPageEditing = Boolean(pageContext?.pageEditing);
+  const modifyTitleProps = {
+    ...text,
+    value: text?.value || 'Add Title',
   };
-  if (sitecoreProvider.pageState !== 'normal') {
-    link.value.querystring = `sc_site=${datasource?.url?.siteName}`;
-    if (!text?.value) {
-      text.value = 'Title field';
-      link.value.href = '#';
-    }
+
+  if (pageContext?.pageState !== 'normal') {
+    return (
+      <div
+        className={`component title ${props.params.styles}`}
+        id={props.params.RenderingIdentifier}
+      >
+        <div className="component-content">
+          <Text
+            tag={props.params.tag}
+            field={modifyTitleProps}
+            editable={isPageEditing}
+            className="field-title"
+          />
+        </div>
+      </div>
+    );
   }
 
   return (
-    <ComponentContent styles={props.params.styles} id={props.params.RenderingIdentifier}>
-      <>
-        {sitecoreProvider.pageEditing ? (
-          <Text field={text} />
+    <div className={`component title ${props.params.styles}`} id={props.params.RenderingIdentifier}>
+      <div className="component-content">
+        {pageContext?.pageEditing ? (
+          <Text
+            tag={props.params.tag}
+            field={modifyTitleProps}
+            editable={isPageEditing}
+            className="field-title"
+          />
         ) : (
-          <Link field={link}>
-            <Text field={text} />
-          </Link>
+          <Text tag={props.params.tag} field={text} className="field-title" />
         )}
-      </>
-    </ComponentContent>
+      </div>
+    </div>
   );
 };

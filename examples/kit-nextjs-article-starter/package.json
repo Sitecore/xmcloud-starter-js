@@ -153,7 +153,7 @@
     "next:build": "next build",
     "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev --turbopack",
     "next:start": "next start",
-    "sitecore-tools:build": "sitecore-tools build",
+    "sitecore-tools:build": "sitecore-tools project build",
     "start:connected": "cross-env NODE_ENV=development npm-run-all --serial sitecore-tools:build next:dev",
     "start:production": "cross-env-shell NODE_ENV=production npm-run-all --serial build next:start"
   },

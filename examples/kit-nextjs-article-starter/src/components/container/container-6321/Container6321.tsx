@@ -23,9 +23,9 @@ export type Container6321Props = ComponentProps &
 export const Default: React.FC<Container6321Props> = (props) => {
   const { rendering, col1, col2, col3, col4, col5, col6 } = props;
 
-  const { sitecoreProvider } = useSitecore();
+  const { pageContext } = useSitecore();
 
-  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   const col1Placeholder = getContainerPlaceholderProps('container-sixty-thirty-one', props.params);
   const col2Placeholder = getContainerPlaceholderProps('container-sixty-thirty-two', props.params);

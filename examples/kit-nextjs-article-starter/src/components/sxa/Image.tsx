@@ -4,10 +4,9 @@ import {
   NextImage as JssImage,
   Link as JssLink,
   LinkField,
-  Text,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
-import React, { CSSProperties, JSX } from 'react';
+import React, { JSX } from 'react';
 
 interface Fields {
   Image: ImageField & { metadata?: { [key: string]: unknown } };
@@ -20,71 +19,55 @@ type ImageProps = {
   fields: Fields;
 };
 
-const ImageDefault = (props: ImageProps): JSX.Element => (
-  <div className={`component image ${props.params.styles}`.trimEnd()}>
-    <div className="component-content">
-      <span className="is-empty-hint">Image</span>
-    </div>
-  </div>
-);
-
 export const Banner = (props: ImageProps): JSX.Element => {
-  const id = props.params.RenderingIdentifier;
-  const { sitecoreProvider } = useSitecore();
-  const isPageEditing = sitecoreProvider.pageEditing;
-  const classHeroBannerEmpty =
-    isPageEditing && props.fields?.Image?.value?.class === 'scEmptyImage'
-      ? 'hero-banner-empty'
-      : '';
-  const backgroundStyle = (props?.fields?.Image?.value?.src && {
-    backgroundImage: `url('${props.fields.Image.value.src}')`,
-  }) as CSSProperties;
-  const modifyImageProps = {
-    ...props.fields.Image,
-    value: {
-      ...props.fields.Image.value,
-      style: { width: '100%', height: '100%' },
-    },
-  };
+  const { pageContext } = useSitecore();
+  const { Image } = props.fields;
+  const { TargetUrl } = props.fields;
+  const sxaStyles = props.params?.Styles ?? '';
+  const classNameList = `component image ${sxaStyles}`.trimEnd();
 
-  return (
-    <div
-      className={`component hero-banner ${props.params.styles} ${classHeroBannerEmpty}`}
-      id={id ? id : undefined}
-    >
-      <div className="component-content sc-sxa-image-hero-banner" style={backgroundStyle}>
-        {sitecoreProvider.pageEditing ? <JssImage field={modifyImageProps} /> : ''}
-      </div>
-    </div>
-  );
-};
-
-export const Default = (props: ImageProps): JSX.Element => {
-  const { sitecoreProvider } = useSitecore();
-
-  if (props.fields) {
-    const Image = () => <JssImage field={props.fields.Image} />;
-    const id = props.params.RenderingIdentifier;
-
+  if (Image?.value && Image?.value.src) {
     return (
-      <div className={`component image ${props.params.styles}`} id={id ? id : undefined}>
+      <div className={classNameList}>
         <div className="component-content">
-          {sitecoreProvider.pageState === 'edit' || !props.fields.TargetUrl?.value?.href ? (
-            <Image />
+          {pageContext?.pageState === 'edit' || !props.fields.TargetUrl?.value?.href ? (
+            <JssImage field={Image} />
           ) : (
-            <JssLink field={props.fields.TargetUrl}>
-              <Image />
+            <JssLink field={TargetUrl}>
+              <JssImage field={Image} />
             </JssLink>
           )}
-          <Text
-            tag="span"
-            className="image-caption field-imagecaption"
-            field={props.fields.ImageCaption}
-          />
         </div>
       </div>
     );
   }
 
-  return <ImageDefault {...props} />;
+  return <div className={classNameList}></div>;
+};
+
+export const Default = (props: ImageProps): JSX.Element => {
+  const { pageContext } = useSitecore();
+  const { Image } = props.fields;
+  const sxaStyles = props.params?.Styles ?? '';
+  const classNameList = `component image ${sxaStyles}`.trimEnd();
+
+  const modifyImageProps = {
+    ...Image,
+    value: {
+      ...Image?.value,
+      alt: Image?.value?.alt || 'image',
+    },
+  };
+
+  if (props.fields) {
+    return (
+      <div className={classNameList}>
+        <div className="component-content">
+          {pageContext?.pageEditing ? <JssImage field={modifyImageProps} /> : ''}
+        </div>
+      </div>
+    );
+  }
+
+  return <div className={classNameList}></div>;
 };

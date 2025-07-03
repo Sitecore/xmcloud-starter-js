@@ -1,5 +1,5 @@
 import React, { useState, JSX } from 'react';
-import { Link, LinkField, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Link, LinkField, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
   Id: string;
@@ -19,20 +19,6 @@ type NavigationProps = {
   relativeLevel: number;
 };
 
-const getNavigationText = function (props: NavigationProps): JSX.Element | string {
-  let text;
-
-  if (props.fields.NavigationTitle) {
-    text = <Text field={props.fields.NavigationTitle} />;
-  } else if (props.fields.Title) {
-    text = <Text field={props.fields.Title} />;
-  } else {
-    text = props.fields.DisplayName;
-  }
-
-  return text;
-};
-
 const getLinkField = (props: NavigationProps): LinkField => ({
   value: {
     href: props.fields.Href,
@@ -43,7 +29,7 @@ const getLinkField = (props: NavigationProps): LinkField => ({
 
 export const Default = (props: NavigationProps): JSX.Element => {
   const [isOpenMenu, openMenu] = useState(false);
-  const { sitecoreProvider } = useSitecore();
+  const { pageContext } = useSitecore();
   const styles =
     props.params != null
       ? `${props.params.GridParameters ?? ''} ${props.params.Styles ?? ''}`.trimEnd()
@@ -59,7 +45,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
   }
 
   const handleToggleMenu = (event?: React.MouseEvent<HTMLElement>, flag?: boolean): void => {
-    if (event && sitecoreProvider?.pageEditing) {
+    if (event && pageContext?.pageEditing) {
       event.preventDefault();
     }
 
@@ -102,7 +88,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
 };
 
 const NavigationList = (props: NavigationProps) => {
-  const { sitecoreProvider } = useSitecore();
+  const { pageContext } = useSitecore();
   const [active, setActive] = useState(false);
   const classNameList = `${props.fields.Styles.concat('rel-level' + props.relativeLevel).join(
     ' '
@@ -120,6 +106,16 @@ const NavigationList = (props: NavigationProps) => {
     ));
   }
 
+  const getNavigationText = (props: NavigationProps): string => {
+    if (props.fields.NavigationTitle?.value) {
+      return props.fields.NavigationTitle.value.toString();
+    } else if (props.fields.Title?.value) {
+      return props.fields.Title.value.toString();
+    } else {
+      return props.fields.DisplayName;
+    }
+  };
+
   return (
     <li className={`${classNameList} ${active ? 'active' : ''}`} key={props.fields.Id} tabIndex={0}>
       <div
@@ -128,7 +124,7 @@ const NavigationList = (props: NavigationProps) => {
       >
         <Link
           field={getLinkField(props)}
-          editable={sitecoreProvider.pageEditing}
+          editable={pageContext?.pageEditing}
           onClick={props.handleClick}
         >
           {getNavigationText(props)}

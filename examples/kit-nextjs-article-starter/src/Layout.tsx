@@ -51,7 +51,7 @@ interface RouteFields {
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
   const fields = route?.fields as RouteFields;
-  const isPageEditing = layoutData.sitecore.pageContext.pageEditing;
+  const isPageEditing = layoutData.sitecore.context.pageEditing;
   const mainClassPageEditing = isPageEditing ? 'editing-mode' : 'prod-mode';
   const classNamesMain = `${mainClassPageEditing} ${body.variable} ${heading.variable} main-layout`;
 
@@ -89,7 +89,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         {/* root placeholder for the app, which we add components to using route data */}
         <ThemeProvider attribute="class" disableTransitionOnChange>
           <div className={`min-h-screen flex flex-col ${classNamesMain}`}>
-            {layoutData.sitecore.pageContext.renderingType === RenderingType.Component ? (
+            {layoutData.sitecore.context.renderingType === RenderingType.Component ? (
               <DesignLibrary {...layoutData} />
             ) : (
               <>

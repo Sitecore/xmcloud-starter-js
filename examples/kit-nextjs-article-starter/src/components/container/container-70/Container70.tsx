@@ -7,9 +7,9 @@ import { cn } from '@/lib/utils';
 export const Default: React.FC<Container70Props> = (props) => {
   const { rendering, children } = props;
 
-  const { sitecoreProvider } = useSitecore();
+  const { pageContext } = useSitecore();
 
-  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   const PLACEHOLDER_FRAGMENT = 'container-seventy';
   const PLACEHOLDER_NAME = `${PLACEHOLDER_FRAGMENT}-${props.params.DynamicPlaceholderId}`;

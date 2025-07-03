@@ -11,9 +11,9 @@ import { FlexItemProps } from 'components/flex/Flex.dev';
 export const Default: React.FC<Container303030Props> = (props) => {
   const { rendering, left, center, right } = props;
 
-  const { sitecoreProvider } = useSitecore();
+  const { pageContext } = useSitecore();
 
-  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   const leftPlaceholder = getContainerPlaceholderProps('container-thirty-left', props.params);
   const centerPlaceholder = getContainerPlaceholderProps('container-thirty-center', props.params);

@@ -28,17 +28,17 @@ export const Default = ({
   const [imgSrc, setImgSrc] = useState({ src: '', width: 0, height: 0 });
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const { sitecoreProvider } = useSitecore();
+  const { pageContext } = useSitecore();
   const getImageUrl = useCallback(
     (imageField: ImageField) => {
       const src = imageField?.value?.src;
-      if (sitecoreProvider?.pageState !== LayoutServicePageState.Normal && src?.startsWith('/')) {
+      if (pageContext?.pageState !== LayoutServicePageState.Normal && src?.startsWith('/')) {
         return `${window.location.protocol}//${window.location.hostname}${src}`;
       }
 
       return src ? `${src.replace('http://cm/', '/')}` : '';
     },
-    [sitecoreProvider]
+    [pageContext]
   );
   useEffect(() => {
     if (!elementRef.current) return;
@@ -77,7 +77,7 @@ export const Default = ({
         vidEl?.pause();
       }
     }
-  }, [image, isIntersecting, sitecoreProvider, getImageUrl, pause]);
+  }, [image, isIntersecting, pageContext, getImageUrl, pause]);
 
   if (!video && !image) return null;
 

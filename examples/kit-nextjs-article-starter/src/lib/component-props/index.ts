@@ -1,7 +1,7 @@
 import {
   ComponentParams,
   ComponentRendering,
-  SitecoreContextValue,
+  SitecoreProviderPageContext,
 } from '@sitecore-content-sdk/nextjs';
 
 /**
@@ -19,5 +19,5 @@ export type ComponentProps = {
  * @example const { sitecoreContext } = useSitecoreContext()
  */
 export type ComponentWithContextProps = ComponentProps & {
-  sitecoreContext: SitecoreContextValue;
+  sitecoreContext: SitecoreProviderPageContext;
 };
