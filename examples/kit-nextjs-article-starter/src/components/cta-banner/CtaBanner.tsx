@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 import type React from 'react';
-import { Text, Link, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Text, Link, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { CtaBannerProps } from './cta-banner.props';
 import { Button } from '@/components/ui/button';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
@@ -40,8 +40,8 @@ const ctaButtonVariants = cva('text-sm font-heading font-medium', {
 });
 
 export const Default: React.FC<CtaBannerProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing;
   const { fields, params } = props;
 
   if (fields) {

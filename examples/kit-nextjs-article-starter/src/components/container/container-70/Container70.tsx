@@ -1,5 +1,5 @@
 import type React from 'react';
-import { Placeholder, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { Container70Props } from '@/components/container/container-70/container-70.props';
 import { Flex, FlexItem } from '@/components/flex/Flex.dev';
 import { cn } from '@/lib/utils';
@@ -7,9 +7,9 @@ import { cn } from '@/lib/utils';
 export const Default: React.FC<Container70Props> = (props) => {
   const { rendering, children } = props;
 
-  const { sitecoreContext } = useSitecoreContext();
+  const { sitecoreProvider } = useSitecore();
 
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
 
   const PLACEHOLDER_FRAGMENT = 'container-seventy';
   const PLACEHOLDER_NAME = `${PLACEHOLDER_FRAGMENT}-${props.params.DynamicPlaceholderId}`;

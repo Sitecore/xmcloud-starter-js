@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Text, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { cva } from 'class-variance-authority';
 import { Play, Pause } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -44,8 +44,8 @@ export const Default: React.FC<HeroProps> = ({ fields, params }) => {
   } = fields;
 
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
 
   const { colorScheme } = params;
   // Use custom hook to match media queries

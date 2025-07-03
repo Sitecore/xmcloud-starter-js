@@ -1,5 +1,5 @@
 import type React from 'react';
-import { Placeholder, Text, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Placeholder, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { GlobalFooterProps } from '@/components/global-footer/global-footer.props';
 import { Default as FooterCallout } from '@/components/footer-navigation-callout/FooterNavigationCallout.dev';
 import { Default as Logo } from '@/components/logo/Logo.dev';
@@ -9,8 +9,8 @@ import { cn } from 'lib/utils';
 
 export const Default: React.FC<GlobalFooterProps> = (props) => {
   const { fields, rendering } = props;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
 
   const {
     footerCopyright,

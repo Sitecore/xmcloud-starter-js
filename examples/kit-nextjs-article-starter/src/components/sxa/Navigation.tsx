@@ -1,5 +1,5 @@
 import React, { useState, JSX } from 'react';
-import { Link, LinkField, Text, TextField, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Link, LinkField, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
   Id: string;
@@ -43,7 +43,7 @@ const getLinkField = (props: NavigationProps): LinkField => ({
 
 export const Default = (props: NavigationProps): JSX.Element => {
   const [isOpenMenu, openMenu] = useState(false);
-  const { sitecoreContext } = useSitecoreContext();
+  const { sitecoreProvider } = useSitecore();
   const styles =
     props.params != null
       ? `${props.params.GridParameters ?? ''} ${props.params.Styles ?? ''}`.trimEnd()
@@ -59,7 +59,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
   }
 
   const handleToggleMenu = (event?: React.MouseEvent<HTMLElement>, flag?: boolean): void => {
-    if (event && sitecoreContext?.pageEditing) {
+    if (event && sitecoreProvider?.pageEditing) {
       event.preventDefault();
     }
 
@@ -102,7 +102,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
 };
 
 const NavigationList = (props: NavigationProps) => {
-  const { sitecoreContext } = useSitecoreContext();
+  const { sitecoreProvider } = useSitecore();
   const [active, setActive] = useState(false);
   const classNameList = `${props.fields.Styles.concat('rel-level' + props.relativeLevel).join(
     ' '
@@ -128,7 +128,7 @@ const NavigationList = (props: NavigationProps) => {
       >
         <Link
           field={getLinkField(props)}
-          editable={sitecoreContext.pageEditing}
+          editable={sitecoreProvider.pageEditing}
           onClick={props.handleClick}
         >
           {getNavigationText(props)}

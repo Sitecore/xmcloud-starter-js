@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Text, Image, Field, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Text, Image, Field, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { LogoTabsProps } from './logo-tabs.props';
 import { LogoItem } from './LogoItem';
@@ -16,8 +16,8 @@ import { cn } from '@/lib/utils';
 }
 
 export const Default: React.FC<LogoTabsProps> = ({ fields, isPageEditing: propIsPageEditing }) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = propIsPageEditing || sitecoreContext?.pageEditing || false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = propIsPageEditing || sitecoreProvider?.pageEditing || false;
   const { title, backgroundImage, logos, logoTabContent } = fields?.data?.datasource ?? {};
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 

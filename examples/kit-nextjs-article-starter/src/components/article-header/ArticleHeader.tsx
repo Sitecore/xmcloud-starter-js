@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Facebook, Linkedin, Twitter, Link, Check, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Text, DateField, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Text, DateField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import type { ArticleHeaderProps } from './article-header.props';
 import { Badge } from '@/components/ui/badge';
@@ -31,8 +31,8 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields }) => {
   const [copySuccess, setCopySuccess] = useState(false);
   const [forceCollapse] = useState(true);
   const copyNotificationRef = useRef<HTMLDivElement>(null);
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
   const { t } = useI18n();
   const dictionary = {
     ARTICLE_HEADER_BACKTONEWS: t(dictionaryKeys.ARTICLE_HEADER_BACKTONEWS),

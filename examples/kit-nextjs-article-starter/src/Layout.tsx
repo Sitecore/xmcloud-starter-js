@@ -12,7 +12,7 @@ import {
   ImageField,
 } from '@sitecore-content-sdk/nextjs';
 import Scripts from 'src/Scripts';
-import SitecoreStyles from 'components/sxa/SitecoreStyles';
+import SitecoreStyles from 'components/content-sdk/SitecoreStyles';
 import { Figtree } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider/theme-provider.dev';
 import { VideoProvider } from './contexts/VideoContext';
@@ -51,7 +51,7 @@ interface RouteFields {
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
   const fields = route?.fields as RouteFields;
-  const isPageEditing = layoutData.sitecore.context.pageEditing;
+  const isPageEditing = layoutData.sitecore.pageContext.pageEditing;
   const mainClassPageEditing = isPageEditing ? 'editing-mode' : 'prod-mode';
   const classNamesMain = `${mainClassPageEditing} ${body.variable} ${heading.variable} main-layout`;
 
@@ -89,7 +89,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         {/* root placeholder for the app, which we add components to using route data */}
         <ThemeProvider attribute="class" disableTransitionOnChange>
           <div className={`min-h-screen flex flex-col ${classNamesMain}`}>
-            {layoutData.sitecore.context.renderingType === RenderingType.Component ? (
+            {layoutData.sitecore.pageContext.renderingType === RenderingType.Component ? (
               <DesignLibrary {...layoutData} />
             ) : (
               <>

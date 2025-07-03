@@ -4,11 +4,11 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 
 // SXA components (alphabetical)
-import * as CdpPageView from 'components/sxa/CdpPageView';
+import * as CdpPageView from 'components/content-sdk/CdpPageView';
 import * as ColumnSplitter from 'components/sxa/ColumnSplitter';
 import * as Container from 'components/sxa/Container';
 import * as ContentBlock from 'components/sxa/ContentBlock';
-import * as FEAASScripts from 'components/sxa/FEAASScripts';
+import * as FEAASScripts from 'components/content-sdk/FEAASScripts';
 import * as Image from 'components/sxa/Image';
 import * as LinkList from 'components/sxa/LinkList';
 import * as Navigation from 'components/sxa/Navigation';
@@ -17,7 +17,7 @@ import * as PartialDesignDynamicPlaceholder from 'components/sxa/PartialDesignDy
 import * as Promo from 'components/sxa/Promo';
 import * as RichText from 'components/sxa/RichText';
 import * as RowSplitter from 'components/sxa/RowSplitter';
-import * as SitecoreStyles from 'components/sxa/SitecoreStyles';
+import * as SitecoreStyles from 'components/content-sdk/SitecoreStyles';
 import * as Title from 'components/sxa/Title';
 
 // Additional components (alphabetical)

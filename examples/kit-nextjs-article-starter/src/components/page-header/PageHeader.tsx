@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Text, RichText, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Text, RichText, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { cn } from '@/lib/utils';
@@ -29,9 +29,9 @@ export const Default: React.FC<PageHeaderProps> = ({ fields, params }) => {
   const subtitle = pageSubtitle?.jsonValue;
 
   const { colorScheme = 'default', darkPlayIcon = '0' } = params;
-  const { sitecoreContext } = useSitecoreContext();
+  const { sitecoreProvider } = useSitecore();
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');

@@ -1,5 +1,5 @@
 import React, { useState, useId } from 'react';
-import { useSitecoreContext, Text } from '@sitecore-content-sdk/nextjs';
+import { useSitecore, Text } from '@sitecore-content-sdk/nextjs';
 import { AnimatePresence } from 'framer-motion';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import {
@@ -17,8 +17,8 @@ export const Default: React.FC<MultiPromoTabsProps> = (props) => {
   const [activeTab, setActiveTab] = useState(0);
   const { fields, isPageEditing } = props;
 
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditMode = isPageEditing || sitecoreContext?.pageEditing || false;
+  const { sitecoreProvider } = useSitecore();
+  const isEditMode = isPageEditing || sitecoreProvider?.pageEditing || false;
 
   const id = useId();
 

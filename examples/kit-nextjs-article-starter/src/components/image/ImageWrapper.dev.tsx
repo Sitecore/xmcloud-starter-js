@@ -4,7 +4,7 @@ import {
   ImageField,
   Image as JssImage,
   LayoutServicePageState,
-  useSitecoreContext,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ImageOptimizationContext } from '@/components/image/image-optimization.context';
 import { useRef } from 'react';
@@ -26,9 +26,9 @@ type ImageWrapperProps = {
 
 export const Default: React.FC<ImageWrapperProps> = (props) => {
   const { image, className, wrapperClass, sizes, ...rest } = props;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
-  const isPreview = sitecoreContext?.pageState === LayoutServicePageState.Preview;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
+  const isPreview = sitecoreProvider?.pageState === LayoutServicePageState.Preview;
 
   const { unoptimized } = useContext(ImageOptimizationContext);
   const ref = useRef(null);

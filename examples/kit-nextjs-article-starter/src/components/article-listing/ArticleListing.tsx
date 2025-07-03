@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useSitecoreContext, Text } from '@sitecore-content-sdk/nextjs';
+import { Link, useSitecore, Text } from '@sitecore-content-sdk/nextjs';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { EditableButton as Button } from '@/components/button-component/ButtonComponent';
@@ -21,8 +21,8 @@ export const Default: React.FC<ArticleListingProps> = ({
   isPageEditing: propIsEditing,
 }) => {
   const { titleOptional, descriptionOptional, linkOptional, featuredContent } = fields;
-  const { sitecoreContext } = useSitecoreContext();
-  const contextIsEditing = sitecoreContext?.pageEditing ?? false;
+  const { sitecoreProvider } = useSitecore();
+  const contextIsEditing = sitecoreProvider?.pageEditing ?? false;
 
   // Use the prop value if provided, otherwise fall back to the context value
   const isPageEditing = propIsEditing !== undefined ? propIsEditing : contextIsEditing;

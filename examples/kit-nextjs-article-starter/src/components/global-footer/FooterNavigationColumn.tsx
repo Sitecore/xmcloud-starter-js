@@ -11,7 +11,7 @@ import {
   FooterNavigationLink,
 } from '@/components/global-footer/global-footer.props';
 import { Button } from '@/components/ui/button';
-import { Link, Text, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Link, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { useMatchMedia } from '@/hooks/use-match-media';
 /**
@@ -21,8 +21,8 @@ import { useMatchMedia } from '@/hooks/use-match-media';
 export const Default: FC<FooterNavigationColumnProps> = (props) => {
   const { fields } = props;
   const { items, header } = fields.data?.datasource ?? {};
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
 
   const accordionId = useId();
   const isMobile = useMatchMedia('(max-width: 767px)');

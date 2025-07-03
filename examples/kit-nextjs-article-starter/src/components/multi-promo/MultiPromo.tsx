@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { MultiPromoItemProps, MultiPromoProps } from './multi-promo.props';
 import { Default as MultiPromoItem } from './MultiPromoItem.dev';
-import { useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { useSitecore } from '@sitecore-content-sdk/nextjs';
 
 export const Default: React.FC<MultiPromoProps> = (props) => {
   const { fields, params } = props;
@@ -21,8 +21,8 @@ export const Default: React.FC<MultiPromoProps> = (props) => {
   const [api, setApi] = useState<CarouselApi>();
   const [announcement, setAnnouncement] = useState('');
   const carouselRef = useRef<HTMLDivElement>(null);
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
   // General slide handling
   useEffect(() => {
     if (!api) return;

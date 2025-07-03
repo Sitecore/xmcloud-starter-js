@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import { VideoComponentFields, VideoComponentProps } from './video-props';
 import { VideoPlayer } from './VideoPlayer.dev';
 import { VideoModal } from './VideoModal.dev';
@@ -67,8 +67,8 @@ export const VideoBase: React.FC<VideoComponentFields> = (props) => {
     }
   }, [componentRef, videoId, image]);
 
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ?? false;
 
   return !videoUrl ? (
     <p className="bg-secondary flex aspect-video items-center justify-center border">

@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import { PromoAnimatedProps } from './promo-animated.props';
 import { PromoAnimatedDefault } from './PromoAnimatedDefault.dev';
 import { PromoAnimatedImageRight } from './PromoAnimatedImageRight.dev';
@@ -15,14 +15,14 @@ import { PromoAnimatedImageRight } from './PromoAnimatedImageRight.dev';
 
 // Default display of the component
 export const Default: React.FC<PromoAnimatedProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ? sitecoreContext?.pageEditing : false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ? sitecoreProvider?.pageEditing : false;
   return <PromoAnimatedDefault {...props} isPageEditing={isPageEditing} />;
 };
 
 // Variants
 export const ImageRight: React.FC<PromoAnimatedProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ? sitecoreContext?.pageEditing : false;
+  const { sitecoreProvider } = useSitecore();
+  const isPageEditing = sitecoreProvider?.pageEditing ? sitecoreProvider?.pageEditing : false;
   return <PromoAnimatedImageRight {...props} isPageEditing={isPageEditing} />;
 };

@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
-import { Link as SitecoreLink, useSitecoreContext, Image } from '@sitecore-content-sdk/nextjs';
+import { Link as SitecoreLink, useSitecore, Image } from '@sitecore-content-sdk/nextjs';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -21,7 +21,7 @@ export const Default: React.FC<GlobalHeaderProps> = (props) => {
   const { logo, headerContact } = fields?.data?.item ?? {};
   const links = fields?.data?.item?.children?.results ?? [];
   const [isOpen, setIsOpen] = useState(false);
-  const pageEditing = useSitecoreContext().sitecoreContext?.pageEditing;
+  const pageEditing = useSitecore().pageContext?.pageEditing;
 
   const [visible, setVisible] = useState(true);
   const [prevScrollY, setPrevScrollY] = useState(0);

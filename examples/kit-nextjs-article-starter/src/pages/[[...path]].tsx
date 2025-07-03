@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import NotFound from 'src/NotFound';
 import Layout from 'src/Layout';
 import {
-  SitecoreContext,
+  SitecoreProvider,
   ComponentPropsContext,
   SitecorePageProps,
   StaticPath,
@@ -27,9 +27,9 @@ const SitecorePage = ({ notFound, componentProps, layout }: SitecorePageProps): 
 
   return (
     <ComponentPropsContext value={componentProps || {}}>
-      <SitecoreContext componentMap={components} layoutData={layout} api={scConfig.api}>
+      <SitecoreProvider componentMap={components} layoutData={layout} api={scConfig.api}>
         <Layout layoutData={layout} />
-      </SitecoreContext>
+      </SitecoreProvider>
     </ComponentPropsContext>
   );
 };
