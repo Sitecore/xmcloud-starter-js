@@ -41,6 +41,15 @@ SharedFields:
                 $action = Get-Item . -ID '{B2486523-7487-4526-978F-AD2E986B5CC4}'
                 Invoke-AddItem $Site $action
             }
+      
+            # Add LinkList variants
+            $linkListVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/LinkList" -Language $Site.Language
+            $footerLinks = New-Item -Parent $linkListVariant -Name "FooterLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+            $footerLinks.'__Display name' = "Footer Links"
+            $headerPrimaryLinks = New-Item -Parent $linkListVariant -Name "HeaderPrimaryLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+            $headerPrimaryLinks.'__Display name' = "Header Primary Links"
+            $headerSecondaryLinks = New-Item -Parent $linkListVariant -Name "HeaderSecondaryLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+            $headerSecondaryLinks.'__Display name' = "Header Secondary Links"
             
             Write-Verbose "Create page templates in the Site Collection"
             $basePageTemplateId = "{AC9DE9BE-8E86-4147-8FBC-739D5560408B}"
