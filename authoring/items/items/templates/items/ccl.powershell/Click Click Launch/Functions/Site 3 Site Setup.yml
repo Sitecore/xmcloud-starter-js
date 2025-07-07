@@ -85,8 +85,14 @@ SharedFields:
             $map[$audioPageTemplate.ID] = "$($productPageDesign.ID)"
             $pageDesigns.TemplatesMapping = [System.Web.HttpUtility]::UrlEncode($map.toString())
             
+            Write-Verbose "Update rendering variants on partial designs"
+            $globalFooterRenderingInstance = Get-Rendering -Item $footerPartial -Rendering $renderingGlobalFooter -FinalLayout
+            $alignItemsCenter = Get-Item -Path "$sitePath/Presentatin/Styles/Content alignment/Align content center" -Language $Site.Language
+            if ($globalFooterRenderingInstance) {
+                Set-Rendering -Item $footerPartial -Instance $globalFooterRenderingInstance -Parameter @{ "FieldNames" = $headerPrimaryLinks.ID, "Styles" = "|$($alignItemsCenter.ID)|" } -FinalLayout
+            }
+
             Write-Verbose "Update the home page template"
-            
             # Update the home page template
             Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
             
