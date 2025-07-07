@@ -24,12 +24,12 @@ SharedFields:
             $Item.Editing.BeginEdit()
             if ($TargetItem -ne $null) {
                 $linkField.LinkType = "internal"
-                $linkField.Target = $TargetItem.ID
+                $linkField.TargetID = $TargetItem.ID
                 $linkField.Url = $null
             } 
             else {
                 $linkField.LinkType = "external"
-                $linkField.Target = $null
+                $linkField.TargetID = $null
                 $linkField.Url = $Url
             }
             $Item.Editing.EndEdit()
