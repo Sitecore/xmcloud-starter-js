@@ -28,7 +28,7 @@ SharedFields:
             Write-Log "Reset the start item and the rendering host" -Log "INFO"
             # reset the start item and the rendering host
             $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($Model.SiteName)" -Language $Site.Language
-            $siteGrouping.RenderingHost = "kit-nextjs-product-listing"
+            $siteGrouping.RenderingHost = "kit-nextjs-product-starter"
             
             $homeItem = Get-Item -Path "$sitePath/Home"
             $siteGrouping.StartItem = $homeItem.ID
