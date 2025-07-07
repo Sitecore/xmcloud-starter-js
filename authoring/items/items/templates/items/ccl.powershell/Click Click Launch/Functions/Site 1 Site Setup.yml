@@ -9,6 +9,7 @@ SharedFields:
   Value: |
     Import-Function Get-ItemByIdSafe
     Import-Function Update-PageTemplate
+    Import-Function Update-LinkField
     
     function Invoke-ModuleScriptBody {
         [CmdletBinding()]
@@ -204,6 +205,16 @@ SharedFields:
             $item."metadataKeywords" = "Alaris, electric, future"
             $item."ogTitle" = $title
             $item."ogDescription" = $title
+            
+            Write-Verbose "Update nagivation links"
+            $aboutUs = Get-Item "$sitePath/Presentation/Partial Designs/Global/Header/Data/Global Header/About Us"
+            Update-LinkField -Item $aboutUs -FieldName "link" -TargetItem $item
+            $solutions = Get-Item "$sitePath/Presentation/Partial Designs/Global/Header/Data/Global Header/Solutions"
+            $solutionsTargetItem = Get-Item "$sitePath/Home/Article Page" -Language $Site.Language
+            Update-LinkField -Item $solutions -FieldName "link" -TargetItem $solutionsTargetItem
+            $team = Get-Item "$sitePath/Presentation/Partial Designs/Global/Header/Data/Global Header/Team"
+            $teamTargetItem = Get-Item "$sitePath/Home/Landing Page" -Language $Site.Language
+            Update-LinkField -Item $team -FieldName "link" -TargetItem $teamTargetItem
         }
         
         end {
@@ -215,7 +226,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "7ce192fd-39f9-4a30-b47a-d464cf81102f"
+  Value: "31aa3554-3eed-471a-9d34-54c1d690525e"
 Languages:
 - Language: en
   Versions:
@@ -234,11 +245,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5a4b1b75-28ac-4d12-9f44-4573b6f26839"
+      Value: "d7182ccf-52ce-4d52-a5bf-65aa7502ec8c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250627T150250Z
+      Value: 20250707T202725Z

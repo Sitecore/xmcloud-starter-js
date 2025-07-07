@@ -46,7 +46,6 @@ SharedFields:
             $siteName = $Site.Name
             $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($sitename)" -Language $Site.Language
             $siteGrouping.StartItem = $item.ID
-            $siteGrouping.RenderingHost = "site2"
             
             Write-Verbose "Create page templates in the Site Collection"
             $basePageTemplateId = "{AC9DE9BE-8E86-4147-8FBC-739D5560408B}"
@@ -198,7 +197,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "2e9e0e71-0c68-4292-9165-02793a9fa0a7"
+  Value: "34a84b38-74ab-4481-bdf3-606008f806e8"
 Languages:
 - Language: en
   Versions:
@@ -217,11 +216,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "af3a6648-14b8-4bb1-afae-2ac5048d9c7f"
+      Value: "fca9caf6-6bce-44fc-9d2b-8e2cda8ecf10"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250530T203024Z
+      Value: 20250703T153323Z
