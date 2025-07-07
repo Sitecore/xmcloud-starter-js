@@ -1,0 +1,34 @@
+﻿---
+ID: "47d463a6-3e68-4d78-9d83-e05b0936a7a6"
+Parent: "2d2c39d8-2963-420f-9f52-9cc6d2ffc895"
+Template: "70647fee-1ac2-44b7-a4f0-79c5cabfcbb9"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Kitchensink/Kitchensink/Data/Image Carousel 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250606T130307Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "76b95eaf-6fa3-4265-bf10-174db0ceb893"
+    - ID: "9752a97a-2e6a-4040-8e56-49c9a1498ce7"
+      Hint: title
+      Value: Image Carousel 1
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T154104Z

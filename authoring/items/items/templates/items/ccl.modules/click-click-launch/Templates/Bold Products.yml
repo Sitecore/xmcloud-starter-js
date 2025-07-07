@@ -39,14 +39,14 @@ SharedFields:
     {AC1A27CA-6BF3-4D23-915E-668326D52CF1}
     {D7EEAF4D-2B58-4029-B141-844221565EF0}
     {1F35559F-2140-4774-8BC1-525BB722BAA2}
-    {E243BDAA-AE7A-41DA-A183-CB25EC90F8C3}
+    {ADB64750-B11D-4D17-A203-091E22263D03}
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{E540B407-FDF5-4BBC-B4C1-76E8812CDD6A}" />
+    <image mediaid="{5F6F8FCA-1C11-4BA3-862E-DD9306AB7B81}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "a7598774-0cee-4ff7-8e77-4f6fbf5dd88d"
+  Value: "3562402b-40ce-4428-9dc0-9cb7a137cac7"
 Languages:
 - Language: da
   Fields:
@@ -116,7 +116,7 @@ Languages:
       Value: Bold Products
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1dc925a5-ea71-4e75-bf6a-a51f6a49543b"
+      Value: "3d11a073-04fe-46e9-9dd1-30811bda494b"
     - ID: "9f437e68-a84d-48ae-8ce1-a3e26c0b5e64"
       Hint: Description
       Value: "A clean, bold, product-focused site template with a homepage, subpage, navigation, and footer."
@@ -126,11 +126,11 @@ Languages:
         sitecore\brandon.bruno@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250630T144210Z
+      Value: 20250702T155631Z
     - ID: "da855368-e5f2-4932-ae55-7f8b08a5a205"
       Hint: Content
       Value: |
-        [{"name":"Pages","content":"Home, Article Page, Landing Page"},{"name":"Components","content":"SXA components"},{"name":"Integrations","content":"Personalization and Analytics"}]
+        [{"name":"Pages","content":"Home, Product Page"},{"name":"Components","content":"SXA components"},{"name":"Integrations","content":"Personalization and Analytics"}]
 - Language: "ja-JP"
   Fields:
   - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"

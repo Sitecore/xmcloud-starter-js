@@ -1,0 +1,49 @@
+﻿---
+ID: "cd03bce1-4a5e-4f43-aef7-4bbdfc38788f"
+Parent: "57a3c985-33c3-4ef8-9615-2c67760a9dff"
+Template: "13033574-ef4a-44a2-875f-cf4e7ca3592f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Video/Video/Data/Video 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250609T080112Z
+    - ID: "29b4bb6a-658f-4cda-90ea-07fb9d237194"
+      Hint: title
+      Value: Breaking the barrier of live music at home.
+    - ID: "4177ceed-4920-49a5-9310-e5c33ad96c18"
+      Hint: caption
+      Value: When Sync first started shaping the sound of music, our amps were proudly built in Georgia. Decades later, some of our most iconic amps are still crafted in the same factory.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "7c168d4a-6e92-46cb-a89e-da9040d9df1d"
+      Hint: image
+      Value: |
+        <image mediaid="{91C2A0A8-FC6E-464A-BB8D-CA472C3B0D35}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b8af514c-76da-4e50-ac5e-1aebde53e4f4"
+    - ID: "9f1d613b-d092-4382-bb87-006d8bbb8a8c"
+      Hint: image2
+      Value: |
+        <image mediaid="{F34E5FA2-BDB8-453B-99D4-922769DCAF40}" />
+    - ID: "adfd7171-7c7d-4f1e-b881-637830556379"
+      Hint: video
+      Value: |
+        <link linktype="external" url="https://www.youtube.com/watch?v=WjEewImqiRU" target="" text="test_video" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250611T094859Z

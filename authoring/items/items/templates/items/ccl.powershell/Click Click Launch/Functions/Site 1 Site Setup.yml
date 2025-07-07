@@ -46,9 +46,7 @@ SharedFields:
             $siteName = $Site.Name
             $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($sitename)" -Language $Site.Language
             $siteGrouping.StartItem = $item.ID
-            $siteGrouping.RenderingHost = "site1"
-            $siteGrouping.Project = "site1"
-            
+    
             Write-Verbose "Create page templates in the Site Collection"
             $basePageTemplateId = "{AC9DE9BE-8E86-4147-8FBC-739D5560408B}"
             $baseHomePageTemplateId = "{4ACCF644-A506-421F-B60F-A05E5C6196B4}"

@@ -42,6 +42,11 @@
                 "name": "ccl.media.ms",
                 "path": "/sitecore/media library/Feature/Modern Sleek",
                 "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.media.bp",
+                "path": "/sitecore/media library/Feature/Bold Products",
+                "allowedPushOperations": "CreateUpdateAndDelete"
             }
         ]
     }
