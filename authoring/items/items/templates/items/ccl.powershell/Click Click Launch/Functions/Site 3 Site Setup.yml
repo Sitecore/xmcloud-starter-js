@@ -91,7 +91,7 @@ SharedFields:
             if ($globalFooterRenderingInstance) {
                 Set-Rendering -Item $footerPartial -Instance $globalFooterRenderingInstance -Parameter @{ "FieldNames" = $headerPrimaryLinks.ID, "Styles" = "|$($alignItemsCenter.ID)|" } -FinalLayout
             }
-
+            
             Write-Verbose "Update the home page template"
             # Update the home page template
             Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
