@@ -9,16 +9,16 @@ SharedFields:
     Value: |
       Import-Function Get-ItemByIdSafe
       Import-Function Update-PageTemplate
-
+      
       function Invoke-ModuleScriptBody {
           [CmdletBinding()]
           param(
               [Parameter(Mandatory = $true, Position = 0 )]
               [Item]$Site,
-          
+      
               [Parameter(Mandatory = $true, Position = 1 )]
               [Item[]]$TenantTemplates
-
+      
           )
           
           begin {
@@ -34,7 +34,7 @@ SharedFields:
               $service = [Sitecore.DependencyInjection.ServiceLocator]::ServiceProvider.GetService([Sitecore.XA.Foundation.Variants.Abstractions.Services.IAvailableRenderingVariantService])
               $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
               Write-Verbose "My site: $sitePath"
-
+      
               # handle missing styles folder
               if (-not (Test-Path "$sitePath/Presentation/Styles")) {
                   Import-Function Invoke-AddItem
@@ -56,12 +56,12 @@ SharedFields:
               $baseHomePageTemplateId = "{4ACCF644-A506-421F-B60F-A05E5C6196B4}"
               $audioPageTemplateId = "{1B76AF75-DD75-450C-92E3-FF0F339F490B}"
               $basePageFolderTemplateId = "{84DBE64B-0FED-4125-A971-725C0155C321}"
-
+      
               $templatesRootPath = "master:/sitecore/templates/Project/$($siteCollection.Name)"
-
+      
               $pageTemplate = Get-Item -Path "$templatesRootPath/Page"
               $pageTemplate."__Base template" = $basePageTemplateId
-
+      
               $homePageTemplate = Update-PageTemplate -BaseTemplateId $baseHomePageTemplateId -TemplateName "Home Page" -TemplatesRootPath $templatesRootPath
               $audioPageTemplate = Update-PageTemplate -BaseTemplateId $audioPageTemplateId -TemplateName "Audio Product Page" -TemplatesRootPath $templatesRootPath
               $pageFolderTemplate = Update-PageTemplate -BaseTemplateId $basePageFolderTemplateId -TemplateName "Page Folder" -TemplatesRootPath $templatesRootPath
@@ -77,7 +77,7 @@ SharedFields:
               
               $productPageDesign = New-Item -Path "$($sitePath)/Presentation/Page Designs" -Name "ProductPage" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
               $productPageDesign.PartialDesigns = "$($headerPartial.ID)|$($productContentPartial.ID)|$($footerPartial.ID)"
-
+      
               $pageDesigns = Get-Item -path "$sitePath/Presentation/Page Designs" -Language $Site.Language
               $map = [Sitecore.Text.UrlString]::new()
               $map[$homePageTemplate.ID] = "$($defaultPageDesign.ID)"
@@ -87,11 +87,11 @@ SharedFields:
               
               Write-Verbose "Update rendering variants on partial designs"
               $renderingLinkList = Get-Item -Path '/sitecore/layout/Renderings/Feature/JSS Experience Accelerator/Navigation/LinkList'
-
+      
               # Get variants for link list
               $linkListVariants = $service.GetAvailableRenderingVariants($Site, $renderingLinkList.Name, $renderingLinkList.ID, $item.TemplateID)
               $linkListVariant = $linkListVariants | ? { $_.DisplayName -eq "FooterLinks" }
-
+      
               $alignItemsCenter = Get-Item -Path "$sitePath/Presentation/Styles/Content alignment/Align content center" -Language $Site.Language
               Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-primary*" -FinalLayout | `
                   Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; }  | `
@@ -100,7 +100,7 @@ SharedFields:
               Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-secondary*" -FinalLayout | `
                   Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; } | `
                   Set-Rendering -Item $footerPartial -FinalLayout
-
+      
               Write-Verbose "Update the home page template"
               # Update the home page template
               Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
@@ -158,16 +158,16 @@ SharedFields:
               Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingMultiPromoDefinition -Parameter @{ "DynamicPlaceholderId" = "6"; "FieldNames" = $multiPromoVariantStacked.ID; } -DataSource "local:/Data/MultiPromo 2" -FinalLayout
               Write-Host "Add SignupBanner"
               Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingSignupBannerDefinition -Parameter @{ "DynamicPlaceholderId" = "5"; "FieldNames" = $signupBannerVariant.ID; } -DataSource "local:/Data/SignupBanner 1" -FinalLayout
-
+      
               Write-Verbose "Update home page fields"
               $title = "SYNC"
               $shortTitle = "SYNC"
-
+      
               $item."pageTitle" = $title
               $item."pageShortTitle" = $shortTitle
               $item."pageHeaderTitle" = $shortTitle
               $item."pageSummary" = $title
-
+      
               $item."metadataTitle" = $title
               $item."metadataDescription" = $title
               $item."metadataKeywords" = "Symphonic, audio, speakers, headphones"
@@ -179,7 +179,7 @@ SharedFields:
               Write-Log "Cmdlet Invoke-ModuleScriptBody - End"
           }
       }
-
+      
       #$site = Get-Item .
       #Invoke-ModuleScriptBody -Site $site -Verbose
   - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
