@@ -8,10 +8,7 @@ import { NoDataFallback } from '@/utils/NoDataFallback';
 import { Field, ImageField, LinkField, Text } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 
-type AlertBannerProps = ComponentProps &
-  AlertBannerParams &
-  AlertBannerFields &
-  AlertBannerData;
+type AlertBannerProps = ComponentProps & AlertBannerParams & AlertBannerFields & AlertBannerData;
 
 type AlertBannerParams = {
   params: {
