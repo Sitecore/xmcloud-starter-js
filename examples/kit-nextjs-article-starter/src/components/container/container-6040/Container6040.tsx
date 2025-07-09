@@ -1,13 +1,23 @@
 import type React from 'react';
 import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
-
-import { Container6040Props } from '@/components/container/container-6040/container-6040.props';
 import {
   getContainerPlaceholderProps,
   isContainerPlaceholderEmpty,
 } from '@/components/container/container.util';
 import { Flex, FlexItem } from '@/components/flex/Flex.dev';
 import { cn } from '@/lib/utils';
+import type { JSX } from 'react';
+import { PlaceholderProps } from 'types/Placeholder.props';
+import { ComponentProps } from '@/lib/component-props';
+
+/**
+ * Model used for Sitecore Component integration
+ */
+type Container6040Props = ComponentProps &
+  PlaceholderProps & {
+    left?: JSX.Element;
+    right?: JSX.Element;
+  };
 
 export const Default: React.FC<Container6040Props> = (props) => {
   const { rendering, left, right } = props;

@@ -1,7 +1,11 @@
 import { ComponentParams, ComponentRendering } from '@sitecore-content-sdk/nextjs';
-import { ContainerPlaceHolderProps } from './container.props';
-
 import type { JSX } from 'react';
+
+type ContainerPlaceHolderProps = {
+  dynamicKey: string;
+  genericKey: string;
+  fragment: string;
+};
 
 export const getContainerPlaceholderProps = (
   fragment: string,
