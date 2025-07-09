@@ -1,12 +1,22 @@
-import { CardProps } from './card.props';
 import { RichText, Text } from '@sitecore-content-sdk/nextjs';
 import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Default as Icon } from '@/components/icon/Icon';
-import { IconName } from '@/enumerations/Icon.enum';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
-import { Link } from '@sitecore-content-sdk/nextjs';
+import { IconName } from '@/enumerations/Icon.enum';
+import { EnumValues } from '@/enumerations/generic.enum';
+import { Field, ImageField, LinkField, Link } from '@sitecore-content-sdk/nextjs';
 import { cn } from '@/lib/utils';
+
+type CardProps = {
+  heading: Field<string>; // Sitecore editable text field
+  description: Field<string>;
+  image?: ImageField; // Sitecore editable image field
+  link: LinkField; // Sitecore editable link field
+  icon?: EnumValues<typeof IconName>;
+  className?: string;
+  editable?: boolean;
+};
 
 /**
  * Card
