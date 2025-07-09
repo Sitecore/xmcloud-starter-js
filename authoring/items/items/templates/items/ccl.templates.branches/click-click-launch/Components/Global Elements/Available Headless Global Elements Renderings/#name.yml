@@ -1,0 +1,34 @@
+﻿---
+ID: "a58238f9-cfba-4245-b632-9615cf690299"
+Parent: "f92335f4-01dd-46c2-9f80-598e81703717"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Global Elements/Available Headless Global Elements Renderings/$name"
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {1648D90C-709E-4FD1-92C1-A37BDF08F1FF}
+    {77447DA8-09CF-4067-86DA-F87505E0A156}
+    {97E47419-8242-498C-8683-3D07C1A9E752}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171113T104335Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e6026ecd-b298-4fc6-9280-78a3a42be712"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20241016T133023Z

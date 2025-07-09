@@ -20,10 +20,10 @@ For developers new to XM Cloud you can follow the Getting Started Guide on the [
 - Log into the Sitecore XM Cloud Deploy Portal, locate your Environment and select the `Developer Settings` tab.
 - Ensure that the `Preview` toggle is enabled.
 - In the `Local Development` section, click to copy the sample `.env` file contents to your clipboard.
-- Create a new `.env.local` file in the `./headapps/nextjs-starter` folder of this repository and paste the contents from your clipboard.
+- Create a new `.env.local` file in the `./examples/basic-nextjs` folder of this repository and paste the contents from your clipboard.
 - Run the following commands in the root of the repository to start the NextJs application:
   ```bash
-  cd headapps/nextjs-starter
+  cd examples/basic-nextjs
   npm install
   npm run start:connected
   ```
@@ -31,7 +31,7 @@ For developers new to XM Cloud you can follow the Getting Started Guide on the [
 
 ### SPA Starters Monorepo and Angular SPA
 
-A new starter SPA based on Angular has been introduced with JSS v22.3.0. The Angular starter has been designed to be compatible with XM Cloud and should be used with the provided node XM Cloud proxy application to handle server-side rendering (SSR), data queries, personalization and more. For more details and information on how to run and deploy the Angular starter and proxy to XM Cloud have a look at [SPA starters monorepo](headapps/spa-starters/)
+A new starter SPA based on Angular has been introduced with JSS v22.3.0. The Angular starter has been designed to be compatible with XM Cloud and should be used with the provided node XM Cloud proxy application to handle server-side rendering (SSR), data queries, personalization and more. For more details and information on how to run and deploy the Angular starter and proxy to XM Cloud have a look at [SPA starters monorepo](examples/basic-spa/)
 
 ## Disconnected offline development
 

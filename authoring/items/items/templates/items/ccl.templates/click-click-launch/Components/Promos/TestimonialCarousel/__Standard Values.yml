@@ -1,0 +1,48 @@
+﻿---
+ID: "d7d5173e-3f35-491d-b3ac-4e674c81e47b"
+Parent: "cd4eeb25-5a6c-4a23-baff-bae9d921ffd1"
+Template: "cd4eeb25-5a6c-4a23-baff-bae9d921ffd1"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Promos/TestimonialCarousel/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{A2DBD4D1-E6DB-49EF-A759-FD4F765227AA}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20111206T092520Z
+    - ID: "872c7094-2de6-4934-8b6c-1f9f6c58721b"
+      Hint: Title
+      Value: $name
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ddb90a25-238c-43aa-9ab9-e6773853fa58"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250221T183951Z
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20111206T092520Z
+    - ID: "872c7094-2de6-4934-8b6c-1f9f6c58721b"
+      Hint: Title
+      Value: $name
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ddb90a25-238c-43aa-9ab9-e6773853fa58"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250221T183951Z

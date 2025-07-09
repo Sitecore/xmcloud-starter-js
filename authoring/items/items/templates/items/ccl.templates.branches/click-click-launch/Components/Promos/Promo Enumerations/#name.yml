@@ -1,0 +1,23 @@
+﻿---
+ID: "1264e73e-f1f6-4ee5-8b62-327327200d13"
+Parent: "8d5efcde-deae-4e56-872d-37d67a4beb71"
+Template: "b04ab8f4-2bdc-42d0-b8e1-87186dc8bf9c"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Promos/Promo Enumerations/$name"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T171946Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00ab9aca-dce7-43e0-ac21-a0e28e7888d8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240320T171946Z

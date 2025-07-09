@@ -1,0 +1,53 @@
+{
+    "$schema": "../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Project.click-click-launch",
+    "items": {
+        "includes": [
+            {
+                "name": "ccl.templates",
+                "path": "/sitecore/templates/Project/click-click-launch",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.templates.branches",
+                "path": "/sitecore/templates/Branches/Project/click-click-launch",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.modules",
+                "path": "/sitecore/system/settings/Project/click-click-launch",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.renderings",
+                "path": "/sitecore/Layout/Renderings/Project/click-click-launch",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.placeholderSettings",
+                "path": "/sitecore/Layout/Placeholder Settings/Project/click-click-launch",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.powershell",
+                "path": "/sitecore/system/Modules/PowerShell/Script Library/Click Click Launch",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.media.fd",
+                "path": "/sitecore/media library/Feature/Futuristic Drive",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.media.ms",
+                "path": "/sitecore/media library/Feature/Modern Sleek",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            },
+            {
+                "name": "ccl.media.bp",
+                "path": "/sitecore/media library/Feature/Bold Products",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            }
+        ]
+    }
+}

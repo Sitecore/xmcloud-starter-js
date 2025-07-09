@@ -1,0 +1,68 @@
+﻿---
+ID: "787dff86-1414-4260-9d94-830646318d97"
+Parent: "bd372d9d-6e4f-4ae9-a54c-dbc2acdebe2a"
+Template: "bd372d9d-6e4f-4ae9-a54c-dbc2acdebe2a"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Promos/AnimatedPromo/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250214T165012Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
+      Hint: image
+      Value: |
+        <image mediaid="{567F4754-89CD-4DD9-9033-8D6E29B806C7}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "529e676a-4c87-4a9d-b1f0-5391bbb2a545"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250220T201652Z
+    - ID: "da7db0f2-08eb-47c5-af07-ed12a1e998db"
+      Hint: title
+      Value: $name
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250214T165012Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
+      Hint: image
+      Value: |
+        <image mediaid="{567F4754-89CD-4DD9-9033-8D6E29B806C7}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "529e676a-4c87-4a9d-b1f0-5391bbb2a545"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250220T201652Z
+    - ID: "da7db0f2-08eb-47c5-af07-ed12a1e998db"
+      Hint: title
+      Value: $name

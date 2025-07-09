@@ -1,40 +1,67 @@
 {
-    "renderingHosts": {
-      "nextjsstarter": {
-        "path": "./headapps/nextjs-starter",
-        "nodeVersion": "22.11.0",
-        "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-        "enabled": true,
-        "type": "sxa",
-        "buildCommand": "build",
-        "runCommand": "next:start"
+  "renderingHosts": {
+    "nextjsstarter": {
+      "path": "./examples/basic-nextjs",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
+    },
+    "angularstarter": {
+      "path": "./examples/basic-angular",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": false,
+      "type": "sxa",
+      "buildCommand": "install-build:angular",
+      "runCommand": "start:angular"
+    },
+    "kit-nextjs-article-starter": {
+      "path": "./examples/kit-nextjs-article-starter",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "install-build",
+      "runCommand": "next:start"
+    },
+    "kit-nextjs-location-starter": {
+      "path": "./examples/kit-nextjs-location-finder",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "install-build",
+      "runCommand": "next:start"
+    },
+    "kit-nextjs-product-starter": {
+      "path": "./examples/kit-nextjs-product-listing",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "install-build",
+      "runCommand": "next:start"
+    }
+  },
+  "postActions": {
+    "actions": {
+      "warmUpCm": {
+        "urls": [
+          "/sitecore/shell",
+          "/sitecore/shell/Applications/Content%20Editor.aspx?sc_bw=1",
+          "/sitecore/client/Applications/Launchpad"
+        ]
       },
-      "angularstarter": {
-        "path": "./headapps/spa-starters",
-        "nodeVersion": "22.11.0",
-        "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-        "enabled": false,
-        "type": "sxa",
-        "buildCommand": "install-build:angular",
-        "runCommand": "start:angular"
+      "populateSchema": {
+        "indexNames": []
+      },
+      "reindex": {
+        "indexNames": []
       }
-    },
-    "postActions": {
-        "actions":{
-          "warmUpCm": {
-            "urls": [
-              "/sitecore/shell",
-              "/sitecore/shell/Applications/Content%20Editor.aspx?sc_bw=1",
-              "/sitecore/client/Applications/Launchpad"
-            ]
-          },
-          "populateSchema": {
-            "indexNames": []
-          },
-          "reindex": {
-            "indexNames": []
-          }
-        }
-    },
-    "authoringPath": "./authoring"
+    }
+  },
+  "authoringPath": "./authoring"
 }

@@ -1,0 +1,23 @@
+﻿---
+ID: "b19a3c3b-571c-44ce-9d42-ff31d51c3ec6"
+Parent: "4836a6ce-3410-4cb7-b2d6-7c91134658cf"
+Template: "4836a6ce-3410-4cb7-b2d6-7c91134658cf"
+Path: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/ProductPageHeader/Rendering Parameters/ProductPageHeader Parameters/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211020T140508Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7f3b25e0-ca21-436e-9fec-32ff27b45caa"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250602T184651Z

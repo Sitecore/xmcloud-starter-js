@@ -1,0 +1,36 @@
+﻿---
+ID: "f8a5f681-120e-49ba-a04a-217e7f2b5474"
+Parent: "927ca4fa-9513-4f71-9946-8528b25c5730"
+Template: "927ca4fa-9513-4f71-9946-8528b25c5730"
+Path: "/sitecore/templates/Project/click-click-launch/Signup Banner/SignupBanner Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {3766E92A-E97F-4118-91A0-06223312A461}
+    {927CA4FA-9513-4F71-9946-8528B25C5730}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e61d42c6-cf40-4147-a15e-6da4e4f17251"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3411beab-a340-407f-8304-ef247d274256"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250523T144955Z

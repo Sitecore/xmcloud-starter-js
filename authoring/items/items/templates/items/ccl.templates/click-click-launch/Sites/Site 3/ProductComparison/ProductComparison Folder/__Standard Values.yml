@@ -1,0 +1,36 @@
+﻿---
+ID: "283167ce-4404-4d03-bd01-ccb328d20d2b"
+Parent: "7af9ed94-0ed7-47bd-8504-987f6ef43e7e"
+Template: "7af9ed94-0ed7-47bd-8504-987f6ef43e7e"
+Path: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/ProductComparison/ProductComparison Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {6589A92D-1E47-457D-8CC1-D37D5868B89D}
+    {7AF9ED94-0ED7-47BD-8504-987F6EF43E7E}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c0953075-e767-4d27-9690-7b35865de27d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0ac7bd42-8ece-4320-8373-b9ee9210e2dc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250604T082532Z

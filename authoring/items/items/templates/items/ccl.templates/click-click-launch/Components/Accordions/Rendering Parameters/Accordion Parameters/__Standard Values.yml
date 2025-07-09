@@ -1,0 +1,31 @@
+﻿---
+ID: "7d7fdb50-0886-479c-9f38-c379a623c899"
+Parent: "ea722d9e-e0fd-4e08-af52-870c0375f210"
+Template: "ea722d9e-e0fd-4e08-af52-870c0375f210"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Accordions/Rendering Parameters/Accordion Parameters/__Standard Values"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/elements3.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211012T120926Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "676df092-1a0c-4fa0-83c0-7142bc4aa3a7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250207T203223Z

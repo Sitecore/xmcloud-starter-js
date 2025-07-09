@@ -1,0 +1,41 @@
+@import '../assets/styles/globals.css';
+@import 'tailwindcss';
+
+@config '../assets/tailwind.config.cjs';
+
+@utility text-box-trim-start {
+    text-box-trim: trim-start;
+}
+@utility text-box-trim-end {
+    text-box-trim: trim-end;
+}
+@utility text-box-trim-both {
+    text-box-trim: trim-both;
+}
+@utility text-box-edge-asc-desc {
+    text-box-edge: text text;
+}
+@utility text-box-edge-asc-baseline {
+    text-box-edge: text alphabetic;
+}
+@utility text-box-edge-cap-baseline {
+    text-box-edge: cap alphabetic;
+}
+@utility position-left {
+    @apply text-start;
+}
+@utility position-center {
+    @apply text-center;
+}
+@utility position-right {
+    @apply text-end;
+}
+@utility indent-top {
+    @apply mt-8 @md:mt-16;
+}
+@utility indent-bottom {
+    @apply mb-8 @md:mb-16;
+}
+@utility indent {
+    @apply px-8 @md:px-16;
+}

@@ -1,0 +1,31 @@
+﻿---
+ID: "d9c13e9e-1534-4dcc-baa4-accdf85935da"
+Parent: "8783a1b7-1609-488f-8390-f0f8bf4311fa"
+Template: "8783a1b7-1609-488f-8390-f0f8bf4311fa"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Product/Rendering Parameters/Product Listing/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250319T183900Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\alex.jackson@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\alex.jackson@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0145a7bf-765f-4414-b64f-86ba501af932"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\alex.jackson@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250319T183900Z

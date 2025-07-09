@@ -1,0 +1,15 @@
+export const SubmitInfoFormDictionaryKeys = {
+  SUBMITINFOFORM_FirstNameLabel: 'Demo2_SubmissionForm_FirstName',
+  SUBMITINFOFORM_FirstNamePlaceholder: 'Demo2_SubmissionForm_FirstNamePlaceholder',
+  SUBMITINFOFORM_LastNameLabel: 'Demo2_SubmissionForm_LastName',
+  SUBMITINFOFORM_LastNamePlaceholder: 'Demo2_SubmissionForm_LastNamePlaceholder',
+  SUBMITINFOFORM_ZipcodeLabel: 'Demo2_SubmissionForm_Zipcode',
+  SUBMITINFOFORM_ZipcodePlaceholder: 'Demo2_SubmissionForm_ZipcodePlaceholder',
+  SUBMITINFOFORM_EmailLabel: 'Demo2_SubmissionForm_EmailLabelText',
+  SUBMITINFOFORM_EmailPlaceholder: 'Demo2_SubmissionForm_EmailPlaceholderText',
+  SUBMITINFOFORM_EmailErrorMessage: 'Demo2_SubmissionForm_EmailErrorMessage',
+  SUBMITINFOFORM_PhoneLabel: 'Demo2_SubmissionForm_Phone',
+  SUBMITINFOFORM_PhonePlaceholder: 'Demo2_SubmissionForm_PhonePlaceholder',
+  SUBMITINFOFORM_ButtonText: 'Demo2_SubmissionForm_ButtonLabel',
+  SUBMITINFOFORM_SuccessMessage: 'Demo2_SubmissionForm_SuccessMessage',
+};

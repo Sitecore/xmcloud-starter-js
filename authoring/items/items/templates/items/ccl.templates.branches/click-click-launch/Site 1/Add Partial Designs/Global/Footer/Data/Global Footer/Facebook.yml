@@ -1,0 +1,39 @@
+﻿---
+ID: "193a3cb7-48a3-4959-a542-4b860ef2f801"
+Parent: "04a0ea89-add9-4cae-8a68-25206c7ad96f"
+Template: "f24978e9-cab5-4a7f-a836-d423ff20b830"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Site 1/Add Partial Designs/Global/Footer/Data/Global Footer/Facebook"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250212T162742Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fc962811-477b-428d-bdda-0e013922409c"
+    - ID: "9eb14315-948f-4ada-b8e9-029f42c6fdca"
+      Hint: link
+      Value: |
+        <link linktype="external" url="https://facebook.com/" anchor="" target="_blank" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250624T112614Z
+    - ID: "e11f29f8-4940-4273-962a-5c598a9dc6bf"
+      Hint: socialIcon
+      Value: |
+        <image mediaid="{27AAFDEA-E9AB-4522-B789-3A90F0E9C8A7}" />

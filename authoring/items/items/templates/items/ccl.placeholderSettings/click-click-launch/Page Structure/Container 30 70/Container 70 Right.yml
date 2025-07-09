@@ -1,0 +1,45 @@
+﻿---
+ID: "299030a7-eb9e-4fb7-abe6-4f6842d50444"
+Parent: "e9a6dd96-9b39-4771-ade7-8d1d86eb1f7b"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/click-click-launch/Page Structure/Container 30 70/Container 70 Right"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "container-seventy-right-{*}"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: |
+    {A563BE98-85FA-4DD5-94BD-9D9C937799F6}
+    {7CB831E8-C889-4193-B822-A1131CB0B755}
+    {50B36874-8C4E-4958-9DD6-8B95C6AFD09A}
+    {B4CBCB8F-9096-4888-AC6E-34DF687276FB}
+    {09BE0A81-23F2-4A4F-A042-7DD0003C2D0C}
+    {945776A1-8F30-4749-A668-4FCC434A60ED}
+    {D806DDF7-39A7-4A6D-8E0A-D138BC53845D}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240325T202948Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "04999ab2-01d9-45e9-979c-2793c0514942"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20241016T152612Z

@@ -1,0 +1,23 @@
+﻿---
+ID: "68c32c08-f06d-436d-8893-c3fdd70b0a83"
+Parent: "1264e73e-f1f6-4ee5-8b62-327327200d13"
+Template: "b04ab8f4-2bdc-42d0-b8e1-87186dc8bf9c"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Promos/Promo Enumerations/$name/Color Scheme"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240920T181457Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "819a76f5-6749-47b4-bb29-5adc21e681c1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\dylan.young@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250214T031328Z

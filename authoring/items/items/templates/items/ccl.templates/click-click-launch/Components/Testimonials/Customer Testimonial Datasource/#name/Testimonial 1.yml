@@ -1,0 +1,30 @@
+﻿---
+ID: "7b2e6f91-6e75-4128-b274-1d4702557f2b"
+Parent: "38afcd44-1fd5-4192-86e2-da1d5657ace0"
+Template: "fd50ad08-3773-4ad8-afe7-a2c3dc34aff0"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Testimonials/Customer Testimonial Datasource/$name/Testimonial 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04ae6821-8a83-44d6-99c8-f1b54ec8c692"
+      Hint: CustomerName
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171019T090759Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c51ea160-abf6-4ea6-a3a8-17031629faf2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250214T140459Z

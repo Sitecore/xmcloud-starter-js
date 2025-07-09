@@ -1,0 +1,99 @@
+﻿---
+ID: "167ca3f5-04e0-4683-af27-b24c6329f76d"
+Parent: "c5bf35b2-2463-4304-8327-0112142d7e0d"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: "/sitecore/layout/Renderings/Project/click-click-launch/Product/ProductListing"
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: ProductListing
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/rack_servers.png
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    # Write your query or mutation here
+    query ProductListingQuery($datasource: String!, $language: String!) {
+      datasource: item(path: $datasource, language: $language) {
+        id
+        ... on ProductListing {
+          title {
+            jsonValue
+          }
+          viewAllLink {
+            jsonValue
+          }
+          products {
+            targetItems {
+              ... on C__ProductPage {
+                url {
+                  url
+                  path
+                }
+                pageThumbnail {
+                  jsonValue
+                }
+                productBasePrice {
+                  jsonValue
+                }
+                productName {
+                  jsonValue
+                }
+                productThumbnail {
+                  jsonValue
+                }
+                productFeatureTitle {
+                  jsonValue
+                }
+                productFeatureText {
+                  jsonValue
+                }
+                productDrivingRange {
+                  jsonValue
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: "/sitecore/templates/Project/click-click-launch/Components/Product/Product Listing"
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{8783A1B7-1609-488F-8390-F0F8BF4311FA}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='Product Listings Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Product Listings Folder']"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "317fe784-d09d-4147-a877-33a5112c37c9"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250319T171941Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\alex.jackson@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\alex.jackson@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fe424349-d1a7-475b-b75f-4c620b3fe51a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250530T160142Z

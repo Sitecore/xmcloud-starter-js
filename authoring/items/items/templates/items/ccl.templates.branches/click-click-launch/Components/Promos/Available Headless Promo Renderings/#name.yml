@@ -1,0 +1,37 @@
+﻿---
+ID: "6daf7cac-dcdd-441c-a232-0cb1dc00c54b"
+Parent: "045658ee-f4db-40a6-b999-f97612b8bde5"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Promos/Available Headless Promo Renderings/$name"
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {945776A1-8F30-4749-A668-4FCC434A60ED}
+    {D806DDF7-39A7-4A6D-8E0A-D138BC53845D}
+    {3332F59B-F5F3-44DF-B66E-2811C31AEB3C}
+    {EAD21DA1-10F6-45C6-A0D5-55AAF09FB743}
+    {241A1B8E-E69A-4E07-B5E4-53975371AD3C}
+    {FC274B80-2EF2-4B05-89D4-22FCB1E9CC9C}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171113T104335Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1644922e-fae8-4846-b6c6-29fcf4b1a5a1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chris.sulham@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250221T182452Z

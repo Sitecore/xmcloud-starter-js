@@ -1,0 +1,23 @@
+﻿---
+ID: "08d02120-f955-4137-8bf9-8f0a4cce424e"
+Parent: "837f2ee3-8882-482a-9e30-c63dec2d89c2"
+Template: "83746e54-66fe-4fd4-b79d-ff3fd4acd903"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Page Content/Page Content Enumerations/$name/Icon Positions/leading"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20241115T184305Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f24de5c5-26c3-4775-8c9f-a96bd330d5c7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20241115T184305Z

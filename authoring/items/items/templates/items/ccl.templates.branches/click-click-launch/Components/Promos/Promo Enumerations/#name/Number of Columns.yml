@@ -1,0 +1,23 @@
+﻿---
+ID: "af9dabb9-33da-456e-b744-410d39eb19fa"
+Parent: "1264e73e-f1f6-4ee5-8b62-327327200d13"
+Template: "b04ab8f4-2bdc-42d0-b8e1-87186dc8bf9c"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Promos/Promo Enumerations/$name/Number of Columns"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240321T021623Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "be9c0d09-a7db-4c7d-b6bf-fd511432ce03"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\kevin.mazzoni@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240321T021623Z

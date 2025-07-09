@@ -1,0 +1,213 @@
+﻿---
+ID: "f067e471-7481-4db7-944d-9c3a1cf5d0c0"
+Parent: "4ff2646c-2b0f-428f-b9a0-d6ea531de713"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Click Click Launch/Functions/Site 3 Site Setup
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    Import-Function Get-ItemByIdSafe
+    Import-Function Update-PageTemplate
+    
+    function Invoke-ModuleScriptBody {
+        [CmdletBinding()]
+        param(
+            [Parameter(Mandatory = $true, Position = 0 )]
+            [Item]$Site,
+        
+            [Parameter(Mandatory = $true, Position = 1 )]
+            [Item[]]$TenantTemplates
+    
+        )
+        
+        begin {
+            Write-Log "Cmdlet Add Home Renderings - Post Site Creation Script"
+            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Begin"
+            Import-Function Get-ProjectTemplateBasedOnBaseTemplate
+        }
+        
+        process {
+            Write-Verbose "Cmdlet Invoke-ModuleScriptBody - Process"
+            $sitePath = $Site.Paths.Path
+            $siteCollection = $Site.Parent
+            $service = [Sitecore.DependencyInjection.ServiceLocator]::ServiceProvider.GetService([Sitecore.XA.Foundation.Variants.Abstractions.Services.IAvailableRenderingVariantService])
+            $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
+            Write-Verbose "My site: $sitePath"
+    
+            # handle missing styles folder
+            if (-not (Test-Path "$sitePath/Presentation/Styles")) {
+                Import-Function Invoke-AddItem
+                $action = Get-Item . -ID '{B2486523-7487-4526-978F-AD2E986B5CC4}'
+                Invoke-AddItem $Site $action
+            }
+      
+            # Add LinkList variants
+            $linkListVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/LinkList" -Language $Site.Language
+            $footerLinks = New-Item -Parent $linkListVariant -Name "FooterLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+            $footerLinks.'__Display name' = "Footer Links"
+            $headerPrimaryLinks = New-Item -Parent $linkListVariant -Name "HeaderPrimaryLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+            $headerPrimaryLinks.'__Display name' = "Header Primary Links"
+            $headerSecondaryLinks = New-Item -Parent $linkListVariant -Name "HeaderSecondaryLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+            $headerSecondaryLinks.'__Display name' = "Header Secondary Links"
+            
+            Write-Verbose "Create page templates in the Site Collection"
+            $basePageTemplateId = "{AC9DE9BE-8E86-4147-8FBC-739D5560408B}"
+            $baseHomePageTemplateId = "{4ACCF644-A506-421F-B60F-A05E5C6196B4}"
+            $audioPageTemplateId = "{1B76AF75-DD75-450C-92E3-FF0F339F490B}"
+            $basePageFolderTemplateId = "{84DBE64B-0FED-4125-A971-725C0155C321}"
+    
+            $templatesRootPath = "master:/sitecore/templates/Project/$($siteCollection.Name)"
+    
+            $pageTemplate = Get-Item -Path "$templatesRootPath/Page"
+            $pageTemplate."__Base template" = $basePageTemplateId
+    
+            $homePageTemplate = Update-PageTemplate -BaseTemplateId $baseHomePageTemplateId -TemplateName "Home Page" -TemplatesRootPath $templatesRootPath
+            $audioPageTemplate = Update-PageTemplate -BaseTemplateId $audioPageTemplateId -TemplateName "Audio Product Page" -TemplatesRootPath $templatesRootPath
+            $pageFolderTemplate = Update-PageTemplate -BaseTemplateId $basePageFolderTemplateId -TemplateName "Page Folder" -TemplatesRootPath $templatesRootPath
+            
+            # Add Page Design and link partial designs
+            Write-Verbose "Add Page Design and link partial designs"
+            $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -Language $Site.Language
+            $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer" -Language $Site.Language
+            $productContentPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/ProductContent" -Language $Site.Language
+            
+            $defaultPageDesign = New-Item -Path "$($sitePath)/Presentation/Page Designs" -Name "Default" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
+            $defaultPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
+            
+            $productPageDesign = New-Item -Path "$($sitePath)/Presentation/Page Designs" -Name "ProductPage" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}"
+            $productPageDesign.PartialDesigns = "$($headerPartial.ID)|$($productContentPartial.ID)|$($footerPartial.ID)"
+    
+            $pageDesigns = Get-Item -path "$sitePath/Presentation/Page Designs" -Language $Site.Language
+            $map = [Sitecore.Text.UrlString]::new()
+            $map[$homePageTemplate.ID] = "$($defaultPageDesign.ID)"
+            $map[$pageTemplate.ID] = "$($defaultPageDesign.ID)"
+            $map[$audioPageTemplate.ID] = "$($productPageDesign.ID)"
+            $pageDesigns.TemplatesMapping = [System.Web.HttpUtility]::UrlEncode($map.toString())
+            
+            Write-Verbose "Update rendering variants on partial designs"
+            $renderingLinkList = Get-Item -Path '/sitecore/layout/Renderings/Feature/JSS Experience Accelerator/Navigation/LinkList'
+
+            # Get variants for link list
+            $linkListVariants = $service.GetAvailableRenderingVariants($Site, $renderingLinkList.Name, $renderingLinkList.ID, $item.TemplateID)
+            $linkListVariant = $linkListVariants | ? { $_.DisplayName -eq "FooterLinks" }
+
+            $alignItemsCenter = Get-Item -Path "$sitePath/Presentation/Styles/Content alignment/Align content center" -Language $Site.Language
+            Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-primary*" -FinalLayout | `
+                Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; }  | `
+                Set-Rendering -Item $footerPartial -FinalLayout
+                
+            Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-secondary*" -FinalLayout | `
+                Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; } | `
+                Set-Rendering -Item $footerPartial -FinalLayout
+
+            Write-Verbose "Update the home page template"
+            # Update the home page template
+            Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
+            
+            # Re-get the item with the new base template
+            $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
+            
+            # Update Site3 page templates
+            Set-ItemTemplate -Path "$sitePath/Home/Kitchensink" -Template $pageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Signup" -Template $pageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Speakers" -Template $pageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 10" -Template $audioPageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 30" -Template $audioPageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 50" -Template $audioPageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Signup" -Template $pageTemplate.ID
+            Set-ItemTemplate -Path "$sitePath/Home/Video" -Template $pageTemplate.ID
+            
+            Write-Verbose "Update the home page renderings"
+            $renderingHeroST = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Site 3/HeroST'
+            $renderingTextSlider = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Site 3/TextSlider'
+            $renderingMultiPromo = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Promos/MultiPromo'
+            $renderingSignupBanner = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Site 3/SignupBanner'
+        
+            Write-Host "Get the rendering definitions"
+            $renderingHeroSTDefinition = $renderingHeroST | New-Rendering
+            $renderingTextSliderDefinition = $renderingTextSlider | New-Rendering
+            $renderingMultiPromoDefinition = $renderingMultiPromo | New-Rendering
+            $renderingSignupBannerDefinition = $renderingSignupBanner | New-Rendering
+                
+            Write-Host "Getting variants"
+            
+            # variants for HeroST
+            $heroSTVariants = $service.GetAvailableRenderingVariants($Site, $renderingHeroST.Name, $renderingHeroST.ID, $item.TemplateID)
+            $heroVariant = $heroSTVariants | ? { $_.DisplayName -eq "Default" }
+            $heroVariantRight = $heroSTVariants | ? { $_.DisplayName -eq "Right" }
+            
+            # variants for Multi-Promo
+            $multiPromoVariants = $service.GetAvailableRenderingVariants($Site, $renderingMultiPromo.Name, $renderingMultiPromo.ID, $item.TemplateID)
+            $multiPromoVariantStacked = $multiPromoVariants | ? { $_.DisplayName -eq "Stacked" }
+            
+            # variants for Signup Banner
+            $signupBannerVariants = $service.GetAvailableRenderingVariants($Site, $renderingSignupBanner.Name, $renderingSignupBanner.ID, $item.TemplateID)
+            $signupBannerVariant = $signupBannerVariants | ? { $_.DisplayName -eq "Default" }
+            
+            # Add Home layout
+            Write-Host "Add HeroST 1"
+            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "1"; "FieldNames" = $heroVariant.ID; } -DataSource "local:/Data/HeroST/HeroST 1" -FinalLayout
+            Write-Host "Add HeroST 2"
+            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "3"; "FieldNames" = $heroVariantRight.ID; } -DataSource "local:/Data/HeroST/HeroST 2" -FinalLayout
+            Write-Host "Add HeroST 3"
+            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "4"; "FieldNames" = $heroVariant.ID; } -DataSource "local:/Data/HeroST/HeroST 3" -FinalLayout
+            Write-Host "Add TextSlider"
+            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingTextSliderDefinition -Parameter @{ "DynamicPlaceholderId" = "2"; } -DataSource "local:/Data/TextSlider 1" -FinalLayout
+            Write-Host "Add MultiPromo"
+            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingMultiPromoDefinition -Parameter @{ "DynamicPlaceholderId" = "6"; "FieldNames" = $multiPromoVariantStacked.ID; } -DataSource "local:/Data/MultiPromo 2" -FinalLayout
+            Write-Host "Add SignupBanner"
+            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingSignupBannerDefinition -Parameter @{ "DynamicPlaceholderId" = "5"; "FieldNames" = $signupBannerVariant.ID; } -DataSource "local:/Data/SignupBanner 1" -FinalLayout
+    
+            Write-Verbose "Update home page fields"
+            $title = "SYNC"
+            $shortTitle = "SYNC"
+    
+            $item."pageTitle" = $title
+            $item."pageShortTitle" = $shortTitle
+            $item."pageHeaderTitle" = $shortTitle
+            $item."pageSummary" = $title
+    
+            $item."metadataTitle" = $title
+            $item."metadataDescription" = $title
+            $item."metadataKeywords" = "Symphonic, audio, speakers, headphones"
+            $item."ogTitle" = $title
+            $item."ogDescription" = $title
+        }
+        
+        end {
+            Write-Log "Cmdlet Invoke-ModuleScriptBody - End"
+        }
+    }
+    
+    #$site = Get-Item .
+    #Invoke-ModuleScriptBody -Site $site -Verbose
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "00d331ed-bd0c-452d-aa87-84118ae44e5e"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250625T112150Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c1aae55f-99fe-41ce-aeee-8184a6550f26"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250703T163844Z

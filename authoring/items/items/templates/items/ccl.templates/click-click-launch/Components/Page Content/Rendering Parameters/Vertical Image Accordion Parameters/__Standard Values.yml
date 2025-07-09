@@ -1,0 +1,27 @@
+﻿---
+ID: "b2e15b0d-4931-487e-8e47-c3ec9e4e94aa"
+Parent: "1e8a8d8d-bece-4ee2-8327-437fe7a20f0e"
+Template: "1e8a8d8d-bece-4ee2-8327-437fe7a20f0e"
+Path: "/sitecore/templates/Project/click-click-launch/Components/Page Content/Rendering Parameters/Vertical Image Accordion Parameters/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211012T120926Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a04e9660-cffe-4ba2-a4d5-c41f70e008d1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\minyie.diaz@velir.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250403T132030Z
