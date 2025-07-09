@@ -1,9 +1,47 @@
 import React from 'react';
-import { Link, useSitecore, Text } from '@sitecore-content-sdk/nextjs';
+import {
+  Link,
+  useSitecore,
+  Text,
+  Field,
+  ImageField,
+  LinkField,
+} from '@sitecore-content-sdk/nextjs';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { EditableButton as Button } from '@/components/button-component/ButtonComponent';
-import { ArticleListingProps } from './article-listing.props';
+import { ComponentProps } from '@/lib/component-props';
+import { ReferenceField } from '@/types/ReferenceField.props';
+import { AuthorReferenceField } from '@/types/AuthorTaxonomy.props';
+
+interface ArticleListingParams {
+  [key: string]: any; // eslint-disable-line
+}
+
+type ArticleItemReferenceField = ReferenceField & {
+  fields: ArticleItem;
+};
+
+interface ArticleItem {
+  pageTitle: Field<string>;
+  pageSummary: Field<string>;
+  pageThumbnail: ImageField;
+  pageReadTime: Field<string>;
+  taxAuthor: AuthorReferenceField;
+}
+
+interface ArticleListingFields {
+  titleOptional?: Field<string>;
+  descriptionOptional?: Field<string>;
+  linkOptional?: LinkField;
+  featuredContent: ArticleItemReferenceField[];
+}
+
+interface ArticleListingProps extends ComponentProps {
+  params: ArticleListingParams;
+  fields: ArticleListingFields;
+  isPageEditing?: boolean;
+}
 
 interface TransformedArticle {
   link: string;
