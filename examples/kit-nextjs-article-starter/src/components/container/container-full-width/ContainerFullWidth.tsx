@@ -1,8 +1,16 @@
 import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
-import { ContainerFullWidthProps } from '@/components/container/container-full-width/container-full-width.props';
 import { Flex, FlexItem } from '@/components/flex/Flex.dev';
 import { cn } from '@/lib/utils';
+import { ComponentProps } from '@/lib/component-props';
+import { PlaceholderProps } from '@/types/Placeholder.props';
 
+export type ContainerFullWidthProps = ComponentProps & PlaceholderProps & ContainerFullWidthParams;
+
+export type ContainerFullWidthParams = {
+  params?: {
+    excludeTopMargin?: string;
+  };
+};
 export const Default: React.FC<ContainerFullWidthProps> = (props) => {
   const { rendering, children } = props;
 
