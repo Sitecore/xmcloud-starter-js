@@ -46,12 +46,6 @@ type AuthorReferenceField = ReferenceField & {
   fields: PersonItem;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-type AuthorItemFields = {
-  name: Field<string>;
-  jobTitle: Field<string>;
-};
-
 interface ArticleHeaderFields {
   imageRequired?: { jsonValue: ImageField };
   eyebrowOptional?: { jsonValue: Field<string> };
