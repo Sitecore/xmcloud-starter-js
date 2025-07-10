@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import {
-  useSitecoreContext,
+  useSitecore,
   ImageField,
   LayoutServicePageState,
 } from '@sitecore-content-sdk/nextjs';
@@ -42,17 +42,17 @@ export const Default = ({
   const [imgSrc, setImgSrc] = useState({ src: '', width: 0, height: 0 });
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const { sitecoreContext } = useSitecoreContext();
+  const { pageContext } = useSitecore();
   const getImageUrl = useCallback(
     (imageField: ImageField) => {
       const src = imageField?.value?.src;
-      if (sitecoreContext?.pageState !== LayoutServicePageState.Normal && src?.startsWith('/')) {
+      if (pageContext?.pageState !== LayoutServicePageState.Normal && src?.startsWith('/')) {
         return `${window.location.protocol}//${window.location.hostname}${src}`;
       }
 
       return src ? `${src.replace('http://cm/', '/')}` : '';
     },
-    [sitecoreContext]
+    [pageContext]
   );
   useEffect(() => {
     if (!elementRef.current) return;
@@ -91,7 +91,7 @@ export const Default = ({
         vidEl?.pause();
       }
     }
-  }, [image, isIntersecting, sitecoreContext, getImageUrl, pause, elementRef]);
+  }, [image, isIntersecting, pageContext, getImageUrl, pause, elementRef]);
 
   if (!video && !image) return null;
 

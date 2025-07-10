@@ -3,7 +3,7 @@ import {
   Link as JssLink,
   RichText as JssRichText,
   Text as JssText,
-  useSitecoreContext,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 import { Button } from 'shadcd/components/ui/button';
@@ -89,8 +89,8 @@ const ContactCardImage = (props: ContactCardImageProps) => {
 };
 
 const ContactCard = (props: ContactCardProps) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditing = sitecoreContext.pageEditing;
+  const { pageContext } = useSitecore();
+  const isEditing = pageContext.pageEditing;
 
   const buttons = useMemo(
     () => (

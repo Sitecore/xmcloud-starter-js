@@ -1,16 +1,16 @@
 import {
   ImageField,
   LayoutServicePageState,
-  useSitecoreContext,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { getImageProps } from 'next/image';
 
 const getImageUrl = (imageField: ImageField) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { sitecoreContext } = useSitecoreContext();
+  const { pageContext } = useSitecore();
   const src = imageField?.value?.src;
 
-  if (sitecoreContext?.pageState !== LayoutServicePageState.Normal && src?.startsWith('/')) {
+  if (pageContext?.pageState !== LayoutServicePageState.Normal && src?.startsWith('/')) {
     return `${window.location.protocol}//${window.location.hostname}${src}`;
   }
 

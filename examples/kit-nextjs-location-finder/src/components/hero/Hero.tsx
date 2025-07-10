@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import type { HeroProps } from './hero.props';
 import { HeroDefault } from './HeroDefault.dev';
 import { HeroImageBottom } from './HeroImageBottom.dev';
@@ -12,8 +12,8 @@ import { dictionaryKeys } from '@/variables/dictionary';
 
 // Default display of the component
 export const Default: React.FC<HeroProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
   const { t } = useI18n();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel),
@@ -26,8 +26,8 @@ export const Default: React.FC<HeroProps> = (props) => {
 
 // Variants
 export const ImageBottom: React.FC<HeroProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
   const { t } = useI18n();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel),
@@ -39,8 +39,8 @@ export const ImageBottom: React.FC<HeroProps> = (props) => {
 };
 
 export const ImageBottomInset: React.FC<HeroProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
   const { t } = useI18n();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel),
@@ -52,8 +52,8 @@ export const ImageBottomInset: React.FC<HeroProps> = (props) => {
 };
 
 export const ImageBackground: React.FC<HeroProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
   const { t } = useI18n();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel),
@@ -65,8 +65,8 @@ export const ImageBackground: React.FC<HeroProps> = (props) => {
 };
 
 export const ImageRight: React.FC<HeroProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
   const { t } = useI18n();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel),
