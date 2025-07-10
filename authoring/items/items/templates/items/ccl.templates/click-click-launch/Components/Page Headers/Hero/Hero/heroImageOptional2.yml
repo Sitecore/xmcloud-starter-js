@@ -4,12 +4,18 @@ Parent: "1cc4af51-3773-496c-bbb3-42e7458bd791"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Page Headers/Hero/Hero/heroImageOptional2"
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:$siteMedia"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: Image
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 575
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9c7d03bc-869a-498c-a2a0-74b786dcd261"
 Languages:
 - Language: en
   Versions:
@@ -28,11 +34,11 @@ Languages:
         sitecore\dylan.young@velir.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "46e79701-b81c-49bc-87b2-6ed2004b162c"
+      Value: "3c71f144-112f-4bcf-924d-705778e3abbf"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\dylan.young@velir.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250217T181231Z
+      Value: 20250709T151244Z

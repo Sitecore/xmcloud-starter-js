@@ -6,7 +6,7 @@ Path: "/sitecore/templates/Project/click-click-launch/Components/Media/Logo List
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "{3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}"
+  Value: "query:$siteMedia"
 - ID: "24cb32f0-e364-4f37-b400-0f2899097b5b"
   Hint: Enable Shared Language Fallback
   Value: 1
@@ -16,6 +16,9 @@ SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "86c8cd40-4ea7-4feb-9557-66cbbc1fa809"
 Languages:
 - Language: "de-DE"
   Fields:
@@ -106,14 +109,14 @@ Languages:
       Value: 20120321T191732Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f3f08488-233b-43a8-a2c0-61f81d794e00"
+      Value: "e7d94bf3-e716-4ec4-8677-d71d5ed86969"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\minyie.diaz@velir.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250304T223427Z
+      Value: 20250709T145949Z
     - ID: "fa622538-0c13-4130-a001-45984241aa00"
       Hint: Enable Language Fallback
       Value: 1

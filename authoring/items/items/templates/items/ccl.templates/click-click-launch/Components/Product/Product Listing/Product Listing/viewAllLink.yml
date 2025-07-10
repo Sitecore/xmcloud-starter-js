@@ -4,12 +4,18 @@ Parent: "f4d7cfa9-2073-4291-9249-21929bb78391"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Product/Product Listing/Product Listing/viewAllLink"
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:$linkableHomes"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: General Link
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 300
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "458c8b0c-a9a9-4a2d-a838-a4a43dcf270c"
 Languages:
 - Language: en
   Versions:
@@ -51,11 +57,11 @@ Languages:
         sitecore\alex.jackson@velir.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3df89512-6afa-4f8c-967f-16701b21678c"
+      Value: "b7ab30c7-1f1f-4be4-a322-a03686f1414c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\alex.jackson@velir.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250320T165009Z
+      Value: 20250709T151305Z

@@ -10,6 +10,7 @@ SharedFields:
     Import-Function Get-ItemByIdSafe
     Import-Function Update-PageTemplate
     Import-Function Update-TemplateInsertOptions
+    Import-Function Update-LinkField
     
     function Invoke-ModuleScriptBody {
         [CmdletBinding()]
@@ -122,6 +123,29 @@ SharedFields:
                 Set-Rendering -Item $footerPartial -Instance $globalFooterRenderingInstance -Parameter @{ "FieldNames" = $globalFooterVariant.ID } -FinalLayout
             }
             
+            Write-Verbose "Update header links"
+            $headerDatasource = Get-Item -Path "$($headerPartial.ItemPath)/Data/Global Header" -Language $Site.Language
+            $aeroLink = Get-Item -Path "$($headerDatasource.ItemPath)/Primary Navigation Links/Aero" -Language $Site.Language
+            $nexaLink = Get-Item -Path "$($headerDatasource.ItemPath)/Primary Navigation Links/Nexo" -Language $Site.Language #Typo is deliberate
+            $terraLink = Get-Item -Path "$($headerDatasource.ItemPath)/Primary Navigation Links/Terra" -Language $Site.Language
+            
+            $aeroPage = Get-Item -Path "$sitePath/Home/Products/Aero" -Language $Site.Language
+            $nexaPage = Get-Item -Path "$sitePath/Home/Products/Nexa" -Language $Site.Language
+            $terraPage = Get-Item -Path "$sitePath/Home/Products/Terra" -Language $Site.Language
+            
+            Update-LinkField -Item $aeroLink -FieldName "link" -TargetItem $aeroPage
+            Update-LinkField -Item $nexaLink -FieldName "link" -TargetItem $nexaPage
+            Update-LinkField -Item $terraLink -FieldName "link" -TargetItem $terraPage
+            
+            $headerDatasource.Editing.BeginEdit()
+            $headerDatasource["primaryNavigationLinks"] = "$($aeroLink.ID)|$($nexaLink.ID)|$($terraLink.ID)"
+            $headerDatasource.Editing.EndEdit()
+            
+            $testDriveItem = $item.Children["Test Drive"]
+            Update-LinkField -Item $headerDatasource -FieldName "headerContact" -TargetItem $testDriveItem
+            $homePageHeroItem = Get-Item -Path "$($item.ItemPath)/Data/Home Page Hero" -Language $Site.Language
+            Update-LinkField -Item $homePageHeroItem -FieldName "bannerCTA" -TargetItem $testDriveItem
+            
             Write-Verbose "Update the home page template"
             # Update the home page template
             Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
@@ -212,7 +236,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "53f9f62d-0820-4371-9e0b-5ac88d9beff2"
+  Value: "7fb70eaa-bb1c-43ad-b24b-055e7346eede"
 Languages:
 - Language: en
   Versions:
@@ -231,11 +255,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a8778368-82ba-4aaf-92cb-fd60ab9a6431"
+      Value: "af249263-d97f-4c9a-b246-7800dbc14904"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T025140Z
+      Value: 20250710T125430Z

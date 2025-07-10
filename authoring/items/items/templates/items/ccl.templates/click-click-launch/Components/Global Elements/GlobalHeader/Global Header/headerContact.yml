@@ -4,12 +4,18 @@ Parent: "4df3f511-07e5-412f-baea-19c04d07e73c"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Global Elements/GlobalHeader/Global Header/headerContact"
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:$linkableHomes"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: General Link
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 500
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3742c8d6-1022-4f29-b8a2-8ded72a4a53f"
 Languages:
 - Language: en
   Fields:
@@ -58,11 +64,11 @@ Languages:
         sitecore\dylan.young@velir.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4329b84a-1229-471b-b437-750981c4234d"
+      Value: "6bb20904-8a76-4e3c-b4a9-9fff34f06b87"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\dylan.young@velir.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250206T210707Z
+      Value: 20250709T150404Z

@@ -9,7 +9,10 @@ SharedFields:
   Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 50
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b9a60302-4a20-4fc2-9c4f-68fc316d7d11"
 Languages:
 - Language: en
   Fields:
@@ -35,11 +38,11 @@ Languages:
         sitecore\kevin.mazzoni@velir.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "976d381a-e876-43e1-90b6-4c1eaa6c8319"
+      Value: "85cb9039-9062-44a9-972c-4dc38cf05281"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\kevin.mazzoni@velir.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20241114T174437Z
+      Value: 20250709T150132Z
