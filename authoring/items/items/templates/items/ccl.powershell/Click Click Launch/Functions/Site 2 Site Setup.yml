@@ -1,4 +1,4 @@
----
+﻿---
 ID: "46d05c1b-9d19-4e26-80d1-38e41ff72cbb"
 Parent: "4ff2646c-2b0f-428f-b9a0-d6ea531de713"
 Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
@@ -9,6 +9,7 @@ SharedFields:
   Value: |
     Import-Function Get-ItemByIdSafe
     Import-Function Update-PageTemplate
+    Import-Function Update-InsertOptions
     
     function Invoke-ModuleScriptBody {
         [CmdletBinding()]
@@ -55,6 +56,7 @@ SharedFields:
             $baseLandingPageTemplateId = "{C3C9FC9E-E7D3-44E6-B777-AA23496924C7}"
             $baseProductPageTemplateId = "{9A52202D-3A77-4F6D-B9BD-6AECED9BD49A}"
             $basePageFolderTemplateId = "{84DBE64B-0FED-4125-A971-725C0155C321}"
+            $audioPageTemplateId = "{1B76AF75-DD75-450C-92E3-FF0F339F490B}"
     
             $templatesRootPath = "master:/sitecore/templates/Project/$($siteCollection.Name)"
     
@@ -62,12 +64,24 @@ SharedFields:
             $pageTemplate."__Base template" = $basePageTemplateId
     
             $homePageTemplate = Update-PageTemplate -BaseTemplateId $baseHomePageTemplateId -TemplateName "Home Page" -TemplatesRootPath $templatesRootPath
+            $audioPageTemplate = Update-PageTemplate -BaseTemplateId $audioPageTemplateId -TemplateName "Audio Product Page" -TemplatesRootPath $templatesRootPath
             $articlePageTemplate = Update-PageTemplate -BaseTemplateId $baseArticlePageTemplateId -TemplateName "Article Page" -TemplatesRootPath $templatesRootPath
             $detailPageTemplate = Update-PageTemplate -BaseTemplateId $baseDetailPageTemplateId -TemplateName "Detail Page" -TemplatesRootPath $templatesRootPath
             $landingPageTemplate = Update-PageTemplate -BaseTemplateId $baseLandingPageTemplateId -TemplateName "Landing Page" -TemplatesRootPath $templatesRootPath
             $productPageTemplate = Update-PageTemplate -BaseTemplateId $baseProductPageTemplateId -TemplateName "Product Page" -TemplatesRootPath $templatesRootPath
             $pageFolderTemplate = Update-PageTemplate -BaseTemplateId $basePageFolderTemplateId -TemplateName "Page Folder" -TemplatesRootPath $templatesRootPath
-            
+    
+            Write-Verbose "Update insert options"
+            $insertOptions = @( $articlePageTemplate.ID, $audioPageTemplate.ID, $detailPageTemplate.ID, $landingPageTemplate.ID, $productPageTemplate.ID, $pageFolderTemplate.ID )
+            Update-InsertOptions -TemplateItem $homePageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $audioPageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $articlePageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $detailPageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $articlePageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $landingPageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $productPageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $pageFolderTemplate -InsertOptions $insertOptions
+    
             # Add Page Design and link partial designs
             Write-Verbose "Add Page Design and link partial designs"
             $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -Language $Site.Language
@@ -80,6 +94,7 @@ SharedFields:
             $map = [Sitecore.Text.UrlString]::new()
             $map[$homePageTemplate.ID] = "$($defaultPageDesign.ID)"
             $map[$pageTemplate.ID] = "$($defaultPageDesign.ID)"
+            $map[$audioPageTemplate.ID] = "$($productPageDesign.ID)"
             $map[$articlePageTemplate.ID] = "$($defaultPageDesign.ID)"
             $map[$detailPageTemplate.ID] = "$($defaultPageDesign.ID)"
             $map[$landingPageTemplate.ID] = "$($defaultPageDesign.ID)"
@@ -197,7 +212,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "34a84b38-74ab-4481-bdf3-606008f806e8"
+  Value: "929ac879-d67b-4214-96ea-b322752b0858"
 Languages:
 - Language: en
   Versions:
@@ -216,11 +231,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fca9caf6-6bce-44fc-9d2b-8e2cda8ecf10"
+      Value: "ddd4e3b1-df43-49d4-814e-f53ab3448639"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250703T153323Z
+      Value: 20250710T013134Z
