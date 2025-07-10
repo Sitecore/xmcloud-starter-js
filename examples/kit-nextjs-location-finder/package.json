@@ -137,7 +137,7 @@
   },
   "scripts": {
     "fix": "npm-run-all --serial lint:fix prettier",
-    "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:build sitecore-tools:generate-map next:build",
+    "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:build next:build",
     "graphql:update": "ts-node --project tsconfig.scripts.json ./scripts/fetch-graphql-introspection-data.ts",
     "install-pre-push-hook": "ts-node --project tsconfig.scripts.json ./scripts/install-pre-push-hook.ts",
     "lint": "eslint ./src/**/*.tsx ./src/**/*.ts",
@@ -149,7 +149,7 @@
     "sitecore-tools:build": "sitecore-tools project build",
     "sitecore-tools:generate-map": "sitecore-tools project component generate-map",
     "sitecore-tools:generate-map:watch": "sitecore-tools project component generate-map --watch",
-    "dev": "cross-env NODE_ENV=development npm-run-all --serial sitecore-tools:build --parallel next:dev sitecore-tools:generate-map:watch",
+    "dev": "cross-env NODE_ENV=development npm-run-all --serial sitecore-tools:build --parallel next:dev",
     "start": "cross-env-shell NODE_ENV=production npm-run-all --serial build next:start"
   }
 }
