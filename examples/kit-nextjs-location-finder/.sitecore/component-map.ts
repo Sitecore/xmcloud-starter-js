@@ -1,5 +1,5 @@
 // Below are built-in components that are available in the app, it's recommended to keep them as is
-import { BYOCWrapper, FEaaSWrapper, NextjsJssComponent } from '@sitecore-content-sdk/nextjs';
+import { BYOCWrapper, FEaaSWrapper, NextjsContentSdkComponent } from '@sitecore-content-sdk/nextjs';
 import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 
@@ -14,7 +14,6 @@ import * as CallToAction from 'components/component-library/calltoaction';
 import * as Card from 'components/card/Card.dev';
 import * as CardSpotlight from 'components/card-spotlight/card-spotlight.dev';
 import * as Carousel from 'components/carousel/Carousel';
-import * as CdpPageView from 'components/sxa/CdpPageView';
 import * as CLHero from 'components/component-library/hero';
 import * as ColumnSplitter from 'components/sxa/ColumnSplitter';
 import * as ContactSection from 'components/component-library/ContactSection';
@@ -33,7 +32,6 @@ import * as ContainerFullWidth from 'components/container/container-full-width/C
 import * as ContentBlock from 'components/sxa/ContentBlock';
 import * as CtaBanner from 'components/cta-banner/CtaBanner';
 import * as FAQ from 'components/component-library/FAQ';
-import * as FEAASScripts from 'components/sxa/FEAASScripts';
 import * as FeaturesSection from 'components/component-library/FeaturesSection';
 import * as Flex from 'components/flex/Flex.dev';
 import * as FloatingDock from 'components/floating-dock/floating-dock.dev';
@@ -76,7 +74,6 @@ import * as RichTextBlock from 'components/rich-text-block/RichTextBlock';
 import * as RowSplitter from 'components/sxa/RowSplitter';
 import * as SecondaryNavigation from 'components/secondary-navigation/SecondaryNavigation';
 import * as SiteMetadata from 'components/site-metadata/SiteMetadata';
-import * as SitecoreStyles from 'components/sxa/SitecoreStyles';
 import * as SlideCarousel from 'components/slide-carousel/SlideCarousel.dev';
 import * as StatsSection from 'components/component-library/StatsSection';
 import * as SubmissionForm from 'components/submission-form/SubmissionForm';
@@ -95,7 +92,7 @@ import * as ZipcodeModal from 'components/zipcode-modal/zipcode-modal.dev';
 // end of components imported from the app itself
 
 // Components must be registered with to match the string key with component name in Sitecore
-export const componentMap = new Map<string, NextjsJssComponent>([
+export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['AccordionBlock', AccordionBlock],
   ['AlertBanner', AlertBanner],
   ['ArticleHeader', ArticleHeader],
@@ -107,7 +104,6 @@ export const componentMap = new Map<string, NextjsJssComponent>([
   ['Card', Card],
   ['CardSpotlight', CardSpotlight],
   ['Carousel', Carousel],
-  ['CdpPageView', CdpPageView],
   ['CLHero', CLHero],
   ['ColumnSplitter', ColumnSplitter],
   ['ContactSection', ContactSection],
@@ -127,7 +123,6 @@ export const componentMap = new Map<string, NextjsJssComponent>([
   ['CtaBanner', CtaBanner],
   ['FAQ', FAQ],
   ['FEaaSWrapper', FEaaSWrapper],
-  ['FEAASScripts', FEAASScripts],
   ['FeaturesSection', FeaturesSection],
   ['Flex', Flex],
   ['FloatingDock', FloatingDock],
@@ -171,7 +166,6 @@ export const componentMap = new Map<string, NextjsJssComponent>([
   ['RowSplitter', RowSplitter],
   ['SecondaryNavigation', SecondaryNavigation],
   ['SiteMetadata', SiteMetadata],
-  ['SitecoreStyles', SitecoreStyles],
   ['SlideCarousel', SlideCarousel],
   ['StatsSection', StatsSection],
   ['SubmissionForm', SubmissionForm],

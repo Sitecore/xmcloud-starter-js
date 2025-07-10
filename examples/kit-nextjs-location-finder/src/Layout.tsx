@@ -36,7 +36,7 @@ const body = Roboto({
 // !pt-0
 // !py-0
 
-import SitecoreStyles from 'components/sxa/SitecoreStyles';
+import SitecoreStyles from 'components/content-sdk/SitecoreStyles';
 
 interface LayoutProps {
   layoutData: LayoutServiceData;

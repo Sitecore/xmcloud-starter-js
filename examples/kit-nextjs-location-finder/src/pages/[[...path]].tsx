@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import NotFound from 'src/NotFound';
 import Layout from 'src/Layout';
 import {
-  SitecoreContext,
+  SitecoreProvider,
   ComponentPropsContext,
   SitecorePageProps,
   StaticPath,
@@ -11,7 +11,7 @@ import {
 import { extractPath, handleEditorFastRefresh } from '@sitecore-content-sdk/nextjs/utils';
 import { isDesignLibraryPreviewData } from '@sitecore-content-sdk/nextjs/editing';
 import client from 'lib/sitecore-client';
-import components from 'lib/component-map';
+import components from '.sitecore/component-map';
 import scConfig from 'sitecore.config';
 
 const SitecorePage = ({ notFound, componentProps, layout }: SitecorePageProps): JSX.Element => {
@@ -27,9 +27,9 @@ const SitecorePage = ({ notFound, componentProps, layout }: SitecorePageProps): 
 
   return (
     <ComponentPropsContext value={componentProps || {}}>
-      <SitecoreContext componentMap={components} layoutData={layout} api={scConfig.api}>
+      <SitecoreProvider componentMap={components} layoutData={layout} api={scConfig.api}>
         <Layout layoutData={layout} />
-      </SitecoreContext>
+      </SitecoreProvider>
     </ComponentPropsContext>
   );
 };
