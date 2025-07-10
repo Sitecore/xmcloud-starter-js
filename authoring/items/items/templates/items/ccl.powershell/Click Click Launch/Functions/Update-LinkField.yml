@@ -20,25 +20,28 @@ SharedFields:
             )
         
         process {
-            [Sitecore.Data.Fields.LinkField]$linkField = $Item.Fields[$FieldName]
+            Write-Verbose "Editing link field [$($FieldName)]"
             $Item.Editing.BeginEdit()
+            [Sitecore.Data.Fields.LinkField]$linkField = $Item.Fields[$FieldName]
+            Write-Verbose "linkField [$($linkField.LinkType)]"
             if ($TargetItem -ne $null) {
+                Write-Verbose "Setting internal link"
                 $linkField.LinkType = "internal"
                 $linkField.TargetID = $TargetItem.ID
                 $linkField.Url = $null
             } 
             else {
+                Write-Verbose "Setting external link"
                 $linkField.LinkType = "external"
                 $linkField.TargetID = $null
                 $linkField.Url = $Url
             }
             $Item.Editing.EndEdit()
-            $Item
         }
     }
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "ac172ecb-a55a-412c-ba54-625ceb9ceed9"
+  Value: "a11108cb-5e70-4e6e-8abe-cdc666d24e35"
 Languages:
 - Language: en
   Versions:
@@ -57,11 +60,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "957e9c27-91e1-4fe1-b63a-ffb83c25bee4"
+      Value: "4be558bf-297d-4fb6-b944-38d5f17c6774"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250707T202619Z
+      Value: 20250707T220649Z

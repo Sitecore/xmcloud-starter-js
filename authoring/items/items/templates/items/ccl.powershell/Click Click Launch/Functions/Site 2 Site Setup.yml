@@ -9,7 +9,7 @@ SharedFields:
   Value: |
     Import-Function Get-ItemByIdSafe
     Import-Function Update-PageTemplate
-    Import-Function Update-InsertOptions
+    Import-Function Update-TemplateInsertOptions
     
     function Invoke-ModuleScriptBody {
         [CmdletBinding()]
@@ -73,14 +73,14 @@ SharedFields:
     
             Write-Verbose "Update insert options"
             $insertOptions = @( $articlePageTemplate.ID, $audioPageTemplate.ID, $detailPageTemplate.ID, $landingPageTemplate.ID, $productPageTemplate.ID, $pageFolderTemplate.ID )
-            Update-InsertOptions -TemplateItem $homePageTemplate -InsertOptions $insertOptions
-            Update-InsertOptions -TemplateItem $audioPageTemplate -InsertOptions $insertOptions
-            Update-InsertOptions -TemplateItem $articlePageTemplate -InsertOptions $insertOptions
-            Update-InsertOptions -TemplateItem $detailPageTemplate -InsertOptions $insertOptions
-            Update-InsertOptions -TemplateItem $articlePageTemplate -InsertOptions $insertOptions
-            Update-InsertOptions -TemplateItem $landingPageTemplate -InsertOptions $insertOptions
-            Update-InsertOptions -TemplateItem $productPageTemplate -InsertOptions $insertOptions
-            Update-InsertOptions -TemplateItem $pageFolderTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $homePageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $audioPageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $articlePageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $detailPageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $articlePageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $landingPageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $productPageTemplate -InsertOptions $insertOptions
+            Update-TemplateInsertOptions -TemplateItem $pageFolderTemplate -InsertOptions $insertOptions
     
             # Add Page Design and link partial designs
             Write-Verbose "Add Page Design and link partial designs"
@@ -212,7 +212,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "929ac879-d67b-4214-96ea-b322752b0858"
+  Value: "53f9f62d-0820-4371-9e0b-5ac88d9beff2"
 Languages:
 - Language: en
   Versions:
@@ -231,11 +231,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ddd4e3b1-df43-49d4-814e-f53ab3448639"
+      Value: "a8778368-82ba-4aaf-92cb-fd60ab9a6431"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T013134Z
+      Value: 20250710T025140Z

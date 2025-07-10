@@ -1,13 +1,13 @@
 ﻿---
-ID: "78e95362-c975-4de1-99c7-bb47f3e244c2"
+ID: "111276cf-f262-45c0-8d20-d44bfee052b2"
 Parent: "4ff2646c-2b0f-428f-b9a0-d6ea531de713"
 Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
-Path: "/sitecore/system/Modules/PowerShell/Script Library/Click Click Launch/Functions/Update-InsertOptions"
+Path: "/sitecore/system/Modules/PowerShell/Script Library/Click Click Launch/Functions/Update-TemplateInsertOptions"
 SharedFields:
 - ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
   Hint: Script
   Value: |
-    function Update-InsertOptions {
+    function Update-TemplateInsertOptions {
         param(
             [Parameter(Mandatory = $true)]
             [Sitecore.Data.Items.Item]$TemplateItem,
@@ -31,7 +31,7 @@ SharedFields:
     
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "654a6228-eef6-4ef0-a3b8-0852a55df1e1"
+  Value: "0172825e-20b0-4349-add9-2da0b72e864e"
 Languages:
 - Language: en
   Versions:
@@ -39,7 +39,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20250710T005547Z
+      Value: 20250710T024030Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -50,11 +50,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f892503a-744a-4d5b-9408-36a49db6bf36"
+      Value: "ba0fac37-d606-43d3-88d4-949173bff57a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T011733Z
+      Value: 20250710T024219Z
