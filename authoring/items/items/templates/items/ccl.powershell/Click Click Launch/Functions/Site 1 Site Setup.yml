@@ -10,6 +10,7 @@ SharedFields:
     Import-Function Get-ItemByIdSafe
     Import-Function Update-PageTemplate
     Import-Function Update-LinkField
+    Import-Function Update-InsertOptions
     
     function Invoke-ModuleScriptBody {
         [CmdletBinding()]
@@ -56,6 +57,7 @@ SharedFields:
             $baseLandingPageTemplateId = "{C3C9FC9E-E7D3-44E6-B777-AA23496924C7}"
             $baseProductPageTemplateId = "{9A52202D-3A77-4F6D-B9BD-6AECED9BD49A}"
             $basePageFolderTemplateId = "{84DBE64B-0FED-4125-A971-725C0155C321}"
+            $audioPageTemplateId = "{1B76AF75-DD75-450C-92E3-FF0F339F490B}"
     
             $templatesRootPath = "master:/sitecore/templates/Project/$($siteCollection.Name)"
     
@@ -63,12 +65,24 @@ SharedFields:
             $pageTemplate."__Base template" = $basePageTemplateId
     
             $homePageTemplate = Update-PageTemplate -BaseTemplateId $baseHomePageTemplateId -TemplateName "Home Page" -TemplatesRootPath $templatesRootPath
+            $audioPageTemplate = Update-PageTemplate -BaseTemplateId $audioPageTemplateId -TemplateName "Audio Product Page" -TemplatesRootPath $templatesRootPath
             $articlePageTemplate = Update-PageTemplate -BaseTemplateId $baseArticlePageTemplateId -TemplateName "Article Page" -TemplatesRootPath $templatesRootPath
             $detailPageTemplate = Update-PageTemplate -BaseTemplateId $baseDetailPageTemplateId -TemplateName "Detail Page" -TemplatesRootPath $templatesRootPath
             $landingPageTemplate = Update-PageTemplate -BaseTemplateId $baseLandingPageTemplateId -TemplateName "Landing Page" -TemplatesRootPath $templatesRootPath
             $productPageTemplate = Update-PageTemplate -BaseTemplateId $baseProductPageTemplateId -TemplateName "Product Page" -TemplatesRootPath $templatesRootPath
             $pageFolderTemplate = Update-PageTemplate -BaseTemplateId $basePageFolderTemplateId -TemplateName "Page Folder" -TemplatesRootPath $templatesRootPath
-            
+    
+            Write-Verbose "Update insert options"
+            $insertOptions = @( $articlePageTemplate.ID, $audioPageTemplate.ID, $detailPageTemplate.ID, $landingPageTemplate.ID, $productPageTemplate.ID, $pageFolderTemplate.ID )
+            Update-InsertOptions -TemplateItem $homePageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $audioPageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $articlePageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $detailPageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $articlePageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $landingPageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $productPageTemplate -InsertOptions $insertOptions
+            Update-InsertOptions -TemplateItem $pageFolderTemplate -InsertOptions $insertOptions
+    
             # Add Page Design and link partial designs
             Write-Verbose "Add Page Design and link partial designs"
             $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header" -Language $Site.Language
@@ -81,6 +95,7 @@ SharedFields:
             $map = [Sitecore.Text.UrlString]::new()
             $map[$homePageTemplate.ID] = "$($defaultPageDesign.ID)"
             $map[$pageTemplate.ID] = "$($defaultPageDesign.ID)"
+            $map[$audioPageTemplate.ID] = "$($productPageDesign.ID)"
             $map[$articlePageTemplate.ID] = "$($defaultPageDesign.ID)"
             $map[$detailPageTemplate.ID] = "$($defaultPageDesign.ID)"
             $map[$landingPageTemplate.ID] = "$($defaultPageDesign.ID)"
@@ -152,43 +167,24 @@ SharedFields:
             $animatedPromoVariant = $animatedPromoVariants | ? { $_.DisplayName -eq "Default" }
             
             # add Home layout
-            Write-Host "Add FBD1"
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition1 -Parameter @{ "DynamicPlaceholderId" = "22"; "excludeTopMargin" = "1"; } -FinalLayout
-            Write-Host "Add FBD2"
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition2 -Parameter @{ "DynamicPlaceholderId" = "11"; "inset" = "1"; "backgroundColor" = "primary"; "colorScheme" = "primary"; } -FinalLayout
-            Write-Host "Add FBD3"
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition3 -Parameter @{ "DynamicPlaceholderId" = "27";} -FinalLayout
-            Write-Host "Add FBD4"
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition4 -Parameter @{ "DynamicPlaceholderId" = "28"; "backgroundColor" = "primary";} -FinalLayout
-            Write-Host "Add FBD5"
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition5 -Parameter @{ "DynamicPlaceholderId" = "31";} -FinalLayout
-            Write-Host "Add FBD6"
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition6 -Parameter @{ "DynamicPlaceholderId" = "17"; "inset" = "1";} -FinalLayout
-            Write-Host "Add FBD7"
             Add-Rendering -Item $item -Placeholder "headless-main" -Instance $renderingContainerFullWidthDefinition -Parameter @{ "DynamicPlaceholderId" = "26";} -FinalLayout
-            Write-Host "Add FBD8"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-11" -Instance $renderingMultiPromoDefinition -Parameter @{ "DynamicPlaceholderId" = "12"; } -DataSource "local:/Data/MultiPromoCarousel" -FinalLayout
-            Write-Host "Add FBD9"
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-11" -Instance $renderingContainerFullWidthDefinition -Parameter @{ "DynamicPlaceholderId" = "24"; "excludeTopMargin" = "1" } -FinalLayout
-            Write-Host "Add FBD10"
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-17" -Instance $renderingContainerFullWidthDefinition -Parameter @{ "DynamicPlaceholderId" = "18"; } -FinalLayout
-            Write-Host "Add FBD11"
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-17/container-fullwidth-18" -Instance $renderingAccordionDefinition -Parameter @{ "DynamicPlaceholderId" = "19"; } -DataSource "local:/Data/Accordion" -FinalLayout
-            Write-Host "Add FBD12"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-27/container-fullwidth-21" -Instance $renderingTestimonialAccordionDefinition -Parameter @{} -DataSource "local:/Data/Testimonial" -FinalLayout
-            Write-Host "Add FBD13"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-22" -Instance $renderingHeroDefinition -Parameter @{ "FieldNames" = $heroVariant.ID; "DynamicPlaceholderId" = "23"; "colorScheme" = "secondary"; } -DataSource "local:/Data/Hero" -FinalLayout
-            Write-Host "Add FBD14"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-11/container-fullwidth-24" -Instance $renderingMultipromoTabsDefinition -Parameter @{ "DynamicPlaceholderId" = "13"; } -DataSource "local:/Data/MultiPromoTabs" -FinalLayout
-            Write-Host "Add FBD15"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullwidth-26" -Instance $renderingCtaBannerDefinition -Parameter @{ "DynamicPlaceholderId" = "20"; "colorScheme" = "light"; } -DataSource "local:/Data/CTA Banner" -FinalLayout
-            Write-Host "Add FBD16"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-27" -Instance $renderingAnimatedPromoDefinition -Parameter @{ "DynamicPlaceholderId" = "15"; } -DataSource "local:/Data/AnimatedPromo" -FinalLayout
-            Write-Host "Add FBD17"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-27" -Instance $renderingContainerFullWidthDefinition -Parameter @{ "DynamicPlaceholderId" = "21";} -FinalLayout
-            Write-Host "Add FBD18"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-28" -Instance $renderingTopicListingDefinition -Parameter @{ "DynamicPlaceholderId" = "30"; } -DataSource "local:/Data/Topic Listing" -FinalLayout
-            Write-Host "Add FBD19"
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-31" -Instance $renderingVideoDefinition -Parameter @{ "DynamicPlaceholderId" = "32"; "useModal" = "1"; "displayIcon" = "1"; } -DataSource "local:/Data/Video 1" -FinalLayout
     
             Write-Verbose "Update home page fields"
@@ -226,7 +222,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "31aa3554-3eed-471a-9d34-54c1d690525e"
+  Value: "d5601d28-a209-4d07-871c-3c0dbe2c1f1c"
 Languages:
 - Language: en
   Versions:
@@ -245,11 +241,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d7182ccf-52ce-4d52-a5bf-65aa7502ec8c"
+      Value: "77bc24d4-226b-4ed5-89e7-5cde3cbf1b21"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250707T202725Z
+      Value: 20250710T013050Z
