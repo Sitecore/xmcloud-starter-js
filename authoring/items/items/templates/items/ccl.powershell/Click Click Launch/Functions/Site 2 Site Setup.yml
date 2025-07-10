@@ -111,8 +111,8 @@ SharedFields:
     
             $globalHeaderVariants = $service.GetAvailableRenderingVariants($Site, $renderingGlobalHeader.Name, $renderingGlobalHeader.ID, $headerPartial.TemplateID)
             $globalFooterVariants = $service.GetAvailableRenderingVariants($Site, $renderingGlobalFooter.Name, $renderingGlobalFooter.ID, $footerPartial.TemplateID)
-            $globalHeaderVariant = $globalHeaderVariants | ? { $_.Name -eq "Centered" }
-            $globalFooterVariant = $globalFooterVariants | ? { $_.Name -eq "BlueCompactVariant" }
+            $globalHeaderVariant = $globalHeaderVariants | Where-Object { $_.Name -eq "Centered" }
+            $globalFooterVariant = $globalFooterVariants | Where-Object { $_.Name -eq "BlueCompactVariant" }
             
             $globalHeaderRenderingInstance = Get-Rendering -Item $headerPartial -Rendering $renderingGlobalHeader -FinalLayout
             if ($globalHeaderRenderingInstance) {
@@ -151,11 +151,25 @@ SharedFields:
             $homePageProductListingItem["products"] = "$($aeroPage.ID)|$($nexaPage.ID)|$($terraPage.ID)"
             $homePageProductListingItem.Editing.EndEdit()
             
-            
             Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 1" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $aeroPage
             Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 2" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
             Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 3" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $terraPage
             Get-Item -Path "$($item.ItemPath)/Data/Home Page Promo" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+            
+            Write-Verbose "Update product pages with the correct taxonomy"
+            $productTag = Get-Item -Path "$sitePath/Data/Taxonomy/Content Types/Product" -Language $Site.Language
+            
+            $aeroPage.Editing.BeginEdit()
+            $aeroPage["taxContentType"] = $productTag.ID
+            $aeroPage.Editing.EndEdit()
+            
+            $nexaPage.Editing.BeginEdit()
+            $nexaPage["taxContentType"] = $productTag.ID
+            $nexaPage.Editing.EndEdit()
+            
+            $terraPage.Editing.BeginEdit()
+            $terraPage["taxContentType"] = $productTag.ID
+            $terraPage.Editing.EndEdit()
     
             Write-Verbose "Update the home page template"
             # Update the home page template
@@ -192,15 +206,13 @@ SharedFields:
             $textBannerVariants = $service.GetAvailableRenderingVariants($Site, $renderingTextBanner.Name, $renderingTextBanner.ID, $item.TemplateID)
             $imageCarouselVariants = $service.GetAvailableRenderingVariants($Site, $renderingImageCarousel.Name, $renderingImageCarousel.ID, $item.TemplateID)
             $promoVariants = $service.GetAvailableRenderingVariants($Site, $renderingPromo.Name, $renderingPromo.ID, $item.TemplateID)
-            $productListingVariants = $service.GetAvailableRenderingVariants($Site, $renderingProductListing.Name, $renderingProductListing.ID, $item.TemplateID)
             $accordionVariants = $service.GetAvailableRenderingVariants($Site, $renderingAccordion.Name, $renderingAccordion.ID, $item.TemplateID)
     
-            $heroVariant = $heroVariants | ? { $_.DisplayName -eq "Image Background" }
-            $textBannerVariant = $textBannerVariants | ? { $_.Name -eq "Default" }
-            $imageCarouselVariant = $imageCarouselVariants | ? { $_.Name -eq "Default" }
-            $promoVariant = $promoVariants | ? { $_.Name -eq "Default" }
-            $productListingVariant = $productListingVariants | ? { $_.Name -eq "Default" }
-            $accordionVariant = $accordionVariants | ? { $_.Name -eq "Default" }
+            $heroVariant = $heroVariants | Where-Object { $_.DisplayName -eq "Image Background" }
+            $textBannerVariant = $textBannerVariants | Where-Object { $_.Name -eq "Default" }
+            $imageCarouselVariant = $imageCarouselVariants | Where-Object { $_.Name -eq "Default" }
+            $promoVariant = $promoVariants | Where-Object { $_.Name -eq "Default" }
+            $accordionVariant = $accordionVariants | Where-Object { $_.Name -eq "Default" }
             
             # add Home layout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition -Parameter @{ "DynamicPlaceholderId" = "1"; "excludeTopMargin" = "1" } -FinalLayout
@@ -208,7 +220,7 @@ SharedFields:
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingTextBannerDefinition -Parameter @{ "FieldNames" = $textBannerVariant.ID; "DynamicPlaceholderId" = "3" } -DataSource "local:/Data/Home Page Text Banner" -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingImageCarouselDefinition -Parameter @{ "FieldNames" = $imageCarouselVariant.ID; "DynamicPlaceholderId" = "5" } -DataSource "local:/Data/Home Page Image Carousel" -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingPromoDefinition -Parameter @{ "FieldNames" = $promoVariant.ID; "DynamicPlaceholderId" = "4" } -DataSource "local:/Data/Home Page Promo" -FinalLayout
-            Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingProductListingDefinition -Parameter @{ "FieldNames" = $productListingVariant.ID } -DataSource "local:/Data/Home Page Product Listing" -FinalLayout
+            Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingProductListingDefinition -DataSource "local:/Data/Home Page Product Listing" -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingAccordionDefinition -Parameter @{ "FieldNames" = $accordionVariant.ID; "DynamicPlaceholderId" = "6" } -DataSource "local:/Data/Home Page Accordion" -FinalLayout
     
             Write-Verbose "Update home page fields"
@@ -247,7 +259,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "7acad5a3-d970-42f7-bdd1-16d59e1752bf"
+  Value: "b883382b-cbba-4362-9da4-67aadde0c5a2"
 Languages:
 - Language: en
   Versions:
@@ -266,11 +278,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "656b11b7-0a54-46b5-a724-b7737a5bc793"
+      Value: "37a4819b-74f2-41b5-b814-478200dcb17c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T175109Z
+      Value: 20250710T230237Z
