@@ -6,6 +6,7 @@ import { ProductListingProps, ProductItemProps } from './product-listing.props';
 import { ProductListingCard } from './ProductListingCard.dev';
 import { useMatchMedia } from '@/hooks/use-match-media';
 import { cn } from '@/lib/utils';
+
 export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
   const isReducedMotion = useMatchMedia('(prefers-reduced-motion: reduce)');
   const [activeCard, setActiveCard] = useState<string | null>(null);
@@ -85,7 +86,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
                     >
                       <ProductListingCard
                         product={product}
-                        link={viewAllLink.jsonValue}
+                        link={viewAllLink?.jsonValue}
                         prefersReducedMotion={isReducedMotion}
                         isPageEditing={isPageEditing}
                       />
@@ -115,7 +116,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
                     >
                       <ProductListingCard
                         product={product}
-                        link={viewAllLink.jsonValue}
+                        link={viewAllLink?.jsonValue}
                         prefersReducedMotion={isReducedMotion}
                         isPageEditing={isPageEditing}
                       />
