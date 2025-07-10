@@ -213,10 +213,10 @@ export const GoogleMap = ({
             )}</h3>
             <p style="margin: 0; font-size: 14px;">
               ${getFieldValue(dealership.dealershipAddress)}, ${getFieldValue(
-            dealership.dealershipCity
-          )}, ${getFieldValue(dealership.dealershipState)} ${getFieldValue(
-            dealership.dealershipZipCode
-          )}
+                dealership.dealershipCity
+              )}, ${getFieldValue(dealership.dealershipState)} ${getFieldValue(
+                dealership.dealershipZipCode
+              )}
             </p>
             ${
               dealership.distance !== undefined

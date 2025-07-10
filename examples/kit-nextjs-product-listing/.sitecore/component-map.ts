@@ -1,5 +1,5 @@
-// Below are built-in components that are available in the app, it's recommended to keep them as is
-import { BYOCWrapper, FEaaSWrapper, NextjsJssComponent } from '@sitecore-content-sdk/nextjs';
+﻿// Below are built-in components that are available in the app, it's recommended to keep them as is
+import { BYOCWrapper, FEaaSWrapper, NextjsContentSdkComponent } from '@sitecore-content-sdk/nextjs';
 import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 
@@ -106,7 +106,7 @@ import * as ZipcodeModal from 'components/zipcode-modal/zipcode-modal.dev';
 // end of components imported from the app itself
 
 // Components must be registered with to match the string key with component name in Sitecore
-export const componentMap = new Map<string, NextjsJssComponent>([
+export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['AccordionBlock', AccordionBlock],
   ['AlertBanner', AlertBanner],
   ['ArticleHeader', ArticleHeader],

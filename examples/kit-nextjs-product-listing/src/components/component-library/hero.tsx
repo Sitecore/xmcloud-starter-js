@@ -7,7 +7,7 @@ import {
   ImageField,
   Field,
   LinkField,
-  useSitecoreContext,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
@@ -29,8 +29,8 @@ export const Default = (props: HeroProps) => {
 };
 
 export const Hero1 = (props: HeroProps) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditing = sitecoreContext.pageEditing;
+  const { pageContext } = useSitecore();
+  const isEditing = pageContext.pageEditing;
 
   return (
     <section
@@ -101,8 +101,8 @@ export const Hero1 = (props: HeroProps) => {
 };
 
 export const Hero2 = (props: HeroProps) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditing = sitecoreContext.pageEditing;
+  const { pageContext } = useSitecore();
+  const isEditing = pageContext.pageEditing;
 
   return (
     <section className={`px-[5%] py-12 md:py-24 ${props.params.styles}`} data-class-change>
@@ -156,8 +156,8 @@ export const Hero2 = (props: HeroProps) => {
 };
 
 export const Hero3 = (props: HeroProps) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditing = sitecoreContext.pageEditing;
+  const { pageContext } = useSitecore();
+  const isEditing = pageContext.pageEditing;
 
   const backgroundImageUrl = props.fields.HeroImage1?.value?.src;
   const backgroundStyle = {
@@ -218,8 +218,8 @@ export const Hero3 = (props: HeroProps) => {
 };
 
 export const Hero4 = (props: HeroProps) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditing = sitecoreContext.pageEditing;
+  const { pageContext } = useSitecore();
+  const isEditing = pageContext.pageEditing;
 
   return (
     <section className={`w-full px-[5%] ${props.params.styles}`} data-class-change>
@@ -271,8 +271,8 @@ export const Hero4 = (props: HeroProps) => {
 };
 
 export const Hero5 = (props: HeroProps) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditing = sitecoreContext.pageEditing;
+  const { pageContext } = useSitecore();
+  const isEditing = pageContext.pageEditing;
 
   return (
     <section className={`px-[5%] py-12 md:py-24 ${props.params.styles}`} data-class-change>
@@ -325,8 +325,8 @@ export const Hero5 = (props: HeroProps) => {
 };
 
 export const Hero6 = (props: HeroProps) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditing = sitecoreContext.pageEditing;
+  const { pageContext } = useSitecore();
+  const isEditing = pageContext.pageEditing;
 
   return (
     <section className={`px-[5%] ${props.params.styles}`} data-class-change>

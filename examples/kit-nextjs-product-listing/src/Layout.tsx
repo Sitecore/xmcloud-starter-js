@@ -57,7 +57,7 @@ const accent = IBM_Plex_Mono({
 // multipromo-2_3
 // multipromo-3_2
 
-import SitecoreStyles from 'components/sxa/SitecoreStyles';
+import SitecoreStyles from 'components/content-sdk/SitecoreStyles';
 
 interface LayoutProps {
   layoutData: LayoutServiceData;
