@@ -143,9 +143,20 @@ SharedFields:
             
             $testDriveItem = $item.Children["Test Drive"]
             Update-LinkField -Item $headerDatasource -FieldName "headerContact" -TargetItem $testDriveItem
-            $homePageHeroItem = Get-Item -Path "$($item.ItemPath)/Data/Home Page Hero" -Language $Site.Language
+            $homePageHeroItem = Get-Item -Path "$($item.ItemPath)/Data/Home Page Hero" -Language $Site.Language 
             Update-LinkField -Item $homePageHeroItem -FieldName "bannerCTA" -TargetItem $testDriveItem
             
+            $homePageProductListingItem = Get-Item -Path "$($item.ItemPath)/Data/Home Page Product Listing" -Language $Site.Language
+            $homePageProductListingItem.Editing.BeginEdit()
+            $homePageProductListingItem["products"] = "$($aeroPage.ID)|$($nexaPage.ID)|$($terraPage.ID)"
+            $homePageProductListingItem.Editing.EndEdit()
+            
+            
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 1" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $aeroPage
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 2" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 3" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $terraPage
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Promo" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+    
             Write-Verbose "Update the home page template"
             # Update the home page template
             Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
