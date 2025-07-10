@@ -1,8 +1,4 @@
-import {
-  ImageField,
-  LayoutServicePageState,
-  useSitecore,
-} from '@sitecore-content-sdk/nextjs';
+import { ImageField, LayoutServicePageState, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { getImageProps } from 'next/image';
 
 const getImageUrl = (imageField: ImageField) => {

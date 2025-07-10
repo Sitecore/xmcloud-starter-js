@@ -3,7 +3,7 @@
 import { useEffect, useState, type RefObject } from 'react';
 import YouTube from 'react-youtube';
 import { FocusTrap } from 'focus-trap-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useVideo } from '@/contexts/VideoContext';
@@ -63,7 +63,7 @@ export function VideoModal({ isOpen, onClose, videoUrl }: VideoModalProps) {
   const visibleClass = 'opacity-100';
   const hiddenClass = 'opacity-0';
 
-  const modalVariants = {
+  const modalVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
