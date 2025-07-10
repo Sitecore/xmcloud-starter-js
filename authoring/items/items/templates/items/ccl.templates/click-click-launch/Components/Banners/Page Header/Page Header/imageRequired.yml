@@ -4,6 +4,9 @@ Parent: "4611eed7-5989-4792-8aa4-cb6b7787ed1e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Banners/Page Header/Page Header/imageRequired"
 SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:$siteMedia"
 - ID: "21828437-ea4b-40a1-8c61-4ce60ea41db6"
   Hint: Validate Button
   Value: "{59D4EE10-627C-4FD3-A964-61A88B092CBC}"
@@ -22,6 +25,9 @@ SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 100
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0cef44d1-465d-47be-a046-ff51e4e552e7"
 Languages:
 - Language: en
   Fields:
@@ -70,11 +76,11 @@ Languages:
         sitecore\chris.sulham@velir.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "55df0fdf-b65c-4526-9a19-de9f53df68b9"
+      Value: "d8c50c18-06a2-43db-96e4-a0df02780af4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\minyie.diaz@velir.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250304T201450Z
+      Value: 20250709T150247Z
