@@ -143,9 +143,20 @@ SharedFields:
             
             $testDriveItem = $item.Children["Test Drive"]
             Update-LinkField -Item $headerDatasource -FieldName "headerContact" -TargetItem $testDriveItem
-            $homePageHeroItem = Get-Item -Path "$($item.ItemPath)/Data/Home Page Hero" -Language $Site.Language
+            $homePageHeroItem = Get-Item -Path "$($item.ItemPath)/Data/Home Page Hero" -Language $Site.Language 
             Update-LinkField -Item $homePageHeroItem -FieldName "bannerCTA" -TargetItem $testDriveItem
             
+            $homePageProductListingItem = Get-Item -Path "$($item.ItemPath)/Data/Home Page Product Listing" -Language $Site.Language
+            $homePageProductListingItem.Editing.BeginEdit()
+            $homePageProductListingItem["products"] = "$($aeroPage.ID)|$($nexaPage.ID)|$($terraPage.ID)"
+            $homePageProductListingItem.Editing.EndEdit()
+            
+            
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 1" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $aeroPage
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 2" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 3" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $terraPage
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Promo" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+    
             Write-Verbose "Update the home page template"
             # Update the home page template
             Set-ItemTemplate -Item $item -Template $homePageTemplate.ID
@@ -236,7 +247,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "7fb70eaa-bb1c-43ad-b24b-055e7346eede"
+  Value: "7acad5a3-d970-42f7-bdd1-16d59e1752bf"
 Languages:
 - Language: en
   Versions:
@@ -255,11 +266,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "af249263-d97f-4c9a-b246-7800dbc14904"
+      Value: "656b11b7-0a54-46b5-a724-b7737a5bc793"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T125430Z
+      Value: 20250710T175109Z
