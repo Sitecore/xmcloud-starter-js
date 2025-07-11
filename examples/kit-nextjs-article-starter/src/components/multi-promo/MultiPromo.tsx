@@ -89,7 +89,7 @@ export const Default: React.FC<MultiPromoProps> = (props) => {
       >
         <div className="flex flex-col gap-4 group-[.is-inset]:px-4 sm:group-[.is-inset]:px-0 xl:flex-row xl:items-end xl:justify-between xl:gap-20">
           {title && (
-            <div className="flex-grow md:basis-[60] lg:basis-[50]">
+            <div className="basis-full xl:basis-1/2">
               <Text
                 tag="h2"
                 field={title?.jsonValue}
@@ -98,7 +98,7 @@ export const Default: React.FC<MultiPromoProps> = (props) => {
             </div>
           )}
           {description && (
-            <div className="md:basis-[40] lg:basis-[50]">
+            <div className="basis-full xl:basis-1/2">
               <RichText
                 className="text-body prose text-box-trim-both text-box-edge-asc-baseline mt-6 max-w-[51.5ch] text-pretty text-lg leading-[1.444] tracking-tight"
                 field={description?.jsonValue}
