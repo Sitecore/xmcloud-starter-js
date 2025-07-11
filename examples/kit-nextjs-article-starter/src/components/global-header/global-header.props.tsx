@@ -19,7 +19,7 @@ export type GlobalHeaderFields = {
           results?: [
             {
               link: GqlField<LinkField>;
-            }
+            },
           ];
         };
         headerContact: GqlField<LinkField>;

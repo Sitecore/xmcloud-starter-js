@@ -33,7 +33,7 @@ export class CSLayoutService extends GraphQLLayoutService {
         results: [
           {
             rendered: LayoutServiceData;
-          }
+          },
         ];
       };
     }>(query, {}, fetchOptions);
