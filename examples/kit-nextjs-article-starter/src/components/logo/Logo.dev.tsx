@@ -1,7 +1,13 @@
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import type React from 'react';
-import { LogoProps } from './logo.props';
 import { cn } from '@/lib/utils';
+import { ImageField } from '@sitecore-content-sdk/nextjs';
+
+type LogoProps = {
+  logo?: ImageField;
+  className?: string;
+};
+
 export const Default: React.FC<LogoProps> = (props) => {
   const { logo, className = '' } = props;
 

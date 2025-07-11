@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Text, useSitecore, Field, LinkField, ImageField } from '@sitecore-content-sdk/nextjs';
 import { cva } from 'class-variance-authority';
 import { Play, Pause } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -8,7 +8,34 @@ import { EditableButton } from '@/components/button-component/ButtonComponent';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
 import { Button } from '@/components/ui/button';
 import { Default as MediaSection } from '@/components/media-section/MediaSection.dev';
-import { HeroProps } from './hero.props';
+import { EnumValues } from '@/enumerations/generic.enum';
+import { ComponentProps } from '@/lib/component-props';
+import { ColorScheme } from '@/enumerations/CtaBannerColorScheme.enum';
+
+interface HeroParams {
+  colorScheme?: EnumValues<typeof ColorScheme>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+}
+
+interface HeroFields {
+  titleRequired: Field<string>;
+  descriptionOptional?: Field<string>;
+  linkOptional?: LinkField;
+  heroVideoOptional1?: LinkField;
+  heroImageOptional1?: ImageField;
+  heroVideoOptional2?: LinkField;
+  heroImageOptional2?: ImageField;
+  heroVideoOptional3?: LinkField;
+  heroImageOptional3?: ImageField;
+  heroVideoOptional4?: LinkField;
+  heroImageOptional4?: ImageField;
+}
+
+interface HeroProps extends ComponentProps {
+  params: HeroParams;
+  fields: HeroFields;
+}
 
 // Define heroVariants using class-variance-authority for styling
 export const heroVariants = cva('hero @container py-24 relative w-full overflow-hidden', {

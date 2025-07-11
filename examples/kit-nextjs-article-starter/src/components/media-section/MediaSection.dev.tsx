@@ -2,11 +2,21 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
-import { MediaSectionProps } from './media-section.props';
 import { useSitecore, ImageField, LayoutServicePageState } from '@sitecore-content-sdk/nextjs';
 import { getImageProps } from 'next/image';
 import { cn } from '@/lib/utils';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
+
+interface MediaSectionProps {
+  video?: string;
+  image?: ImageField;
+  priority?: boolean;
+  className?: string;
+  height?: number;
+  width?: number;
+  pause: boolean;
+  reducedMotion: boolean;
+}
 
 declare module 'react' {
   interface VideoHTMLAttributes<T> extends React.HTMLProps<T> {

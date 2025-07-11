@@ -1,7 +1,13 @@
 import { Fragment, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
-import { Link as SitecoreLink, useSitecore, Image } from '@sitecore-content-sdk/nextjs';
+import {
+  Link as SitecoreLink,
+  useSitecore,
+  Image,
+  ImageField,
+  LinkField,
+} from '@sitecore-content-sdk/nextjs';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -12,9 +18,36 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Default as Logo } from '@/components/logo/Logo.dev';
-import { GlobalHeaderProps } from './global-header.props';
 import { Button } from '@/components/ui/button';
 import { Url } from 'next/dist/shared/lib/router/router';
+import { ComponentProps } from '@/lib/component-props';
+import { PlaceholderProps } from '@/types/Placeholder.props';
+import { GqlField } from '@/types/gql.props';
+
+/**
+ * Model used for Sitecore Component integration
+ */
+type GlobalHeaderProps = ComponentProps & PlaceholderProps & GlobalHeaderFields;
+
+type GlobalHeaderFields = {
+  fields: {
+    data: {
+      item: {
+        logo: {
+          jsonValue?: ImageField;
+        };
+        children: {
+          results?: [
+            {
+              link: GqlField<LinkField>;
+            }
+          ];
+        };
+        headerContact: GqlField<LinkField>;
+      };
+    };
+  };
+};
 
 export const Default: React.FC<GlobalHeaderProps> = (props) => {
   const { fields } = props;
