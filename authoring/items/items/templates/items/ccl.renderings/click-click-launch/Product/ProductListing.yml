@@ -26,39 +26,39 @@ SharedFields:
           }
           products {
             targetItems {
-              ... on C__ProductPage {
-                url {
-                  url
-                  path
-                }
-                pageThumbnail {
-                  jsonValue
-                }
-                productBasePrice {
-                  jsonValue
-                }
-                productName {
-                  jsonValue
-                }
-                productThumbnail {
-                  jsonValue
-                }
-                productFeatureTitle {
-                  jsonValue
-                }
-                productFeatureText {
-                  jsonValue
-                }
-                productDrivingRange {
-                  jsonValue
-                }
+              id
+              url: field(name: "url") {
+                jsonValue
               }
+              pageThumbnail: field(name: "pageThumbnail") {
+                jsonValue
+              }
+                pageThumbnail: field(name: "pageThumbnail") {
+                  jsonValue
+                }
+                productBasePrice: field(name: "productBasePrice") {
+                  jsonValue
+                }
+                productName: field(name: "productName") {
+                  jsonValue
+                }
+                productThumbnail: field(name: "productThumbnail") {
+                  jsonValue
+                }
+                productFeatureTitle: field(name: "productFeatureTitle") {
+                  jsonValue
+                }
+                productFeatureText: field(name: "productFeatureText") {
+                  jsonValue
+                }
+                productDrivingRange: field(name: "productDrivingRange") {
+                  jsonValue
+                }
             }
           }
         }
       }
     }
-    
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: "/sitecore/templates/Project/click-click-launch/Components/Product/Product Listing"
@@ -70,7 +70,7 @@ SharedFields:
   Value: "query:$site/*[@@name='Data']/*[@@templatename='Product Listings Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Product Listings Folder']"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "317fe784-d09d-4147-a877-33a5112c37c9"
+  Value: "2b08356f-3f1b-497d-8216-16a101f4f69a"
 Languages:
 - Language: en
   Versions:
@@ -89,11 +89,11 @@ Languages:
         sitecore\alex.jackson@velir.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fe424349-d1a7-475b-b75f-4c620b3fe51a"
+      Value: "3ee52129-0fbd-473a-8990-d71d55ba2cbc"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250530T160142Z
+      Value: 20250710T234416Z

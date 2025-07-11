@@ -192,6 +192,11 @@ SharedFields:
             $item."metadataKeywords" = "Symphonic, audio, speakers, headphones"
             $item."ogTitle" = $title
             $item."ogDescription" = $title
+            
+            Write-Verbose "Create dictionary items"
+            $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
+            $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Dictionary Items" -Language $Site.Language
+            New-Item -Parent $dictionaryRoot -Name "Dictionary Items" -ItemType $dictionaryBranchTemplate.ID
         }
         
         end {
@@ -204,7 +209,7 @@ SharedFields:
     
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "83c2538a-85ed-4f89-9c22-4bc3ca0878f8"
+  Value: "6cd43cc0-c882-4e5b-b9f2-b1f50e2770d4"
 Languages:
 - Language: en
   Versions:
@@ -223,11 +228,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "50966af9-a6ce-427a-be27-c54597733503"
+      Value: "b11f931a-b994-4625-896b-d15b4d435d92"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T025215Z
+      Value: 20250711T005638Z
