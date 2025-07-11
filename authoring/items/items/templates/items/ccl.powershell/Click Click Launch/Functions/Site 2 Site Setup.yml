@@ -248,6 +248,11 @@ SharedFields:
             $imageRightVariant.'__Display name' = "Image Right"
             $titlePartialOverlayVariant = New-Item -Parent $promoVariant -Name "TitlePartialOverlay" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
             $titlePartialOverlayVariant.'__Display name' = "Title Partial Overlay"
+            
+            Write-Verbose "Create dictionary items"
+            $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
+            $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 2/Add Dictionary Items" -Language $Site.Language
+            New-Item -Parent $dictionaryRoot -Name "Dictionary Items" -ItemType $dictionaryBranchTemplate.ID
         }
         
         end {
@@ -259,7 +264,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "b883382b-cbba-4362-9da4-67aadde0c5a2"
+  Value: "1b59801c-ffa1-4825-94cd-76d887d609cb"
 Languages:
 - Language: en
   Versions:
@@ -278,11 +283,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "37a4819b-74f2-41b5-b814-478200dcb17c"
+      Value: "7fc0a46d-9c7f-4dfa-a189-d65780cf7a08"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T230237Z
+      Value: 20250711T005549Z

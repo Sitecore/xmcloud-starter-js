@@ -211,6 +211,11 @@ SharedFields:
             $team = Get-Item "$sitePath/Presentation/Partial Designs/Global/Header/Data/Global Header/Team"
             $teamTargetItem = Get-Item "$sitePath/Home/Landing Page" -Language $Site.Language
             Update-LinkField -Item $team -FieldName "link" -TargetItem $teamTargetItem
+            
+            Write-Verbose "Create dictionary items"
+            $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
+            $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 1/Add Dictionary Items" -Language $Site.Language
+            New-Item -Parent $dictionaryRoot -Name "Dictionary Items" -ItemType $dictionaryBranchTemplate.ID
         }
         
         end {
@@ -222,7 +227,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "0e1029ee-4f04-4466-8d6e-863c528efb49"
+  Value: "9f248762-029a-48bd-b5fe-9f0b9c69fe19"
 Languages:
 - Language: en
   Versions:
@@ -241,11 +246,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cb9ac7f9-2f29-402d-9a0d-dc946ebaf7b0"
+      Value: "ccdf18df-0c34-4b37-ad9e-c1b754995821"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T025152Z
+      Value: 20250711T005733Z
