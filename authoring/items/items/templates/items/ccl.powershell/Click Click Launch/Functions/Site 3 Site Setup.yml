@@ -115,8 +115,9 @@ SharedFields:
             $linkListVariant = $linkListVariants | Where-Object { $_.DisplayName -eq "FooterLinks" }
     
             $alignItemsCenter = Get-Item -Path "$sitePath/Presentation/Styles/Content alignment/Align content center" -Language $Site.Language
+            $withSeparators = Get-Item -Path "$sitePath/Presentation/Styles/Link list/With Separators" -Language $Site.Language
             Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-primary*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; }  | `
+                Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C$($withSeparators.ID)%7C"; }  | `
                 Set-Rendering -Item $footerPartial -FinalLayout
                 
             Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-secondary*" -FinalLayout | `
@@ -207,7 +208,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "ff9f543b-5305-4593-87fa-19cea2ada1c6"
+  Value: "80d35a34-f949-438e-bb65-5c71d4610382"
 Languages:
 - Language: en
   Versions:
@@ -226,11 +227,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "25404e08-1580-4b55-b92e-6a286ce94d7e"
+      Value: "8940d750-bf0c-4fc8-b2b7-cc60f1bbe735"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250711T215416Z
+      Value: 20250711T225632Z

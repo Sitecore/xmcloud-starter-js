@@ -106,8 +106,9 @@ function Invoke-ModuleScriptBody {
         $linkListVariant = $linkListVariants | Where-Object { $_.DisplayName -eq "FooterLinks" }
 
         $alignItemsCenter = Get-Item -Path "$sitePath/Presentation/Styles/Content alignment/Align content center" -Language $Site.Language
+        $withSeparators = Get-Item -Path "$sitePath/Presentation/Styles/Link list/With Separators" -Language $Site.Language
         Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-primary*" -FinalLayout | `
-            Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; }  | `
+            Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C$($withSeparators.ID)%7C"; }  | `
             Set-Rendering -Item $footerPartial -FinalLayout
             
         Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-secondary*" -FinalLayout | `
