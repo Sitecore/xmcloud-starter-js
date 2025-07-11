@@ -146,6 +146,13 @@ function Invoke-ModuleScriptBody {
         Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 2" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
         Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 3" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $terraPage
         Get-Item -Path "$($item.ItemPath)/Data/Home Page Promo" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+        Get-Item -Path "$($item.ItemPath)/Data/Home Page Accordion" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+        Get-Item -Path "$($item.ItemPath)/Test Drive/Data/Accordion - Test Drive - Demo Official" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+        Get-Item -Path "$($item.ItemPath)/Products/Aero/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
+        Get-Item -Path "$($item.ItemPath)/Products/Aero/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
+        Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Accordion - Nexa - Demo Official" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
+        Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
+        Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
         
         Write-Verbose "Update product pages with the correct taxonomy"
         $productTag = Get-Item -Path "$sitePath/Data/Taxonomy/Content Types/Product" -Language $Site.Language
