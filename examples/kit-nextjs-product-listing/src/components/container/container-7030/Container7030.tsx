@@ -1,4 +1,4 @@
-import { Placeholder, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { Container7030Props } from '@/components/container/container-7030/container-7030.props';
 import {
   getContainerPlaceholderProps,
@@ -10,9 +10,9 @@ import { cn } from '@/lib/utils';
 export const Default: React.FC<Container7030Props> = (props) => {
   const { rendering, left, right } = props;
 
-  const { sitecoreContext } = useSitecoreContext();
+  const { pageContext } = useSitecore();
 
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   const leftPlaceholders = getContainerPlaceholderProps('container-seventy-left', props.params);
   const rightPlaceholders = getContainerPlaceholderProps('container-thirty-right', props.params);

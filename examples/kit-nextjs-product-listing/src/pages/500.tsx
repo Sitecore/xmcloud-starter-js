@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import { SitecoreContext, ErrorPages, SitecorePageProps } from '@sitecore-content-sdk/nextjs';
+import { SitecoreProvider, ErrorPages, SitecorePageProps } from '@sitecore-content-sdk/nextjs';
 import Layout from 'src/Layout';
 import { GetStaticProps } from 'next';
 import scConfig from 'sitecore.config';
 import client from 'lib/sitecore-client';
-import components from 'lib/component-map';
+import components from '.sitecore/component-map';
 
 import type { JSX } from 'react';
 
@@ -30,9 +30,9 @@ const Custom500 = (props: SitecorePageProps): JSX.Element => {
   }
 
   return (
-    <SitecoreContext api={scConfig.api} componentMap={components} layoutData={props.layout}>
+    <SitecoreProvider api={scConfig.api} componentMap={components} layoutData={props.layout}>
       <Layout layoutData={props.layout} />
-    </SitecoreContext>
+    </SitecoreProvider>
   );
 };
 

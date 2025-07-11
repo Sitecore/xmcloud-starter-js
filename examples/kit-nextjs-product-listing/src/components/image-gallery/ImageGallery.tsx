@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import type { ImageGalleryProps } from './image-gallery.props';
 import { ImageGalleryDefault } from './ImageGallery.dev';
 import { ImageGalleryGrid } from './ImageGalleryGrid.dev';
@@ -11,37 +11,37 @@ import { ImageGalleryNoSpacing } from './ImageGalleryNoSpacing.dev';
 
 // Default display of the component
 export const Default: React.FC<ImageGalleryProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   return <ImageGalleryDefault {...props} isPageEditing={isPageEditing} />;
 };
 
 // Variants
 export const FiftyFifty: React.FC<ImageGalleryProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   return <ImageGalleryFiftyFifty {...props} isPageEditing={isPageEditing} />;
 };
 
 export const Grid: React.FC<ImageGalleryProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   return <ImageGalleryGrid {...props} isPageEditing={isPageEditing} />;
 };
 
 export const FeaturedImage: React.FC<ImageGalleryProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   return <ImageGalleryFeaturedImage {...props} isPageEditing={isPageEditing} />;
 };
 
 export const NoSpacing: React.FC<ImageGalleryProps> = (props) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext?.pageEditing ?? false;
+  const { pageContext } = useSitecore();
+  const isPageEditing = pageContext?.pageEditing ?? false;
 
   return <ImageGalleryNoSpacing {...props} isPageEditing={isPageEditing} />;
 };
