@@ -36,13 +36,11 @@ SharedFields:
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
             Write-Verbose "My site: $sitePath"
     
-            # handle missing styles folder
-            if (-not (Test-Path "$sitePath/Presentation/Styles")) {
-                Import-Function Invoke-AddItem
-                $action = Get-Item . -ID '{B2486523-7487-4526-978F-AD2E986B5CC4}'
-                Invoke-AddItem $Site $action
-            }
-      
+            Write-Verbose "Clear styles and add custom ones"
+            Remove-Item -Path "$sitePath/Presentation/Styles" -Recurse -Force
+            $addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Styles" -Language $Site.Language
+            New-Item -Path "$sitePath/Presentation" -Name "Styles" -ItemType $addStylesBranchTemplate.ID
+            
             # Add LinkList variants
             $linkListVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/LinkList" -Language $Site.Language
             $footerLinks = New-Item -Parent $linkListVariant -Name "FooterLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
@@ -159,16 +157,16 @@ SharedFields:
             
             # variants for HeroST
             $heroSTVariants = $service.GetAvailableRenderingVariants($Site, $renderingHeroST.Name, $renderingHeroST.ID, $item.TemplateID)
-            $heroVariant = $heroSTVariants | ? { $_.DisplayName -eq "Default" }
-            $heroVariantRight = $heroSTVariants | ? { $_.DisplayName -eq "Right" }
+            $heroVariant = $heroSTVariants | Where-Object { $_.DisplayName -eq "Default" }
+            $heroVariantRight = $heroSTVariants | Where-Object { $_.DisplayName -eq "Right" }
             
             # variants for Multi-Promo
             $multiPromoVariants = $service.GetAvailableRenderingVariants($Site, $renderingMultiPromo.Name, $renderingMultiPromo.ID, $item.TemplateID)
-            $multiPromoVariantStacked = $multiPromoVariants | ? { $_.DisplayName -eq "Stacked" }
+            $multiPromoVariantStacked = $multiPromoVariants | Where-Object { $_.DisplayName -eq "Stacked" }
             
             # variants for Signup Banner
             $signupBannerVariants = $service.GetAvailableRenderingVariants($Site, $renderingSignupBanner.Name, $renderingSignupBanner.ID, $item.TemplateID)
-            $signupBannerVariant = $signupBannerVariants | ? { $_.DisplayName -eq "Default" }
+            $signupBannerVariant = $signupBannerVariants | Where-Object { $_.DisplayName -eq "Default" }
             
             # Add Home layout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "1"; "FieldNames" = $heroVariant.ID; } -DataSource "local:/Data/HeroST/HeroST 1" -FinalLayout
@@ -206,10 +204,9 @@ SharedFields:
     
     #$site = Get-Item .
     #Invoke-ModuleScriptBody -Site $site -Verbose
-    
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "6cd43cc0-c882-4e5b-b9f2-b1f50e2770d4"
+  Value: "93b199d6-c52c-4b34-9edd-0f25309f0b63"
 Languages:
 - Language: en
   Versions:
@@ -228,11 +225,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b11f931a-b994-4625-896b-d15b4d435d92"
+      Value: "3cf3853e-94e8-45c5-bcf3-305acb11acad"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250711T005638Z
+      Value: 20250711T201538Z

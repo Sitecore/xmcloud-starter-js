@@ -10,7 +10,6 @@ function Invoke-ModuleScriptBody {
     
         [Parameter(Mandatory = $true, Position = 1 )]
         [Item[]]$TenantTemplates
-
     )
     
     begin {
@@ -27,13 +26,11 @@ function Invoke-ModuleScriptBody {
         $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
         Write-Verbose "My site: $sitePath"
 
-        # handle missing styles folder
-        if (-not (Test-Path "$sitePath/Presentation/Styles")) {
-            Import-Function Invoke-AddItem
-            $action = Get-Item . -ID '{B2486523-7487-4526-978F-AD2E986B5CC4}'
-            Invoke-AddItem $Site $action
-        }
-  
+        Write-Verbose "Clear styles and add custom ones"
+        Remove-Item -Path "$sitePath/Presentation/Styles" -Recurse -Force
+        $addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Styles" -Language $Site.Language
+        New-Item -Path "$sitePath/Presentation -Name "Styles" -ItemType $addStylesBranchTemplate.ID
+        
         # Add LinkList variants
         $linkListVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/LinkList" -Language $Site.Language
         $footerLinks = New-Item -Parent $linkListVariant -Name "FooterLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
