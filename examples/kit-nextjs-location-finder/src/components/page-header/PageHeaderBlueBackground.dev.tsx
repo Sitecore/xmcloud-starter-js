@@ -25,8 +25,8 @@ export const PageHeaderBlueBackground: React.FC<PageHeaderProps & { isPageEditin
   const shouldShowButtons: boolean = isPageEditing
     ? true
     : link1?.jsonValue?.value?.href !== '' || link2?.jsonValue?.value?.href !== ''
-    ? true
-    : false;
+      ? true
+      : false;
 
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
