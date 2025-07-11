@@ -70,7 +70,7 @@ SharedFields:
   Value: "query:$site/*[@@name='Data']/*[@@templatename='Product Listings Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Product Listings Folder']"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "2b08356f-3f1b-497d-8216-16a101f4f69a"
+  Value: "33cb87b3-983c-452b-8f07-0fc3fb1c13ea"
 Languages:
 - Language: en
   Versions:
@@ -89,11 +89,11 @@ Languages:
         sitecore\alex.jackson@velir.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3ee52129-0fbd-473a-8990-d71d55ba2cbc"
+      Value: "553052a3-c7b3-4aaf-8fb8-1b685755626d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250710T234416Z
+      Value: 20250710T233300Z
