@@ -77,7 +77,7 @@ export const Default = ({
         vidEl?.pause();
       }
     }
-  }, [image, isIntersecting, pageContext, getImageUrl, pause]);
+  }, [image, isIntersecting, pageContext, getImageUrl, pause, elementRef]);
 
   if (!video && !image) return null;
 

@@ -93,8 +93,8 @@ export const Default: React.FC<LogoTabsProps> = ({ fields, isPageEditing: propIs
       hasContent && logoTabContent?.results
         ? logoTabContent.results
         : !isPageEditing
-          ? placeholderContent
-          : [];
+        ? placeholderContent
+        : [];
     const hasBackgroundImage = !!backgroundImage?.jsonValue?.value?.src;
 
     return (
