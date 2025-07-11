@@ -29,7 +29,7 @@ function Invoke-ModuleScriptBody {
         Write-Verbose "Clear styles and add custom ones"
         Remove-Item -Path "$sitePath/Presentation/Styles" -Recurse -Force
         $addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Styles" -Language $Site.Language
-        New-Item -Path "$sitePath/Presentation -Name "Styles" -ItemType $addStylesBranchTemplate.ID
+        New-Item -Path "$sitePath/Presentation" -Name "Styles" -ItemType $addStylesBranchTemplate.ID
         
         # Add LinkList variants
         $linkListVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/LinkList" -Language $Site.Language
@@ -122,13 +122,10 @@ function Invoke-ModuleScriptBody {
         $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
         
         # Update Site3 page templates
-        Set-ItemTemplate -Path "$sitePath/Home/Kitchensink" -Template $pageTemplate.ID
-        Set-ItemTemplate -Path "$sitePath/Home/Signup" -Template $pageTemplate.ID
         Set-ItemTemplate -Path "$sitePath/Home/Speakers" -Template $pageTemplate.ID
         Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 10" -Template $audioPageTemplate.ID
         Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 30" -Template $audioPageTemplate.ID
         Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 50" -Template $audioPageTemplate.ID
-        Set-ItemTemplate -Path "$sitePath/Home/Signup" -Template $pageTemplate.ID
         Set-ItemTemplate -Path "$sitePath/Home/Video" -Template $pageTemplate.ID
         
         Write-Verbose "Update the home page renderings"
@@ -158,12 +155,17 @@ function Invoke-ModuleScriptBody {
         $signupBannerVariants = $service.GetAvailableRenderingVariants($Site, $renderingSignupBanner.Name, $renderingSignupBanner.ID, $item.TemplateID)
         $signupBannerVariant = $signupBannerVariants | Where-Object { $_.DisplayName -eq "Default" }
         
+        Write-Verbose "Get styles for multi-promo"
+        $multiPromoGrid3_2 = Get-Item -Path "$sitePath/Presentation/Styles/MultiPromo/Grid/3_2" -Language $Site.Language
+        
         # Add Home layout
         Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "1"; "FieldNames" = $heroVariant.ID; } -DataSource "local:/Data/HeroST/HeroST 1" -FinalLayout
         Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "3"; "FieldNames" = $heroVariantRight.ID; } -DataSource "local:/Data/HeroST/HeroST 2" -FinalLayout
         Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "4"; "FieldNames" = $heroVariant.ID; } -DataSource "local:/Data/HeroST/HeroST 3" -FinalLayout
         Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingTextSliderDefinition -Parameter @{ "DynamicPlaceholderId" = "2"; } -DataSource "local:/Data/TextSlider 1" -FinalLayout
-        Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingMultiPromoDefinition -Parameter @{ "DynamicPlaceholderId" = "6"; "FieldNames" = $multiPromoVariantStacked.ID; } -DataSource "local:/Data/MultiPromo 2" -FinalLayout
+        Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingMultiPromoDefinition `
+          -Parameter @{ "DynamicPlaceholderId" = "6"; "FieldNames" = $multiPromoVariantStacked.ID; "Styles" = "%7C$($multiPromoGrid3_2.ID)%7C"; } `
+          -DataSource "local:/Data/MultiPromo 2" -FinalLayout
         Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingSignupBannerDefinition -Parameter @{ "DynamicPlaceholderId" = "5"; "FieldNames" = $signupBannerVariant.ID; } -DataSource "local:/Data/SignupBanner 1" -FinalLayout
 
         Write-Verbose "Update home page fields"
