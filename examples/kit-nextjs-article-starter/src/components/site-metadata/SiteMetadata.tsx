@@ -1,7 +1,22 @@
 import type React from 'react';
 import Head from 'next/head';
-import { SiteMetadataProps } from '@/components/site-metadata/site-metadata.props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
+import { Field } from '@sitecore-content-sdk/nextjs';
+import { ComponentProps } from '@/lib/component-props';
+
+/**
+ * Model used for Sitecore Component integration
+ */
+type SiteMetadataProps = ComponentProps & SiteMetadataFields;
+
+type SiteMetadataFields = {
+  fields: {
+    title?: Field<string>;
+    metadataTitle?: Field<string>;
+    metadataKeywords?: Field<string>;
+    metadataDescription?: Field<string>;
+  };
+};
 
 export const Default: React.FC<SiteMetadataProps> = (props) => {
   const { fields } = props;

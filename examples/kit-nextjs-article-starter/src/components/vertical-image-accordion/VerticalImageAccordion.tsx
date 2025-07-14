@@ -3,9 +3,10 @@ import { cn } from '@/lib/utils';
 import { Text, Link } from '@sitecore-content-sdk/nextjs';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { NoDataFallback } from '@/utils/NoDataFallback';
-import { VerticalImageAccordionProps } from './vertical-image-accordion.props';
 import { EditableButton } from '@/components/button-component/ButtonComponent';
 import { useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
+import { ComponentProps } from '@/lib/component-props';
 
 {
   /* 
@@ -15,7 +16,33 @@ import { useSitecore } from '@sitecore-content-sdk/nextjs';
     - URL: https://velir.atlassian.net/browse/SCDS-64
   */
 }
+interface VerticalImageAccordionParams {
+  [key: string]: any; // eslint-disable-line
+}
 
+interface AccordionItem {
+  title: { jsonValue: Field<string> };
+  description: { jsonValue: Field<string> };
+  image: { jsonValue: ImageField };
+  link?: { jsonValue: LinkField };
+}
+
+interface VerticalImageAccordionFields {
+  data: {
+    datasource: {
+      title?: { jsonValue: Field<string> };
+      items?: {
+        results: AccordionItem[];
+      };
+    };
+  };
+}
+
+interface VerticalImageAccordionProps extends ComponentProps {
+  params: VerticalImageAccordionParams;
+  fields: VerticalImageAccordionFields;
+  isPageEditing?: boolean;
+}
 export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageEditing }) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [isExpanding, setIsExpanding] = useState(false);
