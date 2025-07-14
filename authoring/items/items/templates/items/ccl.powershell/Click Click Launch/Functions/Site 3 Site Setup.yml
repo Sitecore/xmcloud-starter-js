@@ -19,7 +19,6 @@ SharedFields:
         
             [Parameter(Mandatory = $true, Position = 1 )]
             [Item[]]$TenantTemplates
-    
         )
         
         begin {
@@ -36,13 +35,11 @@ SharedFields:
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
             Write-Verbose "My site: $sitePath"
     
-            # handle missing styles folder
-            if (-not (Test-Path "$sitePath/Presentation/Styles")) {
-                Import-Function Invoke-AddItem
-                $action = Get-Item . -ID '{B2486523-7487-4526-978F-AD2E986B5CC4}'
-                Invoke-AddItem $Site $action
-            }
-      
+            Write-Verbose "Clear styles and add custom ones"
+            Remove-Item -Path "$sitePath/Presentation/Styles" -Recurse -Force
+            $addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Styles" -Language $Site.Language
+            New-Item -Path "$sitePath/Presentation" -Name "Styles" -ItemType $addStylesBranchTemplate.ID
+            
             # Add LinkList variants
             $linkListVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/LinkList" -Language $Site.Language
             $footerLinks = New-Item -Parent $linkListVariant -Name "FooterLinks" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
@@ -115,11 +112,12 @@ SharedFields:
     
             # Get variants for link list
             $linkListVariants = $service.GetAvailableRenderingVariants($Site, $renderingLinkList.Name, $renderingLinkList.ID, $item.TemplateID)
-            $linkListVariant = $linkListVariants | ? { $_.DisplayName -eq "FooterLinks" }
+            $linkListVariant = $linkListVariants | Where-Object { $_.DisplayName -eq "FooterLinks" }
     
             $alignItemsCenter = Get-Item -Path "$sitePath/Presentation/Styles/Content alignment/Align content center" -Language $Site.Language
+            $withSeparators = Get-Item -Path "$sitePath/Presentation/Styles/Link list/With Separators" -Language $Site.Language
             Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-primary*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; }  | `
+                Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C$($withSeparators.ID)%7C"; }  | `
                 Set-Rendering -Item $footerPartial -FinalLayout
                 
             Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-secondary*" -FinalLayout | `
@@ -134,13 +132,10 @@ SharedFields:
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
             
             # Update Site3 page templates
-            Set-ItemTemplate -Path "$sitePath/Home/Kitchensink" -Template $pageTemplate.ID
-            Set-ItemTemplate -Path "$sitePath/Home/Signup" -Template $pageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/Speakers" -Template $pageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 10" -Template $audioPageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 30" -Template $audioPageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 50" -Template $audioPageTemplate.ID
-            Set-ItemTemplate -Path "$sitePath/Home/Signup" -Template $pageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/Video" -Template $pageTemplate.ID
             
             Write-Verbose "Update the home page renderings"
@@ -159,23 +154,28 @@ SharedFields:
             
             # variants for HeroST
             $heroSTVariants = $service.GetAvailableRenderingVariants($Site, $renderingHeroST.Name, $renderingHeroST.ID, $item.TemplateID)
-            $heroVariant = $heroSTVariants | ? { $_.DisplayName -eq "Default" }
-            $heroVariantRight = $heroSTVariants | ? { $_.DisplayName -eq "Right" }
+            $heroVariant = $heroSTVariants | Where-Object { $_.DisplayName -eq "Default" }
+            $heroVariantRight = $heroSTVariants | Where-Object { $_.DisplayName -eq "Right" }
             
             # variants for Multi-Promo
             $multiPromoVariants = $service.GetAvailableRenderingVariants($Site, $renderingMultiPromo.Name, $renderingMultiPromo.ID, $item.TemplateID)
-            $multiPromoVariantStacked = $multiPromoVariants | ? { $_.DisplayName -eq "Stacked" }
+            $multiPromoVariantStacked = $multiPromoVariants | Where-Object { $_.DisplayName -eq "Stacked" }
             
             # variants for Signup Banner
             $signupBannerVariants = $service.GetAvailableRenderingVariants($Site, $renderingSignupBanner.Name, $renderingSignupBanner.ID, $item.TemplateID)
-            $signupBannerVariant = $signupBannerVariants | ? { $_.DisplayName -eq "Default" }
+            $signupBannerVariant = $signupBannerVariants | Where-Object { $_.DisplayName -eq "Default" }
+            
+            Write-Verbose "Get styles for multi-promo"
+            $multiPromoGrid3_2 = Get-Item -Path "$sitePath/Presentation/Styles/MultiPromo/Grid/3_2" -Language $Site.Language
             
             # Add Home layout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "1"; "FieldNames" = $heroVariant.ID; } -DataSource "local:/Data/HeroST/HeroST 1" -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "3"; "FieldNames" = $heroVariantRight.ID; } -DataSource "local:/Data/HeroST/HeroST 2" -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingHeroSTDefinition -Parameter @{ "DynamicPlaceholderId" = "4"; "FieldNames" = $heroVariant.ID; } -DataSource "local:/Data/HeroST/HeroST 3" -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingTextSliderDefinition -Parameter @{ "DynamicPlaceholderId" = "2"; } -DataSource "local:/Data/TextSlider 1" -FinalLayout
-            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingMultiPromoDefinition -Parameter @{ "DynamicPlaceholderId" = "6"; "FieldNames" = $multiPromoVariantStacked.ID; } -DataSource "local:/Data/MultiPromo 2" -FinalLayout
+            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingMultiPromoDefinition `
+              -Parameter @{ "DynamicPlaceholderId" = "6"; "FieldNames" = $multiPromoVariantStacked.ID; "Styles" = "%7C$($multiPromoGrid3_2.ID)%7C"; } `
+              -DataSource "local:/Data/MultiPromo 2" -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingSignupBannerDefinition -Parameter @{ "DynamicPlaceholderId" = "5"; "FieldNames" = $signupBannerVariant.ID; } -DataSource "local:/Data/SignupBanner 1" -FinalLayout
     
             Write-Verbose "Update home page fields"
@@ -206,10 +206,9 @@ SharedFields:
     
     #$site = Get-Item .
     #Invoke-ModuleScriptBody -Site $site -Verbose
-    
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "6cd43cc0-c882-4e5b-b9f2-b1f50e2770d4"
+  Value: "80d35a34-f949-438e-bb65-5c71d4610382"
 Languages:
 - Language: en
   Versions:
@@ -228,11 +227,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b11f931a-b994-4625-896b-d15b4d435d92"
+      Value: "8940d750-bf0c-4fc8-b2b7-cc60f1bbe735"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250711T005638Z
+      Value: 20250711T225632Z

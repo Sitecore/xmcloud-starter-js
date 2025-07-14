@@ -11,7 +11,7 @@ import {
   Link as JssLink,
   RichText as JssRichText,
   Text as JssText,
-  useSitecoreContext,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 import { useMemo, type JSX } from 'react';
@@ -58,8 +58,8 @@ type TestimonialCardProps = {
 };
 
 const StarRating = ({ r: ratingField }: { r: IGQLTextField }) => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isEditing = sitecoreContext.pageEditing;
+  const { pageContext } = useSitecore();
+  const isEditing = pageContext.pageEditing;
 
   const rating = Math.min(Number(ratingField.jsonValue?.value) || 0, 5);
   const filledStars = Array.from({ length: rating }, (_, index) => (

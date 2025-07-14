@@ -22,8 +22,8 @@ export const PageHeaderFiftyFifty: React.FC<PageHeaderProps & { isPageEditing: b
   const shouldShowButtons: boolean = isPageEditing
     ? true
     : link1?.jsonValue?.value?.href !== '' || link2?.jsonValue?.value?.href !== ''
-    ? true
-    : false;
+      ? true
+      : false;
 
   const hasPagesPositionStyles: boolean = props?.params?.styles
     ? props?.params?.styles.includes('position-')

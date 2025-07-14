@@ -23,8 +23,8 @@ export const HeroDefault: React.FC<HeroProps> = (props) => {
     const needsBanner: boolean = isPageEditing
       ? true
       : bannerText?.value !== '' || bannerCTA?.value.href !== ''
-      ? true
-      : false;
+        ? true
+        : false;
 
     const hasPagesPositionStyles: boolean = props?.params?.styles
       ? props?.params?.styles.includes('position-')

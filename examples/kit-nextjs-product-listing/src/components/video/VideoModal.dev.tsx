@@ -69,7 +69,7 @@ export function VideoModal({ isOpen, onClose, videoUrl }: VideoModalProps) {
       opacity: 1,
       scale: 1,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         damping: 15,
         staggerChildren: 0.07,
         delayChildren: 0.2,
@@ -79,7 +79,7 @@ export function VideoModal({ isOpen, onClose, videoUrl }: VideoModalProps) {
       opacity: 0,
       scale: 0.8,
       transition: {
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
         duration: 0.3,
       },
     },

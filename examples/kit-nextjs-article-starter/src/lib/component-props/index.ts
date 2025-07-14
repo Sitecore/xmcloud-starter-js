@@ -14,10 +14,10 @@ export type ComponentProps = {
 
 /**
  * Component props with context
- * You can access `sitecoreContext` by withSitecoreContext/useSitecoreContext
- * @example withSitecoreContext()(ContentBlock)
- * @example const { sitecoreContext } = useSitecoreContext()
+ * You can access `pageContext` by withSitecore/useSitecore
+ * @example useSitecore()(ContentBlock)
+ * @example const { pageContext } = useSitecore()
  */
 export type ComponentWithContextProps = ComponentProps & {
-  sitecoreContext: SitecoreProviderPageContext;
+  pageContext: SitecoreProviderPageContext;
 };

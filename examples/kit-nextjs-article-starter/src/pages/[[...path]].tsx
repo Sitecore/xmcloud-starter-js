@@ -11,7 +11,7 @@ import {
 import { extractPath, handleEditorFastRefresh } from '@sitecore-content-sdk/nextjs/utils';
 import { isDesignLibraryPreviewData } from '@sitecore-content-sdk/nextjs/editing';
 import client from 'lib/sitecore-client';
-import components from 'lib/component-map';
+import components from '.sitecore/component-map';
 import scConfig from 'sitecore.config';
 
 const SitecorePage = ({ notFound, componentProps, layout }: SitecorePageProps): JSX.Element => {

@@ -155,6 +155,13 @@ SharedFields:
             Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 2" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
             Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 3" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $terraPage
             Get-Item -Path "$($item.ItemPath)/Data/Home Page Promo" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+            Get-Item -Path "$($item.ItemPath)/Data/Home Page Accordion" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+            Get-Item -Path "$($item.ItemPath)/Test Drive/Data/Accordion - Test Drive - Demo Official" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+            Get-Item -Path "$($item.ItemPath)/Products/Aero/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
+            Get-Item -Path "$($item.ItemPath)/Products/Aero/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
+            Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Accordion - Nexa - Demo Official" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
+            Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
+            Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
             
             Write-Verbose "Update product pages with the correct taxonomy"
             $productTag = Get-Item -Path "$sitePath/Data/Taxonomy/Content Types/Product" -Language $Site.Language
@@ -248,7 +255,7 @@ SharedFields:
             $imageRightVariant.'__Display name' = "Image Right"
             $titlePartialOverlayVariant = New-Item -Parent $promoVariant -Name "TitlePartialOverlay" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
             $titlePartialOverlayVariant.'__Display name' = "Title Partial Overlay"
-            
+    
             Write-Verbose "Create dictionary items"
             $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
             $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 2/Add Dictionary Items" -Language $Site.Language
@@ -264,7 +271,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "1b59801c-ffa1-4825-94cd-76d887d609cb"
+  Value: "7092d389-f1d3-4c90-8844-f8b38916e3a6"
 Languages:
 - Language: en
   Versions:
@@ -283,11 +290,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7fc0a46d-9c7f-4dfa-a189-d65780cf7a08"
+      Value: "95911cd7-3ad5-46b1-b172-df00bc1bf73f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250711T005549Z
+      Value: 20250711T144238Z

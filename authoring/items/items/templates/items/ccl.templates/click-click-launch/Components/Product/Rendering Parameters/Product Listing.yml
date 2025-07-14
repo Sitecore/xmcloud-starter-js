@@ -14,6 +14,10 @@ SharedFields:
     {8CA06D6A-B353-44E8-BC31-B528C7306971}
     {A9F8A74E-5F7D-4506-8661-B08E7B9A7B91}
     {44A022DB-56D3-419A-B43B-E27E4D8E9C41}
+    {4247AAD4-EBDE-4994-998F-E067A51B1FE4}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0de184ea-87bc-4e8d-b5cc-b2fe60d16a43"
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
   Value: "{D9C13E9E-1534-4DCC-BAA4-ACCDF85935DA}"
@@ -35,11 +39,11 @@ Languages:
         sitecore\alex.jackson@velir.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0825bd12-d8f3-45fe-ab57-bd6d43d98aaa"
+      Value: "84c41262-a23f-4f16-ad85-123b2509bc1d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\alex.jackson@velir.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250319T183900Z
+      Value: 20250711T002302Z
