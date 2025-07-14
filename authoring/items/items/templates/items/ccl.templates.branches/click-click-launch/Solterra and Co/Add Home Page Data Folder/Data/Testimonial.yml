@@ -19,11 +19,11 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "872c7094-2de6-4934-8b6c-1f9f6c58721b"
       Hint: Title
       Value: Testimonial

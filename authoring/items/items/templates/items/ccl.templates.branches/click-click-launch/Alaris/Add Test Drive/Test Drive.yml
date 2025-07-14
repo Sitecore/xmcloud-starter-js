@@ -81,14 +81,14 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\dan.murphy@velir.com
+        sitecore\Admin
     - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
       Hint: pageTitle
       Value: Test Drive
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\dan.murphy@velir.com
+        sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "fd2c6670-cdb3-4943-89c7-0db575020265"

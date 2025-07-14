@@ -18,18 +18,18 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "dea17fe2-8c5f-4f37-b0eb-a73f218e286f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "c0071773-2149-46d9-9fab-4b92cdcfab5f"
       Hint: logoText
       Value: New to the Solterra & Co. brand portfolio
