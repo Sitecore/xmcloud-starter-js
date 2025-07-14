@@ -1,4 +1,4 @@
-import { Link, RichText, Text } from '@sitecore-content-sdk/nextjs';
+import { Link, RichText, Text, Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
 import { Orientation } from '@/enumerations/Orientation.enum';
 import { Variation } from '@/enumerations/Variation.enum';
 import { ButtonType } from '@/enumerations/ButtonStyle.enum';
@@ -7,8 +7,38 @@ import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
-import { PromoBlockProps, PromoBlockVariationClassesProps } from './promo-block.props';
 import { type JSX } from 'react';
+import { ComponentProps } from 'lib/component-props';
+
+/**
+ * Model used for Sitecore Component integration
+ */
+type PromoBlockProps = ComponentProps & PromoBlockParams & PromoBlockFields;
+
+// Component Rendering Parameter fields
+type PromoBlockParams = {
+  params: {
+    orientation?: string;
+  };
+};
+
+type PromoBlockFields = {
+  fields: {
+    heading: Field<string>;
+    description: Field<string>;
+    image: ImageField;
+    link?: LinkField;
+  };
+};
+
+type PromoBlockVariationClassesProps = {
+  container: string;
+  image: string;
+  copy: string;
+  row: {
+    initial: string;
+  };
+};
 
 const PromoBlock = (props: PromoBlockProps): JSX.Element => {
   const { fields, params } = props;

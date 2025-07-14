@@ -1,12 +1,66 @@
 import { useEffect, useState } from 'react';
-import { Text, RichText, useSitecore } from '@sitecore-content-sdk/nextjs';
+import {
+  Text,
+  RichText,
+  useSitecore,
+  ImageField,
+  Field,
+  LinkField,
+} from '@sitecore-content-sdk/nextjs';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { cn } from '@/lib/utils';
-import { PageHeaderProps } from './page-header.props';
 import { VideoBase as Video } from '@/components/video/Video';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { cva } from 'class-variance-authority';
+import { EnumValues } from '@/enumerations/generic.enum';
+import { ColorSchemeLimited } from '@/enumerations/ColorSchemeLimited.enum';
+import { ComponentProps } from '@/lib/component-props';
+
+interface PageHeaderParams {
+  colorScheme?: EnumValues<typeof ColorSchemeLimited> | 'default';
+  darkPlayIcon?: '0' | '1';
+  [key: string]: any; // eslint-disable-line
+}
+
+interface PageHeaderLogos {
+  image?: {
+    jsonValue?: ImageField;
+  };
+}
+
+interface PageHeaderProps extends ComponentProps {
+  params: PageHeaderParams;
+  fields: {
+    data: {
+      datasource?: {
+        imageRequired: {
+          jsonValue: ImageField;
+        };
+        videoOptional?: {
+          jsonValue: LinkField;
+        };
+        logoText?: {
+          jsonValue: Field<string>;
+        };
+        children?: {
+          results: PageHeaderLogos[];
+        };
+      };
+      externalFields: {
+        pageTitle: {
+          jsonValue: Field<string>;
+        };
+        pageHeaderTitle: {
+          jsonValue: Field<string>;
+        };
+        pageSubtitle: {
+          jsonValue: Field<string>;
+        };
+      };
+    };
+  };
+}
 
 const pageHeaderComponentClasses = cva(
   '@container my-10 flex flex-col md:grid md:gap-8 md:items-center px-4 @xl:px-8',
