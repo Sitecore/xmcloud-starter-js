@@ -129,7 +129,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
               <DesignLibrary {...layoutData} />
             ) : (
               <>
-                <header>
+                <header className={isPageEditing ? 'editing' : ''}>
                   <div id="header">
                     {route && <Placeholder name="headless-header" rendering={route} />}
                   </div>
