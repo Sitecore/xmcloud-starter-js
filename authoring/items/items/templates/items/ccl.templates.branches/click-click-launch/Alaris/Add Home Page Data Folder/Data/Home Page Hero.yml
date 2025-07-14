@@ -1,0 +1,48 @@
+﻿---
+ID: "3a4aa49b-bf56-4fe9-83f2-3d2598ce3c9a"
+Parent: "1e124342-4c34-4af3-a980-a03d59bcb272"
+Template: "ae018465-4e68-4a49-8b15-9702274fa75a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Home Page Data Folder/Data/Home Page Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250528T024205Z
+    - ID: "3c2b7d00-8de2-4636-a65f-d667a75ec4a7"
+      Hint: description
+      Value: Say hello to the world’s most  experienced car.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bc8fec58-e910-43ba-8353-3e25e8035aec"
+    - ID: "9ad66b62-4ebd-42da-8e1a-09dca7db5aea"
+      Hint: bannerText
+      Value: "Introducing the all-new, Alaris Nexa. Now available with DriveSense AI technology."
+    - ID: "b80f6e4e-44ec-4bf5-92b0-f50f71530c06"
+      Hint: bannerCTA
+      Value: |
+        <link text="Schedule a Test Drive" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{7D507F7B-015F-439B-9F08-F7EC4F81B1E8}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "c65eb2cc-503f-48cd-ba69-42c29df106c1"
+      Hint: image
+      Value: |
+        <image mediaid="{F8B6426B-90CA-4D45-A28D-60E2D0E9656B}" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T024537Z
+    - ID: "e5e059ce-66e3-4039-887b-0086e7764f09"
+      Hint: title
+      Value: Get set for an electric future.

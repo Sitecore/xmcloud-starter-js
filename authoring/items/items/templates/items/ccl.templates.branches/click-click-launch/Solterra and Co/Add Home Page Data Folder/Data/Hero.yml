@@ -1,0 +1,68 @@
+﻿---
+ID: "08ac9de1-db3b-4444-99df-820b8c49dd63"
+Parent: "9da02cd6-13d0-41c5-8d24-620d673cd3c0"
+Template: "a19c3230-c5ee-47a1-ae3f-12a1fc3c4273"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c4089ef-d9fa-4515-ad8b-eac558420564"
+      Hint: heroImageOptional1
+      Value: |
+        <image mediaid="5d0350ce-0cac-4b69-9798-f3c4a246a6f2" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T205432Z
+    - ID: "31cab7a9-93cd-4172-92bb-e5223de0da84"
+      Hint: heroVideoOptional3
+      Value: |
+        <link linktype="external" url="https://videos.pexels.com/video-files/8285933/8285933-uhd_1440_2732_25fps.mp4" target="" text="" title="" class=""/>
+    - ID: "3f384b8c-9364-4f44-91ea-7f7fa3a76de9"
+      Hint: titleRequired
+      Value: Inspired brands for all. 
+    - ID: "41bf0509-3c00-45aa-8bc0-b3c340f6993d"
+      Hint: heroVideoOptional1
+      Value: |
+        <link linktype="external" url="https://videos.pexels.com/video-files/4536081/4536081-hd_1080_1920_25fps.mp4" text="For the People"/>
+    - ID: "41ed281a-c5b2-47ea-af9d-5f32af4579f5"
+      Hint: heroImageOptional4
+      Value: |
+        <image mediaid="c23ec2b1-9b7e-4190-ad43-0c1821a0b637" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "6ddc5fdf-e0fa-475a-9044-73da5ba78fb6"
+      Hint: heroVideoOptional4
+      Value: 
+    - ID: "6faddda8-a617-4cdc-b437-606aced129e2"
+      Hint: heroImageOptional3
+      Value: |
+        <image mediaid="c3f90f33-1083-4d97-9d58-ee3a437c65b3" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ed2f5829-0d4f-48fb-8c7b-ea821c4da9b0"
+    - ID: "b39f9979-146b-4205-aa65-0cc7637d5d7e"
+      Hint: heroImageOptional2
+      Value: |
+        <image mediaid="ddd4a2d5-a723-4a19-96bb-d783921e6757" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "c17f89f8-7429-4af1-a47d-b7b1e037fe45"
+      Hint: linkOptional
+      Value: |
+        <link class="" querystring="" id="900f400b-3ba6-45ba-a77b-7f79e118c64c" anchor="" target="" title="" linktype="internal" text="For the People" url="/click-click-launch/Demo A/Home/Landing Page" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103702Z
+    - ID: "e2223200-5161-4e5a-9a35-9a5ac126c05c"
+      Hint: descriptionOptional
+      Value: Our commitment to green energy is paving the way for a cleaner, healthier planet. Join us on our journey towards a future where clean, renewable energy transform the way we power our lives.

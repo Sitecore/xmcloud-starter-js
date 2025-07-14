@@ -1,0 +1,46 @@
+﻿---
+ID: "4f4023cf-11a4-4067-8e1a-e1e9151a69fe"
+Parent: "90c23524-91f2-4490-b3b3-ccc3d60de31c"
+Template: "4dddcbac-a737-4c55-8ec8-508f1550d44a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Data/Accordion 1"
+BranchID: "cf2ad172-df62-4f0f-b90f-8241b4f1fd40"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4D283B5C-2806-4424-8442-91F65F125E0E}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "23c31b2b-4652-4755-94b0-184bca384219"
+      Hint: heading
+      Value: Frequently Asked Questions.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250602T114218Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "6938a6f3-824b-41d6-83ce-bce57f4cb90a"
+      Hint: link
+      Value: |
+        <link text="Contact us" linktype="external" url="http://#" anchor="" target="" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bb7aec26-1c57-491c-8c99-a32bfd992d4b"
+    - ID: "9054b11a-2026-4582-8830-f66d1adfb618"
+      Hint: description
+      Value: "Still have questions? Reach out."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T154709Z

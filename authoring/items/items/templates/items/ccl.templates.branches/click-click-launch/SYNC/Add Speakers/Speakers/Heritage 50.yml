@@ -1,0 +1,122 @@
+﻿---
+ID: "6a4de0fb-f653-491a-9fc6-e0bc0e6179b7"
+Parent: "430431cc-68f6-47cc-98d6-160c11315475"
+Template: "1b76af75-dd75-450c-92e3-ff0f339f490b"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Heritage 50"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{36F33941-3A2B-4E80-9E42-E82FA7F06207}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "004be63e-baac-4bff-a2fd-9d6e174e6837"
+      Hint: Images
+      Value: |
+        {DD548A5D-C926-4509-88AF-67EF5F5D8FE5}
+        {9DA4F02A-9FB3-4EB8-AFA2-BBA156051576}
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{EA89B30C-EB2A-4E64-B42A-72CCA04297B3}"
+              p:before="*"
+              s:ds="local:/Data/TextSlider 2"
+              s:id="{234881E2-350F-4C17-A310-85138E9310A3}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames&amp;Styles=%7B36BB7C77-22DF-49F2-93BA-564E6DC4892F%7D%7C%7BEC74E3A7-2815-4404-BC0E-0D7A64BE311C%7D&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="/headless-main/sxa-productcontent/container-2" />
+            <r
+              uid="{F691B659-E94D-40A0-B230-44884A52CDC4}"
+              p:after="r[@uid='{EA89B30C-EB2A-4E64-B42A-72CCA04297B3}']"
+              s:ds="local:/Data/MultiPromo 5"
+              s:id="{D806DDF7-39A7-4A6D-8E0A-D138BC53845D}"
+              s:par="FieldNames=%7B6A5E3A6A-34C9-40C8-AAFD-CEC93D65E518%7D&amp;numColumns&amp;CSSStyles&amp;DynamicPlaceholderId=2&amp;Styles=%7C%7BC888E8A0-773E-4BD8-8EB4-A8B20DCD8D6E%7D"
+              s:ph="/headless-main/sxa-productcontent/container-2" />
+            <r
+              uid="{8E5ACC42-8B8B-48EC-871C-2C040B2C59FB}"
+              p:after="r[@uid='{F691B659-E94D-40A0-B230-44884A52CDC4}']"
+              s:ds="local:/Data/ProductComparison 1"
+              s:id="{7FDC6DFC-A4DE-4352-9FA9-745B5CD457C6}"
+              s:par="showButton&amp;GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+              s:ph="/headless-main/sxa-productcontent/container-2" />
+            <r
+              uid="{77EA11A6-8457-4592-A1BF-D76A3F98F0F1}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Accordion 2"
+              s:id="{913E30C7-63C2-4A2B-9D44-B2ADAEED6BC2}"
+              s:par="FieldNames=%7B0A38E986-2333-4DAD-9883-D62CA6E1BE3D%7D&amp;orientation&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/sxa-productcontent/container-2" />
+          </d>
+        </r>
+    - ID: "09bc62ec-1e1c-4bf1-9e8a-dda5c42144ff"
+      Hint: ProductName
+      Value: Heritage 50
+    - ID: "112118a1-8e2b-4697-aabf-794f3c738861"
+      Hint: WarrantyLink
+      Value: |
+        <link linktype="external" url="#" target="" text="Returns and Warranty" title="" class=""/>
+    - ID: "161dd364-3753-468f-8801-e6224ec7bbff"
+      Hint: Price
+      Value: $1290.99 USD
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250602T183418Z
+    - ID: "2be75dd6-cd15-4d67-9bb8-a03e7563bb03"
+      Hint: Colors
+      Value: |
+        {74C61833-114A-4BDA-9E2A-8D2E7BAD376F}
+        {D0A2327F-CFDF-4C86-BA5D-6E64209AEE45}
+        {B74D8CB6-CB75-485F-9CCB-4B29D291CAE3}
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5f5300e3-5eb0-41cf-9d06-b402f165505f"
+      Hint: Specifications
+      Value: |
+        {0EFDCBE7-F1DC-41DC-829B-331F60654F15}
+        {E4AC9FEF-7E8D-44E5-82F5-D0E609CA1B25}
+        {85E95F32-AB94-4997-B458-91C3D7DFD3A9}
+        {711D9D90-6882-42C9-B1A3-AF95FB149D2F}
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a8b69989-d79c-4bb5-8784-f494d728d9ac"
+    - ID: "b041d971-f2fd-4514-95b8-7fc8a90cd41f"
+      Hint: ShippingLink
+      Value: |
+        <link linktype="external" url="#" text="Shipping Options"/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "d0de8ee1-e2cf-4abc-9729-51d602dbbfe2"
+      Hint: AmpPower
+      Value: 100AMP or 80AMPS
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T171122Z
+    - ID: "ea0a4ef8-eecd-472b-95a9-59c9f801494e"
+      Hint: ProductImage
+      Value: |
+        <image mediaid="78e73160-94da-4040-a87f-20be5a83ed95" alt="Heritage50" />
+    - ID: "ead05710-2521-4e01-89a6-25b24e209678"
+      Hint: Description
+      Value: "Built for those who demand authenticity, the Heritage 50 delivers the warmth, depth, and character of classic rock-era sound with the precision of modern engineering."
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Heritage 50
+    - ID: "f545f533-f5ba-4f60-955b-7250abcd3bad"
+      Hint: FeaturedImage
+      Value: |
+        <image mediaid="dd548a5d-c926-4509-88af-67ef5f5d8fe5" />
