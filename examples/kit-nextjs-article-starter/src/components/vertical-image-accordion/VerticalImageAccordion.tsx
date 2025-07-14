@@ -7,15 +7,6 @@ import { VerticalImageAccordionProps } from './vertical-image-accordion.props';
 import { EditableButton } from '@/components/button-component/ButtonComponent';
 import { useSitecore } from '@sitecore-content-sdk/nextjs';
 
-{
-  /* 
-    Jira Ticket Information:
-    - Key: SCDS-64
-    - Summary: Vertical Image Accordion
-    - URL: https://velir.atlassian.net/browse/SCDS-64
-  */
-}
-
 export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageEditing }) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [isExpanding, setIsExpanding] = useState(false);

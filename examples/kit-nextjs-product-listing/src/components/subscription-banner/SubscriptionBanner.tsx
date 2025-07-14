@@ -7,15 +7,6 @@ import { useForm } from 'react-hook-form';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { useState } from 'react';
 
-{
-  /* 
-    Jira Ticket Information:
-    - Key: SCDS-66
-    - Summary: Subscription Banner
-    - URL: https://velir.atlassian.net/browse/SCDS-66
-  */
-}
-
 type FormValues = {
   email: string;
 };

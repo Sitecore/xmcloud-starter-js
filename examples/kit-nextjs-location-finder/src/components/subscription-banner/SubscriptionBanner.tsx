@@ -7,14 +7,6 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/component
 import { useState } from 'react';
 import { ComponentProps } from '@/lib/component-props';
 
-{
-  /* 
-    Jira Ticket Information:
-    - Key: SCDS-66
-    - Summary: Subscription Banner
-    - URL: https://velir.atlassian.net/browse/SCDS-66
-  */
-}
 interface SubscriptionBannerParams {
   [key: string]: any; // eslint-disable-line
 }
