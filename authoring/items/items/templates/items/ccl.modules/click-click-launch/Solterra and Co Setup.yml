@@ -1,0 +1,51 @@
+﻿---
+ID: "e243bdaa-ae7a-41da-a183-cb25ec90f8c3"
+Parent: "419921d1-bbba-49ae-b78c-863915bea84c"
+Template: "bed31d6f-d968-45a9-b54e-12d7f977d861"
+Path: "/sitecore/system/Settings/Project/click-click-launch/Solterra and Co Setup"
+SharedFields:
+- ID: "06d2c562-9229-4779-8807-e2a5fd2990d4"
+  Hint: IsSystemModule
+  Value: 
+- ID: "11488836-d40f-40d4-beb4-1d31da7b1470"
+  Hint: IncludeByDefault
+  Value: 
+- ID: "40deee2f-7595-40bd-b2c9-51f9e2346100"
+  Hint: Dependencies
+  Value: |
+    {C4D79D81-83E9-4506-AE8C-F7145C75762F}
+    {ED48A6C5-0E91-43AF-A2CE-4D00D5FE8F5D}
+    {0006F007-9BA4-4AB7-B336-65A1452BD255}
+    {B2486523-7487-4526-978F-AD2E986B5CC4}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "bcb70440-a6d4-4e87-9b8b-53913398b3bf"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250311T140713Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\minyie.diaz@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\minyie.diaz@velir.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "19d08508-121b-47eb-9b89-41af2ae656fe"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "c202067e-7fab-4606-afb4-e76df2185ddc"
+      Hint: Name
+      Value: Solterra and Co
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250714T142836Z
