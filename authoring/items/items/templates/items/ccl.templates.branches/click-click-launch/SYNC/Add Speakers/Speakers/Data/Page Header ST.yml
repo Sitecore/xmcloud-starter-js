@@ -1,0 +1,41 @@
+﻿---
+ID: "5032d0f5-9963-4119-abbe-972ba1f76e4e"
+Parent: "90c23524-91f2-4490-b3b3-ccc3d60de31c"
+Template: "c2dc5c8b-6b22-4bb3-bdc5-01bfc65e3c53"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Data/Page Header ST"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250523T084706Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5d401e5c-69f7-474c-bc48-e06bc605cc3e"
+      Hint: Title
+      Value: Speakers
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "7d194ad0-6492-4268-936e-01f6aaafe544"
+      Hint: Image
+      Value: |
+        <image mediaid="ec7bc58a-207d-4155-b82c-e78d9bfaea0d" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "84ed0325-30fd-449b-84b7-be88198b15a1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T153959Z
+    - ID: "eb9851b1-2695-4f12-996f-c27bb30e564a"
+      Hint: Body
+      Value: "High-fidelity audio. Amp up everything you hear."

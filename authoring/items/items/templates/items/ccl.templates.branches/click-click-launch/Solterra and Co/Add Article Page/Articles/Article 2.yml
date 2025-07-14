@@ -1,0 +1,67 @@
+﻿---
+ID: "3bb25302-a6e6-4098-83fc-c24cf78cd748"
+Parent: "39a4de41-b99f-4781-8a38-bc77b726443b"
+Template: "b0602368-f67c-433c-8700-862d480546d0"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Articles/Article 2"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{AFFC9D80-F17B-4F6A-9629-5233227D7324}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0363d63b-6661-4e9f-96a8-ce8c2f8b7c68"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: |
+        Lorem Ipsum Dolor Sur AmerLorem Ipsum Dolor Sur AmerLorem Ipsum Dolor Sur Amer
+        Lorem Ipsum Dolor Sur AmerLorem Ipsum Dolor Sur AmerLorem Ipsum Dolor Sur Amer
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250407T194602Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Article 2
+    - ID: "288c11f5-7457-4e7f-880a-a76a98a0e296"
+      Hint: taxAuthor
+      Value: "{321F0377-72F9-4EA5-A03D-094FDBB4D7E0}"
+    - ID: "2fcae033-cf44-4b77-b8ad-91f41b56cb1c"
+      Hint: pageDisplayDate
+      Value: 20250407T000000Z
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Article 2
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: 
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Article 2
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c34efac8-d9dd-4cf8-a422-4702347d4084"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Article 2
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T144333Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Article 2
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: |
+        <image mediaid="745f2952-91d5-44eb-9f9c-cafe306b0b76" />

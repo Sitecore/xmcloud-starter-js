@@ -1,0 +1,49 @@
+﻿---
+ID: "a3776d3b-08c5-4b11-a01a-c3e745b76ea5"
+Parent: "21edadcb-96ca-4a5b-8a90-21ab0afe9cb6"
+Template: "bd372d9d-6e4f-4ae9-a54c-dbc2acdebe2a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Animated Promo"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250410T135035Z
+    - ID: "3a2a1142-68ca-4f5b-afb0-c17d2c0ef8ea"
+      Hint: secondaryLink
+      Value: |
+        <link class="" querystring="" id="6b210487-0aac-4feb-a8af-9d78ab573c0f" anchor="" target="" title="" linktype="internal" text="View All Reports" url="/click-click-launch/Demo A/Home" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sydney.hermanson@velir.com
+    - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
+      Hint: image
+      Value: |
+        <image mediaid="2ad901a3-2709-4e68-a1f2-4f583ee5637f" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "aa8a94ba-4c8a-44c7-aa5e-77f8e15a2bdb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "c00d4bd2-a452-4067-a861-e8c6d47201a7"
+      Hint: description
+      Value: "Stay in the loop with our Green Horizon newsletter, where we deliver bite-sized insights into the latest green energy solutions."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103700Z
+    - ID: "da7db0f2-08eb-47c5-af07-ed12a1e998db"
+      Hint: title
+      Value: Solterra & Co. 2024 Annual Report
+    - ID: "e9e9c847-e0f0-497d-8e41-5211a087029a"
+      Hint: primaryLink
+      Value: |
+        <link class="" querystring="" id="0e8032b7-e017-42e5-84db-61fda4e1b92f" anchor="" target="" title="" linktype="internal" text="Read the Report" url="/click-click-launch/Demo A/Home/Article Page" />

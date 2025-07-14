@@ -1,0 +1,116 @@
+﻿---
+ID: "c6e8b6f6-e9c3-4205-a769-7ac1e9711e3d"
+Parent: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+Template: "b0602368-f67c-433c-8700-862d480546d0"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Article Page"
+SharedFields:
+- ID: "4a749557-242b-4372-8a20-b2db9d406301"
+  Hint: __AutoThumbnails
+  Value: 1
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{78B4A32D-E814-49AC-816A-0F1D722D7DA1}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6215d964-7ae5-485c-b868-060574734a8e"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{1E24F50F-ECAD-4925-B028-654B93A1652E}"
+              p:before="*"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor&amp;excludeTopMargin=1&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{75B94739-C82C-4BEC-978D-C2811C31B09A}"
+              p:after="r[@uid='{1E24F50F-ECAD-4925-B028-654B93A1652E}']"
+              s:ds=""
+              s:id="{3F9CCCB1-7BD7-4245-A3E9-91ED43575D98}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=4&amp;Styles=%7B417CFF95-A3B6-4A1D-B10A-D41D449CE5FA%7D%7C%7BAE80F34C-96EF-4B45-8028-78EE7FB5B559%7D%7C%7BEF966498-A54E-44F1-80B4-917F0535B239%7D"
+              s:ph="headless-main" />
+            <r
+              uid="{E3602665-E6C8-4A63-B397-C4A4BD09DD59}"
+              p:after="r[@uid='{75B94739-C82C-4BEC-978D-C2811C31B09A}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor=secondary&amp;excludeTopMargin&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="headless-main" />
+            <r
+              uid="{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}"
+              p:after="r[@uid='{E3602665-E6C8-4A63-B397-C4A4BD09DD59}']"
+              s:ds="local:/Data/Article Header"
+              s:id="{DD6C6E80-1458-4276-B753-001691C8841C}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/container-fullbleed-2" />
+            <r
+              uid="{D61AB6FE-6379-4953-B42A-797F650313EE}"
+              p:after="r[@uid='{EE5191AB-D41F-4FD4-A46D-3DB95BA6EBA2}']"
+              s:ds="local:/Data/Text 1"
+              s:id="{50B36874-8C4E-4958-9DD6-8B95C6AFD09A}"
+              s:par="CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="/headless-main/container-seventy-4" />
+            <r
+              uid="{D5047C48-4899-4E9B-AC74-3D047C742DD4}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/CTA Banner"
+              s:id="{3332F59B-F5F3-44DF-B66E-2811C31AEB3C}"
+              s:par="colorScheme&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="/headless-main/container-fullbleed-6" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250326T150600Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Article Page
+    - ID: "288c11f5-7457-4e7f-880a-a76a98a0e296"
+      Hint: taxAuthor
+      Value: "{321F0377-72F9-4EA5-A03D-094FDBB4D7E0}"
+    - ID: "2fcae033-cf44-4b77-b8ad-91f41b56cb1c"
+      Hint: pageDisplayDate
+      Value: 20250410T000000Z
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Article Page
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: 
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Article Page
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "921f078e-fce3-4831-8716-25d76cc8e10d"
+    - ID: "afd3e865-f6ac-4485-95f2-cae591dd8f0a"
+      Hint: pageReadTime
+      Value: 12 min read
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: "Sustainability Meets Luxury: Solterra & Co.’s Bold Vision for Beauty and Wellness"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T144222Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Article Page

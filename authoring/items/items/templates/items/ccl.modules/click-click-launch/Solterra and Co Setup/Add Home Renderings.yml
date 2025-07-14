@@ -1,0 +1,44 @@
+﻿---
+ID: "9f6d69e3-7b79-4eea-82a7-58fd683a4e98"
+Parent: "e243bdaa-ae7a-41da-a183-cb25ec90f8c3"
+Template: "bc9bb684-36df-4285-888b-d8b4d87b10de"
+Path: "/sitecore/system/Settings/Project/click-click-launch/Solterra and Co Setup/Add Home Renderings"
+SharedFields:
+- ID: "51bae6c9-5808-423c-8c0f-bebd884b256d"
+  Hint: ValidationScript
+  Value: 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "c0a5bd91-e658-46ce-b631-77ce337d8e6e"
+  Hint: Script
+  Value: "{EF9B8D7D-D8E4-4201-80C9-F6F640BA5DD2}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "190fceed-8c80-429d-a0f1-b5d2fc382b2a"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250529T165636Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "331329ba-e1ba-45a7-a2c4-6121c6764ec8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250625T112309Z

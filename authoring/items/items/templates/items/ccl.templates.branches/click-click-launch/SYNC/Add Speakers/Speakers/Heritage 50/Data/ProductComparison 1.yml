@@ -1,0 +1,40 @@
+﻿---
+ID: "b490b0de-b382-44b0-8cbe-c39b3fe930ff"
+Parent: "e64090a1-1c48-489a-918c-b5e6d04158a7"
+Template: "6589a92d-1e47-457d-8cc1-d37d5868b89d"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Heritage 50/Data/ProductComparison 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "00c102cf-9cbd-47da-a91f-918e59ab2e73"
+      Hint: Title
+      Value: "Which speaker is right for you?"
+    - ID: "0258696b-45ce-4a68-9a9d-1eda3a543f54"
+      Hint: Products
+      Value: |
+        {3B3A5E12-1320-4073-B8C8-B3DFC83FC71F}
+        {2FAB4E35-5B58-435F-9EE1-41B7869B812F}
+        {4A81762C-0A1C-4FA6-9F15-E39786057676}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250604T083752Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5ad2afc1-bfef-4387-9d35-511f29ecd58e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T171148Z

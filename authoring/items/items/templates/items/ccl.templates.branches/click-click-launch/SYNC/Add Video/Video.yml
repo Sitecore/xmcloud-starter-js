@@ -1,0 +1,62 @@
+﻿---
+ID: "e7605ebd-725e-4872-addf-005de5aff236"
+Parent: "24b3fe6e-1a28-41d6-afb0-1e9d895d5d4e"
+Template: "ac9de9be-8e86-4147-8fbc-739d5560408b"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Video/Video"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{B02B8102-675A-4B05-99F3-74BD1A9B7BF0}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{BF552624-08EE-4A07-ACE4-FD1E92496A54}"
+              p:before="*"
+              s:ds="local:/Data/Video 1"
+              s:id="{7CB831E8-C889-4193-B822-A1131CB0B755}"
+              s:par="CSSStyles&amp;useModal&amp;darkPlayIcon&amp;displayIcon&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{EDA665C6-F728-4AD0-BC36-8F58E3769D4F}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Video 1"
+              s:id="{7CB831E8-C889-4193-B822-A1131CB0B755}"
+              s:par="darkPlayIcon=1&amp;useModal=1&amp;displayIcon&amp;CSSStyles&amp;DynamicPlaceholderId=2&amp;FieldNames=%7B86C807BF-7183-4333-9E77-9C02FD58494B%7D"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250609T075840Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b48bc04a-500d-451f-bdd1-2b9194f98106"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250612T083635Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Video

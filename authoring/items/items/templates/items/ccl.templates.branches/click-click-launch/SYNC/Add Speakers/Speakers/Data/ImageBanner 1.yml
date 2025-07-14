@@ -1,0 +1,49 @@
+﻿---
+ID: "1dcd7425-7b3a-426b-86a4-4c9f59ef1ad8"
+Parent: "90c23524-91f2-4490-b3b3-ccc3d60de31c"
+Template: "b754cb40-d82d-46e5-b001-e7f4434fd399"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Data/ImageBanner 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250604T130657Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "87ac64e1-6130-4c85-b8ae-6f6a46a48ddb"
+      Hint: Body
+      Value: When Sync first started shaping the sound of music, our amps were proudly built in Georgia. Decades later, some of our most iconic amps are still crafted in the same factory.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2e8f5a3b-8e58-4b12-8174-e31fb46d11cc"
+    - ID: "8ecf2383-cc5b-4117-a28e-beaaa49f70e7"
+      Hint: Title
+      Value: Iconic design that stands apart
+    - ID: "9e31f586-d332-43a1-a3b6-794a0ce6f95d"
+      Hint: Image2
+      Value: |
+        <image mediaid="{F66FB7CE-5D21-402C-B51F-069CCD7CDCCD}" />
+    - ID: "a2f1b23d-31df-4913-a4ca-d1e2948f968a"
+      Hint: Image1
+      Value: |
+        <image mediaid="{E9A3ECD5-43E6-49DE-BA26-62875615879B}" />
+    - ID: "b8cc9165-bb12-446b-b4b2-3d40756ca79c"
+      Hint: Image3
+      Value: |
+        <image mediaid="{5DBB555A-F1B7-421C-8883-580F0DF163B3}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T154208Z

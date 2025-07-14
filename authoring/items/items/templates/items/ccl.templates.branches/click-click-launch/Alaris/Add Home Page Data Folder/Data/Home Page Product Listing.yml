@@ -1,0 +1,44 @@
+﻿---
+ID: "c64d5945-d116-4baa-9a11-e0a195ef3375"
+Parent: "1e124342-4c34-4af3-a980-a03d59bcb272"
+Template: "46d29149-02ab-4ef1-af37-e765e26a7e2f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Home Page Data Folder/Data/Home Page Product Listing"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250528T025226Z
+    - ID: "269bdf45-6360-4ad8-b9b6-10f211ac447d"
+      Hint: products
+      Value: |
+        {F90A3299-2AB8-4EE3-8975-730518AD625C}
+        {ECE71B91-9088-4837-8099-BE1A95963034}
+        {35076E69-5252-4C5C-9691-B2E8093BDACF}
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "68e40768-7ad2-482a-b366-f31397eb576e"
+      Hint: viewAllLink
+      Value: |
+        <link class="" querystring="" id="7d507f7b-015f-439b-9f08-f7ec4f81b1e8" anchor="" target="" title="Find a dealer and schedule a test drive today" linktype="internal" text="Find a Dealer" url="/click-click-launch/site-2/Home/Test Drive" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "03f4c78c-9a7e-4a92-bde3-e85ba6819170"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d5b23eab-5eda-481f-8aa5-f81df32cc446"
+      Hint: title
+      Value: "Which model is right for you?"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T025302Z

@@ -1,0 +1,47 @@
+﻿---
+ID: "b6b871ad-41ec-4abb-aeda-4f9b6ac3a14a"
+Parent: "93160d7b-a085-4129-946b-425d131e0657"
+Template: "3cb38973-6209-4407-b463-4b017e0467cd"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Partial Designs/Global/Header/Data/Header"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
+      Hint: SupportLink
+      Value: |
+        <link linktype="external" url="#" target="" text="Support" title="" class=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250612T092045Z
+    - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
+      Hint: SearchLink
+      Value: |
+        <link linktype="external" url="#" target="" class="" text="Search" title=""/>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "81209a76-ecf8-4185-9166-076f4b6a8987"
+      Hint: Logo
+      Value: |
+        <image mediaid="9b0311dc-f62f-4db5-bac3-0040bbfc7370" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9983d1d2-75bd-4cb6-86f7-1efd9dcbd704"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250616T124758Z
+    - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
+      Hint: CartLink
+      Value: |
+        <link linktype="external" url="#" target="" class="" text="Cart" title=""/>

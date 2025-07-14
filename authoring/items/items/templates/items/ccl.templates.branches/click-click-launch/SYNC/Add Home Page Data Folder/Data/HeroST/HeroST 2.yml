@@ -1,0 +1,53 @@
+﻿---
+ID: "ca1a4380-1b71-470a-9e47-2048e86d1062"
+Parent: "96372195-e899-4b63-a6a4-29bbe1ba94eb"
+Template: "c241957a-b7cc-4bdd-962f-bf8652ed595c"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Home Page Data Folder/Data/HeroST/HeroST 2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250527T072645Z
+    - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
+      Hint: Link2
+      Value: |
+        <link text="Buy" linktype="external" url="http://#" anchor="" target="" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "65a20063-e768-4f8f-9f12-3197e3b500ef"
+      Hint: Image1
+      Value: |
+        <image mediaid="da09b108-e628-4c8e-94a4-6824c0fe3d23" />
+    - ID: "83ea62a2-9b61-481e-9917-0914be85f124"
+      Hint: Title
+      Value: BRING THE PARTY WITH YOU.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6d831f8b-4e00-43db-bf26-73138c506b7c"
+    - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
+      Hint: Link1
+      Value: |
+        <link text="Learn more" linktype="external" url="http://#" anchor="" target="" />
+    - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
+      Hint: Eyebrow
+      Value: Highwire+
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250530T134453Z
+    - ID: "ed7e710b-3811-4fcf-a154-836bd33fac65"
+      Hint: Image2
+      Value: |
+        <image mediaid="{875CD263-10C9-4D28-9285-7022A4802CE7}" />

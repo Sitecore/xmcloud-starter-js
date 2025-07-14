@@ -1,0 +1,34 @@
+﻿---
+ID: "5f5c0856-830c-40cd-9cf9-2356b6fff54f"
+Parent: "b09b9593-d480-4304-9af2-69015aa54ae6"
+Template: "bf764c63-df4b-460f-bf87-b4f16733a4fd"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Heritage 10/Data/TextSlider 2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250529T032807Z
+    - ID: "2b15fe27-4f2c-460c-b332-a52ea0a446a5"
+      Hint: Text
+      Value: In the music
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "01c638e5-af28-4e96-a572-15d11319703f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250603T052422Z

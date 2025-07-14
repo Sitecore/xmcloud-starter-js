@@ -1,0 +1,41 @@
+﻿---
+ID: "419e6d70-a525-4306-be56-c1ea8520bc71"
+Parent: "8b80262d-8f54-43af-93fe-0b37719095fe"
+Template: "3766e92a-e97f-4118-91a0-06223312a461"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Partial Designs/Global/ProductContent/Data/SignupBanner 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250526T111145Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "580cbc2a-05d8-4d6a-a85c-a62a05281979"
+      Hint: Subheading
+      Value: Get 10% off your first purchase at Sync.com, plus enjoy early access to product launches, exclusive sales, and curated news delivered just for you.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\chamodi.samarawickrama@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5ac81ade-d50f-43f0-a5f2-1664a935f4a5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "bc100b18-3988-4d51-beb2-b1466c9d0e29"
+      Hint: Heading
+      Value: GET VIP ACCESS.
+    - ID: "c5e976c8-e0a2-4b7d-949f-2fa50e39f031"
+      Hint: Image
+      Value: |
+        <image mediaid="f810c913-9957-494b-a3e0-abaaa612d283" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T153821Z
