@@ -18,14 +18,14 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\dan.murphy@velir.com
+        sitecore\Admin
     - ID: "58d5ed64-d50a-4ea7-ba39-f5d2e98c7c3e"
       Hint: title
       Value: The edgy side of luxury.
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\dan.murphy@velir.com
+        sitecore\Admin
     - ID: "69a878be-bdf4-4509-a304-238b0a24bac4"
       Hint: image4
       Value: |
@@ -47,7 +47,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\dan.murphy@velir.com
+        sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20250325T150440Z

@@ -6,15 +6,6 @@ import { LogoItem } from './LogoItem';
 import { EditableButton as Button } from '@/components/button-component/ButtonComponent';
 import { cn } from '@/lib/utils';
 
-{
-  /* 
-    Jira Ticket Information:
-    - Key: SCDS-63
-    - Summary: Logo Tabs
-    - URL: https://velir.atlassian.net/browse/SCDS-63
-  */
-}
-
 export const Default: React.FC<LogoTabsProps> = ({ fields, isPageEditing: propIsPageEditing }) => {
   const { pageContext } = useSitecore();
   const isPageEditing = propIsPageEditing || pageContext?.pageEditing || false;

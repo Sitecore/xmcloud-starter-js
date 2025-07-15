@@ -25,14 +25,14 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\alex.jackson@velir.com
+        sitecore\Admin
     - ID: "58b4e062-1aab-4b9a-aff9-3e60f941a03e"
       Hint: backgroundText
       Value: Alaris
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\dan.murphy@velir.com
+        sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "fd7130cf-5ac8-45ac-a026-bf9b3f7db9c3"

@@ -98,14 +98,14 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\dylan.young@velir.com
+        sitecore\Admin
     - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
       Hint: pageTitle
       Value: Alaris Nexa
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\dylan.young@velir.com
+        sitecore\Admin
     - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
       Hint: ogImage
       Value: |

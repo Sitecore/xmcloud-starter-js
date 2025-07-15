@@ -33,11 +33,11 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "6ddc5fdf-e0fa-475a-9044-73da5ba78fb6"
       Hint: heroVideoOptional4
       Value: 

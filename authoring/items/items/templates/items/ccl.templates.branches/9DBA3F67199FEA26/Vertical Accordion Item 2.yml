@@ -25,14 +25,14 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "57b7cdd6-1dbb-4e0f-9df0-6cccb20444c6"
       Hint: descriptionOptional
       Value: "Driven by innovation and performance, our Move division is dedicated to redefining athletic excellence with cutting-edge gear designed for strength, speed, and endurance."
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\sydney.hermanson@velir.com
+        sitecore\Admin
     - ID: "6ef0efde-7773-4786-af78-860ff2f4eeac"
       Hint: titleRequired
       Value: Solterra Move

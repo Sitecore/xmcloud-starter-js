@@ -7,14 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ButtonBase as Button } from '@/components/button-component/ButtonComponent';
 import { ComponentProps } from '@/lib/component-props';
 
-{
-  /* 
-    Jira Ticket Information:
-    - Key: SCDS-64
-    - Summary: Vertical Image Accordion
-    - URL: https://velir.atlassian.net/browse/SCDS-64
-  */
-}
 interface VerticalImageAccordionParams {
   [key: string]: any; // eslint-disable-line
 }
