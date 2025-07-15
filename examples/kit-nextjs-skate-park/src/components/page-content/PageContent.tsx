@@ -15,10 +15,10 @@ type PageContentProps = ComponentProps & {
 };
 
 export const Default = ({ params, fields }: PageContentProps): JSX.Element => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
   const { styles, RenderingIdentifier: id } = params;
 
-  const field = fields?.Content ?? (pageContext?.route?.fields?.Content as RichTextField);
+  const field = fields?.Content ?? (page.layout?.sitecore.route?.fields?.Content as RichTextField);
 
   return (
     <div className={`component content ${styles}`} id={id}>
