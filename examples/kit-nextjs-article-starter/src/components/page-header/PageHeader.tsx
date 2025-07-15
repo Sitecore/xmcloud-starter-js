@@ -29,9 +29,9 @@ export const Default: React.FC<PageHeaderProps> = ({ fields, params }) => {
   const subtitle = pageSubtitle?.jsonValue;
 
   const { colorScheme = 'default', darkPlayIcon = '0' } = params;
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const isPageEditing = page?.mode.isEditing || false;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -98,6 +98,8 @@ export const Default: React.FC<PageHeaderProps> = ({ fields, params }) => {
       </section>
     );
   }
-
-  return <NoDataFallback componentName="PageHeader" />;
+  if (isPageEditing) {
+    return <NoDataFallback componentName="PageHeader" />;
+  }
+  return <></>;
 };

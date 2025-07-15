@@ -21,7 +21,7 @@ export const Default: React.FC<GlobalHeaderProps> = (props) => {
   const { logo, headerContact } = fields?.data?.item ?? {};
   const links = fields?.data?.item?.children?.results ?? [];
   const [isOpen, setIsOpen] = useState(false);
-  const pageEditing = useSitecore().pageContext?.pageEditing;
+  const pageEditing = useSitecore().page?.mode.isEditing;
 
   const [visible, setVisible] = useState(true);
   const [prevScrollY, setPrevScrollY] = useState(0);

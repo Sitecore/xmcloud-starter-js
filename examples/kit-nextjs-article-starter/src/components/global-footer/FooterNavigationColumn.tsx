@@ -21,8 +21,8 @@ import { useMatchMedia } from '@/hooks/use-match-media';
 export const Default: FC<FooterNavigationColumnProps> = (props) => {
   const { fields } = props;
   const { items, header } = fields.data?.datasource ?? {};
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode.isEditing || false;
 
   const accordionId = useId();
   const isMobile = useMatchMedia('(max-width: 767px)');

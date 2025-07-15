@@ -4,8 +4,8 @@ import { ButtonVariants } from '@/enumerations/ButtonStyle.enum';
 import { useSitecore, LinkField } from '@sitecore-content-sdk/nextjs';
 
 export const TopicItem: React.FC<TopicItemProps> = ({ link }) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode.isEditing;
 
   // Create an empty link for editing mode
   const emptyLink: LinkField = { value: { href: '#', text: 'Add link' } };
