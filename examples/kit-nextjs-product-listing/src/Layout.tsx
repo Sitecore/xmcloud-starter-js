@@ -129,7 +129,9 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
               <DesignLibrary {...layoutData} />
             ) : (
               <>
-                <header className={isPageEditing ? 'editing' : ''}>
+                <header
+                  className={`sticky ${isPageEditing ? 'lg:relative' : 'lg:fixed'} top-0 left-0 right-0 -mb-[38px] lg:mb-0 z-50`}
+                >
                   <div id="header">
                     {route && <Placeholder name="headless-header" rendering={route} />}
                   </div>
