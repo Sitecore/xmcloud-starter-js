@@ -21,8 +21,8 @@ export const Default: React.FC<MultiPromoProps> = (props) => {
   const [api, setApi] = useState<CarouselApi>();
   const [announcement, setAnnouncement] = useState('');
   const carouselRef = useRef<HTMLDivElement>(null);
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   // General slide handling
   useEffect(() => {
     if (!api) return;

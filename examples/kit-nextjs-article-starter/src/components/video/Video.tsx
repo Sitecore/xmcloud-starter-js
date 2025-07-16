@@ -67,8 +67,8 @@ export const VideoBase: React.FC<VideoComponentFields> = (props) => {
     }
   }, [componentRef, videoId, image]);
 
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return !videoUrl ? (
     <p className="bg-secondary flex aspect-video items-center justify-center border">

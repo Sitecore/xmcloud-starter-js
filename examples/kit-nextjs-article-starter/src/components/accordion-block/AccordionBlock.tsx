@@ -7,8 +7,8 @@ import { AccordionBlockDefault } from './AccordionBlockDefault.dev';
 
 // Default display of the component
 export const Default: React.FC<AccordionProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return <AccordionBlockDefault {...props} isPageEditing={isPageEditing} />;
 };
