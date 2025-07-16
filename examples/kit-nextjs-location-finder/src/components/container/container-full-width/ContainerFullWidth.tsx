@@ -6,9 +6,9 @@ import { cn } from '@/lib/utils';
 export const Default: React.FC<ContainerFullWidthProps> = (props) => {
   const { rendering, children } = props;
 
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
-  const isPageEditing = pageContext?.pageEditing ?? false;
   const PLACEHOLDER_FRAGMENT = 'container-fullwidth';
   const PLACEHOLDER_NAME = `${PLACEHOLDER_FRAGMENT}-${props.params.DynamicPlaceholderId}`;
   const isEmptyPlaceholder =
@@ -17,7 +17,7 @@ export const Default: React.FC<ContainerFullWidthProps> = (props) => {
       rendering?.placeholders?.[`${PLACEHOLDER_FRAGMENT}-{*}`]
     ) && !children;
 
-  if (isEmptyPlaceholder && !isPageEditing) {
+  if (isEmptyPlaceholder && !isEditing) {
     return null;
   }
 

@@ -16,32 +16,32 @@ import { PageHeaderCentered } from './PageHeaderCentered.dev';
 
 // Default display of the component
 export const Default: React.FC<PageHeaderProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PageHeaderDefault {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PageHeaderDefault {...props} isPageEditing={isEditing} />;
 };
 
 // Variants
 export const BlueText: React.FC<PageHeaderProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PageHeaderBlueText {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PageHeaderBlueText {...props} isPageEditing={isEditing} />;
 };
 
 export const FiftyFifty: React.FC<PageHeaderProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PageHeaderFiftyFifty {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PageHeaderFiftyFifty {...props} isPageEditing={isEditing} />;
 };
 
 export const BlueBackground: React.FC<PageHeaderProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PageHeaderBlueBackground {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PageHeaderBlueBackground {...props} isPageEditing={isEditing} />;
 };
 
 export const Centered: React.FC<PageHeaderProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PageHeaderCentered {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PageHeaderCentered {...props} isPageEditing={isEditing} />;
 };

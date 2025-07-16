@@ -38,10 +38,12 @@ const ComponentContent = (props: ComponentContentProps) => {
 };
 
 export const Default = (props: PageContentProps): JSX.Element => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
+  const { layout } = page;
+  const routeFields = layout?.sitecore?.route?.fields;
   const id = props.params.RenderingIdentifier;
 
-  if (!(props.fields && props.fields.Content) && !pageContext?.route?.fields?.Content) {
+  if (!(props.fields && props.fields.Content) && !routeFields?.Content) {
     return (
       <div className={`component content ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
@@ -52,9 +54,7 @@ export const Default = (props: PageContentProps): JSX.Element => {
   }
 
   const field = (
-    props.fields && props.fields.Content
-      ? props.fields.Content
-      : pageContext?.route?.fields?.Content
+    props.fields && props.fields.Content ? props.fields.Content : routeFields?.Content
   ) as RichTextField;
 
   return (
@@ -65,17 +65,17 @@ export const Default = (props: PageContentProps): JSX.Element => {
 };
 
 export const TitleAndBody = (props: PageContentProps): JSX.Element => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
+  const { layout } = page;
+  const routeFields = layout?.sitecore?.route?.fields;
 
   const fields = {
     title:
-      props.fields && props.fields.Title
-        ? props.fields.Title
-        : (pageContext?.route?.fields?.Title as TextField),
+      props.fields && props.fields.Title ? props.fields.Title : (routeFields?.Title as TextField),
     body:
       props.fields && props.fields.Content
         ? props.fields.Content
-        : (pageContext?.route?.fields?.Content as RichTextField),
+        : (routeFields?.Content as RichTextField),
   };
   return (
     <section className="bg-brand-gray95 py-16">

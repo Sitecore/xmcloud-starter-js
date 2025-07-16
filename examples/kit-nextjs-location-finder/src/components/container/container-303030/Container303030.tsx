@@ -10,9 +10,9 @@ import { FlexItemProps } from 'components/flex/Flex.dev';
 export const Default: React.FC<Container303030Props> = (props) => {
   const { rendering, left, center, right } = props;
 
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
 
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { isEditing } = page.mode;
 
   const leftPlaceholder = getContainerPlaceholderProps('container-thirty-left', props.params);
   const centerPlaceholder = getContainerPlaceholderProps('container-thirty-center', props.params);
@@ -23,7 +23,7 @@ export const Default: React.FC<Container303030Props> = (props) => {
     isContainerPlaceholderEmpty(rendering, centerPlaceholder, center) &&
     isContainerPlaceholderEmpty(rendering, rightPlaceholder, right);
 
-  if (isEmptyPlaceholder && !isPageEditing) {
+  if (isEmptyPlaceholder && !isEditing) {
     return null;
   }
 

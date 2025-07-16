@@ -89,8 +89,8 @@ const ContactCardImage = (props: ContactCardImageProps) => {
 };
 
 const ContactCard = (props: ContactCardProps) => {
-  const { pageContext } = useSitecore();
-  const isEditing = pageContext.pageEditing;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
   const buttons = useMemo(
     () => (
