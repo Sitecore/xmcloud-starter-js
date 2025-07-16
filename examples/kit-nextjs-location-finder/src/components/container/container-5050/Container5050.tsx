@@ -10,9 +10,9 @@ import { cn } from '@/lib/utils';
 export const Default: React.FC<Container5050Props> = (props) => {
   const { rendering, left, right } = props;
 
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
 
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { isEditing } = page.mode;
 
   const leftPlaceholders = getContainerPlaceholderProps('container-fifty-left', props.params);
   const rightPlaceholders = getContainerPlaceholderProps('container-fifty-right', props.params);
@@ -21,7 +21,7 @@ export const Default: React.FC<Container5050Props> = (props) => {
     isContainerPlaceholderEmpty(rendering, leftPlaceholders, left) &&
     isContainerPlaceholderEmpty(rendering, rightPlaceholders, right);
 
-  if (isEmptyPlaceholder && !isPageEditing) {
+  if (isEmptyPlaceholder && !isEditing) {
     return null;
   }
 

@@ -11,37 +11,37 @@ import { ImageGalleryNoSpacing } from './ImageGalleryNoSpacing.dev';
 
 // Default display of the component
 export const Default: React.FC<ImageGalleryProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
-  return <ImageGalleryDefault {...props} isPageEditing={isPageEditing} />;
+  return <ImageGalleryDefault {...props} isPageEditing={isEditing} />;
 };
 
 // Variants
 export const FiftyFifty: React.FC<ImageGalleryProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
-  return <ImageGalleryFiftyFifty {...props} isPageEditing={isPageEditing} />;
+  return <ImageGalleryFiftyFifty {...props} isPageEditing={isEditing} />;
 };
 
 export const Grid: React.FC<ImageGalleryProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
-  return <ImageGalleryGrid {...props} isPageEditing={isPageEditing} />;
+  return <ImageGalleryGrid {...props} isPageEditing={isEditing} />;
 };
 
 export const FeaturedImage: React.FC<ImageGalleryProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
-  return <ImageGalleryFeaturedImage {...props} isPageEditing={isPageEditing} />;
+  return <ImageGalleryFeaturedImage {...props} isPageEditing={isEditing} />;
 };
 
 export const NoSpacing: React.FC<ImageGalleryProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
-  return <ImageGalleryNoSpacing {...props} isPageEditing={isPageEditing} />;
+  return <ImageGalleryNoSpacing {...props} isPageEditing={isEditing} />;
 };

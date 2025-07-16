@@ -11,32 +11,32 @@ import { ImageCarouselFeaturedImageLeft } from './ImageCarouselFeaturedImageLeft
 
 // Default display of the component
 export const Default: React.FC<ImageCarouselProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <ImageCarouselDefault {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <ImageCarouselDefault {...props} isPageEditing={isEditing} />;
 };
 
 // Variants
 export const LeftRightPreview: React.FC<ImageCarouselProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
-  return <ImageCarouselLeftRightPreview {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <ImageCarouselLeftRightPreview {...props} isPageEditing={isEditing} />;
 };
 
 export const FullBleed: React.FC<ImageCarouselProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
-  return <ImageCarouselFullBleed {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <ImageCarouselFullBleed {...props} isPageEditing={isEditing} />;
 };
 
 export const PreviewBelow: React.FC<ImageCarouselProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
-  return <ImageCarouselPreviewBelow {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <ImageCarouselPreviewBelow {...props} isPageEditing={isEditing} />;
 };
 
 export const FeaturedImageLeft: React.FC<ImageCarouselProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
-  return <ImageCarouselFeaturedImageLeft {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <ImageCarouselFeaturedImageLeft {...props} isPageEditing={isEditing} />;
 };

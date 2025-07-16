@@ -3,14 +3,7 @@
  */
 import React, { type JSX } from 'react';
 import Head from 'next/head';
-import {
-  Placeholder,
-  LayoutServiceData,
-  Field,
-  DesignLibrary,
-  RenderingType,
-  ImageField,
-} from '@sitecore-content-sdk/nextjs';
+import { Placeholder, Field, DesignLibrary, ImageField, Page } from '@sitecore-content-sdk/nextjs';
 import Scripts from 'src/Scripts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from '@/components/theme-provider/theme-provider.dev';
@@ -39,7 +32,7 @@ const body = Roboto({
 import SitecoreStyles from 'components/content-sdk/SitecoreStyles';
 
 interface LayoutProps {
-  layoutData: LayoutServiceData;
+  page: Page;
 }
 
 interface RouteFields {
@@ -55,10 +48,11 @@ interface RouteFields {
   thumbnailImage?: ImageField;
 }
 
-const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
-  const { route } = layoutData.sitecore;
+const Layout = ({ page }: LayoutProps): JSX.Element => {
+  const { layout } = page;
+  const { route } = layout.sitecore;
   const fields = route?.fields as RouteFields;
-  const isPageEditing = layoutData.sitecore.context.pageEditing;
+  const isPageEditing = page.mode.isEditing;
   const mainClassPageEditing = isPageEditing ? 'editing-mode' : 'prod-mode';
   const classNamesMain = `${mainClassPageEditing} ${body.variable} ${heading.variable} main-layout`;
 
@@ -81,7 +75,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   return (
     <>
       <Scripts />
-      <SitecoreStyles layoutData={layoutData} />
+      <SitecoreStyles layoutData={layout} />
       <Head>
         <link rel="preconnect" href="https://edge-platform.sitecorecloud.io" />
         <title>{metaTitle}</title>
@@ -101,8 +95,8 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
           disableTransitionOnChange
         >
           <div className={`min-h-screen flex flex-col ${classNamesMain}`}>
-            {layoutData.sitecore.context.renderingType === RenderingType.Component ? (
-              <DesignLibrary {...layoutData} />
+            {page.mode.isDesignLibrary ? (
+              <DesignLibrary />
             ) : (
               <>
                 <header>

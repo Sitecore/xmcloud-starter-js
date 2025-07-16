@@ -11,27 +11,27 @@ import { LocationSearchTitleZipCentered } from './LocationSearchTitleZipCentered
 // Default display of the component
 
 export const Default: React.FC<LocationSearchProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <LocationSearchDefault {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <LocationSearchDefault {...props} isPageEditing={isEditing} />;
 };
 export const MapRight: React.FC<LocationSearchProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <LocationSearchMapRight {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <LocationSearchMapRight {...props} isPageEditing={isEditing} />;
 };
 export const MapTopAllCentered: React.FC<LocationSearchProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <LocationSearchMapTopAllCentered {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <LocationSearchMapTopAllCentered {...props} isPageEditing={isEditing} />;
 };
 export const MapRightTitleZipCentered: React.FC<LocationSearchProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <LocationSearchMapRightTitleZipCentered {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <LocationSearchMapRightTitleZipCentered {...props} isPageEditing={isEditing} />;
 };
 export const MapLeftTitleZipCentered: React.FC<LocationSearchProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <LocationSearchTitleZipCentered {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <LocationSearchTitleZipCentered {...props} isPageEditing={isEditing} />;
 };

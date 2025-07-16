@@ -10,32 +10,32 @@ import { PromoTitlePartialOverlay } from './PromoImageTitlePartialOverlay.dev';
 
 // Default display of the component
 export const Default: React.FC<PromoImageProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PromoImageDefault {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PromoImageDefault {...props} isPageEditing={isEditing} />;
 };
 
 // Variants
 export const ImageLeft: React.FC<PromoImageProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PromoImageLeft {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PromoImageLeft {...props} isPageEditing={isEditing} />;
 };
 
 export const ImageRight: React.FC<PromoImageProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PromoImageRight {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PromoImageRight {...props} isPageEditing={isEditing} />;
 };
 
 export const ImageMiddle: React.FC<PromoImageProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PromoImageMiddle {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PromoImageMiddle {...props} isPageEditing={isEditing} />;
 };
 
 export const TitlePartialOverlay: React.FC<PromoImageProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  return <PromoTitlePartialOverlay {...props} isPageEditing={isPageEditing} />;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  return <PromoTitlePartialOverlay {...props} isPageEditing={isEditing} />;
 };

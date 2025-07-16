@@ -1,5 +1,5 @@
 import { LinkField, Field, ImageField } from '@sitecore-content-sdk/nextjs';
-import { GraphQLRequestClient } from '@sitecore-content-sdk/react';
+import { GraphQLRequestClient } from '@sitecore-content-sdk/nextjs/client';
 import scConfig from 'sitecore.config';
 import * as R from 'ramda';
 

@@ -1,29 +1,28 @@
-import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { ComponentRendering, Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
 import {
   getContainerPlaceholderProps,
   isContainerPlaceholderEmpty,
 } from '@/components/container/container.util';
 import { cn } from '@/lib/utils';
-import { PlaceholderProps } from '@sitecore-content-sdk/react/types/components/PlaceholderCommon';
 import { ComponentProps } from '@/lib/component-props';
 
 import type { JSX } from 'react';
 
-export type Container25252525Props = ComponentProps &
-  PlaceholderProps & {
-    col1?: JSX.Element;
-    col2?: JSX.Element;
-    col3?: JSX.Element;
-    col4?: JSX.Element;
-    children: Element;
-  };
+export type Container25252525Props = ComponentProps & {
+  rendering: ComponentRendering;
+  col1?: JSX.Element;
+  col2?: JSX.Element;
+  col3?: JSX.Element;
+  col4?: JSX.Element;
+  children: Element;
+};
 
 export const Default: React.FC<Container25252525Props> = (props) => {
   const { rendering, col1, col2, col3, col4 } = props;
 
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
 
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { isEditing } = page.mode;
 
   const col1Placeholder = getContainerPlaceholderProps('container-25-one', props.params);
   const col2Placeholder = getContainerPlaceholderProps('container-25-two', props.params);
@@ -36,7 +35,7 @@ export const Default: React.FC<Container25252525Props> = (props) => {
     isContainerPlaceholderEmpty(rendering, col3Placeholder, col3) &&
     isContainerPlaceholderEmpty(rendering, col4Placeholder, col4);
 
-  if (isEmptyPlaceholder && !isPageEditing) {
+  if (isEmptyPlaceholder && !isEditing) {
     return null;
   }
 

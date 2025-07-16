@@ -6,9 +6,8 @@ import { cn } from '@/lib/utils';
 export const Default: React.FC<Container70Props> = (props) => {
   const { rendering, children } = props;
 
-  const { pageContext } = useSitecore();
-
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
   const PLACEHOLDER_FRAGMENT = 'container-seventy';
   const PLACEHOLDER_NAME = `${PLACEHOLDER_FRAGMENT}-${props.params.DynamicPlaceholderId}`;
@@ -18,7 +17,7 @@ export const Default: React.FC<Container70Props> = (props) => {
       rendering?.placeholders?.[`${PLACEHOLDER_FRAGMENT}-{*}`]
     ) && !children;
 
-  if (isEmptyPlaceholder && !isPageEditing) {
+  if (isEmptyPlaceholder && !isEditing) {
     return null;
   }
 

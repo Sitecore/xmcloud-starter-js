@@ -1,5 +1,4 @@
-import { Text as JssText, Placeholder } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@sitecore-content-sdk/react/types/components/PlaceholderCommon';
+import { ComponentRendering, Text as JssText, Placeholder } from '@sitecore-content-sdk/nextjs';
 import { useMemo, type JSX } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from 'shadcd/components/ui/tabs';
 import { IGQLTextField } from 'types/igql';
@@ -17,7 +16,8 @@ type Fields = {
   };
 };
 
-type PlaceholderTabsProps = ComponentProps & {
+type PlaceholderTabsProps = {
+  rendering: ComponentRendering;
   params: { [key: string]: string };
   fields: Fields;
 };

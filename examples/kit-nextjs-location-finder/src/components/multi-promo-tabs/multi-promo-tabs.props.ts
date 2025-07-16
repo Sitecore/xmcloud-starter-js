@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
-import { PlaceholderProps } from '@sitecore-content-sdk/react/types/components/PlaceholderCommon';
 import { ComponentProps } from '@/lib/component-props';
 
 interface MultiPromoTabsParams {
@@ -31,4 +30,4 @@ export interface MultiPromoTabsProps extends ComponentProps {
   };
 }
 
-export type MultiPromoItemProps = ComponentProps & PlaceholderProps & MultiPromoTabsFields;
+export type MultiPromoItemProps = ComponentProps & MultiPromoTabsFields;
