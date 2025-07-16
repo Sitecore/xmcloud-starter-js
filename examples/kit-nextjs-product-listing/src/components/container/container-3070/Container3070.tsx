@@ -10,9 +10,9 @@ import { cn } from '@/lib/utils';
 export const Default: React.FC<Container3070Props> = (props) => {
   const { rendering, left, right } = props;
 
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
 
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const isPageEditing = page.mode.isEditing;
 
   const leftPlaceholders = getContainerPlaceholderProps('container-thirty-left', props.params);
   const rightPlaceholders = getContainerPlaceholderProps('container-seventy-right', props.params);

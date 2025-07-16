@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { SitecoreProvider, ErrorPages, SitecorePageProps } from '@sitecore-content-sdk/nextjs';
+import { SitecoreProvider, SitecorePageProps, Page, ErrorPage } from '@sitecore-content-sdk/nextjs';
 import Layout from 'src/Layout';
 import { GetStaticProps } from 'next';
 import scConfig from 'sitecore.config';
@@ -25,23 +25,23 @@ const ServerError = (): JSX.Element => (
 );
 
 const Custom500 = (props: SitecorePageProps): JSX.Element => {
-  if (!(props && props.layout)) {
+  if (!(props && props.page)) {
     return <ServerError />;
   }
 
   return (
-    <SitecoreProvider api={scConfig.api} componentMap={components} layoutData={props.layout}>
-      <Layout layoutData={props.layout} />
+    <SitecoreProvider api={scConfig.api} componentMap={components} page={props.page}>
+      <Layout page={props.page} />
     </SitecoreProvider>
   );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  let resultErrorPages: ErrorPages | null = null;
+  let page: Page | null = null;
 
-  if (process.env.DISABLE_SSG_FETCH?.toLowerCase() !== 'true') {
+  if (scConfig.generateStaticPaths) {
     try {
-      resultErrorPages = await client.getErrorPages({
+      page = await client.getErrorPage(ErrorPage.InternalServerError, {
         site: scConfig.defaultSite,
         locale: context.locale || context.defaultLocale || scConfig.defaultLanguage,
       });
@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      layout: resultErrorPages?.serverErrorPage?.rendered || null,
+      page,
     },
   };
 };
