@@ -3,14 +3,7 @@
  */
 import React, { type JSX } from 'react';
 import Head from 'next/head';
-import {
-  Placeholder,
-  LayoutServiceData,
-  Field,
-  DesignLibrary,
-  RenderingType,
-  ImageField,
-} from '@sitecore-content-sdk/nextjs';
+import { Placeholder, Field, DesignLibrary, ImageField, Page } from '@sitecore-content-sdk/nextjs';
 import Scripts from 'src/Scripts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from '@/components/theme-provider/theme-provider.dev';
@@ -60,7 +53,7 @@ const accent = IBM_Plex_Mono({
 import SitecoreStyles from 'components/content-sdk/SitecoreStyles';
 
 interface LayoutProps {
-  layoutData: LayoutServiceData;
+  page: Page;
 }
 
 interface RouteFields {
@@ -76,13 +69,14 @@ interface RouteFields {
   thumbnailImage?: ImageField;
 }
 
-const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
-  const { route } = layoutData.sitecore;
+const Layout = ({ page }: LayoutProps): JSX.Element => {
+  const { layout } = page;
+  const { route } = layout.sitecore;
   const fields = route?.fields as RouteFields;
-  const isPageEditing = layoutData.sitecore.context.pageEditing;
+  const { isEditing } = page.mode;
   const isPartialDesignEditing = route?.templateName === 'Partial Design';
   const mainClassPartialDesignEditing = isPartialDesignEditing ? 'partial-editing-mode' : '';
-  const mainClassPageEditing = isPageEditing ? 'editing-mode' : 'prod-mode';
+  const mainClassPageEditing = isEditing ? 'editing-mode' : 'prod-mode';
   const classNamesMain = `${mainClassPageEditing} ${mainClassPartialDesignEditing} ${accent.variable} ${body.variable} ${heading.variable} main-layout`;
 
   const metaTitle =
@@ -104,7 +98,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   return (
     <>
       <Scripts />
-      <SitecoreStyles layoutData={layoutData} />
+      <SitecoreStyles layoutData={layout} />
       <Head>
         <link rel="preconnect" href="https://edge-platform.sitecorecloud.io" />
         <title>{metaTitle}</title>
@@ -125,12 +119,12 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
           disableTransitionOnChange
         >
           <div className={`min-h-screen flex flex-col ${classNamesMain}`}>
-            {layoutData.sitecore.context.renderingType === RenderingType.Component ? (
-              <DesignLibrary {...layoutData} />
+            {page.mode.isDesignLibrary ? (
+              <DesignLibrary />
             ) : (
               <>
                 <header
-                  className={`sticky ${isPageEditing ? 'lg:relative' : 'lg:fixed'} top-0 left-0 right-0 -mb-[38px] lg:mb-0 z-50`}
+                  className={`sticky ${isEditing ? 'lg:relative' : 'lg:fixed'} top-0 left-0 right-0 -mb-[38px] lg:mb-0 z-50`}
                 >
                   <div id="header">
                     {route && <Placeholder name="headless-header" rendering={route} />}

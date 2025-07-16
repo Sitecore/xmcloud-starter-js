@@ -30,8 +30,8 @@ const ImageDefault = (props: ImageProps): JSX.Element => (
 
 export const Banner = (props: ImageProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const classHeroBannerEmpty =
     isPageEditing && props.fields?.Image?.value?.class === 'scEmptyImage'
       ? 'hero-banner-empty'
@@ -53,14 +53,15 @@ export const Banner = (props: ImageProps): JSX.Element => {
       id={id ? id : undefined}
     >
       <div className="component-content sc-sxa-image-hero-banner" style={backgroundStyle}>
-        {pageContext.pageEditing ? <JssImage field={modifyImageProps} /> : ''}
+        {isPageEditing ? <JssImage field={modifyImageProps} /> : ''}
       </div>
     </div>
   );
 };
 
 export const Default = (props: ImageProps): JSX.Element => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   if (props.fields) {
     const Image = () => <JssImage field={props.fields.Image} />;
@@ -69,7 +70,7 @@ export const Default = (props: ImageProps): JSX.Element => {
     return (
       <div className={`component image ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
-          {pageContext.pageState === 'edit' || !props.fields.TargetUrl?.value?.href ? (
+          {isPageEditing || !props.fields.TargetUrl?.value?.href ? (
             <Image />
           ) : (
             <JssLink field={props.fields.TargetUrl}>

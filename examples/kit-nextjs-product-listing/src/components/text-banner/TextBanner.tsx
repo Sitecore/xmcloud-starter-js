@@ -10,32 +10,32 @@ import { TextBanner02 as TextBannerVariant02 } from './TextBanner02.dev';
 
 // Default display of the component
 export const Default: React.FC<TextBannerProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   return <TextBannerDefault {...props} isPageEditing={isPageEditing} />;
 };
 
 // Variants
 export const TextBanner01: React.FC<TextBannerProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   return <TextBannerVariant01 {...props} isPageEditing={isPageEditing} />;
 };
 
 export const TextBanner02: React.FC<TextBannerProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   return <TextBannerVariant02 {...props} isPageEditing={isPageEditing} />;
 };
 
 export const TextTop: React.FC<TextBannerProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   return <TextBannerTextTop {...props} isPageEditing={isPageEditing} />;
 };
 
 export const BlueTitleRight: React.FC<TextBannerProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ? pageContext?.pageEditing : false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   return <TextBannerBlueTitleRight {...props} isPageEditing={isPageEditing} />;
 };
