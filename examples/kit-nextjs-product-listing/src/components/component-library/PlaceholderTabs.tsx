@@ -1,5 +1,5 @@
 import { Text as JssText, Placeholder } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@sitecore-content-sdk/react/types/components/PlaceholderCommon';
+import { ComponentProps } from 'lib/component-props';
 import { useMemo, type JSX } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from 'shadcd/components/ui/tabs';
 import { IGQLTextField } from 'types/igql';

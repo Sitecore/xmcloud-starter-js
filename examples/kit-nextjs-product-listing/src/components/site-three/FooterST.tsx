@@ -9,7 +9,7 @@ import {
   LinkField,
   Placeholder,
 } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@sitecore-content-sdk/react/types/components/PlaceholderCommon';
+import { ComponentProps } from 'lib/component-props';
 
 interface Fields {
   Title: Field<string>;

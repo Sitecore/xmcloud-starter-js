@@ -10,7 +10,7 @@ import {
   Field,
   ImageField,
 } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@sitecore-content-sdk/react/types/components/PlaceholderCommon';
+import { ComponentProps } from 'lib/component-props';
 import { ArrowLeft } from 'lucide-react';
 import { useI18n } from 'next-localization';
 import Link from 'next/link';
