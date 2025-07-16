@@ -1,7 +1,7 @@
 {
   "name": "kit-nextjs-product-starter",
   "description": "Application utilizing Sitecore JavaScript Services and Next.js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "config": {
     "appName": "kit-nextjs-product-starter",
