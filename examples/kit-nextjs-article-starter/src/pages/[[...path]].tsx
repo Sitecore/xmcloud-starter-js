@@ -86,7 +86,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
       : await client.getPage(path, { locale: context.locale });
   }
   if (page) {
-    props = { page };
+    props = {
+      page,
+      dictionary: await client.getDictionary({
+        site: page.siteName,
+        locale: page.locale,
+      }),
+      componentProps: await client.getComponentData(page.layout, context, components),
+    };
   }
   return {
     props,
