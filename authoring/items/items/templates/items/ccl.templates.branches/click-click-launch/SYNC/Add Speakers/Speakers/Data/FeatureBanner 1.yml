@@ -1,0 +1,39 @@
+﻿---
+ID: "8abf93fe-9d82-4d6b-9462-0726bbc14a36"
+Parent: "90c23524-91f2-4490-b3b3-ccc3d60de31c"
+Template: "0079bae6-9c74-4c6b-b52e-b46f5b3ce31d"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Data/FeatureBanner 1"
+BranchID: "bcc85ac0-60a3-413e-a0b3-3efebb0b0312"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{5956C1A0-D244-4D7F-8DD5-C466271CD51F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "08a1b8c3-cd5c-4d65-a3c9-da5a627c7b17"
+      Hint: title
+      Value: Feature Forward
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250602T131125Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8314ceda-0c42-4578-9549-4f26b47d6673"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\brandon.bruno@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T154522Z

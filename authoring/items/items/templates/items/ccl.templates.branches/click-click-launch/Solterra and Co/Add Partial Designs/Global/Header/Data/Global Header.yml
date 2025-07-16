@@ -1,0 +1,45 @@
+﻿---
+ID: "615185a5-8a93-4119-9e26-a8494a6a2135"
+Parent: "735a9d84-61be-47bc-b65f-d1b1b19ab95b"
+Template: "efd96479-7bf2-4be1-a08a-b01e59f92cdc"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Partial Designs/Global/Header/Data/Global Header"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250131T181609Z
+    - ID: "4da75bcf-390e-46fa-ad87-926ec4db0876"
+      Hint: headerLogo
+      Value: |
+        <image mediaid="{E732C884-8655-4A03-B8B0-F7EBA817E231}" alt="Logo" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "49e1479c-0211-4ec3-870d-30e415864bc5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250624T154332Z
+    - ID: "e3289100-a242-4fc7-814f-0ffef0ffe8bd"
+      Hint: headerContact
+      Value: |
+        <link class="" querystring="" id="900f400b-3ba6-45ba-a77b-7f79e118c64c" anchor="" target="" title="" linktype="internal" text="Get In Touch" url="/click-click-launch/Demo A/Home/Landing Page" />
+    - ID: "f073d52d-022c-4560-90c2-71fc674cf8bf"
+      Hint: primaryNavigationLinks
+      Value: |
+        {5E2EE404-D626-4173-9E3C-F3792442EDB0}
+        {2D319278-C4C4-4808-ABE9-CC48633D28E3}
+        {9365B042-0D8A-47B8-96E3-AAF0801AF2EB}

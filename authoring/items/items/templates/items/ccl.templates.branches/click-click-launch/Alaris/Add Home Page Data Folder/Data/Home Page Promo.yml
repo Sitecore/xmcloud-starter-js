@@ -1,0 +1,45 @@
+﻿---
+ID: "4acb22a7-5745-43da-aeb3-0cda0edb4980"
+Parent: "1e124342-4c34-4af3-a980-a03d59bcb272"
+Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Home Page Data Folder/Data/Home Page Promo"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250528T024931Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: "Powered by next-generation autonomous intelligence, Alaris adapts, learns, and perfects every route for a drive that feels intuitive and refined."
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: Precision in Every Journey
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image mediaid="2ffb9875-19b2-4764-ad76-c66ecb3a2fac" alt="Cool looking car" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7eed11b4-1dd7-4cdc-920a-ce5d884c7f0c"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: |
+        <link class="" querystring="" id="f90a3299-2ab8-4ee3-8975-730518ad625c" anchor="" target="" title="Schedule a Nexa test drive today" linktype="internal" text="Schedule a Test Drive" url="/click-click-launch/site-2/Home/Products/Nexa" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T025152Z

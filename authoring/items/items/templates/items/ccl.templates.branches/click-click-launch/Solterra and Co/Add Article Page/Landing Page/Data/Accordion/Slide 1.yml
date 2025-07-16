@@ -1,0 +1,43 @@
+﻿---
+ID: "c1d626f6-0371-4bdb-bbe9-9587e962cd4e"
+Parent: "88378a6d-8107-4730-a909-cdc6caa222a9"
+Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Accordion/Slide 1"
+BranchID: "cf2ad172-df62-4f0f-b90f-8241b4f1fd40"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{E1FB3C30-F5C7-4271-BCC8-0E74E907E391}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250410T135858Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: "Which brands are available in my country?"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b6cdf463-a81a-4689-ae8e-d7750f8c1d5b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250410T135936Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: |
+        <div class="ck-content"><p>Setting up an account is quick and easy! Simply visit our sign-up page, provide your basic information, and follow the guided setup process. Once registered, you’ll receive a confirmation email with next steps. Need help? Our support team is here to assist you!</p></div>

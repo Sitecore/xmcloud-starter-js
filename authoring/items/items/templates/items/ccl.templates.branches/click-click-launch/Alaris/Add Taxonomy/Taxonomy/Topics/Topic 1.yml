@@ -1,0 +1,31 @@
+﻿---
+ID: "5c011e36-b2e3-49e2-9b57-4373f34d6c11"
+Parent: "989d12e3-da5b-44b7-beb9-e6b69222c7e6"
+Template: "b26a9c54-47e8-4db1-9222-8d93f026d610"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Taxonomy/Taxonomy/Topics/Topic 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T170527Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b7af21e1-6df8-455d-864c-bfe12f0cd8cd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250321T170527Z

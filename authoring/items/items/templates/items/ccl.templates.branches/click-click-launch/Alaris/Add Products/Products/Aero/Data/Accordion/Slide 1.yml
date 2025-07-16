@@ -1,0 +1,48 @@
+﻿---
+ID: "5bfeea23-d434-4f40-8d7b-2878093c4d2e"
+Parent: "ea436823-93c5-44c5-8551-daf4d12bc72d"
+Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Aero/Data/Accordion/Slide 1"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ba1a9bb9-7b7f-497f-a439-59598d583b7f"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{E1FB3C30-F5C7-4271-BCC8-0E74E907E391}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250404T185150Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: Slide 1
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4dc6bb6e-3254-48bd-872e-568bf0b2b1d5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250404T185253Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: |
+        <div class="ck-content"><p>This is the beginning of accordion #1.</p><p>And then I'm going to add more.</p><p>&nbsp;</p><p>Just so you know, I want this to be a really long line of text and we'll see if this is something that can happen. Lalalalala. Site 2 for the Sitecore Demo project is pretty cool.</p></div>

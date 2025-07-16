@@ -1,0 +1,53 @@
+﻿---
+ID: "dcae7b76-5fee-4c5a-ab02-76bd47ad1d15"
+Parent: "36831519-8010-48cb-a866-7f68c1a7abf8"
+Template: "4eb24890-61ec-4283-8c61-c55a86d1fe2a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Nexa/Data/Image Gallery 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250324T130758Z
+    - ID: "45324e3c-4e19-41d7-9497-bdcde2228eb1"
+      Hint: image2
+      Value: |
+        <image mediaid="db422fcb-809b-43bd-b8bf-d3ea332feb98" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "58d5ed64-d50a-4ea7-ba39-f5d2e98c7c3e"
+      Hint: title
+      Value: The edgy side of luxury.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "69a878be-bdf4-4509-a304-238b0a24bac4"
+      Hint: image4
+      Value: |
+        <image mediaid="eee53e93-81b2-42c2-a943-bceb097c1368" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d1f1f9bd-e7b4-46a4-b123-bf322a8824e7"
+    - ID: "a5a74a19-c942-421c-9ff5-c3116fcffa0d"
+      Hint: image1
+      Value: |
+        <image mediaid="7d2baee6-8c25-4cce-bfe8-149e95de021d" />
+    - ID: "a7be6790-3f1a-43fc-94bb-302604c97081"
+      Hint: description
+      Value: "Experience seamless, AI-driven mobility with Alaris—where innovation meets effortless sophistication."
+    - ID: "b293c09d-fd8e-4eee-97bd-0f30f3f4ca10"
+      Hint: image3
+      Value: |
+        <image mediaid="c77fb69f-0506-4b97-b077-97dd02e585fb" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250325T150440Z

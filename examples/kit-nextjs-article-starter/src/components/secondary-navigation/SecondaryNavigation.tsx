@@ -53,7 +53,11 @@ export const Default: React.FC<SecondaryNavigationProps> = (props) => {
     return (
       <NavigationMenu.List className="mt-2 flex list-none flex-col items-start gap-2">
         {childItems.map((child, index) => {
-          const title = child.navigationTitle?.jsonValue.value || child.title?.jsonValue.value;
+          const title =
+            child.navigationTitle?.jsonValue.value ||
+            child.title?.jsonValue.value ||
+            child.displayName ||
+            child.name;
 
           return (
             <NavigationMenu.Item key={index}>
@@ -80,7 +84,11 @@ export const Default: React.FC<SecondaryNavigationProps> = (props) => {
         <NavigationMenu.List className="m-0 flex list-none flex-col gap-2 pl-0">
           {parent.children?.results?.map((item, index) => {
             const isParent = datasource.id == item.id;
-            const title = item.navigationTitle?.jsonValue.value || item.title?.jsonValue.value;
+            const title =
+              item.navigationTitle?.jsonValue.value ||
+              item.title?.jsonValue.value ||
+              item.displayName ||
+              item.name;
 
             return (
               <NavigationMenu.Item key={index}>

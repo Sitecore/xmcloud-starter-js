@@ -1,0 +1,39 @@
+﻿---
+ID: "ecc92ab5-e858-4037-a978-1c3a370eed0e"
+Parent: "694d5dbd-d6a7-410b-b17c-0325dc28b23e"
+Template: "cd4eeb25-5a6c-4a23-baff-bae9d921ffd1"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Article Page/Data/Testimonial"
+BranchID: "96e672be-28d9-4b7e-87ae-262764d3c3cf"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{EA7E8A30-0496-4B61-8126-1E7977EDE5D8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T201445Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "872c7094-2de6-4934-8b6c-1f9f6c58721b"
+      Hint: Title
+      Value: Testimonial
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e1c25af8-4df4-43be-a668-ae365c1ecd45"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250617T091415Z

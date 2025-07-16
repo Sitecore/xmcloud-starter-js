@@ -1,0 +1,52 @@
+﻿---
+ID: "3449a305-5e2b-4279-985a-814630d920cb"
+Parent: "617f6901-7987-4883-9878-61d689f16282"
+Template: "2b90bf80-bb08-44a2-ad76-600ad0ed915b"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Logo Tab/Log Tab Item 2"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "49573c1e-7582-4fe7-8d88-98dc201fc2e9"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T193342Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "540321da-fce1-4f19-8c3c-9a3e7290d1c8"
+      Hint: descriptionOptional
+      Value: "Unleash Your Power with Stryve Athletics’ 2025 Spring Collection: Performance Meets Precision."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "27afd689-22c4-4c3f-8de6-d09ffc24aa7a"
+    - ID: "a4bc2c37-49a5-4aaf-a5db-869166a9f21f"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="e6c9badb-e354-40b0-b17c-0710c91d0f5c" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "be1eeb4c-c0c0-407d-8fb4-40ae00eeb8e6"
+      Hint: linkOptional
+      Value: |
+        <link class="" querystring="" id="6b210487-0aac-4feb-a8af-9d78ab573c0f" anchor="" target="" title="" linktype="internal" text="Explore Maison Lume" url="/click-click-launch/Demo A/Home" />
+    - ID: "bf88958e-72a9-48a1-9348-30be4f2c86a5"
+      Hint: titleRequired
+      Value: Maison Lume
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103700Z

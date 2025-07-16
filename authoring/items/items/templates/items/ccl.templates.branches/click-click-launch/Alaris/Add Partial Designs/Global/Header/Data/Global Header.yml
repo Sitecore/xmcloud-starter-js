@@ -1,0 +1,45 @@
+﻿---
+ID: "7870bf23-ef09-48c2-8e1f-696a40318418"
+Parent: "b3830d1c-0c8c-417c-9824-2c7ce2348dbd"
+Template: "efd96479-7bf2-4be1-a08a-b01e59f92cdc"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Partial Designs/Global/Header/Data/Global Header"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250311T183656Z
+    - ID: "4da75bcf-390e-46fa-ad87-926ec4db0876"
+      Hint: headerLogo
+      Value: |
+        <image mediaid="64830274-70ec-42e0-83e4-a429e42ec11e" alt="Test Alt" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ac060d5a-6623-4704-a07a-43b29dae8217"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T012423Z
+    - ID: "e3289100-a242-4fc7-814f-0ffef0ffe8bd"
+      Hint: headerContact
+      Value: |
+        <link class="" querystring="" id="7d507f7b-015f-439b-9f08-f7ec4f81b1e8" anchor="" target="" title="" linktype="internal" text="Schedule a Test Drive" url="/click-click-launch/site-2/Home/Test Drive" />
+    - ID: "f073d52d-022c-4560-90c2-71fc674cf8bf"
+      Hint: primaryNavigationLinks
+      Value: |
+        {67D0D1E3-40F6-412A-BB59-8667CC49A590}
+        {7643E6E1-922F-43B6-9B3A-660BA1A4AC95}
+        {18C9C60C-110A-4512-B064-729C8C0DDB96}

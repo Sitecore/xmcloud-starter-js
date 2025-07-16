@@ -1,0 +1,155 @@
+﻿---
+ID: "c5232bd6-288f-4cff-b0f8-c4595e8d02b7"
+Parent: "97509128-1b31-4a5b-9c07-d4c94b611d24"
+Template: "c3c9fc9e-e7d3-44e6-b777-aa23496924c7"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9D5C1665-1AC3-4BED-B61D-06DF5D1087FA}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "917ab8a9-9e0c-47d6-9687-eec120b59b69"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A4EC01AF-61BB-403C-ADF6-A24A65309077}"
+              p:before="*"
+              s:ds="local:/Data/Page Header Block 1"
+              s:id="{C78595D2-0892-4EC6-9FF8-B71EDBF17861}"
+              s:par="darkPlayIcon&amp;colorScheme&amp;CSSStyles&amp;DynamicPlaceholderId=2&amp;Styles"
+              s:ph="/headless-main/container-fullwidth-1" />
+            <r
+              uid="{9D170E22-6F82-48B1-8656-CF3662BF9064}"
+              p:after="r[@uid='{A4EC01AF-61BB-403C-ADF6-A24A65309077}']"
+              s:ds="local:/Data/Logo Tab"
+              s:id="{14CA65A5-8661-4195-AC0E-51C0E58C695D}"
+              s:par="colorScheme&amp;CSSStyles&amp;DynamicPlaceholderId=4&amp;Styles"
+              s:ph="/headless-main/container-fullbleed-3" />
+            <r
+              uid="{7F6A522A-7994-4B0D-9486-61C193A0356D}"
+              p:after="r[@uid='{9D170E22-6F82-48B1-8656-CF3662BF9064}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="/headless-main/container-fullbleed-5" />
+            <r
+              uid="{1FB90632-7542-47FF-A868-2FAC5D1A1485}"
+              p:after="r[@uid='{7F6A522A-7994-4B0D-9486-61C193A0356D}']"
+              s:ds="local:/Data/Vertical Image Accordion"
+              s:id="{D3B4A150-DE17-4112-AB45-CD40A6D5A776}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="/headless-main/container-fullbleed-5/container-fullwidth-6" />
+            <r
+              uid="{5B5FC266-8CCE-4A06-8D21-01E5FB38DF34}"
+              p:after="r[@uid='{1FB90632-7542-47FF-A868-2FAC5D1A1485}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin=1&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{F85FB450-93F4-44C6-8F96-5DB1ED593B64}"
+              p:after="r[@uid='{5B5FC266-8CCE-4A06-8D21-01E5FB38DF34}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor&amp;excludeTopMargin&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+            <r
+              uid="{EB6934E9-05D4-4056-97B1-528467D95C86}"
+              p:after="r[@uid='{F85FB450-93F4-44C6-8F96-5DB1ED593B64}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor=primary&amp;excludeTopMargin&amp;inset=1&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="headless-main" />
+            <r
+              uid="{99229B68-34CB-49D3-8C32-5F71FA016CF3}"
+              p:after="r[@uid='{EB6934E9-05D4-4056-97B1-528467D95C86}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=8"
+              s:ph="headless-main" />
+            <r
+              uid="{C0B72C57-BE3E-48A6-B49F-AD0786113380}"
+              p:after="r[@uid='{99229B68-34CB-49D3-8C32-5F71FA016CF3}']"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="backgroundColor=secondary&amp;excludeTopMargin=1&amp;inset=1&amp;CSSStyles&amp;DynamicPlaceholderId=14"
+              s:ph="headless-main" />
+            <r
+              uid="{64FFB4C4-7D51-438C-A115-BC077E3A8F99}"
+              p:after="r[@uid='{C0B72C57-BE3E-48A6-B49F-AD0786113380}']"
+              s:ds="local:/Data/Article Listing"
+              s:id="{0FC71E1E-EA6E-49E9-94BF-2F748F628610}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=9"
+              s:ph="/headless-main/container-fullwidth-8" />
+            <r
+              uid="{20A9C63A-2915-4658-9483-92109291E65E}"
+              p:after="r[@uid='{64FFB4C4-7D51-438C-A115-BC077E3A8F99}']"
+              s:ds="local:/Data/Animated Promo"
+              s:id="{241A1B8E-E69A-4E07-B5E4-53975371AD3C}"
+              s:par="colorScheme&amp;FieldNames=%7B0D5C08B0-DAF6-4EA6-B578-DD65A4A6F9E7%7D&amp;CSSStyles&amp;DynamicPlaceholderId=12"
+              s:ph="/headless-main/container-fullwidth-8" />
+            <r
+              uid="{C5750BEA-79ED-4F7B-80E9-A72C3F284B0F}"
+              p:after="r[@uid='{20A9C63A-2915-4658-9483-92109291E65E}']"
+              s:ds="local:/Data/Subscription Banner"
+              s:id="{AC86D4F7-A0AC-4995-BD89-BB976A5556DA}"
+              s:par="FieldNames&amp;colorScheme&amp;orientation&amp;CSSStyles&amp;DynamicPlaceholderId=13"
+              s:ph="/headless-main/container-fullwidth-8" />
+            <r
+              uid="{C395111B-5921-4FAB-A6BB-3C7F538E71E3}"
+              p:after="r[@uid='{C5750BEA-79ED-4F7B-80E9-A72C3F284B0F}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=15"
+              s:ph="/headless-main/container-fullbleed-14" />
+            <r
+              uid="{709CCEE2-C2F7-46B3-947B-7BCFC4DEDCDB}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Accordion"
+              s:id="{913E30C7-63C2-4A2B-9D44-B2ADAEED6BC2}"
+              s:par="FieldNames&amp;orientation&amp;CSSStyles&amp;DynamicPlaceholderId=16&amp;Styles"
+              s:ph="/headless-main/container-fullbleed-14/container-fullwidth-15" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Our commitment to green energy is paving the way for a cleaner, healthier planet. Join us on our journey towards a future where clean, renewable energy transform the way we power our lives.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T192425Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Landing Page
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Our commitment to green energy is paving the way for a cleaner, healthier planet. Join us on our journey towards a future where clean, renewable energy transform the way we power our lives.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: 
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Landing Page
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "57da1389-de8e-43b6-b066-18788151f9f3"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Brands trusted by consumers around the world.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250630T144306Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Landing Page

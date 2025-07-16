@@ -1,0 +1,50 @@
+﻿---
+ID: "cf67b851-d5c2-44f9-ae65-55ca0a1a1b4c"
+Parent: "a8560892-119e-4eb7-b096-7fd799fbfc4c"
+Template: "92979eba-bd00-422e-b295-3d8dadca860d"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Partial Designs/Global/Footer/Data/Footer"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250529T083529Z
+    - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
+      Hint: InstagramLink
+      Value: |
+        <link linktype="external" url="#" target="" text="Instagram" title="" class=""/>
+    - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
+      Hint: CopyrightText
+      Value: |
+        <div class="ck-content"><p>© 2025 SYNC. All rights reserved.</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ab6691a0-561a-433a-8513-ca8124b33a96"
+    - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
+      Hint: LinkedinLink
+      Value: |
+        <link linktype="external" url="#" target="" text="Linkedin" title="" class=""/>
+    - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
+      Hint: FacebookLink
+      Value: |
+        <link linktype="external" url="#" target="" text="Facebook" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "bc9a0214-7aee-450d-a030-463883e72394"
+      Hint: Title
+      Value: Let's sync.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250529T134134Z

@@ -1,0 +1,38 @@
+﻿---
+ID: "3173a754-bea4-4c11-bbf3-ab1a98cdc761"
+Parent: "9da02cd6-13d0-41c5-8d24-620d673cd3c0"
+Template: "dfed4457-d760-457a-bec1-c0dccdc44381"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/Test Promo 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250212T153608Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: |
+        <div class="ck-content"><p>container 2</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "74e887c3-e7f3-4618-9b3e-cac016f14024"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250218T204340Z
+    - ID: "f94b9858-c439-4291-863b-757b536c8b65"
+      Hint: PromoIcon
+      Value: 

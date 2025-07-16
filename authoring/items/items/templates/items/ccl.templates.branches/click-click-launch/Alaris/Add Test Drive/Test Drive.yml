@@ -1,0 +1,107 @@
+﻿---
+ID: "86025b37-164d-4caa-b476-9885b785bbdb"
+Parent: "0014ad63-0106-4608-88c1-16d67fec801c"
+Template: "c3c9fc9e-e7d3-44e6-b777-aa23496924c7"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Test Drive/Test Drive"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{97842A5F-D7D6-48D4-A4BF-9AA3813FAAF6}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{B9C5052C-BEE3-4921-9DD6-724D46068D00}"
+              p:before="*"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="colorScheme&amp;excludeTopMargin=1&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{04A00C70-A180-4E79-B87D-A3EE06CA575E}"
+              p:after="r[@uid='{B9C5052C-BEE3-4921-9DD6-724D46068D00}']"
+              s:ds="local:/Data/Page Header 1"
+              s:id="{C78595D2-0892-4EC6-9FF8-B71EDBF17861}"
+              s:par="FieldNames=%7B7C1771FB-F39A-422A-AE5C-66B17DE7612B%7D&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="/headless-main/container-fullbleed-1" />
+            <r
+              uid="{DD5FF220-3090-49E8-947D-638C6CDFB419}"
+              p:after="r[@uid='{04A00C70-A180-4E79-B87D-A3EE06CA575E}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="/headless-main/container-fullbleed-1" />
+            <r
+              uid="{6A97334B-6A85-4EDE-BD62-D0AE1D92502A}"
+              p:after="r[@uid='{DD5FF220-3090-49E8-947D-638C6CDFB419}']"
+              s:ds="local:/Data/Test Drive Promo"
+              s:id="{945776A1-8F30-4749-A668-4FCC434A60ED}"
+              s:par="FieldNames=%7B9307A39D-40D0-46CC-90AC-EE7C39CCC30B%7D&amp;orientation&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/container-fullbleed-1" />
+            <r
+              uid="{B7AD69BA-CDBC-4AAE-A1B8-3033BEF39823}"
+              p:after="r[@uid='{6A97334B-6A85-4EDE-BD62-D0AE1D92502A}']"
+              s:ds="local:/Data/Accordion - Test Drive - Demo Official"
+              s:id="{913E30C7-63C2-4A2B-9D44-B2ADAEED6BC2}"
+              s:par="FieldNames=%7B0E13249F-ECEA-4CC9-B889-C173AF1666DA%7D&amp;orientation&amp;CSSStyles&amp;DynamicPlaceholderId=4&amp;Styles"
+              s:ph="/headless-main/container-fullbleed-1" />
+            <r
+              uid="{F17B900E-E3F8-44D7-A1EA-A53033DD5C45}"
+              p:after="r[@uid='{B7AD69BA-CDBC-4AAE-A1B8-3033BEF39823}']"
+              s:ds="3888e495-2013-4992-9961-5d7a219febd8"
+              s:id="{422E6817-A63D-4291-A735-C43CAF943EBE}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B643E915C-12E1-4E33-A903-C1E4B5CDF532%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="/headless-main/container-fullbleed-1/container-fullwidth-5" />
+            <r
+              uid="{C5D32031-A676-4FF1-851F-CF008BD26872}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Test Drive"
+              s:id="{CF7F059D-9D36-4B05-9903-2AEB046B4AF1}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B038CD3F1-3FD1-4914-975E-74A24828879E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+              s:ph="/headless-main/container-fullbleed-1/container-fullwidth-5" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T164421Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Test Drive
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: Get behind the wheel of the smartest car on the road.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Test Drive
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fd2c6670-cdb3-4943-89c7-0db575020265"
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Experience Alaris on the Road
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T191539Z
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Test Drive

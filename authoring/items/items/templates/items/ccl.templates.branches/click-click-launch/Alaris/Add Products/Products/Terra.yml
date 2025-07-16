@@ -1,0 +1,86 @@
+﻿---
+ID: "9dd619fc-5273-4734-ae98-bdefc4dce1ae"
+Parent: "7070586a-d5a2-4997-82a0-0286cc88b58f"
+Template: "9a52202d-3a77-4f6d-b9bd-6aeced9bd49a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Terra"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C1270805-FEFA-43E0-884B-BE35A51DCDE9}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T182818Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Terra
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Terra
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "65408499-25bc-49d0-a2ff-b2fdd798aafc"
+      Hint: ogImage
+      Value: |
+        <image mediaid="11356a96-9e1e-457e-8856-24bfae1ea602" />
+    - ID: "69c33f09-f870-4d18-86c6-c34d9f3ac290"
+      Hint: taxContentType
+      Value: "{EAE5FAD7-EC15-468A-8372-29148C78057C}"
+    - ID: "8535365d-ae76-4875-ab5b-a618d5819af0"
+      Hint: metadataTitle
+      Value: Alaris Terra
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "85aa4033-30b0-4e66-b115-a16e297bf6af"
+    - ID: "a43f5863-a6f4-49d2-904b-5b88ce4b2a4c"
+      Hint: productFeatureText
+      Value: |
+        Adaptive AI that learns and responds 
+        intuitively to every journey.
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: Terra
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d63dce88-2d39-4c77-aaca-2e1f8492175c"
+      Hint: productFeatureTitle
+      Value: TrailSense AI
+    - ID: "d861f60f-a947-4ead-a9b4-80d217ab445c"
+      Hint: productThumbnail
+      Value: |
+        <image mediaid="11356a96-9e1e-457e-8856-24bfae1ea602" alt="Terra" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250321T183112Z
+    - ID: "e8521086-d2b8-4581-bd01-3d89420f8cf7"
+      Hint: productName
+      Value: Alaris Terra
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: Alaris Terra
+    - ID: "edd12642-fcff-41dc-b3f7-c5f2a6008319"
+      Hint: productBasePrice
+      Value: From $92,500
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: |
+        <image mediaid="11356a96-9e1e-457e-8856-24bfae1ea602" alt="Alaris Terra" />
+    - ID: "fa388749-2de0-427d-b421-ad2a5639de10"
+      Hint: productDrivingRange
+      Value: 384mi

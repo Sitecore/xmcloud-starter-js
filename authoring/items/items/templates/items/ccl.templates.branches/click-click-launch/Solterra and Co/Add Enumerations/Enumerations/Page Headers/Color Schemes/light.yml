@@ -1,0 +1,36 @@
+﻿---
+ID: "131be3fd-3609-4b04-9877-258c7df17d4c"
+Parent: "e21d7353-828c-4d26-b77d-15c623e80136"
+Template: "83746e54-66fe-4fd4-b79d-ff3fd4acd903"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Enumerations/Enumerations/Page Headers/Color Schemes/light"
+BranchID: "e60b0159-a1b6-4216-baad-bdb2177d93ab"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{00FA2577-2BC4-447B-A1E5-FE8A4CBF408C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250131T181140Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1d1dd4ef-ad2f-4434-b362-88a19cb16f60"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250131T181140Z

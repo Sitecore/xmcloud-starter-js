@@ -1,0 +1,34 @@
+﻿---
+ID: "f80d76f7-8a12-4593-9d8c-e22b3f7aba71"
+Parent: "694d5dbd-d6a7-410b-b17c-0325dc28b23e"
+Template: "22c53a61-7af2-4cc6-86a5-06e0fdb85ee5"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Article Page/Data/Vertical"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T191059Z
+    - ID: "32737efc-143d-4ed5-b1e0-99c362c6ba9a"
+      Hint: titleOptional
+      Value: Vertical
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "20fcef71-20f7-40b1-b371-41b757575e72"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250617T091416Z

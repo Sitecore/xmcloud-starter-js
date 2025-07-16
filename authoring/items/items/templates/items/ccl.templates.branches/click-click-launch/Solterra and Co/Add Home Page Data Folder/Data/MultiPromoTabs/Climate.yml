@@ -1,0 +1,58 @@
+﻿---
+ID: "5c11e94d-1aa1-4152-bae8-0ca9a135f0e3"
+Parent: "6e06f529-c10b-46b9-b8c0-c8c45486f774"
+Template: "ccea3863-e5cc-4c75-8296-5b5ca47010fa"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/MultiPromoTabs/Climate"
+BranchID: "cd466675-6107-40fd-bbb5-21078cc22eb4"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{E35E83F7-90A4-41C3-84D6-0233C378B232}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "22427604-b117-4985-a6a4-cc8aba4e044d"
+      Hint: image 1
+      Value: |
+        <image mediaid="684ce003-47fc-4a46-a0b3-e190ca1f4d85" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T201001Z
+    - ID: "2c13f52a-6d13-4688-92f7-ecafe6c718e9"
+      Hint: title
+      Value: Climate
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "60629870-4b2c-4574-a086-ad5cf20fce16"
+      Hint: link1
+      Value: |
+        <link class="" querystring="" id="900f400b-3ba6-45ba-a77b-7f79e118c64c" anchor="" target="_blank" title="" linktype="internal" text="Solar Electric Program" url="/click-click-launch/Demo A/Home/Landing Page" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "97c9215a-b0e5-498a-aed6-3eb9f3515164"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "c1dedbd1-c877-4834-8b0b-0ef9ce90af87"
+      Hint: image2
+      Value: |
+        <image mediaid="b80d28e1-ebbc-49e6-a965-70070ac4087b" />
+    - ID: "c4d68c1f-0cd0-41e2-b986-0fec9a910176"
+      Hint: link2
+      Value: |
+        <link class="" querystring="" id="900f400b-3ba6-45ba-a77b-7f79e118c64c" anchor="" target="_blank" title="" linktype="internal" text="Wind Energy Collection" url="/click-click-launch/Demo A/Home/Landing Page" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103702Z

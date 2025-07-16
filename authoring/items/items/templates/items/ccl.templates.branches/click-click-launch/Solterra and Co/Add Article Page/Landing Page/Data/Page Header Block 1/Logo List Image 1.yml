@@ -1,0 +1,42 @@
+﻿---
+ID: "a89fa19b-eb49-4abe-9dca-4ca4ca57a1d2"
+Parent: "06ab4b40-4141-468d-91f6-25ab7298f242"
+Template: "b895f657-9a7b-438b-a2f2-95fb1722be7f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Page Header Block 1/Logo List Image 1"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e6a956c5-3f46-4389-8e22-5bc5dab979df"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1f2abc81-60f9-4292-92b4-8c231ec93398"
+      Hint: image
+      Value: |
+        <image mediaid="a52d032e-a4a7-46a6-93e2-7fb3158953c1" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T192846Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "92249a02-10a1-49a3-861c-a7a41cde5f9d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250409T192938Z

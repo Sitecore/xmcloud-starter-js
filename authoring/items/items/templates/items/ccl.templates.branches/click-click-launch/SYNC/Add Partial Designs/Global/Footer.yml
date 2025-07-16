@@ -1,0 +1,72 @@
+﻿---
+ID: "5eda6673-b12d-44de-b238-7bf32761616a"
+Parent: "8001017f-9ee9-48f2-b2d3-94ef6ec1fa09"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Partial Designs/Global/Footer"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: footer
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{120D1B8F-0959-4AB0-9B08-96952D614D55}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1c26dda6-8819-402a-a8ba-658316bf83a2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{66995A97-0155-4EEB-951B-67CE56B5231B}"
+              p:before="*"
+              s:ds="local:/Data/Footer"
+              s:id="{F767C9BA-4DE5-4455-B921-EC158E0762EF}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-footer" />
+            <r
+              uid="{B61DD996-4C7D-4969-89A8-B40B4A045C89}"
+              p:after="r[@uid='{66995A97-0155-4EEB-951B-67CE56B5231B}']"
+              s:ds="local:/Data/Primary Links"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B1A750307-6048-4BDD-ADFE-28DB1F5A2253%7D&amp;Styles=%7C%7B1155675B-7536-4BAC-9BA8-35F0C0BF751A%7D%7C%7B4028012D-5AA3-4347-8D46-0A7DDB2043F4%7D&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-footer/footer-primary-links-1" />
+            <r
+              uid="{9A4C2301-F4CE-45E2-B4AA-9C3A336F7D75}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Secondary Links"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B1A750307-6048-4BDD-ADFE-28DB1F5A2253%7D&amp;Styles=%7C%7B1155675B-7536-4BAC-9BA8-35F0C0BF751A%7D&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-footer/footer-secondary-links-1" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250529T083234Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8b069a94-0ad0-46e7-9523-db6f8dbd71ac"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250703T154223Z

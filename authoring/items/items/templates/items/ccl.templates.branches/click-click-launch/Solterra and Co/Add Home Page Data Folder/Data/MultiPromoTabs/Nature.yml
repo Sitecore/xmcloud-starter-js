@@ -1,0 +1,54 @@
+﻿---
+ID: "b5ae5324-da4f-498f-a02e-f38a0a59a4fc"
+Parent: "6e06f529-c10b-46b9-b8c0-c8c45486f774"
+Template: "ccea3863-e5cc-4c75-8296-5b5ca47010fa"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/MultiPromoTabs/Nature"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "22427604-b117-4985-a6a4-cc8aba4e044d"
+      Hint: image 1
+      Value: |
+        <image mediaid="{B80D28E1-EBBC-49E6-A965-70070AC4087B}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T202102Z
+    - ID: "2c13f52a-6d13-4688-92f7-ecafe6c718e9"
+      Hint: title
+      Value: Nature
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "60629870-4b2c-4574-a086-ad5cf20fce16"
+      Hint: link1
+      Value: |
+        <link class="" querystring="" id="900f400b-3ba6-45ba-a77b-7f79e118c64c" anchor="" target="" title="" linktype="internal" text="Nature Link" url="/click-click-launch/Demo A/Home/Landing Page" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b3445580-d632-4a71-aca3-7b2681b9e9d8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "c1dedbd1-c877-4834-8b0b-0ef9ce90af87"
+      Hint: image2
+      Value: |
+        <image mediaid="{684CE003-47FC-4A46-A0B3-E190CA1F4D85}" />
+    - ID: "c4d68c1f-0cd0-41e2-b986-0fec9a910176"
+      Hint: link2
+      Value: |
+        <link class="" querystring="" id="0e8032b7-e017-42e5-84db-61fda4e1b92f" anchor="" target="" title="" linktype="internal" text="Nature Link 2" url="/click-click-launch/Demo A/Home/Article Page" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103703Z

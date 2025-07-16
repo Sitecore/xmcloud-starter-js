@@ -1,0 +1,37 @@
+﻿---
+ID: "ebf79ba7-6c73-4436-8cd5-3b4a815e9f0e"
+Parent: "21edadcb-96ca-4a5b-8a90-21ab0afe9cb6"
+Template: "d2c0babb-51e4-4e13-9305-6a1107962413"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Subscription Banner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250410T135610Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "57fd1a39-ec9a-460d-b86f-da1791b8de9d"
+      Hint: descriptionOptional
+      Value: Be a part of the confidence revolution with Solterra & Co.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "54a2f76d-d481-47e5-9680-a41c34796cd2"
+    - ID: "a823205f-7781-42e2-914c-2b9b0e65161f"
+      Hint: titleRequired
+      Value: Subscribe to Sunguide, your source for company updates.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250410T135652Z

@@ -1,0 +1,57 @@
+﻿---
+ID: "4ecc90b2-a67d-41b9-bfc9-885a58d0b160"
+Parent: "199c0c47-25bc-4d2b-8829-5304c5395d06"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Partial Designs/Global/Header"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: header
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{90AD5CFD-AC61-43C1-BDF2-FB685EEE5C68}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2a352146-c2eb-4589-8251-1cc6bd467801"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{29C360B4-85F0-4495-AD34-84FE05F5607E}"
+              s:ds="local:/Data/Global Header"
+              s:id="{77447DA8-09CF-4067-86DA-F87505E0A156}"
+              s:par="FieldNames=%7B9C396AAE-B9A3-4D1C-97C0-6FB51108F1A7%7D&amp;excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-header" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250311T183410Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a8825d84-6d00-422d-b9bb-64dc00bb8fe3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250530T195424Z

@@ -1,0 +1,38 @@
+﻿---
+ID: "06ab4b40-4141-468d-91f6-25ab7298f242"
+Parent: "21edadcb-96ca-4a5b-8a90-21ab0afe9cb6"
+Template: "754d4fd3-aa54-46d0-84bd-0bb43f8aeba0"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Page Header Block 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T192451Z
+    - ID: "31ada09a-aeeb-4807-9ad2-eccd3ad7e40a"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="f8a68a36-ad81-4420-86d0-c2fdfe5ae094" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dea17fe2-8c5f-4f37-b0eb-a73f218e286f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "c0071773-2149-46d9-9fab-4b92cdcfab5f"
+      Hint: logoText
+      Value: New to the Solterra & Co. brand portfolio
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250409T192951Z

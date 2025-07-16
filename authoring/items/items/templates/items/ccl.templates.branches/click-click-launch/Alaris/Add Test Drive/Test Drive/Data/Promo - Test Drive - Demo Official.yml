@@ -1,0 +1,41 @@
+﻿---
+ID: "e4dd28bc-dbd1-4736-82dd-5e8745509517"
+Parent: "e9513ab6-ce72-44c1-85e2-802cc18d4904"
+Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Test Drive/Test Drive/Data/Promo - Test Drive - Demo Official"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T202105Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: When you arrive, check in with a team member and we’ll get you driving in no time.
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: Get Excited for Your Test Drive
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image mediaid="c0e3c348-3708-42d4-8d0c-ece6ffc8d598" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1e1b807f-9639-4145-a1d5-6f366f6777f5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250321T202445Z

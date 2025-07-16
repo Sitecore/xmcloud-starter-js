@@ -9,14 +9,6 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/component
 import { useState } from 'react';
 import { useI18n } from 'next-localization';
 import { dictionaryKeys } from '@/variables/dictionary';
-{
-  /* 
-    Jira Ticket Information:
-    - Key: SCDS-66
-    - Summary: Subscription Banner
-    - URL: https://velir.atlassian.net/browse/SCDS-66
-  */
-}
 
 type FormValues = {
   email: string;

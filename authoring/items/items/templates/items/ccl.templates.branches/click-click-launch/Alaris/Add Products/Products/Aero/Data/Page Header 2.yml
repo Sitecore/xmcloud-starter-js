@@ -1,0 +1,43 @@
+﻿---
+ID: "c2c8c7a3-3ffb-4c74-979d-8caf128f5c72"
+Parent: "875e30d2-2da2-4940-9619-bd334844ae17"
+Template: "754d4fd3-aa54-46d0-84bd-0bb43f8aeba0"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Aero/Data/Page Header 2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "050b0870-ebcd-41bc-846e-0a5e4828c3a7"
+      Hint: link1
+      Value: |
+        <link linktype="internal" id="7d507f7b-015f-439b-9f08-f7ec4f81b1e8" anchor="" querystring="" target="" class="" text="Schedule a Test Drive" title=""/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250528T194121Z
+    - ID: "31ada09a-aeeb-4807-9ad2-eccd3ad7e40a"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="7d2baee6-8c25-4cce-bfe8-149e95de021d" />
+    - ID: "4a3ab7ba-d36c-4133-96a3-30e15566056f"
+      Hint: link2
+      Value: |
+        <link linktype="internal" id="a27287ed-a7c0-47f4-ad13-768a665a419c" anchor="" querystring="" target="" class="" text="Reserve" title=""/>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1b086bd5-71ba-4f08-a5ad-449b2ec092c0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T194521Z

@@ -1,0 +1,36 @@
+﻿---
+ID: "85e7832f-2c2e-4e75-9251-5ed91a4d77b9"
+Parent: "b0951a62-a0bc-4d22-b6c5-5a94c38b2d8c"
+Template: "b04ab8f4-2bdc-42d0-b8e1-87186dc8bf9c"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Enumerations/Enumerations/Promos/Heading Orientation"
+BranchID: "8d5efcde-deae-4e56-872d-37d67a4beb71"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{02904991-3154-417A-A411-D4C5A9834F90}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250131T181159Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d93da6fc-2cfc-4fd6-93d6-66cd257c9138"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250131T181159Z

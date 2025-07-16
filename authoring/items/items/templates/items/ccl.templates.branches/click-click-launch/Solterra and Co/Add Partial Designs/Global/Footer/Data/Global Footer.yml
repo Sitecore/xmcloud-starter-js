@@ -1,0 +1,58 @@
+﻿---
+ID: "04a0ea89-add9-4cae-8a68-25206c7ad96f"
+Parent: "1e5cef73-bbcf-4953-a696-70c04810f970"
+Template: "407d4269-db05-473b-90ed-b0d96574ba76"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Partial Designs/Global/Footer/Data/Global Footer"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1a6354fb-e81d-4152-93d3-92fb79207821"
+      Hint: footerSocialLinks
+      Value: |
+        {6A8E42D4-ED9B-488A-B03F-F07086A391BD}
+        {BA09DE53-5EB9-4345-A63E-43BBB884C94F}
+        {F35E1584-54FB-4D32-A3C2-66E3E145D7AF}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250205T191925Z
+    - ID: "409a02fd-b023-472b-9f9c-772f59adebda"
+      Hint: footerLogo
+      Value: |
+        <image mediaid="{0101754B-3FA9-4D44-8C7A-92E5F72E68C2}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8c72b9c8-5c50-4170-8539-6b7a2a546c7d"
+      Hint: footerPromoDescription
+      Value: "Stay in the loop with our newsletter, where we deliver bite-sized insights into the latest beauty solutions."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "652c2d34-9bff-450a-a7c9-0c8d0dc2c717"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "c3bcd054-cd5d-4231-88d0-1c38dbe2be33"
+      Hint: footerPromoTitle
+      Value: Your Source for Solterra & Co. Company Updates
+    - ID: "d03f6255-b87d-4205-b10d-f3c1ee56aa14"
+      Hint: footerCopyright
+      Value: © 2025 Soltera & Co. All rights reserved.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250624T124057Z
+    - ID: "f87ec34b-1d58-4cb9-bed9-2c7aa450cdb5"
+      Hint: footerPromoLink
+      Value: |
+        <link class="" id="{6B210487-0AAC-4FEB-A8AF-9D78AB573C0F}" querystring="" anchor="" target="" title="" linktype="internal" text="Sign Up" url="/click-click-launch/Demo A/Home" />

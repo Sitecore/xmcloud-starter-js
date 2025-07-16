@@ -7,15 +7,6 @@ import { VerticalImageAccordionProps } from './vertical-image-accordion.props';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ButtonBase as Button } from '@/components/button-component/ButtonComponent';
 
-{
-  /* 
-    Jira Ticket Information:
-    - Key: SCDS-64
-    - Summary: Vertical Image Accordion
-    - URL: https://velir.atlassian.net/browse/SCDS-64
-  */
-}
-
 export const Default: React.FC<VerticalImageAccordionProps> = ({ fields }) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [isExpanding, setIsExpanding] = useState(false);

@@ -1,0 +1,31 @@
+﻿---
+ID: "f693a9e9-caf9-45e1-84ee-adf38f7c1e2a"
+Parent: "9e11b72e-eee3-4666-9a4a-4118ca5844b9"
+Template: "267d9ac7-5d85-4e9d-af89-99ab296cc218"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Dictionary Items/Forms/Submission Form"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250319T174555Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "946b1631-7711-4eb0-b0c4-5896360d5504"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250319T174555Z

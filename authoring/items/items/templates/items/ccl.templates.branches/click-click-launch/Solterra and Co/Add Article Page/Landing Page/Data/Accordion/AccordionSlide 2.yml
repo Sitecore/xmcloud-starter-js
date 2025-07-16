@@ -1,0 +1,45 @@
+﻿---
+ID: "9f40ec57-b32c-4490-b580-8d426a979de4"
+Parent: "88378a6d-8107-4730-a909-cdc6caa222a9"
+Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Accordion/AccordionSlide 2"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d4b72a57-73a7-4b27-9f68-4f36b16c0a2f"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250410T135941Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: "Where can I find a media kit?"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b1c6f3e-46b3-4b47-8067-e16df0a1f10d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250410T140015Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: |
+        <div class="ck-content"><p>Setting up an account is quick and easy! Simply visit our sign-up page, provide your basic information, and follow the guided setup process. Once registered, you’ll receive a confirmation email with next steps. Need help? Our support team is here to assist you!</p></div>

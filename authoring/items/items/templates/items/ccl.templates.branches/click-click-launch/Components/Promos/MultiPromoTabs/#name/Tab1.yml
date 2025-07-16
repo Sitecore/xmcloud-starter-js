@@ -21,18 +21,18 @@ Languages:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\chris.sulham@velir.com
+        sitecore\Admin
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\chris.sulham@velir.com
+        sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "119b6fa4-7224-4766-914a-ae6f2ffb4d31"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\chris.sulham@velir.com
+        sitecore\Admin
     - ID: "c1dedbd1-c877-4834-8b0b-0ef9ce90af87"
       Hint: image2
       Value: |

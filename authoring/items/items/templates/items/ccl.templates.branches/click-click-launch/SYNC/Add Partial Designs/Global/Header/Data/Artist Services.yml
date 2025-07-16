@@ -1,0 +1,41 @@
+﻿---
+ID: "148a0713-ade4-4e13-8f40-155a8e1f9187"
+Parent: "93160d7b-a085-4129-946b-425d131e0657"
+Template: "6fe9f9e9-5ecb-4333-b270-326b701b5352"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Partial Designs/Global/Header/Data/Artist Services"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250612T095619Z
+    - ID: "3c51010e-7a83-47c4-af53-e2a2ecb24bf9"
+      Hint: FeaturedProduct
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8238db8e-0cd4-4263-887d-c601aa21e1a5"
+      Hint: Title
+      Value: Artist Services
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "81697c83-1aed-4761-a9ed-942956cb0a1b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "c16f9da7-5edd-42ef-bf33-b6e3a6a2c7ed"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="#" target="" text="Artist Services" title="" class=""/>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250612T132827Z

@@ -1,0 +1,34 @@
+﻿---
+ID: "df33ffec-e26a-4e49-915a-0fae83a432dc"
+Parent: "5de75d97-fdbf-4014-bfff-780d152d0be8"
+Template: "cfd30fc4-07fa-471e-9f85-3a1bf425c718"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Partial Designs/Global/Header/Data/Global Header/Primary Navigation Links/QA Link"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250312T153931Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cc22084b-d9aa-42be-b62e-0e05f0c5e5c8"
+    - ID: "969b132e-3dc2-4526-8f8d-61e3ea742df6"
+      Hint: link
+      Value: 
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250321T183734Z

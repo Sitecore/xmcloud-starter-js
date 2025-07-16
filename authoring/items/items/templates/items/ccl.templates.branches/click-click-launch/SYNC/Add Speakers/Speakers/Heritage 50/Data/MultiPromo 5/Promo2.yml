@@ -1,0 +1,52 @@
+﻿---
+ID: "66e0723b-5dc8-4d94-86dd-f354e3a64203"
+Parent: "72d7d3b1-ceac-4143-ab7e-a6fc7f937670"
+Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Heritage 50/Data/MultiPromo 5/Promo2"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "178c2d1e-a6f1-4883-9b01-58f5f82f2501"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250603T052610Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: Discover this sibling duo igniting the scene with exposive punk anthems, untamed energy, and raw sound that’s impossible to ignore.
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: Heritage Assist
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image mediaid="f66fb7ce-5d21-402c-b51f-069ccd7cdccd" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "59110aec-41aa-4d3c-9b53-983224eaabd8"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: |
+        <link linktype="external" url="#" target="" text="Learn more" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250617T070843Z

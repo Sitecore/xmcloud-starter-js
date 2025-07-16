@@ -1,0 +1,35 @@
+﻿---
+ID: "573fa0fa-d7c6-488a-96e4-857b2b82472f"
+Parent: "a3ff96db-5f7e-4ad4-947d-c579ecf05fd5"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Variants/Text Banner Headless Variants/TextBanner"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Text Banner
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250317T184608Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2e44a0df-8b0b-4a4a-b05d-203b42efaedf"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250317T190615Z

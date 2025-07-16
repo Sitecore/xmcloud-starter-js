@@ -1,0 +1,45 @@
+﻿---
+ID: "fa5c2ca7-318c-496f-b19f-bd4e8599a072"
+Parent: "6f4d2bd3-1258-4f81-9259-2108c870ea1c"
+Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Nexa/Data/Accordion - Nexa - Demo Official/Accordion 1"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{E1FB3C30-F5C7-4271-BCC8-0E74E907E391}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T192850Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: "How do I schedule maintenance/software updates? "
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6cce2ec5-c2e4-46ba-9f33-9160f15c7664"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250321T195029Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: |
+        <div class="ck-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>

@@ -1,0 +1,39 @@
+﻿---
+ID: "8b87b8db-dd81-45d3-842d-ef19953b27eb"
+Parent: "9da02cd6-13d0-41c5-8d24-620d673cd3c0"
+Template: "13033574-ef4a-44a2-875f-cf4e7ca3592f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/Video 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T203646Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7c168d4a-6e92-46cb-a89e-da9040d9df1d"
+      Hint: image
+      Value: |
+        <image mediaid="f8a68a36-ad81-4420-86d0-c2fdfe5ae094" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c1f90e3b-d9b1-49c7-8596-5e748520d84d"
+    - ID: "adfd7171-7c7d-4f1e-b881-637830556379"
+      Hint: video
+      Value: |
+        <link linktype="external" url="https://www.youtube.com/watch?v=EOFDFRrKTdw" target="" text="Sitecore Symposium 2024" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250409T174917Z

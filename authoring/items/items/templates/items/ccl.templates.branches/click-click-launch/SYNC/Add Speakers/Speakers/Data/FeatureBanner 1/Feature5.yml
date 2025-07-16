@@ -1,0 +1,43 @@
+﻿---
+ID: "f85ea825-7c06-490b-9a85-69618b9ca0ab"
+Parent: "8abf93fe-9d82-4d6b-9462-0726bbc14a36"
+Template: "4507e405-6110-4e56-af58-27b65b58268f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Data/FeatureBanner 1/Feature5"
+BranchID: "bcc85ac0-60a3-413e-a0b3-3efebb0b0312"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4A83B71B-3963-4555-811D-78457B114B98}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21aae250-ac81-46a1-a336-29a030bfc511"
+      Hint: heading
+      Value: 8 hour battery life
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250602T131125Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b7c4241-11ec-461f-bff1-52068a5d6271"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250602T133646Z
+    - ID: "f8f97c78-419a-431b-82e7-e46a39c7393f"
+      Hint: image
+      Value: |
+        <image mediaid="00883ba4-2cc7-41d6-b18c-7a9f4bf3e953" />

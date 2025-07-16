@@ -1,0 +1,35 @@
+﻿---
+ID: "98d1919a-215f-454d-8969-b12a84266813"
+Parent: "e9513ab6-ce72-44c1-85e2-802cc18d4904"
+Template: "754d4fd3-aa54-46d0-84bd-0bb43f8aeba0"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Test Drive/Test Drive/Data/Page Header 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T201204Z
+    - ID: "31ada09a-aeeb-4807-9ad2-eccd3ad7e40a"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="2900381c-4a6d-4a48-bfae-cd454b97cd64" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "16cee9db-0a21-41af-b656-6670ac64aa9c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250321T201559Z

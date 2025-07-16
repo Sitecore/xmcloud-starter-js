@@ -1,0 +1,46 @@
+﻿---
+ID: "53138b0b-5175-4633-a348-e6b562f23a15"
+Parent: "2906117f-7929-452a-b356-11a01c5a7b0f"
+Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/Accordion/Slide 1"
+BranchID: "cf2ad172-df62-4f0f-b90f-8241b4f1fd40"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{E1FB3C30-F5C7-4271-BCC8-0E74E907E391}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T204058Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: "Which brands are available in my country?"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bdfb3149-b3ec-4803-ae78-7992bd72e35e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250325T161408Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: |
+        <div class="ck-content"><p>ANSWER 1, Hello from Minyie</p></div>

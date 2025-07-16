@@ -1,0 +1,37 @@
+﻿---
+ID: "02215922-5356-415a-bbb3-48844ee05ab1"
+Parent: "1e124342-4c34-4af3-a980-a03d59bcb272"
+Template: "1313c346-ca98-4657-bb96-d89e35b2235f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Home Page Data Folder/Data/Home Page Text Banner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T153514Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0c79c3de-02c6-48d1-b255-d5e04a921ba5"
+    - ID: "b52480d8-082e-45b3-8c7c-1995592ca5f6"
+      Hint: heading
+      Value: Drive Beyond Limits
+    - ID: "b60aa9f3-869e-4312-a810-c9f2f86a759b"
+      Hint: description
+      Value: "Experience seamless, AI-driven mobility with Alaris—where innovation meets effortless sophistication."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250529T015427Z

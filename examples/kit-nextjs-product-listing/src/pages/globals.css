@@ -210,10 +210,6 @@
 
 /* HEADER STYLES */
 
-header {
-  @apply sticky lg:fixed top-0 left-0 right-0 -mb-[38px] lg:mb-0 z-50;
-}
-
 .partial-editing-mode header {
   @apply static mb-0 overflow-hidden;
 }

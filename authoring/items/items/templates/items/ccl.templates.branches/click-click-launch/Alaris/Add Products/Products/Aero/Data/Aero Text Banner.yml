@@ -1,0 +1,37 @@
+﻿---
+ID: "1524bc13-7cbc-44ed-88ba-c2ab509e8515"
+Parent: "875e30d2-2da2-4940-9619-bd334844ae17"
+Template: "1313c346-ca98-4657-bb96-d89e35b2235f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Aero/Data/Aero Text Banner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250528T194631Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9062cc67-e268-4a40-ae20-2470d9f7ad0a"
+    - ID: "b52480d8-082e-45b3-8c7c-1995592ca5f6"
+      Hint: heading
+      Value: Unrivaled range, performance, efficiency, and space.
+    - ID: "b60aa9f3-869e-4312-a810-c9f2f86a759b"
+      Hint: description
+      Value: "Powered by next-generation autonomous intelligence, the Alaris Terra adapts, learns, and perfects every route for a drive that feels intuitive and refined. The 2025 Alaris Terra allows you to explore new worlds with confidence, in modern form."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T194704Z

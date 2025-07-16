@@ -1,0 +1,49 @@
+﻿---
+ID: "5e0aa17e-4c9e-4cfa-a635-66afbbe98d8d"
+Parent: "63c3ccb6-feaf-42ab-9d37-6f29fec74588"
+Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Data/MultiPromo 3/Promo2"
+BranchID: "221c079e-0ff4-4608-a96a-7f2276f4c9d9"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F603F796-D5F4-493E-9193-8B7B9C8035FB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250602T062843Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: 
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image mediaid="da09b108-e628-4c8e-94a4-6824c0fe3d23" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "753ee7a3-c9c2-4417-8559-3eca90f427c6"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: 
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250602T101228Z

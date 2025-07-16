@@ -1,0 +1,49 @@
+﻿---
+ID: "436e9a9f-6d03-4da1-b63e-55571e8649a4"
+Parent: "eb9baa17-b5db-4601-9e67-21eb07bd486b"
+Template: "03ba85aa-ad3e-412b-b6c3-0c2af639b49f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Home Page Data Folder/Data/Home Page Image Carousel/Slide 1"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{7353E547-6278-49CB-B280-98907EB3D55B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T172742Z
+    - ID: "4d806366-a3b0-460d-b84f-87383453372e"
+      Hint: image
+      Value: |
+        <image mediaid="c9e8912e-63e2-49ea-bde3-d091a39eadfe" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "58b4e062-1aab-4b9a-aff9-3e60f941a03e"
+      Hint: backgroundText
+      Value: Alaris
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fd7130cf-5ac8-45ac-a026-bf9b3f7db9c3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T024718Z
+    - ID: "f4e44a85-84c1-4f40-957d-49732e92706b"
+      Hint: link
+      Value: |
+        <link class="" querystring="" id="a27287ed-a7c0-47f4-ad13-768a665a419c" anchor="" target="" title="Explore All Models" linktype="internal" text="Explore All Models" url="/click-click-launch/site-2/Home" />

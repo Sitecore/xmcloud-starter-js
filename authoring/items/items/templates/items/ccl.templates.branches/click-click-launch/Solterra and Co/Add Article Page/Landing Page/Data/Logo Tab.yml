@@ -1,0 +1,38 @@
+﻿---
+ID: "617f6901-7987-4883-9878-61d689f16282"
+Parent: "21edadcb-96ca-4a5b-8a90-21ab0afe9cb6"
+Template: "07ec4360-f49a-48dd-ab46-5a5fa89cde7b"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Logo Tab"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "121f4e8b-049b-4c7e-9f73-fddf43f4c2a9"
+      Hint: titleRequired
+      Value: Spotlight On
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T193059Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d73e07d5-64af-47a2-ab59-34203ac6f41e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "bd450c91-3766-4a45-8b4e-14cf02e7e4cd"
+      Hint: imageOptional
+      Value: |
+        <image mediaid="745f2952-91d5-44eb-9f9c-cafe306b0b76" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103700Z

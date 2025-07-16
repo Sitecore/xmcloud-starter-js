@@ -1,0 +1,50 @@
+﻿---
+ID: "687be3b8-6aca-48d4-8723-43355afb9309"
+Parent: "60470ed4-a5c3-467d-a818-aeb88ad21b7d"
+Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/MultiPromoCarousel/Promo1"
+BranchID: "221c079e-0ff4-4608-a96a-7f2276f4c9d9"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F603F796-D5F4-493E-9193-8B7B9C8035FB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T200523Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: Our Brands
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image mediaid="1b0945c5-d65c-488e-b72e-45983a61000d" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ef12d599-58d5-466f-8897-9b4d349ba884"
+    - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
+      Hint: link
+      Value: |
+        <link class="" querystring="" id="0e8032b7-e017-42e5-84db-61fda4e1b92f" anchor="" target="" title="" linktype="internal" text="Learn More" url="/click-click-launch/Demo A/Home/Article Page" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103701Z

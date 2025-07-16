@@ -1,0 +1,42 @@
+﻿---
+ID: "6e06f529-c10b-46b9-b8c0-c8c45486f774"
+Parent: "9da02cd6-13d0-41c5-8d24-620d673cd3c0"
+Template: "d12c656f-b4a4-46a9-a851-67666fef7838"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/MultiPromoTabs"
+BranchID: "cd466675-6107-40fd-bbb5-21078cc22eb4"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{AFF8F79F-7376-4152-BD91-ECAA318C7183}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0b4b904d-19fa-4af3-92a7-3b4ee329f0ee"
+      Hint: title
+      Value: Our focus is on four sustainability priorities
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T201000Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "772d106b-15e1-4c38-8e49-1e8ebc77ad7f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d2df817c-ce29-4af7-86d3-b121f5c8fb5e"
+      Hint: droplistLabel
+      Value: Select
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103703Z

@@ -1,0 +1,41 @@
+﻿---
+ID: "9413ad74-ca2d-4d81-8988-2bd12bd58cf6"
+Parent: "9da02cd6-13d0-41c5-8d24-620d673cd3c0"
+Template: "bee4869d-b588-42c2-9797-76510c397e6a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Home Page Data Folder/Data/CTA Banner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250224T204917Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7a8c2095-39f5-4f40-b69d-16ddff188a68"
+      Hint: titleRequired
+      Value: 3.4 billion people in 190 countries use our brands every day.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "abde38dd-4d71-4e7a-b72f-4b716b516b9a"
+    - ID: "9fdcf3e1-5289-4ae0-b4e4-9460ad50814f"
+      Hint: linkOptional
+      Value: |
+        <link class="" querystring="" id="900f400b-3ba6-45ba-a77b-7f79e118c64c" anchor="" target="" title="" linktype="internal" text="See Our Brands" url="/click-click-launch/Demo A/Home/Landing Page" />
+    - ID: "a35015fe-805c-45d7-9446-f88b33a157d4"
+      Hint: descriptionOptional
+      Value: Be a part of the confidence revolution with Solterra & Co.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103702Z

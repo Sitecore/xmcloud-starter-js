@@ -1,0 +1,39 @@
+﻿---
+ID: "25db8694-2d88-4842-a389-52f7dff8cacc"
+Parent: "615185a5-8a93-4119-9e26-a8494a6a2135"
+Template: "cfd30fc4-07fa-471e-9f85-3a1bf425c718"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Partial Designs/Global/Header/Data/Global Header/Solutions"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250212T161508Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1da32eab-afe7-4179-8b77-3ad679af6abd"
+    - ID: "969b132e-3dc2-4526-8f8d-61e3ea742df6"
+      Hint: link
+      Value: |
+        <link class="" querystring="" id="0e8032b7-e017-42e5-84db-61fda4e1b92f" anchor="" target="" title="" linktype="internal" text="Solutions" url="/click-click-launch/Demo A/Home/Article Page" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103700Z

@@ -1,0 +1,52 @@
+﻿---
+ID: "49f135a7-fee7-4571-a94d-146d0e91b3e7"
+Parent: "41db27f1-3c70-4fe6-a2ff-d5a4086149a4"
+Template: "e64d342f-e5aa-4233-88c4-58ccd451a7d3"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Vertical Image Accordion/Vertical Accordion Item 1"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d0561824-a877-423f-b1af-635da7d8a975"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "024a119b-09d8-480b-b179-872c47dce1b5"
+      Hint: linkOptional
+      Value: |
+        <link class="" querystring="" id="6b210487-0aac-4feb-a8af-9d78ab573c0f" anchor="" target="" title="" linktype="internal" text="Explore" url="/click-click-launch/Demo A/Home" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T193836Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "57b7cdd6-1dbb-4e0f-9df0-6cccb20444c6"
+      Hint: descriptionOptional
+      Value: "Driven by innovation and performance, our Move division is dedicated to redefining athletic excellence with cutting-edge gear designed for strength, speed, and endurance."
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "6ef0efde-7773-4786-af78-860ff2f4eeac"
+      Hint: titleRequired
+      Value: Solterra Fragrance
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fff51e42-a0ca-43e8-a49e-9fbaa7f1e638"
+    - ID: "ab7c812f-8768-4203-8ee2-40d0ebb2107a"
+      Hint: imageRequired
+      Value: |
+        <image mediaid="050b55b3-4a2c-4288-8d32-282d10a77ec9" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103700Z

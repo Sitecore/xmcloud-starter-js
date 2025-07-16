@@ -6,13 +6,6 @@ import { PromoImageRight } from './PromoImageRight.dev';
 import { PromoImageMiddle } from './PromoImageMiddle.dev';
 import { PromoTitlePartialOverlay } from './PromoImageTitlePartialOverlay.dev';
 
-/*
-  Jira Ticket Information:
-  - Key: SCDS-123
-  - Summary: Promo Image is a flexible component that displays an image-based promotional section. It is used to direct users to internal or external links.
-  - URL: https://velir.atlassian.net/browse/SCDS-123
-*/
-
 // Data source checks are done in the child components
 
 // Default display of the component

@@ -1,0 +1,35 @@
+﻿---
+ID: "fe9d9a4f-0060-4511-bdf3-d6cb65d6c7c5"
+Parent: "39190c3e-04f8-415d-b3b8-cf11d5e57b7e"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Variants/Hero Headless Variants/Hero"
+SharedFields:
+- ID: "087c0553-9162-41f5-98d3-87eb0d80edbb"
+  Hint: Compatible Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250313T184838Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "66aa9922-308a-4af4-ad91-e452abbc8892"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250313T190226Z

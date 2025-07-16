@@ -1,0 +1,42 @@
+﻿---
+ID: "4551374b-da6b-412d-9486-10cbf2f8f0bf"
+Parent: "4f4023cf-11a4-4067-8e1a-e1e9151a69fe"
+Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Speakers/Speakers/Data/Accordion 1/Slide 1"
+BranchID: "cf2ad172-df62-4f0f-b90f-8241b4f1fd40"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{E1FB3C30-F5C7-4271-BCC8-0E74E907E391}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250602T114218Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
+      Hint: heading
+      Value: "Is this compatible with SYNC headphones?"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2d358c79-198a-4cbc-888b-0ea6cb595683"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250602T123812Z
+    - ID: "e67167b4-10c7-409c-a118-8cd21fd07e1b"
+      Hint: description
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis imperdiet nisi, quis ornare nisi porttitor volutpat. Maecenas vitae dolor vel velit pretium consectetur. Integer tincidunt pellentesque sem id cursus. Nulla non dolor quis enim maximus pellentesque mollis vel mi. Phasellus a nulla leo. Pellentesque nec tincidunt leo, eget commodo libero. Pellentesque pellentesque turpis metus, quis scelerisque erat posuere at. Donec viverra rutrum fermentum. Maecenas ut suscipit dolor. Mauris et velit lacinia, ultrices augue ut, tempus eros. Praesent eu quam scelerisque nunc egestas luctus in sed metus. Ut ultricies rhoncus nibh, eget feugiat sem gravida non.

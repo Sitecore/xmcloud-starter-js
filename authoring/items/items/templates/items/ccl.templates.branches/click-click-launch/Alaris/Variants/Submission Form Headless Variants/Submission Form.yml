@@ -1,0 +1,31 @@
+﻿---
+ID: "8bd9ffb5-1a53-4790-afcc-98ae3c1b5e87"
+Parent: "c5d8ef03-c395-48c6-91fb-35f3ce2e5f29"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Variants/Submission Form Headless Variants/Submission Form"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250319T183731Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "83a9cf26-76bb-4032-b6e4-f059a5a05cd9"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250529T154357Z

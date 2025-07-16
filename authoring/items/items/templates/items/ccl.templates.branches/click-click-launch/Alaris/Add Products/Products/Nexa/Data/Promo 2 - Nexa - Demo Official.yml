@@ -1,0 +1,41 @@
+﻿---
+ID: "a543f182-23ee-413a-b7df-4190d83a9bfe"
+Parent: "36831519-8010-48cb-a866-7f68c1a7abf8"
+Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Nexa/Data/Promo 2 - Nexa - Demo Official"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250324T132225Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "54a924ec-8e98-4597-b9c2-d616dd66cc7c"
+      Hint: description
+      Value: "AI-powered adaptive headlights that continuously adjust brightness, range, and direction based on speed, road conditions, and surrounding traffic—enhancing visibility, safety, and driving confidence."
+    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
+      Hint: heading
+      Value: LuminaBeam™
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
+      Hint: image
+      Value: |
+        <image mediaid="b93392c8-2641-4a30-85c6-2cd31b449fbd" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dc4f30c9-670e-4b93-8669-bf62291e71a9"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250324T140500Z

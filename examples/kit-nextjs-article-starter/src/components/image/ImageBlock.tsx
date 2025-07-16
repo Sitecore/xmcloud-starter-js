@@ -9,7 +9,7 @@ export const Default: React.FC<ImageProps> = (props) => {
   const { fields } = props;
   const { image, caption } = fields ?? {};
 
-  if (fields === undefined) {
+  if (fields !== undefined) {
     return (
       <div className={cn('component', props.params.styles)}>
         <ImageWrapper image={image} className="mb-[24px] h-full w-full object-cover" />

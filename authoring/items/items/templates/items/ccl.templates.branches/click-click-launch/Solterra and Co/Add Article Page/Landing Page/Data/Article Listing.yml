@@ -1,0 +1,49 @@
+﻿---
+ID: "6f7a96ab-f801-47b1-98f9-f1b96763fe19"
+Parent: "21edadcb-96ca-4a5b-8a90-21ab0afe9cb6"
+Template: "705c014a-ced4-409a-89b7-09350cc98116"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Article Page/Landing Page/Data/Article Listing"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250409T195719Z
+    - ID: "341d70c8-1429-41de-99f7-015714658bf8"
+      Hint: linkOptional
+      Value: |
+        <link class="" querystring="" id="0e8032b7-e017-42e5-84db-61fda4e1b92f" anchor="" target="" title="" linktype="internal" text="See All" url="/click-click-launch/Demo A/Home/Article Page" />
+    - ID: "4d116c64-41a2-4c2b-857a-c268c13b8a72"
+      Hint: descriptionOptional
+      Value: Our team boasts top green energy experts, driving innovation in sustainability.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "56689e04-c512-4625-9d9d-95f77b424d9c"
+      Hint: featuredContent
+      Value: |
+        {3185BA20-8242-4976-AAB6-B4FC7BB4D10F}
+        {F849AF70-2A4B-42D8-83C3-2C25492832DA}
+        {6A955BC8-1E90-40A4-932C-07C0190368B9}
+        {44C2E7E7-4ED1-4786-B7A9-FE1B13B8D7DA}
+        {EE6D74C8-B9D0-46C1-8DE3-866F57C0CFB3}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d9582aef-8979-4ea2-9bb0-ab51beee5f23"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250618T103700Z
+    - ID: "f173626a-12e7-4c9a-97ca-9866fd814c86"
+      Hint: titleOptional
+      Value: Latest brand news

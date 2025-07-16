@@ -1,0 +1,128 @@
+﻿---
+ID: "04eaeee5-5267-4bf2-a186-6a29e77475e2"
+Parent: "7070586a-d5a2-4997-82a0-0286cc88b58f"
+Template: "9a52202d-3a77-4f6d-b9bd-6aeced9bd49a"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products/Aero"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{3E7E3D7E-06BA-479E-8593-B306D69448D9}" />
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Aero
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{E9152102-E995-45CC-AECC-8909E68D90A7}"
+              p:before="*"
+              s:id="{E80C2A78-FCC2-4D32-8EC5-4133F608BE5C}"
+              s:par="colorScheme&amp;excludeTopMargin&amp;inset&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{81E4D0C2-D178-48A8-A77A-ECF53033DD2B}"
+              p:after="r[@uid='{E9152102-E995-45CC-AECC-8909E68D90A7}']"
+              s:ds="local:/Data/Page Header 2"
+              s:id="{C78595D2-0892-4EC6-9FF8-B71EDBF17861}"
+              s:par="FieldNames=%7B504C8462-ED9C-4031-A545-C92D5D67E9BA%7D&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="/headless-main/container-fullbleed-1" />
+            <r
+              uid="{08CC2408-D09B-48DC-8ADC-AED77D561DED}"
+              p:after="r[@uid='{81E4D0C2-D178-48A8-A77A-ECF53033DD2B}']"
+              s:ds="local:/Data/Aero Text Banner"
+              s:id="{E7B031D3-161F-4391-8B23-785FC8445D1E}"
+              s:par="FieldNames=%7BB6249B9B-86AB-40B3-8B0E-0A4ED7ADAD9E%7D&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/container-fullbleed-1" />
+            <r
+              uid="{E8ED4E7F-0264-48BC-A4F0-A80D97BB4800}"
+              p:after="r[@uid='{08CC2408-D09B-48DC-8ADC-AED77D561DED}']"
+              s:id="{02340885-3692-4CAD-AC11-ED61206501A3}"
+              s:par="excludeTopMargin&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+              s:ph="/headless-main/container-fullbleed-1" />
+            <r
+              uid="{93405308-9550-44F9-8766-080B0FF89B02}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Image Gallery 1"
+              s:id="{939246CC-DAAB-4FE9-A265-536995A04122}"
+              s:par="FieldNames=%7B85BCDAF1-E2F4-4BC5-B6EE-BA31EF6E39B0%7D&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="/headless-main/container-fullbleed-1/container-fullwidth-4" />
+          </d>
+        </r>
+    - ID: "2485de13-6c39-468c-9c26-fe08c27088f4"
+      Hint: pageSummary
+      Value: Alaris Aero
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T181714Z
+    - ID: "27cd428b-f652-4534-b76f-33f64b742659"
+      Hint: pageShortTitle
+      Value: Aero
+    - ID: "5272817a-75b7-4554-a5ef-2cc4930034d2"
+      Hint: pageSubtitle
+      Value: "Starting at $39,950 - Affordable luxury awaits with Alaris Aero's modern design and high end performance, with a price that makes it available to every budget."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5c01b675-9b56-4d6b-aee4-0ecb1a0021f6"
+      Hint: pageTitle
+      Value: Aero
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "69c33f09-f870-4d18-86c6-c34d9f3ac290"
+      Hint: taxContentType
+      Value: "{EAE5FAD7-EC15-468A-8372-29148C78057C}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "21ede71e-6b62-40f2-8cc7-810946b1a69e"
+    - ID: "a43f5863-a6f4-49d2-904b-5b88ce4b2a4c"
+      Hint: productFeatureText
+      Value: |
+        Advanced perception technology for 
+        unparalleled road awareness
+    - ID: "b7979eed-6bcb-4117-80bc-4bcc6aab12a9"
+      Hint: pageHeaderTitle
+      Value: 2025 Alaris Aero
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d63dce88-2d39-4c77-aaca-2e1f8492175c"
+      Hint: productFeatureTitle
+      Value: EcoSense AI
+    - ID: "d861f60f-a947-4ead-a9b4-80d217ab445c"
+      Hint: productThumbnail
+      Value: |
+        <image mediaid="c7e27d17-73b7-414e-b200-4418f2c30da2" alt="Alaris Aero" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250528T194907Z
+    - ID: "e8521086-d2b8-4581-bd01-3d89420f8cf7"
+      Hint: productName
+      Value: Alaris Aero
+    - ID: "ed981ca0-271d-4543-b735-ecc955bd58a1"
+      Hint: ogTitle
+      Value: New page
+    - ID: "edd12642-fcff-41dc-b3f7-c5f2a6008319"
+      Hint: productBasePrice
+      Value: From $43,300
+    - ID: "efbce7e8-6d4e-49e2-9b48-a9ab9a1e6fd7"
+      Hint: pageThumbnail
+      Value: |
+        <image mediaid="c7e27d17-73b7-414e-b200-4418f2c30da2" alt="Alaris Aero" />
+    - ID: "fa388749-2de0-427d-b421-ad2a5639de10"
+      Hint: productDrivingRange
+      Value: 315mi

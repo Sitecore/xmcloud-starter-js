@@ -1,0 +1,34 @@
+﻿---
+ID: "36fbcc76-dfb1-4e92-81d1-291f205b40b4"
+Parent: "88f2feb3-176a-41ad-b8b3-37072ae09126"
+Template: "407d4269-db05-473b-90ed-b0d96574ba76"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Partial Designs/Global/Footer/Data/Global Footer"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250314T171423Z
+    - ID: "42460973-3c52-4b54-8ee5-6b335f256705"
+      Hint: tagline
+      Value: Drive Beyond
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "63713909-7c97-4814-a93d-ad1689914fe6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250530T195120Z

@@ -1,0 +1,31 @@
+﻿---
+ID: "7070586a-d5a2-4997-82a0-0286cc88b58f"
+Parent: "6b289b7b-5c87-4423-aee6-bf33e0627fbb"
+Template: "84dbe64b-0fed-4125-a971-725c0155c321"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Products/Products"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250321T155709Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3e8d6706-36b6-46ac-8611-5fb92465890a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250321T155709Z

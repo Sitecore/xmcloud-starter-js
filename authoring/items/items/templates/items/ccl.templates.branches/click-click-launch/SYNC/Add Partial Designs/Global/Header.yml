@@ -1,0 +1,163 @@
+﻿---
+ID: "08376402-8f6d-4d17-937f-e212019ca564"
+Parent: "8001017f-9ee9-48f2-b2d3-94ef6ec1fa09"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Partial Designs/Global/Header"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: header
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{DC9ED35F-14C4-4BF4-92BC-63FC22C3AA1D}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "818b8676-e2f0-487c-a40d-33d3d83acaef"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{83010DC9-3BE7-429B-98CE-68F6721335E8}"
+              p:before="*"
+              s:ds="local:/Data/Header"
+              s:id="{90A922AA-E2A7-4553-A7AD-B89AC9318D6B}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1&amp;showSearchBox=1&amp;showMiniCart=1"
+              s:ph="headless-header" />
+            <r
+              uid="{898E5A97-3114-4B68-9F9F-07A6A1FDD2F0}"
+              p:after="r[@uid='{83010DC9-3BE7-429B-98CE-68F6721335E8}']"
+              s:ds="local:/Data/Speakers"
+              s:id="{B1D5E3E7-6E29-4CFC-ACBC-0D49D31B4955}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="/headless-header/header-navigation-1" />
+            <r
+              uid="{3C130AF0-CC34-4F9F-B25E-08C7CA21B1A7}"
+              p:after="r[@uid='{898E5A97-3114-4B68-9F9F-07A6A1FDD2F0}']"
+              s:ds="local:/Data/Headphones"
+              s:id="{B1D5E3E7-6E29-4CFC-ACBC-0D49D31B4955}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;isSimpleLink&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+              s:ph="/headless-header/header-navigation-1" />
+            <r
+              uid="{5B384AB7-B895-4CD9-8EFE-449B066C2FBE}"
+              p:after="r[@uid='{3C130AF0-CC34-4F9F-B25E-08C7CA21B1A7}']"
+              s:ds="local:/Data/Amps"
+              s:id="{B1D5E3E7-6E29-4CFC-ACBC-0D49D31B4955}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;isSimpleLink&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="/headless-header/header-navigation-1" />
+            <r
+              uid="{0B048106-D634-4491-9FD0-90C55BA008AE}"
+              p:after="r[@uid='{5B384AB7-B895-4CD9-8EFE-449B066C2FBE}']"
+              s:ds="local:/Data/Pro"
+              s:id="{B1D5E3E7-6E29-4CFC-ACBC-0D49D31B4955}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;isSimpleLink=1&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+              s:ph="/headless-header/header-navigation-1" />
+            <r
+              uid="{967BBDB8-1E6C-4391-BE79-5BEC378CD09C}"
+              p:after="r[@uid='{0B048106-D634-4491-9FD0-90C55BA008AE}']"
+              s:ds="local:/Data/Artist Services"
+              s:id="{B1D5E3E7-6E29-4CFC-ACBC-0D49D31B4955}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;isSimpleLink=1&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-header/header-navigation-1" />
+            <r
+              uid="{D9810A3E-5824-44DD-8288-CD25309F8C77}"
+              p:after="r[@uid='{967BBDB8-1E6C-4391-BE79-5BEC378CD09C}']"
+              s:ds="local:/Data/Speakers Primary Links"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B3276D5F3-F463-476E-BA7C-7FD1BC9D286B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-primary-links-2" />
+            <r
+              uid="{75D0BCA0-00C2-4A8D-9CA9-FFEA225406E0}"
+              p:after="r[@uid='{D9810A3E-5824-44DD-8288-CD25309F8C77}']"
+              s:ds="local:/Data/Loud for less"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B94F4D3BC-A4E9-4A1D-9C7B-924B0CB41925%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-secondary-links-2" />
+            <r
+              uid="{9D4E8E3D-37B1-4F7D-BB28-EAB247560BAF}"
+              p:after="r[@uid='{75D0BCA0-00C2-4A8D-9CA9-FFEA225406E0}']"
+              s:ds="local:/Data/By feature"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B94F4D3BC-A4E9-4A1D-9C7B-924B0CB41925%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-secondary-links-2" />
+            <r
+              uid="{15EF7E71-E501-4EB1-9D1B-FF9FBF230286}"
+              p:after="r[@uid='{9D4E8E3D-37B1-4F7D-BB28-EAB247560BAF}']"
+              s:ds="local:/Data/More speakers"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B94F4D3BC-A4E9-4A1D-9C7B-924B0CB41925%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-secondary-links-2" />
+            <r
+              uid="{70D00ED8-5EE4-431C-9430-F497DBF053E2}"
+              p:after="r[@uid='{15EF7E71-E501-4EB1-9D1B-FF9FBF230286}']"
+              s:ds="local:/Data/Headphones Primary Links"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B3276D5F3-F463-476E-BA7C-7FD1BC9D286B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-primary-links-5" />
+            <r
+              uid="{D0A06FF6-598E-4FA7-BBC8-E04ADB82BAA0}"
+              p:after="r[@uid='{70D00ED8-5EE4-431C-9430-F497DBF053E2}']"
+              s:ds="local:/Data/Amps Primary Links"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B3276D5F3-F463-476E-BA7C-7FD1BC9D286B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-primary-links-6" />
+            <r
+              uid="{87930F29-5DB9-428D-84FA-5D315FF7C04F}"
+              p:after="r[@uid='{D0A06FF6-598E-4FA7-BBC8-E04ADB82BAA0}']"
+              s:ds="local:/Data/Loud for less"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B94F4D3BC-A4E9-4A1D-9C7B-924B0CB41925%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-secondary-links-5" />
+            <r
+              uid="{9599D163-3338-4C4D-B8DC-22D9341ACF97}"
+              p:after="r[@uid='{87930F29-5DB9-428D-84FA-5D315FF7C04F}']"
+              s:ds="local:/Data/By feature"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B94F4D3BC-A4E9-4A1D-9C7B-924B0CB41925%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-secondary-links-5" />
+            <r
+              uid="{A4B757EF-0E92-4811-96A6-1974D5AA3021}"
+              p:after="r[@uid='{9599D163-3338-4C4D-B8DC-22D9341ACF97}']"
+              s:ds="local:/Data/Loud for less"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B94F4D3BC-A4E9-4A1D-9C7B-924B0CB41925%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-secondary-links-6" />
+            <r
+              uid="{E588E519-E740-4C2A-A3A1-2EC6ECD10C14}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/By feature"
+              s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+              s:par="GridParameters=%7BF61E01E9-711A-4C99-AE30-4E28463E1DF7%7D&amp;FieldNames=%7B94F4D3BC-A4E9-4A1D-9C7B-924B0CB41925%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+              s:ph="/headless-header/header-navigation-1/mega-menu-item-secondary-links-6" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250530T122958Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d78cfb74-3491-46e3-8a16-4dc31466d236"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250703T154229Z

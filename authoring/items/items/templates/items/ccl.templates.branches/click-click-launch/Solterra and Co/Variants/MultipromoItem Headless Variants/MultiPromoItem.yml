@@ -1,0 +1,39 @@
+﻿---
+ID: "95c10a45-de9a-4c91-83ac-51049bf51cc3"
+Parent: "cf47757c-28a0-4b53-963f-cbb893b4afac"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Variants/MultipromoItem Headless Variants/MultiPromoItem"
+BranchID: "32d27c84-f820-4f12-ac87-f0070cf319d1"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/window_dialog.png
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8FA02156-662C-442A-9623-968FDEBC31AD}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250131T181202Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4df98e9f-46d2-40be-856e-59780854c2ec"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250131T181202Z

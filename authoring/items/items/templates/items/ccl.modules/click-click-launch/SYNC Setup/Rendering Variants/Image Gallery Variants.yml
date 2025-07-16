@@ -1,0 +1,44 @@
+﻿---
+ID: "e916e661-3054-4227-b53f-9a8b7adb59c6"
+Parent: "072a9495-3c0b-42c6-b3e2-8637ff831261"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: "/sitecore/system/Settings/Project/click-click-launch/SYNC Setup/Rendering Variants/Image Gallery Variants"
+SharedFields:
+- ID: "52c91c75-6698-4701-a8a2-242ace59a8d6"
+  Hint: Location
+  Value: "{C6F65339-F4DA-40FA-88D1-E1ECFFD54B91}"
+- ID: "7868e6bc-525c-4fce-ab8a-77da3e09b171"
+  Hint: Name
+  Value: Image Gallery
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "cd39e025-49bc-4733-854f-4f603276bad8"
+- ID: "e62c28f0-9d3b-46e2-8bec-a5e120542499"
+  Hint: Template
+  Value: "{53BEBF1C-37B4-4DCC-AE5D-79EDAFE689E2}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250528T135956Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e06dae0c-5517-4fa6-a225-4fe36e9ec37c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250529T154836Z
