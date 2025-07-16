@@ -98,8 +98,5 @@ export const Default: React.FC<PageHeaderProps> = ({ fields, params }) => {
       </section>
     );
   }
-  if (isPageEditing) {
-    return <NoDataFallback componentName="PageHeader" />;
-  }
-  return <></>;
+  return <NoDataFallback componentName="PageHeader" />;
 };
