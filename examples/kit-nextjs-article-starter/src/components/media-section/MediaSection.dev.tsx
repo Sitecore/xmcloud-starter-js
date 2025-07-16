@@ -32,7 +32,7 @@ export const Default = ({
   const getImageUrl = useCallback(
     (imageField: ImageField) => {
       const src = imageField?.value?.src;
-      if (page && !page.mode.isNormal && src?.startsWith('/')) {
+      if (!page.mode.isNormal && src?.startsWith('/')) {
         return `${window.location.protocol}//${window.location.hostname}${src}`;
       }
 

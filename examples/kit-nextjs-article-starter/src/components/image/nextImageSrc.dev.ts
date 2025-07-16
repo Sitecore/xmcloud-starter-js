@@ -6,7 +6,7 @@ const getImageUrl = (imageField: ImageField) => {
   const { page } = useSitecore();
   const src = imageField?.value?.src;
 
-  if (page && !page.mode.isNormal && src?.startsWith('/')) {
+  if (!page.mode.isNormal && src?.startsWith('/')) {
     return `${window.location.protocol}//${window.location.hostname}${src}`;
   }
 

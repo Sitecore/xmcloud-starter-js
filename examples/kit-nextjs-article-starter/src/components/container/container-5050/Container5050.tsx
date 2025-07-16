@@ -24,7 +24,7 @@ export const Default: React.FC<Container5050Props> = (props) => {
 
   const { page } = useSitecore();
 
-  const isPageEditing = page?.mode.isEditing || false;
+  const isPageEditing = page.mode.isEditing;
 
   const leftPlaceholders = getContainerPlaceholderProps('container-fifty-left', props.params);
   const rightPlaceholders = getContainerPlaceholderProps('container-fifty-right', props.params);

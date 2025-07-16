@@ -16,7 +16,7 @@ export const Default: React.FC<ContainerFullWidthProps> = (props) => {
 
   const { page } = useSitecore();
 
-  const isPageEditing = page?.mode.isEditing || false;
+  const isPageEditing = page.mode.isEditing;
   const PLACEHOLDER_FRAGMENT = 'container-fullwidth';
   const PLACEHOLDER_NAME = `${PLACEHOLDER_FRAGMENT}-${props.params.DynamicPlaceholderId}`;
   const isEmptyPlaceholder =

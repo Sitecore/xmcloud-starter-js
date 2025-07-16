@@ -11,7 +11,7 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [isExpanding, setIsExpanding] = useState(false);
   const { page } = useSitecore();
-  const isEditMode = isPageEditing || page?.mode.isEditing || false;
+  const isEditMode = isPageEditing || page.mode.isEditing;
 
   if (!fields?.data?.datasource) {
     return <NoDataFallback componentName="VerticalImageAccordion" />;

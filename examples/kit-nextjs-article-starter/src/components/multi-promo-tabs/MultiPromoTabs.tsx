@@ -18,7 +18,7 @@ export const Default: React.FC<MultiPromoTabsProps> = (props) => {
   const { fields, isPageEditing } = props;
 
   const { page } = useSitecore();
-  const isEditMode = isPageEditing || page?.mode.isEditing || false;
+  const isEditMode = isPageEditing || page.mode.isEditing;
 
   const id = useId();
 

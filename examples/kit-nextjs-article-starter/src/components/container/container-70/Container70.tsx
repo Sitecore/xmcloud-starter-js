@@ -21,7 +21,7 @@ export const Default: React.FC<Container70Props> = (props) => {
 
   const { page } = useSitecore();
 
-  const isPageEditing = page?.mode.isEditing || false;
+  const isPageEditing = page.mode.isEditing;
 
   const PLACEHOLDER_FRAGMENT = 'container-seventy';
   const PLACEHOLDER_NAME = `${PLACEHOLDER_FRAGMENT}-${props.params.DynamicPlaceholderId}`;

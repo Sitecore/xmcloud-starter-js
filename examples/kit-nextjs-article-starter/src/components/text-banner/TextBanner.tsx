@@ -10,19 +10,19 @@ import { Default as TextBanerVariant02 } from './TextBanner02.dev';
 // Default display of the component
 export const Default: React.FC<TextBannerProps> = (props) => {
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing ? page?.mode.isEditing : false;
+  const isPageEditing = page.mode.isEditing;
   return <TextBannerDefault {...props} isPageEditing={isPageEditing} />;
 };
 
 // Variants
 export const TextBanner01: React.FC<TextBannerProps> = (props) => {
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing ? page?.mode.isEditing : false;
+  const isPageEditing = page.mode.isEditing;
   return <TextBanerVariant01 {...props} isPageEditing={isPageEditing} />;
 };
 
 export const TextBanner02: React.FC<TextBannerProps> = (props) => {
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing ? page?.mode.isEditing : false;
+  const isPageEditing = page.mode.isEditing;
   return <TextBanerVariant02 {...props} isPageEditing={isPageEditing} />;
 };

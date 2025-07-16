@@ -22,7 +22,7 @@ export const Default: React.FC<MultiPromoProps> = (props) => {
   const [announcement, setAnnouncement] = useState('');
   const carouselRef = useRef<HTMLDivElement>(null);
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing || false;
+  const isPageEditing = page.mode.isEditing;
   // General slide handling
   useEffect(() => {
     if (!api) return;

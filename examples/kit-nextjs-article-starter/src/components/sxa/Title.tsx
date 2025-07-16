@@ -39,13 +39,13 @@ export const Default = (props: TitleProps): JSX.Element => {
   const { page } = useSitecore();
   const datasource = props.fields?.data?.datasource || props.fields?.data?.contextItem;
   const text: TextField = datasource?.field?.jsonValue || {};
-  const isPageEditing = Boolean(page?.mode.isEditing);
+  const isPageEditing = Boolean(page.mode.isEditing);
   const modifyTitleProps = {
     ...text,
     value: text?.value || 'Add Title',
   };
 
-  if (page && !page.mode.isNormal) {
+  if (!page.mode.isNormal) {
     return (
       <div
         className={`component title ${props.params.styles}`}
@@ -66,7 +66,7 @@ export const Default = (props: TitleProps): JSX.Element => {
   return (
     <div className={`component title ${props.params.styles}`} id={props.params.RenderingIdentifier}>
       <div className="component-content">
-        {page?.mode.isEditing ? (
+        {page.mode.isEditing ? (
           <Text
             tag={props.params.tag}
             field={modifyTitleProps}

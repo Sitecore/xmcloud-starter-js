@@ -30,7 +30,7 @@ export const Banner = (props: ImageProps): JSX.Element => {
     return (
       <div className={classNameList}>
         <div className="component-content">
-          {(page && page.mode.isEditing) || !props.fields.TargetUrl?.value?.href ? (
+          {page.mode.isEditing || !props.fields.TargetUrl?.value?.href ? (
             <JssImage field={Image} />
           ) : (
             <JssLink field={TargetUrl}>
@@ -63,7 +63,7 @@ export const Default = (props: ImageProps): JSX.Element => {
     return (
       <div className={classNameList}>
         <div className="component-content">
-          {page?.mode.isEditing ? <JssImage field={modifyImageProps} /> : ''}
+          {page.mode.isEditing ? <JssImage field={modifyImageProps} /> : ''}
         </div>
       </div>
     );

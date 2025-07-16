@@ -10,7 +10,7 @@ import { cn } from 'lib/utils';
 export const Default: React.FC<GlobalFooterProps> = (props) => {
   const { fields, rendering } = props;
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing || false;
+  const isPageEditing = page.mode.isEditing;
 
   const {
     footerCopyright,

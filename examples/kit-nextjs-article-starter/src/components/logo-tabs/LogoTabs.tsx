@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 
 export const Default: React.FC<LogoTabsProps> = ({ fields, isPageEditing: propIsPageEditing }) => {
   const { page } = useSitecore();
-  const isPageEditing = propIsPageEditing || page?.mode.isEditing || false;
+  const isPageEditing = propIsPageEditing || page.mode.isEditing;
   const { title, backgroundImage, logos, logoTabContent } = fields?.data?.datasource ?? {};
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 

@@ -4,28 +4,26 @@ import {
   isContainerPlaceholderEmpty,
 } from '@/components/container/container.util';
 import { cn } from '@/lib/utils';
-import { PlaceholderProps } from '@sitecore-content-sdk/react/types/components/PlaceholderCommon';
 import { ComponentProps } from '@/lib/component-props';
 
 import type { JSX } from 'react';
 
-export type Container6321Props = ComponentProps &
-  PlaceholderProps & {
-    col1?: JSX.Element;
-    col2?: JSX.Element;
-    col3?: JSX.Element;
-    col4?: JSX.Element;
-    col5?: JSX.Element;
-    col6?: JSX.Element;
-    children: Element;
-  };
+export type Container6321Props = ComponentProps & {
+  col1?: JSX.Element;
+  col2?: JSX.Element;
+  col3?: JSX.Element;
+  col4?: JSX.Element;
+  col5?: JSX.Element;
+  col6?: JSX.Element;
+  children: Element;
+};
 
 export const Default: React.FC<Container6321Props> = (props) => {
   const { rendering, col1, col2, col3, col4, col5, col6 } = props;
 
   const { page } = useSitecore();
 
-  const isPageEditing = page?.mode.isEditing || false;
+  const isPageEditing = page.mode.isEditing;
 
   const col1Placeholder = getContainerPlaceholderProps('container-sixty-thirty-one', props.params);
   const col2Placeholder = getContainerPlaceholderProps('container-sixty-thirty-two', props.params);

@@ -22,7 +22,7 @@ export const Default: FC<FooterNavigationColumnProps> = (props) => {
   const { fields } = props;
   const { items, header } = fields.data?.datasource ?? {};
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing || false;
+  const isPageEditing = page.mode.isEditing;
 
   const accordionId = useId();
   const isMobile = useMatchMedia('(max-width: 767px)');

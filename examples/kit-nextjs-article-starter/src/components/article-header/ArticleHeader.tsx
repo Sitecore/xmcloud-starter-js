@@ -90,7 +90,7 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields }) => {
   const [forceCollapse] = useState(true);
   const copyNotificationRef = useRef<HTMLDivElement>(null);
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing || false;
+  const isPageEditing = page.mode.isEditing;
   const { t } = useI18n();
   const dictionary = {
     ARTICLE_HEADER_BACKTONEWS: t(dictionaryKeys.ARTICLE_HEADER_BACKTONEWS),

@@ -9,13 +9,13 @@ import { PromoAnimatedImageRight } from './PromoAnimatedImageRight.dev';
 // Default display of the component
 export const Default: React.FC<PromoAnimatedProps> = (props) => {
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing ? page?.mode.isEditing : false;
+  const isPageEditing = page.mode.isEditing;
   return <PromoAnimatedDefault {...props} isPageEditing={isPageEditing} />;
 };
 
 // Variants
 export const ImageRight: React.FC<PromoAnimatedProps> = (props) => {
   const { page } = useSitecore();
-  const isPageEditing = page?.mode.isEditing ? page?.mode.isEditing : false;
+  const isPageEditing = page.mode.isEditing;
   return <PromoAnimatedImageRight {...props} isPageEditing={isPageEditing} />;
 };

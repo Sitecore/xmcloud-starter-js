@@ -45,7 +45,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
   }
 
   const handleToggleMenu = (event?: React.MouseEvent<HTMLElement>, flag?: boolean): void => {
-    if (event && page?.mode.isEditing) {
+    if (event && page.mode.isEditing) {
       event.preventDefault();
     }
 
@@ -124,7 +124,7 @@ const NavigationList = (props: NavigationProps) => {
       >
         <Link
           field={getLinkField(props)}
-          editable={page?.mode.isEditing}
+          editable={page.mode.isEditing}
           onClick={props.handleClick}
         >
           {getNavigationText(props)}
