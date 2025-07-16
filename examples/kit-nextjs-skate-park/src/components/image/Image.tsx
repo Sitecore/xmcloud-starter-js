@@ -37,7 +37,7 @@ const ImageDefault: React.FC<ImageProps> = ({ params }) => (
 );
 
 export const Banner: React.FC<ImageProps> = ({ params, fields }) => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
   const { styles, RenderingIdentifier: id } = params;
 
   const backgroundStyle = fields?.Image?.value?.src
@@ -55,14 +55,14 @@ export const Banner: React.FC<ImageProps> = ({ params, fields }) => {
   return (
     <div className={`component hero-banner ${styles}`.trim()} id={id}>
       <div className="component-content sc-sxa-image-hero-banner" style={backgroundStyle}>
-        {pageContext.pageEditing && <ContentSdkImage field={imageField} />}
+        {page.mode.isEditing && <ContentSdkImage field={imageField} />}
       </div>
     </div>
   );
 };
 
 export const Default: React.FC<ImageProps> = (props) => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
   const { fields, params } = props;
   const { styles, RenderingIdentifier: id } = params;
 
@@ -71,7 +71,7 @@ export const Default: React.FC<ImageProps> = (props) => {
   }
 
   const Image = () => <ContentSdkImage field={fields.Image} />;
-  const shouldWrapWithLink = !pageContext.pageEditing && fields.TargetUrl?.value?.href;
+  const shouldWrapWithLink = !page.mode.isEditing && fields.TargetUrl?.value?.href;
 
   return (
     <ImageWrapper className={`component image ${styles}`} id={id}>
