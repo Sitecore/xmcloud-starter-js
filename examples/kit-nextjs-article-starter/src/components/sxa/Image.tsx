@@ -46,7 +46,6 @@ export const Banner = (props: ImageProps): JSX.Element => {
 };
 
 export const Default = (props: ImageProps): JSX.Element => {
-  const { page } = useSitecore();
   const { fields, params } = props;
   const sxaStyles = params?.Styles ?? '';
   const classNameList = `component image ${sxaStyles}`.trimEnd();
@@ -65,7 +64,7 @@ export const Default = (props: ImageProps): JSX.Element => {
     return (
       <div className={classNameList}>
         <div className="component-content">
-          {page.mode.isEditing ? <JssImage field={modifyImageProps} /> : ''}
+          <JssImage field={modifyImageProps} />
         </div>
       </div>
     );
