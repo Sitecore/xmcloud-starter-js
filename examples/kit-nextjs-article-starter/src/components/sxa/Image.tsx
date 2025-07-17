@@ -47,19 +47,21 @@ export const Banner = (props: ImageProps): JSX.Element => {
 
 export const Default = (props: ImageProps): JSX.Element => {
   const { page } = useSitecore();
-  const { Image } = props.fields;
-  const sxaStyles = props.params?.Styles ?? '';
+  const { fields, params } = props;
+  const sxaStyles = params?.Styles ?? '';
   const classNameList = `component image ${sxaStyles}`.trimEnd();
 
-  const modifyImageProps = {
-    ...Image,
-    value: {
-      ...Image?.value,
-      alt: Image?.value?.alt || 'image',
-    },
-  };
+  if (fields) {
+    const { Image } = props.fields;
 
-  if (props.fields) {
+    const modifyImageProps = {
+      ...Image,
+      value: {
+        ...Image?.value,
+        alt: Image?.value?.alt || 'image',
+      },
+    };
+
     return (
       <div className={classNameList}>
         <div className="component-content">
