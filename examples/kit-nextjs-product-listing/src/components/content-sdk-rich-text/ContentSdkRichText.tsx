@@ -2,7 +2,7 @@ import { RichText, RichTextProps } from '@sitecore-content-sdk/nextjs';
 
 import type { JSX } from 'react';
 
-const JssRichText = (props: RichTextProps): JSX.Element => {
+const ContentSdkRichText = (props: RichTextProps): JSX.Element => {
   const { field, ...rest } = props;
 
   return (
@@ -12,4 +12,4 @@ const JssRichText = (props: RichTextProps): JSX.Element => {
   );
 };
 
-export default JssRichText;
+export default ContentSdkRichText;

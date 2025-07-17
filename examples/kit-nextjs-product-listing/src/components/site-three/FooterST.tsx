@@ -1,9 +1,9 @@
 import { faFacebook, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  RichText as JssRichText,
-  Text as JssText,
-  Link as JssLink,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
+  Link as ContentSdkLink,
   Field,
   RichTextField,
   LinkField,
@@ -33,7 +33,7 @@ export const Default = (props: FooterSTProps) => {
     >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl lg:text-7xl mb-10 lg:mb-20 uppercase">
-          <JssText field={props.fields.Title} />
+          <ContentSdkText field={props.fields.Title} />
         </h2>
         <div className="max-w-5xl mx-auto mb-6 lg:mb-12 font-(family-name:--font-heading) text-2xl uppercase">
           <Placeholder
@@ -52,18 +52,18 @@ export const Default = (props: FooterSTProps) => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-4 items-center lg:flex-row lg:justify-between">
           <div className="flex justify-center gap-4">
-            <JssLink field={props.fields.FacebookLink} prefetch={false}>
+            <ContentSdkLink field={props.fields.FacebookLink} prefetch={false}>
               <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-            </JssLink>
-            <JssLink field={props.fields.InstagramLink} prefetch={false}>
+            </ContentSdkLink>
+            <ContentSdkLink field={props.fields.InstagramLink} prefetch={false}>
               <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-            </JssLink>
-            <JssLink field={props.fields.LinkedinLink} prefetch={false}>
+            </ContentSdkLink>
+            <ContentSdkLink field={props.fields.LinkedinLink} prefetch={false}>
               <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-            </JssLink>
+            </ContentSdkLink>
           </div>
           <div>
-            <JssRichText field={props.fields.CopyrightText} />
+            <ContentSdkRichText field={props.fields.CopyrightText} />
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ export const LogoLeft = (props: FooterSTProps) => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2">
           <h2 className="text-4xl lg:text-7xl mb-10 lg:mb-0 uppercase">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h2>
           <div className="lg:flex justify-end items-start gap-12">
             <div className="mb-6 lg:mb-0 font-(family-name:--font-heading) uppercase text-2xl">
@@ -100,18 +100,18 @@ export const LogoLeft = (props: FooterSTProps) => {
         </div>
         <div className="flex flex-col gap-4 items-center lg:flex-row lg:justify-between mt-8">
           <div className="flex justify-center gap-4">
-            <JssLink field={props.fields.FacebookLink} prefetch={false}>
+            <ContentSdkLink field={props.fields.FacebookLink} prefetch={false}>
               <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-            </JssLink>
-            <JssLink field={props.fields.InstagramLink} prefetch={false}>
+            </ContentSdkLink>
+            <ContentSdkLink field={props.fields.InstagramLink} prefetch={false}>
               <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-            </JssLink>
-            <JssLink field={props.fields.LinkedinLink} prefetch={false}>
+            </ContentSdkLink>
+            <ContentSdkLink field={props.fields.LinkedinLink} prefetch={false}>
               <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-            </JssLink>
+            </ContentSdkLink>
           </div>
           <div>
-            <JssRichText field={props.fields.CopyrightText} />
+            <ContentSdkRichText field={props.fields.CopyrightText} />
           </div>
         </div>
       </div>
@@ -131,7 +131,7 @@ export const LogoRight = (props: FooterSTProps) => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2">
           <h2 className="lg:order-2 text-4xl lg:text-7xl mb-10 lg:mb-0 lg:text-right uppercase">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h2>
           <div className="lg:flex items-start gap-12">
             <div className="mb-6 lg:mb-0 font-(family-name:--font-heading) uppercase text-2xl">
@@ -150,18 +150,18 @@ export const LogoRight = (props: FooterSTProps) => {
         </div>
         <div className="flex flex-col gap-4 items-center lg:flex-row lg:justify-between mt-8">
           <div className="flex justify-center gap-4">
-            <JssLink field={props.fields.FacebookLink} prefetch={false}>
+            <ContentSdkLink field={props.fields.FacebookLink} prefetch={false}>
               <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-            </JssLink>
-            <JssLink field={props.fields.InstagramLink} prefetch={false}>
+            </ContentSdkLink>
+            <ContentSdkLink field={props.fields.InstagramLink} prefetch={false}>
               <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-            </JssLink>
-            <JssLink field={props.fields.LinkedinLink} prefetch={false}>
+            </ContentSdkLink>
+            <ContentSdkLink field={props.fields.LinkedinLink} prefetch={false}>
               <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-            </JssLink>
+            </ContentSdkLink>
           </div>
           <div>
-            <JssRichText field={props.fields.CopyrightText} />
+            <ContentSdkRichText field={props.fields.CopyrightText} />
           </div>
         </div>
       </div>
@@ -180,7 +180,7 @@ export const Centered = (props: FooterSTProps) => {
       <div className="relative container mx-auto px-4 z-20">
         <div className="grid lg:grid-cols-3 lg:gap-4">
           <h2 className="text-4xl lg:text-5xl mb-10 lg:mb-0 uppercase">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h2>
           <div>
             <div className="mb-6 lg:mb-12 font-(family-name:--font-heading) uppercase text-2xl">
@@ -198,18 +198,18 @@ export const Centered = (props: FooterSTProps) => {
           </div>
           <div className="flex flex-col gap-4 items-center lg:items-end lg:self-end mt-8">
             <div className="flex justify-center gap-4">
-              <JssLink field={props.fields.FacebookLink} prefetch={false}>
+              <ContentSdkLink field={props.fields.FacebookLink} prefetch={false}>
                 <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-              </JssLink>
-              <JssLink field={props.fields.InstagramLink} prefetch={false}>
+              </ContentSdkLink>
+              <ContentSdkLink field={props.fields.InstagramLink} prefetch={false}>
                 <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-              </JssLink>
-              <JssLink field={props.fields.LinkedinLink} prefetch={false}>
+              </ContentSdkLink>
+              <ContentSdkLink field={props.fields.LinkedinLink} prefetch={false}>
                 <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-              </JssLink>
+              </ContentSdkLink>
             </div>
             <div>
-              <JssRichText field={props.fields.CopyrightText} />
+              <ContentSdkRichText field={props.fields.CopyrightText} />
             </div>
           </div>
         </div>

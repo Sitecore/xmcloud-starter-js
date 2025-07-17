@@ -1,6 +1,6 @@
 'use client';
 
-import { Link as JssLink, LinkField } from '@sitecore-content-sdk/nextjs';
+import { Link as ContentSdkLink, LinkField } from '@sitecore-content-sdk/nextjs';
 import { useToggleWithClickOutside } from '@/hooks/useToggleWithClickOutside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ export const MiniCart = ({ cartLink }: { cartLink: LinkField }) => {
 
   return (
     <div ref={ref}>
-      <JssLink
+      <ContentSdkLink
         field={cartLink}
         prefetch={false}
         className="block p-4"
@@ -28,7 +28,7 @@ export const MiniCart = ({ cartLink }: { cartLink: LinkField }) => {
         }}
       >
         <FontAwesomeIcon icon={faShoppingCart} width={24} height={24} />
-      </JssLink>
+      </ContentSdkLink>
 
       <div
         className={`fixed lg:absolute top-14 left-0 right-0 lg:top-full lg:left-0 lg:right-0
@@ -46,9 +46,9 @@ export const MiniCart = ({ cartLink }: { cartLink: LinkField }) => {
           <p className="mb-8">
             {t(DICTIONARY_KEYS.CART_EMPTY_LABEL) || 'Your cart is currently empty.'}
           </p>
-          <JssLink field={cartLink} className="btn btn-primary btn-sharp">
+          <ContentSdkLink field={cartLink} className="btn btn-primary btn-sharp">
             {t(DICTIONARY_KEYS.GO_TO_CART_LABEL) || 'Go to Cart'}
-          </JssLink>
+          </ContentSdkLink>
         </div>
       </div>
     </div>

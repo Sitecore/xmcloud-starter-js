@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import {
-  Text as JssText,
-  NextImage as JssImage,
-  Link as JssLink,
+  Text as ContentSdkText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLTextField } from 'types/igql';
 
@@ -38,18 +38,18 @@ type PromoItemProps = SimplePromoFields & {
 const PromoItem = ({ isHorizontal, ...promo }: PromoItemProps) => {
   return (
     <div className={`grid gap-8 ${isHorizontal ? 'lg:grid-cols-[1fr_2fr]' : ''}`}>
-      <JssImage
+      <ContentSdkImage
         field={promo.image?.jsonValue}
         className="w-full h-full aspect-square object-cover shadow-2xl"
       />
       <div>
         <h4 className="text-xl lg:text-2xl mb-2 uppercase">
-          <JssText field={promo.heading?.jsonValue} />
+          <ContentSdkText field={promo.heading?.jsonValue} />
         </h4>
         <p className="lg:text-lg mb-2">
-          <JssText field={promo.description?.jsonValue} />
+          <ContentSdkText field={promo.description?.jsonValue} />
         </p>
-        <JssLink field={promo.link?.jsonValue} className="btn btn-ghost" />
+        <ContentSdkLink field={promo.link?.jsonValue} className="btn btn-ghost" />
       </div>
     </div>
   );
@@ -68,10 +68,10 @@ export const Default = (props: MultiPromoProps) => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="mb-6 text-2xl lg:text-5xl uppercase">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.description?.jsonValue} />
+            <ContentSdkText field={datasource.description?.jsonValue} />
           </p>
         </div>
         <div className={`${parentBasedGridClasses} ${parentBasedGridItemClasses} mt-12`}>
@@ -94,10 +94,10 @@ export const Stacked = (props: MultiPromoProps) => {
         <div className={`${parentBasedGridClasses}`}>
           <div className="lg:[.multipromo-3-2_&]:col-start-1 lg:[.multipromo-2-3_&]:col-start-2 lg:col-start-2 [.multipromo-2-3_&]:text-right">
             <h2 className="mb-6 text-2xl lg:text-5xl uppercase">
-              <JssText field={datasource.title?.jsonValue} />
+              <ContentSdkText field={datasource.title?.jsonValue} />
             </h2>
             <p className="text-lg">
-              <JssText field={datasource.description?.jsonValue} />
+              <ContentSdkText field={datasource.description?.jsonValue} />
             </p>
           </div>
         </div>
@@ -126,10 +126,10 @@ export const SingleColumn = (props: MultiPromoProps) => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-2xl mb-16">
           <h2 className="mb-6 text-2xl lg:text-5xl uppercase">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.description?.jsonValue} />
+            <ContentSdkText field={datasource.description?.jsonValue} />
           </p>
         </div>
         <div className="grid gap-14">

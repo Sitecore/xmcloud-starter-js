@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import {
-  NextImage as JssImage,
-  Link as JssLink,
-  Text as JssText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+  Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLTextField } from 'src/types/igql';
 import { useEffect, useMemo, useRef, useState, type JSX } from 'react';
@@ -183,7 +183,7 @@ export const Default = (props: CarouselsProps): JSX.Element => {
             >
               {/* Full-size background image */}
               <div className="absolute inset-0 h-full w-full">
-                <JssImage
+                <ContentSdkImage
                   field={slides[currentSlide].slideImage?.jsonValue}
                   className="h-full w-full object-cover"
                 />
@@ -204,13 +204,13 @@ export const Default = (props: CarouselsProps): JSX.Element => {
                   className="p-8 md:p-10"
                 >
                   <h2 className="mb-4 text-3xl font-bold">
-                    <JssText field={slides[currentSlide].title?.jsonValue} />
+                    <ContentSdkText field={slides[currentSlide].title?.jsonValue} />
                   </h2>
                   <p className="mb-6">
-                    <JssText field={slides[currentSlide].bodyText?.jsonValue} />
+                    <ContentSdkText field={slides[currentSlide].bodyText?.jsonValue} />
                   </p>
                   <Button size="lg" className="bold py-3 text-lg" asChild>
-                    <JssLink
+                    <ContentSdkLink
                       field={slides[currentSlide].callToAction?.jsonValue}
                       className="inline-flex items-center py-2 text-lg"
                       prefetch={false}

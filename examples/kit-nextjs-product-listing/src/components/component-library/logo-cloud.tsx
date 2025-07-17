@@ -1,9 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 import {
-  NextImage as JssImage,
-  Link as JssLink,
-  RichText as JssRichText,
-  Text as JssText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { Button } from 'shadcd/components/ui/button';
@@ -48,21 +48,24 @@ export const Default = (props: LogoCloudProps): JSX.Element => {
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold tracking-tigher sm:text-4xl md:text=6xl">
-              <JssText field={props.fields.data.datasource.title?.jsonValue} />
+              <ContentSdkText field={props.fields.data.datasource.title?.jsonValue} />
             </h2>
             <div className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              <JssRichText field={props.fields.data.datasource.bodyText?.jsonValue} />
+              <ContentSdkRichText field={props.fields.data.datasource.bodyText?.jsonValue} />
             </div>
             <div className="flex flex-wrap gap-4">
               {props.fields.data.datasource.link1?.jsonValue?.value?.href || isEditing ? (
                 <Button className="bg-indigo-600 hover:bg-indigo-700 text-white" asChild={true}>
-                  <JssLink field={props.fields.data.datasource.link1?.jsonValue} prefetch={false} />
+                  <ContentSdkLink
+                    field={props.fields.data.datasource.link1?.jsonValue}
+                    prefetch={false}
+                  />
                 </Button>
               ) : null}
               {props.fields.data.datasource.link2?.jsonValue?.value?.href || isEditing ? (
                 <Button variant="link" className="gap-1 group" asChild={true}>
                   <>
-                    <JssLink
+                    <ContentSdkLink
                       field={props.fields.data.datasource.link2?.jsonValue}
                       prefetch={false}
                     />
@@ -77,7 +80,10 @@ export const Default = (props: LogoCloudProps): JSX.Element => {
               return (
                 <div key={index} className="flex items-center justify-center">
                   <div className="flex items-center space-x-2">
-                    <JssImage field={item.logoImage.jsonValue} className="max-h-12 w-auto h-12" />
+                    <ContentSdkImage
+                      field={item.logoImage.jsonValue}
+                      className="max-h-12 w-auto h-12"
+                    />
                   </div>
                 </div>
               );

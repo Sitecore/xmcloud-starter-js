@@ -1,9 +1,9 @@
 import { Button } from 'shadcn/components/ui/button';
 import {
-  Link as JssLink,
-  RichText as JssRichText,
-  Text as JssText,
-  Image as JssImage,
+  Link as ContentSdkLink,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
+  Image as ContentSdkImage,
   ImageField,
   Field,
   LinkField,
@@ -40,11 +40,11 @@ export const CallToAction1 = (props: CTAProps) => {
               <div className="w-full max-w-3xl">
                 <div className="mb-6">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                    <JssText field={props.fields.CTATitle} />
+                    <ContentSdkText field={props.fields.CTATitle} />
                   </h1>
                 </div>
                 <div>
-                  <JssRichText field={props.fields.CTABody} />
+                  <ContentSdkRichText field={props.fields.CTABody} />
                 </div>
               </div>
               <div className="mt-8">
@@ -54,7 +54,7 @@ export const CallToAction1 = (props: CTAProps) => {
                       className="h-14 w-full px-8 text-lg md:h-10 md:w-auto md:px-4 md:text-sm"
                       asChild={true}
                     >
-                      <JssLink field={props.fields.CTALink1} prefetch={false} />
+                      <ContentSdkLink field={props.fields.CTALink1} prefetch={false} />
                     </Button>
                   ) : null}
                   {props.fields.CTALink2?.value?.href || isEditing ? (
@@ -63,14 +63,14 @@ export const CallToAction1 = (props: CTAProps) => {
                       className="h-14 w-full px-8 text-lg md:h-10 md:w-auto md:px-4 md:text-sm"
                       asChild={true}
                     >
-                      <JssLink field={props.fields.CTALink2} prefetch={false} />
+                      <ContentSdkLink field={props.fields.CTALink2} prefetch={false} />
                     </Button>
                   ) : null}
                 </div>
               </div>
               <div className="-z-1 absolute bottom-0 left-0 right-0 top-0">
                 <div className="z-1 position-absolute bottom-0 left-0 right-0 top-0 bg-black/50"></div>
-                <JssImage
+                <ContentSdkImage
                   field={props.fields.CTAImage}
                   className="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover"
                 />
@@ -95,11 +95,11 @@ export const CallToAction2 = (props: CTAProps) => {
             <div>
               <div className="mb-6">
                 <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl md:text-4xl">
-                  <JssText field={props.fields.CTATitle} />
+                  <ContentSdkText field={props.fields.CTATitle} />
                 </h1>
               </div>
               <div>
-                <JssRichText field={props.fields.CTABody} />
+                <ContentSdkRichText field={props.fields.CTABody} />
               </div>
               <div className="mt-8">
                 <div className="align-center grid-cols-1 md:grid-cols-2 flex grid flex-wrap gap-4">
@@ -108,7 +108,7 @@ export const CallToAction2 = (props: CTAProps) => {
                       className="h-14 w-full px-8 text-lg md:h-10 md:w-auto md:px-4 md:text-sm"
                       asChild={true}
                     >
-                      <JssLink field={props.fields.CTALink1} prefetch={false} />
+                      <ContentSdkLink field={props.fields.CTALink1} prefetch={false} />
                     </Button>
                   ) : null}
                   {props.fields.CTALink2?.value?.href || isEditing ? (
@@ -117,14 +117,14 @@ export const CallToAction2 = (props: CTAProps) => {
                       className="h-14 w-full px-8 text-lg md:h-10 md:w-auto md:px-4 md:text-sm"
                       asChild={true}
                     >
-                      <JssLink field={props.fields.CTALink2} prefetch={false} />
+                      <ContentSdkLink field={props.fields.CTALink2} prefetch={false} />
                     </Button>
                   ) : null}
                 </div>
               </div>
             </div>
             <div>
-              <JssImage field={props.fields.CTAImage} />
+              <ContentSdkImage field={props.fields.CTAImage} />
             </div>
           </div>
         </div>
@@ -143,16 +143,16 @@ export const CallToAction3 = (props: CTAProps) => {
         <div className="py-3 md:py-4">
           <div className="grid-rows-auto align-center grid grid-cols-1 items-center gap-20 md:grid-cols-2">
             <div>
-              <JssImage field={props.fields.CTAImage} />
+              <ContentSdkImage field={props.fields.CTAImage} />
             </div>
             <div>
               <div className="mb-6">
                 <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl md:text-4xl">
-                  <JssText field={props.fields.CTATitle} />
+                  <ContentSdkText field={props.fields.CTATitle} />
                 </h1>
               </div>
               <div>
-                <JssRichText field={props.fields.CTABody} />
+                <ContentSdkRichText field={props.fields.CTABody} />
               </div>
               <div className="mt-8">
                 <div className="align-center grid-cols-1 md:grid-cols-2 flex grid flex-wrap gap-4">
@@ -161,7 +161,7 @@ export const CallToAction3 = (props: CTAProps) => {
                       className="h-14 w-full px-8 text-lg md:h-10 md:w-auto md:px-4 md:text-sm"
                       asChild={true}
                     >
-                      <JssLink field={props.fields.CTALink1} prefetch={false} />
+                      <ContentSdkLink field={props.fields.CTALink1} prefetch={false} />
                     </Button>
                   ) : null}
                   {props.fields.CTALink2?.value?.href || isEditing ? (
@@ -170,7 +170,7 @@ export const CallToAction3 = (props: CTAProps) => {
                       className="h-14 w-full px-8 text-lg md:h-10 md:w-auto md:px-4 md:text-sm"
                       asChild={true}
                     >
-                      <JssLink field={props.fields.CTALink2} prefetch={false} />
+                      <ContentSdkLink field={props.fields.CTALink2} prefetch={false} />
                     </Button>
                   ) : null}
                 </div>
@@ -196,13 +196,13 @@ export const CallToAction4 = (props: CTAProps) => {
             {/* Left Column - Title */}
             <div>
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl md:text-4xl">
-                <JssText field={props.fields.CTATitle} />
+                <ContentSdkText field={props.fields.CTATitle} />
               </h1>
             </div>
             {/* Right Column - Body and Buttons */}
             <div>
               <div className="mb-8">
-                <JssRichText field={props.fields.CTABody} />
+                <ContentSdkRichText field={props.fields.CTABody} />
               </div>
               <div className="align-center grid-cols-1 md:grid-cols-2 flex grid flex-wrap gap-4">
                 {props.fields.CTALink1?.value?.href || isEditing ? (
@@ -210,7 +210,7 @@ export const CallToAction4 = (props: CTAProps) => {
                     className="h-14 w-full px-8 text-lg md:h-10 md:w-auto md:px-4 md:text-sm"
                     asChild={true}
                   >
-                    <JssLink field={props.fields.CTALink1} prefetch={false} />
+                    <ContentSdkLink field={props.fields.CTALink1} prefetch={false} />
                   </Button>
                 ) : null}
                 {props.fields.CTALink2?.value?.href || isEditing ? (
@@ -219,7 +219,7 @@ export const CallToAction4 = (props: CTAProps) => {
                     className="h-14 w-full px-8 text-lg md:h-10 md:w-auto md:px-4 md:text-sm"
                     asChild={true}
                   >
-                    <JssLink field={props.fields.CTALink2} prefetch={false} />
+                    <ContentSdkLink field={props.fields.CTALink2} prefetch={false} />
                   </Button>
                 ) : null}
               </div>
@@ -227,7 +227,7 @@ export const CallToAction4 = (props: CTAProps) => {
           </div>
           {/* Row 2: Full-width Image */}
           <div className="w-full">
-            <JssImage field={props.fields.CTAImage} className="w-full h-auto" />
+            <ContentSdkImage field={props.fields.CTAImage} className="w-full h-auto" />
           </div>
         </div>
       </div>

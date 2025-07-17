@@ -1,9 +1,9 @@
 'use client';
 
 import {
-  RichText as JssRichText,
-  Text as JssText,
-  Image as JssImage,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
+  Image as ContentSdkImage,
   ImageField,
   Field,
   RichTextField,
@@ -28,17 +28,17 @@ export const Default = (props: ImageBannerProps) => {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl lg:text-5xl uppercase mb-6">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={props.fields.Body} />
+            <ContentSdkRichText field={props.fields.Body} />
           </div>
         </div>
       </div>
       <div className="container mx-auto sm:px-4">
         <div className="grid grid-cols-3 items-center mt-16">
           <div className="aspect-11/10">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image1}
               width={1920}
               height={1080}
@@ -46,7 +46,7 @@ export const Default = (props: ImageBannerProps) => {
             />
           </div>
           <div className="aspect-9/10">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image2}
               width={1920}
               height={1080}
@@ -54,7 +54,7 @@ export const Default = (props: ImageBannerProps) => {
             />
           </div>
           <div className="aspect-11/10">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image3}
               width={1920}
               height={1080}
@@ -73,16 +73,16 @@ export const Grid = (props: ImageBannerProps) => {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl lg:text-5xl uppercase mb-6">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={props.fields.Body} />
+            <ContentSdkRichText field={props.fields.Body} />
           </div>
         </div>
 
         <div className="grid grid-cols-16 mt-16">
           <div className="aspect-8/3 col-span-9">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image1}
               width={1920}
               height={1080}
@@ -90,7 +90,7 @@ export const Grid = (props: ImageBannerProps) => {
             />
           </div>
           <div className="col-span-7 row-span-2">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image2}
               width={1920}
               height={1080}
@@ -98,7 +98,7 @@ export const Grid = (props: ImageBannerProps) => {
             />
           </div>
           <div className="aspect-4/3 col-span-9">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image3}
               width={1920}
               height={1080}
@@ -117,17 +117,17 @@ export const FullWidthRow = (props: ImageBannerProps) => {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl lg:text-5xl uppercase mb-6">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={props.fields.Body} />
+            <ContentSdkRichText field={props.fields.Body} />
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-24 mt-16">
         <div className="col-span-7 h-64 lg:h-84">
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image1}
             width={1920}
             height={1080}
@@ -135,7 +135,7 @@ export const FullWidthRow = (props: ImageBannerProps) => {
           />
         </div>
         <div className="col-span-10 h-64 lg:h-84">
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image2}
             width={1920}
             height={1080}
@@ -143,7 +143,7 @@ export const FullWidthRow = (props: ImageBannerProps) => {
           />
         </div>
         <div className="col-span-7 h-64 lg:h-84">
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image3}
             width={1920}
             height={1080}
@@ -161,16 +161,16 @@ export const SingleRowGrid = (props: ImageBannerProps) => {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl lg:text-5xl uppercase mb-6">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={props.fields.Body} />
+            <ContentSdkRichText field={props.fields.Body} />
           </div>
         </div>
 
         <div className="grid grid-cols-10 gap-4 mt-16">
           <div className="col-span-3 h-64 lg:h-84 mt-10">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image1}
               width={1920}
               height={1080}
@@ -178,7 +178,7 @@ export const SingleRowGrid = (props: ImageBannerProps) => {
             />
           </div>
           <div className="col-span-4 h-64 lg:h-84">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image2}
               width={1920}
               height={1080}
@@ -186,7 +186,7 @@ export const SingleRowGrid = (props: ImageBannerProps) => {
             />
           </div>
           <div className="col-span-3 h-64 lg:h-84 mt-10">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image3}
               width={1920}
               height={1080}
@@ -205,17 +205,17 @@ export const Stacked = (props: ImageBannerProps) => {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl lg:text-5xl uppercase mb-6">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={props.fields.Body} />
+            <ContentSdkRichText field={props.fields.Body} />
           </div>
         </div>
       </div>
       <div className="container mx-auto sm:px-4">
         <div className="grid grid-cols-12 items-center gap-y-4 sm:gap-y-8 md:gap-y-10 lg:gap-y-16 mt-16">
           <div className="col-span-5 aspect-square">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image1}
               width={1920}
               height={1080}
@@ -223,7 +223,7 @@ export const Stacked = (props: ImageBannerProps) => {
             />
           </div>
           <div className="col-span-6 col-start-7 aspect-square">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image2}
               width={1920}
               height={1080}
@@ -231,7 +231,7 @@ export const Stacked = (props: ImageBannerProps) => {
             />
           </div>
           <div className="col-span-7 col-start-3 aspect-square">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image3}
               width={1920}
               height={1080}
