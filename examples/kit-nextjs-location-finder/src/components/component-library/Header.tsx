@@ -1,9 +1,9 @@
 import { Button } from 'shadcn/components/ui/button';
 import {
-  NextImage as JssImage,
-  Link as JssLink,
-  RichText as JssRichText,
-  Text as JssText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
   ImageField,
   Field,
   LinkField,
@@ -42,7 +42,7 @@ const HeaderTemplate = (props: HeaderTemplateProps) => {
     <section className={`relative py-24 px-4 ${props.params.styles}`} data-class-change>
       {props.withBackgroundImage && (
         <div className="absolute inset-0 h-full w-full z-1">
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image}
             width={800}
             height={800}
@@ -65,15 +65,15 @@ const HeaderTemplate = (props: HeaderTemplateProps) => {
         >
           <div>
             <h6 className="text-xs font-semibold tracking-widest uppercase mb-4">
-              <JssText field={props.fields.Tagline} />
+              <ContentSdkText field={props.fields.Tagline} />
             </h6>
             <h1 className="text-5xl font-medium mb-6">
-              <JssText field={props.fields.Heading} />
+              <ContentSdkText field={props.fields.Heading} />
             </h1>
           </div>
           <div>
             <div className="text-base">
-              <JssRichText field={props.fields.Body} />
+              <ContentSdkRichText field={props.fields.Body} />
             </div>
             {props.withForm ? (
               <div className={`flex w-full ${props.centered ? 'justify-center' : ''} gap-2 mt-8`}>
@@ -83,17 +83,17 @@ const HeaderTemplate = (props: HeaderTemplateProps) => {
                     <Button type="submit">Subscribe</Button>
                   </div>
                   <div className="text-xs mt-3">
-                    <JssRichText field={props.fields.FormDisclaimer} />
+                    <ContentSdkRichText field={props.fields.FormDisclaimer} />
                   </div>
                 </div>
               </div>
             ) : (
               <div className={`flex ${props.centered ? 'justify-center' : ''} gap-4 mt-8`}>
                 <Button asChild={true} variant={'secondary'}>
-                  <JssLink field={props.fields.Link1} prefetch={false} />
+                  <ContentSdkLink field={props.fields.Link1} prefetch={false} />
                 </Button>
                 <Button asChild={true} variant={'outline'}>
-                  <JssLink field={props.fields.Link2} prefetch={false} />
+                  <ContentSdkLink field={props.fields.Link2} prefetch={false} />
                 </Button>
               </div>
             )}
@@ -154,26 +154,26 @@ export const Header9 = (props: HeaderProps) => {
         >
           <div>
             <h6 className="text-xs font-semibold tracking-widest uppercase mb-4">
-              <JssText field={props.fields.Tagline} />
+              <ContentSdkText field={props.fields.Tagline} />
             </h6>
             <h1 className="text-6xl font-medium mb-6">
-              <JssText field={props.fields.Heading} />
+              <ContentSdkText field={props.fields.Heading} />
             </h1>
             <div className="text-lg">
-              <JssRichText field={props.fields.Body} />
+              <ContentSdkRichText field={props.fields.Body} />
             </div>
             <div className={`flex gap-4 mt-8`}>
               <Button asChild={true} variant={'secondary'}>
-                <JssLink field={props.fields.Link1} prefetch={false} />
+                <ContentSdkLink field={props.fields.Link1} prefetch={false} />
               </Button>
               <Button asChild={true} variant={'outline'}>
-                <JssLink field={props.fields.Link2} prefetch={false} />
+                <ContentSdkLink field={props.fields.Link2} prefetch={false} />
               </Button>
             </div>
           </div>
           <div>
             <div className="backdrop-blur-lg p-6 rounded-2xl">
-              <JssImage
+              <ContentSdkImage
                 field={props.fields.Image}
                 width={800}
                 height={800}
@@ -193,23 +193,23 @@ export const Header10 = (props: HeaderProps) => {
       <div className={`container mx-auto`}>
         <div className="max-w-3xl">
           <h6 className="text-xs font-semibold tracking-widest uppercase mb-4">
-            <JssText field={props.fields.Tagline} />
+            <ContentSdkText field={props.fields.Tagline} />
           </h6>
           <h2 className="text-4xl font-bold mb-6">
-            <JssText field={props.fields.Heading} />
+            <ContentSdkText field={props.fields.Heading} />
           </h2>
           <div className="text-base">
-            <JssRichText field={props.fields.Body} />
+            <ContentSdkRichText field={props.fields.Body} />
           </div>
           <div className="flex gap-4 mt-8">
-            <JssLink
+            <ContentSdkLink
               field={props.fields.Link1}
               prefetch={false}
               className="flex items-center gap-2 text-base text-primary font-medium"
             >
               {props.fields.Link1.value.text}
               <FontAwesomeIcon icon={faChevronRight} width={16} height={16} />
-            </JssLink>
+            </ContentSdkLink>
           </div>
         </div>
       </div>

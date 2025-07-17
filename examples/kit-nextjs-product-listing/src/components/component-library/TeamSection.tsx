@@ -1,8 +1,8 @@
 import {
-  NextImage as JssImage,
-  Link as JssLink,
-  RichText as JssRichText,
-  Text as JssText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 import { Button } from 'shadcd/components/ui/button';
@@ -87,7 +87,7 @@ const TeamMemberImage = (props: TeamMemberImageProps) => {
   switch (props.type) {
     case 'circle':
       return (
-        <JssImage
+        <ContentSdkImage
           field={props.image?.jsonValue}
           width={80}
           height={80}
@@ -96,7 +96,7 @@ const TeamMemberImage = (props: TeamMemberImageProps) => {
       );
     case 'rectangle':
       return (
-        <JssImage
+        <ContentSdkImage
           field={props.image?.jsonValue}
           width={400}
           height={300}
@@ -105,7 +105,7 @@ const TeamMemberImage = (props: TeamMemberImageProps) => {
       );
     default:
       return (
-        <JssImage
+        <ContentSdkImage
           field={props.image?.jsonValue}
           width={400}
           height={400}
@@ -119,18 +119,18 @@ const TeamMemberCard = (props: TeamMemberCardProps) => {
   const socialLinks = useMemo(
     () => (
       <div className={`flex ${props.centered ? 'justify-center' : ''} gap-4 mt-6`}>
-        <JssLink field={props.tm.facebook?.jsonValue} prefetch={false}>
+        <ContentSdkLink field={props.tm.facebook?.jsonValue} prefetch={false}>
           <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-        </JssLink>
-        <JssLink field={props.tm.instagram?.jsonValue} prefetch={false}>
+        </ContentSdkLink>
+        <ContentSdkLink field={props.tm.instagram?.jsonValue} prefetch={false}>
           <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-        </JssLink>
-        <JssLink field={props.tm.linkedIn?.jsonValue} prefetch={false}>
+        </ContentSdkLink>
+        <ContentSdkLink field={props.tm.linkedIn?.jsonValue} prefetch={false}>
           <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-        </JssLink>
-        <JssLink field={props.tm.twitterX?.jsonValue} prefetch={false}>
+        </ContentSdkLink>
+        <ContentSdkLink field={props.tm.twitterX?.jsonValue} prefetch={false}>
           <FontAwesomeIcon icon={faXTwitter} width={22} height={22} />
-        </JssLink>
+        </ContentSdkLink>
       </div>
     ),
     [
@@ -153,13 +153,13 @@ const TeamMemberCard = (props: TeamMemberCardProps) => {
           />
           <div>
             <h3 className="text-lg font-bold">
-              <JssText field={props.tm.fullName?.jsonValue} />
+              <ContentSdkText field={props.tm.fullName?.jsonValue} />
             </h3>
             <h6 className="text-lg mb-4">
-              <JssText field={props.tm.jobTitle?.jsonValue} />
+              <ContentSdkText field={props.tm.jobTitle?.jsonValue} />
             </h6>
             <div>
-              <JssRichText field={props.tm.description?.jsonValue} />
+              <ContentSdkRichText field={props.tm.description?.jsonValue} />
             </div>
             {socialLinks}
           </div>
@@ -170,13 +170,13 @@ const TeamMemberCard = (props: TeamMemberCardProps) => {
         <div className={props.centered ? 'text-center' : ''}>
           <TeamMemberImage image={props.tm.image} type={props.imageType} />
           <h3 className="text-lg font-bold mt-6">
-            <JssText field={props.tm.fullName?.jsonValue} />
+            <ContentSdkText field={props.tm.fullName?.jsonValue} />
           </h3>
           <h6 className="text-lg mb-4">
-            <JssText field={props.tm.jobTitle?.jsonValue} />
+            <ContentSdkText field={props.tm.jobTitle?.jsonValue} />
           </h6>
           <div>
-            <JssRichText field={props.tm.description?.jsonValue} />
+            <ContentSdkRichText field={props.tm.description?.jsonValue} />
           </div>
           {socialLinks}
         </div>
@@ -192,13 +192,13 @@ const TeamSectionTemplateVertical = (props: TeamSectionTemplateVerticalProps) =>
       <div className="container mx-auto">
         <div className={`${props.centered ? 'max-w-3xl mx-auto text-center' : ''}`}>
           <h6 className="font-semibold mb-4">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </h6>
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={datasource.text?.jsonValue} />
+            <ContentSdkRichText field={datasource.text?.jsonValue} />
           </div>
         </div>
         <div
@@ -214,13 +214,13 @@ const TeamSectionTemplateVertical = (props: TeamSectionTemplateVerticalProps) =>
         </div>
         <div className={`${props.centered ? 'max-w-3xl mx-auto text-center' : ''}`}>
           <h3 className="text-3xl font-bold mb-4">
-            <JssText field={datasource.heading2?.jsonValue} />
+            <ContentSdkText field={datasource.heading2?.jsonValue} />
           </h3>
           <div className="text-lg">
-            <JssRichText field={datasource.text2?.jsonValue} />
+            <ContentSdkRichText field={datasource.text2?.jsonValue} />
           </div>
           <Button asChild={true} className="mt-8">
-            <JssLink field={datasource.link.jsonValue} prefetch={false} />
+            <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
           </Button>
         </div>
       </div>
@@ -237,16 +237,16 @@ const TeamSectionTemplateHorizontal = (props: TeamSectionTemplateHorizontalProps
         <div className={`grid md:grid-cols-${props.columns + 1} gap-x-16 gap-y-12`}>
           <div>
             <h6 className="font-semibold mb-4">
-              <JssText field={datasource.tagLine?.jsonValue} />
+              <ContentSdkText field={datasource.tagLine?.jsonValue} />
             </h6>
             <h2 className="text-5xl font-bold mb-6">
-              <JssText field={datasource.heading?.jsonValue} />
+              <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>
             <div className="text-lg">
-              <JssRichText field={datasource.text?.jsonValue} />
+              <ContentSdkRichText field={datasource.text?.jsonValue} />
             </div>
             <Button asChild={true} className="mt-8">
-              <JssLink field={datasource.link.jsonValue} prefetch={false} />
+              <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
             </Button>
           </div>
           <div className={`grid md:grid-cols-${props.columns} gap-8 md:col-span-${props.columns}`}>

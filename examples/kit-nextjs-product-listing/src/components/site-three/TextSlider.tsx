@@ -1,4 +1,4 @@
-import { Text as JssText, Field } from '@sitecore-content-sdk/nextjs';
+import { Text as ContentSdkText, Field } from '@sitecore-content-sdk/nextjs';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 interface Fields {
@@ -82,7 +82,7 @@ export const Default = (props: TextSliderProps) => {
                   key={i}
                   className="font-[inherit] [.bg-gradient-secondary_&:nth-child(4n-3)]:text-white [.bg-gradient-secondary_&:nth-child(4n-2)]:text-white"
                 >
-                  {i === 0 ? <JssText field={props.fields.Text} /> : phrase}
+                  {i === 0 ? <ContentSdkText field={props.fields.Text} /> : phrase}
                   <span className="font-[inherit] text-primary">. </span>
                 </span>
               ))}

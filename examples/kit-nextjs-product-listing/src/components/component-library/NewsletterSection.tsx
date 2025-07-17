@@ -1,8 +1,8 @@
 import { Button } from 'shadcn/components/ui/button';
 import {
-  NextImage as JssImage,
-  RichText as JssRichText,
-  Text as JssText,
+  NextImage as ContentSdkImage,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
   ImageField,
   Field,
 } from '@sitecore-content-sdk/nextjs';
@@ -33,7 +33,7 @@ const NewsletterSectionTemplate = (props: NewsletterSectionTemplateProps) => {
     <section className={`relative py-24 px-4 ${props.params.styles}`}>
       {props.withBackgroundImage && (
         <div className="absolute inset-0 h-full w-full z-1">
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image}
             width={800}
             height={800}
@@ -55,13 +55,13 @@ const NewsletterSectionTemplate = (props: NewsletterSectionTemplateProps) => {
         >
           <div>
             <h6 className="font-semibold mb-4">
-              <JssText field={props.fields.Tagline} />
+              <ContentSdkText field={props.fields.Tagline} />
             </h6>
             <h1 className={`${props.withColumns ? 'text-5xl' : 'text-6xl'} font-bold mb-6`}>
-              <JssText field={props.fields.Heading} />
+              <ContentSdkText field={props.fields.Heading} />
             </h1>
             <div className="text-lg">
-              <JssRichText field={props.fields.Body} />
+              <ContentSdkRichText field={props.fields.Body} />
             </div>
             <div className={`flex w-full ${props.centered ? 'justify-center' : ''} gap-2 mt-8`}>
               <div className={`max-w-[30rem]`}>
@@ -70,14 +70,14 @@ const NewsletterSectionTemplate = (props: NewsletterSectionTemplateProps) => {
                   <Button type="submit">Subscribe</Button>
                 </div>
                 <div className="text-xs mt-3">
-                  <JssRichText field={props.fields.FormDisclaimer} />
+                  <ContentSdkRichText field={props.fields.FormDisclaimer} />
                 </div>
               </div>
             </div>
           </div>
           {props.withColumns && (
             <div className="mt-8 lg:mt-0">
-              <JssImage
+              <ContentSdkImage
                 field={props.fields.Image}
                 width={800}
                 height={800}

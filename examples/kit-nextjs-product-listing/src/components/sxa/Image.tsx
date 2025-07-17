@@ -1,8 +1,8 @@
 import {
   Field,
   ImageField,
-  NextImage as JssImage,
-  Link as JssLink,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
   LinkField,
   Text,
   useSitecore,
@@ -53,7 +53,7 @@ export const Banner = (props: ImageProps): JSX.Element => {
       id={id ? id : undefined}
     >
       <div className="component-content sc-sxa-image-hero-banner" style={backgroundStyle}>
-        {isPageEditing ? <JssImage field={modifyImageProps} /> : ''}
+        {isPageEditing ? <ContentSdkImage field={modifyImageProps} /> : ''}
       </div>
     </div>
   );
@@ -64,7 +64,7 @@ export const Default = (props: ImageProps): JSX.Element => {
   const isPageEditing = page.mode.isEditing;
 
   if (props.fields) {
-    const Image = () => <JssImage field={props.fields.Image} />;
+    const Image = () => <ContentSdkImage field={props.fields.Image} />;
     const id = props.params.RenderingIdentifier;
 
     return (
@@ -73,9 +73,9 @@ export const Default = (props: ImageProps): JSX.Element => {
           {isPageEditing || !props.fields.TargetUrl?.value?.href ? (
             <Image />
           ) : (
-            <JssLink field={props.fields.TargetUrl}>
+            <ContentSdkLink field={props.fields.TargetUrl}>
               <Image />
-            </JssLink>
+            </ContentSdkLink>
           )}
           <Text
             tag="span"

@@ -1,8 +1,8 @@
 import {
-  NextImage as JssImage,
-  Link as JssLink,
-  RichText as JssRichText,
-  Text as JssText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
@@ -55,7 +55,7 @@ const ContactCardImage = (props: ContactCardImageProps) => {
     case 'sm':
       return (
         <div className="w-6 h-6">
-          <JssImage
+          <ContentSdkImage
             field={props.contact.image?.jsonValue}
             width={50}
             height={50}
@@ -66,7 +66,7 @@ const ContactCardImage = (props: ContactCardImageProps) => {
     case 'lg':
       return (
         <div className="w-full">
-          <JssImage
+          <ContentSdkImage
             field={props.contact.image?.jsonValue}
             width={500}
             height={500}
@@ -77,7 +77,7 @@ const ContactCardImage = (props: ContactCardImageProps) => {
     default:
       return (
         <div className="w-12 h-12">
-          <JssImage
+          <ContentSdkImage
             field={props.contact.image?.jsonValue}
             width={50}
             height={50}
@@ -95,14 +95,14 @@ const ContactCard = (props: ContactCardProps) => {
   const buttons = useMemo(
     () => (
       <>
-        <JssLink
+        <ContentSdkLink
           field={props.contact.contactLink?.jsonValue}
           className="underline"
           prefetch={false}
         />
         {props.contact.buttonLink?.jsonValue.value.href || isEditing ? (
           <Button variant={'ghost'} className="px-0">
-            <JssLink field={props.contact.buttonLink?.jsonValue} prefetch={false} />
+            <ContentSdkLink field={props.contact.buttonLink?.jsonValue} prefetch={false} />
             <FontAwesomeIcon icon={faChevronRight} width={16} height={16} />
           </Button>
         ) : (
@@ -123,10 +123,10 @@ const ContactCard = (props: ContactCardProps) => {
         >
           <ContactCardImage contact={props.contact} size={'sm'} />
           <h3 className="text-xl font-bold mt-4 mb-2">
-            <JssText field={props.contact.heading?.jsonValue} />
+            <ContentSdkText field={props.contact.heading?.jsonValue} />
           </h3>
           <p className="mb-2 empty:mb-0">
-            <JssText field={props.contact.description?.jsonValue} />
+            <ContentSdkText field={props.contact.description?.jsonValue} />
           </p>
           <div
             className={`grid gap-2 ${
@@ -146,10 +146,10 @@ const ContactCard = (props: ContactCardProps) => {
         >
           <ContactCardImage contact={props.contact} size={'lg'} />
           <h3 className="text-4xl font-bold mt-8 mb-4">
-            <JssText field={props.contact.heading?.jsonValue} />
+            <ContentSdkText field={props.contact.heading?.jsonValue} />
           </h3>
           <p className="mb-6 empty:mb-0">
-            <JssText field={props.contact.description?.jsonValue} />
+            <ContentSdkText field={props.contact.description?.jsonValue} />
           </p>
           <div
             className={`grid gap-2 ${
@@ -166,10 +166,10 @@ const ContactCard = (props: ContactCardProps) => {
           <ContactCardImage contact={props.contact} size={'sm'} />
           <div className="flex flex-col items-start">
             <h3 className="text-xl font-bold mb-2">
-              <JssText field={props.contact.heading?.jsonValue} />
+              <ContentSdkText field={props.contact.heading?.jsonValue} />
             </h3>
             <p className="mb-2 empty:mb-0">
-              <JssText field={props.contact.description?.jsonValue} />
+              <ContentSdkText field={props.contact.description?.jsonValue} />
             </p>
             <div className="grid gap-2 justify-items-start">{buttons}</div>
           </div>
@@ -179,10 +179,10 @@ const ContactCard = (props: ContactCardProps) => {
       return (
         <div className="flex flex-col items-start">
           <h3 className="text-2xl font-bold mb-2">
-            <JssText field={props.contact.heading?.jsonValue} />
+            <ContentSdkText field={props.contact.heading?.jsonValue} />
           </h3>
           <p className="mb-2 empty:mb-0">
-            <JssText field={props.contact.description?.jsonValue} />
+            <ContentSdkText field={props.contact.description?.jsonValue} />
           </p>
           <div className="grid gap-2 justify-items-start">{buttons}</div>
         </div>
@@ -196,10 +196,10 @@ const ContactCard = (props: ContactCardProps) => {
         >
           <ContactCardImage contact={props.contact} size={'md'} />
           <h3 className="text-3xl font-bold mt-6 mb-4">
-            <JssText field={props.contact.heading?.jsonValue} />
+            <ContentSdkText field={props.contact.heading?.jsonValue} />
           </h3>
           <p className="mb-6 empty:mb-0">
-            <JssText field={props.contact.description?.jsonValue} />
+            <ContentSdkText field={props.contact.description?.jsonValue} />
           </p>
           <div
             className={`grid gap-4 ${
@@ -221,13 +221,13 @@ export const Default = (props: ContactSectionProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl">
           <h6 className="font-semibold mb-4">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </h6>
           <h2 className="text-5xl font-bold mb-4">
-            <JssText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={datasource.body?.jsonValue} />
+            <ContentSdkRichText field={datasource.body?.jsonValue} />
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
@@ -248,13 +248,13 @@ export const ContactSection1 = (props: ContactSectionProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h6 className="font-semibold mb-4">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </h6>
           <h2 className="text-5xl font-bold mb-4">
-            <JssText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={datasource.body?.jsonValue} />
+            <ContentSdkRichText field={datasource.body?.jsonValue} />
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
@@ -275,13 +275,13 @@ export const ContactSection2 = (props: ContactSectionProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl">
           <h6 className="font-semibold mb-4">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </h6>
           <h2 className="text-5xl font-bold mb-4">
-            <JssText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={datasource.body?.jsonValue} />
+            <ContentSdkRichText field={datasource.body?.jsonValue} />
           </div>
         </div>
         <div className="grid md:grid-cols-3 gap-x-20 gap-y-12 mt-20">
@@ -291,7 +291,7 @@ export const ContactSection2 = (props: ContactSectionProps): JSX.Element => {
             ))}
           </div>
           <div className="relative md:col-span-2 min-h-80">
-            <JssImage
+            <ContentSdkImage
               field={datasource.image?.jsonValue}
               width={800}
               height={800}
@@ -313,13 +313,13 @@ export const ContactSection3 = (props: ContactSectionProps): JSX.Element => {
         <div className="grid md:grid-cols-5 gap-x-12 gap-y-20">
           <div className="max-w-3xl md:col-span-3">
             <h6 className="font-semibold mb-4">
-              <JssText field={datasource.tagLine?.jsonValue} />
+              <ContentSdkText field={datasource.tagLine?.jsonValue} />
             </h6>
             <h2 className="text-5xl font-bold mb-4">
-              <JssText field={datasource.heading?.jsonValue} />
+              <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>
             <div className="text-lg">
-              <JssRichText field={datasource.body?.jsonValue} />
+              <ContentSdkRichText field={datasource.body?.jsonValue} />
             </div>
           </div>
           <div className="flex flex-col gap-x-8 gap-y-12 md:col-span-2">
@@ -328,7 +328,7 @@ export const ContactSection3 = (props: ContactSectionProps): JSX.Element => {
             ))}
           </div>
         </div>
-        <JssImage
+        <ContentSdkImage
           field={datasource.image?.jsonValue}
           width={800}
           height={800}
@@ -347,13 +347,13 @@ export const ContactSection4 = (props: ContactSectionProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl">
           <h6 className="font-semibold mb-4">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </h6>
           <h2 className="text-5xl font-bold mb-4">
-            <JssText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={datasource.body?.jsonValue} />
+            <ContentSdkRichText field={datasource.body?.jsonValue} />
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
@@ -374,13 +374,13 @@ export const ContactSection5 = (props: ContactSectionProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h6 className="font-semibold mb-4">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </h6>
           <h2 className="text-5xl font-bold mb-4">
-            <JssText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={datasource.body?.jsonValue} />
+            <ContentSdkRichText field={datasource.body?.jsonValue} />
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
@@ -406,13 +406,13 @@ export const ContactSection6 = (props: ContactSectionProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl">
           <h6 className="font-semibold mb-4">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </h6>
           <h2 className="text-5xl font-bold mb-4">
-            <JssText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
           <div className="text-lg">
-            <JssRichText field={datasource.body?.jsonValue} />
+            <ContentSdkRichText field={datasource.body?.jsonValue} />
           </div>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mt-20">
@@ -437,7 +437,7 @@ export const ContactSection6 = (props: ContactSectionProps): JSX.Element => {
                   activeTab !== contact.id ? 'opacity-0' : 'opacity-100'
                 }`}
               >
-                <JssImage
+                <ContentSdkImage
                   field={contact.image.jsonValue}
                   width={800}
                   height={800}

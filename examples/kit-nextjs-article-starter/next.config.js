@@ -102,7 +102,7 @@ const nextConfig = {
         use: ['@sitecore-content-sdk\\nextjs\\component-props-loader'],
       });
     } else {
-      // Force use of CommonJS on the server for FEAAS SDK since JSS also uses CommonJS entrypoint to FEAAS SDK.
+      // Force use of CommonJS on the server for FEAAS SDK since Content SDK also uses CommonJS entrypoint to FEAAS SDK.
       // This prevents issues arising due to FEAAS SDK's dual CommonJS/ES module support on the server (via conditional exports).
       // See https://nodejs.org/api/packages.html#dual-package-hazard.
       config.externals = [
