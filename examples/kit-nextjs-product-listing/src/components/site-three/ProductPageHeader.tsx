@@ -47,10 +47,8 @@ export const Default = (props: ProductPageHeaderProps) => {
     }
   }, [props.fields?.Colors, selectedColor]);
 
-  const productImages =
-    props.fields.Images.length === 2
-      ? [...props.fields.Images, ...props.fields.Images]
-      : props.fields.Images;
+  // Fall back to an empty array until the field populates
+  const productImages = props.fields?.Images ?? [];
 
   return (
     <section
