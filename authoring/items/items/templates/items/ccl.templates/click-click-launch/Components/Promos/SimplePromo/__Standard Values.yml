@@ -3,39 +3,16 @@ ID: "bde3dd92-5e3e-4c1a-8666-f3ee4f488884"
 Parent: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
 Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Promos/SimplePromo/__Standard Values"
+SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "466cddc2-7e6c-423e-87f0-18497b452e76"
 Languages:
 - Language: en
   Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20250214T165012Z
-    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
-      Hint: __Owner
-      Value: |
-        sitecore\Admin
-    - ID: "5c33f772-5806-4ad8-a236-730f1b299531"
-      Hint: heading
-      Value: $name
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\Admin
-    - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
-      Hint: image
-      Value: |
-        <image mediaid="{567F4754-89CD-4DD9-9033-8D6E29B806C7}" />
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "5cf2b3f7-9084-4110-908c-b55545684149"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\Admin
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20250214T165434Z
   - Version: 2
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -58,11 +35,11 @@ Languages:
         <image mediaid="{567F4754-89CD-4DD9-9033-8D6E29B806C7}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5cf2b3f7-9084-4110-908c-b55545684149"
+      Value: "6d3e171c-0ba2-4e92-995e-b3b7e05dbbe5"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\anton.kechashin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250214T165434Z
+      Value: 20250717T133035Z

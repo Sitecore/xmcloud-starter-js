@@ -3,6 +3,13 @@ ID: "28573553-a75e-4b2e-9689-6d59b2ccd3f8"
 Parent: "d2c0babb-51e4-4e13-9305-6a1107962413"
 Template: "d2c0babb-51e4-4e13-9305-6a1107962413"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Promos/Subscription Banner/__Standard Values"
+SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "7386c8d7-874a-4a01-9ad4-fa41146114a1"
 Languages:
 - Language: en
   Versions:
@@ -21,14 +28,14 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c25b0228-fa44-418b-ac89-cd858f77c602"
+      Value: "ad6487e1-efbc-43fc-9fb0-2a996a02f1b5"
     - ID: "a823205f-7781-42e2-914c-2b9b0e65161f"
       Hint: titleRequired
       Value: $name
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\anton.kechashin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250326T151547Z
+      Value: 20250717T133052Z
