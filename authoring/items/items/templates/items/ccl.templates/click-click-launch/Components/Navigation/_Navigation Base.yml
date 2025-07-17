@@ -3,6 +3,13 @@ ID: "e8216a0d-de33-492c-94ec-a0a06aee10e7"
 Parent: "07b61ba9-10d5-470a-8d56-0c0588aef738"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Navigation/_Navigation Base"
+SharedFields:
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "dcd94e4a-9b25-4153-be9a-e8a310266001"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{F1453960-F2C4-4191-AA09-C7F77082A3A4}"
 Languages:
 - Language: en
   Versions:
@@ -21,11 +28,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d7ba3915-cb40-42d5-9718-e4bd50faecca"
+      Value: "6e59af39-5b59-4883-a232-2ffc696902a1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\anton.kechashin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240401T201459Z
+      Value: 20250717T133921Z
