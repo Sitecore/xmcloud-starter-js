@@ -58,8 +58,8 @@ type CtaBannerFields = {
 type CtaBannerProps = ComponentProps & CtaBannerFields & CtaBannerParams;
 
 export const Default: React.FC<CtaBannerProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
   const { fields, params } = props;
 
   if (fields) {
@@ -70,7 +70,7 @@ export const Default: React.FC<CtaBannerProps> = (props) => {
       <section className={ctaBannerVariants({ colorScheme })}>
         <div className="mx-auto w-full max-w-4xl">
           {/* Use Text component with fallback for heading */}
-          <AnimatedSection direction="up" isPageEditing={isPageEditing}>
+          <AnimatedSection direction="up" isPageEditing={isEditing}>
             <Text tag="h2" className={ctaTitleVariants({ colorScheme })} field={titleRequired} />
             <Text
               tag="p"
@@ -81,7 +81,7 @@ export const Default: React.FC<CtaBannerProps> = (props) => {
             {/* Render button with link */}
             {linkOptional && (
               <Button className={ctaButtonVariants({ colorScheme })} asChild>
-                <Link field={linkOptional} editable={isPageEditing} />
+                <Link field={linkOptional} editable={isEditing} />
               </Button>
             )}
           </AnimatedSection>

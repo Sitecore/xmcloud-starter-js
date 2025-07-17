@@ -1507,8 +1507,8 @@ export const FeaturesSection22 = (props: FeatureSectionProps): JSX.Element => {
 };
 
 export const FeaturesSection23 = (props: FeatureSectionProps): JSX.Element => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
   const id = props.params.RenderingIdentifier;
@@ -1550,7 +1550,7 @@ export const FeaturesSection23 = (props: FeatureSectionProps): JSX.Element => {
                     type="MSCardSmall"
                     className={`h-full fade-section fade-side ${isVisibleGrid ? 'is-visible' : ''}`}
                     style={
-                      !isPageEditing
+                      !isEditing
                         ? {
                             transform: `translateX(${index * 200}px)`,
                           }
@@ -1572,8 +1572,8 @@ export const FeaturesSection23 = (props: FeatureSectionProps): JSX.Element => {
 };
 
 export const FeaturesSection24 = (props: FeatureSectionProps): JSX.Element => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
   const id = props.params.RenderingIdentifier;
@@ -1614,7 +1614,7 @@ export const FeaturesSection24 = (props: FeatureSectionProps): JSX.Element => {
                   type="MSCardSmallIcon"
                   className={`h-full fade-section fade-side ${isVisibleGrid ? 'is-visible' : ''}`}
                   style={
-                    !isPageEditing
+                    !isEditing
                       ? {
                           transform: `translateX(${index * 200}px)`,
                         }

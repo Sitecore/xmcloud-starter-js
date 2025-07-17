@@ -1,11 +1,6 @@
 import { useContext } from 'react';
 import { cn } from '@/lib/utils';
-import {
-  ImageField,
-  Image as JssImage,
-  LayoutServicePageState,
-  useSitecore,
-} from '@sitecore-content-sdk/nextjs';
+import { ImageField, Image as JssImage, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ImageOptimizationContext } from '@/components/image/image-optimization.context';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
@@ -26,15 +21,14 @@ type ImageWrapperProps = {
 
 export const Default: React.FC<ImageWrapperProps> = (props) => {
   const { image, className, wrapperClass, sizes, ...rest } = props;
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
-  const isPreview = pageContext?.pageState === LayoutServicePageState.Preview;
+  const { page } = useSitecore();
+  const { isEditing, isPreview } = page.mode;
 
   const { unoptimized } = useContext(ImageOptimizationContext);
   const ref = useRef(null);
   const inView = useInView(ref);
 
-  if (!isPageEditing && !image?.value?.src) {
+  if (!isEditing && !image?.value?.src) {
     console.debug('image not found', image);
     return <></>;
   }
@@ -52,7 +46,7 @@ export const Default: React.FC<ImageWrapperProps> = (props) => {
 
   return (
     <div className={cn('image-container', wrapperClass)}>
-      {isPageEditing || isPreview || isSvg ? (
+      {isEditing || isPreview || isSvg ? (
         <JssImage field={image} className={className} />
       ) : (
         <NextImage

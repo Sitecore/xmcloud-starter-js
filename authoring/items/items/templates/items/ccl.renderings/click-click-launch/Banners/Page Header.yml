@@ -14,30 +14,26 @@ SharedFields:
   Hint: ComponentQuery
   Value: |
     query PageHeader($datasource: String!,$contextItem: String!, $language: String!) {
-      externalFields : item(path: $contextItem, language:$language) {
-        ... on Page {
-          pageTitle {
-            jsonValue
-          }
-          pageHeaderTitle {
-            jsonValue
-          }
-          pageSubtitle {
-            jsonValue
-          }
+      externalFields: item(path: $contextItem, language:$language) {
+        pageTitle: field(name: "pageTitle") {
+          jsonValue
+        }
+        pageHeaderTitle: field(name: "pageHeaderTitle") {
+          jsonValue
+        }
+        pageSubtitle: field(name: "pageSubtitle") {
+          jsonValue
         }
       }
       datasource: item(path: $datasource, language: $language) {
-        ... on PageHeader {
-          imageRequired {
-            jsonValue
-          }
-          link1 {
-            jsonValue
-          }
-          link2{
-            jsonValue
-          }
+        imageRequired: field(name: "imageRequired") {
+          jsonValue
+        }
+        link1: field(name: "link1") {
+          jsonValue
+        }
+        link2: field(name: "link2") {
+          jsonValue
         }
       }
     }

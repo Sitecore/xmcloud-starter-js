@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
-import { useSitecore, ImageField, LayoutServicePageState } from '@sitecore-content-sdk/nextjs';
+import { useSitecore, ImageField } from '@sitecore-content-sdk/nextjs';
 import { getImageProps } from 'next/image';
 import { cn } from '@/lib/utils';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
@@ -38,17 +38,18 @@ export const Default = ({
   const [imgSrc, setImgSrc] = useState({ src: '', width: 0, height: 0 });
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
+  const { mode } = page;
   const getImageUrl = useCallback(
     (imageField: ImageField) => {
       const src = imageField?.value?.src;
-      if (pageContext?.pageState !== LayoutServicePageState.Normal && src?.startsWith('/')) {
+      if (!mode.isNormal && src?.startsWith('/')) {
         return `${window.location.protocol}//${window.location.hostname}${src}`;
       }
 
       return src ? `${src.replace('http://cm/', '/')}` : '';
     },
-    [pageContext]
+    [mode]
   );
   useEffect(() => {
     if (!elementRef.current) return;
@@ -87,7 +88,7 @@ export const Default = ({
         vidEl?.pause();
       }
     }
-  }, [image, isIntersecting, pageContext, getImageUrl, pause, elementRef]);
+  }, [image, isIntersecting, getImageUrl, pause, elementRef]);
 
   if (!video && !image) return null;
 

@@ -18,7 +18,8 @@ export const Default: React.FC<MultiPromoTabsProps> = (props) => {
   const [activeTab, setActiveTab] = useState(0);
   const { fields } = props;
 
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   const id = useId();
 
@@ -82,7 +83,7 @@ export const Default: React.FC<MultiPromoTabsProps> = (props) => {
           <AnimatePresence mode="wait">
             {tabItems.map((item, index) => (
               <TabsContent key={index} value={index.toString()}>
-                <PromoTab {...item} isEditMode={pageContext?.pageEditing ?? false} />
+                <PromoTab {...item} isEditMode={isPageEditing} />
               </TabsContent>
             ))}
           </AnimatePresence>

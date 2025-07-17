@@ -20,7 +20,7 @@ type ImageProps = {
 };
 
 export const Banner = (props: ImageProps): JSX.Element => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
   const { Image } = props.fields;
   const { TargetUrl } = props.fields;
   const sxaStyles = props.params?.Styles ?? '';
@@ -30,7 +30,7 @@ export const Banner = (props: ImageProps): JSX.Element => {
     return (
       <div className={classNameList}>
         <div className="component-content">
-          {pageContext?.pageState === 'edit' || !props.fields.TargetUrl?.value?.href ? (
+          {page.mode.isEditing || !props.fields.TargetUrl?.value?.href ? (
             <JssImage field={Image} />
           ) : (
             <JssLink field={TargetUrl}>
@@ -46,7 +46,7 @@ export const Banner = (props: ImageProps): JSX.Element => {
 };
 
 export const Default = (props: ImageProps): JSX.Element => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
   const { Image } = props.fields;
   const sxaStyles = props.params?.Styles ?? '';
   const classNameList = `component image ${sxaStyles}`.trimEnd();
@@ -63,7 +63,7 @@ export const Default = (props: ImageProps): JSX.Element => {
     return (
       <div className={classNameList}>
         <div className="component-content">
-          {pageContext?.pageEditing ? <JssImage field={modifyImageProps} /> : ''}
+          {page.mode.isEditing ? <JssImage field={modifyImageProps} /> : ''}
         </div>
       </div>
     );

@@ -46,8 +46,8 @@ interface VerticalImageAccordionProps extends ComponentProps {
 export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageEditing }) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [isExpanding, setIsExpanding] = useState(false);
-  const { pageContext } = useSitecore();
-  const isEditMode = isPageEditing || pageContext?.pageEditing || false;
+  const { page } = useSitecore();
+  const isEditMode = isPageEditing || page.mode.isEditing;
 
   if (!fields?.data?.datasource) {
     return <NoDataFallback componentName="VerticalImageAccordion" />;

@@ -12,8 +12,8 @@ import { dictionaryKeys } from '@/variables/dictionary';
 
 // Default display of the component
 export const Default: React.FC<GlobalFooterProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
   const { t } = useI18n();
   const dictionary = {
     FOOTER_EmailSubmitLabel: t(dictionaryKeys.FOOTER_EmailSubmitLabel),
@@ -23,13 +23,13 @@ export const Default: React.FC<GlobalFooterProps> = (props) => {
   };
   props.fields.dictionary = dictionary;
 
-  return <GlobalFooterDefault {...props} isPageEditing={isPageEditing} />;
+  return <GlobalFooterDefault {...props} isPageEditing={isEditing} />;
 };
 
 // Variants
 export const BlackCompactVariant: React.FC<GlobalFooterProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
   const { t } = useI18n();
   const dictionary = {
     FOOTER_EmailSubmitLabel: t(dictionaryKeys.FOOTER_EmailSubmitLabel),
@@ -39,12 +39,12 @@ export const BlackCompactVariant: React.FC<GlobalFooterProps> = (props) => {
   };
   props.fields.dictionary = dictionary;
 
-  return <GlobalFooterBlackCompact {...props} isPageEditing={isPageEditing} />;
+  return <GlobalFooterBlackCompact {...props} isPageEditing={isEditing} />;
 };
 
 export const BlackLargeVariant: React.FC<GlobalFooterProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
   const { t } = useI18n();
   const dictionary = {
     FOOTER_EmailSubmitLabel: t(dictionaryKeys.FOOTER_EmailSubmitLabel),
@@ -54,12 +54,12 @@ export const BlackLargeVariant: React.FC<GlobalFooterProps> = (props) => {
   };
   props.fields.dictionary = dictionary;
 
-  return <GlobalFooterBlackLarge {...props} isPageEditing={isPageEditing} />;
+  return <GlobalFooterBlackLarge {...props} isPageEditing={isEditing} />;
 };
 
 export const BlueCenteredVariant: React.FC<GlobalFooterProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
   const { t } = useI18n();
   const dictionary = {
     FOOTER_EmailSubmitLabel: t(dictionaryKeys.FOOTER_EmailSubmitLabel),
@@ -69,12 +69,12 @@ export const BlueCenteredVariant: React.FC<GlobalFooterProps> = (props) => {
   };
   props.fields.dictionary = dictionary;
 
-  return <GlobalFooterBlueCentered {...props} isPageEditing={isPageEditing} />;
+  return <GlobalFooterBlueCentered {...props} isPageEditing={isEditing} />;
 };
 
 export const BlueCompactVariant: React.FC<GlobalFooterProps> = (props) => {
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
   const { t } = useI18n();
   const dictionary = {
     FOOTER_EmailSubmitLabel: t(dictionaryKeys.FOOTER_EmailSubmitLabel),
@@ -84,5 +84,5 @@ export const BlueCompactVariant: React.FC<GlobalFooterProps> = (props) => {
   };
   props.fields.dictionary = dictionary;
 
-  return <GlobalFooterBlueCompact {...props} isPageEditing={isPageEditing} />;
+  return <GlobalFooterBlueCompact {...props} isPageEditing={isEditing} />;
 };

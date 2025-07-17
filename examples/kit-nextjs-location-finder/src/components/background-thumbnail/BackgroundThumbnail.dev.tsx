@@ -7,10 +7,10 @@ import { cn } from '@/lib/utils';
 
 export const Default: React.FC<BackgroundThumbailProps> = (props) => {
   const { children } = props;
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
-  return isPageEditing ? (
+  return isEditing ? (
     <div
       className={cn(
         'bg-primary absolute bottom-4 right-4 rounded-md opacity-50 ring-4 ring-offset-2 hover:opacity-100'

@@ -11,11 +11,11 @@ type PageContentProps = {
 };
 
 export const Default = (props: PageContentProps): JSX.Element => {
-  const { pageContext } = useSitecore();
+  const { page } = useSitecore();
   const sxaStyles = props.params?.Styles ?? '';
   const id = props.params?.RenderingIdentifier ?? null;
 
-  if (!(props.fields && props.fields.Content) && !pageContext?.route?.fields?.Content) {
+  if (!(props.fields && props.fields.Content) && !page?.layout.sitecore.route?.fields?.Content) {
     return (
       <div className={`component page-content ${sxaStyles}`} id={id ? id : undefined}>
         <div className="component-content">
@@ -32,7 +32,7 @@ export const Default = (props: PageContentProps): JSX.Element => {
           field={
             (props.fields && props.fields.Content
               ? props.fields.Content
-              : pageContext?.route?.fields?.Content) as RichTextField
+              : page?.layout.sitecore.route?.fields?.Content) as RichTextField
           }
           className="field-content"
         />

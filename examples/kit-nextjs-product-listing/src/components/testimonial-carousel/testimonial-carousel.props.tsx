@@ -27,6 +27,5 @@ type TestimonialCarouselFields = {
 export type TestimonialCarouselProps = ComponentProps &
   TestimonialCarouselFields & {
     name: string;
-    pageContext: object;
     Testimonials: React.Component[];
   };

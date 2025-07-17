@@ -7,8 +7,8 @@ import { cn } from '@/lib/utils';
 
 export const Default: React.FC<BackgroundThumbailProps> = (props) => {
   const { children } = props;
-  const { pageContext } = useSitecore();
-  const isPageEditing = pageContext?.pageEditing ?? false;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return isPageEditing ? (
     <div

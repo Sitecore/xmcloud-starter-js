@@ -7,28 +7,30 @@ import {
   ComponentPropsContext,
   SitecorePageProps,
   StaticPath,
+  SiteInfo,
 } from '@sitecore-content-sdk/nextjs';
 import { extractPath, handleEditorFastRefresh } from '@sitecore-content-sdk/nextjs/utils';
 import { isDesignLibraryPreviewData } from '@sitecore-content-sdk/nextjs/editing';
 import client from 'lib/sitecore-client';
 import components from '.sitecore/component-map';
 import scConfig from 'sitecore.config';
+import sites from '.sitecore/sites.json';
 
-const SitecorePage = ({ notFound, componentProps, layout }: SitecorePageProps): JSX.Element => {
+const SitecorePage = ({ notFound, componentProps, page }: SitecorePageProps): JSX.Element => {
   useEffect(() => {
     // Since Sitecore Editor does not support Fast Refresh, need to refresh editor chromes after Fast Refresh finished
     handleEditorFastRefresh();
   }, []);
 
-  if (notFound || !layout.sitecore.route) {
+  if (notFound || !page) {
     // Shouldn't hit this (as long as 'notFound' is being returned below), but just to be safe
     return <NotFound />;
   }
 
   return (
     <ComponentPropsContext value={componentProps || {}}>
-      <SitecoreProvider componentMap={components} layoutData={layout} api={scConfig.api}>
-        <Layout layoutData={layout} />
+      <SitecoreProvider componentMap={components} page={page} api={scConfig.api}>
+        <Layout page={page} />
       </SitecoreProvider>
     </ComponentPropsContext>
   );
@@ -48,12 +50,12 @@ export const getStaticPaths: GetStaticPaths = async (context) => {
   let paths: StaticPath[] = [];
   let fallback: boolean | 'blocking' = 'blocking';
 
-  if (
-    process.env.NODE_ENV !== 'development' &&
-    process.env.DISABLE_SSG_FETCH?.toLowerCase() !== 'true'
-  ) {
+  if (process.env.NODE_ENV !== 'development' && scConfig.generateStaticPaths) {
     try {
-      paths = await client.getPagePaths(context?.locales || []);
+      paths = await client.getPagePaths(
+        sites.map((site: SiteInfo) => site.name),
+        context?.locales || []
+      );
     } catch (error) {
       console.log('Error occurred while fetching static paths');
       console.log(error);
@@ -85,8 +87,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
   if (page) {
     props = {
-      ...page,
-      dictionary: await client.getDictionary({ site: page.site?.name, locale: page.locale }),
+      page,
+      dictionary: await client.getDictionary({ site: page.siteName, locale: page.locale }),
       componentProps: await client.getComponentData(page.layout, context, components),
     };
   }

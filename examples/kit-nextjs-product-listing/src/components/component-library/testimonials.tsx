@@ -58,8 +58,8 @@ type TestimonialCardProps = {
 };
 
 const StarRating = ({ r: ratingField }: { r: IGQLTextField }) => {
-  const { pageContext } = useSitecore();
-  const isEditing = pageContext.pageEditing;
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
 
   const rating = Math.min(Number(ratingField.jsonValue?.value) || 0, 5);
   const filledStars = Array.from({ length: rating }, (_, index) => (
