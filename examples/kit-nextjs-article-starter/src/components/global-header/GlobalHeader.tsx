@@ -87,7 +87,7 @@ export const Default: React.FC<GlobalHeaderProps> = (props) => {
                             <Button
                               variant="ghost"
                               asChild
-                              className="font-body text-base font-medium"
+                              className="font-body text-base font-medium text-black"
                             >
                               <Link href={item.link.jsonValue.value.href as string}>
                                 {item.link.jsonValue.value.text}
