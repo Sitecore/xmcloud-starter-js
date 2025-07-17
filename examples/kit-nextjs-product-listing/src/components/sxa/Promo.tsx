@@ -52,7 +52,11 @@ export const Default = (props: PromoProps): JSX.Element => {
               className="text-3xl font-bold mb-4"
               field={props.fields.PromoText}
             />
-            <ContentSdkRichText tag="div" className="text-base mb-4" field={props.fields.PromoText2} />
+            <ContentSdkRichText
+              tag="div"
+              className="text-base mb-4"
+              field={props.fields.PromoText2}
+            />
           </div>
           <Button
             variant="default"
