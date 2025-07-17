@@ -49,8 +49,8 @@ interface ZipcodeSearchFormProps {
 export const Default: React.FC<ZipcodeSearchFormProps> = ({
   onSubmit = (values) => console.log(values),
   defaultZipcode = '',
-  buttonText = 'Find Availability',
-  placeholder = 'Enter your zip code',
+  buttonText,
+  placeholder,
 }) => {
   const form = useForm<ZipcodeFormValues>({
     resolver: zodResolver(zipcodeFormSchema),
@@ -77,14 +77,14 @@ export const Default: React.FC<ZipcodeSearchFormProps> = ({
               <FormItem className="min-w-51 mt-0 flex-shrink basis-64 space-y-0">
                 <FormLabel className="sr-only">Enter your zip code</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder={placeholder} {...field} />
+                  <Input type="tel" placeholder={placeholder || 'Enter your zip code'} {...field} />
                 </FormControl>
                 <FormMessage className="absolute top-[100%] pt-1 text-[#ff5252]" />
               </FormItem>
             )}
           />
           <Button type="submit" className="flex-shrink-0">
-            {buttonText}
+            {buttonText || 'Find Availability'}
           </Button>
         </form>
       </div>
