@@ -2,7 +2,7 @@ import { Text } from '@sitecore-content-sdk/nextjs';
 import React, { useState } from 'react';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
-import { ProductListingProps, ProductItemProps } from './product-listing.props';
+import { ProductListingProps } from './product-listing.props';
 import { ProductListingCard } from './ProductListingCard.dev';
 import { useMatchMedia } from '@/hooks/use-match-media';
 import { cn } from '@/lib/utils';
@@ -31,11 +31,9 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
       }
     };
     products?.targetItems.splice(3);
-    // Split products into two columns
-    const leftColumnProducts =
-      products?.targetItems?.filter((_: ProductItemProps, index: number) => index % 2 === 1) || [];
-    const rightColumnProducts =
-      products?.targetItems?.filter((_: ProductItemProps, index: number) => index % 2 === 0) || [];
+    // Split products: first product goes to left column, next two to right column
+    const leftColumnProducts = products?.targetItems?.slice(0, 1) || [];
+    const rightColumnProducts = products?.targetItems?.slice(1, 3) || [];
     return (
       <div
         className={cn('@container transform-gpu border-b-2 border-t-2 [.border-b-2+&]:border-t-0', {
@@ -43,26 +41,26 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
         })}
       >
         <div className="@md:px-6 @md:py-20 @lg:py-28 mx-auto max-w-screen-xl px-4 py-12">
-          <AnimatedSection
-            direction="down"
-            duration={400}
-            reducedMotion={isReducedMotion}
-            className="@md:items-end @md:flex-row mb-16 flex flex-col items-start justify-between"
-            isPageEditing={isPageEditing}
-          >
-            <div>
-              <Text
-                tag="h2"
-                className="@md:text-5xl @md:w-1/2 w-full text-pretty text-7xl font-light tracking-tight antialiased"
-                field={title?.jsonValue}
-              />
-            </div>
-          </AnimatedSection>
-
           <div className="@md:grid-cols-2 @md:gap-[68px] grid grid-cols-1 gap-[40px]">
-            {/* Left column - offset by 50% */}
+            {/* Title positioned in top-left */}
+            <div className="@md:col-span-1 @md:row-span-1">
+              <AnimatedSection
+                direction="down"
+                duration={400}
+                reducedMotion={isReducedMotion}
+                className="mb-16"
+                isPageEditing={isPageEditing}
+              >
+                <Text
+                  tag="h2"
+                  className="@md:text-5xl w-full text-pretty text-7xl font-light tracking-tight antialiased"
+                  field={title?.jsonValue}
+                />
+              </AnimatedSection>
+            </div>
+            {/* Left column */}
             {leftColumnProducts.length > 0 && (
-              <div className="@md:mt-0 @md:gap-[60px] flex flex-col gap-[40px]">
+              <div className="@md:col-span-1 @md:row-span-2 @md:row-start-2">
                 {leftColumnProducts.map((product, index) => (
                   <AnimatedSection
                     key={JSON.stringify(`${product.productName}-${index}`)}
@@ -90,9 +88,10 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
                 ))}
               </div>
             )}
-            {/* right column */}
+
+            {/* Right column */}
             {rightColumnProducts.length > 0 && (
-              <div className="@md:gap-[60px] flex flex-col gap-[40px]">
+              <div className="@md:col-span-1 @md:row-span-2 @md:grid @md:grid-rows-2 @md:gap-[60px] flex flex-col gap-[40px]">
                 {rightColumnProducts.map((product, index) => (
                   <AnimatedSection
                     key={JSON.stringify(`${product.productName}-${index}`)}
