@@ -47,18 +47,13 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
             direction="down"
             duration={400}
             reducedMotion={isReducedMotion}
-            className="@md:items-end @md:flex-row mb-8 flex flex-col items-start justify-between"
+            className="@md:items-end @md:flex-row mb-16 flex flex-col items-start justify-between"
             isPageEditing={isPageEditing}
           >
             <div>
               <Text
                 tag="h2"
-                className={cn(
-                  '@md:text-5xl @md:w-1/2 w-full text-pretty text-7xl font-light tracking-tight antialiased',
-                  {
-                    ' @md:absolute': leftColumnProducts.length >= 1, //if there is 1 product.
-                  }
-                )}
+                className="@md:text-5xl @md:w-1/2 w-full text-pretty text-7xl font-light tracking-tight antialiased"
                 field={title?.jsonValue}
               />
             </div>
@@ -67,7 +62,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
           <div className="@md:grid-cols-2 @md:gap-[68px] grid grid-cols-1 gap-[40px]">
             {/* Left column - offset by 50% */}
             {leftColumnProducts.length > 0 && (
-              <div className="@md:mt-1/2 @md:gap-[60px] flex flex-col gap-[40px]">
+              <div className="@md:mt-0 @md:gap-[60px] flex flex-col gap-[40px]">
                 {leftColumnProducts.map((product, index) => (
                   <AnimatedSection
                     key={JSON.stringify(`${product.productName}-${index}`)}
