@@ -6,7 +6,7 @@ const ContentSdkRichText = (props: RichTextProps): JSX.Element => {
   const { field, ...rest } = props;
 
   return (
-    <div className="jss-rich-text">
+    <div className="content-sdk-rich-text">
       <RichText field={field} {...rest} />
     </div>
   );

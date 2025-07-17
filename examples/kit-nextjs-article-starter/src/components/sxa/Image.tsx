@@ -4,85 +4,71 @@ import {
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
   LinkField,
-  Text,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
-import React, { CSSProperties } from 'react';
-import { ComponentProps } from 'lib/component-props';
+import React, { JSX } from 'react';
 
-interface ImageFields {
-  Image: ImageField;
+interface Fields {
+  Image: ImageField & { metadata?: { [key: string]: unknown } };
   ImageCaption: Field<string>;
   TargetUrl: LinkField;
 }
 
-interface ImageProps extends ComponentProps {
-  fields: ImageFields;
-}
-
-const ImageWrapper: React.FC<{ className: string; id?: string; children: React.ReactNode }> = ({
-  className,
-  id,
-  children,
-}) => (
-  <div className={className.trim()} id={id}>
-    <div className="component-content">{children}</div>
-  </div>
-);
-
-const ImageDefault: React.FC<ImageProps> = ({ params }) => (
-  <ImageWrapper className={`component image ${params.styles}`}>
-    <span className="is-empty-hint">Image</span>
-  </ImageWrapper>
-);
-
-export const Banner: React.FC<ImageProps> = ({ params, fields }) => {
-  const { page } = useSitecore();
-  const { styles, RenderingIdentifier: id } = params;
-
-  const backgroundStyle = fields?.Image?.value?.src
-    ? ({ backgroundImage: `url('${fields.Image.value.src}')` } as CSSProperties)
-    : {};
-
-  const imageField = fields.Image && {
-    ...fields.Image,
-    value: {
-      ...fields.Image.value,
-      style: { width: '100%', height: '100%' },
-    },
-  };
-
-  return (
-    <div className={`component hero-banner ${styles}`.trim()} id={id}>
-      <div className="component-content sc-sxa-image-hero-banner" style={backgroundStyle}>
-        {page.mode.isEditing && <ContentSdkImage field={imageField} />}
-      </div>
-    </div>
-  );
+type ImageProps = {
+  params: { [key: string]: string };
+  fields: Fields;
 };
 
-export const Default: React.FC<ImageProps> = (props) => {
+export const Banner = (props: ImageProps): JSX.Element => {
   const { page } = useSitecore();
-  const { fields, params } = props;
-  const { styles, RenderingIdentifier: id } = params;
+  const { Image } = props.fields;
+  const { TargetUrl } = props.fields;
+  const sxaStyles = props.params?.Styles ?? '';
+  const classNameList = `component image ${sxaStyles}`.trimEnd();
 
-  if (!fields) {
-    return <ImageDefault {...props} />;
+  if (Image?.value && Image?.value.src) {
+    return (
+      <div className={classNameList}>
+        <div className="component-content">
+          {page.mode.isEditing || !props.fields.TargetUrl?.value?.href ? (
+            <ContentSdkImage field={Image} />
+          ) : (
+            <ContentSdkLink field={TargetUrl}>
+              <ContentSdkImage field={Image} />
+            </ContentSdkLink>
+          )}
+        </div>
+      </div>
+    );
   }
 
-  const Image = () => <ContentSdkImage field={fields.Image} />;
-  const shouldWrapWithLink = !page.mode.isEditing && fields.TargetUrl?.value?.href;
+  return <div className={classNameList}></div>;
+};
 
-  return (
-    <ImageWrapper className={`component image ${styles}`} id={id}>
-      {shouldWrapWithLink ? (
-        <ContentSdkLink field={fields.TargetUrl}>
-          <Image />
-        </ContentSdkLink>
-      ) : (
-        <Image />
-      )}
-      <Text tag="span" className="image-caption field-imagecaption" field={fields.ImageCaption} />
-    </ImageWrapper>
-  );
+export const Default = (props: ImageProps): JSX.Element => {
+  const { fields, params } = props;
+  const sxaStyles = params?.Styles ?? '';
+  const classNameList = `component image ${sxaStyles}`.trimEnd();
+
+  if (fields) {
+    const { Image } = props.fields;
+
+    const modifyImageProps = {
+      ...Image,
+      value: {
+        ...Image?.value,
+        alt: Image?.value?.alt || 'image',
+      },
+    };
+
+    return (
+      <div className={classNameList}>
+        <div className="component-content">
+          <ContentSdkImage field={modifyImageProps} />
+        </div>
+      </div>
+    );
+  }
+
+  return <div className={classNameList}></div>;
 };

@@ -1,26 +1,18 @@
-import { Placeholder } from '@sitecore-content-sdk/nextjs';
+import { ComponentParams, ComponentRendering, Placeholder } from '@sitecore-content-sdk/nextjs';
 import React, { JSX } from 'react';
-import { ComponentProps } from 'lib/component-props';
 
-interface ContainerProps extends ComponentProps {
-  params: ComponentProps['params'] & {
-    BackgroundImage?: string;
-    DynamicPlaceholderId: string;
-  };
+interface ComponentProps {
+  rendering: ComponentRendering & { params: ComponentParams };
+  params: ComponentParams;
 }
 
-const Container = ({ params, rendering }: ContainerProps): JSX.Element => {
-  const {
-    styles,
-    RenderingIdentifier: id,
-    BackgroundImage: backgroundImage,
-    DynamicPlaceholderId,
-  } = params;
-  const phKey = `container-${DynamicPlaceholderId}`;
-
-  // Extract the mediaurl from rendering parameters
+const DefaultContainer = (props: ComponentProps): JSX.Element => {
+  const containerStyles = props.params && props.params.Styles ? props.params.Styles : '';
+  const styles = `${props.params.GridParameters} ${containerStyles}`.trimEnd();
+  const phKey = `container-${props.params.DynamicPlaceholderId}`;
+  const id = props.params.RenderingIdentifier;
   const mediaUrlPattern = new RegExp(/mediaurl=\"([^"]*)\"/, 'i');
-
+  const backgroundImage = props.params.BackgroundImage as string;
   let backgroundStyle: { [key: string]: string } = {};
 
   if (backgroundImage && backgroundImage.match(mediaUrlPattern)) {
@@ -32,24 +24,26 @@ const Container = ({ params, rendering }: ContainerProps): JSX.Element => {
   }
 
   return (
-    <div className={`component container-default ${styles}`} id={id}>
+    <div className={`component container-default ${styles}`} id={id ? id : undefined}>
       <div className="component-content" style={backgroundStyle}>
         <div className="row">
-          <Placeholder name={phKey} rendering={rendering} />
+          <Placeholder name={phKey} rendering={props.rendering} />
         </div>
       </div>
     </div>
   );
 };
 
-export const Default = (props: ContainerProps): JSX.Element => {
-  const styles = props.params?.styles?.split(' ');
+export const Default = (props: ComponentProps): JSX.Element => {
+  const splitStyles = props.params?.Styles?.split(' ');
 
-  return styles?.includes('container') ? (
-    <div className="container-wrapper">
-      <Container {...props} />
-    </div>
-  ) : (
-    <Container {...props} />
-  );
+  if (splitStyles && splitStyles.includes('container')) {
+    return (
+      <div className="container-wrapper">
+        <DefaultContainer {...props} />
+      </div>
+    );
+  }
+
+  return <DefaultContainer {...props} />;
 };

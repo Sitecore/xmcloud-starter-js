@@ -1,66 +1,82 @@
-import { Link, LinkField, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import React, { JSX } from 'react';
-import { ComponentProps } from 'lib/component-props';
 
-interface Item {
-  url: {
-    path: string;
-    siteName: string;
-  };
-  field: {
-    jsonValue: {
-      value: string;
+interface Fields {
+  data: {
+    datasource: {
+      url: {
+        path: string;
+        siteName: string;
+      };
+      field: {
+        jsonValue: {
+          value: string;
+          metadata?: { [key: string]: unknown };
+        };
+      };
+    };
+    contextItem: {
+      url: {
+        path: string;
+        siteName: string;
+      };
+      field: {
+        jsonValue: {
+          value: string;
+          metadata?: { [key: string]: unknown };
+        };
+      };
     };
   };
 }
 
-interface TitleProps extends ComponentProps {
-  fields: {
-    /**
-     * The Integrated graphQL query result. This illustrates the way to access the context item datasource information.
-     */
-    data?: {
-      datasource?: Item;
-      contextItem?: Item;
-    };
-  };
-}
+type TitleProps = {
+  params: { [key: string]: string };
+  fields: Fields;
+};
 
-interface ComponentContentProps {
-  id?: string;
-  styles?: string;
-  children: React.ReactNode;
-}
-
-const ComponentContent = ({ id, styles = '', children }: ComponentContentProps): JSX.Element => (
-  <div className={`component title ${styles.trim()}`} id={id}>
-    <div className="component-content">
-      <div className="field-title">{children}</div>
-    </div>
-  </div>
-);
-
-export const Default = ({ params, fields }: TitleProps): JSX.Element => {
+export const Default = (props: TitleProps): JSX.Element => {
   const { page } = useSitecore();
-  const { styles, RenderingIdentifier: id } = params;
-  const datasource = fields?.data?.datasource || fields?.data?.contextItem;
+  const datasource = props.fields?.data?.datasource || props.fields?.data?.contextItem;
   const text: TextField = datasource?.field?.jsonValue || {};
-  const link: LinkField = {
-    value: {
-      href: datasource?.url?.path,
-      title: datasource?.field?.jsonValue?.value,
-    },
+  const isPageEditing = Boolean(page.mode.isEditing);
+  const modifyTitleProps = {
+    ...text,
+    value: text?.value || 'Add Title',
   };
+
+  if (!page.mode.isNormal) {
+    return (
+      <div
+        className={`component title ${props.params.styles}`}
+        id={props.params.RenderingIdentifier}
+      >
+        <div className="component-content">
+          <Text
+            tag={props.params.tag}
+            field={modifyTitleProps}
+            editable={isPageEditing}
+            className="field-title"
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <ComponentContent styles={styles} id={id}>
-      {page.mode.isEditing ? (
-        <Text field={text} />
-      ) : (
-        <Link field={link}>
-          <Text field={text} />
-        </Link>
-      )}
-    </ComponentContent>
+    <div className={`component title ${props.params.styles}`} id={props.params.RenderingIdentifier}>
+      <div className="component-content">
+        {page.mode.isEditing ? (
+          <Text
+            tag={props.params.tag}
+            field={modifyTitleProps}
+            editable={isPageEditing}
+            className="field-title"
+          />
+        ) : (
+          <Text tag={props.params.tag} field={text} className="field-title" />
+        )}
+      </div>
+    </div>
   );
 };
