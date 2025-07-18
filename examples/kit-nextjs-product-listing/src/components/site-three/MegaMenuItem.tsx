@@ -2,9 +2,9 @@
 
 import { useToggleWithClickOutside } from '@/hooks/useToggleWithClickOutside';
 import {
-  Text as JssText,
-  Link as JssLink,
-  NextImage as JssImage,
+  Text as ContentSdkText,
+  Link as ContentSdkLink,
+  NextImage as ContentSdkImage,
   LinkField,
   Placeholder,
   Field,
@@ -56,7 +56,7 @@ export const Default = (props: MegaMenuItemProps) => {
       data-class-change
     >
       {props.params.isSimpleLink ? (
-        <JssLink
+        <ContentSdkLink
           field={props.fields.Link}
           className="inline-block p-4 font-[inherit] whitespace-nowrap cursor-pointer"
         />
@@ -66,7 +66,7 @@ export const Default = (props: MegaMenuItemProps) => {
             className="inline-block p-4 font-[inherit] whitespace-nowrap cursor-pointer"
             onClick={() => setIsSubmenuVisible(!isSubmenuVisible)}
           >
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </span>
           <div
             className={`fixed lg:absolute top-14 left-0 right-0 lg:top-full lg:left-0 lg:right-0
@@ -103,14 +103,14 @@ export const Default = (props: MegaMenuItemProps) => {
               {featuredProduct && (
                 <div className="relative self-end lg:justify-self-end max-w-lg pb-12 lg:pb-0 lg:pl-[20%]">
                   <div className="aspect-square">
-                    <JssImage
+                    <ContentSdkImage
                       field={featuredProduct.fields.FeaturedImage}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="absolute bottom-0 lg:bottom-8 left-0 p-4 text-center bg-background shadow-lg">
                     <h5 className="mb-4 text-sm">
-                      <JssText field={featuredProduct.fields.ProductName} />
+                      <ContentSdkText field={featuredProduct.fields.ProductName} />
                     </h5>
                     <Link href={featuredProduct.url} className="btn btn-primary btn-sharp">
                       {t(DICTIONARY_KEYS.EXPLORE_BUTTON_LABEL) || 'Explore'}

@@ -1,8 +1,8 @@
 import {
   Field,
   ImageField,
-  NextImage as JssImage,
-  Link as JssLink,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
   LinkField,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
@@ -31,11 +31,11 @@ export const Banner = (props: ImageProps): JSX.Element => {
       <div className={classNameList}>
         <div className="component-content">
           {page.mode.isEditing || !props.fields.TargetUrl?.value?.href ? (
-            <JssImage field={Image} />
+            <ContentSdkImage field={Image} />
           ) : (
-            <JssLink field={TargetUrl}>
-              <JssImage field={Image} />
-            </JssLink>
+            <ContentSdkLink field={TargetUrl}>
+              <ContentSdkImage field={Image} />
+            </ContentSdkLink>
           )}
         </div>
       </div>
@@ -64,7 +64,7 @@ export const Default = (props: ImageProps): JSX.Element => {
     return (
       <div className={classNameList}>
         <div className="component-content">
-          <JssImage field={modifyImageProps} />
+          <ContentSdkImage field={modifyImageProps} />
         </div>
       </div>
     );

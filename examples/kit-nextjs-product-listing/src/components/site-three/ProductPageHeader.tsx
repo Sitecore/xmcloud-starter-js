@@ -1,6 +1,11 @@
 'use client';
 
-import { Text as JssText, Link as JssLink, Field, LinkField } from '@sitecore-content-sdk/nextjs';
+import {
+  Text as ContentSdkText,
+  Link as ContentSdkLink,
+  Field,
+  LinkField,
+} from '@sitecore-content-sdk/nextjs';
 import { ChevronRight } from 'lucide-react';
 import { useI18n } from 'next-localization';
 import { useState, useEffect } from 'react';
@@ -80,13 +85,13 @@ export const Default = (props: ProductPageHeaderProps) => {
 
       <div className="relative flex flex-col gap-6 p-10 lg:w-1/3 lg:max-w-md bg-white z-20">
         <h1 className="text-2xl">
-          <JssText field={props.fields?.ProductName} />
+          <ContentSdkText field={props.fields?.ProductName} />
         </h1>
         <p className="text-sm">
-          <JssText field={props.fields?.Description} />
+          <ContentSdkText field={props.fields?.Description} />
         </p>
         <p className="border-t border-b border-border font-(family-name:--font-accent) font-medium text-base py-6">
-          <JssText field={props.fields?.Price} />
+          <ContentSdkText field={props.fields?.Price} />
         </p>
 
         <div className="flex items-center gap-4">
@@ -118,22 +123,22 @@ export const Default = (props: ProductPageHeaderProps) => {
           {t(DICTIONARY_KEYS.BUTTON_LABEL) || 'Add to cart'}
         </button>
         <div className="flex flex-col items-start gap-4 border-t border-border pt-6 text-sm">
-          <JssLink
+          <ContentSdkLink
             field={props.fields?.WarrantyLink}
             className="flex items-center gap-2"
             prefetch={false}
           >
             {props.fields?.WarrantyLink?.value?.text}
             <ChevronRight className="h-4 w-4" />
-          </JssLink>
-          <JssLink
+          </ContentSdkLink>
+          <ContentSdkLink
             field={props.fields?.ShippingLink}
             className="flex items-center gap-2"
             prefetch={false}
           >
             {props.fields?.ShippingLink?.value?.text}
             <ChevronRight className="h-4 w-4" />
-          </JssLink>
+          </ContentSdkLink>
         </div>
       </div>
     </section>

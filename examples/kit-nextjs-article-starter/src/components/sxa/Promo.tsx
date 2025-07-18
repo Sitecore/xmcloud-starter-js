@@ -1,8 +1,8 @@
 import React, { JSX } from 'react';
 import {
-  NextImage as JssImage,
-  Link as JssLink,
-  RichText as JssRichText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+  RichText as ContentSdkRichText,
   ImageField,
   Field,
   LinkField,
@@ -35,16 +35,16 @@ export const Default = (props: PromoProps): JSX.Element => {
       <div className={`component promo ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
           <div className="field-promoicon">
-            <JssImage field={props.fields.PromoIcon} />
+            <ContentSdkImage field={props.fields.PromoIcon} />
           </div>
           <div className="promo-text">
             <div>
               <div className="field-promotext">
-                <JssRichText field={props.fields.PromoText} />
+                <ContentSdkRichText field={props.fields.PromoText} />
               </div>
             </div>
             <div className="field-promolink">
-              <JssLink field={props.fields.PromoLink} />
+              <ContentSdkLink field={props.fields.PromoLink} />
             </div>
           </div>
         </div>
@@ -62,16 +62,16 @@ export const WithText = (props: PromoProps): JSX.Element => {
       <div className={`component promo ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
           <div className="field-promoicon">
-            <JssImage field={props.fields.PromoIcon} />
+            <ContentSdkImage field={props.fields.PromoIcon} />
           </div>
           <div className="promo-text">
             <div>
               <div className="field-promotext">
-                <JssRichText className="promo-text" field={props.fields.PromoText} />
+                <ContentSdkRichText className="promo-text" field={props.fields.PromoText} />
               </div>
             </div>
             <div className="field-promotext">
-              <JssRichText className="promo-text" field={props.fields.PromoText2} />
+              <ContentSdkRichText className="promo-text" field={props.fields.PromoText2} />
             </div>
           </div>
         </div>

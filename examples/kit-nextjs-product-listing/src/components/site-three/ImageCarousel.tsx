@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { Image as JssImage } from '@sitecore-content-sdk/nextjs';
+import { Image as ContentSdkImage } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField } from 'types/igql';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
@@ -81,7 +81,7 @@ export const Default = (props: ImageCarouselProps) => {
               <div className="flex touch-pan-y">
                 {images.map((item) => (
                   <div key={item.id} className="w-full relative aspect-2/1 flex-shrink-0">
-                    <JssImage
+                    <ContentSdkImage
                       field={item.image.jsonValue}
                       className="w-full h-full object-cover object-center"
                     />
@@ -118,7 +118,7 @@ export const Default = (props: ImageCarouselProps) => {
                   }`}
                   onClick={() => scrollTo(index)}
                 >
-                  <JssImage
+                  <ContentSdkImage
                     field={item.image.jsonValue}
                     className="w-full h-full aspect-2/1 object-cover"
                   />

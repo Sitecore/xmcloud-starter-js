@@ -14,7 +14,6 @@ import * as CallToAction from 'components/component-library/calltoaction';
 import * as Card from 'components/card/Card.dev';
 import * as CardSpotlight from 'components/card-spotlight/card-spotlight.dev';
 import * as Carousel from 'components/carousel/Carousel';
-import * as CdpPageView from 'components/sxa/CdpPageView';
 import * as CLHero from 'components/component-library/hero';
 import * as ColumnSplitter from 'components/sxa/ColumnSplitter';
 import * as ContactSection from 'components/component-library/ContactSection';
@@ -33,7 +32,6 @@ import * as ContainerFullWidth from 'components/container/container-full-width/C
 import * as ContentBlock from 'components/sxa/ContentBlock';
 import * as CtaBanner from 'components/cta-banner/CtaBanner';
 import * as FAQ from 'components/component-library/FAQ';
-import * as FEAASScripts from 'components/sxa/FEAASScripts';
 import * as FeatureBanner from 'components/site-three/FeatureBanner';
 import * as FeaturesSection from 'components/component-library/FeaturesSection';
 import * as Flex from 'components/flex/Flex.dev';
@@ -86,7 +84,6 @@ import * as RowSplitter from 'components/sxa/RowSplitter';
 import * as SecondaryNavigation from 'components/secondary-navigation/SecondaryNavigation';
 import * as SignupBanner from 'components/site-three/SignupBanner';
 import * as SiteMetadata from 'components/site-metadata/SiteMetadata';
-import * as SitecoreStyles from 'components/sxa/SitecoreStyles';
 import * as SlideCarousel from 'components/slide-carousel/SlideCarousel.dev';
 import * as StatsSection from 'components/component-library/StatsSection';
 import * as SubmissionForm from 'components/submission-form/SubmissionForm';
@@ -118,7 +115,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Card', Card],
   ['CardSpotlight', CardSpotlight],
   ['Carousel', Carousel],
-  ['CdpPageView', CdpPageView],
   ['CLHero', CLHero],
   ['ColumnSplitter', ColumnSplitter],
   ['ContactSection', ContactSection],
@@ -138,7 +134,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CtaBanner', CtaBanner],
   ['FAQ', FAQ],
   ['FEaaSWrapper', FEaaSWrapper],
-  ['FEAASScripts', FEAASScripts],
   ['FeatureBanner', FeatureBanner],
   ['FeaturesSection', FeaturesSection],
   ['Flex', Flex],
@@ -192,7 +187,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SecondaryNavigation', SecondaryNavigation],
   ['SignupBanner', SignupBanner],
   ['SiteMetadata', SiteMetadata],
-  ['SitecoreStyles', SitecoreStyles],
   ['SlideCarousel', SlideCarousel],
   ['StatsSection', StatsSection],
   ['SubmissionForm', SubmissionForm],

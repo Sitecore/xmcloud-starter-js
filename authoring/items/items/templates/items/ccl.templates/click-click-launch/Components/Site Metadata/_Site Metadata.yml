@@ -3,6 +3,13 @@ ID: "f43e275a-48d0-4a45-8313-862f81be33ce"
 Parent: "ce2915f1-9928-4e33-833d-352bfb0d3157"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Site Metadata/_Site Metadata"
+SharedFields:
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0ba35638-8ae7-4366-961d-957cc215cf72"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{546B197D-50E8-4833-B00E-E08EABDA7ECB}"
 Languages:
 - Language: en
   Versions:
@@ -21,11 +28,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c0cf87e0-05c2-4912-a86a-bae2cb3c352b"
+      Value: "351fa0d1-2d79-4762-a746-ed4e4d6f1314"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\anton.kechashin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240403T204904Z
+      Value: 20250717T134302Z

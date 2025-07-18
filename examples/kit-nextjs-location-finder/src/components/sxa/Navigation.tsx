@@ -1,6 +1,6 @@
 import React, { useState, type JSX } from 'react';
 import {
-  Link as JssLink,
+  Link as ContentSdkLink,
   LinkField,
   Text,
   TextField,
@@ -123,7 +123,7 @@ export const ButtonNavigation = (props: NavigationProps): JSX.Element => {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {list.map((section) => (
-            <JssLink
+            <ContentSdkLink
               key={section.id}
               field={getLinkField({ fields: section } as NavigationProps)}
               className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
@@ -139,7 +139,7 @@ export const ButtonNavigation = (props: NavigationProps): JSX.Element => {
                 <span className="mr-2">View components</span>
                 <ArrowRight size={20} />
               </div>
-            </JssLink>
+            </ContentSdkLink>
           ))}
         </div>
       </div>
@@ -200,14 +200,14 @@ const NavigationList = (props: NavigationProps) => {
         className={`navigation-title ${children.length ? 'child' : ''}`}
         onClick={() => setActive(() => !active)}
       >
-        <JssLink
+        <ContentSdkLink
           field={getLinkField(props)}
           editable={isEditing}
           onClick={props.handleClick}
           prefetch={false}
         >
           {getNavigationText(props)}
-        </JssLink>
+        </ContentSdkLink>
       </div>
       {children.length > 0 ? <ul className="clearfix">{children}</ul> : null}
     </li>

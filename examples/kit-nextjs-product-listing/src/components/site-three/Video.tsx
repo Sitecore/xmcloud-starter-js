@@ -2,9 +2,9 @@ import { ComponentProps } from '@/lib/component-props';
 import {
   ImageField,
   LinkField,
-  Image as JssImage,
+  Image as ContentSdkImage,
   TextField,
-  Text as JssText,
+  Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { VideoBase } from 'components/video/Video';
@@ -32,19 +32,19 @@ type VideoComponentProps = ComponentProps & VideoComponentFields;
 export function Default({ fields, params }: VideoComponentProps) {
   if (fields) {
     return (
-      <section className={`relative ${params.styles}`} data-class-change>
+      <section className={`relative lg:mt-16 lg:py-16 ${params.styles}`} data-class-change>
         <div className="container grid lg:grid-cols-2 gap-4 lg:gap-16 px-4 py-12 lg:py-16 mx-auto text-center lg:text-left">
           <h3 className="text-xl lg:text-3xl leading-loose tracking-tight uppercase">
-            <JssText field={fields.title} />
+            <ContentSdkText field={fields.title} />
           </h3>
           <div className="text-base lg:text-lg leading-8 tracking-normal">
-            <JssText field={fields.caption} />
+            <ContentSdkText field={fields.caption} />
           </div>
         </div>
 
         <div className="relative flex items-center justify-center">
           <div className="absolute inset-0 z-10">
-            <JssImage field={fields.image2} className="w-full h-full object-cover" />
+            <ContentSdkImage field={fields.image2} className="w-full h-full object-cover" />
           </div>
           <div className="flex items-center justify-center w-full px-4 py-12 lg:py-16 backdrop-blur-md bg-[linear-gradient(136deg, rgba(255, 255, 255, 0.08) 2.61%, rgba(255, 255, 255, 0.15) 73.95%)] z-20">
             <div className="container mx-auto">
@@ -69,16 +69,16 @@ export function TextCenter({ fields, params }: VideoComponentProps) {
       <section className={`relative ${params.styles}`} data-class-change>
         <div className="flex flex-col items-center gap-4 max-w-3xl px-4 py-12 lg:py-16 mx-auto text-center">
           <h3 className="lg:px-10 text-xl lg:text-3xl leading-loose tracking-normal uppercase">
-            <JssText field={fields.title} />
+            <ContentSdkText field={fields.title} />
           </h3>
           <div className="text-base lg:text-lg leading-8 tracking-normal">
-            <JssText field={fields.caption} />
+            <ContentSdkText field={fields.caption} />
           </div>
         </div>
 
         <div className="relative flex items-center justify-center">
           <div className="absolute inset-0 z-10">
-            <JssImage field={fields.image2} className="w-full h-full object-cover" />
+            <ContentSdkImage field={fields.image2} className="w-full h-full object-cover" />
           </div>
           <div className="flex items-center justify-center w-full px-4 py-12 lg:py-16 backdrop-blur-md bg-[linear-gradient(136deg, rgba(255, 255, 255, 0.08) 2.61%, rgba(255, 255, 255, 0.15) 73.95%)] z-20">
             <div className="container mx-auto">

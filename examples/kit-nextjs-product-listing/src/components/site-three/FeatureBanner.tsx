@@ -1,4 +1,4 @@
-import { Text as JssText, NextImage as JssImage } from '@sitecore-content-sdk/nextjs';
+import { Text as ContentSdkText, NextImage as ContentSdkImage } from '@sitecore-content-sdk/nextjs';
 import { useMemo } from 'react';
 import { IGQLImageField, IGQLLinkField, IGQLTextField } from 'types/igql';
 
@@ -28,9 +28,9 @@ type FeatureBannerProps = {
 const FeatureItem = (props: FeatureItemFields) => {
   return (
     <div className="flex flex-col items-center gap-1">
-      <JssImage field={props.image?.jsonValue} className="w-6 h-6 object-contain" />
+      <ContentSdkImage field={props.image?.jsonValue} className="w-6 h-6 object-contain" />
       <p className="text-base text-center">
-        <JssText field={props.heading?.jsonValue} />
+        <ContentSdkText field={props.heading?.jsonValue} />
       </p>
     </div>
   );
@@ -44,7 +44,7 @@ export const Default = (props: FeatureBannerProps) => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 py-12 border-t border-b border-border">
           <h2 className="text-2xl lg:text-5xl uppercase">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <div className="flex flex-wrap lg:flex-nowrap justify-center items-start gap-8">
             {datasource.children.results.map((item) => (
@@ -65,7 +65,7 @@ export const Vertical = (props: FeatureBannerProps) => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-8 lg:gap-12 py-12 border-t border-b border-border">
           <h2 className="text-2xl lg:text-5xl uppercase">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <div className="flex flex-wrap lg:flex-nowrap justify-center items-start gap-10">
             {datasource.children.results.map((item) => (
@@ -90,7 +90,7 @@ export const Accent = (props: FeatureBannerProps) => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-8 py-12">
             <h2 className="text-2xl lg:text-5xl uppercase">
-              <JssText field={datasource.title?.jsonValue} />
+              <ContentSdkText field={datasource.title?.jsonValue} />
             </h2>
             <div className="flex flex-wrap lg:flex-nowrap justify-center items-start gap-8">
               {datasource.children.results.map((item) => (

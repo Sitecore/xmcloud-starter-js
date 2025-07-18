@@ -3,35 +3,16 @@ ID: "7914a4ba-1826-45cf-8429-df63b9b129c6"
 Parent: "f03fd970-82a7-44e0-8b87-6ee7b2d39939"
 Template: "f03fd970-82a7-44e0-8b87-6ee7b2d39939"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Location Search/Location Search/__Standard Values"
+SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "21705003-f62c-49d5-b097-cc112f3381d4"
 Languages:
 - Language: en
   Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20250320T164246Z
-    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
-      Hint: __Owner
-      Value: |
-        sitecore\Admin
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\Admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "ecaae0d0-cec1-438e-a3e1-9f0c0f2d77e2"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\Admin
-    - ID: "d2daabe5-aa5f-42ba-a261-35900e95facc"
-      Hint: title
-      Value: $name
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20250320T164252Z
   - Version: 2
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -47,14 +28,14 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ecaae0d0-cec1-438e-a3e1-9f0c0f2d77e2"
+      Value: "aafc4a21-986f-4ad2-943b-a68a755d56fe"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\anton.kechashin@sitecore.com
     - ID: "d2daabe5-aa5f-42ba-a261-35900e95facc"
       Hint: title
       Value: $name
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250320T164252Z
+      Value: 20250717T133626Z

@@ -1,8 +1,8 @@
 'use client';
 
 import {
-  Text as JssText,
-  NextImage as JssImage,
+  Text as ContentSdkText,
+  NextImage as ContentSdkImage,
   Field,
   ImageField,
 } from '@sitecore-content-sdk/nextjs';
@@ -99,10 +99,10 @@ export const Default = (props: ProductComparisonProps) => {
   );
 
   return (
-    <section className={`relative py-16 ${props.params?.styles}`} data-class-change>
+    <section className={`relative ${props.params?.styles}`} data-class-change>
       <div className="container mx-auto px-4">
         <h2 className="max-w-3xl mx-auto text-center text-2xl lg:text-5xl uppercase mb-16">
-          <JssText field={props.fields?.Title} />
+          <ContentSdkText field={props.fields?.Title} />
         </h2>
 
         <Carousel opts={{ loop: true }} className="relative text-center">
@@ -113,16 +113,16 @@ export const Default = (props: ProductComparisonProps) => {
                 <CarouselItem key={product.id} className={`basis-full lg:basis-1/${basis} pl-10`}>
                   <div className="grid gap-4">
                     <div className="px-10">
-                      <JssImage
+                      <ContentSdkImage
                         field={product.image}
                         className="aspect-square w-full h-full object-contain max-w-2xs mx-auto"
                       />
                     </div>
                     <h5 className="text-xl lg:text-2xl mt-8 mb-3">
-                      <JssText field={product.name} />
+                      <ContentSdkText field={product.name} />
                     </h5>
                     <p className="text-xl lg:text-2xl">
-                      <JssText field={product.price} />
+                      <ContentSdkText field={product.price} />
                     </p>
                     {props.params.showButton && (
                       <Link href={product.url} className="btn btn-primary mt-3 justify-self-center">
@@ -131,7 +131,7 @@ export const Default = (props: ProductComparisonProps) => {
                     )}
                     <hr className="border-border my-10"></hr>
                     <p className="text-lg lg:text-xl font-medium">
-                      <JssText field={product.ampPower} />
+                      <ContentSdkText field={product.ampPower} />
                     </p>
                     {product.specs.map((spec) => (
                       <p key={`${product.id}${spec}`} className="text-sm lg:text-base">

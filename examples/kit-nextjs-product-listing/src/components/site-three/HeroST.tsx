@@ -1,8 +1,8 @@
 import { useContainerOffsets } from '@/hooks/useContainerOffsets';
 import {
-  Text as JssText,
-  NextImage as JssImage,
-  Link as JssLink,
+  Text as ContentSdkText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
   ImageField,
   Field,
   LinkField,
@@ -31,7 +31,7 @@ export const Default = (props: PageHeaderSTProps) => {
       data-class-change
     >
       <div className="absolute inset-0 z-10">
-        <JssImage
+        <ContentSdkImage
           field={props.fields.Image1}
           width={1920}
           height={1080}
@@ -42,18 +42,22 @@ export const Default = (props: PageHeaderSTProps) => {
         <div className="flex flex-col justify-center mt-10 lg:mt-0 lg:w-2/3 lg:min-h-[50rem] px-4 py-8 lg:p-8 backdrop-blur-[20px] bg-[linear-gradient(136deg,_rgba(255,255,255,0.21)_2.61%,_rgba(255,255,255,0.42)_73.95%)]">
           <div className="lg:max-w-3xl">
             <h5 className="text-primary text-xl lg:text-3xl pb-4 uppercase">
-              <JssText field={props.fields.Eyebrow} />
+              <ContentSdkText field={props.fields.Eyebrow} />
             </h5>
             <h1 className="text-4xl lg:text-7xl uppercase">
-              <JssText field={props.fields.Title} />
+              <ContentSdkText field={props.fields.Title} />
             </h1>
             <div className="mt-8">
-              <JssLink
+              <ContentSdkLink
                 field={props.fields.Link1}
                 prefetch={false}
                 className="btn btn-primary mr-4"
               />
-              <JssLink field={props.fields.Link2} prefetch={false} className="btn btn-secondary" />
+              <ContentSdkLink
+                field={props.fields.Link2}
+                prefetch={false}
+                className="btn btn-secondary"
+              />
             </div>
           </div>
         </div>
@@ -61,7 +65,7 @@ export const Default = (props: PageHeaderSTProps) => {
           className={`lg:absolute top-0 bottom-0 left-2/3`}
           style={{ right: `-${rightOffset - 16}px` }}
         >
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image1}
             width={1920}
             height={1080}
@@ -83,7 +87,7 @@ export const Right = (props: PageHeaderSTProps) => {
       data-class-change
     >
       <div className="absolute inset-0 z-10">
-        <JssImage
+        <ContentSdkImage
           field={props.fields.Image1}
           width={1920}
           height={1080}
@@ -97,18 +101,22 @@ export const Right = (props: PageHeaderSTProps) => {
         <div className="flex flex-col justify-center mt-10 lg:mt-0 lg:w-2/3 lg:min-h-[50rem] px-4 py-8 lg:p-8 backdrop-blur-[20px] bg-[linear-gradient(136deg,_rgba(255,255,255,0.21)_2.61%,_rgba(255,255,255,0.42)_73.95%)]">
           <div className="lg:max-w-3xl lg:ml-auto text-right">
             <h5 className="text-primary text-xl lg:text-3xl pb-4 uppercase">
-              <JssText field={props.fields.Eyebrow} />
+              <ContentSdkText field={props.fields.Eyebrow} />
             </h5>
             <h1 className="text-4xl lg:text-7xl uppercase">
-              <JssText field={props.fields.Title} />
+              <ContentSdkText field={props.fields.Title} />
             </h1>
             <div className="mt-8">
-              <JssLink
+              <ContentSdkLink
                 field={props.fields.Link1}
                 prefetch={false}
                 className="btn btn-primary mr-4"
               />
-              <JssLink field={props.fields.Link2} prefetch={false} className="btn btn-secondary" />
+              <ContentSdkLink
+                field={props.fields.Link2}
+                prefetch={false}
+                className="btn btn-secondary"
+              />
             </div>
           </div>
         </div>
@@ -116,7 +124,7 @@ export const Right = (props: PageHeaderSTProps) => {
           className={`lg:absolute top-0 bottom-0 right-2/3`}
           style={{ left: `-${leftOffset - 16}px` }}
         >
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image1}
             width={1920}
             height={1080}
@@ -137,7 +145,7 @@ export const Centered = (props: PageHeaderSTProps) => {
       data-class-change
     >
       <div className="absolute inset-0 z-10">
-        <JssImage
+        <ContentSdkImage
           field={props.fields.Image1}
           width={1920}
           height={1080}
@@ -148,18 +156,22 @@ export const Centered = (props: PageHeaderSTProps) => {
         <div className="lg:relative lg:left-1/6 flex flex-col justify-center mt-10 lg:mt-0 lg:w-2/3 lg:min-h-[50rem] px-4 py-8 lg:p-8 backdrop-blur-[20px] bg-[linear-gradient(136deg,_rgba(255,255,255,0.21)_2.61%,_rgba(255,255,255,0.42)_73.95%)]">
           <div className="lg:max-w-3xl lg:mx-auto text-center">
             <h5 className="text-primary text-xl lg:text-3xl pb-4 uppercase">
-              <JssText field={props.fields.Eyebrow} />
+              <ContentSdkText field={props.fields.Eyebrow} />
             </h5>
             <h1 className="text-4xl lg:text-7xl uppercase">
-              <JssText field={props.fields.Title} />
+              <ContentSdkText field={props.fields.Title} />
             </h1>
             <div className="mt-8">
-              <JssLink
+              <ContentSdkLink
                 field={props.fields.Link1}
                 prefetch={false}
                 className="btn btn-primary mr-4"
               />
-              <JssLink field={props.fields.Link2} prefetch={false} className="btn btn-secondary" />
+              <ContentSdkLink
+                field={props.fields.Link2}
+                prefetch={false}
+                className="btn btn-secondary"
+              />
             </div>
           </div>
         </div>
@@ -167,7 +179,7 @@ export const Centered = (props: PageHeaderSTProps) => {
           className={`lg:absolute top-0 bottom-0 left-5/6`}
           style={{ right: `-${rightOffset - 16}px` }}
         >
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image1}
             width={1920}
             height={1080}
@@ -188,22 +200,26 @@ export const SplitScreen = (props: PageHeaderSTProps) => {
       <div className="flex flex-col lg:flex-row lg:min-h-[50rem]">
         <div className="p-8 lg:basis-full lg:self-center lg:p-14">
           <h5 className="text-xl lg:text-3xl pb-4 uppercase">
-            <JssText field={props.fields.Eyebrow} />
+            <ContentSdkText field={props.fields.Eyebrow} />
           </h5>
           <h1 className="text-4xl lg:text-6xl uppercase">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h1>
           <div className="mt-8">
-            <JssLink
+            <ContentSdkLink
               field={props.fields.Link1}
               prefetch={false}
               className="btn btn-secondary mr-4"
             />
-            <JssLink field={props.fields.Link2} prefetch={false} className="btn btn-secondary" />
+            <ContentSdkLink
+              field={props.fields.Link2}
+              prefetch={false}
+              className="btn btn-secondary"
+            />
           </div>
         </div>
         <div className="relative aspect-3/2 lg:basis-full lg:aspect-auto">
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image1}
             width={1920}
             height={1080}
@@ -211,7 +227,7 @@ export const SplitScreen = (props: PageHeaderSTProps) => {
           />
           <div className="relative h-full backdrop-blur-[20px] bg-[linear-gradient(136deg,_rgba(255,255,255,0.21)_2.61%,_rgba(255,255,255,0.42)_73.95%)] z-20">
             <div className="absolute  inset-8 lg:inset-14">
-              <JssImage
+              <ContentSdkImage
                 field={props.fields.Image1}
                 width={1920}
                 height={1080}
@@ -234,24 +250,28 @@ export const Stacked = (props: PageHeaderSTProps) => {
       <div className="container px-4 mx-auto">
         <div className="relative lg:w-1/2 px-6 py-12 bg-primary z-20">
           <h5 className="text-xl lg:text-3xl pb-4 uppercase">
-            <JssText field={props.fields.Eyebrow} />
+            <ContentSdkText field={props.fields.Eyebrow} />
           </h5>
           <h1 className="text-4xl lg:text-6xl uppercase">
-            <JssText field={props.fields.Title} />
+            <ContentSdkText field={props.fields.Title} />
           </h1>
           <div className="mt-8">
-            <JssLink
+            <ContentSdkLink
               field={props.fields.Link1}
               prefetch={false}
               className="btn btn-secondary mr-4"
             />
-            <JssLink field={props.fields.Link2} prefetch={false} className="btn btn-secondary" />
+            <ContentSdkLink
+              field={props.fields.Link2}
+              prefetch={false}
+              className="btn btn-secondary"
+            />
           </div>
         </div>
       </div>
       <div className="relative aspect-3/2 lg:absolute lg:aspect-auto inset-0 flex z-10">
         <div className="relative w-1/3">
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image2}
             width={1920}
             height={1080}
@@ -259,14 +279,14 @@ export const Stacked = (props: PageHeaderSTProps) => {
           />
         </div>
         <div className="relative w-2/3">
-          <JssImage
+          <ContentSdkImage
             field={props.fields.Image1}
             width={1920}
             height={1080}
             className="absolute w-full h-full inset-0 object-cover z-10"
           />
           <div className="absolute inset-0 backdrop-blur-[20px] bg-[linear-gradient(136deg,_rgba(255,255,255,0.21)_2.61%,_rgba(255,255,255,0.42)_73.95%)] z-20">
-            <JssImage
+            <ContentSdkImage
               field={props.fields.Image1}
               width={1920}
               height={1080}

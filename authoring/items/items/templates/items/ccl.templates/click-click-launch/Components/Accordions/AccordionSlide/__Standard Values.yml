@@ -3,35 +3,16 @@ ID: "438e58ed-332c-47fb-a6fb-dd855ccae394"
 Parent: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
 Template: "75bc6ab0-2492-4129-9f90-ca0bab019e07"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Accordions/AccordionSlide/__Standard Values"
+SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "cbc5f8b6-eb2a-4056-a3a0-728384587f81"
 Languages:
 - Language: en
   Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20250207T160443Z
-    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
-      Hint: __Owner
-      Value: |
-        sitecore\Admin
-    - ID: "59f8ca51-d752-468c-bfe5-b36bc0cc4c9d"
-      Hint: heading
-      Value: $name
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\Admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "1f8d0c2f-e8cb-4163-be35-6f1f7e1e7d17"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\Admin
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20250207T160619Z
   - Version: 2
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -50,11 +31,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1f8d0c2f-e8cb-4163-be35-6f1f7e1e7d17"
+      Value: "9745ca55-2b54-4695-bebc-faf037b613ce"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\anton.kechashin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250207T160619Z
+      Value: 20250717T133125Z

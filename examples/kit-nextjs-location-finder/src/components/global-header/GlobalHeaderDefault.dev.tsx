@@ -4,7 +4,7 @@ import type React from 'react';
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Link as JSSLink } from '@sitecore-content-sdk/nextjs';
+import { Link as ContentSdkLink } from '@sitecore-content-sdk/nextjs';
 import { Menu } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -107,7 +107,7 @@ export const GlobalHeaderDefault: React.FC<GlobalHeaderProps> = (props) => {
                             asChild
                             className="font-body bg-transparent text-base font-medium hover:bg-transparent"
                           >
-                            <JSSLink field={item.link.jsonValue} prefetch={false} />
+                            <ContentSdkLink field={item.link.jsonValue} prefetch={false} />
                           </Button>
                         </NavigationMenuItem>
                       ))}
@@ -120,7 +120,7 @@ export const GlobalHeaderDefault: React.FC<GlobalHeaderProps> = (props) => {
           {headerContact?.jsonValue?.value && (
             <div className="@lg:flex @lg:items-center @lg:justify-end hidden">
               <Button asChild className="font-heading text-base font-medium">
-                <JSSLink field={headerContact.jsonValue} prefetch={false} />
+                <ContentSdkLink field={headerContact.jsonValue} prefetch={false} />
               </Button>
             </div>
           )}
@@ -179,7 +179,7 @@ export const GlobalHeaderDefault: React.FC<GlobalHeaderProps> = (props) => {
                               className="flex justify-center"
                             >
                               <Button variant="ghost" asChild onClick={() => setIsOpen(false)}>
-                                <JSSLink field={item.link.jsonValue} prefetch={false} />
+                                <ContentSdkLink field={item.link.jsonValue} prefetch={false} />
                               </Button>
                             </motion.div>
                           ))}
@@ -196,7 +196,7 @@ export const GlobalHeaderDefault: React.FC<GlobalHeaderProps> = (props) => {
                             className="flex justify-center"
                           >
                             <Button asChild onClick={() => setIsOpen(false)}>
-                              <JSSLink field={headerContact.jsonValue} prefetch={false} />
+                              <ContentSdkLink field={headerContact.jsonValue} prefetch={false} />
                             </Button>
                           </motion.div>
                         )}
