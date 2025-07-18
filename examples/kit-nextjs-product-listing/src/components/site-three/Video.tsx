@@ -32,7 +32,7 @@ type VideoComponentProps = ComponentProps & VideoComponentFields;
 export function Default({ fields, params }: VideoComponentProps) {
   if (fields) {
     return (
-      <section className={`relative ${params.styles}`} data-class-change>
+      <section className={`relative lg:mt-16 lg:py-16 ${params.styles}`} data-class-change>
         <div className="container grid lg:grid-cols-2 gap-4 lg:gap-16 px-4 py-12 lg:py-16 mx-auto text-center lg:text-left">
           <h3 className="text-xl lg:text-3xl leading-loose tracking-tight uppercase">
             <ContentSdkText field={fields.title} />
