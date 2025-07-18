@@ -106,7 +106,7 @@ export const Stacked = (props: MultiPromoProps) => {
             return (
               <div
                 key={promo.id}
-                className="lg:odd:-mt-30 lg:[.multipromo-3-2_&]:even:-mt-30 lg:[.multipromo-3-2_&]:odd:mt-0"
+                className="lg:odd:-mt-8 lg:[.multipromo-3-2_&]:even:-mt-8 lg:[.multipromo-3-2_&]:odd:mt-0"
               >
                 <PromoItem {...promo} />
               </div>
