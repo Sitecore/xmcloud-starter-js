@@ -162,11 +162,6 @@ SharedFields:
             Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Accordion - Nexa - Demo Official" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
             Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
             Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
-
-            # Update rendering variants
-            Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-secondary*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; } | `
-                Set-Rendering -Item $footerPartial -FinalLayout
             
             Write-Verbose "Update product pages with the correct taxonomy"
             $productTag = Get-Item -Path "$sitePath/Data/Taxonomy/Content Types/Product" -Language $Site.Language
@@ -243,9 +238,6 @@ SharedFields:
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingAccordionDefinition -Parameter @{ "FieldNames" = $accordionVariant.ID; "DynamicPlaceholderId" = "6" } -DataSource "local:/Data/Home Page Accordion" -FinalLayout
     
             # update Nexa product
-            $aeroPage
-            $nexaPage
-            $terraPage
             Get-Rendering -Item $nexaPage -Rendering $renderingImageGallery -Placeholder "*container-fullwidth*" -FinalLayout | `
                 Set-RenderingParameter -Parameter @{ "FieldNames" = $imageGalleryVariant.ID } | `
                 Set-Rendering -Item $nexaPage -FinalLayout
@@ -265,7 +257,6 @@ SharedFields:
             Get-Rendering -Item $nexaPage -Rendering $renderingAccordion -Placeholder "*container-fullwidth*" -FinalLayout | `
                 Set-RenderingParameter -Parameter @{ "FieldNames" = $accordionCenteredVariant.ID } | `
                 Set-Rendering -Item $nexaPage -FinalLayout            
-
 
             Write-Verbose "Update home page fields"
             $title = "Alaris - Get set for an electric future."
