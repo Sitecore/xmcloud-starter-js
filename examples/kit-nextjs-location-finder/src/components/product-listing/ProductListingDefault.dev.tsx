@@ -2,7 +2,7 @@ import { Text } from '@sitecore-content-sdk/nextjs';
 import React, { useState } from 'react';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
-import { ProductListingProps } from './product-listing.props';
+import { ProductListingProps, ProductItemProps } from './product-listing.props';
 import { ProductListingCard } from './ProductListingCard.dev';
 import { useMatchMedia } from '@/hooks/use-match-media';
 import { cn } from '@/lib/utils';
@@ -12,7 +12,9 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
   const [activeCard, setActiveCard] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(3); // Start with 3 products visible
   const { fields, isPageEditing } = props;
-  const { products, title, viewAllLink } = fields?.data?.datasource ?? {};
+  const { title, viewAllLink, loadMoreButtonText, products } = fields?.data?.datasource ?? {};
+
+  const sitecoreProducts = products?.targetItems || [];
 
   if (fields) {
     const getCardClasses = (productId: string) => {
@@ -33,7 +35,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
       }
     };
 
-    const finalAllProducts = products?.targetItems || [];
+    const finalAllProducts = sitecoreProducts;
 
     // Calculate how many products to show based on visibleCount
     const visibleProducts = finalAllProducts.slice(0, visibleCount);
@@ -68,8 +70,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
       >
         <div className="@md:px-6 @md:py-20 @lg:py-28 mx-auto max-w-screen-xl px-4 py-12">
           <div className="@md:grid-cols-2 @md:gap-[68px] grid grid-cols-1 gap-[40px]">
-            {/* Title positioned in top-left */}
-            <div className="@md:col-span-1 @md:row-span-1">
+            <div className="@md:col-span-1">
               <AnimatedSection
                 direction="down"
                 duration={400}
@@ -79,17 +80,14 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
               >
                 <Text
                   tag="h2"
-                  className="@md:text-5xl w-full text-pretty text-7xl font-light tracking-tight antialiased"
+                  className="@md:text-6xl @lg:text-7xl w-full text-pretty text-8xl font-light tracking-tight antialiased"
                   field={title?.jsonValue}
                 />
               </AnimatedSection>
-            </div>
 
-            {/* Left column - starts below title */}
-            {leftColumnProducts.length > 0 && (
-              <div className="@md:col-span-1 @md:row-span-2 @md:row-start-2">
+              {leftColumnProducts.length > 0 && (
                 <div className="flex flex-col gap-[60px]">
-                  {leftColumnProducts.map((product, index) => (
+                  {leftColumnProducts.map((product: ProductItemProps, index: number) => (
                     <AnimatedSection
                       key={JSON.stringify(`${product.productName}-${index}`)}
                       direction="up"
@@ -115,14 +113,13 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
                     </AnimatedSection>
                   ))}
                 </div>
-              </div>
-            )}
+              )}
+            </div>
 
-            {/* Right column - starts at title level */}
             {rightColumnProducts.length > 0 && (
-              <div className="@md:col-span-1 @md:row-span-2 @md:row-start-1">
+              <div className="@md:col-span-1 @md:pt-16">
                 <div className="flex flex-col gap-[60px]">
-                  {rightColumnProducts.map((product, index) => (
+                  {rightColumnProducts.map((product: ProductItemProps, index: number) => (
                     <AnimatedSection
                       key={JSON.stringify(`${product.productName}-${index}`)}
                       direction="up"
@@ -150,31 +147,31 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
                 </div>
               </div>
             )}
-
-            {/* Show "Load More" section if there are more products to load */}
-            {hasMoreProducts && (
-              <div className="@md:col-span-2 mt-12 text-center">
-                <AnimatedSection
-                  direction="up"
-                  duration={400}
-                  reducedMotion={isReducedMotion}
-                  isPageEditing={isPageEditing}
-                >
-                  <div className="bg-muted/50 rounded-lg p-8">
-                    <Text tag="p" className="text-muted-foreground mb-4 text-lg">
-                      Showing {visibleCount} of {finalAllProducts.length} models
-                    </Text>
-                    <button
-                      onClick={handleLoadMore}
-                      className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                    >
-                      Load More Models
-                    </button>
-                  </div>
-                </AnimatedSection>
-              </div>
-            )}
           </div>
+
+          {/* Show "Load More" section outside the grid */}
+          {hasMoreProducts && (
+            <div className="mt-[30px] text-center">
+              <AnimatedSection
+                direction="up"
+                duration={400}
+                reducedMotion={isReducedMotion}
+                isPageEditing={isPageEditing}
+              >
+                <div className="text-center">
+                  <Text tag="p" className="text-muted-foreground mb-4 text-lg">
+                    Showing {visibleCount} of {finalAllProducts.length} models
+                  </Text>
+                  <button
+                    onClick={handleLoadMore}
+                    className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  >
+                    {loadMoreButtonText?.jsonValue?.value || 'Load More Models'}
+                  </button>
+                </div>
+              </AnimatedSection>
+            </div>
+          )}
         </div>
       </div>
     );
