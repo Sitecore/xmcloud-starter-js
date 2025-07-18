@@ -146,7 +146,8 @@ function Invoke-ModuleScriptBody {
         Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 2" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
         Get-Item -Path "$($item.ItemPath)/Data/Home Page Image Carousel/Slide 3" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $terraPage
         Get-Item -Path "$($item.ItemPath)/Data/Home Page Promo" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
-        Get-Item -Path "$($item.ItemPath)/Data/Home Page Accordion" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
+        $homePageAccordionItem = Get-Item -Path "$($item.ItemPath)/Data/Home Page Accordion" -Language $Site.Language
+        Update-LinkField -Item $homePageAccordionItem -FieldName "link" -TargetItem $testDriveItem -Text "Contact Us"
         Get-Item -Path "$($item.ItemPath)/Test Drive/Data/Accordion - Test Drive - Demo Official" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $testDriveItem
         Get-Item -Path "$($item.ItemPath)/Products/Aero/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
         Get-Item -Path "$($item.ItemPath)/Products/Aero/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item

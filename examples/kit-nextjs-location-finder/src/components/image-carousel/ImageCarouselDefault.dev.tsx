@@ -27,9 +27,9 @@ export const ImageCarouselDefault = (props: ImageCarouselProps) => {
   const carouselItemClasses =
     '@md:basis-4/5 @lg:basis-2/3 pointer-events-none flex h-full basis-full flex-col justify-stretch pl-[100px] @md:max-w-1/2 mx-auto';
   const slideContentClasses =
-    '@md:px-25 @md:-mt-[20%] @lg:-mt-[30%] @xl:-mt-[20%] @3xl:-mt-[10%] h-full w-full transform-gpu px-6 transition-all ease-in-out';
+    '@md:px-25 h-full w-full transform-gpu px-6 transition-all ease-in-out';
   const backgroundTextWrapperClasses =
-    'flex h-full w-full translate-y-[-50%] items-center justify-center transition-all duration-700 ease-in-out';
+    'flex h-full w-full items-center justify-center transition-all duration-700 ease-in-out';
   const backgroundTextClasses =
     'bg-primary-gradient text-fill-transparent text-[100px] @md:text-40-clamp bg-clip-text font-bold leading-none text-transparent';
   const mainImageClasses = 'relative z-0 h-auto w-full max-w-[860px] mx-auto';
@@ -146,10 +146,7 @@ export const ImageCarouselDefault = (props: ImageCarouselProps) => {
                         style={{
                           opacity: index === currentIndex ? 1 : 0,
                           filter: index === currentIndex ? 'blur(0px)' : 'blur(10px)',
-                          transform:
-                            index === currentIndex
-                              ? 'scale(1) translateY(40%)'
-                              : 'scale(0.3) translateY(100%)',
+                          transform: index === currentIndex ? 'scale(1)' : 'scale(0.3)',
                           transitionDelay: '200ms',
                         }}
                       >
