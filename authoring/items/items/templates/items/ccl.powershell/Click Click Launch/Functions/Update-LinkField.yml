@@ -4,65 +4,73 @@ Parent: "4ff2646c-2b0f-428f-b9a0-d6ea531de713"
 Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
 Path: "/sitecore/system/Modules/PowerShell/Script Library/Click Click Launch/Functions/Update-LinkField"
 SharedFields:
-- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
-  Hint: Script
-  Value: |
-    function Update-LinkField {
-        [CmdLetBinding()]
-        param(
-            [Parameter(Mandatory = $true, ValueFromPipeline=$true)]
-            [Sitecore.Data.Items.Item] $Item,
-            [Parameter(Mandatory = $true)]
-            [String]$FieldName,
-            [Parameter(Mandatory = $false)]
-            [Sitecore.Data.Items.Item]$TargetItem,
-            [Parameter(Mandatory = $false)]
-            [String]$Url
-            )
-        
-        process {
-            $Item.Editing.BeginEdit()
-            [Sitecore.Data.Fields.LinkField]$linkField = $Item.Fields[$FieldName]
-            if ($TargetItem -ne $null) {
-                $linkField.LinkType = "internal"
-                $linkField.TargetID = $TargetItem.ID
-                $linkField.Url = $null
-            } 
-            else {
-                $linkField.LinkType = "external"
-                $linkField.TargetID = $null
-                $linkField.Url = $Url
-            }
-            $Item.Editing.EndEdit()
-            $Item
-        }
-    }
-- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
-  Hint: __Shared revision
-  Value: "f92b4049-e00b-4eac-8b5e-a50c47549dfc"
+  - ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+    Hint: Script
+    Value: |
+      function Update-LinkField {
+          [CmdLetBinding()]
+          param(
+              [Parameter(Mandatory = $true, ValueFromPipeline=$true)]
+              [Sitecore.Data.Items.Item] $Item,
+              [Parameter(Mandatory = $true)]
+              [String]$FieldName,
+              [Parameter(Mandatory = $false)]
+              [Sitecore.Data.Items.Item]$TargetItem,
+              [Parameter(Mandatory = $false)]
+              [String]$Url,
+              [Parameter(Mandatory = $false)]
+              [String]$Text
+              )
+          
+          process {
+              $Item.Editing.BeginEdit()
+              [Sitecore.Data.Fields.LinkField]$linkField = $Item.Fields[$FieldName]
+              if ($TargetItem -ne $null) {
+                  $linkField.LinkType = "internal"
+                  $linkField.TargetID = $TargetItem.ID
+                  $linkField.Url = $null
+              } 
+              else {
+                  $linkField.LinkType = "external"
+                  $linkField.TargetID = $null
+                  $linkField.Url = $Url
+              }
+              
+              # Set the link text/description if provided
+              if ($Text -ne $null -and $Text -ne "") {
+                  $linkField.Text = $Text
+              }
+              
+              $Item.Editing.EndEdit()
+              $Item
+          }
+      }
+  - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+    Hint: __Shared revision
+    Value: "f92b4049-e00b-4eac-8b5e-a50c47549dfc"
 Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20250707T200641Z
-    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
-      Hint: __Owner
-      Value: |
-        sitecore\richard.seal@sitecore.com
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\richard.seal@sitecore.com
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "0c133584-043c-4579-9178-16f114a87a76"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\richard.seal@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20250710T141615Z
+  - Language: en
+    Versions:
+      - Version: 1
+        Fields:
+          - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+            Hint: __Created
+            Value: 20250707T200641Z
+          - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+            Hint: __Owner
+            Value: |
+              sitecore\richard.seal@sitecore.com
+          - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+            Hint: __Created by
+            Value: |
+              sitecore\richard.seal@sitecore.com
+          - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+            Hint: __Revision
+            Value: "0c133584-043c-4579-9178-16f114a87a76"
+          - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+            Hint: __Updated by
+            Value: |
+              sitecore\richard.seal@sitecore.com
+          - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+            Hint: __Updated
+            Value: 20250710T141615Z
