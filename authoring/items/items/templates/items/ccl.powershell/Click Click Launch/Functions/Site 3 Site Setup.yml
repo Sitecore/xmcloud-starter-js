@@ -118,10 +118,7 @@ SharedFields:
             $itemsWithLinks = $partialDesignDataItems | Where-Object {$_._.Link -ne $null}
             foreach($linkItem in $itemsWithLinks)
             {
-                $linkItem.Editing.BeginEdit()
-                $linkItem._.Link.LinkType = 'internal'
-                $linkItem._.Link.TargetID = $homeItem.ID
-                $linkItem.Editing.EndEdit()
+              Update-LinkField -Item $linkItem -FieldName "Link" -TargetItem $homeItem
             }
             $featureItem = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header/Data/Speakers" 
             $featureItem.Editing.BeginEdit()
@@ -129,9 +126,8 @@ SharedFields:
             $featureItem.Editing.EndEdit()
             
             $speakersMenu = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header/Data/Speakers"
-            $speakersMenu.Editing.BeginEdit()
-            $speakersMenu._.Link.TargetID = Get-Item -Path "$sitePath/Home/Speakers" | Select -ExpandProperty "ID"
-            $speakersMenu.Editing.EndEdit()
+            $featuredSpeaker = Get-Item -Path "$sitePath/Home/Speakers"
+            Update-LinkField -Item $speakersMenu -FieldName "Link" -TargetItem $featuredSpeaker
 
             # Get variants for link list
             $linkListVariants = $service.GetAvailableRenderingVariants($Site, $renderingLinkList.Name, $renderingLinkList.ID, $item.TemplateID)
