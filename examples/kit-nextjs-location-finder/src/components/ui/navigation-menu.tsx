@@ -24,18 +24,11 @@ const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>
 >(({ className, ...props }, ref) => (
-  <>
-    <div className="absolute -translate-y-3">
-      <NavigationMenuPrimitive.List
-        ref={ref}
-        className={cn(
-          'group flex flex-1 list-none items-center justify-center space-x-1',
-          className
-        )}
-        {...props}
-      />
-    </div>
-  </>
+  <NavigationMenuPrimitive.List
+    ref={ref}
+    className={cn('group flex flex-1 list-none items-center justify-center space-x-1', className)}
+    {...props}
+  />
 ));
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 

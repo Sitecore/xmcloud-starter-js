@@ -32,9 +32,9 @@ export function useContainerQuery(
     // Create a function to check if the container matches the breakpoint
     const checkContainer = (width: number) => {
       if (direction === 'min') {
-        setMatches(width >= breakpointSize);
+        setMatches(width <= breakpointSize);
       } else {
-        setMatches(width < breakpointSize);
+        setMatches(width > breakpointSize);
       }
     };
     // Initialize with the current size

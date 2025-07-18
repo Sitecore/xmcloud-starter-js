@@ -74,7 +74,7 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
                 <AnimatedHoverNav
                   mobileBreakpoint="md"
                   parentRef={navRef}
-                  indicatorClassName="bg-primary rounded-default absolute inset-0 -z-10 block"
+                  indicatorClassName="bg-primary rounded-[2px] absolute inset-0 z-[-1] block"
                 >
                   <NavigationMenuList className="flex w-full justify-between">
                     {primaryNavigationLinks?.targetItems &&
