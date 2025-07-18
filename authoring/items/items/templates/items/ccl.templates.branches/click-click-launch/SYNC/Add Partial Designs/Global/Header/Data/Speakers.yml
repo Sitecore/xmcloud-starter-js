@@ -13,7 +13,7 @@ Languages:
       Value: 20250612T095619Z
     - ID: "3c51010e-7a83-47c4-af53-e2a2ecb24bf9"
       Hint: FeaturedProduct
-      Value: "{2FAB4E35-5B58-435F-9EE1-41B7869B812F}"
+      Value:
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
