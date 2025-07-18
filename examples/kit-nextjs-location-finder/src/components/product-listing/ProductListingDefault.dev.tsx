@@ -10,9 +10,8 @@ import { cn } from '@/lib/utils';
 export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
   const isReducedMotion = useMatchMedia('(prefers-reduced-motion: reduce)');
   const [activeCard, setActiveCard] = useState<string | null>(null);
-  const [visibleCount, setVisibleCount] = useState(3); // Start with 3 products visible
   const { fields, isPageEditing } = props;
-  const { title, viewAllLink, loadMoreButtonText, products } = fields?.data?.datasource ?? {};
+  const { title, viewAllLink, products } = fields?.data?.datasource ?? {};
 
   const sitecoreProducts = products?.targetItems || [];
 
@@ -37,8 +36,8 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
 
     const finalAllProducts = sitecoreProducts;
 
-    // Calculate how many products to show based on visibleCount
-    const visibleProducts = finalAllProducts.slice(0, visibleCount);
+    // Limit to 3 products
+    const visibleProducts = finalAllProducts.slice(0, 3);
 
     // Balanced layout: Right column starts at title level, balanced numbers when possible
     const totalVisible = visibleProducts.length;
@@ -54,14 +53,6 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
 
     const leftColumnProducts = visibleProducts.slice(0, leftCount);
     const rightColumnProducts = visibleProducts.slice(leftCount);
-
-    // Check if there are more products to load
-    const hasMoreProducts = finalAllProducts.length > visibleCount;
-
-    // Function to load more products
-    const handleLoadMore = () => {
-      setVisibleCount((prev) => Math.min(prev + 3, finalAllProducts.length));
-    };
     return (
       <div
         className={cn('@container transform-gpu border-b-2 border-t-2 [.border-b-2+&]:border-t-0', {
@@ -148,30 +139,6 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
               </div>
             )}
           </div>
-
-          {/* Show "Load More" section outside the grid */}
-          {hasMoreProducts && (
-            <div className="mt-[30px] text-center">
-              <AnimatedSection
-                direction="up"
-                duration={400}
-                reducedMotion={isReducedMotion}
-                isPageEditing={isPageEditing}
-              >
-                <div className="text-center">
-                  <Text tag="p" className="text-muted-foreground mb-4 text-lg">
-                    Showing {visibleCount} of {finalAllProducts.length} models
-                  </Text>
-                  <button
-                    onClick={handleLoadMore}
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                  >
-                    {loadMoreButtonText?.jsonValue?.value || 'Load More Models'}
-                  </button>
-                </div>
-              </AnimatedSection>
-            </div>
-          )}
         </div>
       </div>
     );
