@@ -40,17 +40,8 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
     // Limit to 3 products
     const visibleProducts = finalAllProducts.slice(0, 3);
 
-    // Balanced layout: Right column starts at title level, balanced numbers when possible
-    const totalVisible = visibleProducts.length;
-    let leftCount;
-
-    if (totalVisible <= 3) {
-      // For 1-3 products: Left gets 1, Right gets the rest
-      leftCount = 1;
-    } else {
-      // For 4+ products: Balance the numbers, extra goes to right
-      leftCount = Math.floor(totalVisible / 2);
-    }
+    // Layout: Left gets 1, Right gets the rest (max 3 products total)
+    const leftCount = 1;
 
     const leftColumnProducts = visibleProducts.slice(0, leftCount);
     const rightColumnProducts = visibleProducts.slice(leftCount);
