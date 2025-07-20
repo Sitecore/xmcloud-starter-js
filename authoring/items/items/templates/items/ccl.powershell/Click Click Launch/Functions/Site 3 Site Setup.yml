@@ -9,6 +9,7 @@ SharedFields:
   Value: |
     Import-Function Get-ItemByIdSafe
     Import-Function Update-PageTemplate
+    Import-Function Update-LinkField
     Import-Function Update-TemplateInsertOptions
     
     function Invoke-ModuleScriptBody {
@@ -118,7 +119,7 @@ SharedFields:
             $itemsWithLinks = $partialDesignDataItems | Where-Object {$_._.Link -ne $null}
             foreach($linkItem in $itemsWithLinks)
             {
-              Update-LinkField -Item $linkItem -FieldName "Link" -TargetItem $homeItem
+                Update-LinkField -Item $linkItem -FieldName "Link" -TargetItem $homeItem
             }
             $featureItem = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header/Data/Speakers" 
             $featureItem.Editing.BeginEdit()
