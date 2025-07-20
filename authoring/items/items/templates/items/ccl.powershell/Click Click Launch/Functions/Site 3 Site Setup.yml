@@ -129,7 +129,7 @@ SharedFields:
             $speakersMenu = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header/Data/Speakers"
             $featuredSpeaker = Get-Item -Path "$sitePath/Home/Speakers"
             Update-LinkField -Item $speakersMenu -FieldName "Link" -TargetItem $featuredSpeaker
-
+    
             # Get variants for link list
             $linkListVariants = $service.GetAvailableRenderingVariants($Site, $renderingLinkList.Name, $renderingLinkList.ID, $item.TemplateID)
             $linkListVariant = $linkListVariants | Where-Object { $_.DisplayName -eq "FooterLinks" }
