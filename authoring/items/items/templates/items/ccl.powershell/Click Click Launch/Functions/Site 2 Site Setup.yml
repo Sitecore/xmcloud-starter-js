@@ -162,11 +162,6 @@ SharedFields:
             Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Accordion - Nexa - Demo Official" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
             Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
             Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
-
-            # Update rendering variants
-            Get-Rendering -Item $footerPartial -Rendering $renderingLinkList -Placeholder "*footer-secondary*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $footerLinks.ID; "Styles" = "%7C$($alignItemsCenter.ID)%7C"; } | `
-                Set-Rendering -Item $footerPartial -FinalLayout
             
             Write-Verbose "Update product pages with the correct taxonomy"
             $productTag = Get-Item -Path "$sitePath/Data/Taxonomy/Content Types/Product" -Language $Site.Language
@@ -200,8 +195,6 @@ SharedFields:
             $renderingHero = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Banners/Hero'
             $renderingTextBanner = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Banners/TextBanner'
             $renderingImageCarousel = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Media/ImageCarousel'
-            $renderingImageGallery = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Media/ImageGallery'
-            $renderingPageHeader = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Banners/PageHeader'
             $renderingPromo = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Promos/Promo'
             $renderingProductListing = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Product/ProductListing'
             $renderingAccordion = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Accordions/Accordion'
@@ -221,18 +214,13 @@ SharedFields:
             $imageCarouselVariants = $service.GetAvailableRenderingVariants($Site, $renderingImageCarousel.Name, $renderingImageCarousel.ID, $item.TemplateID)
             $promoVariants = $service.GetAvailableRenderingVariants($Site, $renderingPromo.Name, $renderingPromo.ID, $item.TemplateID)
             $accordionVariants = $service.GetAvailableRenderingVariants($Site, $renderingAccordion.Name, $renderingAccordion.ID, $item.TemplateID)
-            $imageGalleryVariants = $service.GetAvailableRenderingVariants($Site, $renderingImageGallery.Name, $renderingImageGallery.ID, $item.TemplateID)
-            $pageHeaderVariants = $service.GetAvailableRenderingVariants($Site, $renderingPageHeader.Name, $renderingPageHeader.ID, $item.TemplateID)
     
             $heroVariant = $heroVariants | Where-Object { $_.DisplayName -eq "Image Background" }
             $textBannerVariant = $textBannerVariants | Where-Object { $_.Name -eq "Default" }
             $imageCarouselVariant = $imageCarouselVariants | Where-Object { $_.Name -eq "Default" }
             $promoVariant = $promoVariants | Where-Object { $_.Name -eq "Default" }
             $accordionVariant = $accordionVariants | Where-Object { $_.Name -eq "Default" }
-            $accordionCenteredVariant = $accordionVariants | Where-Object { $_.Name -eq "Centered" }
-            $imageGalleryVariant = $imageGalleryVariants | Where-Object { $_.Name -eq "Default" }
-            $pageHeaderVariant = $pageHeaderVariants | Where-Object { $_.Name -eq "Default" }
-
+            
             # add Home layout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition -Parameter @{ "DynamicPlaceholderId" = "1"; "excludeTopMargin" = "1" } -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingHeroDefinition -Parameter @{ "FieldNames" = $heroVariant.ID; "DynamicPlaceholderId" = "2" } -DataSource "local:/Data/Home Page Hero" -FinalLayout
@@ -242,31 +230,6 @@ SharedFields:
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingProductListingDefinition -DataSource "local:/Data/Home Page Product Listing" -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingAccordionDefinition -Parameter @{ "FieldNames" = $accordionVariant.ID; "DynamicPlaceholderId" = "6" } -DataSource "local:/Data/Home Page Accordion" -FinalLayout
     
-            # update Nexa product
-            $aeroPage
-            $nexaPage
-            $terraPage
-            Get-Rendering -Item $nexaPage -Rendering $renderingImageGallery -Placeholder "*container-fullwidth*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $imageGalleryVariant.ID } | `
-                Set-Rendering -Item $nexaPage -FinalLayout
-            
-            Get-Rendering -Item $nexaPage -Rendering $renderingPageHeader -Placeholder "*container-fullwidth*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $pageHeaderVariant.ID } | `
-                Set-Rendering -Item $nexaPage -FinalLayout
-
-            Get-Rendering -Item $nexaPage -Rendering $renderingTextBanner -Placeholder "*container-fullwidth*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $textBannerVariant.ID } | `
-                Set-Rendering -Item $nexaPage -FinalLayout
-
-            Get-Rendering -Item $nexaPage -Rendering $renderingPromo -Placeholder "*container-fullwidth*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $promoVariant.ID } | `
-                Set-Rendering -Item $nexaPage -FinalLayout
-            
-            Get-Rendering -Item $nexaPage -Rendering $renderingAccordion -Placeholder "*container-fullwidth*" -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $accordionCenteredVariant.ID } | `
-                Set-Rendering -Item $nexaPage -FinalLayout            
-
-
             Write-Verbose "Update home page fields"
             $title = "Alaris - Get set for an electric future."
             $shortTitle = "Alaris"
