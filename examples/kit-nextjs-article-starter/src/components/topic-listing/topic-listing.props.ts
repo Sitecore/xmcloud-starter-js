@@ -2,7 +2,7 @@ import { Field, LinkField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 
 export interface TopicListingParams {
-  backgroundTheme: Field<string>;
+  backgroundTheme: string;
   [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
