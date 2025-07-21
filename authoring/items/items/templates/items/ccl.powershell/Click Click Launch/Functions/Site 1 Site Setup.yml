@@ -213,7 +213,6 @@ SharedFields:
             Update-LinkField -Item $team -FieldName "link" -TargetItem $teamTargetItem
     
             # Update links for site
-            $sitePath = "/sitecore/content/123/solterr"
             Write-Host "Update links across items"
             $landingPage = Get-Item -Path "$sitePath/Home/Landing Page"
             $articlePage = Get-Item -Path "$sitePath/Home/Article Page"
@@ -228,9 +227,9 @@ SharedFields:
             $siteItems = Get-ChildItem -Path "/sitecore/content/123/solterr" -Recurse
             foreach($siteItem in $siteItems)
             {
-                foreach($field in $siteItem.Fields) {
-                    $linkField = $siteItem.PSFields."$($field.Name)" |
-                        Where-Object { $_ -is [Sitecore.Data.Fields.LinkField] }
+                foreach($field in $siteItem.Fields) 
+                {
+                    $linkField = $siteItem.PSFields."$($field.Name)" | Where-Object { $_ -is [Sitecore.Data.Fields.LinkField] }
                     Switch($linkField.TargetID) 
                     {
                         "{900f400b-3ba6-45ba-a77b-7f79e118c64c}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $landingPage }
@@ -244,10 +243,10 @@ SharedFields:
                     }
                 }
             }
-            #$renderingAniPromo = Get-Item -Path "/sitecore/layout/Renderings/Project/click-click-launch/Promos/PromoAnimated"
+            $renderingAniPromo = Get-Item -Path "/sitecore/layout/Renderings/Project/click-click-launch/Promos/PromoAnimated"
             
-            #$aniPromoVariants = $service.GetAvailableRenderingVariants($Site, $renderingAniPromo.Name, $renderingAniPromo.ID, $item.TemplateID)
-            #$aniPromoImageRightVariant = $aniPromoVariants | Where-Object { $_.Name -eq "ImageRight" }
+            $aniPromoVariants = $service.GetAvailableRenderingVariants($Site, $renderingAniPromo.Name, $renderingAniPromo.ID, $item.TemplateID)
+            $aniPromoImageRightVariant = $aniPromoVariants | Where-Object { $_.Name -eq "ImageRight" }
             
             $articleListing = Get-Item -Path "$sitePath/Home/Landing Page/Data/Article Listing"
             $articleListing.Editing.BeginEdit()
