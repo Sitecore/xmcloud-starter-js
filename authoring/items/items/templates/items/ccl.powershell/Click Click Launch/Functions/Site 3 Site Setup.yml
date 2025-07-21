@@ -126,9 +126,14 @@ SharedFields:
             $featureItem._.FeaturedProduct.Value = Get-Item -Path "$sitePath/Home/Speakers/Heritage 10" | Select -ExpandProperty "ID"
             $featureItem.Editing.EndEdit()
             
+            ## Update product page links for better navigation
             $speakersMenu = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header/Data/Speakers"
-            $featuredSpeaker = Get-Item -Path "$sitePath/Home/Speakers"
-            Update-LinkField -Item $speakersMenu -FieldName "Link" -TargetItem $featuredSpeaker
+            $speakersHome = Get-Item -Path "$sitePath/Home/Speakers"
+            Update-LinkField -Item $speakersMenu -FieldName "Link" -TargetItem $speakersHome
+            $speakersHeaderLink = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header/Data/Speakers Primary Links/Link 1"
+            $speakersFooterLink = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Footer/Data/Primary Links/Link 1"
+            Update-LinkField -Item $speakersHeaderLink -FieldName "Link" -TargetItem $speakersHome
+            Update-LinkField -Item $speakersFooterLink -FieldName "Link" -TargetItem $speakersHome
     
             # Get variants for link list
             $linkListVariants = $service.GetAvailableRenderingVariants($Site, $renderingLinkList.Name, $renderingLinkList.ID, $item.TemplateID)
