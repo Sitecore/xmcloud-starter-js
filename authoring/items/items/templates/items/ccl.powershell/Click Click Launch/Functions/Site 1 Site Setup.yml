@@ -224,7 +224,7 @@ SharedFields:
             $articleQa1 = Get-Item -Path "$sitePath/Home/Articles/QA Article 1"
             $articleQa2 = Get-Item -Path "$sitePath/Home/Articles/QA Article 2"
     
-            $siteItems = Get-ChildItem -Path "/sitecore/content/123/solterr" -Recurse
+            $siteItems = Get-ChildItem -Path $sitePath -Recurse
             foreach($siteItem in $siteItems)
             {
                 foreach($field in $siteItem.Fields) 
@@ -247,6 +247,9 @@ SharedFields:
             
             $aniPromoVariants = $service.GetAvailableRenderingVariants($Site, $renderingAniPromo.Name, $renderingAniPromo.ID, $item.TemplateID)
             $aniPromoImageRightVariant = $aniPromoVariants | Where-Object { $_.Name -eq "ImageRight" }
+            Get-Rendering -Item $landingPage -Rendering $renderingAniPromo -FinalLayout | `
+                Set-RenderingParameter -Parameter @{ "FieldNames" = $aniPromoImageRightVariant.ID } | `
+                Set-Rendering -Item $landingPage -FinalLayout
             
             $articleListing = Get-Item -Path "$sitePath/Home/Landing Page/Data/Article Listing"
             $articleListing.Editing.BeginEdit()
