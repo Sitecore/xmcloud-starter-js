@@ -50,7 +50,7 @@ Languages:
             <r
               uid="{D82D5869-A8D9-46EA-AE7D-451C1A30CA01}"
               p:after="r[@uid='{53240A01-8785-44BB-8ECE-3FA226D48A1D}']"
-              s:ds="ccfa30d0-a677-4f42-b6f1-26024c03dd93"
+              s:ds="local:/Data/Column One"
               s:id="{97E47419-8242-498C-8683-3D07C1A9E752}"
               s:par="CSSStyles&amp;DynamicPlaceholderId=3"
               s:ph="/headless-footer/container-footer-column-0-2" />

@@ -211,10 +211,52 @@ SharedFields:
             $team = Get-Item "$sitePath/Presentation/Partial Designs/Global/Header/Data/Global Header/Team"
             $teamTargetItem = Get-Item "$sitePath/Home/Landing Page" -Language $Site.Language
             Update-LinkField -Item $team -FieldName "link" -TargetItem $teamTargetItem
+    
+            # Update links for site
+            $sitePath = "/sitecore/content/123/solterr"
+            Write-Host "Update links across items"
+            $landingPage = Get-Item -Path "$sitePath/Home/Landing Page"
+            $articlePage = Get-Item -Path "$sitePath/Home/Article Page"
+            $homePage = Get-Item -Path "$sitePath/Home"
+            
+            $article1 = Get-Item -Path "$sitePath/Home/Articles/Article 1"
+            $article2 = Get-Item -Path "$sitePath/Home/Articles/Article 2"
+            $article3 = Get-Item -Path "$sitePath/Home/Articles/Article 3"
+            $articleQa1 = Get-Item -Path "$sitePath/Home/Articles/QA Article 1"
+            $articleQa2 = Get-Item -Path "$sitePath/Home/Articles/QA Article 2"
+    
+            $siteItems = Get-ChildItem -Path "/sitecore/content/123/solterr" -Recurse
+            foreach($siteItem in $siteItems)
+            {
+                foreach($field in $siteItem.Fields) {
+                    $linkField = $siteItem.PSFields."$($field.Name)" |
+                        Where-Object { $_ -is [Sitecore.Data.Fields.LinkField] }
+                    Switch($linkField.TargetID) 
+                    {
+                        "{900f400b-3ba6-45ba-a77b-7f79e118c64c}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $landingPage }
+                        "{6b210487-0aac-4feb-a8af-9d78ab573c0f}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $homePage }
+                        "{0e8032b7-e017-42e5-84db-61fda4e1b92f}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $articlePage }
+                        "{900f400b-3ba6-45ba-a77b-7f79e118c64c}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $landingPage }
+                        "{3185BA20-8242-4976-AAB6-B4FC7BB4D10F}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $article1 }
+                        "{F849AF70-2A4B-42D8-83C3-2C25492832DA}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $article2 }
+                        "{6A955BC8-1E90-40A4-932C-07C0190368B9}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $article3 }
+                        "{44C2E7E7-4ED1-4786-B7A9-FE1B13B8D7DA}" { Update-LinkField -Item $siteItem -FieldName "$($field.Name)" -TargetItem $articleQa1 }
+                    }
+                }
+            }
+            #$renderingAniPromo = Get-Item -Path "/sitecore/layout/Renderings/Project/click-click-launch/Promos/PromoAnimated"
+            
+            #$aniPromoVariants = $service.GetAvailableRenderingVariants($Site, $renderingAniPromo.Name, $renderingAniPromo.ID, $item.TemplateID)
+            #$aniPromoImageRightVariant = $aniPromoVariants | Where-Object { $_.Name -eq "ImageRight" }
+            
+            $articleListing = Get-Item -Path "$sitePath/Home/Landing Page/Data/Article Listing"
+            $articleListing.Editing.BeginEdit()
+            $articleListing._.featuredContent = "$($article1.ID)|$($article2.ID)|$($article3.ID)|$($articleQa2.ID)|$($articleQa2.ID)"
+            $articleListing.Editing.EndEdit()
             
             Write-Verbose "Create dictionary items"
             $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
-            $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 1/Add Dictionary Items" -Language $Site.Language
+            $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Dictionary Items" -Language $Site.Language
             New-Item -Parent $dictionaryRoot -Name "Dictionary Items" -ItemType $dictionaryBranchTemplate.ID
         }
         
