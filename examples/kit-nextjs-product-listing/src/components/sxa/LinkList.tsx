@@ -1,5 +1,5 @@
 import React, { useEffect, useState, type JSX } from 'react';
-import { Link as JssLink, Text, LinkField, TextField } from '@sitecore-content-sdk/nextjs';
+import { Link as ContentSdkLink, Text, LinkField, TextField } from '@sitecore-content-sdk/nextjs';
 
 type ResultsFieldLink = {
   field: {
@@ -44,7 +44,7 @@ const LinkListItem = (props: LinkListItemProps) => {
   return (
     <li className={className}>
       <div>
-        <JssLink
+        <ContentSdkLink
           className="text-gray-600 hover:underline focus:border focus:border-dashed focus:border-gray-500 inline-block px-2 py-2 focus:bg-gray-50 focus:outline focus:outline-dashed focus:ring-gray-500 aria-selected:bg-gray-100 text-nowrap word-break-[break-word] text-sm"
           field={props.field}
           prefetch={false}
@@ -202,7 +202,7 @@ export const FooterLinks = (props: LinkListProps): JSX.Element => {
 
         return (
           <>
-            <JssLink
+            <ContentSdkLink
               key={`${key}${href}-link`}
               className="font-[inherit]"
               field={element.field.link}
@@ -255,7 +255,7 @@ export const HeaderPrimaryLinks = (props: LinkListProps): JSX.Element => {
 
         return (
           <li key={`${key}${href}-link`}>
-            <JssLink field={element.field.link} prefetch={false} />
+            <ContentSdkLink field={element.field.link} prefetch={false} />
           </li>
         );
       });
@@ -290,7 +290,7 @@ export const HeaderSecondaryLinks = (props: LinkListProps): JSX.Element => {
 
         return (
           <li key={`${key}${href}-link`}>
-            <JssLink field={element.field.link} prefetch={false} />
+            <ContentSdkLink field={element.field.link} prefetch={false} />
           </li>
         );
       });

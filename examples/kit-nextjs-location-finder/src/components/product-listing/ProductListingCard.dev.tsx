@@ -22,14 +22,15 @@ const ProductListingCard = ({
   return (
     <CardSpotlight className="h-full w-full" prefersReducedMotion={prefersReducedMotion}>
       <div
-        className="@md:px-12 @md:py-12 font-heading relative z-10 flex w-full flex-col justify-between gap-8 px-6 py-10"
+        className="@md:px-12 @md:py-12 font-heading relative z-10 flex w-full flex-col gap-8 px-6 py-10"
         data-component="ProductListingCard"
       >
         <div className="relative overflow-hidden">
           <ImageWrapper image={product.productThumbnail?.jsonValue} className="mx-auto" />
         </div>
-        <div className="space-y-4">
-          <div>
+
+        <div className="space-y-6">
+          <div className="space-y-2">
             <Text
               tag="h3"
               className="text-secondary-foreground text-2xl font-semibold"
@@ -46,12 +47,12 @@ const ProductListingCard = ({
           <div className="border-muted-foreground border-t pt-4">
             <Text
               tag="h4"
-              className="text-secondary-foreground font-regular text-2xl"
+              className="text-secondary-foreground font-regular text-xl mb-2"
               field={product.productFeatureTitle?.jsonValue}
             />
             <Text
               tag="p"
-              className="text-muted-foreground text-base font-light transition-all group-[.spotlight]:brightness-125"
+              className="text-muted-foreground text-sm font-light transition-all group-[.spotlight]:brightness-125"
               field={product.productFeatureText?.jsonValue}
             />
           </div>
@@ -59,10 +60,10 @@ const ProductListingCard = ({
           <div className="border-muted-foreground border-t pt-4">
             <Text
               tag="h4"
-              className="text-secondary-foreground font-regular text-2xl"
+              className="text-secondary-foreground font-regular text-xl"
               field={product.productDrivingRange?.jsonValue}
             />
-            <p className="text-muted-foreground text-base font-light transition-all group-[.spotlight]:brightness-125">
+            <p className="text-muted-foreground text-sm font-light transition-all group-[.spotlight]:brightness-125">
               {dictionary.PRODUCTLISTING_DrivingRange}
             </p>
           </div>

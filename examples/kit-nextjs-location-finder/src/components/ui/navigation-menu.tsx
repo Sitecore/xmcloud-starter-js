@@ -24,18 +24,11 @@ const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>
 >(({ className, ...props }, ref) => (
-  <>
-    <div className="pointer-events-none absolute inset-0 -z-10">
-      <NavigationMenuPrimitive.List
-        ref={ref}
-        className={cn(
-          'group flex flex-1 list-none items-center justify-center space-x-1 pointer-events-auto',
-          className
-        )}
-        {...props}
-      />
-    </div>
-  </>
+  <NavigationMenuPrimitive.List
+    ref={ref}
+    className={cn('group flex flex-1 list-none items-center justify-center space-x-1', className)}
+    {...props}
+  />
 ));
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 
@@ -109,7 +102,7 @@ const NavigationMenuIndicator = React.forwardRef<
     )}
     {...props}
   >
-    <div className="pointer-events-none bg-border relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm shadow-md" />
+    <div className="bg-border relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm shadow-md" />
   </NavigationMenuPrimitive.Indicator>
 ));
 NavigationMenuIndicator.displayName = NavigationMenuPrimitive.Indicator.displayName;

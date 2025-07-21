@@ -1,7 +1,7 @@
 import React, { type JSX } from 'react';
 import {
-  RichText as JssRichText,
-  Text as JssText,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
   useSitecore,
   RichTextField,
   LinkField,
@@ -58,7 +58,7 @@ export const Default = (props: PageContentProps): JSX.Element => {
 
   return (
     <ComponentContent styles={props.params.styles} id={id}>
-      <JssRichText field={field} />
+      <ContentSdkRichText field={field} />
     </ComponentContent>
   );
 };
@@ -79,10 +79,10 @@ export const TitleAndBody = (props: PageContentProps): JSX.Element => {
     <section className="bg-brand-gray95 py-16">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold text-brand-black mb-4">
-          <JssText field={fields.title} />
+          <ContentSdkText field={fields.title} />
         </h2>
         <div className="text-xl text-brand-black mb-8">
-          <JssRichText field={fields.body} />
+          <ContentSdkRichText field={fields.body} />
         </div>
         <Link
           href="#components"

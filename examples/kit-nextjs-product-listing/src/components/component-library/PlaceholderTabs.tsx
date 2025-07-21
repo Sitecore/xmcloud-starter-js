@@ -1,4 +1,4 @@
-import { Text as JssText, Placeholder } from '@sitecore-content-sdk/nextjs';
+import { Text as ContentSdkText, Placeholder } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { useMemo, type JSX } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from 'shadcd/components/ui/tabs';
@@ -46,7 +46,7 @@ export const Default = (props: PlaceholderTabsProps): JSX.Element => {
                     value={tab.id}
                     className={`relative basis-auto px-4 py-2 -ml-[2px] first:ml-0 border-2 !border-e-2 rounded-tr-sm rounded-tl-sm text-base transition-all hover:pt-3 ${tabsTriggerActiveStyles} ${tabsTriggerInactiveStyles}`}
                   >
-                    <JssText field={tab.title.jsonValue} />
+                    <ContentSdkText field={tab.title.jsonValue} />
                   </TabsTrigger>
                 ))}
               </TabsList>

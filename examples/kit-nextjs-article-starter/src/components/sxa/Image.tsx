@@ -1,8 +1,8 @@
 import {
   Field,
   ImageField,
-  NextImage as JssImage,
-  Link as JssLink,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
   LinkField,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
@@ -31,11 +31,11 @@ export const Banner = (props: ImageProps): JSX.Element => {
       <div className={classNameList}>
         <div className="component-content">
           {page.mode.isEditing || !props.fields.TargetUrl?.value?.href ? (
-            <JssImage field={Image} />
+            <ContentSdkImage field={Image} />
           ) : (
-            <JssLink field={TargetUrl}>
-              <JssImage field={Image} />
-            </JssLink>
+            <ContentSdkLink field={TargetUrl}>
+              <ContentSdkImage field={Image} />
+            </ContentSdkLink>
           )}
         </div>
       </div>
@@ -46,24 +46,25 @@ export const Banner = (props: ImageProps): JSX.Element => {
 };
 
 export const Default = (props: ImageProps): JSX.Element => {
-  const { page } = useSitecore();
-  const { Image } = props.fields;
-  const sxaStyles = props.params?.Styles ?? '';
+  const { fields, params } = props;
+  const sxaStyles = params?.Styles ?? '';
   const classNameList = `component image ${sxaStyles}`.trimEnd();
 
-  const modifyImageProps = {
-    ...Image,
-    value: {
-      ...Image?.value,
-      alt: Image?.value?.alt || 'image',
-    },
-  };
+  if (fields) {
+    const { Image } = props.fields;
 
-  if (props.fields) {
+    const modifyImageProps = {
+      ...Image,
+      value: {
+        ...Image?.value,
+        alt: Image?.value?.alt || 'image',
+      },
+    };
+
     return (
       <div className={classNameList}>
         <div className="component-content">
-          {page.mode.isEditing ? <JssImage field={modifyImageProps} /> : ''}
+          <ContentSdkImage field={modifyImageProps} />
         </div>
       </div>
     );

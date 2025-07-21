@@ -3,6 +3,13 @@ ID: "e74c975b-86ce-4578-a0ca-fec5656aeb22"
 Parent: "a19c3230-c5ee-47a1-ae3f-12a1fc3c4273"
 Template: "a19c3230-c5ee-47a1-ae3f-12a1fc3c4273"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Page Headers/Hero/__Standard Values"
+SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "27458191-4795-4f58-be6b-7e99ca02e7ff"
 Languages:
 - Language: en
   Versions:
@@ -24,14 +31,14 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c29bbfab-cd44-4912-86fd-44001638570a"
+      Value: "a374e48f-0649-4ecc-9c07-0b92034b38d7"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\anton.kechashin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250130T203127Z
+      Value: 20250717T134232Z
     - ID: "e2223200-5161-4e5a-9a35-9a5ac126c05c"
       Hint: descriptionOptional
       Value: Description Text

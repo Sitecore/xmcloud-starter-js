@@ -1,5 +1,6 @@
 import type React from 'react';
 import { RichText as JssRichText, Field } from '@sitecore-content-sdk/nextjs';
+import { RichText as ContentSdkRichText } from '@sitecore-content-sdk/nextjs';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { ComponentProps } from '@/lib/component-props';
@@ -18,7 +19,7 @@ interface RichTextFields {
 export const Default: React.FC<RichTextBlockProps> = (props) => {
   const { fields, params } = props;
   const text = fields ? (
-    <JssRichText field={fields.text} />
+    <ContentSdkRichText field={fields.text} />
   ) : (
     <span className="is-empty-hint">Rich text</span>
   );

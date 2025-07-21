@@ -7,10 +7,10 @@ import {
 } from 'shadcn/components/ui/carousel';
 import { ArrowRight } from 'lucide-react';
 import {
-  NextImage as JssImage,
-  Link as JssLink,
-  RichText as JssRichText,
-  Text as JssText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+  RichText as ContentSdkRichText,
+  Text as ContentSdkText,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
@@ -72,7 +72,7 @@ const StarRating = ({ r: ratingField }: { r: IGQLTextField }) => {
   return (
     <div className="flex gap-1 mb-6">
       {[...filledStars, ...emptyStars]}
-      {isEditing && <JssText field={ratingField.jsonValue} />}
+      {isEditing && <ContentSdkText field={ratingField.jsonValue} />}
     </div>
   );
 };
@@ -85,7 +85,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
           <StarRating r={props.testimonial.testimonialRating} />
         ) : props.withLogo ? (
           <div className="h-12 mb-12">
-            <JssImage
+            <ContentSdkImage
               field={props.testimonial.testimonialIcon?.jsonValue}
               width={300}
               height={48}
@@ -109,7 +109,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
       <>
         {props.type !== 'large' && (
           <div className="shrink-0 w-12 h-12 rounded-full overflow-hidden">
-            <JssImage
+            <ContentSdkImage
               field={props.testimonial.customerIcon?.jsonValue}
               width={48}
               height={48}
@@ -119,10 +119,10 @@ const TestimonialCard = (props: TestimonialCardProps) => {
         )}
         <div>
           <div className="font-semibold">
-            <JssText field={props.testimonial.customerName?.jsonValue} />
+            <ContentSdkText field={props.testimonial.customerName?.jsonValue} />
           </div>
           <div>
-            <JssText field={props.testimonial.customerCompany?.jsonValue} />
+            <ContentSdkText field={props.testimonial.customerCompany?.jsonValue} />
           </div>
         </div>
       </>
@@ -132,7 +132,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
       <div className="flex mt-auto gap-4">
         <div className="flex items-center gap-4">{author}</div>
         <div className="h-12 border-s ps-4">
-          <JssImage
+          <ContentSdkImage
             field={props.testimonial.testimonialIcon?.jsonValue}
             width={300}
             height={48}
@@ -165,18 +165,18 @@ const TestimonialCard = (props: TestimonialCardProps) => {
         <div className={`flex flex-col border p-8 ${props.className}`}>
           {testimonialHeader}
           <blockquote className="text-lg mb-6">
-            <JssRichText field={props.testimonial.testimonialBody?.jsonValue} />
+            <ContentSdkRichText field={props.testimonial.testimonialBody?.jsonValue} />
           </blockquote>
           {testimonialAuthorCard}
           <Button asChild variant={'link'} className="self-start px-0 mt-6">
-            <JssLink
+            <ContentSdkLink
               field={props.testimonial.caseStudyLink?.jsonValue}
               className="inline-flex items-center"
               prefetch={false}
             >
               {props.testimonial.caseStudyLink?.jsonValue.value.text}
               <ArrowRight className="h-4 w-4" />
-            </JssLink>
+            </ContentSdkLink>
           </Button>
         </div>
       );
@@ -185,18 +185,18 @@ const TestimonialCard = (props: TestimonialCardProps) => {
         <div className={`flex flex-col items-center max-w-3xl mx-auto ${props.className}`}>
           {testimonialHeader}
           <blockquote className="text-xl font-bold mb-12 text-center">
-            <JssRichText field={props.testimonial.testimonialBody?.jsonValue} />
+            <ContentSdkRichText field={props.testimonial.testimonialBody?.jsonValue} />
           </blockquote>
           {testimonialAuthorCard}
           <Button asChild variant={'link'} className="mt-6">
-            <JssLink
+            <ContentSdkLink
               field={props.testimonial.caseStudyLink?.jsonValue}
               className="inline-flex items-center"
               prefetch={false}
             >
               {props.testimonial.caseStudyLink?.jsonValue.value.text}
               <ArrowRight className="h-4 w-4" />
-            </JssLink>
+            </ContentSdkLink>
           </Button>
         </div>
       );
@@ -204,7 +204,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
       return (
         <div className={`grid md:grid-cols-2 items-center gap-x-20 gap-y-12 ${props.className}`}>
           <div>
-            <JssImage
+            <ContentSdkImage
               field={props.testimonial.customerIcon?.jsonValue}
               width={700}
               height={700}
@@ -214,18 +214,18 @@ const TestimonialCard = (props: TestimonialCardProps) => {
           <div>
             {testimonialHeader}
             <blockquote className="text-xl font-bold mb-6">
-              <JssRichText field={props.testimonial.testimonialBody?.jsonValue} />
+              <ContentSdkRichText field={props.testimonial.testimonialBody?.jsonValue} />
             </blockquote>
             {testimonialAuthorCard}
             <Button asChild variant={'link'} className="self-start px-0 mt-6">
-              <JssLink
+              <ContentSdkLink
                 field={props.testimonial.caseStudyLink?.jsonValue}
                 className="inline-flex items-center"
                 prefetch={false}
               >
                 {props.testimonial.caseStudyLink?.jsonValue.value.text}
                 <ArrowRight className="h-4 w-4" />
-              </JssLink>
+              </ContentSdkLink>
             </Button>
           </div>
         </div>
@@ -235,18 +235,18 @@ const TestimonialCard = (props: TestimonialCardProps) => {
         <div className={`flex flex-col ${props.className}`}>
           {testimonialHeader}
           <blockquote className="text-xl font-bold mb-6">
-            <JssRichText field={props.testimonial.testimonialBody?.jsonValue} />
+            <ContentSdkRichText field={props.testimonial.testimonialBody?.jsonValue} />
           </blockquote>
           {testimonialAuthorCard}
           <Button asChild variant={'link'} className="self-start px-0 mt-6">
-            <JssLink
+            <ContentSdkLink
               field={props.testimonial.caseStudyLink?.jsonValue}
               className="inline-flex items-center"
               prefetch={false}
             >
               {props.testimonial.caseStudyLink?.jsonValue.value.text}
               <ArrowRight className="h-4 w-4" />
-            </JssLink>
+            </ContentSdkLink>
           </Button>
         </div>
       );
@@ -261,10 +261,10 @@ export const Default = (props: TestimonialsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-x-12 gap-y-20">
@@ -291,10 +291,10 @@ export const Testimonials1 = (props: TestimonialsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
         </div>
         <div className="max-w-5xl mx-auto px-12">
@@ -323,10 +323,10 @@ export const Testimonials2 = (props: TestimonialsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mb-20">
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
         </div>
 
@@ -357,10 +357,10 @@ export const Testimonials3 = (props: TestimonialsProps): JSX.Element => {
         <div className="grid md:grid-cols-2 items-center gap-12 md:gap-20">
           <div className="md:mb-16">
             <h2 className="text-5xl font-bold mb-6">
-              <JssText field={datasource.title?.jsonValue} />
+              <ContentSdkText field={datasource.title?.jsonValue} />
             </h2>
             <p className="text-lg">
-              <JssText field={datasource.tagLine?.jsonValue} />
+              <ContentSdkText field={datasource.tagLine?.jsonValue} />
             </p>
           </div>
 
@@ -397,10 +397,10 @@ export const Testimonials4 = (props: TestimonialsProps): JSX.Element => {
         <div className="grid md:grid-cols-2 items-center gap-12 md:gap-20">
           <div className="md:mb-16">
             <h2 className="text-5xl font-bold mb-6">
-              <JssText field={datasource.title?.jsonValue} />
+              <ContentSdkText field={datasource.title?.jsonValue} />
             </h2>
             <p className="text-lg">
-              <JssText field={datasource.tagLine?.jsonValue} />
+              <ContentSdkText field={datasource.tagLine?.jsonValue} />
             </p>
           </div>
 
@@ -431,10 +431,10 @@ export const Testimonials5 = (props: TestimonialsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mb-20">
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
         </div>
 
@@ -464,10 +464,10 @@ export const Testimonials6 = (props: TestimonialsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
         </div>
         <div className="md:columns-3 gap-8">
@@ -494,10 +494,10 @@ export const Testimonials7 = (props: TestimonialsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-x-12 gap-y-20">
@@ -524,10 +524,10 @@ export const Testimonials8 = (props: TestimonialsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mb-20">
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
         </div>
 
@@ -563,10 +563,10 @@ export const Testimonials9 = (props: TestimonialsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <h2 className="text-5xl font-bold mb-6">
-            <JssText field={datasource.title?.jsonValue} />
+            <ContentSdkText field={datasource.title?.jsonValue} />
           </h2>
           <p className="text-lg">
-            <JssText field={datasource.tagLine?.jsonValue} />
+            <ContentSdkText field={datasource.tagLine?.jsonValue} />
           </p>
         </div>
 
@@ -574,7 +574,7 @@ export const Testimonials9 = (props: TestimonialsProps): JSX.Element => {
           <TabsList>
             {datasource.children.results.map((testimonial) => (
               <TabsTrigger value={testimonial.id} key={testimonial.id}>
-                <JssImage
+                <ContentSdkImage
                   field={testimonial.testimonialIcon?.jsonValue}
                   width={200}
                   height={32}

@@ -17,7 +17,10 @@ SharedFields:
   Value: 100
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "4aa0b93a-412f-49ca-83a0-068ff5a39d58"
+  Value: "b0e93283-22db-46ee-811a-3cf758989716"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{4A4844C0-ED2E-4472-AA0E-C765A513C710}"
 Languages:
 - Language: "de-DE"
   Fields:
@@ -71,14 +74,14 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c6840eca-aead-4838-bf93-e69ffef5628d"
+      Value: "49c13136-262b-4b0f-8dd4-cef096fffb17"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\anton.kechashin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250529T032728Z
+      Value: 20250717T135220Z
 - Language: "ja-JP"
   Fields:
   - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"

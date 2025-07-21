@@ -9,6 +9,7 @@ SharedFields:
   Value: |
     Import-Function Get-ItemByIdSafe
     Import-Function Update-PageTemplate
+    Import-Function Update-LinkField
     Import-Function Update-TemplateInsertOptions
     
     function Invoke-ModuleScriptBody {
@@ -109,6 +110,25 @@ SharedFields:
             
             Write-Verbose "Update rendering variants on partial designs"
             $renderingLinkList = Get-Item -Path '/sitecore/layout/Renderings/Feature/JSS Experience Accelerator/Navigation/LinkList'
+    
+            ## Update links in partial designs
+            $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header"
+            Write-Verbose "Populate links in partial header and footer"
+            $partialDesignDataItems = Get-ChildItem -Path "$sitePath/Presentation/Partial Designs/Global" -Recurse
+            $homeItem = Get-Item -Path "$sitePath/Home"
+            $itemsWithLinks = $partialDesignDataItems | Where-Object {$_._.Link -ne $null}
+            foreach($linkItem in $itemsWithLinks)
+            {
+                Update-LinkField -Item $linkItem -FieldName "Link" -TargetItem $homeItem
+            }
+            $featureItem = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header/Data/Speakers" 
+            $featureItem.Editing.BeginEdit()
+            $featureItem._.FeaturedProduct.Value = Get-Item -Path "$sitePath/Home/Speakers/Heritage 10" | Select -ExpandProperty "ID"
+            $featureItem.Editing.EndEdit()
+            
+            $speakersMenu = Get-Item -Path "$sitePath/Presentation/Partial Designs/Global/Header/Data/Speakers"
+            $featuredSpeaker = Get-Item -Path "$sitePath/Home/Speakers"
+            Update-LinkField -Item $speakersMenu -FieldName "Link" -TargetItem $featuredSpeaker
     
             # Get variants for link list
             $linkListVariants = $service.GetAvailableRenderingVariants($Site, $renderingLinkList.Name, $renderingLinkList.ID, $item.TemplateID)

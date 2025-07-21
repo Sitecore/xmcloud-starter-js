@@ -1,6 +1,6 @@
 'use client';
 
-import { Link as JssLink, LinkField } from '@sitecore-content-sdk/nextjs';
+import { Link as ContentSdkLink, LinkField } from '@sitecore-content-sdk/nextjs';
 import { useToggleWithClickOutside } from '@/hooks/useToggleWithClickOutside';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -34,7 +34,7 @@ export const SearchBox = ({ searchLink }: { searchLink: LinkField }) => {
 
   return (
     <div ref={ref}>
-      <JssLink
+      <ContentSdkLink
         field={searchLink}
         prefetch={false}
         className="block p-4 font-(family-name:--font-accent) font-medium"

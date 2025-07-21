@@ -1,7 +1,7 @@
 import {
-  NextImage as JssImage,
-  Link as JssLink,
-  Text as JssText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+  Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLTextField } from 'src/types/igql';
 import { useEffect, useMemo, useState, type JSX } from 'react';
@@ -116,20 +116,20 @@ export const Default = (props: ProductSectionProps): JSX.Element => {
       <div className="container px-4 mx-auto">
         <div className="mb-8">
           <h2 className="text-4xl font-medium mb-4">
-            <JssText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
           <div className="flex gap-8">
             <p className="text-base">
               Showing {start} through {end} of {productItems.length} items
             </p>
-            <JssLink
+            <ContentSdkLink
               field={datasource.link?.jsonValue}
               className="flex items-center gap-2 text-base text-primary font-medium"
               prefetch={false}
             >
               {datasource.link.jsonValue.value.text}
               <FontAwesomeIcon icon={faChevronRight} width={16} height={16} />
-            </JssLink>
+            </ContentSdkLink>
           </div>
         </div>
         <Carousel
@@ -148,16 +148,16 @@ export const Default = (props: ProductSectionProps): JSX.Element => {
               >
                 {!!product ? (
                   <div className="flex flex-col items-start justify-end h-full shadow-md pointer">
-                    <JssImage
+                    <ContentSdkImage
                       field={product.productImage?.jsonValue}
                       className="w-full h-auto object-cover"
                     />
                     <div className="flex-1 relative pt-4 px-6">
                       <div className="inline-block text-base font-bold px-2 py-1 mb-2 bg-[#ffb900]">
-                        <JssText field={product.productTagLine?.jsonValue} />
+                        <ContentSdkText field={product.productTagLine?.jsonValue} />
                       </div>
                       <h3 className="mb-2 text-base font-bold text-primary underline">
-                        <JssLink field={product.productLink?.jsonValue} prefetch={false} />
+                        <ContentSdkLink field={product.productLink?.jsonValue} prefetch={false} />
                       </h3>
                       <div className="text-base mb-4">
                         <span>From</span>{' '}
@@ -168,14 +168,14 @@ export const Default = (props: ProductSectionProps): JSX.Element => {
                               : 'font-bold'
                           }`}
                         >
-                          <JssText field={product.productPrice?.jsonValue} />
+                          <ContentSdkText field={product.productPrice?.jsonValue} />
                         </span>{' '}
                         <span className="font-bold">
-                          <JssText field={product.productDiscountedPrice?.jsonValue} />
+                          <ContentSdkText field={product.productDiscountedPrice?.jsonValue} />
                         </span>
                       </div>
                       <p className="text-base mb-4">
-                        <JssText field={product.productDescription?.jsonValue} />
+                        <ContentSdkText field={product.productDescription?.jsonValue} />
                       </p>
                     </div>
                   </div>

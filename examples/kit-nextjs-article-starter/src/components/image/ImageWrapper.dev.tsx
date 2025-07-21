@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { cn } from '@/lib/utils';
-import { ImageField, Image as JssImage, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { ImageField, Image as ContentSdkImage, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ImageOptimizationContext } from '@/components/image/image-optimization.context';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
@@ -47,7 +47,7 @@ export const Default: React.FC<ImageWrapperProps> = (props) => {
   return (
     <div className={cn('image-container', wrapperClass)}>
       {isPageEditing || isPreview || isSvg ? (
-        <JssImage field={image} className={className} />
+        <ContentSdkImage field={image} className={className} />
       ) : (
         <NextImage
           loader={isPicsumImage ? placeholderImageLoader : undefined}
