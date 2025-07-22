@@ -19,10 +19,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "74450b29-7ed3-4288-aa64-47fced8e06f2"
-      Hint: imageRequired
-      Value: |
-        <image mediaid="ddd4a2d5-a723-4a19-96bb-d783921e6757" alt="Woman in Sand" />
     - ID: "6ef0efde-7773-4786-af78-860ff2f4eeac"
       Hint: titleRequired
       Value: Vertical Accordion Item
