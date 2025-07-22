@@ -11,7 +11,7 @@ Languages:
     - ID: "1c4089ef-d9fa-4515-ad8b-eac558420564"
       Hint: heroImageOptional1
       Value: |
-        <image mediaid="5d0350ce-0cac-4b69-9798-f3c4a246a6f2" />
+        <image mediaid="5d0350ce-0cac-4b69-9798-f3c4a246a6f2" alt="Yoga Woman" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20250224T205432Z
@@ -29,7 +29,7 @@ Languages:
     - ID: "41ed281a-c5b2-47ea-af9d-5f32af4579f5"
       Hint: heroImageOptional4
       Value: |
-        <image mediaid="c23ec2b1-9b7e-4190-ad43-0c1821a0b637" />
+        <image mediaid="c23ec2b1-9b7e-4190-ad43-0c1821a0b637" alt="Woman in Sand" />
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -40,18 +40,18 @@ Languages:
         sitecore\Admin
     - ID: "6ddc5fdf-e0fa-475a-9044-73da5ba78fb6"
       Hint: heroVideoOptional4
-      Value: 
+      Value:
     - ID: "6faddda8-a617-4cdc-b437-606aced129e2"
       Hint: heroImageOptional3
       Value: |
-        <image mediaid="c3f90f33-1083-4d97-9d58-ee3a437c65b3" />
+        <image mediaid="c3f90f33-1083-4d97-9d58-ee3a437c65b3" alt="Oil Painting" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "ed2f5829-0d4f-48fb-8c7b-ea821c4da9b0"
     - ID: "b39f9979-146b-4205-aa65-0cc7637d5d7e"
       Hint: heroImageOptional2
       Value: |
-        <image mediaid="ddd4a2d5-a723-4a19-96bb-d783921e6757" />
+        <image mediaid="ddd4a2d5-a723-4a19-96bb-d783921e6757" alt="Boxes" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

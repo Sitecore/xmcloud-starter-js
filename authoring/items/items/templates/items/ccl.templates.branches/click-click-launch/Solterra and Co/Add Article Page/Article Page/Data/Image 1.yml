@@ -11,7 +11,7 @@ Languages:
     - ID: "14920a91-7250-436e-bf61-750d46eb7f3f"
       Hint: image
       Value: |
-        <image mediaid="c23ec2b1-9b7e-4190-ad43-0c1821a0b637" />
+        <image mediaid="c23ec2b1-9b7e-4190-ad43-0c1821a0b637" alt="Boxes" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20250410T140515Z

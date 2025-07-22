@@ -29,7 +29,7 @@ Languages:
     - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
       Hint: image
       Value: |
-        <image mediaid="404145d5-d955-4e19-9bb8-b9e23923138c" />
+        <image mediaid="404145d5-d955-4e19-9bb8-b9e23923138c" alt="Woman with Glasses" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "158f08ed-e73b-4536-ab9a-96321360f0f2"

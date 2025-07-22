@@ -40,4 +40,4 @@ Languages:
     - ID: "e11f29f8-4940-4273-962a-5c598a9dc6bf"
       Hint: socialIcon
       Value: |
-        <image mediaid="{47E5214A-E04C-4387-ACD6-BE3E6CA44E6A}" />
+        <image mediaid="{47E5214A-E04C-4387-ACD6-BE3E6CA44E6A}" alt="Facebook icon" />

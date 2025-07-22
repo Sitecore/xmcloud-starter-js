@@ -22,7 +22,7 @@ Languages:
     - ID: "84a2a397-786e-43bd-85a0-bfbcc51fc3f3"
       Hint: image
       Value: |
-        <image mediaid="e0d46c29-cd99-4def-932f-430eb4335f54" />
+        <image mediaid="e0d46c29-cd99-4def-932f-430eb4335f54" alt="Female Author" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "e0bf348c-bb30-4178-8cb5-fb021b153e28"
