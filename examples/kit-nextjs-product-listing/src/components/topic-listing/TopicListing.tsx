@@ -5,31 +5,36 @@ import { NoDataFallback } from '@/utils/NoDataFallback';
 import { TopicItem } from './TopicItem.dev';
 
 export const Default: React.FC<TopicListingProps> = (props) => {
-  const { fields } = props;
+  const {
+    fields,
+    params: { backgroundTheme },
+  } = props;
   const { title, children } = fields?.data?.datasource ?? {};
 
   if (fields?.data?.datasource) {
     return (
       <div className="bg-primary relative overflow-hidden py-24 md:pb-[128px] md:pt-28 @container">
-        <div
-          className="absolute inset-0 z-10"
-          style={
-            {
-              '--meteor-color': '255, 255, 255',
-              '--meteor-opacity': '0.6',
-            } as React.CSSProperties
-          }
-        >
-          <Meteors
-            number={40}
-            minDelay={0.2}
-            maxDelay={1.5}
-            minDuration={18}
-            maxDuration={38}
-            angle={310}
-            size="3"
-          />
-        </div>
+        {backgroundTheme === 'shooting-star' && (
+          <div
+            className="absolute inset-0 z-10"
+            style={
+              {
+                '--meteor-color': '255, 255, 255',
+                '--meteor-opacity': '0.6',
+              } as React.CSSProperties
+            }
+          >
+            <Meteors
+              number={40}
+              minDelay={0.2}
+              maxDelay={1.5}
+              minDuration={18}
+              maxDuration={38}
+              angle={310}
+              size="3"
+            />
+          </div>
+        )}
         <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center gap-16 text-center md:gap-24">
             <div className="flex max-w-4xl flex-col items-center gap-4">

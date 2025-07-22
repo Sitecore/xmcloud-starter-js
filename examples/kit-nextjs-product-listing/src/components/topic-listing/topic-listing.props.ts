@@ -3,7 +3,7 @@ import { ComponentProps } from '@/lib/component-props';
 import { IconName } from '@/enumerations/Icon.enum';
 
 export interface TopicListingParams {
-  backgroundTheme: Field<string>;
+  backgroundTheme: string;
   [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
