@@ -14,7 +14,7 @@ Languages:
     - ID: "31ada09a-aeeb-4807-9ad2-eccd3ad7e40a"
       Hint: imageRequired
       Value: |
-        <image mediaid="ec4f5431-5a7a-4025-950d-a3cfd6d0c944" />
+        <image mediaid="{F8B6426B-90CA-4D45-A28D-60E2D0E9656B}" />
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
