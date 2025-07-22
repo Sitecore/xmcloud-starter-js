@@ -38,7 +38,7 @@ SharedFields:
     
             Write-Verbose "Clear styles and add custom ones"
             Remove-Item -Path "$sitePath/Presentation/Styles" -Recurse -Force
-            $addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Styles" -Language $Site.Language
+            $addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Styles" -Language $Site.Language
             New-Item -Path "$sitePath/Presentation" -Name "Styles" -ItemType $addStylesBranchTemplate.ID
             
             # Add LinkList variants
@@ -220,7 +220,7 @@ SharedFields:
             
             Write-Verbose "Create dictionary items"
             $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
-            $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Dictionary Items" -Language $Site.Language
+            $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Dictionary Items" -Language $Site.Language
             New-Item -Parent $dictionaryRoot -Name "Dictionary Items" -ItemType $dictionaryBranchTemplate.ID
         }
         
