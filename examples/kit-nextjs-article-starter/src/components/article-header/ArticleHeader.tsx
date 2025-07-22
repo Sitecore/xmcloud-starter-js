@@ -271,7 +271,7 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields }) => {
             ></div>
 
             {/* Content */}
-            <div className="z-1 @md:pb-0 relative mx-auto flex h-full flex-col justify-between gap-12 p-0 pb-6 pt-[120px]">
+            <div className="z-10 @md:pb-0 relative mx-auto flex h-full flex-col justify-between gap-12 p-0 pb-6 pt-[120px]">
               <div className="flex flex-col">
                 {/* Back Button */}
                 <Button
@@ -283,7 +283,7 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields }) => {
                   }}
                 >
                   <Icon iconName="arrow-left" className="ml-2" />
-                  {dictionary.ARTICLE_HEADER_BACKTONEWS}{' '}
+                  {dictionary.ARTICLE_HEADER_BACKTONEWS || 'Back to News'}{' '}
                 </Button>
                 {/* Category Badge */}
                 {(eyebrowOptional?.jsonValue?.value || isPageEditing) && (

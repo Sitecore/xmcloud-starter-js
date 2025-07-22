@@ -169,7 +169,7 @@ SharedFields:
             # add Home layout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition1 -Parameter @{ "DynamicPlaceholderId" = "22"; "excludeTopMargin" = "1"; } -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition2 -Parameter @{ "DynamicPlaceholderId" = "11"; "inset" = "1"; "backgroundColor" = "primary"; "colorScheme" = "primary"; } -FinalLayout
-            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition3 -Parameter @{ "DynamicPlaceholderId" = "27";} -FinalLayout
+            Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition3 -Parameter @{ "DynamicPlaceholderId" = "27"; "inset" = "1";} -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition4 -Parameter @{ "DynamicPlaceholderId" = "28"; "backgroundColor" = "primary";} -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition5 -Parameter @{ "DynamicPlaceholderId" = "31";} -FinalLayout
             Add-Rendering -Item $item -PlaceHolder "headless-main" -Instance $renderingContainerFullBleedDefinition6 -Parameter @{ "DynamicPlaceholderId" = "17"; "inset" = "1";} -FinalLayout
