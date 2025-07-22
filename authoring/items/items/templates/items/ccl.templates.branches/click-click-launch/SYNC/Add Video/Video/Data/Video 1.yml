@@ -28,14 +28,14 @@ Languages:
     - ID: "7c168d4a-6e92-46cb-a89e-da9040d9df1d"
       Hint: image
       Value: |
-        <image mediaid="{91C2A0A8-FC6E-464A-BB8D-CA472C3B0D35}" />
+        <image mediaid="{91C2A0A8-FC6E-464A-BB8D-CA472C3B0D35}" alt="speaker with hand" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "b8af514c-76da-4e50-ac5e-1aebde53e4f4"
     - ID: "9f1d613b-d092-4382-bb87-006d8bbb8a8c"
       Hint: image2
       Value: |
-        <image mediaid="{F34E5FA2-BDB8-453B-99D4-922769DCAF40}" />
+        <image mediaid="{F34E5FA2-BDB8-453B-99D4-922769DCAF40}" alt="live music concert/>
     - ID: "adfd7171-7c7d-4f1e-b881-637830556379"
       Hint: video
       Value: |
