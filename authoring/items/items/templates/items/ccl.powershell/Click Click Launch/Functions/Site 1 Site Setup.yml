@@ -184,7 +184,7 @@ SharedFields:
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullwidth-26" -Instance $renderingCtaBannerDefinition -Parameter @{ "DynamicPlaceholderId" = "20"; "colorScheme" = "light"; } -DataSource "local:/Data/CTA Banner" -FinalLayout
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-27" -Instance $renderingAnimatedPromoDefinition -Parameter @{ "DynamicPlaceholderId" = "15"; } -DataSource "local:/Data/AnimatedPromo" -FinalLayout
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-27" -Instance $renderingContainerFullWidthDefinition -Parameter @{ "DynamicPlaceholderId" = "21";} -FinalLayout
-            Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-28" -Instance $renderingTopicListingDefinition -Parameter @{ "DynamicPlaceholderId" = "30"; } -DataSource "local:/Data/Topic Listing" -FinalLayout
+            Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-28" -Instance $renderingTopicListingDefinition -Parameter @{ "DynamicPlaceholderId" = "30"; "backgroundTheme" = "shooting-star"; } -DataSource "local:/Data/Topic Listing" -FinalLayout
             Add-Rendering -Item $item -Placeholder "/headless-main/container-fullbleed-31" -Instance $renderingVideoDefinition -Parameter @{ "DynamicPlaceholderId" = "32"; "useModal" = "1"; "displayIcon" = "1"; } -DataSource "local:/Data/Video 1" -FinalLayout
     
             Write-Verbose "Update home page fields"
