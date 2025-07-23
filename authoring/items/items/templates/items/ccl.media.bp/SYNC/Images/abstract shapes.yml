@@ -2,7 +2,7 @@
 ID: "8548303d-1d2b-4f31-881b-8d5898d492ba"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
-Path: /sitecore/media library/Feature/SYNC/Images/3774a8e63a4faeaa4f782dfede902f69b585a395
+Path: /sitecore/media library/Feature/SYNC/Images/abstract shapes
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: 3774a8e63a4faeaa4f782dfede902f69b585a395
+      Value: abstract shapes
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9a9b2b14-10ab-4120-8664-71ba03973e27"
+      Value: "894fb0ae-ed84-473c-a5f2-c2c3054d6362"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250606T131215Z
+      Value: 20250723T160451Z

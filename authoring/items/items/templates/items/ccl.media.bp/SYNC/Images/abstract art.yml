@@ -2,7 +2,7 @@
 ID: "f810c913-9957-494b-a3e0-abaaa612d283"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
-Path: /sitecore/media library/Feature/SYNC/Images/0b89d4d71475b61b1eb400979cd9ba88dbbf68a5
+Path: /sitecore/media library/Feature/SYNC/Images/abstract art
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\chamodi.samarawickrama@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: signupbg
+      Value: Abstract Art
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "74b53480-6845-4e80-8a89-2dc0dc7365b4"
+      Value: "689973f1-2fc3-4c67-b586-b12f8fce6563"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\chamodi.samarawickrama@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250527T124010Z
+      Value: 20250723T160340Z

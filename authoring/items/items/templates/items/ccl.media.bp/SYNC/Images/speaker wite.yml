@@ -2,7 +2,7 @@
 ID: "5a2a6359-77b0-45d6-bc6c-b23756b91c49"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
-Path: /sitecore/media library/Feature/SYNC/Images/d12e353c78571dddbfe63ab2ace1bef1d7541599
+Path: /sitecore/media library/Feature/SYNC/Images/speaker wite
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: d12e353c78571dddbfe63ab2ace1bef1d7541599
+      Value: speaker wire
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a3706793-5cdd-44b5-b386-ff15fc5b84c4"
+      Value: "a91c5e47-de9c-49ae-8c17-d77b418a4eaa"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250602T101644Z
+      Value: 20250723T160922Z

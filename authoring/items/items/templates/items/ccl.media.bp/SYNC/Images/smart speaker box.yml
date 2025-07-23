@@ -2,7 +2,7 @@
 ID: "da09b108-e628-4c8e-94a4-6824c0fe3d23"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
-Path: /sitecore/media library/Feature/SYNC/Images/6c98da0b39d81da33692373c6e1112524028b834
+Path: /sitecore/media library/Feature/SYNC/Images/smart speaker box
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: 6c98da0b39d81da33692373c6e1112524028b834
+      Value: Heritage 50 Speaker
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "abab4470-edbc-470f-ad60-33ee2ee1df66"
+      Value: "054a0908-01cb-4fbe-aa6a-3d4db1ac5fe0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250530T134444Z
+      Value: 20250723T160630Z

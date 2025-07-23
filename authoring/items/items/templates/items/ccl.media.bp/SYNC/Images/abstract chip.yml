@@ -2,7 +2,7 @@
 ID: "4532b599-0a62-4764-b334-c414a081ab83"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
-Path: /sitecore/media library/Feature/SYNC/Images/418ef1ecc62bef7fef32f67f974c5c7a58e0d444
+Path: /sitecore/media library/Feature/SYNC/Images/abstract chip
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: 418ef1ecc62bef7fef32f67f974c5c7a58e0d444
+      Value: abstract chip
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b76a4214-5a9b-4e51-9cc3-5144f6c5ea05"
+      Value: "199a041c-8c36-4e9b-9915-18e8afa73d00"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250606T131209Z
+      Value: 20250723T160510Z

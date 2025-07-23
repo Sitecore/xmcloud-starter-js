@@ -2,7 +2,7 @@
 ID: "78e73160-94da-4040-a87f-20be5a83ed95"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
-Path: /sitecore/media library/Feature/SYNC/Images/512221b2e1bbae57062e4d5dea81eda791738709
+Path: /sitecore/media library/Feature/SYNC/Images/smart speaker white
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: 512221b2e1bbae57062e4d5dea81eda791738709
+      Value: White Smart Speaker
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5a3a503d-4cf8-406f-83d3-f93b206945c7"
+      Value: "417d6877-a1c3-4e2d-970d-1a656c9aab54"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250603T085210Z
+      Value: 20250723T160528Z

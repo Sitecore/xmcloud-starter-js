@@ -2,7 +2,7 @@
 ID: "3d7f1e05-5725-4994-986e-554ac6f79f2b"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
-Path: /sitecore/media library/Feature/SYNC/Images/bd646153e628161e7ac825df7ea6e3c43076a4a5
+Path: /sitecore/media library/Feature/SYNC/Images/heritage 30 top view
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -56,14 +56,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: bd646153e628161e7ac825df7ea6e3c43076a4a5
+      Value: Heritage 30 Top View
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0d61e87b-2cb1-4072-9e07-4e713d988f08"
+      Value: "2bdd0a70-55a5-42ee-871a-785b1e3260d2"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250602T101817Z
+      Value: 20250723T160905Z

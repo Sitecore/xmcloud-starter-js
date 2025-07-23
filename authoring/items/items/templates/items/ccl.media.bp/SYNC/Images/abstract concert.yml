@@ -2,7 +2,7 @@
 ID: "e5cb88ec-3bd1-4efa-ba83-919e75106a26"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
-Path: /sitecore/media library/Feature/SYNC/Images/d67ccf7f7f465a07fc63c635ba7e911ccd6fdf35
+Path: /sitecore/media library/Feature/SYNC/Images/abstract concert
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: d67ccf7f7f465a07fc63c635ba7e911ccd6fdf35
+      Value: Abstract Concert
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "955b03ae-3806-4ae5-b626-6c3ed0355fba"
+      Value: "0b4fccce-2b64-4aaa-8a21-aff17a71104b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250530T134537Z
+      Value: 20250723T161002Z

@@ -2,7 +2,7 @@
 ID: "dd548a5d-c926-4509-88af-67ef5f5d8fe5"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
-Path: /sitecore/media library/Feature/SYNC/Images/a44d640e5cd92102f4f0deddfa8f297a8809d994
+Path: /sitecore/media library/Feature/SYNC/Images/heritage 40 speaker
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: a44d640e5cd92102f4f0deddfa8f297a8809d994
+      Value: Heritage 40 Speaker
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5addebb4-029e-4438-aeec-1a43c69bcb54"
+      Value: "f8bacfca-279c-4cab-959b-519a74b959e8"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250602T184356Z
+      Value: 20250723T160821Z

@@ -2,7 +2,7 @@
 ID: "050b55b3-4a2c-4288-8d32-282d10a77ec9"
 Parent: "7e5b263b-34c5-46ce-a925-b6928729f883"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
-Path: "/sitecore/media library/Feature/Solterra/images/canon-powershot-g3-x-sample-images-1-900x600_71kb"
+Path: /sitecore/media library/Feature/Solterra/images/tropical bird
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -47,14 +47,14 @@ Languages:
         sitecore\Admin
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: "canon-powershot-g3-x-sample-images-1-900x600_71kb"
+      Value: Tropical Bird
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0714cc98-9000-4fff-9072-2e9dfd64cdac"
+      Value: "36d902b5-26d9-4a0a-83ec-f4711c41dccd"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250625T111118Z
+      Value: 20250723T160107Z

@@ -2,7 +2,7 @@
 ID: "d3bb54c7-3309-408d-b080-557097d027a1"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
-Path: /sitecore/media library/Feature/SYNC/Images/99ab3de6efd9cd0dc8cdef215c73b24f8534fbe2
+Path: /sitecore/media library/Feature/SYNC/Images/music notes
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: 99ab3de6efd9cd0dc8cdef215c73b24f8534fbe2
+      Value: Music Notes
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c0d435e1-6b49-497c-9590-654a608f3d27"
+      Value: "03eba36a-a32c-4336-a98f-268fb4c46e90"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250602T075847Z
+      Value: 20250723T160700Z

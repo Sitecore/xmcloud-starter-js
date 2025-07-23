@@ -2,7 +2,7 @@
 ID: "8acef5b6-cc91-4238-9a59-eaad468691cc"
 Parent: "99ae0b1b-4456-4ab7-8045-bb8deec4d4de"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
-Path: /sitecore/media library/Feature/SYNC/Images/2e421f44ab851e964b28c8f820a712bbfe32b0e0
+Path: /sitecore/media library/Feature/SYNC/Images/guitar player
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -50,14 +50,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
       Hint: Alt
-      Value: 2e421f44ab851e964b28c8f820a712bbfe32b0e0
+      Value: guitar player
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d694bc48-6cb6-4d1c-81c3-cf1060db24d0"
+      Value: "e66a5f0f-1d12-4742-b778-3b5cc95f40fb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250602T075852Z
+      Value: 20250723T160432Z
