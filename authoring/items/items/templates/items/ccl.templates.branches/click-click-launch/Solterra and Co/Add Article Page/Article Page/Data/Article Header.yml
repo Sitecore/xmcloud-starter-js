@@ -13,14 +13,14 @@ Languages:
       Value: 20250409T200914Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
-      Value: 
+      Value:
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
-      Value: 
+      Value:
     - ID: "74450b29-7ed3-4288-aa64-47fced8e06f2"
       Hint: imageRequired
       Value: |
-        <image mediaid="ddd4a2d5-a723-4a19-96bb-d783921e6757" />
+        <image mediaid="ddd4a2d5-a723-4a19-96bb-d783921e6757" alt="Woman in Sand" />
     - ID: "75aa702f-5fe3-47ab-8d77-78eb2c37cc7a"
       Hint: eyebrowOptional
       Value: Solar Power

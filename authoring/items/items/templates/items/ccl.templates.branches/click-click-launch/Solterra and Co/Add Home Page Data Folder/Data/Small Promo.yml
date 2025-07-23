@@ -28,7 +28,7 @@ Languages:
     - ID: "7eca61ae-f0c1-49e6-b131-686ab895a1dc"
       Hint: image
       Value: |
-        <image mediaid="00a33bbd-ae9e-476e-8819-38c548186dff" />
+        <image mediaid="00a33bbd-ae9e-476e-8819-38c548186dff" alt="Ice" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "82320dd8-c1cc-48c3-b0f0-1a51b848b279"

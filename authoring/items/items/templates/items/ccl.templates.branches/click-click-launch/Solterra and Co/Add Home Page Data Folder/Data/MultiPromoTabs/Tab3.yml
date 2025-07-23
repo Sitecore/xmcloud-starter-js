@@ -15,7 +15,7 @@ Languages:
     - ID: "22427604-b117-4985-a6a4-cc8aba4e044d"
       Hint: image 1
       Value: |
-        <image mediaid="{00A33BBD-AE9E-476E-8819-38C548186DFF}" />
+        <image mediaid="{00A33BBD-AE9E-476E-8819-38C548186DFF}" alt="Ice" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20250224T202453Z
@@ -44,7 +44,7 @@ Languages:
     - ID: "c1dedbd1-c877-4834-8b0b-0ef9ce90af87"
       Hint: image2
       Value: |
-        <image mediaid="{E42F56F1-EBAA-4450-B32A-9BCF1EF6CC45}" />
+        <image mediaid="{E42F56F1-EBAA-4450-B32A-9BCF1EF6CC45}" alt="Hero 1" />
     - ID: "c4d68c1f-0cd0-41e2-b986-0fec9a910176"
       Hint: link2
       Value: |
