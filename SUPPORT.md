@@ -1,6 +1,6 @@
 # Sitecore XMCloud Starter JS Support
 
-If you're looking for support for XMCloud starter kit there are a lot of options:
+If you're looking for support for XMCloud starter JS there are a lot of options:
 
 ### Documentation
 
