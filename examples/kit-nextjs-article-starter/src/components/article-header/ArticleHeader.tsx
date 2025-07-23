@@ -283,7 +283,8 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields }) => {
                   }}
                 >
                   <Icon iconName="arrow-left" className="ml-2" />
-                  {dictionary.ARTICLE_HEADER_BACKTONEWS || 'Back to News'}{' '}
+                  {/* {dictionary.ARTICLE_HEADER_BACKTONEWS|| `[Dictionary Entry is Missing for ${dictionaryKeys.ARTICLE_HEADER_BACKTONEWS}]`}{' '} */}
+                  {dictionary.ARTICLE_HEADER_BACKTONEWS || undefined}{' '}
                 </Button>
                 {/* Category Badge */}
                 {(eyebrowOptional?.jsonValue?.value || isPageEditing) && (
