@@ -1,0 +1,60 @@
+﻿---
+ID: "0101754b-3fa9-4d44-8c7a-92e5f72e68c2"
+Parent: "7e5b263b-34c5-46ce-a925-b6928729f883"
+Template: "309eb383-99b6-4722-9fab-58d8ae802d72"
+Path: /sitecore/media library/Feature/Solterra/images/Footer Logo
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/0101754B3FA94D448C7A92E5F72E68C2.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 164
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "0101754b-3fa9-4d44-8c7a-92e5f72e68c2"
+  Value: UklGRgoEAABXRUJQVlA4TP4DAAAvo0AHENfBKJKkSMmNRfwbwADbz7XAuJEkJ3UGk3+UPAkA1Azbto3Evne3/74nBG3bJkPwQQiFMz7EHkEJJmmq7RiQKoKPIvjozyMIgpznW7Y2lIXmN0xIE6gJpeZEBxqoEGJAyUQoozWQbNVN0welX4bf12vrZN9yX0CWbVttHHHxkygFUzIt9Oicc3QO8x+ZeA/ksGr1Z0T/HTiS2zZLMr2c6DPt5AmmHFc/fpybgxc/T09f/d/xYgN31weHj6cfqtx9PX19YHh/enr6ocLNn1XKgbl58zunRtc7UyFNnXNd4A1MfnkU0r4hF4rEwTk3LvdOxdZ6ZiGC5jpHCMYsfnpgmJCjSfoWQcbA903JxmLA+nnuLRC3EUAPTA+KHCy86jyA3RSmFqB75O33nB/W9/642FRmhGXV9+Zp0GASq9nJzhdaEgiU7pU6NpVxahVmntJTwYu3twIqbTW2COY+Wa4tuIqO4CzswIrgCNY5t2RHOwsSiibnTRw749ySpi6YtCegORF4WC70IaLYj3mRe64F3IYufS7xYgMemEskBxl7iYeMaMygduk1ewx7gAwQCPCpkZIadUUnFp02cH1GQUaXBJ90/CnxVWt5U+gGAW6KimNgZI4ERAFHDxtjTGYP65PhBpSxsOO8ArTTMoJiShPglZeAXpujrRGANvLSA8eC0/vFp9qQUrZiwKtFNbWHWbklWcymV/IAWsSKo/wip4ecM5qhhh4IHogPijGxFw9MWTIpKcBSIQi3qEnRK3kll5ekZfOJNSTmDSyFwaqG4nsdf0t80VouqtM5CFvtsDNae6gwohC0slNE2cmBcgDCRGMWGc2E1vRoKsyAkfTVrr0v8fx+xyW3Mmymh21V5IuhzAzAHh3ZDAlJDpZzAyfYVHuGCrRlbv5stdaWPV1b2ZgExNpFcUvUIbgkfSm8KQcAEUKW70tqB56BVNhDqnWf5D2xKcynALBqNLhC1IqY6zAgP17C+sPzgjrYRbEHQqFXDIRqvXm5vu/T3ectmSxkRsKQVTRZxWIxGIWyCUlFTAh11CfRSlLDLPXAIMVYOYeOkR3Qy14lMTrTzMXS51s5v9zVJyU6PzrAsthMNHgHEOvzLYB8l8wiFI0WxPU7DjSGvRUPj8AwTYMVA0p1jLohC2mTPAp0PquYhTczZ39z6fNWmd9UVk/aGmGGWapo2SiMB4QzloKiMsXJPgOlwdPGUW4q7iHCqs/eSRVZsAUVqnD+vzVNnPw4xcJc8l6JiDGJT/I+JKFIy1sil4RpRSnFKGX2vZAXlTqevfcxlVY5KhVzv6xc5ir9jlL567k5LPH235v679H3B6eMud3yu/7uMP4/8n/H2/fvrw8RBg==
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 1042
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/webp
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: webp
+- ID: "cb09946f-3218-4823-87d2-d5007c199a96"
+  Hint: Dimensions
+  Value: 164 x 30
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 30
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250212T162232Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: Footer Logo
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3eb68e9c-6e88-45aa-aef9-29f30a862301"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250625T111112Z

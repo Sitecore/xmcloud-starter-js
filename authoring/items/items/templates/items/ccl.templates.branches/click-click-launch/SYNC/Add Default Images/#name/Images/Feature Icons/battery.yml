@@ -1,0 +1,60 @@
+﻿---
+ID: "564e61bb-4acf-487d-8715-067224fc8dbb"
+Parent: "8472627f-b23d-404b-a22c-aaa4bc5c992f"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Default Images/$name/Images/Feature Icons/battery"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/00883BA42CC741D6B18C7A9F4BF3E953.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 24
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "564e61bb-4acf-487d-8715-067224fc8dbb"
+  Value: PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjMzMzAxIDYuNjY2NjdDMi44NzI3NyA2LjY2NjY3IDIuNDk5NjcgNy4wMzk3NiAyLjQ5OTY3IDcuNVYxMi41QzIuNDk5NjcgMTIuOTYwMiAyLjg3Mjc3IDEzLjMzMzMgMy4zMzMwMSAxMy4zMzMzSDEzLjMzM0MxMy43OTMyIDEzLjMzMzMgMTQuMTY2MyAxMi45NjAyIDE0LjE2NjMgMTIuNVY3LjVDMTQuMTY2MyA3LjAzOTc2IDEzLjc5MzIgNi42NjY2NyAxMy4zMzMgNi42NjY2N0gzLjMzMzAxWk0wLjgzMzAwOCA3LjVDMC44MzMwMDggNi4xMTkyOSAxLjk1MjMgNSAzLjMzMzAxIDVIMTMuMzMzQzE0LjcxMzcgNSAxNS44MzMgNi4xMTkyOSAxNS44MzMgNy41VjEyLjVDMTUuODMzIDEzLjg4MDcgMTQuNzEzNyAxNSAxMy4zMzMgMTVIMy4zMzMwMUMxLjk1MjMgMTUgMC44MzMwMDggMTMuODgwNyAwLjgzMzAwOCAxMi41VjcuNVoiIGZpbGw9IiM1MjUyNTIiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOC4zMzMzIDguMzMzOThDMTguNzkzNiA4LjMzMzk4IDE5LjE2NjcgOC43MDcwOCAxOS4xNjY3IDkuMTY3MzJWMTAuODM0QzE5LjE2NjcgMTEuMjk0MiAxOC43OTM2IDExLjY2NzMgMTguMzMzMyAxMS42NjczQzE3Ljg3MzEgMTEuNjY3MyAxNy41IDExLjI5NDIgMTcuNSAxMC44MzRWOS4xNjczMkMxNy41IDguNzA3MDggMTcuODczMSA4LjMzMzk4IDE4LjMzMzMgOC4zMzM5OFoiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 863
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "8e9b08b4-b57b-4d89-a1ef-21918c951173"
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 24
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250602T133500Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: battery
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4076a6ba-9b12-4608-aae2-5dd9b9b88717"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250723T161519Z

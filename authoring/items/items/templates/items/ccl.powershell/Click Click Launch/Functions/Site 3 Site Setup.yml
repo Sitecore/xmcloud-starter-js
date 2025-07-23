@@ -36,10 +36,16 @@ SharedFields:
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
             Write-Verbose "My site: $sitePath"
     
-            Write-Verbose "Clear styles and add custom ones"
-            Remove-Item -Path "$sitePath/Presentation/Styles" -Recurse -Force
-            $addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Styles" -Language $Site.Language
-            New-Item -Path "$sitePath/Presentation" -Name "Styles" -ItemType $addStylesBranchTemplate.ID
+            #Write-Verbose "Clear styles and add custom ones"
+            #Remove-Item -Path "$sitePath/Presentation/Styles" -Recurse -Force
+            #$addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Styles" -Language $Site.Language
+            #New-Item -Path "$sitePath/Presentation" -Name "Styles" -ItemType $addStylesBranchTemplate.ID
+            
+            # Add sample media
+            $mediaRoot = Get-Item -Path "/sitecore/media library/Project/$($siteCollection.Name)/$($Site.Name)" -Language $Site.Language
+            Write-Verbose "Adding sample media to [$($mediaRoot.ItemPath)]"
+            $sampleMediaBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Default Images" -Language $Site.Language
+            New-Item -Parent $mediaRoot -Name "Sample Media" -ItemType $sampleMediaBranchTemplate.ID -Language $Site.Language
             
             # Add LinkList variants
             $linkListVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/LinkList" -Language $Site.Language
@@ -155,7 +161,7 @@ SharedFields:
             
             # Re-get the item with the new base template
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
-            
+    
             # Update Site3 page templates
             Set-ItemTemplate -Path "$sitePath/Home/Speakers" -Template $pageTemplate.ID
             Set-ItemTemplate -Path "$sitePath/Home/Speakers/Heritage 10" -Template $audioPageTemplate.ID
@@ -233,7 +239,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "80d35a34-f949-438e-bb65-5c71d4610382"
+  Value: "6ab10503-59c5-46c9-ae44-5d982f5ea9af"
 Languages:
 - Language: en
   Versions:
@@ -252,11 +258,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8940d750-bf0c-4fc8-b2b7-cc60f1bbe735"
+      Value: "2d7245c3-7cae-4d65-8c84-2bc3c466e6b1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250711T225632Z
+      Value: 20250723T185947Z
