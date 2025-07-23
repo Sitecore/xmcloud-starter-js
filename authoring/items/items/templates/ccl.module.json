@@ -35,17 +35,17 @@
             },
             {
                 "name": "ccl.media.fd",
-                "path": "/sitecore/media library/Feature/Futuristic Drive",
+                "path": "/sitecore/media library/Feature/Alaris",
                 "allowedPushOperations": "CreateUpdateAndDelete"
             },
             {
                 "name": "ccl.media.ms",
-                "path": "/sitecore/media library/Feature/Modern Sleek",
+                "path": "/sitecore/media library/Feature/Solterra",
                 "allowedPushOperations": "CreateUpdateAndDelete"
             },
             {
                 "name": "ccl.media.bp",
-                "path": "/sitecore/media library/Feature/Bold Products",
+                "path": "/sitecore/media library/Feature/SYNC",
                 "allowedPushOperations": "CreateUpdateAndDelete"
             }
         ]

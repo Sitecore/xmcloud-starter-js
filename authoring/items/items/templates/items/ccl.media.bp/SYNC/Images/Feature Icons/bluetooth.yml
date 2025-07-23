@@ -1,0 +1,60 @@
+﻿---
+ID: "fa942260-ccf4-48bc-8ae0-421bf54cba2e"
+Parent: "882eac81-0718-411a-9950-8be14227b4da"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Feature/SYNC/Images/Feature Icons/bluetooth
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/FA942260CCF448BC8AE0421BF54CBA2E.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 24
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "fa942260-ccf4-48bc-8ae0-421bf54cba2e"
+  Value: PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMSAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMC4xODExIDAuODk3NDQyQzEwLjQ5MjUgMC43Njg0NTggMTAuODUwOSAwLjgzOTc1NSAxMS4wODkzIDEuMDc4MDlMMTUuMjU1OSA1LjI0NDc1QzE1LjU4MTQgNS41NzAxOSAxNS41ODE0IDYuMDk3ODMgMTUuMjU1OSA2LjQyMzI2TDExLjY3ODUgMTAuMDAwN0wxNS4yNTU5IDEzLjU3ODFDMTUuNTgxNCAxMy45MDM1IDE1LjU4MTQgMTQuNDMxMiAxNS4yNTU5IDE0Ljc1NjZMMTEuMDg5MyAxOC45MjMzQzEwLjg1MDkgMTkuMTYxNiAxMC40OTI1IDE5LjIzMjkgMTAuMTgxMSAxOS4xMDM5QzkuODY5NyAxOC45NzQ5IDkuNjY2NjcgMTguNjcxMSA5LjY2NjY3IDE4LjMzNFYxMi4wMTI1TDYuOTIyNTkgMTQuNzU2NkM2LjU5NzE1IDE1LjA4MiA2LjA2OTUxIDE1LjA4MiA1Ljc0NDA4IDE0Ljc1NjZDNS40MTg2NCAxNC40MzEyIDUuNDE4NjQgMTMuOTAzNSA1Ljc0NDA4IDEzLjU3ODFMOS4zMjE0OSAxMC4wMDA3TDUuNzQ0MDggNi40MjMyNkM1LjQxODY0IDYuMDk3ODMgNS40MTg2NCA1LjU3MDE5IDUuNzQ0MDggNS4yNDQ3NUM2LjA2OTUxIDQuOTE5MzIgNi41OTcxNSA0LjkxOTMyIDYuOTIyNTkgNS4yNDQ3NUw5LjY2NjY3IDcuOTg4ODNWMS42NjczNEM5LjY2NjY3IDEuMzMwMjkgOS44Njk3IDEuMDI2NDMgMTAuMTgxMSAwLjg5NzQ0MlpNMTEuMzMzMyAxMi4wMTI1TDEzLjQ4ODIgMTQuMTY3M0wxMS4zMzMzIDE2LjMyMjJWMTIuMDEyNVpNMTEuMzMzMyA3Ljk4ODgzVjMuNjc5MTlMMTMuNDg4MiA1LjgzNDAxTDExLjMzMzMgNy45ODg4M1oiIGZpbGw9IiM1MjUyNTIiLz4KPC9zdmc+Cg==
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 925
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "04f60429-37a1-4209-a1a2-1fdcd8203dfe"
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 24
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250602T133501Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: bluetooth
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a6c3575a-d70f-443e-84f0-e1cf707a3a94"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250602T133533Z
