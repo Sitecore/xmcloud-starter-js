@@ -14,7 +14,10 @@ export const Default: React.FC<TopicListingProps> = (props) => {
 
   if (fields?.data?.datasource) {
     return (
-      <div className="@container bg-primary text-primary-foreground relative overflow-hidden py-24 md:pb-[128px] md:pt-28">
+      <div
+        className="@container bg-primary text-primary-foreground relative overflow-hidden py-24 md:pb-[128px] md:pt-28"
+        data-class-change
+      >
         {backgroundTheme === 'shooting-star' && (
           <div
             className="absolute inset-0 z-10"
