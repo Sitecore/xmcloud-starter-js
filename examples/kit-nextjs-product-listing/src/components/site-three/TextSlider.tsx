@@ -1,4 +1,4 @@
-import { Text as ContentSdkText, Field } from '@sitecore-content-sdk/nextjs';
+import { Text as ContentSdkText, Field, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 interface Fields {
@@ -11,6 +11,7 @@ type TextSliderProps = {
 };
 
 export const Default = (props: TextSliderProps) => {
+  const { page } = useSitecore();
   const containerRef = useRef<HTMLDivElement>(null);
   const measureRef = useRef<HTMLDivElement>(null);
   const [repeatCount, setRepeatCount] = useState(1);
@@ -21,6 +22,10 @@ export const Default = (props: TextSliderProps) => {
   }, [props.fields.Text?.value]);
 
   useEffect(() => {
+    if (page.mode.isEditing) {
+      return;
+    }
+
     const calculateRepeats = () => {
       if (!measureRef.current || !containerRef.current) return;
 
@@ -49,7 +54,7 @@ export const Default = (props: TextSliderProps) => {
     window.addEventListener('resize', calculateRepeats);
 
     return () => window.removeEventListener('resize', calculateRepeats);
-  }, [phrase]);
+  }, [phrase, page.mode.isEditing]);
 
   return (
     <div
@@ -64,8 +69,8 @@ export const Default = (props: TextSliderProps) => {
       >
         {phrase}
       </h2>
-
-      {ready && (
+      {/* In editing mode, we want to show the text as is */}
+      {(ready || page.mode.isEditing) && (
         <div
           className="flex absolute top-1/2 -translate-y-1/2 animate-marquee will-change-transform whitespace-nowrap uppercase"
           style={{
