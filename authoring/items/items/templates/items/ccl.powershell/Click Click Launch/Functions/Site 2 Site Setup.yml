@@ -11,6 +11,7 @@ SharedFields:
     Import-Function Update-PageTemplate
     Import-Function Update-TemplateInsertOptions
     Import-Function Update-LinkField
+    Import-Function Add-SampleImages
     
     function Invoke-ModuleScriptBody {
         [CmdletBinding()]
@@ -35,19 +36,15 @@ SharedFields:
             $service = [Sitecore.DependencyInjection.ServiceLocator]::ServiceProvider.GetService([Sitecore.XA.Foundation.Variants.Abstractions.Services.IAvailableRenderingVariantService])
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
             Write-Verbose "My site: $sitePath"
-    
-            # handle missing styles folder
-            if (-not (Test-Path "$sitePath/Presentation/Styles")) {
-                Import-Function Invoke-AddItem
-                $action = Get-Item . -ID '{B2486523-7487-4526-978F-AD2E986B5CC4}'
-                Invoke-AddItem $Site $action
-            }
             
             Write-Verbose "Reset the start item and the rendering host"
             # reset the start item and the rendering host
             $siteName = $Site.Name
             $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($sitename)" -Language $Site.Language
             $siteGrouping.StartItem = $item.ID
+            
+            # Add sample media
+            Add-SampleImages -Site $Site -TemplatePath "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Sample Images" -SiteCollection $siteCollection
             
             Write-Verbose "Create page templates in the Site Collection"
             $basePageTemplateId = "{AC9DE9BE-8E86-4147-8FBC-739D5560408B}"
@@ -331,7 +328,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "7092d389-f1d3-4c90-8844-f8b38916e3a6"
+  Value: "c40fcc67-e9e0-41f8-a0f4-990b5b9cf455"
 Languages:
 - Language: en
   Versions:
@@ -350,11 +347,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "95911cd7-3ad5-46b1-b172-df00bc1bf73f"
+      Value: "e07650cc-af46-49ed-a8f8-9cffb7645a4d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250711T144238Z
+      Value: 20250724T014119Z

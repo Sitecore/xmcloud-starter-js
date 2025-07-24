@@ -1,0 +1,51 @@
+﻿---
+ID: "d51e54df-815d-4f35-a229-9784f6283b01"
+Parent: "6a042acd-7d39-4ff7-9bfb-3995511e4837"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Sample Images/$name/Images/facebook"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/47E5214AE04C4387ACD6BE3E6CA44E6A.ashx?h=16&thn=1&w=16"
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "d51e54df-815d-4f35-a229-9784f6283b01"
+  Value: PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGlkPSJmYWNlYm9vay1hcHAtc3ltYm9sIDEiIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8xNDAzMl84MjApIj4NCjxnIGlkPSJHcm91cCI+DQo8cGF0aCBpZD0iZl8xXyIgZD0iTTExLjU0ODIgMjBWMTAuODc3N0gxNC42MDg5TDE1LjA2ODEgNy4zMjE1NkgxMS41NDgyVjUuMDUxNDdDMTEuNTQ4MiA0LjAyMjIgMTEuODMyOSAzLjMyMDc2IDEzLjMxMDUgMy4zMjA3NkwxNS4xOTIgMy4zMTk5OVYwLjEzOTIzQzE0Ljg2NjYgMC4wOTY5NDUzIDEzLjc0OTcgMCAxMi40NDk3IDBDOS43MzUxMiAwIDcuODc2NjYgMS42NTY5NyA3Ljg3NjY2IDQuNjk5MjdWNy4zMjE1Nkg0LjgwNjY0VjEwLjg3NzdINy44NzY2NlYyMEgxMS41NDgyWiIgZmlsbD0id2hpdGUiLz4NCjwvZz4NCjwvZz4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJjbGlwMF8xNDAzMl84MjAiPg0KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJ3aGl0ZSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 597
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "7d74f547-44f1-4b8e-945d-7b1080d0cfb4"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250316T003906Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1ca7522b-8cd8-48c9-92cf-c5eed2659f64"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\richard.seal@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250724T012832Z

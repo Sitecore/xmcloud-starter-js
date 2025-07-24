@@ -11,6 +11,7 @@ SharedFields:
     Import-Function Update-PageTemplate
     Import-Function Update-LinkField
     Import-Function Update-TemplateInsertOptions
+    Import-Function Add-SampleImages
     
     function Invoke-ModuleScriptBody {
         [CmdletBinding()]
@@ -36,16 +37,8 @@ SharedFields:
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
             Write-Verbose "My site: $sitePath"
     
-            #Write-Verbose "Clear styles and add custom ones"
-            #Remove-Item -Path "$sitePath/Presentation/Styles" -Recurse -Force
-            #$addStylesBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Styles" -Language $Site.Language
-            #New-Item -Path "$sitePath/Presentation" -Name "Styles" -ItemType $addStylesBranchTemplate.ID
-            
             # Add sample media
-            $mediaRoot = Get-Item -Path "/sitecore/media library/Project/$($siteCollection.Name)/$($Site.Name)" -Language $Site.Language
-            Write-Verbose "Adding sample media to [$($mediaRoot.ItemPath)]"
-            $sampleMediaBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Default Images" -Language $Site.Language
-            New-Item -Parent $mediaRoot -Name "Sample Media" -ItemType $sampleMediaBranchTemplate.ID -Language $Site.Language
+            Add-SampleImages -Site $Site -TemplatePath "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Default Images" -SiteCollection $siteCollection
             
             # Add LinkList variants
             $linkListVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/LinkList" -Language $Site.Language
@@ -239,7 +232,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "6ab10503-59c5-46c9-ae44-5d982f5ea9af"
+  Value: "8d7c8165-dc8a-4a58-823a-07c120c9f268"
 Languages:
 - Language: en
   Versions:
@@ -258,11 +251,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2d7245c3-7cae-4d65-8c84-2bc3c466e6b1"
+      Value: "9672b183-5d0a-4eda-b795-54d826501b29"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250723T185947Z
+      Value: 20250724T013959Z
