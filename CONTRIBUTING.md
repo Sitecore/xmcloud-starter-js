@@ -12,7 +12,7 @@ Ensure the following tools are installed on your system:
 - **Node.js**: Use an [Active LTS version](https://nodejs.org/en/about/releases/).  
   Check with: `node -v`
 
-- **npm**: Version `9` or above.  
+- **npm**: Version `10` or above.  
   Check with: `npm -v`
 
 ---
