@@ -11,6 +11,7 @@ SharedFields:
     Import-Function Update-PageTemplate
     Import-Function Update-LinkField
     Import-Function Update-TemplateInsertOptions
+    Import-Function Add-SampleImages
     
     function Invoke-ModuleScriptBody {
         [CmdletBinding()]
@@ -36,12 +37,8 @@ SharedFields:
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
             Write-Verbose "My site: $sitePath"
     
-            # handle missing styles folder
-            if (-not (Test-Path "$sitePath/Presentation/Styles")) {
-                Import-Function Invoke-AddItem
-                $action = Get-Item . -ID '{B2486523-7487-4526-978F-AD2E986B5CC4}'
-                Invoke-AddItem $Site $action
-            }
+            # Add sample media
+            Add-SampleImages -Site $Site -TemplatePath "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add Sample Images" -SiteCollection $siteCollection
             
             Write-Verbose "Reset the start item and the rendering host"
             # reset the start item and the rendering host
@@ -271,7 +268,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "9f248762-029a-48bd-b5fe-9f0b9c69fe19"
+  Value: "cd07ef7c-91f1-42a4-8f81-d060eedab3c7"
 Languages:
 - Language: en
   Versions:
@@ -290,11 +287,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ccdf18df-0c34-4b37-ad9e-c1b754995821"
+      Value: "2eff325a-e4d9-4d4a-82bf-1d798bf3ec18"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\richard.seal@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250711T005733Z
+      Value: 20250724T020223Z
