@@ -4,9 +4,7 @@ If you're looking for support for XMCloud starter JS there are a lot of options:
 
 ### Documentation
 
-  * [Content SDK](https://github.com/Sitecore/content-sdk)
-  * [JSS SDK](https://github.com/Sitecore/jss)
-  * [Sitecore Content SDK for XM Cloud Official Docs](https://doc.sitecore.com/xmc/en/developers/content-sdk/sitecore-content-sdk-for-xm-cloud.html)
+* [Sitecore Content SDK for XM Cloud Official Docs](https://doc.sitecore.com/xmc/en/developers/content-sdk/sitecore-content-sdk-for-xm-cloud.html)
 
 ### Questions or help
 
@@ -20,6 +18,12 @@ If you're looking for support for XMCloud starter JS there are a lot of options:
 ### Issues / bugs / feature requests
 
 Open an issue via GitHub: https://github.com/Sitecore/xmcloud-starter-js/issues
+
+For any issues or guidance related to specific features in the app, please refer to the respective repositories:
+  - Content SDK: [Content SDK](https://github.com/Sitecore/content-sdk)
+  - JSS SDK for XM Cloud SPA app: [JSS SDK](https://github.com/Sitecore/jss)
+
+These repositories are the primary sources for issue tracking and feature-specific discussions.
 
 Please use one of the provided templates when opening an issue, it will greatly increase your chances of a prompt response.
 
