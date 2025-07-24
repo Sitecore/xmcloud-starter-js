@@ -17,6 +17,8 @@ For developers new to XM Cloud you can follow the Getting Started Guide on the [
 
 ### Running the Next.js Starter Kit
 
+>  **Note:** Please refer to the `README.md` of the specific example starter you’re working with for detailed setup instructions.
+> The following outlines the general steps to run the app locally:
 - Log into the Sitecore XM Cloud Deploy Portal, locate your Environment and select the `Developer Settings` tab.
 - Ensure that the `Preview` toggle is enabled.
 - In the `Local Development` section, click to copy the sample `.env` file contents to your clipboard.

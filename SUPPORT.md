@@ -4,8 +4,8 @@ If you're looking for support for XMCloud starter JS there are a lot of options:
 
 ### Documentation
 
-**TODO**
-
+  * [Content SDK](https://github.com/Sitecore/content-sdk)
+  * [Sitecore Content SDK for XM Cloud Official Docs](https://doc.sitecore.com/xmc/en/developers/content-sdk/sitecore-content-sdk-for-xm-cloud.html)
 
 ### Questions or help
 
