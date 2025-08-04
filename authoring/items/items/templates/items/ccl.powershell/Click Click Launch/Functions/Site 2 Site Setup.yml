@@ -219,8 +219,14 @@ SharedFields:
             $imageCarouselVariants = $service.GetAvailableRenderingVariants($Site, $renderingImageCarousel.Name, $renderingImageCarousel.ID, $item.TemplateID)
             $promoVariants = $service.GetAvailableRenderingVariants($Site, $renderingPromo.Name, $renderingPromo.ID, $item.TemplateID)
             $accordionVariants = $service.GetAvailableRenderingVariants($Site, $renderingAccordion.Name, $renderingAccordion.ID, $item.TemplateID)
-            $imageGalleryVariants = $service.GetAvailableRenderingVariants($Site, $renderingImageGallery.Name, $renderingImageGallery.ID, $item.TemplateID)
-            $pageHeaderVariants = $service.GetAvailableRenderingVariants($Site, $renderingPageHeader.Name, $renderingPageHeader.ID, $item.TemplateID)
+            if ($renderingImageGallery) {
+                $imageGalleryVariants = $service.GetAvailableRenderingVariants($Site, $renderingImageGallery.Name, $renderingImageGallery.ID, $item.TemplateID)
+                $imageGalleryVariant = $imageGalleryVariants | Where-Object { $_.Name -eq "Default" }
+            }
+            if ($renderingPageHeader) {
+                $pageHeaderVariants = $service.GetAvailableRenderingVariants($Site, $renderingPageHeader.Name, $renderingPageHeader.ID, $item.TemplateID)
+                $pageHeaderVariant = $pageHeaderVariants | Where-Object { $_.Name -eq "Default" }
+            }
     
             $heroVariant = $heroVariants | Where-Object { $_.DisplayName -eq "Image Background" }
             $textBannerVariant = $textBannerVariants | Where-Object { $_.Name -eq "Default" }
@@ -243,12 +249,16 @@ SharedFields:
             Add-Rendering -Item $item -PlaceHolder "/headless-main/container-fullbleed-1" -Instance $renderingAccordionDefinition -Parameter @{ "FieldNames" = $accordionVariant.ID; "DynamicPlaceholderId" = "6" } -DataSource "local:/Data/Home Page Accordion" -FinalLayout
     
             # update Nexa product
-            Get-Rendering -Item $nexaPage -Rendering $renderingImageGallery -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $imageGalleryVariant.ID } | `
-                Set-Rendering -Item $nexaPage -FinalLayout            
-            Get-Rendering -Item $nexaPage -Rendering $renderingPageHeader -FinalLayout | `
-                Set-RenderingParameter -Parameter @{ "FieldNames" = $pageHeaderVariant.ID } | `
-                Set-Rendering -Item $nexaPage -FinalLayout
+            if ($renderingImageGallery -and $imageGalleryVariant) {
+                Get-Rendering -Item $nexaPage -Rendering $renderingImageGallery -FinalLayout | `
+                    Set-RenderingParameter -Parameter @{ "FieldNames" = $imageGalleryVariant.ID } | `
+                    Set-Rendering -Item $nexaPage -FinalLayout
+            }
+            if ($renderingPageHeader -and $pageHeaderVariant) {
+                Get-Rendering -Item $nexaPage -Rendering $renderingPageHeader -FinalLayout | `
+                    Set-RenderingParameter -Parameter @{ "FieldNames" = $pageHeaderVariant.ID } | `
+                    Set-Rendering -Item $nexaPage -FinalLayout
+            }
             Get-Rendering -Item $nexaPage -Rendering $renderingTextBanner -FinalLayout | `
                 Set-RenderingParameter -Parameter @{ "FieldNames" = $textBannerVariant.ID } | `
                 Set-Rendering -Item $nexaPage -FinalLayout
