@@ -234,8 +234,6 @@ SharedFields:
             $promoVariant = $promoVariants | Where-Object { $_.Name -eq "Default" }
             $accordionVariant = $accordionVariants | Where-Object { $_.Name -eq "Default" }
             $accordion5050Variant = $accordionVariants | Where-Object { $_.Name -eq "Fifty Fifty Title Above" }
-            $imageGalleryVariant = $imageGalleryVariants | Where-Object { $_.Name -eq "Default" }
-            $pageHeaderVariant = $pageHeaderVariants | Where-Object { $_.Name -eq "Default" }
             $locSearchVariant = $locSearchVariants | Where-Object { $_.Name -eq "Default" }
             $subFormVariant = $subFormVariants | Where-Object { $_.Name -eq "Default" }
     
