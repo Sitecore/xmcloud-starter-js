@@ -1,39 +1,10 @@
-'use client';
 import React, { JSX } from 'react';
-import { Link, LinkField, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from 'lib/component-props';
+import { LinkField, Text, TextField } from '@sitecore-content-sdk/nextjs';
+import { CompatibleLink } from 'components/content-sdk/CompatibleLink';
+import { getDatasource, getFieldValue } from 'lib/component-props';
+import { TitleComponentContentProps, TitleProps } from './title.props';
 
-interface Item {
-  url: {
-    path: string;
-    siteName: string;
-  };
-  field: {
-    jsonValue: {
-      value: string;
-    };
-  };
-}
-
-interface TitleProps extends ComponentProps {
-  fields: {
-    /**
-     * The Integrated graphQL query result. This illustrates the way to access the context item datasource information.
-     */
-    data?: {
-      datasource?: Item;
-      contextItem?: Item;
-    };
-  };
-}
-
-interface ComponentContentProps {
-  id?: string;
-  styles?: string;
-  children: React.ReactNode;
-}
-
-const ComponentContent = ({ id, styles = '', children }: ComponentContentProps): JSX.Element => (
+const ComponentContent = ({ id, styles = '', children }: TitleComponentContentProps): JSX.Element => (
   <div className={`component title ${styles.trim()}`} id={id}>
     <div className="component-content">
       <div className="field-title">{children}</div>
@@ -41,12 +12,11 @@ const ComponentContent = ({ id, styles = '', children }: ComponentContentProps):
   </div>
 );
 
-export const Default = ({ params, fields }: TitleProps): JSX.Element => {
-  const { page } = useSitecore();
+export const Default = ({ params, fields, page }: TitleProps): JSX.Element => {
   const { styles, RenderingIdentifier: id } = params;
-  const datasource = fields?.data?.datasource || fields?.data?.contextItem;
-  const datasourceField: TextField = datasource?.field?.jsonValue as TextField;
-  const contextField: TextField = page.layout.sitecore.route?.fields?.Title as TextField;
+  const datasource = getDatasource(fields);
+  const datasourceField = getFieldValue(datasource?.field) as TextField | undefined;
+  const contextField: TextField = page?.layout?.sitecore?.route?.fields?.Title as TextField;
   const titleField: TextField = datasourceField || contextField;
 
   const link: LinkField = {
@@ -54,18 +24,18 @@ export const Default = ({ params, fields }: TitleProps): JSX.Element => {
       href: datasource?.url?.path,
       title:
         (titleField?.value ? String(titleField.value) : undefined) ||
-        datasource?.field?.jsonValue?.value,
+        datasourceField?.value?.toString(),
     },
   };
 
   return (
     <ComponentContent styles={styles} id={id}>
-      {page.mode.isEditing ? (
+      {page?.mode?.isEditing ? (
         <Text field={titleField} />
       ) : (
-        <Link field={link}>
+        <CompatibleLink field={link}>
           <Text field={titleField} />
-        </Link>
+        </CompatibleLink>
       )}
     </ComponentContent>
   );

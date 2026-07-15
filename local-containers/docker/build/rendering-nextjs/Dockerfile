@@ -6,12 +6,15 @@
 #
 
 ARG PARENT_IMAGE
-FROM ${PARENT_IMAGE} as debug
+FROM ${PARENT_IMAGE} AS debug
 
 USER ContainerAdministrator
 
 WORKDIR /app
 
 EXPOSE 3000
-#ENTRYPOINT "npm install && npm install next@canary && npm run start:connected"
-ENTRYPOINT "npm install && npm run start:connected"
+
+HEALTHCHECK --interval=2m --timeout=10s --start-period=300s --retries=3 CMD ["C:/Windows/System32/curl.exe", "-sS", "-o", "nul", "--max-time", "5", "http://127.0.0.1:3000/"]
+
+#ENTRYPOINT ["cmd.exe", "/C", "npm install && npm run dev"]
+ENTRYPOINT ["cmd.exe", "/C", "npm install && npm run dev"]

@@ -1,3 +1,4 @@
+'use client';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@/components/ui/button';
@@ -11,43 +12,16 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { z } from 'zod';
+import type { ZipcodeFormValues, ZipcodeSearchFormProps } from './zipcode-search-form.props';
 
-// Schema for form validation
 const zipcodeFormSchema = z.object({
   zipcode: z.string().regex(/(^\d{5}$)|(^\d{5}-\d{4}$)/, {
     message: 'Please enter a valid zip code',
   }),
 });
 
-// Type for form values
-type ZipcodeFormValues = z.infer<typeof zipcodeFormSchema>;
-
-// Props for the ZipcodeSearchForm component
-interface ZipcodeSearchFormProps {
-  /**
-   * Optional callback function that is called when the form is submitted
-   */
-  // eslint-disable-next-line no-unused-vars
-  onSubmit?: (values: ZipcodeFormValues) => void;
-
-  /**
-   * Optional default value for the zipcode field
-   */
-  defaultZipcode?: string;
-
-  /**
-   * Optional button text
-   */
-  buttonText?: string;
-
-  /**
-   * Optional placeholder text for the input field
-   */
-  placeholder?: string;
-}
-
 export const Default: React.FC<ZipcodeSearchFormProps> = ({
-  onSubmit = (values) => console.log(values),
+  onSubmit = () => {},
   defaultZipcode = '',
   buttonText,
   placeholder,

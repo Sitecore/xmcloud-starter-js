@@ -14,8 +14,9 @@ export interface NavItemFields {
 }
 
 @Component({
-  selector: 'app-navigation-item',
-  templateUrl: './navigation-item.component.html',
+    selector: 'app-navigation-item',
+    templateUrl: './navigation-item.component.html',
+    standalone: false
 })
 export class NavigationItemComponent implements OnInit {
   @Input() navItemFields: NavItemFields;

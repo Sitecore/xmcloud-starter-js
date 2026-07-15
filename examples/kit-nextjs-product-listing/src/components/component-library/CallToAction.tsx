@@ -4,31 +4,15 @@ import {
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
   Image as ContentSdkImage,
-  ImageField,
-  Field,
-  LinkField,
-  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
-
-interface Fields {
-  CTATitle: Field<string>;
-  CTABody: Field<string>;
-  CTALink1: LinkField;
-  CTALink2: LinkField;
-  CTAImage: ImageField;
-}
-
-type CTAProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import type { CTAProps } from './call-to-action.props';
 
 export const Default = (props: CTAProps) => {
   return <CallToAction1 {...props} />;
 };
 
 export const CallToAction1 = (props: CTAProps) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const { isEditing } = page.mode;
 
   return (
@@ -84,7 +68,7 @@ export const CallToAction1 = (props: CTAProps) => {
 };
 
 export const CallToAction2 = (props: CTAProps) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const { isEditing } = page.mode;
 
   return (
@@ -134,7 +118,7 @@ export const CallToAction2 = (props: CTAProps) => {
 };
 
 export const CallToAction3 = (props: CTAProps) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const { isEditing } = page.mode;
 
   return (
@@ -184,7 +168,7 @@ export const CallToAction3 = (props: CTAProps) => {
 };
 
 export const CallToAction4 = (props: CTAProps) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const { isEditing } = page.mode;
 
   return (

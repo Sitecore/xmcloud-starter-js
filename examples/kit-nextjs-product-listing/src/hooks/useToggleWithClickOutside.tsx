@@ -1,5 +1,7 @@
+'use client';
+
 import { useState, useEffect, useRef, RefObject } from 'react';
-import { useRouter } from 'next/router';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 export function useToggleWithClickOutside<T extends HTMLElement = HTMLElement>(
   initialVisible = false
@@ -10,7 +12,8 @@ export function useToggleWithClickOutside<T extends HTMLElement = HTMLElement>(
 } {
   const [isVisible, setIsVisible] = useState(initialVisible);
   const ref = useRef<T | null>(null);
-  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (!isVisible) return;
@@ -27,22 +30,21 @@ export function useToggleWithClickOutside<T extends HTMLElement = HTMLElement>(
       }
     }
 
-    function handleRouteChange() {
-      setIsVisible(false);
-    }
-
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
     document.addEventListener('keydown', handleKeyDown);
-    router.events.on('routeChangeComplete', handleRouteChange);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
       document.removeEventListener('keydown', handleKeyDown);
-      router.events.off('routeChangeComplete', handleRouteChange);
     };
-  }, [isVisible, router.events]);
+  }, [isVisible]);
+
+  // Close the menu when the route changes (pathname or search params)
+  useEffect(() => {
+    setIsVisible(false);
+  }, [pathname, searchParams]);
 
   return { isVisible, setIsVisible, ref };
 }

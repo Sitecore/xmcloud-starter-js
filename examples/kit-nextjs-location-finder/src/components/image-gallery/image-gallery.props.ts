@@ -1,6 +1,6 @@
 import { Field, ImageField } from '@sitecore-content-sdk/nextjs';
 
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 
 interface ImageGalleryParams {
   [key: string]: any; // eslint-disable-line
@@ -15,8 +15,9 @@ interface ImageGalleryFields {
   image4: ImageField;
 }
 
-export interface ImageGalleryProps extends ComponentProps {
+export interface ImageGalleryProps extends OptionalComponentProps {
   isPageEditing?: boolean;
   params: ImageGalleryParams;
   fields: ImageGalleryFields;
 }
+

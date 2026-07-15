@@ -3,9 +3,9 @@
 import type React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Link as ContentSdkLink } from '@sitecore-content-sdk/nextjs';
+import { CompatibleLink } from '@/components/content-sdk/CompatibleLink';
 import { Menu } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
@@ -21,7 +21,8 @@ import { AnimatedHoverNav } from '@/components/ui/animated-hover-nav';
 
 export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
   const { fields, isPageEditing } = props ?? {};
-  const { logo, primaryNavigationLinks, headerContact } = fields?.data?.item ?? {};
+  const { logo, primaryNavigationLinks, headerContact } =
+    fields?.data?.item ?? {};
   const [isOpen, setIsOpen] = useState(false);
   const [sheetAnimationComplete, setSheetAnimationComplete] = useState(false);
   const [visible, setVisible] = useState(true);
@@ -58,17 +59,17 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
 
   return (
     <AnimatePresence mode="wait" data-component="GlobalHeader">
-      <motion.header
+      <m.header
         initial={{ opacity: 1 }}
         animate={{ opacity: visible ? 1 : 0 }}
         transition={{ duration: isReducedMotion ? 0 : 0.2 }}
         className={cn(
-          'bg-background/80 @container sticky top-0 z-50 flex h-[96px] w-full items-center justify-center border-b backdrop-blur-md'
+          'bg-background/80 @container sticky top-0 z-50 flex h-[96px] w-full items-center justify-center border-b backdrop-blur-md',
         )}
       >
         <div className="@xl:px-8 relative mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4">
           {/* Desktop Navigation */}
-          <div className="@lg:flex @lg:flex-[2] z-10 hidden" ref={navRef}>
+          <nav className="@lg:flex @lg:flex-[2] z-10 hidden" ref={navRef} aria-label="Primary navigation">
             <NavigationMenu className="w-full">
               <div className="relative w-full">
                 <AnimatedHoverNav
@@ -80,21 +81,29 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
                     {primaryNavigationLinks?.targetItems &&
                       primaryNavigationLinks.targetItems.length > 0 &&
                       primaryNavigationLinks?.targetItems.map((item, index) => (
-                        <NavigationMenuItem key={`${item.link?.jsonValue?.value?.text}-${index}`}>
-                          <Button
-                            variant="ghost"
-                            asChild
-                            className="font-body bg-transparent text-base font-medium hover:bg-transparent"
-                          >
-                            <ContentSdkLink field={item.link?.jsonValue} prefetch={false} />
-                          </Button>
+                        <NavigationMenuItem
+                          key={`${item.link?.jsonValue?.value?.text}-${index}`}
+                        >
+                          {item.link?.jsonValue && (isPageEditing || item.link.jsonValue?.value?.href) && (
+                            <Button
+                              variant="ghost"
+                              asChild
+                              className="font-body bg-transparent text-base font-medium hover:bg-transparent"
+                            >
+                              <CompatibleLink
+                                field={item.link?.jsonValue}
+                                editable={isPageEditing}
+                                prefetch={false}
+                              />
+                            </Button>
+                          )}
                         </NavigationMenuItem>
                       ))}
                   </NavigationMenuList>
                 </AnimatedHoverNav>
               </div>
             </NavigationMenu>
-          </div>
+          </nav>
           <div className="absolute left-1/2 top-1/2 flex w-[112px] -translate-x-1/2 -translate-y-1/2 items-center justify-center [&_.image-container]:mx-auto [&_.image-container]:w-full">
             {!isPageEditing ? (
               <Link href="/" className="flex items-center justify-center">
@@ -103,6 +112,7 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
                   className="w-full object-contain"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="Home"
+                  page={props.page}
                 />
               </Link>
             ) : (
@@ -111,6 +121,7 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
                 className="w-full object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt="Home"
+                page={props.page}
               />
             )}
           </div>
@@ -118,7 +129,11 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
           {headerContact?.jsonValue?.value && (
             <div className="@lg:flex @lg:items-center @lg:justify-end @lg:flex-1 z-10 hidden">
               <Button asChild className="font-heading text-base font-medium">
-                <ContentSdkLink field={headerContact.jsonValue} prefetch={false} />
+                <CompatibleLink
+                  field={headerContact.jsonValue}
+                  editable={isPageEditing}
+                  prefetch={false}
+                />
               </Button>
             </div>
           )}
@@ -127,7 +142,7 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <AnimatePresence>
                 {isOpen && (
-                  <motion.div
+                  <m.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -137,7 +152,11 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
                 )}
               </AnimatePresence>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="hover:bg-transparent [&_svg]:size-8">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-transparent [&_svg]:size-8"
+                >
                   <Menu />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
@@ -146,7 +165,7 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
                 side="bottom"
                 className="bg-background/60 h-[100dvh] border-t-0 p-0 backdrop-blur-md [&>button_svg]:size-8"
               >
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, scale: 0.95, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -159,55 +178,70 @@ export const GlobalHeaderCentered: React.FC<GlobalHeaderProps> = (props) => {
                 >
                   <AnimatePresence>
                     {sheetAnimationComplete && (
-                      <motion.nav
+                      <m.nav
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         className="flex flex-col space-y-4"
                       >
                         {primaryNavigationLinks?.targetItems &&
                           primaryNavigationLinks.targetItems.length > 0 &&
-                          primaryNavigationLinks?.targetItems.map((item, index) => (
-                            <motion.div
-                              key={`${item.link?.jsonValue?.value?.text}-mobile`}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{
-                                delay: 0.05 * index,
-                                duration: isReducedMotion ? 0 : 0.3,
-                              }}
-                              className="flex justify-center"
-                            >
-                              <Button variant="ghost" asChild onClick={() => setIsOpen(false)}>
-                                <ContentSdkLink field={item.link?.jsonValue} prefetch={false} />
-                              </Button>
-                            </motion.div>
-                          ))}
+                          primaryNavigationLinks?.targetItems.map(
+                            (item, index) => (
+                              <m.div
+                                key={`${item.link?.jsonValue?.value?.text}-mobile`}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{
+                                  delay: 0.05 * index,
+                                  duration: isReducedMotion ? 0 : 0.3,
+                                }}
+                                className="flex justify-center"
+                              >
+                                <Button
+                                  variant="ghost"
+                                  asChild
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  <CompatibleLink
+                                    field={item.link?.jsonValue}
+                                    editable={isPageEditing}
+                                    prefetch={false}
+                                  />
+                                </Button>
+                              </m.div>
+                            ),
+                          )}
                         {headerContact?.jsonValue?.value && (
-                          <motion.div
+                          <m.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{
                               delay: primaryNavigationLinks?.targetItems?.length
-                                ? 0.05 * primaryNavigationLinks.targetItems.length
+                                ? 0.05 *
+                                  primaryNavigationLinks.targetItems.length
                                 : 0,
                               duration: isReducedMotion ? 0 : 0.3,
                             }}
                             className="flex justify-center"
                           >
                             <Button asChild onClick={() => setIsOpen(false)}>
-                              <ContentSdkLink field={headerContact.jsonValue} prefetch={false} />
+                              <CompatibleLink
+                                field={headerContact.jsonValue}
+                                editable={isPageEditing}
+                                prefetch={false}
+                              />
                             </Button>
-                          </motion.div>
+                          </m.div>
                         )}
-                      </motion.nav>
+                      </m.nav>
                     )}
                   </AnimatePresence>
-                </motion.div>
+                </m.div>
               </SheetContent>
             </Sheet>
           </div>
         </div>
-      </motion.header>
+      </m.header>
     </AnimatePresence>
   );
 };

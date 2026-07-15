@@ -8,10 +8,11 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { NoDataFallback } from '@/utils/NoDataFallback';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 export const Default: React.FC<BreadcrumbsProps> = (props) => {
-  const { fields } = props;
-  const { ancestors, name } = fields?.data?.datasource ?? {};
+  const datasource = getDatasource(props.fields);
+  const { ancestors, name } = datasource ?? {};
 
   const truncate = (str: string): string => {
     return str?.length > 25
@@ -22,14 +23,14 @@ export const Default: React.FC<BreadcrumbsProps> = (props) => {
       : str;
   };
 
-  if (fields) {
+  if (datasource) {
     if (ancestors) {
       return (
         <Breadcrumb>
           <BreadcrumbList>
             {ancestors?.map((ancestor: BreadcrumbsPage, index) => {
               const title =
-                ancestor.navigationTitle?.jsonValue.value || ancestor.title?.jsonValue.value;
+                getFieldValue(ancestor.navigationTitle)?.value || getFieldValue(ancestor.title)?.value;
 
               return (
                 <>
@@ -41,7 +42,7 @@ export const Default: React.FC<BreadcrumbsProps> = (props) => {
               );
             })}
             <BreadcrumbItem>
-              <BreadcrumbPage>{truncate(name)}</BreadcrumbPage>
+              <BreadcrumbPage>{truncate(name || '')}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>

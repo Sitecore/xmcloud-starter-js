@@ -67,7 +67,6 @@ export const CardSpotlight = ({
       onMouseLeave={handleMouseLeave}
       onFocus={handleFocus}
       onBlur={handleBlur}
-      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
       tabIndex={0}
       {...props}
       data-component="CardSpotlight"

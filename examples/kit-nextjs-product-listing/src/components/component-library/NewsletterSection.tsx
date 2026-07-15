@@ -3,33 +3,18 @@ import {
   NextImage as ContentSdkImage,
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
-  ImageField,
-  Field,
 } from '@sitecore-content-sdk/nextjs';
 import { Input } from 'shadcd/components/ui/input';
-
-interface Fields {
-  Tagline: Field<string>;
-  Heading: Field<string>;
-  Body: Field<string>;
-  Image: ImageField;
-  FormDisclaimer: Field<string>;
-}
-
-type NewsletterSectionProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-type NewsletterSectionTemplateProps = NewsletterSectionProps & {
-  centered?: boolean;
-  withColumns?: boolean;
-  withBackgroundImage?: boolean;
-  bordered?: boolean;
-};
+import { getDatasource } from '@/lib/component-props';
+import type {
+  NewsletterSectionProps,
+  NewsletterSectionTemplateProps,
+} from './newsletter-section.props';
 
 const NewsletterSectionTemplate = (props: NewsletterSectionTemplateProps) => {
-  if (!props.fields) {
+  const datasource = getDatasource(props.fields);
+
+  if (!datasource) {
     return null;
   }
 
@@ -38,7 +23,7 @@ const NewsletterSectionTemplate = (props: NewsletterSectionTemplateProps) => {
       {props.withBackgroundImage && (
         <div className="absolute inset-0 h-full w-full z-1">
           <ContentSdkImage
-            field={props.fields.Image}
+            field={datasource.Image}
             width={800}
             height={800}
             className="h-full w-full object-cover brightness-50"
@@ -58,14 +43,14 @@ const NewsletterSectionTemplate = (props: NewsletterSectionTemplateProps) => {
           } ${props.centered ? 'mx-auto items-center text-center' : ''} `}
         >
           <div>
-            <h6 className="font-semibold mb-4">
-              <ContentSdkText field={props.fields.Tagline} />
-            </h6>
+            <p className="font-semibold mb-4">
+              <ContentSdkText field={datasource.Tagline} />
+            </p>
             <h1 className={`${props.withColumns ? 'text-5xl' : 'text-6xl'} font-bold mb-6`}>
-              <ContentSdkText field={props.fields.Heading} />
+              <ContentSdkText field={datasource.Heading} />
             </h1>
             <div className="text-lg">
-              <ContentSdkRichText field={props.fields.Body} />
+              <ContentSdkRichText field={datasource.Body} />
             </div>
             <div className={`flex w-full ${props.centered ? 'justify-center' : ''} gap-2 mt-8`}>
               <div className={`max-w-[30rem]`}>
@@ -74,7 +59,7 @@ const NewsletterSectionTemplate = (props: NewsletterSectionTemplateProps) => {
                   <Button type="submit">Subscribe</Button>
                 </div>
                 <div className="text-xs mt-3">
-                  <ContentSdkRichText field={props.fields.FormDisclaimer} />
+                  <ContentSdkRichText field={datasource.FormDisclaimer} />
                 </div>
               </div>
             </div>
@@ -82,7 +67,7 @@ const NewsletterSectionTemplate = (props: NewsletterSectionTemplateProps) => {
           {props.withColumns && (
             <div className="mt-8 lg:mt-0">
               <ContentSdkImage
-                field={props.fields.Image}
+                field={datasource.Image}
                 width={800}
                 height={800}
                 className="h-full w-full object-contain"

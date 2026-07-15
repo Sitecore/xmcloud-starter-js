@@ -6,7 +6,7 @@ globs:
   - "**/*sitecore*.tsx"
   - "**/content*.ts"
   - "**/sitecore.config.ts"
-  - "**/middleware.ts"
+  - "**/proxy.ts"
   - "src/components/**"
   - "src/lib/**"
 ---

@@ -1,54 +1,21 @@
+'use client';
+
 import {
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
-  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
-import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 import { Button } from 'shadcd/components/ui/button';
 import { useMemo, useState, type JSX } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-interface Fields {
-  data: {
-    datasource: {
-      children: {
-        results: ContactFields[];
-      };
-      tagLine: IGQLTextField;
-      heading: IGQLTextField;
-      body: IGQLRichTextField;
-      image: IGQLImageField;
-    };
-  };
-}
-
-interface ContactFields {
-  id: string;
-  image: IGQLImageField;
-  heading: IGQLTextField;
-  description: IGQLTextField;
-  contactLink: IGQLLinkField;
-  buttonLink: IGQLLinkField;
-}
-
-type ContactSectionProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-type ContactCardImageProps = {
-  contact: ContactFields;
-  size: 'xs' | 'sm' | 'md' | 'lg';
-};
-
-type ContactCardProps = {
-  contact: ContactFields;
-  type: 'sm' | 'md' | 'lg' | 'horizontal' | 'noImage';
-  centered?: boolean;
-};
+import type {
+  ContactCardImageProps,
+  ContactCardProps,
+  ContactSectionProps,
+} from './contact-section.props';
+import { getDatasource, normalizeFieldShape } from '@/lib/component-props';
 
 const ContactCardImage = (props: ContactCardImageProps) => {
   switch (props.size) {
@@ -89,8 +56,7 @@ const ContactCardImage = (props: ContactCardImageProps) => {
 };
 
 const ContactCard = (props: ContactCardProps) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
 
   const buttons = useMemo(
     () => (
@@ -220,9 +186,9 @@ export const Default = (props: ContactSectionProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-4">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -232,7 +198,7 @@ export const Default = (props: ContactSectionProps): JSX.Element => {
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
           {datasource.children.results.map((contact) => (
-            <ContactCard key={contact.id} contact={contact} type="md" />
+            <ContactCard key={contact.id} contact={contact} type="md" page={props.page} />
           ))}
         </div>
       </div>
@@ -247,9 +213,9 @@ export const ContactSection1 = (props: ContactSectionProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-4">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -259,7 +225,7 @@ export const ContactSection1 = (props: ContactSectionProps): JSX.Element => {
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
           {datasource.children.results.map((contact) => (
-            <ContactCard key={contact.id} contact={contact} type="md" centered />
+            <ContactCard key={contact.id} contact={contact} type="md" centered page={props.page} />
           ))}
         </div>
       </div>
@@ -274,9 +240,9 @@ export const ContactSection2 = (props: ContactSectionProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-4">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -287,7 +253,7 @@ export const ContactSection2 = (props: ContactSectionProps): JSX.Element => {
         <div className="grid md:grid-cols-3 gap-x-20 gap-y-12 mt-20">
           <div className="flex flex-col gap-x-8 gap-y-12">
             {datasource.children.results.map((contact) => (
-              <ContactCard key={contact.id} contact={contact} type="sm" />
+              <ContactCard key={contact.id} contact={contact} type="sm" page={props.page} />
             ))}
           </div>
           <div className="relative md:col-span-2 min-h-80">
@@ -312,9 +278,9 @@ export const ContactSection3 = (props: ContactSectionProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-5 gap-x-12 gap-y-20">
           <div className="max-w-3xl md:col-span-3">
-            <h6 className="font-semibold mb-4">
+            <p className="font-semibold mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
-            </h6>
+            </p>
             <h2 className="text-5xl font-bold mb-4">
               <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>
@@ -324,7 +290,7 @@ export const ContactSection3 = (props: ContactSectionProps): JSX.Element => {
           </div>
           <div className="flex flex-col gap-x-8 gap-y-12 md:col-span-2">
             {datasource.children.results.map((contact) => (
-              <ContactCard key={contact.id} contact={contact} type="horizontal" />
+              <ContactCard key={contact.id} contact={contact} type="horizontal" page={props.page} />
             ))}
           </div>
         </div>
@@ -346,9 +312,9 @@ export const ContactSection4 = (props: ContactSectionProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-4">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -358,7 +324,7 @@ export const ContactSection4 = (props: ContactSectionProps): JSX.Element => {
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
           {datasource.children.results.map((contact) => (
-            <ContactCard key={contact.id} contact={contact} type="lg" />
+            <ContactCard key={contact.id} contact={contact} type="lg" page={props.page} />
           ))}
         </div>
       </div>
@@ -373,9 +339,9 @@ export const ContactSection5 = (props: ContactSectionProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-4">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -385,7 +351,7 @@ export const ContactSection5 = (props: ContactSectionProps): JSX.Element => {
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
           {datasource.children.results.map((contact) => (
-            <ContactCard key={contact.id} contact={contact} type="lg" centered />
+            <ContactCard key={contact.id} contact={contact} type="lg" centered page={props.page} />
           ))}
         </div>
       </div>
@@ -405,9 +371,9 @@ export const ContactSection6 = (props: ContactSectionProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-4">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -425,7 +391,7 @@ export const ContactSection6 = (props: ContactSectionProps): JSX.Element => {
                   activeTab !== contact.id ? 'border-transparent' : ''
                 }`}
               >
-                <ContactCard contact={contact} type="noImage" />
+                <ContactCard contact={contact} type="noImage" page={props.page} />
               </div>
             ))}
           </div>

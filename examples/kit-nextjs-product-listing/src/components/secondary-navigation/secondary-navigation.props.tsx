@@ -28,6 +28,7 @@ export type SecondaryNavigationFields = {
 export type SecondaryNavigationPage = {
   id: string;
   name: string;
+  displayName?: string;
   title?: GqlFieldString;
   navigationTitle?: GqlFieldString;
   url?: LinkFieldValue;

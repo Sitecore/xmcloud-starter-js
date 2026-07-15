@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b09a5a9e-3f2e-4475-b1a1-c3f9adf8b7ae"
 Parent: "8b7327e5-7409-44c1-9403-2ef48668a3c6"
 Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
@@ -7,7 +7,6 @@ SharedFields:
 - ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
   Hint: Renderings
   Value: |
-    {A563BE98-85FA-4DD5-94BD-9D9C937799F6}
     {7CB831E8-C889-4193-B822-A1131CB0B755}
 Languages:
 - Language: en

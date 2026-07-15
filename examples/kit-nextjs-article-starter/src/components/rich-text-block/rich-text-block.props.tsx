@@ -7,7 +7,7 @@ import { ComponentProps } from '@/lib/component-props';
 export type RichTextBlockProps = ComponentProps & RichTextFields;
 
 export interface RichTextFields {
-  fields: {
-    text: Field<string>;
+  fields?: {
+    text?: Field<string>;
   };
 }

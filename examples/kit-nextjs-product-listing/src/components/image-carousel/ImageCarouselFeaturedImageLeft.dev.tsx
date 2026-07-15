@@ -17,8 +17,8 @@ import { useContainerQuery } from '@/hooks/use-container-query';
 export const ImageCarouselFeaturedImageLeft = (props: ImageCarouselProps) => {
   const { fields, isPageEditing } = props;
 
-  const { title, imageItems } = fields.data.datasource;
-  const { results: slides } = imageItems;
+  const { title, imageItems } = fields?.data?.datasource ?? {};
+  const { results: slides = [] } = imageItems || {};
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [slideOrder, setSlideOrder] = useState<number[]>([]);
@@ -127,7 +127,7 @@ export const ImageCarouselFeaturedImageLeft = (props: ImageCarouselProps) => {
             >
               <Text
                 tag="h2"
-                field={title.jsonValue}
+                field={title?.jsonValue}
                 className="font-heading @md:text-7xl max-w-[760px] text-pretty text-5xl font-light leading-none tracking-normal antialiased group-[.position-left]:text-left group-[.position-center]:text-center group-[.position-right]:text-right"
               />
             </AnimatedSection>

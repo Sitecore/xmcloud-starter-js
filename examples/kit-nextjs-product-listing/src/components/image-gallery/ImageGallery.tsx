@@ -1,5 +1,6 @@
+'use client';
+
 import type React from 'react';
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import type { ImageGalleryProps } from './image-gallery.props';
 import { ImageGalleryDefault } from './ImageGallery.dev';
 import { ImageGalleryGrid } from './ImageGalleryGrid.dev';
@@ -11,7 +12,7 @@ import { ImageGalleryNoSpacing } from './ImageGalleryNoSpacing.dev';
 
 // Default display of the component
 export const Default: React.FC<ImageGalleryProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
 
   return <ImageGalleryDefault {...props} isPageEditing={isPageEditing} />;
@@ -19,28 +20,28 @@ export const Default: React.FC<ImageGalleryProps> = (props) => {
 
 // Variants
 export const FiftyFifty: React.FC<ImageGalleryProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
 
   return <ImageGalleryFiftyFifty {...props} isPageEditing={isPageEditing} />;
 };
 
 export const Grid: React.FC<ImageGalleryProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
 
   return <ImageGalleryGrid {...props} isPageEditing={isPageEditing} />;
 };
 
 export const FeaturedImage: React.FC<ImageGalleryProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
 
   return <ImageGalleryFeaturedImage {...props} isPageEditing={isPageEditing} />;
 };
 
 export const NoSpacing: React.FC<ImageGalleryProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
 
   return <ImageGalleryNoSpacing {...props} isPageEditing={isPageEditing} />;

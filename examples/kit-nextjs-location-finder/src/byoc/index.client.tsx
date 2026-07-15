@@ -1,11 +1,4 @@
 import * as FEAAS from '@sitecore-feaas/clientside/react';
-/**
- * You can import your own client components here
- * @example
- * import './MyClientComponent';
- * @example
- * import 'src/otherFolder/MyOtherComponent';
- */
 
 // An important boilerplate component that prevents BYOC components from being optimized away and allows then. Should be kept in this file.
 const ClientsideComponent = (props: FEAAS.ExternalComponentProps) => FEAAS.ExternalComponent(props);

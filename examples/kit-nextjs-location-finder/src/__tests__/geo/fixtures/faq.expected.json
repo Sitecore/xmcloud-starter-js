@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "question": "Do all dealerships carry every model?",
+      "answer": "Inventory varies by dealership. Not every location carries all three models—Aero, Nexa, and Terra. Use our Find Availability tool and enter your zip code to see which models are in stock at dealerships near you, or contact a specific dealer to confirm availability before visiting."
+    },
+    {
+      "question": "Are Alaris vehicles available in Canada and Mexico?",
+      "answer": "Yes. Alaris vehicles are available in select markets in Canada and Mexico. Use the location finder on our website with your zip or postal code to find authorized Alaris dealerships and check availability in your region. Contact your nearest dealer for pricing and delivery options specific to your country."
+    },
+    {
+      "question": "How do I set-up an AlarisConnect+ account?",
+      "answer": "Download the Alaris app from the App Store or Google Play, or visit the AlarisConnect+ portal on our website. Sign up using your email and vehicle identification number (VIN). Once verified, you can manage your vehicle, schedule test drives and service, receive software updates, and access DriveSense AI and other connected features."
+    },
+    {
+      "question": "How do I schedule maintenance/software updates?",
+      "answer": "You can schedule maintenance and software updates through your AlarisConnect+ account or by contacting your local Alaris dealership. Over-the-air software updates are delivered automatically to your vehicle when available; you can also check update status and schedule service appointments in the Alaris app or at any authorized Alaris dealer."
+    }
+  ],
+  "lastModified": "2026-03-05T11:54:30Z"
+}

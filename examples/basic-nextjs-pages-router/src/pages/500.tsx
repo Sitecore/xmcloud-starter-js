@@ -29,7 +29,12 @@ const Custom500 = (props: SitecorePageProps): JSX.Element => {
   }
 
   return (
-    <SitecoreProvider api={scConfig.api} componentMap={components} page={props.page}>
+    <SitecoreProvider
+      api={scConfig.api}
+      componentMap={components}
+      page={props.page}
+      loadImportMap={() => import('.sitecore/import-map')}
+    >
       <Layout page={props.page} />
     </SitecoreProvider>
   );

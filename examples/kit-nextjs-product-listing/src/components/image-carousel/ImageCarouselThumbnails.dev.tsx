@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useRef, useEffect, useId } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -28,8 +28,8 @@ export const ImageCarouselThumbnails = (props: ImageCarouselProps) => {
   const prevButtonClasses = `${navButtonClasses} left-4`;
   const nextButtonClasses = `${navButtonClasses} right-4`;
 
-  const { title, imageItems } = fields.data.datasource;
-  const { results: slides } = imageItems;
+  const { title, imageItems } = fields?.data?.datasource ?? {};
+  const { results: slides = [] } = imageItems || {};
 
   // State for tracking current slide
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -93,7 +93,7 @@ export const ImageCarouselThumbnails = (props: ImageCarouselProps) => {
           reducedMotion={isReducedMotion}
         >
           <div className="mb-12 w-full space-y-4 px-4 group-[.position-center]:text-center group-[.position-right]:text-right">
-            <Text tag="h2" field={title.jsonValue} className={titleClasses} />
+            <Text tag="h2" field={title?.jsonValue} className={titleClasses} />
           </div>
         </AnimatedSection>
 

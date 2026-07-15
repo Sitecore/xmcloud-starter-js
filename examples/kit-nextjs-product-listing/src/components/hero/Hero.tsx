@@ -1,20 +1,21 @@
+'use client';
+
 import type React from 'react';
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import type { HeroProps } from './hero.props';
 import { HeroDefault } from './HeroDefault.dev';
 import { HeroImageBottom } from './HeroImageBottom.dev';
 import { HeroImageBottomInset } from './HeroImageBottomInset.dev';
 import { HeroImageBackground } from './HeroImageBackground.dev';
 import { HeroImageRight } from './HeroImageRight.dev';
-import { useI18n } from 'next-localization';
+import { useTranslations } from 'next-intl';
 import { dictionaryKeys } from '@/variables/dictionary';
 // Data source checks are done in the child components
 
 // Default display of the component
 export const Default: React.FC<HeroProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
-  const { t } = useI18n();
+  const t = useTranslations();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel) || '',
     ZipPlaceholder: t(dictionaryKeys.HERO_ZipPlaceholder) || '',
@@ -28,9 +29,9 @@ export const Default: React.FC<HeroProps> = (props) => {
 
 // Variants
 export const ImageBottom: React.FC<HeroProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
-  const { t } = useI18n();
+  const t = useTranslations();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel) || '',
     ZipPlaceholder: t(dictionaryKeys.HERO_ZipPlaceholder) || '',
@@ -43,9 +44,9 @@ export const ImageBottom: React.FC<HeroProps> = (props) => {
 };
 
 export const ImageBottomInset: React.FC<HeroProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
-  const { t } = useI18n();
+  const t = useTranslations();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel) || '',
     ZipPlaceholder: t(dictionaryKeys.HERO_ZipPlaceholder) || '',
@@ -58,9 +59,9 @@ export const ImageBottomInset: React.FC<HeroProps> = (props) => {
 };
 
 export const ImageBackground: React.FC<HeroProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
-  const { t } = useI18n();
+  const t = useTranslations();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel) || '',
     ZipPlaceholder: t(dictionaryKeys.HERO_ZipPlaceholder) || '',
@@ -73,9 +74,9 @@ export const ImageBackground: React.FC<HeroProps> = (props) => {
 };
 
 export const ImageRight: React.FC<HeroProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
-  const { t } = useI18n();
+  const t = useTranslations();
   const dictionary = {
     SubmitCTALabel: t(dictionaryKeys.HERO_SubmitCTALabel) || '',
     ZipPlaceholder: t(dictionaryKeys.HERO_ZipPlaceholder) || '',

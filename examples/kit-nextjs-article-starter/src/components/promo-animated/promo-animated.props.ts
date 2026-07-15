@@ -7,8 +7,8 @@ export interface PromoAnimatedParams {
   [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 interface PromoAnimatedFields {
-  image: ImageField;
-  title: Field<string>;
+  image?: ImageField;
+  title?: Field<string>;
   description?: Field<string>;
   primaryLink?: LinkField;
   secondaryLink?: LinkField;
@@ -16,6 +16,6 @@ interface PromoAnimatedFields {
 
 export interface PromoAnimatedProps extends ComponentProps {
   params: PromoAnimatedParams;
-  fields: PromoAnimatedFields;
+  fields?: PromoAnimatedFields;
   isPageEditing?: boolean;
 }

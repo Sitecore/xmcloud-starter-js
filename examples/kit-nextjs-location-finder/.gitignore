@@ -25,4 +25,6 @@
 .sitecore/*
 # except for component-map
 !.sitecore/component-map.ts
-!.sitecore/import-map.ts
+!.sitecore/component-map.client.ts
+/coverage
+/.jest-cache

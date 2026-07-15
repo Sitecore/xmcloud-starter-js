@@ -1,0 +1,36 @@
+﻿---
+ID: "2b3c4d5e-6f7a-4b8c-9d0e-1f2a3b4c5d6e"
+Parent: "f6a7b8c9-d0e1-4f5a-3b4c-5d6e7f8a9b0c"
+Template: "f6a7b8c9-d0e1-4f5a-3b4c-5d6e7f8a9b0c"
+Path: "/sitecore/templates/Project/click-click-launch/AI Config/AI Service/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb74e95e-047a-47eb-a1d4-21b3eccfdfae"
+    - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+      Hint: name
+      Value: 
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\shakya.wijerathne@sitecore.com
+    - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+      Hint: description
+      Value: 
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: category
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260226T083725Z

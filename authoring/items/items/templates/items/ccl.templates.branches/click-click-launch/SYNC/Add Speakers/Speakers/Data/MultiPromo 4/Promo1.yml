@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "6d14eada-8592-4aa8-a9b5-9fa27d1c760e"
 Parent: "6e131ca2-0bc9-461a-a550-241e5e8c8b51"
 Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
@@ -40,7 +40,7 @@ Languages:
     - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
       Hint: link
       Value: |
-        <link text="Learn more" linktype="external" url="http://#" anchor="" target="" />
+        <link text="Learn more" linktype="external" url="/Speakers" anchor="" target="" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

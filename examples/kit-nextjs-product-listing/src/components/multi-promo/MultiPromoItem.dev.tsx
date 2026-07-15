@@ -2,12 +2,13 @@ import { Link, Text } from '@sitecore-content-sdk/nextjs';
 import { Button } from '@/components/ui/button';
 import { MultiPromoItemProps } from '@/components/multi-promo/multi-promo.props';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
+import { getFieldValue } from '@/lib/component-props';
 
 const mapToItemProps = (fields: MultiPromoItemProps) => {
   return {
-    title: fields.heading.jsonValue,
-    image: fields.image.jsonValue,
-    link: fields.link?.jsonValue,
+    title: getFieldValue(fields.heading),
+    image: getFieldValue(fields.image),
+    link: getFieldValue(fields.link),
   };
 };
 

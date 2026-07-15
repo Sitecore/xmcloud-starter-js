@@ -3,6 +3,13 @@ ID: "17342388-971f-41e2-b22e-da3fb9a339da"
 Parent: "66cbcb8e-53e4-4363-9504-917c78f44f16"
 Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
 Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Media/Default Image Variant/$name/Default"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a84e68f3-7bcc-43a4-8cec-f3e1f274deba"
 Languages:
 - Language: "de-DE"
   Fields:
@@ -46,14 +53,14 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "af364fc3-e6d4-4661-9213-c602ab71ce7f"
+      Value: "bb8c74b0-5118-4b18-89dc-92a5dc95d35e"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\shakya.wijerathne@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240305T165142Z
+      Value: 20260122T091540Z
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"

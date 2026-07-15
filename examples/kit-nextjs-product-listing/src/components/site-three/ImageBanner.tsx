@@ -1,26 +1,9 @@
-'use client';
-
 import {
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
   Image as ContentSdkImage,
-  ImageField,
-  Field,
-  RichTextField,
 } from '@sitecore-content-sdk/nextjs';
-
-interface Fields {
-  Title: Field<string>;
-  Body: RichTextField;
-  Image1: ImageField;
-  Image2: ImageField;
-  Image3: ImageField;
-}
-
-type ImageBannerProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import type { ImageBannerProps } from './image-banner.props';
 
 export const Default = (props: ImageBannerProps) => {
   return (

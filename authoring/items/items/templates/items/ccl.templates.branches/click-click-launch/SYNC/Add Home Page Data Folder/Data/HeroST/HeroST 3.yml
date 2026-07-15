@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "4fa6301d-27b2-47d8-9e36-08dc4d4cc627"
 Parent: "96372195-e899-4b63-a6a4-29bbe1ba94eb"
 Template: "c241957a-b7cc-4bdd-962f-bf8652ed595c"
@@ -35,7 +35,7 @@ Languages:
     - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
       Hint: Link1
       Value: |
-        <link text="Learn more" linktype="external" url="http://#" anchor="" target="" />
+        <link text="Criminal Records x Sync details" linktype="external" url="/Speakers" anchor="" target="" />
     - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
       Hint: Eyebrow
       Value: CRIMINAL RECORDS X SYNC

@@ -2,11 +2,7 @@ import { Text, RichText } from '@sitecore-content-sdk/nextjs';
 import type { AccordionItemProps } from './accordion-block.props';
 import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
-export interface AccordionBlockItemProps {
-  child: AccordionItemProps;
-  index: number;
-  valuePrefix?: string;
-}
+import type { AccordionBlockItemProps } from './accordion-block-item.props';
 
 export const AccordionBlockItem = ({
   index,

@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Text, RichText } from '@sitecore-content-sdk/nextjs';
@@ -35,9 +37,6 @@ export const PageHeaderBlueText: React.FC<PageHeaderProps & { isPageEditing: boo
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setPrefersReducedMotion(mediaQuery.matches);
   }, []);
-
-  console.debug('fields:', fields);
-  console.debug('props:', props);
 
   if (fields) {
     return (
@@ -110,6 +109,7 @@ export const PageHeaderBlueText: React.FC<PageHeaderProps & { isPageEditing: boo
             wrapperClass="@sm/headerwrapper:absolute w-full @sm/headerwrapper:inset-0"
             className="h-full w-full object-cover"
             priority={true}
+            page={props.page}
           />
         </div>
       </section>

@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Text, RichText } from '@sitecore-content-sdk/nextjs';
@@ -114,6 +116,7 @@ export const PageHeaderDefault: React.FC<PageHeaderProps & { isPageEditing: bool
                     image={imageRequired?.jsonValue}
                     wrapperClass="aspect-[30/19] w-full before:block before:w-full before:aspect-[30/19]"
                     className="absolute inset-0 aspect-[30/19] h-full w-full object-cover"
+                    page={props.page}
                   />
                 </AnimatedSection>
                 {/* Right Line */}

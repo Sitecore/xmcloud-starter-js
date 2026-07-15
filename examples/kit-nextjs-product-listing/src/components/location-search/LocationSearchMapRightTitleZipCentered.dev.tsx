@@ -14,11 +14,12 @@ import { useZipcode } from '@/hooks/use-zipcode';
 import { ZipcodeModal } from '@/components/zipcode-modal/zipcode-modal.dev';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
 import { useMatchMedia } from '@/hooks/use-match-media';
+import { getDatasource, getFieldValue, normalizeFieldShape } from '@/lib/component-props';
 
 export const LocationSearchMapRightTitleZipCentered = (props: LocationSearchProps) => {
   const { fields, isPageEditing } = props;
-  const datasource = fields?.data?.datasource || {};
-  const title = datasource.title;
+  const datasource = useMemo(() => normalizeFieldShape(getDatasource(fields)), [fields]);
+  const title = datasource?.title;
   const defaultZipCode = datasource?.defaultZipCode || '';
   const [showChangeZipcodeModal, setShowChangeZipcodeModal] = useState(false);
   const prefersReducedMotion = useMatchMedia('(prefers-reduced-motion: reduce)');
@@ -252,8 +253,8 @@ export const LocationSearchMapRightTitleZipCentered = (props: LocationSearchProp
                       key={index}
                       dealership={dealership}
                       isSelected={
-                        selectedDealership?.dealershipName?.jsonValue?.value ===
-                        dealership.dealershipName?.jsonValue?.value
+                        getFieldValue(selectedDealership?.dealershipName)?.value ===
+                        getFieldValue(dealership.dealershipName)?.value
                       }
                       onSelect={handleSelectDealership}
                     />

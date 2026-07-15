@@ -76,6 +76,7 @@ export const PromoImageRight: React.FC<PromoImageProps> = (props) => {
                 className="h-full w-full object-cover"
                 wrapperClass="w-full h-full"
                 priority={true}
+                page={props.page}
               />
             </AnimatedSection>
           )}

@@ -1,10 +1,10 @@
 import { ContainerFullBleedProps } from '@/components/container/container-full-bleed/container-full-bleed.props';
 import { Flex, FlexItem } from '@/components/flex/Flex.dev';
-import { Placeholder } from '@sitecore-content-sdk/nextjs';
+import { AppPlaceholder } from '@sitecore-content-sdk/nextjs';
 import { cva } from 'class-variance-authority';
 
 export const Default: React.FC<ContainerFullBleedProps> = (props) => {
-  const { rendering } = props;
+  const { rendering, page, componentMap } = props;
 
   const PLACEHOLDER_NAME = `container-fullbleed-${props.params.DynamicPlaceholderId}`;
 
@@ -66,7 +66,7 @@ export const Default: React.FC<ContainerFullBleedProps> = (props) => {
     >
       <Flex fullBleed={true} className="group-[.is-inset]:p-0">
         <FlexItem basis="full">
-          <Placeholder name={PLACEHOLDER_NAME} rendering={rendering} />
+          <AppPlaceholder page={page} componentMap={componentMap} name={PLACEHOLDER_NAME} rendering={rendering} />
         </FlexItem>
       </Flex>
     </section>

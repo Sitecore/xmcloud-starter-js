@@ -1,44 +1,24 @@
+'use client';
+
 import { Button } from 'shadcn/components/ui/button';
 import {
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
-  ImageField,
-  Field,
-  LinkField,
 } from '@sitecore-content-sdk/nextjs';
 import { Input } from 'shadcd/components/ui/input';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useVisibility from '@/hooks/useVisibility';
-
-interface Fields {
-  Tagline: Field<string>;
-  Heading: Field<string>;
-  Body: Field<string>;
-  Link1: LinkField;
-  Link2: LinkField;
-  Image: ImageField;
-  FormDisclaimer: Field<string>;
-}
-
-type HeaderProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-type HeaderTemplateProps = HeaderProps & {
-  centered?: boolean;
-  withColumns?: boolean;
-  withBackgroundImage?: boolean;
-  withForm?: boolean;
-};
+import { getDatasource } from '@/lib/component-props';
+import type { HeaderProps, HeaderTemplateProps } from './header.props';
 
 const HeaderTemplate = (props: HeaderTemplateProps) => {
   const [isVisible, domRef] = useVisibility();
+  const datasource = getDatasource(props.fields);
 
-  if (!props.fields) {
+  if (!datasource) {
     return null;
   }
 
@@ -47,7 +27,7 @@ const HeaderTemplate = (props: HeaderTemplateProps) => {
       {props.withBackgroundImage && (
         <div className="absolute inset-0 h-full w-full z-1">
           <ContentSdkImage
-            field={props.fields.Image}
+            field={datasource.Image}
             width={800}
             height={800}
             className="h-full w-full object-cover brightness-50"
@@ -68,16 +48,16 @@ const HeaderTemplate = (props: HeaderTemplateProps) => {
           ref={domRef}
         >
           <div>
-            <h6 className="text-xs font-semibold tracking-widest uppercase mb-4">
-              <ContentSdkText field={props.fields.Tagline} />
-            </h6>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+              <ContentSdkText field={datasource.Tagline} />
+            </p>
             <h1 className="text-5xl font-medium mb-6">
-              <ContentSdkText field={props.fields.Heading} />
+              <ContentSdkText field={datasource.Heading} />
             </h1>
           </div>
           <div>
             <div className="text-base">
-              <ContentSdkRichText field={props.fields.Body} />
+              <ContentSdkRichText field={datasource.Body} />
             </div>
             {props.withForm ? (
               <div className={`flex w-full ${props.centered ? 'justify-center' : ''} gap-2 mt-8`}>
@@ -87,17 +67,17 @@ const HeaderTemplate = (props: HeaderTemplateProps) => {
                     <Button type="submit">Subscribe</Button>
                   </div>
                   <div className="text-xs mt-3">
-                    <ContentSdkRichText field={props.fields.FormDisclaimer} />
+                    <ContentSdkRichText field={datasource.FormDisclaimer} />
                   </div>
                 </div>
               </div>
             ) : (
               <div className={`flex ${props.centered ? 'justify-center' : ''} gap-4 mt-8`}>
                 <Button asChild={true} variant={'secondary'}>
-                  <ContentSdkLink field={props.fields.Link1} prefetch={false} />
+                  <ContentSdkLink field={datasource.Link1} prefetch={false} />
                 </Button>
                 <Button asChild={true} variant={'outline'}>
-                  <ContentSdkLink field={props.fields.Link2} prefetch={false} />
+                  <ContentSdkLink field={datasource.Link2} prefetch={false} />
                 </Button>
               </div>
             )}
@@ -146,8 +126,9 @@ export const Header8 = (props: HeaderProps) => {
 
 export const Header9 = (props: HeaderProps) => {
   const [isVisible, domRef] = useVisibility();
+  const datasource = getDatasource(props.fields);
 
-  if (!props.fields) {
+  if (!datasource) {
     return null;
   }
 
@@ -161,28 +142,28 @@ export const Header9 = (props: HeaderProps) => {
           ref={domRef}
         >
           <div>
-            <h6 className="text-xs font-semibold tracking-widest uppercase mb-4">
-              <ContentSdkText field={props.fields.Tagline} />
-            </h6>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+              <ContentSdkText field={datasource.Tagline} />
+            </p>
             <h1 className="text-6xl font-medium mb-6">
-              <ContentSdkText field={props.fields.Heading} />
+              <ContentSdkText field={datasource.Heading} />
             </h1>
             <div className="text-lg">
-              <ContentSdkRichText field={props.fields.Body} />
+              <ContentSdkRichText field={datasource.Body} />
             </div>
             <div className={`flex gap-4 mt-8`}>
               <Button asChild={true} variant={'secondary'}>
-                <ContentSdkLink field={props.fields.Link1} prefetch={false} />
+                <ContentSdkLink field={datasource.Link1} prefetch={false} />
               </Button>
               <Button asChild={true} variant={'outline'}>
-                <ContentSdkLink field={props.fields.Link2} prefetch={false} />
+                <ContentSdkLink field={datasource.Link2} prefetch={false} />
               </Button>
             </div>
           </div>
           <div>
             <div className="backdrop-blur-lg p-6 rounded-2xl">
               <ContentSdkImage
-                field={props.fields.Image}
+                field={datasource.Image}
                 width={800}
                 height={800}
                 className="w-full h-auto rounded-2xl"
@@ -196,7 +177,9 @@ export const Header9 = (props: HeaderProps) => {
 };
 
 export const Header10 = (props: HeaderProps) => {
-  if (!props.fields) {
+  const datasource = getDatasource(props.fields);
+
+  if (!datasource) {
     return null;
   }
 
@@ -204,22 +187,22 @@ export const Header10 = (props: HeaderProps) => {
     <section className={`relative py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className={`container mx-auto`}>
         <div className="max-w-3xl">
-          <h6 className="text-xs font-semibold tracking-widest uppercase mb-4">
-            <ContentSdkText field={props.fields.Tagline} />
-          </h6>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-4">
+            <ContentSdkText field={datasource.Tagline} />
+          </p>
           <h2 className="text-4xl font-bold mb-6">
-            <ContentSdkText field={props.fields.Heading} />
+            <ContentSdkText field={datasource.Heading} />
           </h2>
           <div className="text-base">
-            <ContentSdkRichText field={props.fields.Body} />
+            <ContentSdkRichText field={datasource.Body} />
           </div>
           <div className="flex gap-4 mt-8">
             <ContentSdkLink
-              field={props.fields.Link1}
+              field={datasource.Link1}
               prefetch={false}
               className="flex items-center gap-2 text-base text-primary font-medium"
             >
-              {props.fields.Link1.value.text}
+              {datasource.Link1.value.text}
               <FontAwesomeIcon icon={faChevronRight} width={16} height={16} />
             </ContentSdkLink>
           </div>

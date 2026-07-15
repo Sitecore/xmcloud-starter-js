@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useRef, useCallback, MouseEvent } from 'react';
 import { debounce } from 'radash';
 import {
@@ -113,7 +115,6 @@ export const Default: React.FC<TestimonialCarouselProps> = (props) => {
         onMouseLeave={handleMouseLeave}
         onFocus={() => setIsFocused(true)} // Added focus handler
         onBlur={() => setIsFocused(false)} // Added blur handler
-        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0} // Added tabIndex
       >
         <Carousel

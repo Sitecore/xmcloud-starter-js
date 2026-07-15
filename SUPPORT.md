@@ -2,11 +2,17 @@
 
 If you're looking for support for XMCloud starter JS there are a lot of options:
 
-### Documentation
+## Table of Contents
+
+- [Documentation](#documentation)
+- [Questions or help](#questions-or-help)
+- [Issues / bugs / feature requests](#issues--bugs--feature-requests)
+
+## Documentation
 
 * [Sitecore Content SDK for XM Cloud Official Docs](https://doc.sitecore.com/xmc/en/developers/content-sdk/sitecore-content-sdk-for-xm-cloud.html)
 
-### Questions or help
+## Questions or help
 
 - [Sitecore Stack Exchange](https://sitecore.stackexchange.com/questions/tagged/xmcloud-starter-js)
   - Be sure to tag your question with the `xmcloud-starter-kit` tag.
@@ -15,7 +21,7 @@ If you're looking for support for XMCloud starter JS there are a lot of options:
   - If you're not already a member of the Sitecore Community Slack, you can find more information here: https://siteco.re/sitecoreslack
 - [Sitecore Community Forum](https://community.sitecore.net/developers/f/40)
 
-### Issues / bugs / feature requests
+## Issues / bugs / feature requests
 
 Open an issue via GitHub: https://github.com/Sitecore/xmcloud-starter-js/issues
 

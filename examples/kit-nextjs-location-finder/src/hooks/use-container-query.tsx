@@ -8,14 +8,6 @@ export const containerBreakpoints = { ...breakpoints } as const;
 
 export type ContainerBreakpoint = keyof typeof containerBreakpoints;
 
-/**
- * A hook that determines if a container element matches a specified breakpoint
- *
- * @param containerRef - Reference to the container element to observe
- * @param breakpoint - The breakpoint to check against (sm, md, lg, xl, 2xl)
- * @param direction - Whether to check if the container is "min" (>=) or "max" (<) the breakpoint
- * @returns Boolean indicating if the container matches the breakpoint condition
- */
 export function useContainerQuery(
   containerRef: RefObject<HTMLElement | null>,
   breakpoint: ContainerBreakpoint,

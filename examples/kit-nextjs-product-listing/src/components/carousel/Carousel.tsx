@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable react-hooks/exhaustive-deps */
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import {
@@ -5,40 +7,16 @@ import {
   Link as ContentSdkLink,
   Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
-import { IGQLImageField, IGQLLinkField, IGQLTextField } from 'src/types/igql';
 import { useEffect, useMemo, useRef, useState, type JSX } from 'react';
 import { Button } from '@/components/ui/button';
 import { useMediaQuery } from '@/hooks/use-media-query';
 import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from 'lib/utils';
-
-interface Fields {
-  data: {
-    datasource: {
-      children: {
-        results: CarouselFields[];
-      };
-      title: IGQLTextField;
-      tagLine: IGQLTextField;
-    };
-  };
-}
-
-interface CarouselFields {
-  id: string;
-  callToAction: IGQLLinkField;
-  title: IGQLTextField;
-  bodyText: IGQLTextField;
-  slideImage: IGQLImageField;
-}
-
-type CarouselsProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import type { CarouselsProps } from './carousel.props';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 export const Default = (props: CarouselsProps): JSX.Element => {
-  const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
+  const datasource = useMemo(() => getDatasource(props.fields), [props.fields]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isFocused, setIsFocused] = useState(false);
@@ -47,7 +25,11 @@ export const Default = (props: CarouselsProps): JSX.Element => {
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
   const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
 
-  const slides = useMemo(() => datasource.children.results, [datasource.children.results]);
+  const slides = useMemo(() => datasource?.children?.results ?? [], [datasource?.children?.results]);
+
+  if (!datasource || slides.length === 0) {
+    return <></>;
+  }
 
   useEffect(() => {
     if (!isPlaying || isFocused) {
@@ -184,7 +166,7 @@ export const Default = (props: CarouselsProps): JSX.Element => {
               {/* Full-size background image */}
               <div className="absolute inset-0 h-full w-full">
                 <ContentSdkImage
-                  field={slides[currentSlide].slideImage?.jsonValue}
+                  field={getFieldValue(slides[currentSlide].slideImage)}
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -204,14 +186,14 @@ export const Default = (props: CarouselsProps): JSX.Element => {
                   className="p-8 md:p-10"
                 >
                   <h2 className="mb-4 text-3xl font-bold">
-                    <ContentSdkText field={slides[currentSlide].title?.jsonValue} />
+                    <ContentSdkText field={getFieldValue(slides[currentSlide].title)} />
                   </h2>
                   <p className="mb-6">
-                    <ContentSdkText field={slides[currentSlide].bodyText?.jsonValue} />
+                    <ContentSdkText field={getFieldValue(slides[currentSlide].bodyText)} />
                   </p>
                   <Button size="lg" className="bold py-3 text-lg" asChild>
                     <ContentSdkLink
-                      field={slides[currentSlide].callToAction?.jsonValue}
+                      field={getFieldValue(slides[currentSlide].callToAction)!}
                       className="inline-flex items-center py-2 text-lg"
                       prefetch={false}
                     />

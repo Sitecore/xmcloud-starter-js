@@ -2,18 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import React, { useEffect, useState, useRef } from 'react';
-
-interface MeteorsProps {
-  number?: number;
-  minDelay?: number;
-  maxDelay?: number;
-  minDuration?: number;
-  maxDuration?: number;
-  angle?: number;
-  className?: string;
-  color?: string;
-  size?: string;
-}
+import { MeteorsProps } from './meteors.props';
 
 export const Meteors = ({
   number = 20,
@@ -67,14 +56,13 @@ export const Meteors = ({
             backgroundColor: `rgba(var(--meteor-color, 255, 255, 255), var(--meteor-opacity, 1))`,
             width: `${size}px`,
             height: `${size}px`,
-            animation: `${style.animationDuration} linear ${style.animationDelay} infinite`,
+            animation: `meteorAnimation ${style.animationDuration} linear ${style.animationDelay} infinite`,
             opacity: 1,
             position: 'absolute',
             pointerEvents: 'none',
             transform: `rotate(${angle}deg)`,
             borderRadius: '9999px',
             boxShadow: '0 0 0 1px rgba(255,255,255,0.1)',
-            animationName: 'meteorAnimation',
           }}
           className={cn(
             'pointer-events-none absolute rotate-[var(--angle)] rounded-full shadow-[0_0_0_1px_rgba(255,255,255,0.1)]',

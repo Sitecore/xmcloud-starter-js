@@ -27,7 +27,7 @@ Languages:
     - ID: "68c2a603-f98e-42a3-be2d-dd70598c2a63"
       Hint: Link
       Value: |
-        <link linktype="external" url="#" target="" text="Shop special offers" title="" class=""/>
+        <link linktype="external" url="/" target="" text="Shop special offers" title="" class=""/>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "106c200a-c06d-4bbd-990d-e477f5891835"

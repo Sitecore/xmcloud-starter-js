@@ -13,6 +13,8 @@ import {
   AccordionTrigger,
 } from 'shadcd/components/ui/accordion';
 import ContentSdkRichText from '@/components/content-sdk-rich-text/ContentSdkRichText';
+import { generateFAQPageSchema } from '@/lib/structured-data/schema';
+import { StructuredData } from '@/components/structured-data/StructuredData';
 
 interface Fields {
   data: {
@@ -150,37 +152,50 @@ const QuestionItem = (props: QuestionItemProps) => {
 export const Default = (props: FAQProps): JSX.Element => {
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
 
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
+  );
+
   return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center">
-            <h2 className="text-5xl font-bold mb-6">
-              <ContentSdkText field={datasource.heading?.jsonValue} />
-            </h2>
-            <div className="text-lg">
-              <ContentSdkRichText field={datasource.text?.jsonValue} />
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-1" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-5xl font-bold mb-6">
+                <ContentSdkText field={datasource.heading?.jsonValue} />
+              </h2>
+              <div className="text-lg">
+                <ContentSdkRichText field={datasource.text?.jsonValue} />
+              </div>
             </div>
-          </div>
-          <Accordion type="multiple" className="w-full my-20">
-            {datasource.children.results.map((q) => (
-              <QuestionAccordionItem key={q.id} q={q} type="bordered" />
-            ))}
-          </Accordion>
-          <div className="text-center">
-            <h3 className="text-3xl font-bold mb-4">
-              <ContentSdkText field={datasource.heading2?.jsonValue} />
-            </h3>
-            <div className="text-lg">
-              <ContentSdkRichText field={datasource.text2?.jsonValue} />
+            <Accordion type="multiple" className="w-full my-20">
+              {datasource.children.results.map((q) => (
+                <QuestionAccordionItem key={q.id} q={q} type="bordered" />
+              ))}
+            </Accordion>
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-4">
+                <ContentSdkText field={datasource.heading2?.jsonValue} />
+              </h3>
+              <div className="text-lg">
+                <ContentSdkRichText field={datasource.text2?.jsonValue} />
+              </div>
+              <Button asChild={true} className="mt-8">
+                <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
+              </Button>
             </div>
-            <Button asChild={true} className="mt-8">
-              <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
-            </Button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
@@ -192,142 +207,133 @@ export const FAQ1 = (props: FAQProps): JSX.Element => {
   const expandAll = () => setOpenItems(itemIds);
   const collapseAll = () => setOpenItems([]);
 
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
+  );
+
   return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div>
-          <h2 className="text-3xl font-semibold mb-6">
-            <ContentSdkText field={datasource.heading?.jsonValue} />
-          </h2>
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-1" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div>
+            <h2 className="text-3xl font-semibold mb-6">
+              <ContentSdkText field={datasource.heading?.jsonValue} />
+            </h2>
 
-          {/* Expand / Collapse Buttons */}
-          <div className="flex gap-4 mb-6 text-base font-semibold">
-            <button
-              onClick={expandAll}
-              disabled={openItems.length === itemIds.length}
-              className={`px-2 ${
-                openItems.length === itemIds.length
-                  ? 'opacity-40 cursor-not-allowed'
-                  : 'text-primary underline cursor-pointer'
-              }`}
+            {/* Expand / Collapse Buttons */}
+            <div className="flex gap-4 mb-6 text-base font-semibold">
+              <button
+                onClick={expandAll}
+                disabled={openItems.length === itemIds.length}
+                className={`px-2 ${
+                  openItems.length === itemIds.length
+                    ? 'opacity-40 cursor-not-allowed'
+                    : 'text-primary underline cursor-pointer'
+                }`}
+              >
+                Expand All
+              </button>
+              |
+              <button
+                onClick={collapseAll}
+                disabled={openItems.length === 0}
+                className={`px-2 ${
+                  openItems.length === 0
+                    ? 'opacity-40 cursor-not-allowed'
+                    : 'text-primary underline cursor-pointer'
+                }`}
+              >
+                Collapse All
+              </button>
+            </div>
+
+            <Accordion
+              type="multiple"
+              value={openItems}
+              onValueChange={(value) => setOpenItems(value)}
+              className="w-full"
             >
-              Expand All
-            </button>
-            |
-            <button
-              onClick={collapseAll}
-              disabled={openItems.length === 0}
-              className={`px-2 ${
-                openItems.length === 0
-                  ? 'opacity-40 cursor-not-allowed'
-                  : 'text-primary underline cursor-pointer'
-              }`}
-            >
-              Collapse All
-            </button>
+              {datasource.children.results.map((q) => (
+                <QuestionAccordionItem key={q.id} q={q} type="bordered" />
+              ))}
+            </Accordion>
           </div>
-
-          <Accordion
-            type="multiple"
-            value={openItems}
-            onValueChange={(value) => setOpenItems(value)}
-            className="w-full"
-          >
-            {datasource.children.results.map((q) => (
-              <QuestionAccordionItem key={q.id} q={q} type="bordered" />
-            ))}
-          </Accordion>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export const FAQ2 = (props: FAQProps): JSX.Element => {
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
 
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
+  );
+
   return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div className="grid gap-x-20 gap-y-12 md:grid-cols-2">
-          <div>
-            <h2 className="text-5xl font-bold mb-6">
-              <ContentSdkText field={datasource.heading?.jsonValue} />
-            </h2>
-            <div className="text-lg">
-              <ContentSdkRichText field={datasource.text?.jsonValue} />
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-1" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div className="grid gap-x-20 gap-y-12 md:grid-cols-2">
+            <div>
+              <h2 className="text-5xl font-bold mb-6">
+                <ContentSdkText field={datasource.heading?.jsonValue} />
+              </h2>
+              <div className="text-lg">
+                <ContentSdkRichText field={datasource.text?.jsonValue} />
+              </div>
+              <Button asChild={true} className="mt-8">
+                <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
+              </Button>
             </div>
-            <Button asChild={true} className="mt-8">
-              <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
-            </Button>
-          </div>
-          <div>
-            <Accordion type="multiple" className="w-full grid gap-4">
-              {datasource.children.results.map((q) => (
-                <QuestionAccordionItem key={q.id} q={q} type="boxed" />
-              ))}
-            </Accordion>
+            <div>
+              <Accordion type="multiple" className="w-full grid gap-4">
+                {datasource.children.results.map((q) => (
+                  <QuestionAccordionItem key={q.id} q={q} type="boxed" />
+                ))}
+              </Accordion>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export const FAQ3 = (props: FAQProps): JSX.Element => {
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
 
-  return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6">
-            <ContentSdkText field={datasource.heading?.jsonValue} />
-          </h2>
-          <div className="text-lg">
-            <ContentSdkRichText field={datasource.text?.jsonValue} />
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 gap-4 items-start my-20">
-          <Accordion type="multiple" className="w-full grid gap-4">
-            {datasource.children.results
-              .filter((_, index) => index % 2 === 0)
-              .map((q) => (
-                <QuestionAccordionItem key={q.id} q={q} type="boxed" />
-              ))}
-          </Accordion>
-          <Accordion type="multiple" className="w-full grid gap-4">
-            {datasource.children.results
-              .filter((_, index) => index % 2 !== 0)
-              .map((q) => (
-                <QuestionAccordionItem key={q.id} q={q} type="boxed" />
-              ))}
-          </Accordion>
-        </div>
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-4">
-            <ContentSdkText field={datasource.heading2?.jsonValue} />
-          </h3>
-          <div className="text-lg">
-            <ContentSdkRichText field={datasource.text2?.jsonValue} />
-          </div>
-          <Button asChild={true} className="mt-8">
-            <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
-          </Button>
-        </div>
-      </div>
-    </section>
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
   );
-};
-
-export const FAQ4 = (props: FAQProps): JSX.Element => {
-  const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
 
   return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center">
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-3" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-5xl font-bold mb-6">
               <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>
@@ -335,12 +341,23 @@ export const FAQ4 = (props: FAQProps): JSX.Element => {
               <ContentSdkRichText field={datasource.text?.jsonValue} />
             </div>
           </div>
-          <div className="grid gap-12 my-20">
-            {datasource.children.results.map((q) => (
-              <QuestionItem key={q.id} q={q} type="simple" />
-            ))}
+          <div className="grid md:grid-cols-2 gap-4 items-start my-20">
+            <Accordion type="multiple" className="w-full grid gap-4">
+              {datasource.children.results
+                .filter((_, index) => index % 2 === 0)
+                .map((q) => (
+                  <QuestionAccordionItem key={q.id} q={q} type="boxed" />
+                ))}
+            </Accordion>
+            <Accordion type="multiple" className="w-full grid gap-4">
+              {datasource.children.results
+                .filter((_, index) => index % 2 !== 0)
+                .map((q) => (
+                  <QuestionAccordionItem key={q.id} q={q} type="boxed" />
+                ))}
+            </Accordion>
           </div>
-          <div className="text-center">
+          <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-3xl font-bold mb-4">
               <ContentSdkText field={datasource.heading2?.jsonValue} />
             </h3>
@@ -352,143 +369,245 @@ export const FAQ4 = (props: FAQProps): JSX.Element => {
             </Button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
+  );
+};
+
+export const FAQ4 = (props: FAQProps): JSX.Element => {
+  const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
+
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
+  );
+
+  return (
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-1" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-5xl font-bold mb-6">
+                <ContentSdkText field={datasource.heading?.jsonValue} />
+              </h2>
+              <div className="text-lg">
+                <ContentSdkRichText field={datasource.text?.jsonValue} />
+              </div>
+            </div>
+            <div className="grid gap-12 my-20">
+              {datasource.children.results.map((q) => (
+                <QuestionItem key={q.id} q={q} type="simple" />
+              ))}
+            </div>
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-4">
+                <ContentSdkText field={datasource.heading2?.jsonValue} />
+              </h3>
+              <div className="text-lg">
+                <ContentSdkRichText field={datasource.text2?.jsonValue} />
+              </div>
+              <Button asChild={true} className="mt-8">
+                <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
 export const FAQ5 = (props: FAQProps): JSX.Element => {
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
 
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
+  );
+
   return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div className="grid gap-x-20 gap-y-12 md:grid-cols-2">
-          <div>
-            <h2 className="text-5xl font-bold mb-6">
-              <ContentSdkText field={datasource.heading?.jsonValue} />
-            </h2>
-            <div className="text-lg">
-              <ContentSdkRichText field={datasource.text?.jsonValue} />
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-1" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div className="grid gap-x-20 gap-y-12 md:grid-cols-2">
+            <div>
+              <h2 className="text-5xl font-bold mb-6">
+                <ContentSdkText field={datasource.heading?.jsonValue} />
+              </h2>
+              <div className="text-lg">
+                <ContentSdkRichText field={datasource.text?.jsonValue} />
+              </div>
+              <Button asChild={true} className="mt-8">
+                <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
+              </Button>
             </div>
-            <Button asChild={true} className="mt-8">
-              <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
-            </Button>
-          </div>
-          <div>
-            <div className="grid gap-12">
-              {datasource.children.results.map((q) => (
-                <QuestionItem key={q.id} q={q} type="simple" />
-              ))}
+            <div>
+              <div className="grid gap-12">
+                {datasource.children.results.map((q) => (
+                  <QuestionItem key={q.id} q={q} type="simple" />
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export const FAQ6 = (props: FAQProps): JSX.Element => {
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
 
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
+  );
+
   return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div className="max-w-3xl">
-          <h2 className="text-5xl font-bold mb-6">
-            <ContentSdkText field={datasource.heading?.jsonValue} />
-          </h2>
-          <div className="text-lg">
-            <ContentSdkRichText field={datasource.text?.jsonValue} />
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-1" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div className="max-w-3xl">
+            <h2 className="text-5xl font-bold mb-6">
+              <ContentSdkText field={datasource.heading?.jsonValue} />
+            </h2>
+            <div className="text-lg">
+              <ContentSdkRichText field={datasource.text?.jsonValue} />
+            </div>
+          </div>
+          <div className="my-20">
+            {datasource.children.results.map((q) => (
+              <QuestionItem key={q.id} q={q} type="bordered" />
+            ))}
+          </div>
+          <div className="max-w-3xl">
+            <h3 className="text-3xl font-bold mb-4">
+              <ContentSdkText field={datasource.heading2?.jsonValue} />
+            </h3>
+            <div className="text-lg">
+              <ContentSdkRichText field={datasource.text2?.jsonValue} />
+            </div>
+            <Button asChild={true} className="mt-8">
+              <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
+            </Button>
           </div>
         </div>
-        <div className="my-20">
-          {datasource.children.results.map((q) => (
-            <QuestionItem key={q.id} q={q} type="bordered" />
-          ))}
-        </div>
-        <div className="max-w-3xl">
-          <h3 className="text-3xl font-bold mb-4">
-            <ContentSdkText field={datasource.heading2?.jsonValue} />
-          </h3>
-          <div className="text-lg">
-            <ContentSdkRichText field={datasource.text2?.jsonValue} />
-          </div>
-          <Button asChild={true} className="mt-8">
-            <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
-          </Button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export const FAQ7 = (props: FAQProps): JSX.Element => {
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
 
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
+  );
+
   return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div className="max-w-3xl">
-          <h2 className="text-5xl font-bold mb-6">
-            <ContentSdkText field={datasource.heading?.jsonValue} />
-          </h2>
-          <div className="text-lg">
-            <ContentSdkRichText field={datasource.text?.jsonValue} />
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-1" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div className="max-w-3xl">
+            <h2 className="text-5xl font-bold mb-6">
+              <ContentSdkText field={datasource.heading?.jsonValue} />
+            </h2>
+            <div className="text-lg">
+              <ContentSdkRichText field={datasource.text?.jsonValue} />
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-16 my-20">
+            {datasource.children.results.map((q) => (
+              <QuestionItem key={q.id} q={q} type="simple" showIcon />
+            ))}
+          </div>
+          <div className="max-w-3xl">
+            <h3 className="text-3xl font-bold mb-4">
+              <ContentSdkText field={datasource.heading2?.jsonValue} />
+            </h3>
+            <div className="text-lg">
+              <ContentSdkRichText field={datasource.text2?.jsonValue} />
+            </div>
+            <Button asChild={true} className="mt-8">
+              <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
+            </Button>
           </div>
         </div>
-        <div className="grid md:grid-cols-2 gap-16 my-20">
-          {datasource.children.results.map((q) => (
-            <QuestionItem key={q.id} q={q} type="simple" showIcon />
-          ))}
-        </div>
-        <div className="max-w-3xl">
-          <h3 className="text-3xl font-bold mb-4">
-            <ContentSdkText field={datasource.heading2?.jsonValue} />
-          </h3>
-          <div className="text-lg">
-            <ContentSdkRichText field={datasource.text2?.jsonValue} />
-          </div>
-          <Button asChild={true} className="mt-8">
-            <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
-          </Button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export const FAQ8 = (props: FAQProps): JSX.Element => {
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
 
+  // Generate FAQPage schema
+  const faqSchema = generateFAQPageSchema(
+    datasource.children.results.map((q) => ({
+      question: q.question?.jsonValue?.value?.toString() || '',
+      answer: q.answer?.jsonValue?.value?.toString() || '',
+    }))
+  );
+
   return (
-    <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
-      <div className="container mx-auto">
-        <div className="max-w-3xl">
-          <h2 className="text-5xl font-bold mb-6">
-            <ContentSdkText field={datasource.heading?.jsonValue} />
-          </h2>
-          <div className="text-lg">
-            <ContentSdkRichText field={datasource.text?.jsonValue} />
+    <>
+      {/* FAQPage structured data */}
+      <StructuredData id="faq-schema-1" data={faqSchema} />
+      
+      <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
+        <div className="container mx-auto">
+          <div className="max-w-3xl">
+            <h2 className="text-5xl font-bold mb-6">
+              <ContentSdkText field={datasource.heading?.jsonValue} />
+            </h2>
+            <div className="text-lg">
+              <ContentSdkRichText field={datasource.text?.jsonValue} />
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 my-20">
+            {datasource.children.results.map((q) => (
+              <QuestionItem key={q.id} q={q} type="centered" />
+            ))}
+          </div>
+          <div className="max-w-3xl">
+            <h3 className="text-3xl font-bold mb-4">
+              <ContentSdkText field={datasource.heading2?.jsonValue} />
+            </h3>
+            <div className="text-lg">
+              <ContentSdkRichText field={datasource.text2?.jsonValue} />
+            </div>
+            <Button asChild={true} className="mt-8">
+              <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
+            </Button>
           </div>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 my-20">
-          {datasource.children.results.map((q) => (
-            <QuestionItem key={q.id} q={q} type="centered" />
-          ))}
-        </div>
-        <div className="max-w-3xl">
-          <h3 className="text-3xl font-bold mb-4">
-            <ContentSdkText field={datasource.heading2?.jsonValue} />
-          </h3>
-          <div className="text-lg">
-            <ContentSdkRichText field={datasource.text2?.jsonValue} />
-          </div>
-          <Button asChild={true} className="mt-8">
-            <ContentSdkLink field={datasource.link.jsonValue} prefetch={false} />
-          </Button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };

@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "07f00ddd-994c-4584-9256-cfd11152307d"
 Parent: "bb387a0f-4d26-470f-8523-850b3b2f0007"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
@@ -12,7 +12,7 @@ SharedFields:
   Value: SXA_MDI/16x16/Promo.png
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: "/sitecore/templates/Project/click-click-launch/Components/CTA Sectoins/CallToAction"
+  Value: "/sitecore/templates/Project/click-click-launch/Components/CTA Sections/CallToAction"
 - ID: "7d8ae35f-9ed1-43b5-96a2-0a5f040d4e4e"
   Hint: Open Properties after Add
   Value: 0

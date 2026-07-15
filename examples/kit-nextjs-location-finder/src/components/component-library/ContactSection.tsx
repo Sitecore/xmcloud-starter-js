@@ -3,7 +3,7 @@ import {
   Link as ContentSdkLink,
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
-  useSitecore,
+  Page,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 import { Button } from 'shadcd/components/ui/button';
@@ -37,6 +37,7 @@ interface ContactFields {
 type ContactSectionProps = {
   params: { [key: string]: string };
   fields: Fields;
+  page: Page;
 };
 
 type ContactCardImageProps = {
@@ -88,9 +89,8 @@ const ContactCardImage = (props: ContactCardImageProps) => {
   }
 };
 
-const ContactCard = (props: ContactCardProps) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+const ContactCard = (props: ContactCardProps & { page: Page }) => {
+  const { isEditing } = props.page.mode;
 
   const buttons = useMemo(
     () => (
@@ -232,7 +232,7 @@ export const Default = (props: ContactSectionProps): JSX.Element => {
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
           {datasource.children.results.map((contact) => (
-            <ContactCard key={contact.id} contact={contact} type="md" />
+            <ContactCard key={contact.id} contact={contact} type="md" page={props.page} />
           ))}
         </div>
       </div>
@@ -259,7 +259,7 @@ export const ContactSection1 = (props: ContactSectionProps): JSX.Element => {
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
           {datasource.children.results.map((contact) => (
-            <ContactCard key={contact.id} contact={contact} type="md" centered />
+            <ContactCard key={contact.id} contact={contact} type="md" centered page={props.page} />
           ))}
         </div>
       </div>
@@ -287,7 +287,7 @@ export const ContactSection2 = (props: ContactSectionProps): JSX.Element => {
         <div className="grid md:grid-cols-3 gap-x-20 gap-y-12 mt-20">
           <div className="flex flex-col gap-x-8 gap-y-12">
             {datasource.children.results.map((contact) => (
-              <ContactCard key={contact.id} contact={contact} type="sm" />
+              <ContactCard key={contact.id} contact={contact} type="sm" page={props.page} />
             ))}
           </div>
           <div className="relative md:col-span-2 min-h-80">
@@ -324,7 +324,7 @@ export const ContactSection3 = (props: ContactSectionProps): JSX.Element => {
           </div>
           <div className="flex flex-col gap-x-8 gap-y-12 md:col-span-2">
             {datasource.children.results.map((contact) => (
-              <ContactCard key={contact.id} contact={contact} type="horizontal" />
+              <ContactCard key={contact.id} contact={contact} type="horizontal" page={props.page} />
             ))}
           </div>
         </div>
@@ -358,7 +358,7 @@ export const ContactSection4 = (props: ContactSectionProps): JSX.Element => {
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
           {datasource.children.results.map((contact) => (
-            <ContactCard key={contact.id} contact={contact} type="lg" />
+            <ContactCard key={contact.id} contact={contact} type="lg" page={props.page} />
           ))}
         </div>
       </div>
@@ -385,7 +385,7 @@ export const ContactSection5 = (props: ContactSectionProps): JSX.Element => {
         </div>
         <div className="flex flex-col md:flex-row gap-x-8 gap-y-12 mt-20">
           {datasource.children.results.map((contact) => (
-            <ContactCard key={contact.id} contact={contact} type="lg" centered />
+            <ContactCard key={contact.id} contact={contact} type="lg" centered page={props.page} />
           ))}
         </div>
       </div>
@@ -425,7 +425,7 @@ export const ContactSection6 = (props: ContactSectionProps): JSX.Element => {
                   activeTab !== contact.id ? 'border-transparent' : ''
                 }`}
               >
-                <ContactCard contact={contact} type="noImage" />
+                <ContactCard contact={contact} type="noImage" page={props.page} />
               </div>
             ))}
           </div>

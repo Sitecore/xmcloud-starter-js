@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import client from 'lib/sitecore-client';
+'use client';
 import { LayoutServiceData, HTMLLink } from '@sitecore-content-sdk/nextjs';
+import client from 'src/lib/sitecore-client';
 
 /**
  * Component to render `<link>` elements for Sitecore styles
@@ -21,11 +21,11 @@ const SitecoreStyles = ({
   }
 
   return (
-    <Head>
+    <>
       {headLinks.map(({ rel, href }: HTMLLink) => (
-        <link rel={rel} key={href} href={href} />
+        <link rel={rel} key={href} href={href} precedence="high" />
       ))}
-    </Head>
+    </>
   );
 };
 

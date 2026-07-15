@@ -136,7 +136,7 @@ export const ImageCarouselThumbnails = (props: ImageCarouselProps) => {
                     data-component-part="carousel item"
                   >
                     <div className="relative">
-                      <ImageWrapper image={slide.image?.jsonValue} className={mainImageClasses} />
+                      <ImageWrapper image={slide.image?.jsonValue} className={mainImageClasses} page={props.page} />
                       <div
                         className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6"
                         style={{
@@ -204,6 +204,7 @@ export const ImageCarouselThumbnails = (props: ImageCarouselProps) => {
                       <ImageWrapper
                         image={slide.image?.jsonValue}
                         className={thumbnailImageClasses}
+                        page={props.page}
                       />
                     </div>
                   </CarouselItem>

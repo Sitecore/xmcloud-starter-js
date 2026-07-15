@@ -1,23 +1,9 @@
+'use client';
+
 import React, { useMemo } from 'react';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
 
-type AnimationType = 'slide' | 'rotate';
-type Direction = 'up' | 'down' | 'left' | 'right';
-
-interface AnimatedSectionProps {
-  children: React.ReactNode;
-  className?: string;
-  direction?: Direction;
-  distanceInRem?: number;
-  delay?: number;
-  duration?: number;
-  animationType?: AnimationType;
-  endRotation?: number;
-  divWithImage?: React.RefObject<HTMLDivElement | null>;
-  threshold?: number;
-  reducedMotion?: boolean;
-  isPageEditing?: boolean;
-}
+import type { AnimatedSectionProps } from './animated-section.props';
 
 interface StyleObject {
   [key: string]: string | number;

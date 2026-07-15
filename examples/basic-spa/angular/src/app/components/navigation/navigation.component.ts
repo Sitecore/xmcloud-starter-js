@@ -4,13 +4,14 @@ import { SxaComponent } from '../sxa.component';
 import { JssContextService } from '../../jss-context.service';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  host: {
-    'class': 'component navigation',
-    '[id]': 'id',
-    '[class]': 'styles + " " + rendering.params?.GridParameters',
-  },
+    selector: 'app-navigation',
+    templateUrl: './navigation.component.html',
+    host: {
+        'class': 'component navigation',
+        '[id]': 'id',
+        '[class]': 'styles + " " + rendering.params?.GridParameters',
+    },
+    standalone: false
 })
 export class NavigationComponent extends SxaComponent implements OnInit, OnDestroy {
   isEditing = false;

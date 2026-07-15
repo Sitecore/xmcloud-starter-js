@@ -1,0 +1,24 @@
+---
+ID: "3b4c5d6e-7f8a-4b9c-0d1e-2f3a4b5c6d7e"
+Parent: "3a3b4c5d-6e7f-4a8b-9c0d-1e2f3a4b5c6d"
+Template: "c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add AI Config/AI Config"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: AI Config
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3b4c5d6e-7f8a-4b9c-0d1e-2f3a4b5c6d7f"

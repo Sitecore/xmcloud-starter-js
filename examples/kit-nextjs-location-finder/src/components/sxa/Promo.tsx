@@ -6,22 +6,11 @@ import {
   ImageField,
   Field,
   LinkField,
-  useSitecore,
+  Page,
 } from '@sitecore-content-sdk/nextjs';
 import { Button } from '@/components/ui/button';
 
-interface Fields {
-  PromoIcon: ImageField;
-  PromoText: Field<string>;
-  PromoLink: LinkField;
-  PromoText2: Field<string>;
-  PromoText3: Field<string>;
-}
-
-type PromoProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import type { PromoProps } from './promo.props';
 
 const PromoDefaultComponent = (props: PromoProps): JSX.Element => (
   <div className={`component promo ${props.params.styles}`}>
@@ -33,8 +22,7 @@ const PromoDefaultComponent = (props: PromoProps): JSX.Element => (
 
 export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
 
   if (props.fields) {
     return (
@@ -43,7 +31,7 @@ export const Default = (props: PromoProps): JSX.Element => {
         className={`component promo flex-1 shadow-lg pointer mb-5 lg:mb-0 ${props.params.styles}`}
         id={id ? id : undefined}
       >
-        <div className="flex flex-col items-start justify-end h-full">
+        <aside role="complementary" className="flex flex-col items-start justify-end h-full">
           <ContentSdkImage field={props.fields.PromoIcon} className="w-full h-auto object-cover" />
           <div className={`flex-1 relative pt-4 px-6 ${isEditing ? 'min-w-[300px] w-full' : ''}`}>
             {(props.fields.PromoText3?.value || isEditing) && (
@@ -75,9 +63,9 @@ export const Default = (props: PromoProps): JSX.Element => {
             className="font-bold py-1 px-3 mx-6 mb-4 mt-auto relative b-0"
             asChild
           >
-            <ContentSdkLink field={props.fields.PromoLink} />
+            {props.fields.PromoLink ? <ContentSdkLink field={props.fields.PromoLink} /> : null}
           </Button>
-        </div>
+        </aside>
       </div>
     );
   }
@@ -87,8 +75,7 @@ export const Default = (props: PromoProps): JSX.Element => {
 
 export const CenteredCard = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
 
   if (props.fields) {
     return (
@@ -97,7 +84,7 @@ export const CenteredCard = (props: PromoProps): JSX.Element => {
         className={`component promo flex-1 w-full shadow-lg pointer mb-5 lg:mb-0 align-stretch ${props.params.styles}`}
         id={id ? id : undefined}
       >
-        <div className="flex flex-col items-start justify-end">
+        <aside role="complementary" className="flex flex-col items-start justify-end">
           <ContentSdkImage field={props.fields.PromoIcon} className="w-full h-auto object-cover" />
           <div
             className={`flex-1 relative pt-4 px-4 w-full justify-center text-center ${
@@ -125,9 +112,9 @@ export const CenteredCard = (props: PromoProps): JSX.Element => {
             className="font-bold text-xl text-center w-full py-1 px-3 ml-4 mb-4 relative b-0"
             asChild
           >
-            <ContentSdkLink field={props.fields.PromoLink} />
+            {props.fields.PromoLink ? <ContentSdkLink field={props.fields.PromoLink} /> : null}
           </Button>
-        </div>
+        </aside>
       </div>
     );
   }

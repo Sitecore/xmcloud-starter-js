@@ -1,14 +1,12 @@
-import { ImageField, LinkField, RichTextField, TextField } from '@sitecore-content-sdk/nextjs';
+import type {
+  GraphQLImageField,
+  GraphQLLinkField,
+  GraphQLRichTextField,
+  GraphQLTextField,
+} from '@/lib/component-props';
 
-export interface IGQLTextField {
-  jsonValue: TextField;
-}
-export interface IGQLImageField {
-  jsonValue: ImageField;
-}
-export interface IGQLLinkField {
-  jsonValue: LinkField;
-}
-export interface IGQLRichTextField {
-  jsonValue: RichTextField;
-}
+// Backward-compatible aliases. Prefer GraphQL*Field types from @/lib/component-props.
+export type IGQLTextField = GraphQLTextField;
+export type IGQLImageField = GraphQLImageField;
+export type IGQLLinkField = GraphQLLinkField;
+export type IGQLRichTextField = GraphQLRichTextField;

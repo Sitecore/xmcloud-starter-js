@@ -1,6 +1,6 @@
 # Line endings for this repository
 # See: https://help.github.com/en/articles/configuring-git-to-handle-line-endings
-# This should line up with the expectations from .eslintrc
+# This should line up with the expectations from eslint.config.mjs
 
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text=crlf

@@ -1,8 +1,6 @@
 import { cn } from '@/lib/utils';
 import { CheckCircle } from 'lucide-react';
-interface SuccessCompactProps {
-  successMessage: string;
-}
+import type { SuccessCompactProps } from './success-compact.props';
 
 export const SuccessCompact = ({ successMessage }: SuccessCompactProps) => (
   <div className={cn('animate-fade-in w-full opacity-100 transition-all duration-300 ease-in-out')}>

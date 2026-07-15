@@ -19,7 +19,8 @@ Repository Structure:
 ## Starter Applications
 
 Available Examples:
-- `basic-nextjs` - Simple Next.js starter with basic XM Cloud integration
+- `basic-nextjs` - Simple Next.js starter with basic XM Cloud integration (App Router)
+- `basic-nextjs-pages-router` - Minimal Pages Router baseline for legacy patterns
 - `kit-nextjs-article-starter` - **Solterra & Co.** - Editorial-style template for lifestyle brands
 - `kit-nextjs-location-finder` - **Alaris** - Car brand template with location finder functionality
 - `kit-nextjs-product-listing` - **SYNC** - Product-focused template for audio gear companies
@@ -35,7 +36,7 @@ Each starter demonstrates:
 ## Technology Stack
 
 Core Technologies:
-- **Next.js 14+** - React framework with App Router and Pages Router support
+- **Next.js 14+** - React framework with App Router (all starters except `basic-nextjs-pages-router`)
 - **TypeScript** - Strict type safety throughout all components
 - **Sitecore XM Cloud** - Headless content management and delivery
 - **Sitecore Content SDK** - Modern SDK for XM Cloud integration
@@ -67,7 +68,36 @@ Content-First Development:
 - Support for both connected and disconnected development modes
 - Proper handling of content authoring scenarios
 
+## Upstream repository, forks, and pull request scope
+
+Before you plan work that is intended as a **pull request**, determine **which repository is the target**: the **official upstream** (e.g. the public Sitecore `xmcloud-starter-js` repo) or a **user fork / private copy** the user uses as their own app.
+
+**Why this matters:** upstream maintains a **small, fixed set of starters** under `examples/` as **reference examples** that follow shared best practices—not an open collection of every vertical or use case.
+
+**Contributions to upstream (acceptable):**
+- **Improvements, bug fixes, and broadly useful features** in **existing** starters
+- **Documentation** and **shared tooling** that help those starters, consistent with the repo’s contribution rules
+
+**Do not propose or prepare pull requests to upstream** for:
+- **New example sites** or **additional** starter projects under `examples/`
+- **Bespoke extensions** of a starter for **one org’s** specific product or business requirements (those belong in a fork)
+- Changes that exist mainly to support a **single user’s** long-term product rather than a **reusable, general** improvement to the public examples
+
+**Encouraged on the user’s own fork (not as upstream PRs):**
+- **Adding more starters** or new example applications
+- **Heavily customizing** a starter for a **specific** deployment or product
+
+**Agent workflow**
+1. **Clarify the target** (ask if needed, or use remotes, repo URL, workspace context): **upstream** vs **fork/standalone** repository.
+2. If the target is **upstream**: do **not** create PRs that add **new example sites**, new `examples/*` applications, or fork-style bespoke scope; keep proposed PRs to **improvements / fixes / generally useful features** in **existing** starters.
+3. If the user works in **their own fork or template copy**: they may add starters and extend freely; align the work with **that** repository and avoid framing fork-only changes as an upstream PR.
+
+For human-readable policy, see @CONTRIBUTING.md and the [What we do not accept](CONTRIBUTING.md#what-we-do-not-accept) section.
+
 ## Constraints and Guidelines
+
+Starter Independence:
+- Each starter is a standalone application. Copy shared utilities and components into the starter; do not create shared packages or symlinks across starters. Each starter can be run and maintained independently.
 
 File Organization:
 - Each starter maintains its own `src/` directory structure
@@ -87,8 +117,8 @@ Below is an outline of the planned workflow and processes that will be followed:
 - Developers should push changes to feature branches in their own fork and then create PRs to `dmz` branch in the `upstream repository`.  
 - PRs are merged by reviewers to the `dmz` branch after review and validation. Conflicts should be resolved by rebasing onto main. 
 - Once a PR has been merged into `dmz` branch the code changes are validated through an automated full build of the `dmz` branch `HEAD` in the Continous Integration server.  
-- Only if the build is clean, the CI server then automatically fast-forwards `main` to the clean HEAD of `dmz` and pushes the results, ensuring that the `main` branch is updated with latest changes merged to `dmz` 
-- If the build fails, the changes are not pushed to main and the main branch remains clean. The merge causing errors can be reverted by reviewers by rebasing out the commits from `dmz` and force-pushing it. 
+- The `dmz` branch acts as a staging/integration branch and once sevearl chnages are integrated and tested in the `dmz` branch they can be manually merged to the `main` branch using merge commits (usually at the end of 1 or 2 weeks)
+- If the build fails, the changes are or issues are found in the `dmz` branch during integration, the problamatic commits can be reverted
 
 - Each starter can be developed independently in its own directory
 - Copy `.env.remote.example` to `.env.local` for local development
@@ -121,3 +151,4 @@ Referenced:
 @xmcloud.build.json
 @authoring/
 @local-containers/
+@CONTRIBUTING.md

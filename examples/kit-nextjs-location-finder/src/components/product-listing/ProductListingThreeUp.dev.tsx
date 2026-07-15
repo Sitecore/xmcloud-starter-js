@@ -36,7 +36,7 @@ export const ProductListingThreeUp: React.FC<ProductListingProps> = (props) => {
     };
 
     return (
-      <div
+      <section
         className={cn(
           '@container @md:px-6 mx-auto max-w-screen-xl border-b-2 border-t-2 py-12 [.border-b-2+&]:border-t-0',
           {
@@ -44,6 +44,7 @@ export const ProductListingThreeUp: React.FC<ProductListingProps> = (props) => {
           }
         )}
         data-component="ProductListingThreeUp"
+        aria-labelledby="product-listing-threeup-heading"
       >
         <AnimatedSection
           direction="down"
@@ -54,6 +55,7 @@ export const ProductListingThreeUp: React.FC<ProductListingProps> = (props) => {
         >
           <Text
             tag="h2"
+            id="product-listing-threeup-heading"
             className="w-full text-pretty text-5xl font-light tracking-tight antialiased"
             field={title?.jsonValue}
           />
@@ -81,12 +83,13 @@ export const ProductListingThreeUp: React.FC<ProductListingProps> = (props) => {
                   link={viewAllLink.jsonValue}
                   prefersReducedMotion={isReducedMotion}
                   isPageEditing={isPageEditing}
+                  page={props.page}
                 />
               </div>
             </AnimatedSection>
           ))}
         </div>
-      </div>
+      </section>
     );
   }
 

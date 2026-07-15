@@ -1,13 +1,21 @@
 import { Injectable, PLATFORM_ID, Inject, } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { ExtraSubscriptionOptions, EmptyObject, MutationResult } from 'apollo-angular/types';
 import {
   QueryOptions,
   ApolloQueryResult,
   SubscriptionOptions,
   MutationOptions,
-  DocumentNode
+  DocumentNode,
+  FetchResult
 } from '@apollo/client/core';
+
+// Type aliases for compatibility
+type EmptyObject = Record<string, any>;
+type MutationResult<T> = FetchResult<T>;
+interface ExtraSubscriptionOptions {
+  useZone?: boolean;
+  extraOptions?: Record<string, unknown>;
+}
 import { Observable, EMPTY } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { ComponentRendering, isEditorActive, resetEditorChromes } from '@sitecore-jss/sitecore-jss-angular';

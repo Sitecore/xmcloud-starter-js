@@ -96,20 +96,15 @@ XM Cloud API Mocking:
 - Test authentication and authorization
 
 ```typescript
-// API route test example
-import { createMocks } from 'node-mocks-http';
-import handler from '../pages/api/robots';
+// API route test example (App Router)
+import { GET } from '@/app/api/robots/route';
 
 describe('/api/robots', () => {
   it('returns robots.txt content', async () => {
-    const { req, res } = createMocks({
-      method: 'GET',
-    });
+    const response = await GET(new Request('http://localhost/api/robots'));
     
-    await handler(req, res);
-    
-    expect(res._getStatusCode()).toBe(200);
-    expect(res._getHeaders()['content-type']).toBe('text/plain');
+    expect(response.status).toBe(200);
+    expect(response.headers.get('content-type')).toContain('text/plain');
   });
 });
 ```

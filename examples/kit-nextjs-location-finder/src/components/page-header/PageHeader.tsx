@@ -1,5 +1,5 @@
+'use client';
 import type React from 'react';
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import type { PageHeaderProps } from './page-header.props';
 import { PageHeaderDefault } from './PageHeaderDefault.dev';
 import { PageHeaderBlueText } from './PageHeaderBlueText.dev';
@@ -16,32 +16,27 @@ import { PageHeaderCentered } from './PageHeaderCentered.dev';
 
 // Default display of the component
 export const Default: React.FC<PageHeaderProps> = (props) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
   return <PageHeaderDefault {...props} isPageEditing={isEditing} />;
 };
 
 // Variants
 export const BlueText: React.FC<PageHeaderProps> = (props) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
   return <PageHeaderBlueText {...props} isPageEditing={isEditing} />;
 };
 
 export const FiftyFifty: React.FC<PageHeaderProps> = (props) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
   return <PageHeaderFiftyFifty {...props} isPageEditing={isEditing} />;
 };
 
 export const BlueBackground: React.FC<PageHeaderProps> = (props) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
   return <PageHeaderBlueBackground {...props} isPageEditing={isEditing} />;
 };
 
 export const Centered: React.FC<PageHeaderProps> = (props) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
   return <PageHeaderCentered {...props} isPageEditing={isEditing} />;
 };

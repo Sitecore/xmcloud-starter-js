@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Text, RichText } from '@sitecore-content-sdk/nextjs';
@@ -103,6 +105,7 @@ export const PageHeaderFiftyFifty: React.FC<PageHeaderProps & { isPageEditing: b
                 <ImageWrapper
                   image={imageRequired?.jsonValue}
                   className="h-full w-full object-cover"
+                  page={props.page}
                 />
               </AnimatedSection>
               {/* Page centered Line */}

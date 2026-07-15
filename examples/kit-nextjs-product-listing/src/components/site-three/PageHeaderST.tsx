@@ -2,21 +2,8 @@ import {
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
   Image as ContentSdkImage,
-  ImageField,
-  Field,
-  RichTextField,
 } from '@sitecore-content-sdk/nextjs';
-
-interface Fields {
-  Title: Field<string>;
-  Body: RichTextField;
-  Image: ImageField;
-}
-
-type PageHeaderSTProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import type { PageHeaderSTProps } from './page-header-st.props';
 
 export const Default = (props: PageHeaderSTProps) => {
   if (!props.fields) {

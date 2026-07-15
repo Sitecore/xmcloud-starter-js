@@ -1,0 +1,24 @@
+---
+ID: "f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c"
+Parent: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: "/sitecore/templates/Project/click-click-launch/AI Config/AI FAQ Item/Content"
+Languages:
+- Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Content
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6d"

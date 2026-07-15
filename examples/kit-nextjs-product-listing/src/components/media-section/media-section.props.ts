@@ -1,6 +1,7 @@
 import { ImageField } from '@sitecore-content-sdk/nextjs';
+import { ComponentProps } from '@/lib/component-props';
 
-export interface MediaSectionProps {
+export interface MediaSectionProps extends ComponentProps {
   video?: string;
   image?: ImageField;
   priority?: boolean;

@@ -1,4 +1,4 @@
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 import { Field } from '@sitecore-content-sdk/nextjs';
 
 /**
@@ -24,8 +24,9 @@ type TestimonialCarouselFields = {
   };
 };
 
-export type TestimonialCarouselProps = ComponentProps &
+export type TestimonialCarouselProps = OptionalComponentProps &
   TestimonialCarouselFields & {
     name: string;
     Testimonials: React.Component[];
   };
+

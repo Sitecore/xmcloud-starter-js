@@ -3,24 +3,9 @@ import {
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
   RichText as ContentSdkRichText,
-  ImageField,
-  Field,
-  LinkField,
 } from '@sitecore-content-sdk/nextjs';
 import { Button } from '@/components/ui/button';
-
-interface Fields {
-  PromoIcon: ImageField;
-  PromoText: Field<string>;
-  PromoLink: LinkField;
-  PromoText2: Field<string>;
-  PromoText3: Field<string>;
-}
-
-type PromoProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import type { PromoProps } from './sxa-promo.props';
 
 const PromoDefaultComponent = (props: PromoProps): JSX.Element => (
   <div className={`component promo ${props.params.styles}`}>
@@ -63,7 +48,7 @@ export const Default = (props: PromoProps): JSX.Element => {
             className="font-bold py-1 px-3 mx-6 mb-4 mt-auto relative b-0"
             asChild
           >
-            <ContentSdkLink field={props.fields.PromoLink} />
+            {props.fields.PromoLink ? <ContentSdkLink field={props.fields.PromoLink} /> : null}
           </Button>
         </div>
       </div>
@@ -98,7 +83,7 @@ export const CenteredCard = (props: PromoProps): JSX.Element => {
             className="font-bold text-xl text-center w-full py-1 px-3 ml-4 mb-4 relative b-0"
             asChild
           >
-            <ContentSdkLink field={props.fields.PromoLink} />
+            {props.fields.PromoLink ? <ContentSdkLink field={props.fields.PromoLink} /> : null}
           </Button>
         </div>
       </div>

@@ -4,9 +4,14 @@ import { ButtonBase as Button } from '../button-component/ButtonComponent';
 
 import { MultiPromoTabsFields } from './multi-promo-tabs.props';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
+import { getFieldValue } from '@/lib/component-props';
 
 const Default = (props: MultiPromoTabsFields) => {
   const { link1, link2, image1, image2, isEditMode } = props;
+  const link1Field = getFieldValue(link1);
+  const link2Field = getFieldValue(link2);
+  const image1Field = getFieldValue(image1);
+  const image2Field = getFieldValue(image2);
 
   const handleClick = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -35,20 +40,20 @@ const Default = (props: MultiPromoTabsFields) => {
         onClick={(e) =>
           handleClick(
             e,
-            link1?.jsonValue?.value?.href || '',
-            link1?.jsonValue?.value?.target == '_blank'
+            link1Field?.value?.href || '',
+            link1Field?.value?.target == '_blank'
           )
         }
       >
         <div className="flex h-full w-full overflow-hidden">
-          <ImageWrapper image={image1?.jsonValue} className="h-full w-full object-cover" />
+          <ImageWrapper image={image1Field} className="h-full w-full object-cover" />
         </div>
-        {link1?.jsonValue && (
+        {link1Field && (
           <Button
             icon={{ value: 'arrow-up-right' }}
             iconClassName="h-4 w-4"
             className="bg-popover hover:bg-popover hover:text-popover-foreground text-popover-foreground font-body letter-spacing-[-0.8] absolute bottom-4 left-4 flex items-center gap-2 rounded-lg px-4 py-2 text-base text-sm font-medium font-normal backdrop-blur-sm transition-all duration-500 group-hover:translate-x-2"
-            buttonLink={link1.jsonValue}
+            buttonLink={link1Field}
             isPageEditing={isEditMode}
           />
         )}
@@ -61,23 +66,20 @@ const Default = (props: MultiPromoTabsFields) => {
         onClick={(e) =>
           handleClick(
             e,
-            link2?.jsonValue?.value?.href || '',
-            link2?.jsonValue?.value?.target == '_blank'
+            link2Field?.value?.href || '',
+            link2Field?.value?.target == '_blank'
           )
         }
       >
         <div className="flex h-full w-full overflow-hidden">
-          <ImageWrapper
-            image={image2?.jsonValue as ImageField}
-            className="  h-full w-full object-cover"
-          />
+          <ImageWrapper image={image2Field as ImageField} className="  h-full w-full object-cover" />
         </div>
-        {link2?.jsonValue && (
+        {link2Field && (
           <Button
             icon={{ value: 'arrow-up-right' }}
             iconClassName="h-4 w-4"
             className="bg-popover hover:bg-popover hover:text-popover-foreground text-popover-foreground font-body letter-spacing-[-0.8] absolute bottom-4 left-4 flex items-center gap-2 rounded-lg px-4 py-2 text-base text-sm font-medium font-normal backdrop-blur-sm transition-all duration-500 group-hover:translate-x-2"
-            buttonLink={link2.jsonValue}
+            buttonLink={link2Field}
             isPageEditing={isEditMode}
           />
         )}

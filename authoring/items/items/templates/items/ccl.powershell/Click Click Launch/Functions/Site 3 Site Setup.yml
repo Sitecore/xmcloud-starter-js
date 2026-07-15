@@ -205,18 +205,131 @@ SharedFields:
             Write-Verbose "Update home page fields"
             $title = "SYNC"
             $shortTitle = "SYNC"
-    
+            $description = "Premium audio equipment and speakers designed for audiophiles. Experience exceptional sound quality with SYNCs heritage collection."
             $item."pageTitle" = $title
             $item."pageShortTitle" = $shortTitle
             $item."pageHeaderTitle" = $shortTitle
-            $item."pageSummary" = $title
-    
+            $item."pageSummary" = $description
             $item."metadataTitle" = $title
-            $item."metadataDescription" = $title
-            $item."metadataKeywords" = "Symphonic, audio, speakers, headphones"
+            $item."metadataDescription" = $description
+            $item."metadataKeywords" = "SYNC, audio equipment, speakers, headphones, premium sound, audiophile"
+            $item."metadataAuthor" = "Sitecore"
             $item."ogTitle" = $title
-            $item."ogDescription" = $title
+            $item."ogDescription" = $description
+            $item."ogImage" = "<image mediaid=`"{5977A6A5-D5D4-45BD-ADD5-0E7E629162FD}`" />"
             
+            Write-Verbose "Create AI config at $sitePath/Data/AI"
+            $dataFolderPath = "$sitePath/Data"
+            if (-not (Test-Path $dataFolderPath)) {
+                $siteFolderTemplateId = "{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}"
+                New-Item -Path $sitePath -Name "Data" -ItemType $siteFolderTemplateId | Out-Null
+            }
+            $dataFolder = Get-Item -Path $dataFolderPath -Language $Site.Language
+            $aiFolderPath = "$($dataFolder.Paths.Path)/AI"
+            if (-not (Test-Path $aiFolderPath)) {
+                $addAiConfigBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add AI Config" -Language $Site.Language
+                New-Item -Parent $dataFolder -Name "AI" -ItemType $addAiConfigBranchTemplate.ID | Out-Null
+            }
+            
+            Write-Verbose "Ensure Image headless rendering variants (Default, Banner) under Presentation"
+            $headlessVariantsPath = "$sitePath/Presentation/Headless Variants"
+            $imageVariantsPath = "$headlessVariantsPath/Image"
+            $imageHeadlessBranchId = "{C549C8C6-0AF4-4AD7-8A89-1E4695B23EF3}"
+            $headlessVariantTemplateId = "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+            $imageDefaultVariantOriginatorId = "{17342388-971F-41E2-B22E-DA3FB9A339DA}"
+            $imageBannerVariantOriginatorId = "{77DE3501-AF38-4EB5-8E6C-740E4DF1348F}"
+            if (Test-Path $headlessVariantsPath) {
+                $hvParent = Get-Item -Path $headlessVariantsPath -Language $Site.Language
+                if (-not (Test-Path $imageVariantsPath)) {
+                    Write-Verbose "Insert shared Default Image Variant branch as Headless Variants/Image"
+                    New-Item -Parent $hvParent -Name "Image" -ItemType $imageHeadlessBranchId | Out-Null
+                }
+                if (Test-Path $imageVariantsPath) {
+                    $imageVariantsFolder = Get-Item -Path $imageVariantsPath -Language $Site.Language
+                    $imageFolderPath = $imageVariantsFolder.Paths.Path
+                    $defaultVariantItem = Get-ChildItem -Path $imageFolderPath -Language $Site.Language | Where-Object { $_.Name -eq "Default" }
+                    if (-not $defaultVariantItem) {
+                        Write-Verbose "Create missing Default rendering variant under Image"
+                        $defaultVariantItem = New-Item -Parent $imageVariantsFolder -Name "Default" -ItemType $headlessVariantTemplateId
+                        $defaultVariantItem.Editing.BeginEdit()
+                        $defaultVariantItem["__Originator"] = $imageDefaultVariantOriginatorId
+                        $defaultVariantItem.Editing.EndEdit() | Out-Null
+                    }
+                    $bannerVariantItem = Get-ChildItem -Path $imageFolderPath -Language $Site.Language | Where-Object { $_.Name -eq "Banner" }
+                    if (-not $bannerVariantItem) {
+                        Write-Verbose "Create missing Banner rendering variant under Image"
+                        $bannerVariantItem = New-Item -Parent $imageVariantsFolder -Name "Banner" -ItemType $headlessVariantTemplateId
+                        $bannerVariantItem.Editing.BeginEdit()
+                        $bannerVariantItem["__Originator"] = $imageBannerVariantOriginatorId
+                        $bannerVariantItem.Editing.EndEdit() | Out-Null
+                    }
+                }
+            }
+            
+            Write-Verbose "Use Media/Image rendering instead of Image Block in layout fields (variant alignment)"
+            $renderingImageForLayout = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Media/Image' -ErrorAction SilentlyContinue
+            $renderingImageBlockLegacy = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Media/Image Block' -ErrorAction SilentlyContinue
+            if ($renderingImageForLayout -and $renderingImageBlockLegacy) {
+                $blockGuid = $renderingImageBlockLegacy.ID.ToString()
+                $imageGuid = $renderingImageForLayout.ID.ToString()
+                $layoutFieldNames = @("__Final Renderings", "__Renderings")
+                foreach ($layoutItem in (Get-ChildItem -Path $sitePath -Recurse -Language $Site.Language)) {
+                    foreach ($layoutFieldName in $layoutFieldNames) {
+                        $layoutField = $layoutItem.Fields[$layoutFieldName]
+                        if ($layoutField -eq $null) { continue }
+                        $layoutValue = $layoutField.Value
+                        if ([string]::IsNullOrEmpty($layoutValue)) { continue }
+                        if ($layoutValue -notlike "*$blockGuid*") { continue }
+                        $updatedValue = $layoutValue.Replace($blockGuid, $imageGuid)
+                        if ($updatedValue -ne $layoutValue) {
+                            $layoutItem.Editing.BeginEdit()
+                            $layoutField.Value = $updatedValue
+                            $layoutItem.Editing.EndEdit() | Out-Null
+                            Write-Verbose "Swapped Image Block to Image on $($layoutItem.Paths.Path) — $layoutFieldName"
+                        }
+                    }
+                }
+            }
+            
+            Write-Verbose "Enforce Default variant for Image renderings"
+            $renderingImage = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Media/Image' -ErrorAction SilentlyContinue
+            if ($renderingImage) {
+                $imageVariants = $service.GetAvailableRenderingVariants($Site, $renderingImage.Name, $renderingImage.ID, $item.TemplateID)
+                $imageDefaultVariant = $imageVariants | Where-Object { $_.Name -eq "Default" }
+                if ($imageDefaultVariant) {
+                    $allSiteItems = Get-ChildItem -Path $sitePath -Recurse -Language $Site.Language
+                    foreach ($siteItem in $allSiteItems) {
+                        $imageRenderingInstances = Get-Rendering -Item $siteItem -Rendering $renderingImage -FinalLayout -ErrorAction SilentlyContinue
+                        if ($imageRenderingInstances) {
+                            foreach ($rendering in @($imageRenderingInstances)) {
+                                $rendering | Set-RenderingParameter -Parameter @{ "FieldNames" = $imageDefaultVariant.ID } | Set-Rendering -Item $siteItem -FinalLayout
+                            }
+                        }
+                    }
+                }
+            }
+    
+            # Set all pages and content to Approved workflow state
+            Write-Verbose "Set all site content workflow state to Approved"
+            $basicWorkflowApprovedStateId = "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+            $basicDatasourceWorkflowApprovedStateId = "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+            $basicDatasourceWorkflowDraftStateId = "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+            $workflowStateFieldId = [Sitecore.FieldIDs]::WorkflowState
+            $siteItems = Get-ChildItem -Path $sitePath -Recurse -Language $Site.Language
+            foreach ($siteItem in $siteItems) {
+                if ($siteItem.Versions.Count -eq 0) { continue }
+                $wfField = $siteItem.Fields[$workflowStateFieldId]
+                if ($wfField -eq $null) { continue }
+                $currentState = $wfField.Value
+                $approvedStateId = $basicWorkflowApprovedStateId
+                if ($currentState -eq $basicDatasourceWorkflowDraftStateId) { $approvedStateId = $basicDatasourceWorkflowApprovedStateId }
+                if ($currentState -ne $approvedStateId) {
+                    $siteItem.Editing.BeginEdit()
+                    $siteItem.Fields[$workflowStateFieldId].Value = $approvedStateId
+                    $siteItem.Editing.EndEdit()
+                    Write-Verbose "Set workflow to Approved for $($siteItem.Paths.Path)"
+                }
+            }
             Write-Verbose "Create dictionary items"
             $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
             $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add Dictionary Items" -Language $Site.Language
@@ -232,7 +345,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "8d7c8165-dc8a-4a58-823a-07c120c9f268"
+  Value: "e9f2a4c6-3b5d-4718-a0c8-f1d7b3e2a6c4"
 Languages:
 - Language: en
   Versions:
@@ -251,11 +364,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9672b183-5d0a-4eda-b795-54d826501b29"
+      Value: "c2d6b1a8-4e3f-4927-b5d9-8a1c0f7e3b52"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\richard.seal@sitecore.com
+        sitecore\shakya.wijerathne@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250724T013959Z
+      Value: 20260514T090000Z

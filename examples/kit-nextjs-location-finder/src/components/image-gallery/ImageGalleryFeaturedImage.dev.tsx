@@ -25,7 +25,7 @@ export const ImageGalleryFeaturedImage: React.FC<ImageGalleryProps> = (props) =>
 
   if (fields) {
     return (
-      <div
+      <section
         ref={containerRef}
         className={cn(
           '@container relative min-h-[100vh] max-w-screen-xl transform-gpu overflow-hidden px-4 py-16',
@@ -34,6 +34,7 @@ export const ImageGalleryFeaturedImage: React.FC<ImageGalleryProps> = (props) =>
           }
         )}
         data-class-change
+        aria-label="Image gallery"
       >
         {/* Accessibility notice for motion preferences */}
         {prefersReducedMotion && (
@@ -63,7 +64,7 @@ export const ImageGalleryFeaturedImage: React.FC<ImageGalleryProps> = (props) =>
           {/* Featured image layout */}
           <div className="flex flex-col gap-4">
             {/* Featured image - Car on city street */}
-            <div
+            <figure
               className={`${isParallaxActive ? 'parallax-element' : ''} w-full`}
               data-speed={isMdContainer ? '0.01' : '0.1'}
             >
@@ -72,12 +73,13 @@ export const ImageGalleryFeaturedImage: React.FC<ImageGalleryProps> = (props) =>
                   data-component="image-1"
                   image={image1}
                   className="rounded-default h-auto w-full"
+                  page={props.page}
                 />
               )}
-            </div>
+            </figure>
 
             <div className="@md:grid-cols-3 grid grid-cols-1 gap-4">
-              <div
+              <figure
                 className={`${isParallaxActive ? 'parallax-element' : ''}`}
                 data-speed={isMdContainer ? '-0.01' : '-0.001'}
               >
@@ -86,11 +88,12 @@ export const ImageGalleryFeaturedImage: React.FC<ImageGalleryProps> = (props) =>
                     data-component="image-2"
                     image={image2}
                     className="rounded-default h-auto w-full"
+                    page={props.page}
                   />
                 )}
-              </div>
+              </figure>
 
-              <div
+              <figure
                 className={`${isParallaxActive ? 'parallax-element' : ''}`}
                 data-speed={isMdContainer ? '-0.02' : '0'}
               >
@@ -99,11 +102,12 @@ export const ImageGalleryFeaturedImage: React.FC<ImageGalleryProps> = (props) =>
                     data-component="image-3"
                     image={image3}
                     className="rounded-default h-auto w-full"
+                    page={props.page}
                   />
                 )}
-              </div>
+              </figure>
 
-              <div
+              <figure
                 className={`${isParallaxActive ? 'parallax-element' : ''}`}
                 data-speed={isMdContainer ? '-0.02' : '-0.001'}
               >
@@ -112,13 +116,14 @@ export const ImageGalleryFeaturedImage: React.FC<ImageGalleryProps> = (props) =>
                     data-component="image-4"
                     image={image4}
                     className="rounded-default h-auto w-full"
+                    page={props.page}
                   />
                 )}
-              </div>
+              </figure>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
   return <NoDataFallback componentName="ImageGalleryFeaturedImage" />;

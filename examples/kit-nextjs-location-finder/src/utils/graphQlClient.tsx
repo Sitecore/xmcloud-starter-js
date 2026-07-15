@@ -15,13 +15,6 @@ export const getGraphQlKey = (): string => {
   return scConfig.api.edge.contextId;
 };
 
-/**
- * Retrieves the value of the given property from the given GraphQL object.
- * If no property is defined, the whole value object will be retrieved
- * @param obj Object to find the value of
- * @param valueProp optional name of the property to retrieve the value of. If null, will return the whole value object
- * @returns the value of the given property or whole value object
- */
 export const getValue = (
   obj: GqlField<unknown> | undefined | null,
   valueProp?: string | null
@@ -40,9 +33,7 @@ export type GqlField<T> = {
   jsonValue: T;
 };
 
-/**
- * WARNING Link languages are not correct GraphQL links. Use "languageLinksUtils"
- */
+// WARNING: Link languages are not correct GraphQL links. Use "languageLinksUtils"
 export type GqlLink = GqlField<LinkField>;
 
 export type GqlFieldString = GqlField<Field<string>>;

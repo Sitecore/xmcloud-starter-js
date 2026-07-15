@@ -1,7 +1,7 @@
 'use client';
 
 import type React from 'react';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Facebook, Linkedin, Twitter, Link, Check, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -14,6 +14,9 @@ import { ButtonBase } from '../button-component/ButtonComponent';
 import { FloatingDock } from '@/components/floating-dock/floating-dock.dev';
 import { useToast } from '@/hooks/use-toast';
 import { Toaster } from '@/components/ui/toaster';
+import { generateArticleSchema } from '@/lib/structured-data/schema';
+import { StructuredData } from '@/components/structured-data/StructuredData';
+import { hasDocument, hasNavigator, isBrowser } from '@/utils/browser';
 
 export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }) => {
   const { imageRequired, eyebrowOptional } = fields;
@@ -27,7 +30,37 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
   const [forceCollapse] = useState(true);
   const copyNotificationRef = useRef<HTMLDivElement>(null);
 
+  // Generate JSON-LD structured data for article (must be at top level)
+  const articleSchema = useMemo(() => {
+    const headline = pageHeaderTitle?.value || '';
+    const image = imageRequired?.value?.src || '';
+    const datePublished = pageDisplayDate?.value || '';
+    const authorName = pageAuthor?.value?.personFirstName?.value && pageAuthor?.value?.personLastName?.value
+      ? `${pageAuthor.value.personFirstName.value} ${pageAuthor.value.personLastName.value}`
+      : undefined;
+    const authorImage = pageAuthor?.value?.personProfileImage?.value?.src;
+    const authorJobTitle = pageAuthor?.value?.personJobTitle?.value;
+
+    return generateArticleSchema({
+      headline,
+      image: image ? [image] : undefined,
+      datePublished,
+      author: authorName
+        ? {
+            name: authorName,
+            image: authorImage,
+            jobTitle: authorJobTitle,
+          }
+        : undefined,
+      publisher: {
+        name: 'SYNC',
+      },
+    });
+  }, [pageHeaderTitle, imageRequired, pageDisplayDate, pageAuthor]);
+
   useEffect(() => {
+    if (!isBrowser || !window.matchMedia) return;
+
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setPrefersReducedMotion(mediaQuery.matches);
 
@@ -37,6 +70,8 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
   }, []);
 
   useEffect(() => {
+    if (!isBrowser) return;
+
     let animationFrameId: number;
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -70,8 +105,10 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
       : {};
 
     const handleShare = (platform: string) => {
+      if (!isBrowser) return;
+
       const url = encodeURIComponent(window.location.href);
-      const title = encodeURIComponent(document.title);
+      const title = encodeURIComponent(hasDocument ? document.title : '');
       let shareUrl = '';
 
       switch (platform) {
@@ -89,30 +126,32 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
           window.location.href = shareUrl;
           return;
         case 'copy':
-          navigator.clipboard
-            .writeText(window.location.href)
-            .then(() => {
-              // Show toast notification
-              toast({
-                title: 'Link copied!',
-                description: 'The link has been copied to your clipboard.',
-                duration: 3000, // Explicitly set duration
-              });
+          if (hasNavigator() && navigator.clipboard) {
+            navigator.clipboard
+              .writeText(window.location.href)
+              .then(() => {
+                // Show toast notification
+                toast({
+                  title: 'Link copied!',
+                  description: 'The link has been copied to your clipboard.',
+                  duration: 3000, // Explicitly set duration
+                });
 
-              setCopySuccess(true);
+                setCopySuccess(true);
 
-              if (copyNotificationRef.current) {
-                copyNotificationRef.current.textContent = 'Link copied to clipboard';
-              }
-            })
-            .catch((err) => {
-              console.error('Failed to copy: ', err);
-              toast({
-                title: 'Copy failed',
-                description: 'Could not copy the link to clipboard.',
-                variant: 'destructive',
+                if (copyNotificationRef.current) {
+                  copyNotificationRef.current.textContent = 'Link copied to clipboard';
+                }
+              })
+              .catch((err) => {
+                console.error('Failed to copy: ', err);
+                toast({
+                  title: 'Copy failed',
+                  description: 'Could not copy the link to clipboard.',
+                  variant: 'destructive',
+                });
               });
-            });
+          }
           return;
       }
 
@@ -171,13 +210,15 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
 
     return (
       <>
+        {/* JSON-LD structured data for article */}
+        <StructuredData id="article-schema" data={articleSchema} />
         <header
           className={cn('@container article-header relative mb-[86px] overflow-hidden')}
           ref={headerRef}
         >
-          <div className="  relative z-0 h-[auto] overflow-hidden bg-black">
+          <article className="  relative z-0 h-[auto] overflow-hidden bg-black" itemScope itemType="https://schema.org/Article">
             {/* Background Image with Parallax */}
-            <div
+            <figure
               className="z-5 absolute inset-0 h-[120%] w-[120%] bg-cover bg-center opacity-70 transition-transform duration-200 ease-out"
               style={parallaxStyle}
             >
@@ -188,8 +229,9 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
                 priority
                 sizes="(max-width: 768px) 100vw, 800px"
                 ref={imageRef}
+                itemProp="image"
               />
-            </div>
+            </figure>
             {/* Blur overlay - separate for better performance */}
             <div className="absolute inset-0 backdrop-blur-md"></div>
             {/* White Section */}
@@ -218,6 +260,7 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
                   tag="h1"
                   className="@md:text-[62px] @md:mb-0 font-heading line-height-[69px] mx-auto max-w-4xl text-pretty px-6 text-center text-4xl font-normal tracking-tighter text-white antialiased"
                   field={pageHeaderTitle}
+                  itemProp="headline"
                 />
                 {/* Read Time and Date - Centered */}
                 {(pageReadTime || pageDisplayDate) && (
@@ -233,11 +276,13 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
                       <span className="@md:inline-block hidden text-pretty antialiased">•</span>
                     )}
                     {pageDisplayDate && (
-                      <Text
-                        tag="span"
-                        field={pageDisplayDate}
-                        className="@md:inline-block block text-pretty antialiased"
-                      />
+                      <time itemProp="datePublished" dateTime={pageDisplayDate?.value || undefined}>
+                        <Text
+                          tag="span"
+                          field={pageDisplayDate}
+                          className="@md:inline-block block text-pretty antialiased"
+                        />
+                      </time>
                     )}
                   </div>
                 )}
@@ -277,7 +322,7 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
                 </div>
 
                 {/* Featured Image */}
-                <div className="@md:col-span-6 relative z-10 col-span-2 mx-auto flex aspect-[16/9] w-full max-w-[800px] justify-center overflow-hidden rounded-[24px]">
+                <figure className="@md:col-span-6 relative z-10 col-span-2 mx-auto flex aspect-[16/9] w-full max-w-[800px] justify-center overflow-hidden rounded-[24px]">
                   <ImageWrapper
                     image={imageRequired}
                     alt={pageHeaderTitle?.value || 'Article header image'}
@@ -285,8 +330,9 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
                     priority
                     sizes="(max-width: 768px) 100vw, 800px"
                     ref={imageRef}
+                    itemProp="image"
                   />
-                </div>
+                </figure>
 
                 {/* Share Section - Desktop Only */}
                 <div className="@md:col-span-3 @md:justify-start @md:pt-4 @md:h-[250px] @md:items-start @md:flex hidden h-[auto] items-center justify-center gap-4 p-6 pb-6">
@@ -297,7 +343,7 @@ export const Default: React.FC<ArticleHeaderProps> = ({ fields, externalFields }
                 </div>
               </div>
             </div>
-          </div>
+          </article>
           {/* Screen reader notification */}
           <div ref={copyNotificationRef} className="sr-only" aria-live="polite"></div>
         </header>

@@ -3,26 +3,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 import {
-  Field,
   Image as ContentSdkImage,
-  ImageField,
   RichText as ContentSdkRichText,
-  RichTextField,
   Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
-import { useI18n } from 'next-localization';
-
-interface Fields {
-  Heading: Field<string>;
-  Subheading: RichTextField;
-  Image: ImageField;
-  Image2: ImageField;
-}
-
-type SignupBannerProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import { useTranslations } from 'next-intl';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
+import type { SignupBannerProps } from './signup-banner.props';
 
 const DICTIONARY_KEYS = {
   SIGNUPBANNER_ButtonLabel: 'Signup_Form_Button_Label',
@@ -30,8 +17,8 @@ const DICTIONARY_KEYS = {
 };
 
 export const Default = (props: SignupBannerProps) => {
-  const { fields } = props;
-  const { t } = useI18n();
+  const fields = getDatasource(props.fields);
+  const t = useTranslations();
 
   if (!fields) {
     return null;
@@ -41,7 +28,7 @@ export const Default = (props: SignupBannerProps) => {
     <section className={`relative px-4 ${props.params.styles}`} data-class-change>
       <div className="absolute inset-0 z-10">
         {fields?.Image && (
-          <ContentSdkImage field={fields.Image} className="w-full h-full object-cover" />
+          <ContentSdkImage field={getFieldValue(fields.Image)} className="w-full h-full object-cover" />
         )}
       </div>
 
@@ -49,11 +36,11 @@ export const Default = (props: SignupBannerProps) => {
         <div className="relative px-4 sm:px-8 py-14 sm:py-16 text-center text-white h-full flex flex-col justify-center">
           <div className="max-w-[38rem] mx-auto">
             <h3 className="lg:text-5xl text-2xl mb-4 uppercase">
-              {fields?.Heading && <ContentSdkText field={fields.Heading} />}
+              {fields?.Heading && <ContentSdkText field={getFieldValue(fields.Heading)} />}
             </h3>
 
             <div className="text-lg leading-relaxed mb-6">
-              {fields?.Subheading && <ContentSdkRichText field={fields.Subheading} />}
+              {fields?.Subheading && <ContentSdkRichText field={getFieldValue(fields.Subheading)} />}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -77,8 +64,8 @@ export const Default = (props: SignupBannerProps) => {
 };
 
 export const ContentLeft = (props: SignupBannerProps) => {
-  const { fields } = props;
-  const { t } = useI18n();
+  const fields = getDatasource(props.fields);
+  const t = useTranslations();
 
   if (!fields) {
     return null;
@@ -88,7 +75,7 @@ export const ContentLeft = (props: SignupBannerProps) => {
     <section className={`relative px-4 ${props.params.styles}`} data-class-change>
       <div className="absolute inset-0 z-10">
         {fields?.Image && (
-          <ContentSdkImage field={fields.Image} className="w-full h-full object-cover" />
+          <ContentSdkImage field={getFieldValue(fields.Image)} className="w-full h-full object-cover" />
         )}
       </div>
       <div className="relative container mx-auto z-20">
@@ -96,11 +83,11 @@ export const ContentLeft = (props: SignupBannerProps) => {
           <div className="relative px-4 sm:px-8 py-8 sm:py-16 py-14 text-white h-full flex flex-col justify-center">
             <div className="max-w-[38rem] mx-auto">
               <h1 className="text-2xl lg:text-5xl mb-4 text-left">
-                {fields?.Heading && <ContentSdkText field={fields.Heading} />}
+                {fields?.Heading && <ContentSdkText field={getFieldValue(fields.Heading)} />}
               </h1>
 
               <div className="text-lg mb-6 leading-relaxed text-left">
-                {fields?.Subheading && <ContentSdkRichText field={fields.Subheading} />}
+                {fields?.Subheading && <ContentSdkRichText field={getFieldValue(fields.Subheading)} />}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -125,8 +112,8 @@ export const ContentLeft = (props: SignupBannerProps) => {
 };
 
 export const BackgroundPrimary = (props: SignupBannerProps) => {
-  const { fields } = props;
-  const { t } = useI18n();
+  const fields = getDatasource(props.fields);
+  const t = useTranslations();
 
   if (!fields) {
     return null;
@@ -143,11 +130,11 @@ export const BackgroundPrimary = (props: SignupBannerProps) => {
       <div className="relative container mx-auto pb-28 lg:py-16 text-center h-full flex flex-col justify-center z-20">
         <div className="lg:w-1/2 max-w-[38rem] mx-auto">
           <h3 className="lg:text-5xl text-2xl mb-4 uppercase">
-            {fields?.Heading && <ContentSdkText field={fields.Heading} />}
+            {fields?.Heading && <ContentSdkText field={getFieldValue(fields.Heading)} />}
           </h3>
 
           <div className="text-lg leading-relaxed mb-6">
-            {fields?.Subheading && <ContentSdkRichText field={fields.Subheading} />}
+            {fields?.Subheading && <ContentSdkRichText field={getFieldValue(fields.Subheading)} />}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -170,8 +157,8 @@ export const BackgroundPrimary = (props: SignupBannerProps) => {
 };
 
 export const BackgroundDark = (props: SignupBannerProps) => {
-  const { fields } = props;
-  const { t } = useI18n();
+  const fields = getDatasource(props.fields);
+  const t = useTranslations();
 
   if (!fields) {
     return null;
@@ -182,7 +169,7 @@ export const BackgroundDark = (props: SignupBannerProps) => {
       <div className="absolute h-20 lg:h-auto bottom-8 left-0 right-0 lg:inset-0 mask-add mask-[var(--background-image-sound-waves),var(--background-image-sound-waves)] mask-[position:center] lg:mask-[position:-27%_50%,127%_50%] mask-size-[contain] lg:mask-size-[40%] lg:mask-no-repeat bg-primary z-10">
         {fields?.Image && (
           <ContentSdkImage
-            field={fields.Image}
+            field={getFieldValue(fields.Image)}
             className="w-full h-full object-cover mix-blend-multiply"
           />
         )}
@@ -191,11 +178,11 @@ export const BackgroundDark = (props: SignupBannerProps) => {
       <div className="relative z-40 container mx-auto pb-28 lg:py-16 text-center text-white h-full flex flex-col justify-center">
         <div className="lg:w-1/2 max-w-[38rem] mx-auto">
           <h3 className="lg:text-5xl text-2xl mb-4 uppercase">
-            {fields?.Heading && <ContentSdkText field={fields.Heading} />}
+            {fields?.Heading && <ContentSdkText field={getFieldValue(fields.Heading)} />}
           </h3>
 
           <div className="text-lg leading-relaxed mb-6">
-            {fields?.Subheading && <ContentSdkRichText field={fields.Subheading} />}
+            {fields?.Subheading && <ContentSdkRichText field={getFieldValue(fields.Subheading)} />}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">

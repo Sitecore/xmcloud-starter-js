@@ -1,4 +1,5 @@
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
+'use client';
+
 import type { TextBannerProps } from './text-banner.props';
 import { TextBannerDefault } from './TextBannerDefault.dev';
 import { TextBannerTextTop } from './TextBannerTextTop.dev';
@@ -10,32 +11,32 @@ import { TextBanner02 as TextBannerVariant02 } from './TextBanner02.dev';
 
 // Default display of the component
 export const Default: React.FC<TextBannerProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <TextBannerDefault {...props} isPageEditing={isPageEditing} />;
 };
 
 // Variants
 export const TextBanner01: React.FC<TextBannerProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <TextBannerVariant01 {...props} isPageEditing={isPageEditing} />;
 };
 
 export const TextBanner02: React.FC<TextBannerProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <TextBannerVariant02 {...props} isPageEditing={isPageEditing} />;
 };
 
 export const TextTop: React.FC<TextBannerProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <TextBannerTextTop {...props} isPageEditing={isPageEditing} />;
 };
 
 export const BlueTitleRight: React.FC<TextBannerProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <TextBannerBlueTitleRight {...props} isPageEditing={isPageEditing} />;
 };

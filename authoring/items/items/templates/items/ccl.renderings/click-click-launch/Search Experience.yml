@@ -1,0 +1,31 @@
+---
+ID: "063d3bd9-fb6f-48b6-b1f0-0c4b1fbc9cdd"
+Parent: "9dbe8119-926f-400a-a738-6f3a43f86f75"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: "/sitecore/layout/Renderings/Project/click-click-launch/Search Experience"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251217T062702Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\illia.kovalenko@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\illia.kovalenko@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "406680f6-c5ef-451c-92ec-4dd89cde955e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\illia.kovalenko@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251217T062702Z

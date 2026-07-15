@@ -1,11 +1,15 @@
 import { TestimonialCarouselItemProps } from './testimonial-carousel.props';
 import { Text } from '@sitecore-content-sdk/nextjs';
+import { getFieldValue } from '@/lib/component-props';
 
 export const Default: React.FC<TestimonialCarouselItemProps> = (props) => {
   const { testimonialAttribution, testimonialQuote } = props;
+  const testimonialAttributionField = getFieldValue(testimonialAttribution);
+  const testimonialQuoteField = getFieldValue(testimonialQuote);
+
   return (
     <div className="px-4">
-      {testimonialAttribution?.jsonValue && (
+      {testimonialAttributionField && (
         <div className="flex flex-col gap-4">
           <div className="flex flex-row gap-[24px]">
             <svg
@@ -24,17 +28,17 @@ export const Default: React.FC<TestimonialCarouselItemProps> = (props) => {
             <Text
               tag="p"
               className="text-primary text-sm font-semibold uppercase tracking-wide"
-              field={testimonialAttribution.jsonValue}
+              field={testimonialAttributionField}
             />
           </div>
         </div>
       )}
       <div className="space-y-4">
-        {testimonialQuote?.jsonValue && (
+        {testimonialQuoteField && (
           <Text
             tag="p"
             className="text-primary @md:text-4xl  @lg:text-5xl font-heading text-3xl font-normal tracking-tight"
-            field={testimonialQuote.jsonValue}
+            field={testimonialQuoteField}
           />
         )}
       </div>

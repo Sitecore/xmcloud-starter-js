@@ -1,9 +1,10 @@
+'use client';
+
 import {
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
   Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
-import { IGQLImageField, IGQLLinkField, IGQLTextField } from 'src/types/igql';
 import { useEffect, useMemo, useState, type JSX } from 'react';
 import {
   Carousel,
@@ -15,33 +16,8 @@ import {
 } from 'shadcd/components/ui/carousel';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-interface Fields {
-  data: {
-    datasource: {
-      children: {
-        results: ProductFields[];
-      };
-      heading: IGQLTextField;
-      link: IGQLLinkField;
-    };
-  };
-}
-
-interface ProductFields {
-  id: string;
-  productImage: IGQLImageField;
-  productTagLine: IGQLTextField;
-  productLink: IGQLLinkField;
-  productDescription: IGQLTextField;
-  productPrice: IGQLTextField;
-  productDiscountedPrice: IGQLTextField;
-}
-
-type ProductSectionProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import type { ProductSectionProps } from './products-section.props';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 function useSlidesToScroll() {
   const [slidesToScroll, setSlidesToScroll] = useState(1);
@@ -67,7 +43,7 @@ function useSlidesToScroll() {
 }
 
 export const Default = (props: ProductSectionProps): JSX.Element => {
-  const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
+  const datasource = useMemo(() => getDatasource(props.fields), [props.fields]);
   const id = props.params.RenderingIdentifier;
 
   const slidesToScroll = useSlidesToScroll();
@@ -90,7 +66,8 @@ export const Default = (props: ProductSectionProps): JSX.Element => {
     };
   }, [carouselApi]);
 
-  const productItems = useMemo(() => datasource.children?.results, [datasource.children?.results]);
+  const productItems = useMemo(() => datasource?.children?.results ?? [], [datasource?.children?.results]);
+  const sectionLinkField = useMemo(() => getFieldValue(datasource?.link), [datasource?.link]);
   const start = useMemo(() => currentSlide * slidesToScroll + 1, [currentSlide, slidesToScroll]);
 
   const end = useMemo(
@@ -111,25 +88,31 @@ export const Default = (props: ProductSectionProps): JSX.Element => {
     return paddedItems;
   }, [productItems, slidesToScroll]);
 
+  if (!datasource) {
+    return <></>;
+  }
+
   return (
     <section className={`py-24 ${props.params.styles}`} id={id ? id : undefined} data-class-change>
       <div className="container px-4 mx-auto">
         <div className="mb-8">
           <h2 className="text-4xl font-medium mb-4">
-            <ContentSdkText field={datasource.heading?.jsonValue} />
+            <ContentSdkText field={getFieldValue(datasource.heading)} />
           </h2>
           <div className="flex gap-8">
             <p className="text-base">
               Showing {start} through {end} of {productItems.length} items
             </p>
-            <ContentSdkLink
-              field={datasource.link?.jsonValue}
-              className="flex items-center gap-2 text-base text-primary font-medium"
-              prefetch={false}
-            >
-              {datasource.link.jsonValue.value.text}
-              <FontAwesomeIcon icon={faChevronRight} width={16} height={16} />
-            </ContentSdkLink>
+            {sectionLinkField && (
+              <ContentSdkLink
+                field={sectionLinkField}
+                className="flex items-center gap-2 text-base text-primary font-medium"
+                prefetch={false}
+              >
+                {sectionLinkField?.value?.text}
+                <FontAwesomeIcon icon={faChevronRight} width={16} height={16} />
+              </ContentSdkLink>
+            )}
           </div>
         </div>
         <Carousel
@@ -149,33 +132,33 @@ export const Default = (props: ProductSectionProps): JSX.Element => {
                 {!!product ? (
                   <div className="flex flex-col items-start justify-end h-full shadow-md pointer">
                     <ContentSdkImage
-                      field={product.productImage?.jsonValue}
+                      field={getFieldValue(product.productImage)}
                       className="w-full h-auto object-cover"
                     />
                     <div className="flex-1 relative pt-4 px-6">
                       <div className="inline-block text-base font-bold px-2 py-1 mb-2 bg-[#ffb900]">
-                        <ContentSdkText field={product.productTagLine?.jsonValue} />
+                        <ContentSdkText field={getFieldValue(product.productTagLine)} />
                       </div>
                       <h3 className="mb-2 text-base font-bold text-primary underline">
-                        <ContentSdkLink field={product.productLink?.jsonValue} prefetch={false} />
+                        <ContentSdkLink field={getFieldValue(product.productLink)} prefetch={false} />
                       </h3>
                       <div className="text-base mb-4">
                         <span>From</span>{' '}
                         <span
                           className={`${
-                            product.productDiscountedPrice.jsonValue.value
+                            getFieldValue(product.productDiscountedPrice)?.value
                               ? 'opacity-70 line-through'
                               : 'font-bold'
                           }`}
                         >
-                          <ContentSdkText field={product.productPrice?.jsonValue} />
+                          <ContentSdkText field={getFieldValue(product.productPrice)} />
                         </span>{' '}
                         <span className="font-bold">
-                          <ContentSdkText field={product.productDiscountedPrice?.jsonValue} />
+                          <ContentSdkText field={getFieldValue(product.productDiscountedPrice)} />
                         </span>
                       </div>
                       <p className="text-base mb-4">
-                        <ContentSdkText field={product.productDescription?.jsonValue} />
+                        <ContentSdkText field={getFieldValue(product.productDescription)} />
                       </p>
                     </div>
                   </div>

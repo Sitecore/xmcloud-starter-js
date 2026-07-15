@@ -1,0 +1,34 @@
+---
+ID: "4d2e3f4a-5b6c-4d7e-8f9a-0b1c2d3e4f5a"
+Parent: "3e7f8a9b-0c1d-4e2f-3a4b-5c6d7e8f9a0b"
+Template: "f6a7b8c9-d0e1-4f5a-3b4c-5d6e7f8a9b0c"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add AI Config/AI Config/Services/Dealer Location Finder"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Fields:
+  - ID: "b8c9d0e1-f2a3-4b5c-5d6e-7f8a9b0c1d2e"
+    Hint: name
+    Value: Dealer Location Finder
+  - ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+    Hint: description
+    Value: Find authorized Alaris dealerships, service centers, and test drive locations by zip code or postal code.
+  - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+    Hint: category
+    Value: Automotive
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4d2e3f4a-5b6c-4d7e-8f9a-0b1c2d3e4f5b"

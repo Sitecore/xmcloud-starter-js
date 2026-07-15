@@ -1,9 +1,3 @@
-/**
- * Formats a date string in UTC timezone
- * @param dateString - ISO date string
- * @param options - Additional Intl.DateTimeFormat options
- * @returns Formatted date string in UTC
- */
 export function formatDateInUTC(dateString: string, options: Intl.DateTimeFormatOptions = {}) {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-US', {
@@ -15,12 +9,6 @@ export function formatDateInUTC(dateString: string, options: Intl.DateTimeFormat
   });
 }
 
-/**
- * Formats a date string with custom format options
- * @param dateString - ISO date string
- * @param options - Format options
- * @returns Formatted date string
- */
 export function formatDate(
   dateString: string,
   options: {

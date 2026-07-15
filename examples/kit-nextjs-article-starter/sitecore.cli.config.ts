@@ -1,4 +1,3 @@
-import scConfig from './sitecore.config';
 import { defineCliConfig } from '@sitecore-content-sdk/nextjs/config-cli';
 import {
   generateSites,
@@ -6,26 +5,49 @@ import {
   extractFiles,
   writeImportMap,
 } from '@sitecore-content-sdk/nextjs/tools';
+import scConfig from './sitecore.config';
 
 export default defineCliConfig({
+  config: scConfig,
   build: {
     commands: [
       generateMetadata(),
-      generateSites({
-        scConfig,
-      }),
-      extractFiles({
-        scConfig,
-      }),
+      generateSites(),
+      extractFiles(),
       writeImportMap({
         paths: ['src/components'],
-        scConfig,
+        exclude: [
+          // Exclude non-component sidecars from import map generation
+          '**/*.props.ts',
+          '**/*.props.tsx',
+          '**/*.util.ts',
+          '**/*.util.tsx',
+          '**/*.dictionary.ts',
+          '**/*.dictionary.tsx',
+          '**/*.context.ts',
+          '**/*.context.tsx',
+          '**/utils.ts',
+          '**/utils.tsx',
+        ],
       }),
     ],
   },
   componentMap: {
     paths: ['src/components'],
-    // Exclude content-sdk auxillary components
-    exclude: ['src/components/content-sdk/*'],
+    exclude: [
+      'src/components/content-sdk/*',
+      'src/components/ui/*',
+      // Exclude non-component sidecars from component map generation
+      '**/*.props.ts',
+      '**/*.props.tsx',
+      '**/*.util.ts',
+      '**/*.util.tsx',
+      '**/*.dictionary.ts',
+      '**/*.dictionary.tsx',
+      '**/*.context.ts',
+      '**/*.context.tsx',
+      '**/utils.ts',
+      '**/utils.tsx',
+    ],
   },
 });

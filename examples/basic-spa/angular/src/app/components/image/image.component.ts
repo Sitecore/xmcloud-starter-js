@@ -5,8 +5,9 @@ import { SxaComponent } from '../sxa.component';
 import { JssContextService } from '../../jss-context.service';
 
 @Component({
-  selector: 'app-image',
-  templateUrl: './image.component.html',
+    selector: 'app-image',
+    templateUrl: './image.component.html',
+    standalone: false
 })
 export class ImageComponent extends SxaComponent implements OnInit, OnDestroy {
   @ViewChild('default', { static: true }) defaultVariant: TemplateRef<any>;

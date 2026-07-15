@@ -1,41 +1,28 @@
-import Head from 'next/head';
 import { NoDataFallback } from '@/utils/NoDataFallback';
-import { Field } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import type { SiteMetadataProps } from './site-metadata.props';
 
 /**
- * Model used for Sitecore Component integration
+ * Note: This component is primarily for Sitecore editing experience.
+ * Actual page metadata is set via generateMetadata() in page.tsx for proper SEO.
  */
-type SiteMetadataProps = ComponentProps & SiteMetadataFields;
-
-type SiteMetadataFields = {
-  fields: {
-    title?: Field<string>;
-    metadataTitle?: Field<string>;
-    metadataKeywords?: Field<string>;
-    metadataDescription?: Field<string>;
-  };
-};
-
 export const Default: React.FC<SiteMetadataProps> = (props) => {
   const { fields } = props;
-  const title = fields.metadataTitle?.value || fields.title?.value;
-  const keywords = fields.metadataKeywords?.value || '';
-  const description = fields.metadataDescription?.value || '';
-  if (fields) {
-    return (
-      <>
-        <Head>
-          <title>{title}</title>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          {keywords.length && <meta name="keywords" content={fields.metadataKeywords?.value} />}
-          {description.length && (
-            <meta name="description" content={fields.metadataDescription?.value} />
-          )}
-        </Head>
-      </>
-    );
+  
+  if (!fields) {
+    return <NoDataFallback componentName="Site Metadata" />;
   }
-  return <NoDataFallback componentName="Site Metadata" />;
+
+  return (
+    <>
+      {/*
+       * SEO metadata (title, description, keywords, viewport) is managed by
+       * generateMetadata() in page.tsx. Rendering them here would create
+       * duplicate <title> / <meta> tags.
+       *
+       * This component now only renders supplementary <head> elements that
+       * are NOT handled by generateMetadata().
+       */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    </>
+  );
 };

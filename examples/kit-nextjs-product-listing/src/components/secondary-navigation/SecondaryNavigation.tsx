@@ -1,14 +1,27 @@
+'use client';
+
 import { useState, type JSX } from 'react';
 import {
   SecondaryNavigationPage,
   SecondaryNavigationProps,
 } from '@/components/secondary-navigation/secondary-navigation.props';
 import { Button } from '@/components/ui/button';
-import NextLink from 'next/link';
+import { CompatibleLink } from '@/components/content-sdk/CompatibleLink';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
+import type { LinkField, LinkFieldValue } from '@sitecore-content-sdk/nextjs';
+
+const toLinkField = (url: LinkFieldValue | undefined, text: string): LinkField => ({
+  value: {
+    href: url?.href ?? '',
+    text,
+    target: url?.target,
+    querystring: url?.querystring,
+    anchor: url?.anchor,
+  },
+});
 
 export const Default: React.FC<SecondaryNavigationProps> = (props) => {
   const { fields } = props;
@@ -21,14 +34,22 @@ export const Default: React.FC<SecondaryNavigationProps> = (props) => {
     return (
       <NavigationMenu.List className="mt-2 flex list-none flex-col items-start gap-2">
         {childItems.map((child, index) => {
-          const title = child.navigationTitle?.jsonValue.value || child.title?.jsonValue.value;
+          const title =
+            child.navigationTitle?.jsonValue.value ||
+            child.title?.jsonValue.value ||
+            child.displayName ||
+            child.name ||
+            '';
 
           return (
             <NavigationMenu.Item key={index}>
               <Button asChild variant="link" className="font-bold">
-                <NextLink href={child.url?.href || ''} className=" p-2" prefetch={false}>
-                  {title}
-                </NextLink>
+                <CompatibleLink
+                  field={toLinkField(child.url, title)}
+                  editable={false}
+                  className=" p-2"
+                  prefetch={false}
+                />
               </Button>
             </NavigationMenu.Item>
           );
@@ -48,17 +69,22 @@ export const Default: React.FC<SecondaryNavigationProps> = (props) => {
         <NavigationMenu.List className="m-0 flex list-none flex-col gap-2 pl-0">
           {parent.children?.results?.map((item, index) => {
             const isParent = datasource.id == item.id;
-            const title = item.navigationTitle?.jsonValue.value || item.title?.jsonValue.value;
+            const title =
+              item.navigationTitle?.jsonValue.value ||
+              item.title?.jsonValue.value ||
+              item.displayName ||
+              item.name ||
+              '';
 
             return (
               <NavigationMenu.Item key={index}>
                 <Button asChild variant="link" className="justify-start">
-                  <NextLink
-                    href={item.url?.href || ''}
+                  <CompatibleLink
+                    field={toLinkField(item.url, title)}
+                    editable={false}
                     className="hover:bg-accent-6 box-border inline-block w-full  p-2 px-4 font-bold"
-                  >
-                    {title}
-                  </NextLink>
+                    prefetch={false}
+                  />
                 </Button>
                 {isParent && renderChildren(children.results)}
               </NavigationMenu.Item>

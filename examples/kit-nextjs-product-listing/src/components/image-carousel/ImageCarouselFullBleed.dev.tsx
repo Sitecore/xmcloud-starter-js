@@ -15,8 +15,8 @@ import { ImageCarouselEditMode } from './ImageCarouselEditMode.dev';
 import { cn } from '@/lib/utils';
 export const ImageCarouselFullBleed = (props: ImageCarouselProps) => {
   const { fields, isPageEditing } = props;
-  const { title, imageItems } = fields.data.datasource;
-  const { results: slides } = imageItems;
+  const { title, imageItems } = fields?.data?.datasource ?? {};
+  const { results: slides = [] } = imageItems || {};
 
   // Common Tailwind class groups
   const containerClasses = '@container group bg-primary grid w-full grid-cols-1 gap-9';
@@ -91,7 +91,7 @@ export const ImageCarouselFullBleed = (props: ImageCarouselProps) => {
               reducedMotion={isReducedMotion}
               className="max-w-screen-md"
             >
-              <Text tag="h2" field={title.jsonValue} className={titleClasses} />
+              <Text tag="h2" field={title?.jsonValue} className={titleClasses} />
             </AnimatedSection>
 
             <AnimatedSection

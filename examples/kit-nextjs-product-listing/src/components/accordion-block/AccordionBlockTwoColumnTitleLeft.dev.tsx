@@ -1,5 +1,3 @@
-'use client';
-
 import type React from 'react';
 
 import { Text } from '@sitecore-content-sdk/nextjs';
@@ -9,24 +7,29 @@ import type { AccordionProps, AccordionItemProps } from './accordion-block.props
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { AccordionBlockItem } from './AccordionBlockItem.dev';
 import { cn } from '@/lib/utils';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 export const AccordionBlockTwoColumnTitleLeft: React.FC<AccordionProps> = (props) => {
   const { fields, isPageEditing } = props;
 
-  const { heading, description, link, children } = fields?.data?.datasource || {};
+  const datasource = getDatasource(fields);
+  const { heading, description, link, children } = datasource || {};
+  const headingField = getFieldValue(heading);
+  const descriptionField = getFieldValue(description);
+  const linkField = getFieldValue(link);
   const accordionItems = (children?.results ?? []).filter(Boolean);
   const acordionItemValues = [
     ...accordionItems.map((_, index) => `accordion-block-item-${index + 1}`),
   ];
 
-  if (fields) {
+  if (datasource) {
     return (
       <div
         data-component="AccordionBlock"
         className={cn(
           '@container @md:py-16 @lg:py-20 bg-background text-foreground border-b-2 border-t-2 py-10 [.border-b-2+&]:border-t-0',
           {
-            [props.params.styles]: props?.params?.styles,
+            [props.params.styles as string]: props?.params?.styles,
           }
         )}
         data-class-change
@@ -37,11 +40,11 @@ export const AccordionBlockTwoColumnTitleLeft: React.FC<AccordionProps> = (props
         >
           <div className="@md:grid @md:grid-cols-[0.5fr,4fr,4fr] @md:gap-8 @lg:gap-12 @xl:gap-16">
             <div className="@md:col-start-[1] @md:col-end-[2] @md:mb-0 mb-8 flex flex-col">
-              {heading?.jsonValue && (
+              {headingField && (
                 <Text
                   tag="h2"
                   className="@md:text-5xl @md:vertical-text max-h-[420px] text-pretty text-4xl font-light leading-[1.1] tracking-tighter antialiased"
-                  field={heading?.jsonValue}
+                  field={headingField}
                 />
               )}
             </div>
@@ -84,19 +87,17 @@ export const AccordionBlockTwoColumnTitleLeft: React.FC<AccordionProps> = (props
                     ))}
                 </Accordion>
                 <div className="@md:col-start-[2] @md:col-end-[3]">
-                  {(isPageEditing ||
-                    description?.jsonValue?.value ||
-                    link?.jsonValue?.value?.href) && (
+                  {(isPageEditing || descriptionField?.value || linkField?.value?.href) && (
                     <div className="bg-primary @sm:flex-row @sm:text-start @md:flex-col @md:text-center @lg:flex-row @lg:text-start mt-6 flex flex-col flex-nowrap items-center gap-4 p-7 text-center">
                       <Text
                         tag="p"
                         className="text-primary-foreground font-heading text-lg font-light"
-                        field={description?.jsonValue}
+                        field={descriptionField}
                       />
-                      {link?.jsonValue && (
+                      {linkField && (
                         <EditableButton
                           variant="secondary"
-                          buttonLink={link.jsonValue}
+                          buttonLink={linkField}
                           isPageEditing={isPageEditing}
                         />
                       )}

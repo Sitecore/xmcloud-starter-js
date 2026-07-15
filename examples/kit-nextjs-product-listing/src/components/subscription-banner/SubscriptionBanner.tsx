@@ -1,3 +1,5 @@
+'use client';
+
 import { Text } from '@sitecore-content-sdk/nextjs';
 import { SubscriptionBannerProps } from './subscription-banner.props';
 import { Input } from '@/components/ui/input';

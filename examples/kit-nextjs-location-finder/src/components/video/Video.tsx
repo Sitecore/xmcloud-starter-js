@@ -1,24 +1,39 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
-import { VideoComponentProps, VideoFields, VideoParams } from './video-props';
-import { VideoPlayer } from './VideoPlayer.dev';
-import { VideoModal } from './VideoModal.dev';
+import dynamic from 'next/dynamic';
+import type { VideoComponentProps, VideoFields, VideoParams } from './video.props';
 import { useVideoModal } from '../../hooks/useVideoModal';
+
+// Dynamically import heavy sub-components (react-youtube, focus-trap-react, framer-motion animations)
+const VideoPlayer = dynamic(
+  () => import('./VideoPlayer.dev').then((mod) => mod.VideoPlayer),
+  { ssr: false }
+);
+const VideoModal = dynamic(
+  () => import('./VideoModal.dev').then((mod) => mod.VideoModal),
+  { ssr: false }
+);
 import { useVideo } from '@/contexts/VideoContext';
 import { Default as Icon } from '@/components/icon/Icon';
 import { Default as ImageWrapper } from '../image/ImageWrapper.dev';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { isMobile } from '@/utils/isMobile';
-import { extractVideoId } from '@/utils/video';
+import { extractVideoId, isYouTubeThumbnailImageUrl } from '@/utils/video';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { cn, getYouTubeThumbnail } from '@/lib/utils';
+import { Page } from '@sitecore-content-sdk/nextjs';
+import Image from 'next/image';
 export function VideoBase({
   fields,
   params,
   playButtonClassName,
+  page,
 }: {
   fields: VideoFields;
   params: VideoParams;
   playButtonClassName?: string;
+  page?: Page;
 }) {
   // playButtonClassName is applied to button but can be use to style the icon
   const [isPlaying, setIsPlaying] = useState(false);
@@ -76,7 +91,7 @@ export function VideoBase({
       <span className="font-bold">Please add video</span>
     </p>
   ) : (
-    <motion.div
+    <m.div
       whileHover="hover"
       initial="initial"
       className="max-w-screens-2xl relative z-10 mx-auto overflow-hidden"
@@ -84,7 +99,7 @@ export function VideoBase({
       <div className="relative aspect-video w-full" ref={componentRef}>
         <div className="absolute inset-0">
           {!isPlaying && (
-            <motion.div
+            <m.div
               className="absolute inset-0"
               variants={{
                 hover: {
@@ -103,18 +118,21 @@ export function VideoBase({
                   className="absolute inset-0 h-full w-full object-cover"
                   aria-hidden="true"
                   wrapperClass="absolute inset-0 cover-image"
+                  page={page}
                 />
               ) : (
                 <div className="cover-image absolute inset-0">
-                  <img
-                    src={fallbackImage}
+                  <Image
+                    src={fallbackImage || '/placeholder.svg'}
                     aria-hidden="true"
                     alt=""
-                    className="absolute inset-0 h-full w-full object-cover"
+                    fill
+                    className="object-cover"
+                    unoptimized={isYouTubeThumbnailImageUrl(fallbackImage)}
                   />
                 </div>
               )}
-            </motion.div>
+            </m.div>
           )}
           {displayIcon && (
             <div className="absolute inset-0 flex max-w-[30%] items-center justify-center">
@@ -163,13 +181,13 @@ export function VideoBase({
           componentRef={componentRef}
         />
       )}
-    </motion.div>
+    </m.div>
   );
 }
 
-export function Default({ fields, params }: VideoComponentProps) {
+export function Default({ fields, params, page }: VideoComponentProps) {
   if (fields) {
-    return <VideoBase fields={fields} params={params} />;
+    return <VideoBase fields={fields} params={params} page={page} />;
   }
   return <NoDataFallback componentName="Video" />;
 }

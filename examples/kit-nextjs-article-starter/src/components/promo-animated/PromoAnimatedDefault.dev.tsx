@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { Text, RichText } from '@sitecore-content-sdk/nextjs';
@@ -8,6 +10,7 @@ import { NoDataFallback } from '@/utils/NoDataFallback';
 import { PromoAnimatedProps } from './promo-animated.props';
 import { EnumValues } from '@/enumerations/generic.enum';
 import { ColorSchemeLimited as ColorScheme } from '@/enumerations/ColorSchemeLimited.enum';
+import { PromoAnimatedEmptyImageEditing } from './PromoAnimatedEmptyImageEditing';
 import {
   animatedSpriteRenderingParams as spriteOptions,
   imageBgExtensionRenderingParams as imageBgOptions,
@@ -48,7 +51,8 @@ export const PromoAnimatedDefault: React.FC<PromoAnimatedProps> = (props) => {
                 <ImageWrapper
                   image={image}
                   className="@md:max-w-[452px] aspect-square w-full rounded-full object-cover"
-                  wrapperClass="relative aspect-square w-full"
+                  wrapperClass="relative aspect-square w-full overflow-hidden rounded-full"
+                  emptyFieldEditingComponent={PromoAnimatedEmptyImageEditing}
                   sizes="(min-width: 768px) 452px, 350px"
                   priority={true}
                 />
@@ -100,13 +104,18 @@ export const PromoAnimatedDefault: React.FC<PromoAnimatedProps> = (props) => {
                 isPageEditing={isPageEditing}
               >
                 {primaryLink && (
-                  <Button buttonLink={primaryLink} isPageEditing={isPageEditing}></Button>
+                  <Button
+                    buttonLink={primaryLink}
+                    isPageEditing={isPageEditing}
+                    contextTitle={title?.value}
+                  ></Button>
                 )}
                 {secondaryLink && (
                   <Button
                     variant="secondary"
                     buttonLink={secondaryLink}
                     isPageEditing={isPageEditing}
+                    contextTitle={title?.value}
                   ></Button>
                 )}
               </AnimatedSection>

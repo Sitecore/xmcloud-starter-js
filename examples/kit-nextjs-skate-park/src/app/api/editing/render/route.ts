@@ -1,4 +1,4 @@
-import { createEditingRenderRouteHandlers } from '@sitecore-content-sdk/nextjs/route-handler';
+import { createEditingRenderRouteHandlers } from "@sitecore-content-sdk/nextjs/route-handler";
 
 /**
  * API route to handler Sitecore Editor rendeing.
@@ -12,4 +12,4 @@ import { createEditingRenderRouteHandlers } from '@sitecore-content-sdk/nextjs/r
  *  4. Return the rendered HTML for editing mode
  */
 
-export const { GET, OPTIONS } = createEditingRenderRouteHandlers({});
+export const { GET, POST, OPTIONS } = createEditingRenderRouteHandlers({});

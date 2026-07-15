@@ -6,13 +6,13 @@ import { Default as SubmitInfoForm } from '@/components/forms/submitinfo/SubmitI
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { SubmissionFormProps } from './submission-form.props';
 import { ButtonVariants } from '@/enumerations/ButtonStyle.enum';
-import { useI18n } from 'next-localization';
+import { useTranslations } from 'next-intl';
 import { dictionaryKeys } from '@/variables/dictionary';
 
 export const SubmissionFormDefault: React.FC<SubmissionFormProps> = (props) => {
   const { fields } = props || {};
   const { title } = fields || {};
-  const { t } = useI18n();
+  const t = useTranslations();
   const dictionary = {
     SUBMITINFOFORM_FirstNameLabel: t(dictionaryKeys.SUBMITINFOFORM_FirstNameLabel),
     SUBMITINFOFORM_FirstNamePlaceholder: t(dictionaryKeys.SUBMITINFOFORM_FirstNamePlaceholder),

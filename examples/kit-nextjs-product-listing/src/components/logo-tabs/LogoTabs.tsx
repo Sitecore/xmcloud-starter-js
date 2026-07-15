@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Text, Image } from '@sitecore-content-sdk/nextjs';
 import { NoDataFallback } from '@/utils/NoDataFallback';
@@ -5,11 +7,13 @@ import { LogoTabsProps } from './logo-tabs.props';
 import { LogoItem } from './LogoItem';
 import { ButtonBase as Button } from '@/components/button-component/ButtonComponent';
 import { cn } from '@/lib/utils';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 // Default display of the component
 
 export const Default: React.FC<LogoTabsProps> = ({ fields }) => {
-  const { title, backgroundImage, logos, logoTabContent } = fields?.data?.datasource || {};
+  const datasource = getDatasource(fields);
+  const { title, backgroundImage, logos, logoTabContent } = datasource || {};
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
@@ -37,13 +41,13 @@ export const Default: React.FC<LogoTabsProps> = ({ fields }) => {
     }
   };
 
-  if (fields) {
+  if (datasource) {
     return (
       <div className="relative min-h-[800px] w-full overflow-hidden">
         {/* Background Image */}
-        {backgroundImage?.jsonValue?.value?.src && (
+        {getFieldValue(backgroundImage)?.value?.src && (
           <div className="absolute inset-0">
-            <Image field={backgroundImage?.jsonValue} className="h-full w-full object-cover" />
+            <Image field={getFieldValue(backgroundImage)} className="h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/80" />
           </div>
         )}
@@ -51,10 +55,10 @@ export const Default: React.FC<LogoTabsProps> = ({ fields }) => {
         {/* Content */}
         <div className="@container relative z-10 mx-auto max-w-7xl px-4 py-[88px] sm:px-6 lg:px-8">
           {/* Title */}
-          {title?.jsonValue && (
+          {getFieldValue(title) && (
             <Text
               tag="h2"
-              field={title.jsonValue}
+              field={getFieldValue(title)}
               className="font-heading text-primary-foreground mb-11 font-light tracking-tight [font-size:clamp(3rem,2.143rem_+_2.857cqi,4.5rem)]"
             />
           )}
@@ -65,7 +69,7 @@ export const Default: React.FC<LogoTabsProps> = ({ fields }) => {
             {logos?.results && logos.results.length > 0 && (
               <div
                 role="tablist"
-                aria-label={title?.jsonValue?.value || 'Brand tabs'}
+                aria-label={getFieldValue(title)?.value || 'Brand tabs'}
                 className="@md:flex-row @md:justify-between flex w-full flex-col gap-4"
                 onKeyDown={handleKeyDown}
               >
@@ -100,16 +104,16 @@ export const Default: React.FC<LogoTabsProps> = ({ fields }) => {
                   )}
                   hidden={activeTabIndex !== index}
                 >
-                  {content?.heading?.jsonValue && (
+                  {getFieldValue(content?.heading) && (
                     <Text
                       tag="h3"
-                      field={content.heading.jsonValue}
+                      field={getFieldValue(content.heading)}
                       className="font-heading text-primary-foreground mb-4 text-2xl font-medium leading-tight md:text-3xl"
                     />
                   )}
-                  {content?.cta?.jsonValue && (
+                  {getFieldValue(content?.cta) && (
                     <Button
-                      buttonLink={content.cta.jsonValue}
+                      buttonLink={getFieldValue(content.cta)!}
                       variant="rounded-white"
                       className="font-heading px-8 py-2.5 text-sm font-medium"
                     />

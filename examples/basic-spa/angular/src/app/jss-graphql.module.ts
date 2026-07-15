@@ -1,7 +1,7 @@
 import { makeStateKey, TransferState, NgModule, PLATFORM_ID, Inject } from '@angular/core';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { InMemoryCache, NormalizedCacheObject, PossibleTypesMap } from '@apollo/client/core';
-import { Apollo, ApolloModule } from 'apollo-angular';
+import { Apollo } from 'apollo-angular';
 import { HttpBatchLink } from 'apollo-angular/http';
 import { isPlatformServer } from '@angular/common';
 import { environment } from '../environments/environment';
@@ -21,10 +21,12 @@ const STATE_KEY = makeStateKey<NormalizedCacheObject>('apollo.state');
 
 @NgModule({
   imports: [
-    ApolloModule,
     HttpClientModule, // provides HttpClient for HttpLink
   ],
-  providers: [JssGraphQLService],
+  providers: [
+    Apollo,
+    JssGraphQLService
+  ],
 })
 export class GraphQLModule {
   constructor(

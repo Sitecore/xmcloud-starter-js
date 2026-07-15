@@ -1,0 +1,31 @@
+---
+ID: "3c5d6e7f-8a9b-4c0d-1e2f-3a4b5c6d7e8f"
+Parent: "3b4c5d6e-7f8a-4b9c-0d1e-2f3a4b5c6d7e"
+Template: "b2c3d4e5-f6a7-4b5c-9d0e-1f2a3b4c5d6e"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add AI Config/AI Config/Summary"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Fields:
+  - ID: "d4e5f6a7-b8c9-4d5e-1f2a-3b4c5d6e7f8a"
+    Hint: title
+    Value: Alaris
+  - ID: "e5f6a7b8-c9d0-4e5f-2a3b-4c5d6e7f8a9b"
+    Hint: description
+    Value: Alaris is a car brand site with location finder functionality. It helps users discover dealers, service centers, and test drive locations. Built with Sitecore XM Cloud and Next.js, the template delivers performance, personalization, and AI-ready content for automotive and location-based experiences.
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3c5d6e7f-8a9b-4c0d-1e2f-3a4b5c6d7e80"

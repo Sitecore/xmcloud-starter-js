@@ -1,3 +1,5 @@
+'use client';
+
 import { Text } from '@sitecore-content-sdk/nextjs';
 import React, { useState } from 'react';
 import { NoDataFallback } from '@/utils/NoDataFallback';
@@ -37,10 +39,11 @@ export const ProductListingSlider: React.FC<ProductListingProps> = (props) => {
     };
 
     return (
-      <div
+      <section
         className={cn('@container transform-gpu border-b-2 border-t-2 [.border-b-2+&]:border-t-0', {
           [props?.params?.styles]: props?.params?.styles,
         })}
+        aria-labelledby="product-listing-slider-heading"
       >
         <div className="@md:py-20 @lg:py-28 py-12 ">
           <div className="@xl:px-0 @md:pb-0 mx-auto max-w-screen-xl px-0 pb-10 [&:not(.px-6_&):not(.px-8_&):not(.px-10_&)]:px-6">
@@ -52,7 +55,7 @@ export const ProductListingSlider: React.FC<ProductListingProps> = (props) => {
               isPageEditing={isPageEditing}
             >
               <div>
-                <Text tag="h2" className={cn('@md:w-1/2 w-full')} field={title?.jsonValue} />
+                <Text tag="h2" id="product-listing-slider-heading" className={cn('@md:w-1/2 w-full')} field={title?.jsonValue} />
               </div>
             </AnimatedSection>
           </div>
@@ -71,13 +74,14 @@ export const ProductListingSlider: React.FC<ProductListingProps> = (props) => {
                     link={viewAllLink.jsonValue}
                     prefersReducedMotion={isReducedMotion}
                     isPageEditing={isPageEditing}
+                    page={props.page}
                   />
                 </div>
               </SlideCarouselItemWrap>
             ))}
           </SlideCarousel>
         </div>
-      </div>
+      </section>
     );
   }
 

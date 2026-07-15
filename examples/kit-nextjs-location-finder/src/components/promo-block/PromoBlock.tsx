@@ -7,38 +7,8 @@ import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
-import { ComponentProps } from 'lib/component-props';
 import type { JSX } from 'react';
-
-/**
- * Model used for Sitecore Component integration
- */
-type PromoBlockProps = ComponentProps & PromoBlockParams & PromoBlockFields;
-
-// Component Rendering Parameter fields
-type PromoBlockParams = {
-  params: {
-    orientation?: string;
-  };
-};
-
-type PromoBlockFields = {
-  fields: {
-    heading: Field<string>;
-    description: Field<string>;
-    image: ImageField;
-    link?: LinkField;
-  };
-};
-
-type PromoBlockVariationClassesProps = {
-  container: string;
-  image: string;
-  copy: string;
-  row: {
-    initial: string;
-  };
-};
+import type { PromoBlockProps, PromoBlockVariationClassesProps } from './promo-block.props';
 
 const PromoBlock = (props: PromoBlockProps): JSX.Element => {
   const { fields, params } = props;
@@ -85,7 +55,7 @@ const PromoBlock = (props: PromoBlockProps): JSX.Element => {
     variation !== Variation.DEFAULT ? variationTwoClassesVariation : defaultClassesVariation;
   if (fields) {
     return (
-      <div
+      <article
         className={cn('component promo-block grid  columns-1 gap-6 align-middle sm:columns-12', [
           `row-span-${variantChoice.row}`,
         ])}
@@ -109,10 +79,10 @@ const PromoBlock = (props: PromoBlockProps): JSX.Element => {
             )}
           </Flex>
         </Flex>
-        <div className={variantChoice.container}>
-          <ImageWrapper image={image} className={variantChoice.image} />
-        </div>
-      </div>
+        <figure className={variantChoice.container}>
+          <ImageWrapper image={image} className={variantChoice.image} page={props.page} />
+        </figure>
+      </article>
     );
   }
   return <NoDataFallback componentName="Promo Block" />;

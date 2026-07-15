@@ -11,26 +11,14 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 
-export interface GalleryProps {
-  title?: string;
-  description?: string;
-  children: React.ReactNode;
-}
+import type {
+  GalleryItemProps,
+  GalleryProps,
+  SlideCarouselItemWrapProps,
+  SlideCarouselProps,
+} from './slide-carousel.props';
 
-export interface GalleryItemProps {
-  children?: React.ReactNode;
-}
-export interface SlideCarouselProps {
-  title?: string;
-  description?: string;
-  children: React.ReactNode;
-  className?: string;
-}
-
-export interface SlideCarouselItemWrapProps {
-  className?: string;
-  children: React.ReactNode;
-}
+export type { GalleryItemProps, GalleryProps, SlideCarouselItemWrapProps, SlideCarouselProps };
 
 export function SlideCarouselItemWrap({ className = '', children }: SlideCarouselItemWrapProps) {
   return <CarouselItem className={`pl-[20px] ${className}`}>{children}</CarouselItem>;

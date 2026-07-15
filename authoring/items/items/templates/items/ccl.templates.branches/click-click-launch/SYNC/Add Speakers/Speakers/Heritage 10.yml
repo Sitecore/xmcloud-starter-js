@@ -7,7 +7,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{BF1FF2C6-2CAD-4B04-BE71-D82E4FEF0FB5}" />
+    <image mediaid="{AB037694-C94B-435A-B36A-2A2F7C65FFA4}" />
 Languages:
 - Language: en
   Versions:
@@ -52,7 +52,7 @@ Languages:
     - ID: "112118a1-8e2b-4697-aabf-794f3c738861"
       Hint: WarrantyLink
       Value: |
-        <link linktype="external" url="#" target="" text="Returns and Warranty" title="" class=""/>
+        <link linktype="external" url="/" target="" text="Returns and Warranty" title="" class=""/>
     - ID: "161dd364-3753-468f-8801-e6224ec7bbff"
       Hint: Price
       Value: $520.90 USD
@@ -79,21 +79,24 @@ Languages:
         {711D9D90-6882-42C9-B1A3-AF95FB149D2F}
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fadc076e-0cb8-4834-bb66-26cf191d1b25"
+      Value: "aeae6e2b-07c6-44ee-94d2-98d71eca4a19"
+    - ID: "a6e61076-ae6c-4436-8dea-317b5405e54c"
+      Hint: Link
+      Value: "/speakers/heritage-10"
     - ID: "b041d971-f2fd-4514-95b8-7fc8a90cd41f"
       Hint: ShippingLink
       Value: |
-        <link linktype="external" url="#" text="Shipping Options"/>
+        <link linktype="external" url="/" text="Shipping Options"/>
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\brandon.bruno@sitecore.com
+        sitecore\illia.kovalenko@sitecore.com
     - ID: "d0de8ee1-e2cf-4abc-9729-51d602dbbfe2"
       Hint: AmpPower
       Value: 80AMPS
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250630T170837Z
+      Value: 20251217T143314Z
     - ID: "ea0a4ef8-eecd-472b-95a9-59c9f801494e"
       Hint: ProductImage
       Value: |

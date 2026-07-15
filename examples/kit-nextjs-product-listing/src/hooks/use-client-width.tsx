@@ -4,14 +4,6 @@ import { useEffect, useState, type RefObject } from 'react';
 
 type WidthTransformFn = (width: number) => number;
 
-/**
- * Hook that returns the client width of an element using a ref.
- * Updates when the window is resized.
- *
- * @param ref - React ref object pointing to an HTML element
- * @param transformWidth - Optional function to transform the width value (e.g., set max width)
- * @returns The client width of the element in pixels, optionally transformed
- */
 export function useClientWidth<T extends HTMLElement>(
   ref: RefObject<T | null>,
   transformWidth?: WidthTransformFn

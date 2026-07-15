@@ -1,4 +1,4 @@
-import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { AppPlaceholder } from '@sitecore-content-sdk/nextjs';
 import { Container3070Props } from '@/components/container/container-3070/container-3070.props';
 import {
   getContainerPlaceholderProps,
@@ -8,9 +8,7 @@ import { Flex, FlexItem } from '@/components/flex/Flex.dev';
 import { cn } from '@/lib/utils';
 
 export const Default: React.FC<Container3070Props> = (props) => {
-  const { rendering, left, right } = props;
-
-  const { page } = useSitecore();
+  const { rendering, left, right, page, componentMap } = props;
 
   const { isEditing } = page.mode;
 
@@ -31,15 +29,15 @@ export const Default: React.FC<Container3070Props> = (props) => {
     <section
       className={cn('container--3070', 'mt-4', {
         'mt-0': excludeTopMargin,
-        [props.params.styles]: props?.params?.styles,
+        [props.params.styles as string]: props?.params?.styles,
       })}
     >
       <Flex wrap="nowrap">
         <FlexItem as="div" basis="3/10">
-          <Placeholder name={leftPlaceholders.dynamicKey} rendering={rendering} />
+          <AppPlaceholder page={page} componentMap={componentMap} name={leftPlaceholders.dynamicKey} rendering={rendering} />
         </FlexItem>
         <FlexItem as="div" basis="7/10">
-          <Placeholder name={rightPlaceholders.dynamicKey} rendering={rendering} />
+          <AppPlaceholder page={page} componentMap={componentMap} name={rightPlaceholders.dynamicKey} rendering={rendering} />
         </FlexItem>
       </Flex>
     </section>

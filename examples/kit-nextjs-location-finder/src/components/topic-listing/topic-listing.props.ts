@@ -1,5 +1,5 @@
 import { Field, LinkField } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 import { IconName } from '@/enumerations/Icon.enum';
 
 export interface TopicListingParams {
@@ -18,7 +18,7 @@ export interface TopicListingFields {
   };
 }
 
-export interface TopicListingProps extends ComponentProps {
+export interface TopicListingProps extends OptionalComponentProps {
   params: TopicListingParams;
   fields: TopicListingFields;
 }
@@ -33,3 +33,4 @@ export type TopicItemProps = {
     };
   };
 };
+

@@ -22,11 +22,7 @@ const proseVars = [
 ];
 
 module.exports = {
-    content: [
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './**/globals.css',
-    ],
+    content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         extend: {
             animation: {

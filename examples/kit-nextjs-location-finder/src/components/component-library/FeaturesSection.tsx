@@ -3,7 +3,7 @@ import {
   Link as ContentSdkLink,
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
-  useSitecore,
+  Page,
 } from '@sitecore-content-sdk/nextjs';
 import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 import { Button } from 'shadcd/components/ui/button';
@@ -1506,9 +1506,8 @@ export const FeaturesSection22 = (props: FeatureSectionProps): JSX.Element => {
   );
 };
 
-export const FeaturesSection23 = (props: FeatureSectionProps): JSX.Element => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+export const FeaturesSection23 = (props: FeatureSectionProps & { page: Page }): JSX.Element => {
+  const { isEditing } = props.page.mode;
 
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
   const id = props.params.RenderingIdentifier;
@@ -1571,9 +1570,8 @@ export const FeaturesSection23 = (props: FeatureSectionProps): JSX.Element => {
   );
 };
 
-export const FeaturesSection24 = (props: FeatureSectionProps): JSX.Element => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+export const FeaturesSection24 = (props: FeatureSectionProps & { page: Page }): JSX.Element => {
+  const { isEditing } = props.page.mode;
 
   const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
   const id = props.params.RenderingIdentifier;

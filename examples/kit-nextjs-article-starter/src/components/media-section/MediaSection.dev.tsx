@@ -99,8 +99,30 @@ export const Default = ({
           poster={imgSrc.src}
           preload="metadata"
           loading="lazy"
+          onError={(e) => {
+            // Handle video loading errors gracefully (e.g., pexels.com failures)
+            // Suppress console errors for expected network failures
+            const videoElement = e.currentTarget;
+            if (videoElement) {
+              videoElement.style.display = 'none';
+            }
+            // Only log in development mode
+            if (process.env.NODE_ENV === 'development') {
+              console.warn('Video failed to load:', video);
+            }
+          }}
         >
-          <source src={video} type="video/mp4" />
+          <source
+            src={video}
+            type="video/mp4"
+            onError={() => {
+              // Suppress console errors for expected network failures (e.g., pexels.com)
+              // Only log in development mode
+              if (process.env.NODE_ENV === 'development') {
+                console.warn('Video source failed to load:', video);
+              }
+            }}
+          />
         </video>
       )}
       {(reducedMotion && image) || (!video && image) ? (

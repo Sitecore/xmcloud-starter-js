@@ -169,6 +169,7 @@ export const ImageCarouselPreviewBelow = (props: ImageCarouselProps) => {
                       <ImageWrapper
                         image={slide.image?.jsonValue}
                         className="relative z-0 h-auto w-full"
+                        page={props.page}
                       />
                     </div>
                   </CarouselItem>
@@ -227,6 +228,7 @@ export const ImageCarouselPreviewBelow = (props: ImageCarouselProps) => {
                         className={cn(thumbnailImageClasses, {
                           [thumbnailActiveClasses]: index === currentIndex,
                         })}
+                        page={props.page}
                       />
                     </button>
                   </CarouselItem>

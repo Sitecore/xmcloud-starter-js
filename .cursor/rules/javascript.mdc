@@ -67,7 +67,7 @@ File Organization:
 - Component directories contain main file, variants, and props
 - Main component file should contain variants and props following the Locality of Behavior pattern
 - Using `.dev.tsx` files for variant implementations is discouraged unless maintainability becomes dificult for the componenent and seperation can not be avoided
-- Shared utilities in dedicated directories
+- Shared utilities in dedicated directories within each starter (starters are independent; copy utilities into the starter, do not share across starters)
 - Group UI components in `ui/` subdirectory
 
 ## Error Handling
@@ -144,12 +144,6 @@ TypeScript:
 
 ## Documentation
 
-JSDoc Comments:
-- All new functions, interfaces, classes must have JSDoc style comments
-- Include @param tags for all parameters with types and descriptions
-- Include @returns tag for return values with type and description
-- Use descriptive comments that explain the purpose and behavior
-
 Import Patterns:
 - Use `type` imports for TypeScript types: `import type React from 'react'`
 - Import Sitecore components: `import { Text, RichText, Image, useSitecore } from '@sitecore-content-sdk/nextjs'`
@@ -169,21 +163,6 @@ import { ComponentProps } from '@/lib/component-props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { ButtonBase } from '@/components/button-component/ButtonComponent';
-
-/**
- * Hero component for displaying prominent content on XM Cloud pages
- * @param {HeroProps} props - Component props from XM Cloud datasource
- * @returns {JSX.Element} The rendered hero component with variants support
- */
-export const HeroDefault: React.FC<HeroProps> = (props) => {
-  const { fields, isPageEditing } = props;
-  
-  if (!fields?.data?.datasource) {
-    return <NoDataFallback componentName="Hero" />;
-  }
-  
-  // Component implementation
-};
 ```
 
 Referenced:

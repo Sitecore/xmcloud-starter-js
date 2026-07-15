@@ -1,8 +1,9 @@
 import type { Dealership, DealershipFields } from './location-search.props';
+import { getFieldValue as getNormalizedFieldValue } from '@/lib/component-props';
 
 // Helper function to get plain value from Sitecore field
 const getFieldValue = (field: { jsonValue?: { value?: string } } | undefined): string => {
-  return field?.jsonValue?.value || '';
+  return getNormalizedFieldValue<{ value?: string }>(field as never)?.value || '';
 };
 
 // Function to geocode an address using Google Maps Geocoding API

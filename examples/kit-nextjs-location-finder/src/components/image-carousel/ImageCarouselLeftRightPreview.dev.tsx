@@ -118,6 +118,7 @@ export const ImageCarouselLeftRightPreview = (props: ImageCarouselProps) => {
             <ImageWrapper
               image={slides[prevIndex]?.image?.jsonValue}
               className={previewImageClasses}
+              page={props.page}
             />
           </button>
 
@@ -158,6 +159,7 @@ export const ImageCarouselLeftRightPreview = (props: ImageCarouselProps) => {
                     <ImageWrapper
                       image={slide?.image?.jsonValue}
                       className="relative z-0 h-auto w-full"
+                      page={props.page}
                     />
                   </div>
                 </CarouselItem>
@@ -174,6 +176,7 @@ export const ImageCarouselLeftRightPreview = (props: ImageCarouselProps) => {
             <ImageWrapper
               image={slides[nextIndex]?.image?.jsonValue}
               className={previewImageClasses}
+              page={props.page}
             />
           </button>
         </div>

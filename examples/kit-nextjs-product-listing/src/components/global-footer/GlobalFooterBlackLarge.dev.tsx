@@ -4,9 +4,10 @@ import type React from 'react';
 
 import { useRef } from 'react';
 import { Text } from '@sitecore-content-sdk/nextjs';
-import type { GlobalFooterProps } from './global-footer.props';
+import type { FooterSocialLink, GlobalFooterProps } from './global-footer.props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { cn } from '@/lib/utils';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 import { Default as EmailSignupForm } from '@/components/forms/email/EmailSignupForm.dev';
 import { EditableButton } from '@/components/button-component/ButtonComponent';
 import { AnimatedHoverNav } from '@/components/ui/animated-hover-nav';
@@ -17,7 +18,7 @@ export const GlobalFooterBlackLarge: React.FC<GlobalFooterProps> = (props) => {
   const { fields, isPageEditing } = props;
   const { dictionary } = fields;
   const { footerNavLinks, footerCopyright, socialLinks, tagline, emailSubscriptionTitle } =
-    fields.data.datasource ?? {};
+    getDatasource(fields as any) ?? {};
   const footerRef = useRef<HTMLDivElement>(null);
   const navContainerRef = useRef<HTMLDivElement>(null);
   const socialContainerRef = useRef<HTMLDivElement>(null);
@@ -39,7 +40,7 @@ export const GlobalFooterBlackLarge: React.FC<GlobalFooterProps> = (props) => {
                 <div className="max-w-[400px]">
                   <Text
                     tag="h2"
-                    field={tagline?.jsonValue}
+                    field={getFieldValue(tagline as any)}
                     className="font-heading text-75xl mb-10 text-pretty font-light antialiased"
                   />
                   {/* Navigation links */}
@@ -47,7 +48,7 @@ export const GlobalFooterBlackLarge: React.FC<GlobalFooterProps> = (props) => {
 
                 <Text
                   className="font-body mb-4 text-xl font-medium"
-                  field={emailSubscriptionTitle?.jsonValue}
+                  field={getFieldValue(emailSubscriptionTitle as any)}
                   tag="p"
                 />
 
@@ -110,15 +111,15 @@ export const GlobalFooterBlackLarge: React.FC<GlobalFooterProps> = (props) => {
                 mobileBreakpoint={null}
               >
                 <ul className="@sm:gap-6 mx-auto flex items-center gap-4">
-                  {socialLinks?.results?.map((socialLink, index) => (
+                  {socialLinks?.results?.map((socialLink: FooterSocialLink, index: number) => (
                     <li key={index} className="relative z-10">
                       <EditableButton
-                        buttonLink={socialLink?.link?.jsonValue}
+                        buttonLink={getFieldValue(socialLink?.link as any)}
                         className={cn('relative hover:bg-transparent')}
                         variant="ghost"
                         size={isPageEditing ? 'default' : 'icon'}
                         isPageEditing={isPageEditing}
-                        icon={socialLink?.socialIcon?.jsonValue}
+                        icon={getFieldValue(socialLink?.socialIcon as any)}
                         asIconLink={true}
                       />
                     </li>
@@ -127,7 +128,7 @@ export const GlobalFooterBlackLarge: React.FC<GlobalFooterProps> = (props) => {
               </AnimatedHoverNav>
             </div>
             {/* Copyright text */}
-            <Text field={footerCopyright?.jsonValue} encode={false} />
+            <Text field={getFieldValue(footerCopyright as any)} encode={false} />
           </div>
         </div>
       </footer>
@@ -135,3 +136,5 @@ export const GlobalFooterBlackLarge: React.FC<GlobalFooterProps> = (props) => {
   }
   return <NoDataFallback componentName="Global Footer - Black Large" />;
 };
+
+

@@ -14,7 +14,7 @@ Languages:
     - ID: "4ca9bbc2-95df-411f-8347-cfc9803b9ae8"
       Hint: InstagramLink
       Value: |
-        <link linktype="external" url="#" target="" text="Instagram" title="" class=""/>
+        <link linktype="external" https://www.instagram.com/" target="" text="Instagram" title="" class=""/>
     - ID: "50b8a490-082d-4b70-a654-59ffedabe9bd"
       Hint: CopyrightText
       Value: |
@@ -33,11 +33,11 @@ Languages:
     - ID: "a034ad1f-79eb-4b6a-9860-e5465a3e2733"
       Hint: LinkedinLink
       Value: |
-        <link linktype="external" url="#" target="" text="Linkedin" title="" class=""/>
+        <link linktype="external" url="https://www.linkedin.com/" target="" text="Linkedin" title="" class=""/>
     - ID: "a826b100-dcc9-4a5d-adc2-59aa5367238b"
       Hint: FacebookLink
       Value: |
-        <link linktype="external" url="#" target="" text="Facebook" title="" class=""/>
+        <link linktype="external" url="https://www.facebook.com/" target="" text="Facebook" title="" class=""/>
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

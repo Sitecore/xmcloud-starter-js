@@ -3,13 +3,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import type { GoogleMapProps } from './google-maps.props';
-
-declare global {
-  interface Window {
-    google: any;
-    initMap: () => void;
-  }
-}
+import { useGoogleMaps } from '@/hooks/use-google-maps';
 
 export const GoogleMap = ({
   apiKey,
@@ -22,37 +16,15 @@ export const GoogleMap = ({
   const mapRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<any>(null);
   const [markers, setMarkers] = useState<any[]>([]);
-  const [isLoaded, setIsLoaded] = useState(false);
   const bounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Use the global Google Maps loader hook
+  const { isLoaded, error } = useGoogleMaps(apiKey);
 
   // Helper function to get plain value from Sitecore field
   const getFieldValue = (field: { jsonValue?: { value?: string } } | undefined): string => {
     return field?.jsonValue?.value || '';
   };
-
-  // Load Google Maps API
-  useEffect(() => {
-    if (window.google) {
-      setIsLoaded(true);
-      return;
-    }
-
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-
-    window.initMap = () => {
-      setIsLoaded(true);
-    };
-
-    document.head.appendChild(script);
-
-    return () => {
-      window.initMap = () => {};
-      document.head.removeChild(script);
-    };
-  }, [apiKey]);
 
   // Initialize map
   useEffect(() => {
@@ -258,9 +230,17 @@ export const GoogleMap = ({
 
   return (
     <div ref={mapRef} className="h-full w-full">
-      {!isLoaded && (
+      {!isLoaded && !error && (
         <div className="flex h-full w-full items-center justify-center bg-gray-300">
           <div className="text-lg font-medium">Loading map...</div>
+        </div>
+      )}
+      {error && (
+        <div className="flex h-full w-full items-center justify-center bg-gray-300">
+          <div className="text-center px-4">
+            <div className="text-lg font-medium text-red-600">Failed to load map</div>
+            <p className="mt-1 text-sm text-gray-600">{error.message}</p>
+          </div>
         </div>
       )}
     </div>

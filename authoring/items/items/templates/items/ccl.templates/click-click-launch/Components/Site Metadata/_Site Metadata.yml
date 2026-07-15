@@ -4,6 +4,9 @@ Parent: "ce2915f1-9928-4e33-833d-352bfb0d3157"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: "/sitecore/templates/Project/click-click-launch/Components/Site Metadata/_Site Metadata"
 SharedFields:
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{2CF67CDE-EA27-425D-95D1-1DA80A507ABD}"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "0ba35638-8ae7-4366-961d-957cc215cf72"

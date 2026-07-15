@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Text } from '@sitecore-content-sdk/nextjs';
 import { ButtonBase } from '@/components/button-component/ButtonComponent';

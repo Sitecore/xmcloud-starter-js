@@ -1,32 +1,15 @@
-import { Text as ContentSdkText, Placeholder } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from 'lib/component-props';
+import { Text as ContentSdkText, AppPlaceholder } from '@sitecore-content-sdk/nextjs';
 import { useMemo, type JSX } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from 'shadcd/components/ui/tabs';
-import { IGQLTextField } from 'types/igql';
-
-type Fields = {
-  data: {
-    datasource: {
-      children: {
-        results: {
-          id: string;
-          title: IGQLTextField;
-        }[];
-      };
-    };
-  };
-};
-
-type PlaceholderTabsProps = ComponentProps & {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import componentMap from '.sitecore/component-map';
+import type { PlaceholderTabsProps } from './placeholder-tabs.props';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 export const Default = (props: PlaceholderTabsProps): JSX.Element => {
-  const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
+  const datasource = useMemo(() => getDatasource(props.fields), [props.fields]);
   const phSuffixes = ['one', 'two', 'three', 'four', 'five'];
 
-  const tabs = datasource.children.results.slice(0, phSuffixes.length);
+  const tabs = datasource?.children?.results?.slice(0, phSuffixes.length) ?? [];
 
   const tabsTriggerActiveStyles =
     'data-[state=active]:pt-3 data-[state=active]:bg-white data-[state=active]:border-b-2 data-[state=active]:border-b-white data-[state=active]:z-20';
@@ -46,7 +29,7 @@ export const Default = (props: PlaceholderTabsProps): JSX.Element => {
                     value={tab.id}
                     className={`relative basis-auto px-4 py-2 -ml-[2px] first:ml-0 border-2 !border-e-2 rounded-tr-sm rounded-tl-sm text-base transition-all hover:pt-3 ${tabsTriggerActiveStyles} ${tabsTriggerInactiveStyles}`}
                   >
-                    <ContentSdkText field={tab.title.jsonValue} />
+                    <ContentSdkText field={getFieldValue(tab.title)} />
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -54,9 +37,11 @@ export const Default = (props: PlaceholderTabsProps): JSX.Element => {
 
             {tabs.map((tab, index) => (
               <TabsContent key={tab.id} value={tab.id} className="relative border-0 p-0">
-                <Placeholder
+                <AppPlaceholder
                   name={`tab-content-${phSuffixes[index]}-${props.params.DynamicPlaceholderId}`}
                   rendering={props.rendering}
+                  page={props.page}
+                  componentMap={componentMap}
                 />
               </TabsContent>
             ))}

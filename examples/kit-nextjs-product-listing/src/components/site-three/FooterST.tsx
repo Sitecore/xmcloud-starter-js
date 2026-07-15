@@ -4,27 +4,66 @@ import {
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
   Link as ContentSdkLink,
-  Field,
-  RichTextField,
   LinkField,
-  Placeholder,
+  AppPlaceholder,
 } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from 'lib/component-props';
+import componentMap from '.sitecore/component-map';
+import type { FooterSTProps, SocialLinksProps } from './footer-st.props';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
-interface Fields {
-  Title: Field<string>;
-  CopyrightText: RichTextField;
-  FacebookLink: LinkField;
-  InstagramLink: LinkField;
-  LinkedinLink: LinkField;
+/** Returns true if the link field has a valid href (not a placeholder like # or http://#). */
+function hasValidLink(field: LinkField | undefined): boolean {
+  const href = field?.value?.href;
+  return !!(href && href !== '#' && !href.startsWith('http://#'));
 }
 
-type FooterSTProps = ComponentProps & {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+const SocialLinks = ({ fields }: SocialLinksProps) => (
+  <div className="flex justify-center gap-4">
+    {hasValidLink(getFieldValue(fields?.FacebookLink)) ? (
+      <ContentSdkLink
+        field={getFieldValue(fields?.FacebookLink)!}
+        prefetch={false}
+        aria-label="Facebook"
+      >
+        <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
+      </ContentSdkLink>
+    ) : (
+      <span role="img" aria-label="Facebook">
+        <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
+      </span>
+    )}
+    {hasValidLink(getFieldValue(fields?.InstagramLink)) ? (
+      <ContentSdkLink
+        field={getFieldValue(fields?.InstagramLink)!}
+        prefetch={false}
+        aria-label="Instagram"
+      >
+        <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
+      </ContentSdkLink>
+    ) : (
+      <span role="img" aria-label="Instagram">
+        <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
+      </span>
+    )}
+    {hasValidLink(getFieldValue(fields?.LinkedinLink)) ? (
+      <ContentSdkLink
+        field={getFieldValue(fields?.LinkedinLink)!}
+        prefetch={false}
+        aria-label="LinkedIn"
+      >
+        <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
+      </ContentSdkLink>
+    ) : (
+      <span role="img" aria-label="LinkedIn">
+        <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
+      </span>
+    )}
+  </div>
+);
 
 export const Default = (props: FooterSTProps) => {
+  const fields = getDatasource(props.fields);
+
   return (
     <section
       className={`relative bg-primary pt-16 lg:pt-30 pb-8 bg-cover bg-center ${props.params.styles}`}
@@ -33,37 +72,31 @@ export const Default = (props: FooterSTProps) => {
     >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl lg:text-7xl mb-10 lg:mb-20 uppercase">
-          <ContentSdkText field={props.fields?.Title} />
+          <ContentSdkText field={getFieldValue(fields?.Title)} />
         </h2>
         <div className="max-w-5xl mx-auto mb-6 lg:mb-12 font-(family-name:--font-heading) text-2xl uppercase">
-          <Placeholder
+          <AppPlaceholder
             name={`footer-primary-links-${props.params.DynamicPlaceholderId}`}
             rendering={props.rendering}
+            page={props.page}
+            componentMap={componentMap}
           />
         </div>
         <div className="max-w-5xl mx-auto font-(family-name:--font-accent) font-medium">
-          <Placeholder
+          <AppPlaceholder
             name={`footer-secondary-links-${props.params.DynamicPlaceholderId}`}
             rendering={props.rendering}
+            page={props.page}
+            componentMap={componentMap}
           />
         </div>
       </div>
       <div className="h-20 lg:h-40 bg-sound-waves bg-contain bg-repeat bg-center my-12 lg:my-16"></div>
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-4 items-center lg:flex-row lg:justify-between">
-          <div className="flex justify-center gap-4">
-            <ContentSdkLink field={props.fields?.FacebookLink} prefetch={false}>
-              <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-            </ContentSdkLink>
-            <ContentSdkLink field={props.fields?.InstagramLink} prefetch={false}>
-              <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-            </ContentSdkLink>
-            <ContentSdkLink field={props.fields?.LinkedinLink} prefetch={false}>
-              <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-            </ContentSdkLink>
-          </div>
+          <SocialLinks fields={fields} />
           <div>
-            <ContentSdkRichText field={props.fields?.CopyrightText} />
+            <ContentSdkRichText field={getFieldValue(fields?.CopyrightText)} />
           </div>
         </div>
       </div>
@@ -72,6 +105,8 @@ export const Default = (props: FooterSTProps) => {
 };
 
 export const LogoLeft = (props: FooterSTProps) => {
+  const fields = getDatasource(props.fields);
+
   return (
     <section
       className={`relative bg-primary pt-16 lg:pt-30 bg-cover bg-center ${props.params.styles}`}
@@ -81,37 +116,31 @@ export const LogoLeft = (props: FooterSTProps) => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2">
           <h2 className="text-4xl lg:text-7xl mb-10 lg:mb-0 uppercase">
-            <ContentSdkText field={props.fields?.Title} />
+            <ContentSdkText field={getFieldValue(fields?.Title)} />
           </h2>
           <div className="lg:flex justify-end items-start gap-12">
             <div className="mb-6 lg:mb-0 font-(family-name:--font-heading) uppercase text-2xl">
-              <Placeholder
+              <AppPlaceholder
                 name={`footer-primary-links-${props.params.DynamicPlaceholderId}`}
                 rendering={props.rendering}
+                page={props.page}
+                componentMap={componentMap}
               />
             </div>
             <div className="font-(family-name:--font-accent) font-medium">
-              <Placeholder
+              <AppPlaceholder
                 name={`footer-secondary-links-${props.params.DynamicPlaceholderId}`}
                 rendering={props.rendering}
+                page={props.page}
+                componentMap={componentMap}
               />
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-4 items-center lg:flex-row lg:justify-between mt-8">
-          <div className="flex justify-center gap-4">
-            <ContentSdkLink field={props.fields?.FacebookLink} prefetch={false}>
-              <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-            </ContentSdkLink>
-            <ContentSdkLink field={props.fields?.InstagramLink} prefetch={false}>
-              <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-            </ContentSdkLink>
-            <ContentSdkLink field={props.fields?.LinkedinLink} prefetch={false}>
-              <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-            </ContentSdkLink>
-          </div>
+          <SocialLinks fields={fields} />
           <div>
-            <ContentSdkRichText field={props.fields?.CopyrightText} />
+            <ContentSdkRichText field={getFieldValue(fields?.CopyrightText)} />
           </div>
         </div>
       </div>
@@ -121,6 +150,8 @@ export const LogoLeft = (props: FooterSTProps) => {
 };
 
 export const LogoRight = (props: FooterSTProps) => {
+  const fields = getDatasource(props.fields);
+
   return (
     <section
       className={`relative bg-primary pb-8 bg-cover bg-center ${props.params.styles}`}
@@ -131,37 +162,31 @@ export const LogoRight = (props: FooterSTProps) => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2">
           <h2 className="lg:order-2 text-4xl lg:text-7xl mb-10 lg:mb-0 lg:text-right uppercase">
-            <ContentSdkText field={props.fields?.Title} />
+            <ContentSdkText field={getFieldValue(fields?.Title)} />
           </h2>
           <div className="lg:flex items-start gap-12">
             <div className="mb-6 lg:mb-0 font-(family-name:--font-heading) uppercase text-2xl">
-              <Placeholder
+              <AppPlaceholder
                 name={`footer-primary-links-${props.params.DynamicPlaceholderId}`}
                 rendering={props.rendering}
+                page={props.page}
+                componentMap={componentMap}
               />
             </div>
             <div className="font-(family-name:--font-accent) font-medium">
-              <Placeholder
+              <AppPlaceholder
                 name={`footer-secondary-links-${props.params.DynamicPlaceholderId}`}
                 rendering={props.rendering}
+                page={props.page}
+                componentMap={componentMap}
               />
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-4 items-center lg:flex-row lg:justify-between mt-8">
-          <div className="flex justify-center gap-4">
-            <ContentSdkLink field={props.fields?.FacebookLink} prefetch={false}>
-              <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-            </ContentSdkLink>
-            <ContentSdkLink field={props.fields?.InstagramLink} prefetch={false}>
-              <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-            </ContentSdkLink>
-            <ContentSdkLink field={props.fields?.LinkedinLink} prefetch={false}>
-              <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-            </ContentSdkLink>
-          </div>
+          <SocialLinks fields={fields} />
           <div>
-            <ContentSdkRichText field={props.fields?.CopyrightText} />
+            <ContentSdkRichText field={getFieldValue(fields?.CopyrightText)} />
           </div>
         </div>
       </div>
@@ -170,6 +195,8 @@ export const LogoRight = (props: FooterSTProps) => {
 };
 
 export const Centered = (props: FooterSTProps) => {
+  const fields = getDatasource(props.fields);
+
   return (
     <section
       className={`relative bg-primary py-8 lg:py-20 bg-cover bg-center ${props.params.styles}`}
@@ -180,36 +207,30 @@ export const Centered = (props: FooterSTProps) => {
       <div className="relative container mx-auto px-4 z-20">
         <div className="grid lg:grid-cols-3 lg:gap-4">
           <h2 className="text-4xl lg:text-5xl mb-10 lg:mb-0 uppercase">
-            <ContentSdkText field={props.fields?.Title} />
+            <ContentSdkText field={getFieldValue(fields?.Title)} />
           </h2>
           <div>
             <div className="mb-6 lg:mb-12 font-(family-name:--font-heading) uppercase text-2xl">
-              <Placeholder
+              <AppPlaceholder
                 name={`footer-primary-links-${props.params.DynamicPlaceholderId}`}
                 rendering={props.rendering}
+                page={props.page}
+                componentMap={componentMap}
               />
             </div>
             <div className="font-(family-name:--font-accent) font-medium">
-              <Placeholder
+              <AppPlaceholder
                 name={`footer-secondary-links-${props.params.DynamicPlaceholderId}`}
                 rendering={props.rendering}
+                page={props.page}
+                componentMap={componentMap}
               />
             </div>
           </div>
           <div className="flex flex-col gap-4 items-center lg:items-end lg:self-end mt-8">
-            <div className="flex justify-center gap-4">
-              <ContentSdkLink field={props.fields?.FacebookLink} prefetch={false}>
-                <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-              </ContentSdkLink>
-              <ContentSdkLink field={props.fields?.InstagramLink} prefetch={false}>
-                <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-              </ContentSdkLink>
-              <ContentSdkLink field={props.fields?.LinkedinLink} prefetch={false}>
-                <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-              </ContentSdkLink>
-            </div>
+            <SocialLinks fields={fields} />
             <div>
-              <ContentSdkRichText field={props.fields.CopyrightText} />
+              <ContentSdkRichText field={getFieldValue(fields?.CopyrightText)} />
             </div>
           </div>
         </div>

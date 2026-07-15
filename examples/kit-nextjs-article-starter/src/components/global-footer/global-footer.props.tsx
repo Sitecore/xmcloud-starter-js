@@ -10,9 +10,9 @@ export type GlobalFooterProps = ComponentProps &
   };
 
 export type GlobalFooterFields = {
-  fields: {
-    data: {
-      datasource: {
+  fields?: {
+    data?: {
+      datasource?: {
         footerLogo?: { jsonValue: ImageField };
         footerPromoTitle?: { jsonValue: Field<string> };
         footerPromoDescription?: { jsonValue: Field<string> };
@@ -25,10 +25,10 @@ export type GlobalFooterFields = {
 };
 
 export type FooterNavigationColumnProps = ComponentProps & {
-  fields: {
-    data: {
-      datasource: {
-        header: {
+  fields?: {
+    data?: {
+      datasource?: {
+        header?: {
           jsonValue: Field<string>;
         };
         items?: {

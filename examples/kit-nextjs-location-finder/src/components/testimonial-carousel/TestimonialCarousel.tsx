@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useRef, useCallback, MouseEvent } from 'react';
 import { debounce } from 'radash';
 import {
@@ -15,6 +17,8 @@ import {
 } from './testimonial-carousel.props';
 import { Default as TestimonialCarouselItem } from './TestimonialCarouselItem';
 import { NoDataFallback } from '@/utils/NoDataFallback';
+import { generateReviewSchema } from '@/lib/structured-data/schema';
+import { StructuredData } from '@/components/structured-data/StructuredData';
 
 export const Default: React.FC<TestimonialCarouselProps> = (props) => {
   const { fields } = props || {};
@@ -102,20 +106,35 @@ export const Default: React.FC<TestimonialCarouselProps> = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [api, isFocused]);
   if (fields) {
+    // Generate Review schemas for each testimonial
+    const reviewSchemas = children?.results?.map((item) =>
+      generateReviewSchema(
+        item.testimonialAttribution?.jsonValue?.value?.toString() || 'Anonymous',
+        item.testimonialQuote?.jsonValue?.value?.toString()
+      )
+    ) || [];
+
     return (
-      <div
-        className={cn(
-          '@container component testimonial-carousel text-secondary-foreground @md:px-6 @lg:px-0 overflow-hidden rounded-[24px]',
-          { [`${props?.params?.styles}`]: props?.params?.styles }
-        )}
-        ref={carouselRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        onFocus={() => setIsFocused(true)} // Added focus handler
-        onBlur={() => setIsFocused(false)} // Added blur handler
-        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-        tabIndex={0} // Added tabIndex
-      >
+      <>
+        {/* Review structured data for each testimonial */}
+        {reviewSchemas.map((schema, index) => (
+          <StructuredData key={index} id={`review-schema-${index}`} data={schema} />
+        ))}
+        
+        <section
+          className={cn(
+            '@container component testimonial-carousel text-secondary-foreground @md:px-6 @lg:px-0 overflow-hidden rounded-[24px]',
+            { [`${props?.params?.styles}`]: props?.params?.styles }
+          )}
+          ref={carouselRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          onFocus={() => setIsFocused(true)} // Added focus handler
+          onBlur={() => setIsFocused(false)} // Added blur handler
+          tabIndex={0} // Added tabIndex
+          aria-label="Customer testimonials"
+          aria-roledescription="carousel"
+        >
         <Carousel
           setApi={setApi}
           opts={{
@@ -164,10 +183,11 @@ export const Default: React.FC<TestimonialCarouselProps> = (props) => {
             disabled={!canScrollNext}
           />
         </Carousel>
-        <div className="sr-only" aria-live="polite" aria-atomic="true">
-          {announcement}
-        </div>
-      </div>
+          <div className="sr-only" aria-live="polite" aria-atomic="true">
+            {announcement}
+          </div>
+        </section>
+      </>
     );
   }
 

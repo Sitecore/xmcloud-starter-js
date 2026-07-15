@@ -1,7 +1,6 @@
-'use client';
-
 import type { LocationSearchItemProps } from './location-search.props';
 import { Text } from '@sitecore-content-sdk/nextjs';
+import { getFieldValue } from '@/lib/component-props';
 
 export const LocationSearchItem = ({
   dealership,
@@ -24,18 +23,18 @@ export const LocationSearchItem = ({
     >
       <div className="flex items-start justify-between">
         <div>
-          {dealership?.dealershipName?.jsonValue && (
+          {getFieldValue(dealership?.dealershipName) && (
             <Text
               tag="p"
-              field={dealership.dealershipName.jsonValue}
+              field={getFieldValue(dealership.dealershipName)}
               className="font-heading @md:text-3xl text-2xl font-normal"
             />
           )}
           <p className="font-heading mt-3 text-lg">
-            <Text field={dealership.dealershipAddress?.jsonValue} />
+            <Text field={getFieldValue(dealership.dealershipAddress)} />
             {', '}
-            <Text field={dealership.dealershipCity?.jsonValue} />{' '}
-            <Text field={dealership.dealershipZipCode?.jsonValue} />
+            <Text field={getFieldValue(dealership.dealershipCity)} />{' '}
+            <Text field={getFieldValue(dealership.dealershipZipCode)} />
           </p>
         </div>
         {dealership.distance !== undefined && (

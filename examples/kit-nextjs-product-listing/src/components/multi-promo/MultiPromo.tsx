@@ -1,4 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+'use client';
+
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { RichText, Text } from '@sitecore-content-sdk/nextjs';
 import { debounce } from 'radash';
 import {
@@ -10,13 +12,14 @@ import {
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { MultiPromoItemProps, MultiPromoProps } from './multi-promo.props';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 import { Default as MultiPromoItem } from './MultiPromoItem.dev';
 
 export const Default: React.FC<MultiPromoProps> = (props) => {
   const { fields, params } = props;
   const { numColumns } = params ?? {};
-  const { children } = fields?.data?.datasource ?? {};
-  const { title, description } = fields?.data?.datasource ?? {};
+  const datasource = useMemo(() => getDatasource(fields), [fields]);
+  const { children, title, description } = datasource ?? {};
   const [api, setApi] = useState<CarouselApi>();
   const [announcement, setAnnouncement] = useState('');
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -80,7 +83,7 @@ export const Default: React.FC<MultiPromoProps> = (props) => {
             <div className="flex-grow md:basis-[60] lg:basis-[50]">
               <Text
                 tag="h2"
-                field={title?.jsonValue}
+                field={getFieldValue(title)}
                 className="font-heading text-box-trim-both-baseline -ml-1 max-w-[20ch] text-pretty text-4xl font-normal leading-[1.1333] tracking-tighter antialiased sm:text-5xl md:max-w-[17.5ch] lg:text-6xl"
               />
             </div>
@@ -89,7 +92,7 @@ export const Default: React.FC<MultiPromoProps> = (props) => {
             <div className="md:basis-[40] lg:basis-[50]">
               <RichText
                 className="text-body prose text-box-trim-both-baseline mt-6 max-w-[51.5ch] text-pretty text-lg leading-[1.444] tracking-tight antialiased"
-                field={description?.jsonValue}
+                field={getFieldValue(description)}
               />
             </div>
           )}

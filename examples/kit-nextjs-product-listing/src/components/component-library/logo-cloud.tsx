@@ -4,40 +4,27 @@ import {
   Link as ContentSdkLink,
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
-  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { Button } from 'shadcd/components/ui/button';
-import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 
 import type { JSX } from 'react';
-
-interface Fields {
-  data: {
-    datasource: {
-      children: {
-        results: LogoFields[];
-      };
-      title: IGQLTextField;
-      bodyText: IGQLRichTextField;
-      link1: IGQLLinkField;
-      link2: IGQLLinkField;
-    };
-  };
-}
-
-interface LogoFields {
-  logoImage: IGQLImageField;
-  logoLink: IGQLLinkField;
-}
-
-type LogoCloudProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import type { LogoCloudProps } from './logo-cloud.props';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 export const Default = (props: LogoCloudProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
   const { isEditing } = page.mode;
+  const datasource = getDatasource(props.fields);
+
+  if (!datasource) {
+    return <></>;
+  }
+
+  const titleField = getFieldValue(datasource.title);
+  const bodyTextField = getFieldValue(datasource.bodyText);
+  const link1Field = getFieldValue(datasource.link1);
+  const link2Field = getFieldValue(datasource.link2);
+  const items = datasource.children?.results ?? [];
 
   return (
     <section
@@ -48,27 +35,21 @@ export const Default = (props: LogoCloudProps): JSX.Element => {
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold tracking-tigher sm:text-4xl md:text=6xl">
-              <ContentSdkText field={props.fields.data.datasource.title?.jsonValue} />
+              <ContentSdkText field={titleField} />
             </h2>
             <div className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              <ContentSdkRichText field={props.fields.data.datasource.bodyText?.jsonValue} />
+              <ContentSdkRichText field={bodyTextField} />
             </div>
             <div className="flex flex-wrap gap-4">
-              {props.fields.data.datasource.link1?.jsonValue?.value?.href || isEditing ? (
+              {link1Field && (link1Field.value?.href || isEditing) ? (
                 <Button className="bg-indigo-600 hover:bg-indigo-700 text-white" asChild={true}>
-                  <ContentSdkLink
-                    field={props.fields.data.datasource.link1?.jsonValue}
-                    prefetch={false}
-                  />
+                  <ContentSdkLink field={link1Field} prefetch={false} />
                 </Button>
               ) : null}
-              {props.fields.data.datasource.link2?.jsonValue?.value?.href || isEditing ? (
+              {link2Field && (link2Field.value?.href || isEditing) ? (
                 <Button variant="link" className="gap-1 group" asChild={true}>
                   <>
-                    <ContentSdkLink
-                      field={props.fields.data.datasource.link2?.jsonValue}
-                      prefetch={false}
-                    />
+                    <ContentSdkLink field={link2Field} prefetch={false} />
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </>
                 </Button>
@@ -76,12 +57,12 @@ export const Default = (props: LogoCloudProps): JSX.Element => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
-            {props.fields.data.datasource.children.results.map((item, index) => {
+            {items.map((item, index) => {
               return (
                 <div key={index} className="flex items-center justify-center">
                   <div className="flex items-center space-x-2">
                     <ContentSdkImage
-                      field={item.logoImage.jsonValue}
+                      field={getFieldValue(item.logoImage)}
                       className="max-h-12 w-auto h-12"
                     />
                   </div>

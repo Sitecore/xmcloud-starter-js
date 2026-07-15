@@ -1,7 +1,7 @@
 import { ImageField, Field, LinkField } from '@sitecore-content-sdk/nextjs';
 import { EnumValues } from '@/enumerations/generic.enum';
 import { ColorSchemeLimited } from '@/enumerations/ColorSchemeLimited.enum';
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 
 export interface PromoImageParams {
   colorScheme?: EnumValues<typeof ColorSchemeLimited>;
@@ -15,8 +15,9 @@ interface PromoImageFields {
   link: LinkField;
 }
 
-export interface PromoImageProps extends ComponentProps {
+export interface PromoImageProps extends OptionalComponentProps {
   params: PromoImageParams;
   fields: PromoImageFields;
   isPageEditing?: boolean;
 }
+

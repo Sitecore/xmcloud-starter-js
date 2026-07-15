@@ -1,8 +1,7 @@
-const path = require('path');
-const SassAlias = require('sass-alias');
-
 /**
  * @type {import('next').NextConfig}
+ * Next.js 16 defaults to Turbopack; this app relies on custom webpack (Content SDK
+ * component-props-loader, FEAAS externals). Scripts use `next * --webpack`; see next:build/next:dev.
  */
 const nextConfig = {
   // Allow specifying a distinct distDir when concurrently running app in a container
@@ -39,6 +38,8 @@ const nextConfig = {
         port: '',
       },
     ],
+    // Disable image optimization in development to avoid upstream timeouts
+    unoptimized: process.env.NODE_ENV === 'development',
   },
 
   async rewrites() {
@@ -53,10 +54,29 @@ const nextConfig = {
         source: '/robots.txt',
         destination: '/api/robots',
       },
+      {
+        source: '/llms.txt',
+        destination: '/api/llms-txt',
+      },
       // sitemap route
       {
-        source: '/sitemap:id([\\w-]{0,}).xml',
-        destination: '/api/sitemap'
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+      // Numbered sitemap index pages (e.g. /sitemap-0.xml, /sitemap-1.xml)
+      {
+        source: '/sitemap-:id(\\d+).xml',
+        destination: '/api/sitemap',
+      },
+      // ai.txt route for AI crawlers
+      {
+        source: '/.well-known/ai.txt',
+        destination: '/api/well-known/ai-txt',
+      },
+      // LLM-optimized sitemap for AI crawler ingestion
+      {
+        source: '/sitemap-llm.xml',
+        destination: '/api/sitemap-llm',
       },
       // feaas api route
       {
@@ -88,17 +108,6 @@ const nextConfig = {
     }
 
     return config;
-  },
-
-  // Add sass settings for SXA themes and styles
-  sassOptions: {
-    importer: new SassAlias({
-      '@globals': path.join(process.cwd(), './src/assets', 'globals'),
-      '@fontawesome': path.join(process.cwd(), './node_modules', 'font-awesome'),
-    }).getImporter(),
-    // temporary measure until new versions of bootstrap and font-awesome released
-    quietDeps: true,    
-    silenceDeprecations: ["import", "legacy-js-api"],
   },
 };
 

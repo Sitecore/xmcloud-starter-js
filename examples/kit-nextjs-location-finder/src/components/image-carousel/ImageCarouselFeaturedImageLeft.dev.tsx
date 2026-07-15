@@ -11,7 +11,7 @@ import { NoDataFallback } from '@/utils/NoDataFallback';
 import { EditableButton } from '@/components/button-component/ButtonComponent';
 import { ImageCarouselEditMode } from './ImageCarouselEditMode.dev';
 import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useContainerQuery } from '@/hooks/use-container-query';
 
 export const ImageCarouselFeaturedImageLeft = (props: ImageCarouselProps) => {
@@ -249,7 +249,7 @@ export const ImageCarouselFeaturedImageLeft = (props: ImageCarouselProps) => {
                       }
 
                       return (
-                        <motion.div
+                        <m.div
                           key={`slide-${slideIndex}`}
                           className={cn(
                             '@md:absolute flex-shrink-0',
@@ -309,9 +309,10 @@ export const ImageCarouselFeaturedImageLeft = (props: ImageCarouselProps) => {
                             <ImageWrapper
                               image={slides[slideIndex].image?.jsonValue}
                               className="object-cover"
+                              page={props.page}
                             />
                           </div>
-                        </motion.div>
+                        </m.div>
                       );
                     })}
                   </div>

@@ -1,0 +1,31 @@
+---
+ID: "4c1d2e3f-4a5b-4c6d-7e8f-9a0b1c2d3e4f"
+Parent: "3d6e7f8a-9b0c-4d1e-2f3a-4b5c6d7e8f9a"
+Template: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add AI Config/AI Config/FAQ/Maintenance"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+Languages:
+- Language: en
+  Fields:
+  - ID: "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d"
+    Hint: question
+    Value: How do I schedule maintenance/software updates?
+  - ID: "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e"
+    Hint: answer
+    Value: You can schedule maintenance and software updates through your AlarisConnect+ account or by contacting your local Alaris dealership. Over-the-air software updates are delivered automatically to your vehicle when available; you can also check update status and schedule service appointments in the Alaris app or at any authorized Alaris dealer.
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4c1d2e3f-4a5b-4c6d-7e8f-9a0b1c2d3e40"

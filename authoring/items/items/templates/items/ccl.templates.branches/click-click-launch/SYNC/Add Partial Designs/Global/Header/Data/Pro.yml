@@ -35,7 +35,7 @@ Languages:
     - ID: "c16f9da7-5edd-42ef-bf33-b6e3a6a2c7ed"
       Hint: Link
       Value: |
-        <link linktype="external" url="#" target="" text="Pro" title="" class=""/>
+        <link linktype="external" url="/" target="" text="Pro" title="" class=""/>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20250612T183737Z

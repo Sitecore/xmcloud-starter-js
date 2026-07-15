@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "7d98c739-7c00-4b8e-996f-890c3013f3a2"
 Parent: "19e59ab9-2b30-4533-9a05-f806586ece07"
 Template: "f94c8c17-70e8-4d8b-9d35-d0465c0e0945"
@@ -40,7 +40,7 @@ Languages:
     - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
       Hint: link
       Value: |
-        <link text="Learn more" linktype="external" url="http://#" anchor="" target="" />
+        <link text="Manufacturing story" linktype="external" url="/Speakers" anchor="" target="" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

@@ -1,3 +1,5 @@
+'use client';
+
 import type React from 'react';
 import { Text } from '@sitecore-content-sdk/nextjs';
 import { SubscriptionBannerProps } from './subscription-banner.props';
@@ -6,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { useForm } from 'react-hook-form';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { useState } from 'react';
-import { useI18n } from 'next-localization';
+import { useTranslations } from 'next-intl';
 import { dictionaryKeys } from '@/variables/dictionary';
 
 type FormValues = {
@@ -15,7 +17,7 @@ type FormValues = {
 
 export const Default: React.FC<SubscriptionBannerProps> = ({ fields }) => {
   const { titleRequired, descriptionOptional } = fields || {};
-  const { t } = useI18n();
+  const t = useTranslations();
   const dictionary = {
     CTALABEL: t(dictionaryKeys.SUBSCRIPTIONBANNER_BUTTON_LABEL),
     EMAIL_PLACEHOLDER: t(dictionaryKeys.SUBSCRIPTIONBANNER_EMAIL_FIELD_PLACEHOLDER),

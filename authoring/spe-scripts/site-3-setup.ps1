@@ -184,6 +184,20 @@ function Invoke-ModuleScriptBody {
         $item."ogTitle" = $title
         $item."ogDescription" = $title
         
+        Write-Verbose "Create AI config at $sitePath/Data/AI"
+        $dataFolderPath = "$sitePath/Data"
+        if (-not (Test-Path $dataFolderPath)) {
+            $siteFolderTemplateId = "{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}"
+            New-Item -Path $sitePath -Name "Data" -ItemType $siteFolderTemplateId | Out-Null
+        }
+        $dataFolder = Get-Item -Path $dataFolderPath -Language $Site.Language
+        $aiFolderPath = "$($dataFolder.Paths.Path)/AI"
+        if (-not (Test-Path $aiFolderPath)) {
+            $addAiConfigBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add AI Config" -Language $Site.Language
+            New-Item -Parent $dataFolder -Name "AI" -ItemType $addAiConfigBranchTemplate.ID | Out-Null
+        }
+
+
         Write-Verbose "Create dictionary items"
         $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
         $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Site 3/Add Dictionary Items" -Language $Site.Language

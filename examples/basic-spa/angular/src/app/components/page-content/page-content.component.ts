@@ -5,13 +5,14 @@ import { SxaComponent } from './../sxa.component';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-page-content',
-  templateUrl: './page-content.component.html',
-  host: {
-    'class': 'component content',
-    '[class]': 'styles',
-    '[id]': 'id',
-  }
+    selector: 'app-page-content',
+    templateUrl: './page-content.component.html',
+    host: {
+        'class': 'component content',
+        '[class]': 'styles',
+        '[id]': 'id',
+    },
+    standalone: false
 })
 export class PageContentComponent extends SxaComponent implements OnInit, OnDestroy {
   content?: RichTextField;

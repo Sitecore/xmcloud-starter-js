@@ -2,10 +2,10 @@
 description: Next.js specific patterns and best practices for XM Cloud starter development
 alwaysApply: false
 globs:
-  - "next.config.js"
-  - "src/pages/**"
+  - "next.config.*"
   - "src/app/**"
-  - "**/middleware.ts"
+  - "src/proxy.ts"
+  - "**/proxy.ts"
   - "**/*page*.tsx"
   - "**/*layout*.tsx"
 ---
@@ -61,48 +61,39 @@ Environment Variables:
 - Use different .env files for different environments
 - Never commit sensitive environment variables
 
-## Pages and Routing
+## App Router Pages and Routing
 
 Catch-All Routes:
-- Use `[...path].tsx` for XM Cloud page routing
-- Handle both single and multi-segment paths
-- Implement proper 404 handling for non-existent items
-- Support preview mode for content authors
+- Use `src/app/[site]/[locale]/[[...path]]/page.tsx` for XM Cloud page routing
+- Fetch layout data in the Server Component with `sitecore-client`
+- Call `notFound()` when the route does not exist
+- Use `draftMode()` and editing search params for preview and Pages Editor
 
 ```typescript
-// [...path].tsx pattern
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const path = Array.isArray(context.params?.path) 
-    ? context.params.path.join('/')
-    : context.params?.path || '/';
-    
-  const locale = context.locale || 'en';
-  
-  try {
-    const layoutData = await layoutService.getRouteData(path, locale);
-    
-    if (!layoutData.sitecore.route) {
-      return { notFound: true };
-    }
-    
-    return { 
-      props: { 
-        layoutData,
-        notFound: false 
-      } 
-    };
-  } catch (error) {
-    console.error(`Error fetching route data for ${path}:`, error);
-    return { notFound: true };
+// page.tsx pattern (App Router)
+export default async function Page({ params, searchParams }: PageProps) {
+  const { site, locale, path } = await params;
+  const draft = await draftMode();
+
+  let page;
+  if (draft.isEnabled) {
+    const editingParams = await searchParams;
+    page = await client.getPreview(editingParams);
+  } else {
+    page = await client.getPage(path ?? [], { site, locale });
   }
+
+  if (!page) {
+    notFound();
+  }
+
+  return (/* Layout + Providers */);
 }
 ```
 
-Static Generation:
-- Use ISR (Incremental Static Regeneration) for XM Cloud content
-- Implement proper revalidation strategies
-- Handle dynamic paths with getStaticPaths
-- Consider build time vs. runtime performance trade-offs
+Pages Router:
+- Only `examples/basic-nextjs-pages-router` uses `src/pages/[[...path]].tsx` with `getStaticProps` / `getServerSideProps`
+- Do not add Pages Router patterns to App Router starters
 
 ## API Routes
 
@@ -113,46 +104,36 @@ XM Cloud Integration:
 - Cache responses when appropriate
 
 ```typescript
-// api/robots.ts pattern
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  try {
-    const robotsContent = await robotsService.getRobots();
-    
-    res.setHeader('Content-Type', 'text/plain');
-    res.status(200).send(robotsContent);
-  } catch (error) {
-    console.error('Error generating robots.txt:', error);
-    res.status(500).send('Error generating robots.txt');
-  }
+// src/app/api/robots/route.ts pattern
+import { createRobotsRouteHandler } from '@sitecore-content-sdk/nextjs/route-handler';
+
+const { GET: sitecoreGET } = createRobotsRouteHandler({ client, sites });
+
+export async function GET(request: NextRequest) {
+  return sitecoreGET(request);
 }
 ```
 
-## Middleware
+## Proxy (request pipeline)
 
-XM Cloud Editing:
-- Handle editing mode detection
-- Implement proper cookie handling for XM Cloud
-- Set up redirects for content authors
-- Support preview mode functionality
+App Router starters use `src/proxy.ts` (not `src/middleware.ts`) with Content SDK proxy classes:
+- `LocaleProxy` - locale detection and routing
+- `AppRouterMultisiteProxy` - site resolution
+- `RedirectsProxy` - Sitecore redirect rules
+- `PersonalizeProxy` - personalization
 
 ```typescript
-// middleware.ts pattern
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-  
-  // Handle XM Cloud editing mode
-  if (request.cookies.get('sc_mode')?.value === 'edit') {
-    // Redirect to editing host
-    const editingUrl = new URL(pathname, process.env.EDITING_HOST_URL);
-    return NextResponse.redirect(editingUrl);
-  }
-  
-  return NextResponse.next();
+// src/proxy.ts pattern
+import { defineProxy, LocaleProxy, AppRouterMultisiteProxy } from '@sitecore-content-sdk/nextjs/proxy';
+
+export default function proxy(req: NextRequest) {
+  return defineProxy(locale, multisite, redirects, personalize).exec(req);
 }
+
+export const config = { matcher: [/* exclude api, _next, static assets */] };
 ```
+
+Pages Router starter (`basic-nextjs-pages-router`) uses `src/proxy.ts` with the Pages Router multisite proxy variant.
 
 ## Performance Optimization
 
@@ -194,7 +175,7 @@ Testing:
 - Test error scenarios and edge cases
 - Use proper test data that matches XM Cloud structures
 
-## App Router (Next.js 13+)
+## App Router
 
 Server Components:
 - Use Server Components for XM Cloud data fetching
@@ -224,6 +205,6 @@ XM Cloud Integration:
 
 Referenced:
 @examples/kit-nextjs-article-starter/next.config.js
-@examples/kit-nextjs-location-finder/src/pages/
-@examples/kit-nextjs-product-listing/src/middleware.ts
-@examples/basic-nextjs/src/pages/api/
+@examples/basic-nextjs/src/app/[site]/[locale]/[[...path]]/page.tsx
+@examples/basic-nextjs/src/proxy.ts
+@examples/basic-nextjs/src/app/api/robots/route.ts

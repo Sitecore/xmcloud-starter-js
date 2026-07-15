@@ -1,8 +1,10 @@
+'use client';
+
 import { Text } from '@sitecore-content-sdk/nextjs';
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
-import { ProductListingProps } from './product-listing.props';
+import { ProductListingProps, ProductItemProps } from './product-listing.props';
 import { ProductListingCard } from './ProductListingCard.dev';
 import { useMatchMedia } from '@/hooks/use-match-media';
 import { cn } from '@/lib/utils';
@@ -10,12 +12,35 @@ import {
   SlideCarousel,
   SlideCarouselItemWrap,
 } from '@/components/slide-carousel/SlideCarousel.dev';
+import { generateProductSchema } from '@/lib/structured-data/schema';
+import { StructuredData } from '@/components/structured-data/StructuredData';
 
 export const ProductListingSlider: React.FC<ProductListingProps> = (props) => {
   const isReducedMotion = useMatchMedia('(prefers-reduced-motion: reduce)');
   const [activeCard, setActiveCard] = useState<string | null>(null);
   const { fields, isPageEditing } = props;
   const { products, title, viewAllLink } = fields?.data?.datasource ?? {};
+
+  // Generate JSON-LD structured data for products (must be at top level)
+  const productSchemas = useMemo(() => {
+    if (!products?.targetItems) return [];
+    return products.targetItems.map((product: ProductItemProps) => {
+      const productName = product.productName?.jsonValue?.value || '';
+      const productImage = product.productThumbnail?.jsonValue?.value?.src || '';
+      const productPrice = product.productBasePrice?.jsonValue?.value || '';
+      const productUrl = product.url?.path || '';
+      const productDescription = product.productFeatureText?.jsonValue?.value || '';
+
+      return generateProductSchema({
+        name: productName,
+        image: productImage,
+        description: productDescription,
+        price: productPrice,
+        priceCurrency: 'USD',
+        url: productUrl || undefined,
+      });
+    });
+  }, [products?.targetItems]);
 
   if (fields) {
     const getCardClasses = (productId: string) => {
@@ -37,11 +62,16 @@ export const ProductListingSlider: React.FC<ProductListingProps> = (props) => {
     };
 
     return (
-      <div
+      <section
         className={cn('@container transform-gpu border-b-2 border-t-2 [.border-b-2+&]:border-t-0', {
           [props?.params?.styles]: props?.params?.styles,
         })}
+        aria-label="Product listing"
       >
+        {/* JSON-LD structured data for products */}
+        {productSchemas.map((schema, index) => (
+          <StructuredData key={`product-schema-${index}`} id={`product-schema-${index}`} data={schema} />
+        ))}
         <div className="@md:py-20 @lg:py-28 py-12 ">
           <div className="@xl:px-0 @md:pb-0 mx-auto max-w-screen-xl px-0 pb-10 [&:not(.px-6_&):not(.px-8_&):not(.px-10_&)]:px-6">
             <AnimatedSection
@@ -77,7 +107,7 @@ export const ProductListingSlider: React.FC<ProductListingProps> = (props) => {
             ))}
           </SlideCarousel>
         </div>
-      </div>
+      </section>
     );
   }
 

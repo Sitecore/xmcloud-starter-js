@@ -25,6 +25,7 @@ export const GlobalFooterBlueCentered: React.FC<GlobalFooterProps> = (props) => 
       <footer
         className="@container bg-primary text-primary-foreground border-primary-foreground relative w-full overflow-hidden border-b-2"
         ref={footerRef}
+        role="contentinfo"
       >
         {/* Background logo - semi-transparent */}
         <div className="pointer-events-none absolute inset-0 z-0 opacity-90" aria-hidden="true">

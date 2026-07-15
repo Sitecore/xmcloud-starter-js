@@ -25,10 +25,17 @@ This repository contains **XM Cloud Front End Application Starter Kits** - multi
 - Modular component architecture with variants
 - Localization support for English (en) and Canadian English (en-CA)
 
+### Upstream, forks, and pull request scope
+
+Before work is framed as a **pull request to the official upstream** repository, confirm the user’s target: **upstream** (public, maintained examples) or a **fork** / **Use this template** copy.
+
+- **Upstream** welcomes **improvements, bug fixes, and broadly useful features** in **existing** starters. The set of starters in `examples/` is intentionally **limited** as best-practice references.
+- **Not for upstream PRs:** **new example sites**, **additional** starter apps, or **bespoke** extensions for a **single** customer or product. Those belong in a **user fork** or a separate repo; see **[CONTRIBUTING.md - What we do not accept](CONTRIBUTING.md#what-we-do-not-accept)** and **`.cursor/rules/project-context.mdc`**.
+
 ## Technology Stack
 
 ### Core Technologies
-- **Next.js 14+** - React framework with App Router and Pages Router support
+- **Next.js 14+** - React framework with App Router (all starters except `basic-nextjs-pages-router`)
 - **TypeScript** - Strict type safety throughout all components
 - **Sitecore XM Cloud** - Headless content management and delivery
 - **Sitecore Content SDK** - Modern SDK for XM Cloud integration (`@sitecore-content-sdk/nextjs`)
@@ -49,11 +56,16 @@ This repository contains **XM Cloud Front End Application Starter Kits** - multi
 - **npm** - Package management across all starter applications
 
 ### File Organization:
+- Each starter is independent and self-contained; do not share code or packages across starters—copy utilities and components as needed
 - Component directories contain main file, variants, and props
-- Main component file should contain variants and props following the Locality of Behavior pattern
+- Main component file should contain variants and rendering logic; keep props/interfaces in sidecar files (`*.props.ts` / `*.props.tsx`)
 - Using `.dev.tsx` files for variant implementations is discouraged unless maintainability becomes difficult for the component and separation cannot be avoided
-- Shared utilities in dedicated directories
+- Shared utilities in dedicated directories (within each starter)
 - Group UI components in `ui/` subdirectory
+- Exclude sidecar props files from component-map generation in each starter `sitecore.cli.config.ts` with:
+  - `src/components/**/*.props.ts`
+  - `src/components/**/*.props.tsx`
+- After props-file changes, run `npm run sitecore-tools:generate-map` and confirm sidecar files are not registered in `.sitecore/component-map.ts`.
 
 ## Coding Standards
 

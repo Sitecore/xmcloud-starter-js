@@ -1,6 +1,6 @@
 import { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
 
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 
 interface ImageCarouselParams {
   [key: string]: any; // eslint-disable-line
@@ -21,8 +21,9 @@ export interface imageCarouselItem {
   link: { jsonValue: LinkField };
 }
 
-export interface ImageCarouselProps extends ComponentProps {
+export interface ImageCarouselProps extends OptionalComponentProps {
   params: ImageCarouselParams;
   fields: ImageCarouselFields;
   isPageEditing: boolean;
 }
+

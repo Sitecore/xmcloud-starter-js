@@ -17,8 +17,8 @@ interface PageHeaderLogos {
 
 export interface PageHeaderProps extends ComponentProps {
   params: PageHeaderParams;
-  fields: {
-    data: {
+  fields?: {
+    data?: {
       datasource?: {
         imageRequired: {
           jsonValue: ImageField;
@@ -33,7 +33,7 @@ export interface PageHeaderProps extends ComponentProps {
           results: PageHeaderLogos[];
         };
       };
-      externalFields: {
+      externalFields?: {
         pageTitle: {
           jsonValue: Field<string>;
         };

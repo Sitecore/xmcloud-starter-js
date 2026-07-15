@@ -1,11 +1,14 @@
 import {
   ComponentRendering,
   Text as ContentSdkText,
-  Placeholder,
+  AppPlaceholder,
+  Page,
+  NextjsContentSdkComponent,
 } from '@sitecore-content-sdk/nextjs';
 import { useMemo, type JSX } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from 'shadcd/components/ui/tabs';
 import { IGQLTextField } from 'types/igql';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 type Fields = {
   data: {
@@ -24,13 +27,15 @@ type PlaceholderTabsProps = {
   rendering: ComponentRendering;
   params: { [key: string]: string };
   fields: Fields;
+  page: Page;
+  componentMap: Map<string, NextjsContentSdkComponent>;
 };
 
-export const Default = (props: PlaceholderTabsProps): JSX.Element => {
-  const datasource = useMemo(() => props.fields.data.datasource, [props.fields.data.datasource]);
+export const Default = ({ rendering, params, fields, page, componentMap }: PlaceholderTabsProps): JSX.Element => {
+  const datasource = useMemo(() => getDatasource(fields), [fields]);
   const phSuffixes = ['one', 'two', 'three', 'four', 'five'];
 
-  const tabs = datasource.children.results.slice(0, phSuffixes.length);
+  const tabs = (datasource?.children?.results ?? []).slice(0, phSuffixes.length);
 
   const tabsTriggerActiveStyles =
     'data-[state=active]:pt-3 data-[state=active]:bg-white data-[state=active]:border-b-2 data-[state=active]:border-b-white data-[state=active]:z-20';
@@ -38,7 +43,7 @@ export const Default = (props: PlaceholderTabsProps): JSX.Element => {
     'data-[state=inactive]:bg-gray-200 data-[state=inactive]:border-b-2 data-[state=inactive]:border-t-gray-300 data-[state=inactive]:border-s-gray-300 data-[state=inactive]:border-e-gray-300';
 
   return (
-    <section className={`px-4 ${props.params.styles || ''}`} data-component="tabs">
+    <section className={`px-4 ${params.styles || ''}`} data-component="tabs">
       <div className="container mx-auto">
         {!!tabs.length && (
           <Tabs defaultValue={tabs[0].id} className="relative w-full">
@@ -50,7 +55,7 @@ export const Default = (props: PlaceholderTabsProps): JSX.Element => {
                     value={tab.id}
                     className={`relative basis-auto px-4 py-2 -ml-[2px] first:ml-0 border-2 !border-e-2 rounded-tr-sm rounded-tl-sm text-base transition-all hover:pt-3 ${tabsTriggerActiveStyles} ${tabsTriggerInactiveStyles}`}
                   >
-                    <ContentSdkText field={tab.title.jsonValue} />
+                    <ContentSdkText field={getFieldValue(tab.title)} />
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -58,9 +63,11 @@ export const Default = (props: PlaceholderTabsProps): JSX.Element => {
 
             {tabs.map((tab, index) => (
               <TabsContent key={tab.id} value={tab.id} className="relative border-0 p-0">
-                <Placeholder
-                  name={`tab-content-${phSuffixes[index]}-${props.params.DynamicPlaceholderId}`}
-                  rendering={props.rendering}
+                <AppPlaceholder
+                  page={page}
+                  componentMap={componentMap}
+                  name={`tab-content-${phSuffixes[index]}-${params.DynamicPlaceholderId}`}
+                  rendering={rendering}
                 />
               </TabsContent>
             ))}

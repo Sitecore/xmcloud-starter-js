@@ -18,4 +18,7 @@ RUN del node.zip
 
 RUN SETX /M PATH "%PATH%;C:\node\"
 RUN icacls.exe C:\node\ /grant "Authenticated Users":(F) /t
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 CMD ["C:/node/node.exe", "--version"]
+
 USER ContainerUser

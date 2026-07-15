@@ -41,7 +41,6 @@ Functional Programming:
 Readability:
 - Use descriptive variable and function names
 - Keep functions small and focused (single responsibility)
-- Add JSDoc comments for complex business logic
 - Prefer self-documenting code over extensive comments
 - Use consistent naming patterns across all starters
 

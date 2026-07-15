@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/accordion';
 
 import type {
-  FooterNavigationColumnProps,
+  FooterNavigationColumnDevProps,
   FooterNavigationLink,
 } from '@/components/global-footer/global-footer.props';
 import { Button } from '@/components/ui/button';
@@ -24,7 +24,7 @@ import { cn } from '@/lib/utils';
  * FooterNavigationColumn component renders a navigation column in the footer.
  * It displays a header and a list of navigation links with a hover effect.
  */
-export const Default: FC<FooterNavigationColumnProps> = (props) => {
+export const Default: FC<FooterNavigationColumnDevProps> = (props) => {
   const {
     items,
     header,

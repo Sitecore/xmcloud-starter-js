@@ -14,9 +14,9 @@ export interface LogoTabContent {
 }
 
 export interface LogoTabsFields {
-  data: {
-    datasource: {
-      title: { jsonValue: Field<string> };
+  data?: {
+    datasource?: {
+      title?: { jsonValue: Field<string> };
       backgroundImage?: { jsonValue: ImageField };
       logos?: {
         results: LogoItemProps[];
@@ -30,7 +30,7 @@ export interface LogoTabsFields {
 
 export interface LogoTabsProps extends ComponentProps {
   params: LogoTabsParams;
-  fields: LogoTabsFields;
+  fields?: LogoTabsFields;
   isPageEditing?: boolean;
 }
 

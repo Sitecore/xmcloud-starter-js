@@ -1,0 +1,24 @@
+---
+ID: "a9b0c1d2-e3f4-4a5b-6c7d-8e9f0a1b2c3d"
+Parent: "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c"
+Template: "c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Add AI Config/AI Config"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: AI Config
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a9b0c1d2-e3f4-4a5b-6c7d-8e9f0a1b2c3e"

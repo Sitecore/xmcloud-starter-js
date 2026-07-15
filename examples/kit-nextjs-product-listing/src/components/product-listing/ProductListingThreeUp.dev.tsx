@@ -1,20 +1,42 @@
 'use client';
 
 import { Text } from '@sitecore-content-sdk/nextjs';
-import type React from 'react';
-import { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
-import type { ProductListingProps } from './product-listing.props';
+import type { ProductListingProps, ProductItemProps } from './product-listing.props';
 import { ProductListingCard } from './ProductListingCard.dev';
 import { useMatchMedia } from '@/hooks/use-match-media';
 import { cn } from '@/lib/utils';
+import { generateProductSchema } from '@/lib/structured-data/schema';
+import { StructuredData } from '@/components/structured-data/StructuredData';
 
 export const ProductListingThreeUp: React.FC<ProductListingProps> = (props) => {
   const { fields, isPageEditing } = props;
   const isReducedMotion = useMatchMedia('(prefers-reduced-motion: reduce)');
   const [activeCard, setActiveCard] = useState<string | null>(null);
   const { products, title, viewAllLink } = fields?.data?.datasource ?? {};
+
+  // Generate JSON-LD structured data for products (must be at top level)
+  const productSchemas = useMemo(() => {
+    if (!products?.targetItems) return [];
+    return products.targetItems.map((product: ProductItemProps) => {
+      const productName = product.productName?.jsonValue?.value || '';
+      const productImage = product.productThumbnail?.jsonValue?.value?.src || '';
+      const productPrice = product.productBasePrice?.jsonValue?.value || '';
+      const productUrl = product.url?.path || '';
+      const productDescription = product.productFeatureText?.jsonValue?.value || '';
+
+      return generateProductSchema({
+        name: productName,
+        image: productImage,
+        description: productDescription,
+        price: productPrice,
+        priceCurrency: 'USD',
+        url: productUrl || undefined,
+      });
+    });
+  }, [products?.targetItems]);
 
   if (fields) {
     const getCardClasses = (productId: string) => {
@@ -36,7 +58,7 @@ export const ProductListingThreeUp: React.FC<ProductListingProps> = (props) => {
     };
 
     return (
-      <div
+      <section
         className={cn(
           '@container @md:px-6 mx-auto max-w-screen-xl border-b-2 border-t-2 py-12 [.border-b-2+&]:border-t-0',
           {
@@ -44,7 +66,12 @@ export const ProductListingThreeUp: React.FC<ProductListingProps> = (props) => {
           }
         )}
         data-component="ProductListingThreeUp"
+        aria-label="Product listing"
       >
+        {/* JSON-LD structured data for products */}
+        {productSchemas.map((schema, index) => (
+          <StructuredData key={`product-schema-${index}`} id={`product-schema-${index}`} data={schema} />
+        ))}
         <AnimatedSection
           direction="down"
           duration={400}
@@ -86,7 +113,7 @@ export const ProductListingThreeUp: React.FC<ProductListingProps> = (props) => {
             </AnimatedSection>
           ))}
         </div>
-      </div>
+      </section>
     );
   }
 

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, RefObject } from 'react';
 
 export const useOnLoadImages = (ref: RefObject<HTMLDivElement | null> | null) => {

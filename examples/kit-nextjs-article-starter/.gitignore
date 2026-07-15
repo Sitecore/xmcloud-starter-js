@@ -3,8 +3,10 @@
 # dependencies
 /node_modules
 
+
 # testing
 /coverage
+/.jest-cache
 
 # next.js
 /.next*/
@@ -29,4 +31,5 @@
 .sitecore/*
 # except for component-map
 !.sitecore/component-map.ts
-!.sitecore/import-map.ts
+!.sitecore/component-map.client.ts
+.jest-cache

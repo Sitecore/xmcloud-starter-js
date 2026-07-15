@@ -1,5 +1,5 @@
 import type { Field } from '@sitecore-content-sdk/nextjs';
-import type { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 
 // These fields are authored in Sitecore
 export interface DealershipFields {
@@ -28,7 +28,7 @@ export interface LocationSearchFields {
   defaultZipCode: string;
 }
 
-export interface LocationSearchProps extends ComponentProps {
+export interface LocationSearchProps extends OptionalComponentProps {
   isPageEditing?: boolean;
   params: LocationSearchParams;
   fields: {
@@ -48,3 +48,5 @@ export interface LocationSearchItemProps {
   isSelected: boolean;
   onSelect: (dealership: Dealership) => void;
 }
+
+

@@ -1,6 +1,6 @@
 import { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
 import { EnumValues } from '@/enumerations/generic.enum';
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 import { ColorSchemeLimited } from '@/enumerations/ColorSchemeLimited.enum';
 
 interface LogoTabsParams {
@@ -28,7 +28,7 @@ export interface LogoTabsFields {
   };
 }
 
-export interface LogoTabsProps extends ComponentProps {
+export interface LogoTabsProps extends OptionalComponentProps {
   params: LogoTabsParams;
   fields: LogoTabsFields;
 }
@@ -39,3 +39,4 @@ export type LogoItemProps = {
   };
   logo: { jsonValue: ImageField };
 };
+

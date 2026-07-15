@@ -1,0 +1,20 @@
+{
+  "services": [
+    {
+      "name": "Dealer Location Finder",
+      "description": "Find authorized Alaris dealerships, service centers, and test drive locations by zip code or postal code.",
+      "category": "Automotive"
+    },
+    {
+      "name": "Test Drive Scheduling",
+      "description": "Schedule test drives for Aero, Nexa, and Terra models through the website or AlarisConnect+ app.",
+      "category": "Automotive"
+    },
+    {
+      "name": "Multi-Locale Content Delivery",
+      "description": "Deliver localized content in multiple languages (English and Canadian English) with automatic locale detection.",
+      "category": "Localization"
+    }
+  ],
+  "lastModified": "2026-03-05T11:54:28Z"
+}

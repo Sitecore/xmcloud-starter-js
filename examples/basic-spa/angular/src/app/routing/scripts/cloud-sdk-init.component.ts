@@ -11,8 +11,9 @@ import { JssState } from '../../JssState';
  * Component to init CloudSDK logic - to allow events throughout the site
  */
 @Component({
-  selector: 'app-cloud-sdk-init',
-  template: '',
+    selector: 'app-cloud-sdk-init',
+    template: '',
+    standalone: false
 })
 export class CloudSdkInitComponent implements OnInit {
   constructor(private jssContext: JssContextService) {}

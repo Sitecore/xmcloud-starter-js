@@ -27,19 +27,67 @@ const nextConfig: NextConfig = {
         port: '',
       },
     ],
+    // Include mobile and tablet widths so responsive images are served at appropriate sizes
+    deviceSizes: [360, 414, 640, 768, 1024, 1280, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Disable image optimization in development to avoid upstream timeouts
+    unoptimized: process.env.NODE_ENV === 'development',
   },
   
-  // use this configuration to serve the sitemap.xml and robots.txt files from the API route handlers
+  // Sitemap, robots, and AI JSON endpoints via rewrites; handlers live under app/api/
   rewrites: async () => {
     return [
       {
-        source: '/sitemap:id([\\w-]{0,}).xml',
+        // sitemap.xml serves the main sitemap
+        source: '/sitemap.xml',
         destination: '/api/sitemap',
+        locale: false,
+      },
+      {
+        // Numbered sitemap index pages (e.g. /sitemap-0.xml, /sitemap-1.xml)
+        source: '/sitemap-:id(\\d+).xml',
+        destination: '/api/sitemap',
+        locale: false,
+      },
+      {
+        // LLM-optimized sitemap for AI crawler ingestion
+        source: '/sitemap-llm.xml',
+        destination: '/api/sitemap-llm',
         locale: false,
       },
       {
         source: '/robots.txt',
         destination: '/api/robots',
+        locale: false,
+      },
+      {
+        source: '/llms.txt',
+        destination: '/api/llms-txt',
+        locale: false,
+      },
+      {
+        source: '/ai/summary.json',
+        destination: '/api/ai/summary',
+        locale: false,
+      },
+      {
+        source: '/ai/faq.json',
+        destination: '/api/ai/faq',
+        locale: false,
+      },
+      {
+        source: '/ai/service.json',
+        destination: '/api/ai/service',
+        locale: false,
+      },
+      {
+        source: '/ai/markdown/:path*',
+        destination: '/api/ai/markdown/:path*',
+        locale: false,
+      },
+      {
+        source: '/.well-known/ai.txt',
+        destination: '/api/well-known/ai-txt',
         locale: false,
       },
     ];

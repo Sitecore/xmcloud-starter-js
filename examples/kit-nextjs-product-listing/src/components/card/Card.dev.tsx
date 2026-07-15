@@ -8,11 +8,6 @@ import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { Link } from '@sitecore-content-sdk/nextjs';
 import { cn } from '@/lib/utils';
 
-/**
- * Card
- * @param props The UI data coming from the parent component
- * @returns
- */
 export const Default: React.FC<CardProps> = (props) => {
   const { image, heading, description, link, className, icon, editable } = props;
 

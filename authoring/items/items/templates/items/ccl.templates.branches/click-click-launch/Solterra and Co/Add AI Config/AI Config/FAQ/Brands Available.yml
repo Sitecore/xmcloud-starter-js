@@ -1,0 +1,31 @@
+---
+ID: "2a7b8c9d-0e1f-4a2b-3c4d-5e6f7a8b9c0d"
+Parent: "1d4e5f6a-7b8c-4d9e-0f1a-2b3c4d5e6f7a"
+Template: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add AI Config/AI Config/FAQ/Brands Available"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Fields:
+  - ID: "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d"
+    Hint: question
+    Value: Which brands are available in my country?
+  - ID: "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e"
+    Hint: answer
+    Value: Solterra & Co. brands reach 3.4 billion people in 190 countries. Availability varies by region. Visit See Our Brands on our website or use Get In Touch to ask about your country. Our Solutions and Platform pages also outline where our brands and green energy solutions are offered.
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2a7b8c9d-0e1f-4a2b-3c4d-5e6f7a8b9c0e"

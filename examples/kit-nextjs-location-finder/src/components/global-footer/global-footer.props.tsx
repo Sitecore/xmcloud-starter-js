@@ -1,10 +1,10 @@
 import { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 import { PlaceholderProps } from '@/types/Placeholder.props';
 
 import type { JSX } from 'react';
 
-export type GlobalFooterProps = ComponentProps &
+export type GlobalFooterProps = OptionalComponentProps &
   PlaceholderProps &
   GlobalFooterFields & {
     callout?: JSX.Element;
@@ -38,7 +38,22 @@ export type FooterSocialLink = {
   socialIcon: { jsonValue: ImageField };
 };
 
-export type FooterNavigationColumnProps = {
+export type FooterNavigationColumnProps = OptionalComponentProps & {
+  fields: {
+    data: {
+      datasource: {
+        header: {
+          jsonValue: Field<string>;
+        };
+        items?: {
+          results: FooterNavigationLink[];
+        };
+      };
+    };
+  };
+};
+
+export type FooterNavigationColumnDevProps = {
   listClassName?: string;
   orientation?: 'horizontal' | 'vertical';
   indicatorClassName?: string;
@@ -56,3 +71,4 @@ export type FooterNavigationLink = {
     jsonValue: LinkField;
   };
 };
+

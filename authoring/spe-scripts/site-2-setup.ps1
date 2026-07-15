@@ -154,6 +154,8 @@ function Invoke-ModuleScriptBody {
         Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Accordion - Nexa - Demo Official" -Language $Site.Language | Update-LinkField -FieldName "link" -TargetItem $nexaPage
         Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
         Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
+        Get-Item -Path "$($item.ItemPath)/Products/Terra/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
+        Get-Item -Path "$($item.ItemPath)/Products/Terra/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
         
         Write-Verbose "Update product pages with the correct taxonomy"
         $productTag = Get-Item -Path "$sitePath/Data/Taxonomy/Content Types/Product" -Language $Site.Language
@@ -247,6 +249,20 @@ function Invoke-ModuleScriptBody {
         $imageRightVariant.'__Display name' = "Image Right"
         $titlePartialOverlayVariant = New-Item -Parent $promoVariant -Name "TitlePartialOverlay" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
         $titlePartialOverlayVariant.'__Display name' = "Title Partial Overlay"
+
+
+        Write-Verbose "Create AI config at $sitePath/Data/AI"
+        $dataFolderPath = "$sitePath/Data"
+        if (-not (Test-Path $dataFolderPath)) {
+            $siteFolderTemplateId = "{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}"
+            New-Item -Path $sitePath -Name "Data" -ItemType $siteFolderTemplateId | Out-Null
+        }
+        $dataFolder = Get-Item -Path $dataFolderPath -Language $Site.Language
+        $aiFolderPath = "$($dataFolder.Paths.Path)/AI"
+        if (-not (Test-Path $aiFolderPath)) {
+            $addAiConfigBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add AI Config" -Language $Site.Language
+            New-Item -Parent $dataFolder -Name "AI" -ItemType $addAiConfigBranchTemplate.ID | Out-Null
+        }
 
         Write-Verbose "Create dictionary items"
         $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language

@@ -1,6 +1,7 @@
 import { Image } from '@sitecore-content-sdk/nextjs';
 import { cn } from '@/lib/utils';
 import { LogoItemProps } from './logo-tabs.props';
+import { getFieldValue } from '@/lib/component-props';
 
 interface LogoButtonProps extends LogoItemProps {
   isActive: boolean;
@@ -32,8 +33,8 @@ export const LogoItem: React.FC<LogoButtonProps> = ({
           : 'scale-100 opacity-50 hover:opacity-75'
       )}
     >
-      <span className="sr-only">{title?.jsonValue?.value || ''}</span>
-      {logo?.jsonValue && <Image field={logo?.jsonValue} className="h-6 w-auto" />}
+      <span className="sr-only">{getFieldValue(title)?.value || ''}</span>
+      {getFieldValue(logo) && <Image field={getFieldValue(logo)} className="h-6 w-auto" />}
     </button>
   );
 };

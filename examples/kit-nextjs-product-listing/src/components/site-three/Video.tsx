@@ -1,33 +1,10 @@
-import { ComponentProps } from '@/lib/component-props';
 import {
-  ImageField,
-  LinkField,
   Image as ContentSdkImage,
-  TextField,
   Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { VideoBase } from 'components/video/Video';
-
-interface VideoParams {
-  darkPlayIcon?: string;
-  useModal?: string;
-  displayIcon?: string;
-}
-interface VideoFields {
-  video?: LinkField;
-  image?: ImageField;
-  image2?: ImageField;
-  title?: TextField;
-  caption?: TextField;
-}
-
-interface VideoComponentFields {
-  params?: VideoParams;
-  fields?: VideoFields;
-}
-
-type VideoComponentProps = ComponentProps & VideoComponentFields;
+import type { VideoComponentProps } from './video.props';
 
 export function Default({ fields, params }: VideoComponentProps) {
   if (fields) {

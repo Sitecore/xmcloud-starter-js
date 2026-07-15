@@ -4,8 +4,9 @@ import { JssContextService } from './jss-context.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    standalone: false
 })
 export class AppComponent implements OnDestroy {
   private contextSubscription: Subscription;

@@ -20,25 +20,7 @@ import { SuccessCompact } from '../success/success-compact.dev';
 import { EnumValues } from '@/enumerations/generic.enum';
 import { ButtonVariants } from '@/enumerations/ButtonStyle.enum';
 
-interface SubmitInfoFormProps {
-  fields?: {
-    firstNameLabel?: Field<string>;
-    firstNamePlaceholder?: Field<string>;
-    lastNameLabel?: Field<string>;
-    lastNamePlaceholder?: Field<string>;
-    zipcodeLabel?: Field<string>;
-    zipcodePlaceholder?: Field<string>;
-    emailLabel?: Field<string>;
-    emailPlaceholder?: Field<string>;
-    emailErrorMessage?: Field<string>;
-    phoneLabel?: Field<string>;
-    phonePlaceholder?: Field<string>;
-    buttonText?: Field<string>;
-    successMessage?: Field<string>;
-    buttonVariant?: EnumValues<typeof ButtonVariants>;
-  };
-  className?: string;
-}
+import type { SubmitInfoFormProps } from './submit-info-form.props';
 
 const phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
 
@@ -76,7 +58,7 @@ const formSchema = z.object({
           const phoneNumber = phoneUtil.parse(number, 'US');
           return phoneUtil.isValidNumber(phoneNumber);
         } catch (error) {
-          console.log(error);
+          void error;
           return false;
         }
       },

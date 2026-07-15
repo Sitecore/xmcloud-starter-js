@@ -1,41 +1,18 @@
+'use client';
+
 import { useState } from 'react';
-import { ButtonBase } from '@/components/button-component/ButtonComponent';
+import { EditableButton } from '@/components/button-component/ButtonComponent';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
-import { Field, ImageField, LinkField, Text } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
-
-type AlertBannerProps = ComponentProps & AlertBannerParams & AlertBannerFields & AlertBannerData;
-
-type AlertBannerParams = {
-  params: {
-    mock_param?: string;
-  };
-};
-
-// Non-component data source fields
-// TODO_SCAFFOLD_BE: Populate if needed, remove if not
-type AlertBannerData = {
-  externalFields: {
-    mock_external_data: Field<string>;
-  };
-};
-
-type AlertBannerFields = {
-  fields: {
-    title: Field<string>; // Sitecore editable text field
-    description: Field<string>; // Sitecore editable text field
-    image?: ImageField; // Sitecore editable image field
-    link?: LinkField; // Sitecore editable link field
-  };
-};
+import { Text } from '@sitecore-content-sdk/nextjs';
+import { AlertBannerProps } from './alert-banner.props';
 
 export const Default: React.FC<AlertBannerProps> = (props) => {
   const { fields } = props;
-  const { title, description, link } = fields;
+  const { title, description, link } = fields || {};
   const [isHidden, setIsHidden] = useState(false);
 
   if (fields) {
@@ -51,7 +28,9 @@ export const Default: React.FC<AlertBannerProps> = (props) => {
             </AlertDescription>
           </div>
           <div className="flex items-center gap-2">
-            {link?.value?.href && <ButtonBase buttonLink={link} variant="default" />}
+            {link?.value?.href && (
+              <EditableButton buttonLink={link} variant="default" contextTitle={title?.value} />
+            )}
             <Button variant="default" size="icon" onClick={() => setIsHidden(true)}>
               <X className="h-4 w-4" />
             </Button>

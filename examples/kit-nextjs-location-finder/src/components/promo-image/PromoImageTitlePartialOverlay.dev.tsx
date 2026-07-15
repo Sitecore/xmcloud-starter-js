@@ -51,6 +51,7 @@ export const PromoTitlePartialOverlay: React.FC<PromoImageProps> = (props) => {
                   image={image}
                   className="h-full w-full object-cover"
                   wrapperClass="w-full h-full"
+                  page={props.page}
                 />
               </AnimatedSection>
             )}

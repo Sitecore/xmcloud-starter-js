@@ -2,7 +2,7 @@
   "renderingHosts": {
     "nextjsstarter": {
       "path": "./examples/kit-nextjs-skate-park",
-      "nodeVersion": "22.11.0",
+      "nodeVersion": "24.14.1",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -11,7 +11,7 @@
     },
     "angularstarter": {
       "path": "./examples/basic-spa",
-      "nodeVersion": "22.11.0",
+      "nodeVersion": "22.22.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": false,
       "type": "sxa",
@@ -20,7 +20,7 @@
     },
     "kit-nextjs-article-starter": {
       "path": "./examples/kit-nextjs-article-starter",
-      "nodeVersion": "22.11.0",
+      "nodeVersion": "24.14.1",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -29,7 +29,7 @@
     },
     "kit-nextjs-location-starter": {
       "path": "./examples/kit-nextjs-location-finder",
-      "nodeVersion": "22.11.0",
+      "nodeVersion": "24.14.1",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -38,7 +38,7 @@
     },
     "kit-nextjs-product-starter": {
       "path": "./examples/kit-nextjs-product-listing",
-      "nodeVersion": "22.11.0",
+      "nodeVersion": "24.14.1",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -47,7 +47,7 @@
     },
     "basic-nextjs": {
       "path": "./examples/basic-nextjs",
-      "nodeVersion": "22.11.0",
+      "nodeVersion": "24.14.1",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -56,7 +56,7 @@
     },
     "basic-nextjs-pages-router": {
       "path": "./examples/basic-nextjs-pages-router",
-      "nodeVersion": "22.11.0",
+      "nodeVersion": "24.14.1",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": false,
       "type": "sxa",

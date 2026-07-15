@@ -1,5 +1,5 @@
 import { Field } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import { ComponentProps, GraphQLDatasource } from '@/lib/component-props';
 
 /**
  * Model used for Sitecore Component integration
@@ -7,10 +7,13 @@ import { ComponentProps } from '@/lib/component-props';
 export type SiteMetadataProps = ComponentProps & SiteMetadataFields;
 
 export type SiteMetadataFields = {
-  fields: {
-    title?: Field<string>;
-    metadataTitle?: Field<string>;
-    metadataKeywords?: Field<string>;
-    metadataDescription?: Field<string>;
-  };
+  fields: GraphQLDatasource<SiteMetadataFieldValues> | SiteMetadataFieldValues;
+};
+
+export type SiteMetadataFieldValues = {
+  title?: Field<string>;
+  metadataTitle?: Field<string>;
+  metadataAuthor?: Field<string>;
+  metadataKeywords?: Field<string>;
+  metadataDescription?: Field<string>;
 };

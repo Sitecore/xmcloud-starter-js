@@ -13,8 +13,9 @@ import { environment } from '../../../environments/environment';
  * https://www.npmjs.com/package/@sitecore-cloudsdk/events
  */
 @Component({
-  selector: 'app-cdp-page-view',
-  template: '',
+    selector: 'app-cdp-page-view',
+    template: '',
+    standalone: false
 })
 export class CdpPageViewComponent implements OnInit, OnDestroy {
   private contextSubscription: Subscription;

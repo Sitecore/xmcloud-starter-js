@@ -3,12 +3,11 @@
 import {
   Text as ContentSdkText,
   Link as ContentSdkLink,
-  Field,
-  LinkField,
 } from '@sitecore-content-sdk/nextjs';
 import { ChevronRight } from 'lucide-react';
-import { useI18n } from 'next-localization';
+import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
+import type { Enum } from 'types/enum';
 import {
   Carousel,
   CarouselContent,
@@ -16,27 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from 'shadcd/components/ui/carousel';
-import { Enum } from 'types/enum';
-
-interface ProductFields {
-  ProductName: Field<string>;
-  Description: Field<string>;
-  Price: Field<string>;
-  Images: ProductImage[];
-  Colors: Enum[];
-  WarrantyLink: LinkField;
-  ShippingLink: LinkField;
-}
-
-interface ProductImage {
-  id: string;
-  url: string;
-}
-
-type ProductPageHeaderProps = {
-  params: { [key: string]: string };
-  fields: ProductFields;
-};
+import type { ProductPageHeaderProps } from './product-page-header.props';
 
 const DICTIONARY_KEYS = {
   BUTTON_LABEL: 'Add_To_Cart',
@@ -44,7 +23,7 @@ const DICTIONARY_KEYS = {
 
 export const Default = (props: ProductPageHeaderProps) => {
   const [selectedColor, setSelectedColor] = useState<Enum | null>(null);
-  const { t } = useI18n();
+  const t = useTranslations();
 
   useEffect(() => {
     if (!selectedColor && props.fields?.Colors?.length > 0) {

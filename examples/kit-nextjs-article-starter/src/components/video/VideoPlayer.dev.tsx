@@ -1,16 +1,19 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
 import YouTube from 'react-youtube';
 import { useVideo } from '@/contexts/VideoContext';
 import { Default as Icon } from '@/components/icon/Icon';
 import { extractVideoId } from '@/utils/video';
+import { VideoPlayerProps } from './video-player.props';
 
-interface VideoPlayerProps {
-  videoUrl: string;
-  isPlaying: boolean;
-  onPlay: () => void;
-  fullScreen?: boolean;
-  btnClasses: string;
-}
+const safelyInvokePlayerAction = (action: unknown) => {
+  if (action && typeof (action as Promise<unknown>).catch === 'function') {
+    (action as Promise<unknown>).catch((reason) => {
+      console.warn('YouTube player action was rejected.', reason);
+    });
+  }
+};
 
 export function VideoPlayer({
   videoUrl,
@@ -30,13 +33,16 @@ export function VideoPlayer({
 
   useEffect(() => {
     if (playingVideoId !== videoId && isPlaying) {
-      playerRef.current?.internalPlayer.pauseVideo();
+      safelyInvokePlayerAction(playerRef.current?.internalPlayer?.pauseVideo());
     }
   }, [playingVideoId, videoId, isPlaying]);
 
   const handlePlay = () => {
     onPlay();
-    playerRef.current?.internalPlayer.playVideo();
+    // If player already mounted (e.g. resuming), play; otherwise autoplay will start when iframe loads
+    if (playerRef.current?.internalPlayer) {
+      safelyInvokePlayerAction(playerRef.current.internalPlayer.playVideo());
+    }
   };
 
   return (
@@ -49,22 +55,34 @@ export function VideoPlayer({
           />
         </button>
       )}
-      <YouTube
-        videoId={videoId}
-        opts={{
-          width: '100%',
-          height: '100%',
-          playerVars: {
-            playsinline: 0,
-            autoplay: isPlaying ? 1 : 0,
-            controls: 1,
-            modestbranding: 1,
-            rel: 0,
-          },
-        }}
-        className={`h-full w-full ${isPlaying ? 'block' : 'hidden'}`}
-        ref={playerRef}
-      />
+      {/* Only mount YouTube iframe after user clicks play to avoid third-party cookie warnings */}
+      {isPlaying && videoId && (
+        <YouTube
+          videoId={videoId}
+          opts={{
+            width: '100%',
+            height: '100%',
+            playerVars: {
+              playsinline: 0,
+              autoplay: 1,
+              controls: 1,
+              modestbranding: 1,
+              rel: 0,
+              // Enable privacy-enhanced mode to reduce third-party cookies
+              origin: typeof window !== 'undefined' ? window.location.origin : '',
+            },
+            // Use privacy-enhanced YouTube domain (youtube-nocookie.com)
+            // This reduces third-party cookie usage
+            host: 'https://www.youtube-nocookie.com',
+          }}
+          className="h-full w-full"
+          ref={playerRef}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          onError={(error: any) => {
+            console.error('YouTube video loading error:', error);
+          }}
+        />
+      )}
     </div>
   );
 }

@@ -1,64 +1,25 @@
+'use client';
+
 import React from 'react';
+import Image from 'next/image';
 import {
   Link,
-  useSitecore,
   Text,
-  Field,
-  ImageField,
-  LinkField,
 } from '@sitecore-content-sdk/nextjs';
 import { cn } from '@/lib/utils';
 import { EditableButton as Button } from '@/components/button-component/ButtonComponent';
-import { ComponentProps } from '@/lib/component-props';
-import { ReferenceField } from '@/types/ReferenceField.props';
-import { AuthorReferenceField } from '@/types/AuthorTaxonomy.props';
-
-interface ArticleListingParams {
-  [key: string]: any; // eslint-disable-line
-}
-
-type ArticleItemReferenceField = ReferenceField & {
-  fields: ArticleItem;
-};
-
-interface ArticleItem {
-  pageTitle: Field<string>;
-  pageSummary: Field<string>;
-  pageThumbnail: ImageField;
-  pageReadTime: Field<string>;
-  taxAuthor: AuthorReferenceField;
-}
-
-interface ArticleListingFields {
-  titleOptional?: Field<string>;
-  descriptionOptional?: Field<string>;
-  linkOptional?: LinkField;
-  featuredContent: ArticleItemReferenceField[];
-}
-
-interface ArticleListingProps extends ComponentProps {
-  params: ArticleListingParams;
-  fields: ArticleListingFields;
-  isPageEditing?: boolean;
-}
-
-interface TransformedArticle {
-  link: string;
-  image: string;
-  title: string;
-  summary: string;
-  author: string;
-  authorImage: string;
-  readTime: string;
-}
+import {
+  ArticleListingProps,
+  TransformedArticle,
+} from './article-listing.props';
 
 export const Default: React.FC<ArticleListingProps> = ({
   fields,
   params,
   isPageEditing: propIsEditing,
+  page,
 }) => {
   const { titleOptional, descriptionOptional, linkOptional, featuredContent } = fields || {};
-  const { page } = useSitecore();
   const contextIsEditing = page.mode.isEditing;
 
   // Use the prop value if provided, otherwise fall back to the context value
@@ -70,14 +31,14 @@ export const Default: React.FC<ArticleListingProps> = ({
 
     return featuredContent.map((article) => ({
       link: article.url || '',
-      image: article.fields.pageThumbnail?.value?.src || '',
-      title: article.fields.pageTitle?.value || '',
-      summary: article.fields.pageSummary?.value || '',
-      author: `${article.fields.taxAuthor?.fields?.personFirstName?.value || ''} ${
-        article.fields.taxAuthor?.fields?.personLastName?.value || ''
+      image: article.fields?.pageThumbnail?.value?.src || '',
+      title: article.fields?.pageTitle?.value || '',
+      summary: article.fields?.pageSummary?.value || '',
+      author: `${article.fields?.taxAuthor?.fields?.personFirstName?.value || ''} ${
+        article.fields?.taxAuthor?.fields?.personLastName?.value || ''
       }`.trim(),
-      authorImage: article.fields.taxAuthor?.fields?.personProfileImage?.value?.src || '',
-      readTime: article.fields.pageReadTime?.value || '',
+      authorImage: article.fields?.taxAuthor?.fields?.personProfileImage?.value?.src || '',
+      readTime: article.fields?.pageReadTime?.value || '',
     }));
   }, [featuredContent]);
 
@@ -85,11 +46,14 @@ export const Default: React.FC<ArticleListingProps> = ({
   const featuredArticles = articles.slice(0, 2);
   const regularArticles = articles.slice(2);
 
+  // Generate unique ID for section heading if title exists
+  const sectionId = 'article-listing-section';
+  
   return (
-    <div
+    <section
       data-component="ArticleListing"
       className="@container"
-      aria-label="Article listing section"
+      {...(titleOptional?.value && { 'aria-labelledby': sectionId })}
     >
       <div className={cn('w-full', params?.styles)}>
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -99,6 +63,7 @@ export const Default: React.FC<ArticleListingProps> = ({
                 <div className="@md:mb-0 mb-4">
                   <Text
                     tag="h2"
+                    id={sectionId}
                     field={titleOptional}
                     className="font-heading @md:text-6xl text-primary text-4xl font-normal leading-[1.20] tracking-tighter"
                   />
@@ -130,6 +95,7 @@ export const Default: React.FC<ArticleListingProps> = ({
                     }
                     isPageEditing={isPageEditing}
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    contextTitle={titleOptional?.value}
                   />
                 </div>
               )}
@@ -139,27 +105,30 @@ export const Default: React.FC<ArticleListingProps> = ({
           {/* Featured articles - 2 column layout */}
           <div className="@md:grid-cols-2 mb-[28px] grid gap-8">
             {featuredArticles.map((article, index) => (
-              <div key={index} className="@md:mb-0 group/article mb-6">
+              <article key={index} className="@md:mb-0 group/article mb-6">
                 {isPageEditing ? (
-                  <div className="rounded-default @md:mb-0 mb-4 aspect-[3/2] w-full overflow-hidden">
-                    <img
+                  <div className="rounded-default @md:mb-0 relative mb-4 aspect-[3/2] w-full overflow-hidden">
+                    <Image
                       src={article.image}
                       alt={article.title}
-                      className="h-full w-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 ) : (
                   <div
-                    className="rounded-default @md:mb-0 mb-4 aspect-[3/2] w-full cursor-pointer overflow-hidden"
+                    className="rounded-default @md:mb-0 relative mb-4 aspect-[3/2] w-full cursor-pointer overflow-hidden"
                     onClick={() => (window.location.href = article.link)}
                     role="button"
                     tabIndex={0}
                     onKeyDown={(e) => e.key === 'Enter' && (window.location.href = article.link)}
                   >
-                    <img
+                    <Image
                       src={article.image}
                       alt={article.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover/article:scale-105"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-300 group-hover/article:scale-105"
                     />
                   </div>
                 )}
@@ -180,12 +149,13 @@ export const Default: React.FC<ArticleListingProps> = ({
                   </p>
                   <div className="mt-6 flex items-center gap-4">
                     {(article.authorImage || article.author) && (
-                      <div className="bg-primary text-primary-foreground flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
+                      <div className="bg-primary text-primary-foreground relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
                         {article.authorImage ? (
-                          <img
+                          <Image
                             src={article.authorImage}
                             alt={`${article.author} avatar`}
-                            className="h-full w-full object-cover"
+                            fill
+                            className="object-cover"
                           />
                         ) : article.author ? (
                           <span className="text-xs font-medium">
@@ -210,14 +180,14 @@ export const Default: React.FC<ArticleListingProps> = ({
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
 
           {/* Regular articles - 3 column compact layout */}
           <div className="@sm:grid-cols-2 @lg:grid-cols-3 grid gap-8">
             {regularArticles.map((article, index) => (
-              <div
+              <article
                 key={index}
                 className="@md:p-8 rounded-default hover:bg-tertiary-hover focus:ring-accent group/article flex h-full flex-col p-4 transition-colors focus:outline-none focus:ring-2"
               >
@@ -236,12 +206,13 @@ export const Default: React.FC<ArticleListingProps> = ({
                 </div>
                 <div className="mt-auto flex items-center gap-4 pt-6">
                   {(article.authorImage || article.author) && (
-                    <div className="bg-primary text-primary-foreground flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
+                    <div className="bg-primary text-primary-foreground relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-full">
                       {article.authorImage ? (
-                        <img
+                        <Image
                           src={article.authorImage}
                           alt={`${article.author} avatar`}
-                          className="h-full w-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       ) : article.author ? (
                         <span className="text-xs font-medium">
@@ -265,11 +236,11 @@ export const Default: React.FC<ArticleListingProps> = ({
                     <p className="text-accent-foreground text-sm">{article.readTime}</p>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

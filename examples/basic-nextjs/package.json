@@ -21,32 +21,49 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@sitecore-cloudsdk/core": "^0.5.4",
-    "@sitecore-cloudsdk/events": "^0.5.4",
-    "@sitecore-content-sdk/nextjs": "^1.0.0",
-    "next": "^15.5.0",
-    "next-intl": "^4.3.5",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "@sitecore-content-sdk/analytics-core": "^2.1.0",
+    "@sitecore-content-sdk/events": "^2.1.0",
+    "@sitecore-content-sdk/nextjs": "^2.2.0",
+    "@sitecore-content-sdk/personalize": "^2.1.0",
+    "next": "^16.2.6",
+    "next-intl": "^4.9.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "rsc-env": "0.0.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@sitecore-content-sdk/cli": "^1.0.0",
+    "@sitecore-content-sdk/cli": "^2.2.0",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^22.15.14",
+    "@types/node": "^24.10.4",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "cross-env": "^10.0.0",
     "eslint": "^9.33.0",
-    "eslint-config-next": "15.5.0",
+    "eslint-config-next": "16.2.0",
     "npm-run-all2": "^8.0.4",
     "tailwindcss": "^4",
     "typescript": "~5.8.3"
   },
+  "overrides": {
+    "postcss": ">=8.5.10",
+    "picomatch": "4.0.4",
+    "anymatch": {
+      "picomatch": "2.3.2"
+    },
+    "micromatch": {
+      "picomatch": "2.3.2"
+    },
+    "brace-expansion@^5.0.0": "5.0.6",
+    "lodash-es": "4.18.1",
+    "flatted": "3.4.2",
+    "esbuild": ">=0.28.1"
+  },
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build next:build",
-    "lint": "eslint ./src/**/*.tsx ./src/**/*.ts",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,scss,md}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "type-check": "tsc --noEmit --incremental false",
     "next:build": "next build",
     "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "next:start": "next start",

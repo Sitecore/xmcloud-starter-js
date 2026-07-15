@@ -2,11 +2,13 @@ import { RichText as ContentSdkRichText } from '@sitecore-content-sdk/nextjs';
 import { RichTextBlockProps } from './rich-text-block.props';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
+import { getDatasource } from '@/lib/component-props';
 
 export const Default: React.FC<RichTextBlockProps> = (props) => {
-  const { fields } = props;
-  const text = props.fields ? (
-    <ContentSdkRichText field={props.fields.text} />
+  const fields = getDatasource(props.fields);
+
+  const text = fields ? (
+    <ContentSdkRichText field={fields.text} />
   ) : (
     <span className="is-empty-hint">Rich text</span>
   );

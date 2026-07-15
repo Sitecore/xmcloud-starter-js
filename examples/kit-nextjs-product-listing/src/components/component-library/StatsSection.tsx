@@ -4,62 +4,22 @@ import {
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
-import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 import { Button } from 'shadcd/components/ui/button';
 import { useMemo, type JSX } from 'react';
-
-interface Fields {
-  data: {
-    datasource: {
-      children: {
-        results: StatisticFields[];
-      };
-      heading: IGQLTextField;
-      tagLine: IGQLTextField;
-      body: IGQLRichTextField;
-      image1: IGQLImageField;
-      image2: IGQLImageField;
-      link1: IGQLLinkField;
-      link2: IGQLLinkField;
-    };
-  };
-}
-
-interface StatisticFields {
-  id: string;
-  statValue: IGQLTextField;
-  statHeading: IGQLTextField;
-  statBody: IGQLTextField;
-}
-
-type StatsProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-type StatBoxProps = {
-  stat: StatisticFields;
-  type: 'simple' | 'bordered' | 'boxed' | 'boxedSimple';
-  isSmall?: boolean;
-  className?: string;
-};
-
-type StatSectionButtonsProps = {
-  link1: IGQLLinkField;
-  link2: IGQLLinkField;
-};
+import type { StatBoxProps, StatSectionButtonsProps, StatsProps } from './stats-section.props';
+import { getDatasource, normalizeFieldShape } from '@/lib/component-props';
 
 const StatBox = (props: StatBoxProps): JSX.Element => {
   switch (props.type) {
     case 'bordered':
       return (
         <div className={`border-s ps-8 ${props.className}`}>
-          <h4 className={`${props.isSmall ? 'text-6xl' : 'text-7xl'} font-bold mb-6`}>
-            <ContentSdkText field={props.stat.statValue?.jsonValue} />
-          </h4>
-          <h3 className="text-xl font-bold">
+          <h3 className="text-xl font-bold mb-6">
             <ContentSdkText field={props.stat.statHeading?.jsonValue} />
           </h3>
+          <p className={`${props.isSmall ? 'text-6xl' : 'text-7xl'} font-bold`} aria-label="Statistic value">
+            <ContentSdkText field={props.stat.statValue?.jsonValue} />
+          </p>
           <p>
             <ContentSdkText field={props.stat.statBody?.jsonValue} />
           </p>
@@ -71,13 +31,14 @@ const StatBox = (props: StatBoxProps): JSX.Element => {
           <h3 className="text-xl font-bold mb-12">
             <ContentSdkText field={props.stat.statHeading?.jsonValue} />
           </h3>
-          <h4
+          <p
             className={`${
               props.isSmall ? 'text-6xl' : 'text-7xl'
             } font-bold pb-4 mb-4 text-right border-b mt-auto`}
+            aria-label="Statistic value"
           >
             <ContentSdkText field={props.stat.statValue?.jsonValue} />
-          </h4>
+          </p>
           <p className="text-right">
             <ContentSdkText field={props.stat.statBody?.jsonValue} />
           </p>
@@ -86,12 +47,12 @@ const StatBox = (props: StatBoxProps): JSX.Element => {
     case 'boxedSimple':
       return (
         <div className={`border p-8 flex flex-col ${props.className}`}>
-          <h4 className={`${props.isSmall ? 'text-6xl' : 'text-7xl'} font-bold mb-12`}>
-            <ContentSdkText field={props.stat.statValue?.jsonValue} />
-          </h4>
-          <h3 className="text-xl font-bold mt-auto">
+          <h3 className="text-xl font-bold mt-auto mb-12">
             <ContentSdkText field={props.stat.statHeading?.jsonValue} />
           </h3>
+          <p className={`${props.isSmall ? 'text-6xl' : 'text-7xl'} font-bold`} aria-label="Statistic value">
+            <ContentSdkText field={props.stat.statValue?.jsonValue} />
+          </p>
           <p>
             <ContentSdkText field={props.stat.statBody?.jsonValue} />
           </p>
@@ -100,12 +61,12 @@ const StatBox = (props: StatBoxProps): JSX.Element => {
     default:
       return (
         <div className={props.className}>
-          <h4 className={`${props.isSmall ? 'text-6xl' : 'text-7xl'} font-bold mb-6`}>
-            <ContentSdkText field={props.stat.statValue?.jsonValue} />
-          </h4>
-          <h3 className="text-xl font-bold">
+          <h3 className="text-xl font-bold mb-6">
             <ContentSdkText field={props.stat.statHeading?.jsonValue} />
           </h3>
+          <p className={`${props.isSmall ? 'text-6xl' : 'text-7xl'} font-bold`} aria-label="Statistic value">
+            <ContentSdkText field={props.stat.statValue?.jsonValue} />
+          </p>
           <p>
             <ContentSdkText field={props.stat.statBody?.jsonValue} />
           </p>
@@ -133,9 +94,9 @@ export const Default = (props: StatsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-x-20 gap-y-4 mb-20">
           <div>
-            <h6 className="font-semibold mb-4">
+            <p className="font-semibold mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
-            </h6>
+            </p>
             <h2 className="text-5xl font-bold">
               <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>
@@ -173,9 +134,9 @@ export const StatsSection1 = (props: StatsProps): JSX.Element => {
       <div className="relative container mx-auto text-white z-2">
         <div className="grid md:grid-cols-2 gap-x-20 gap-y-4 mb-20">
           <div>
-            <h6 className="font-semibold mb-4">
+            <p className="font-semibold mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
-            </h6>
+            </p>
             <h2 className="text-5xl font-bold">
               <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>
@@ -204,9 +165,9 @@ export const StatsSection2 = (props: StatsProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-6">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -238,9 +199,9 @@ export const StatsSection3 = (props: StatsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-20 items-start">
           <div>
-            <h6 className="font-semibold mb-4">
+            <p className="font-semibold mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
-            </h6>
+            </p>
             <h2 className="text-5xl font-bold mb-6">
               <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>
@@ -273,9 +234,9 @@ export const StatsSection4 = (props: StatsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-5 gap-20 items-start">
           <div className="md:col-span-2">
-            <h6 className="font-semibold mb-4">
+            <p className="font-semibold mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
-            </h6>
+            </p>
             <h2 className="text-5xl font-bold mb-6">
               <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>
@@ -302,9 +263,9 @@ export const StatsSection5 = (props: StatsProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="text-center mb-20">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-6">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -340,9 +301,9 @@ export const StatsSection6 = (props: StatsProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl text-center mb-20 mx-auto">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-6">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -386,9 +347,9 @@ export const StatsSection7 = (props: StatsProps): JSX.Element => {
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className="max-w-3xl mb-20">
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-6">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -425,9 +386,9 @@ export const StatsSection8 = (props: StatsProps): JSX.Element => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-x-20 gap-y-4 mb-20">
           <div>
-            <h6 className="font-semibold mb-4">
+            <p className="font-semibold mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
-            </h6>
+            </p>
             <h2 className="text-5xl font-bold">
               <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>

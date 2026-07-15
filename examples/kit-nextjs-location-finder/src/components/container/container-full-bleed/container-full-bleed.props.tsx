@@ -1,11 +1,11 @@
 import { PlaceholderProps } from '@/types/Placeholder.props';
-import { ComponentProps } from '@/lib/component-props';
+import { PlaceholderComponentProps } from '@/lib/component-props';
 import { BackgroundColor } from '@/enumerations/BackgroundColor.enum';
 
 /**
  * Model used for Sitecore Component integration
  */
-export type ContainerFullBleedProps = ComponentProps & PlaceholderProps & ContainerFullBleedParams;
+export type ContainerFullBleedProps = PlaceholderComponentProps & PlaceholderProps & ContainerFullBleedParams;
 
 export type ContainerFullBleedParams = {
   params?: {
@@ -16,3 +16,5 @@ export type ContainerFullBleedParams = {
     [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
   };
 };
+
+

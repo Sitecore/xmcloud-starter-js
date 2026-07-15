@@ -1,5 +1,5 @@
 import type { Field, LinkField, RichTextField } from '@sitecore-content-sdk/nextjs';
-import type { ComponentProps } from '@/lib/component-props';
+import type { CompatibleDatasource, CompatibleField, ComponentProps } from '@/lib/component-props';
 
 /**
  * Model used for Sitecore Component integration
@@ -12,23 +12,22 @@ export type AccordionProps = ComponentProps &
 export interface AccordionFields {
   fields: {
     data: {
-      datasource?: {
-        heading: { jsonValue: Field<string> };
-        description?: { jsonValue: Field<string> };
-        link: { jsonValue: LinkField };
-        children: {
-          results: AccordionItemProps[];
-        };
-      };
+      datasource?: AccordionDatasourceFields;
+      contextItem?: AccordionDatasourceFields;
     };
-  };
+  } & AccordionDatasourceFields;
 }
 
 export type AccordionItemProps = {
-  heading: {
-    jsonValue: Field<string>;
-  };
-  description: {
-    jsonValue: RichTextField;
-  };
+  heading?: CompatibleField<Field<string>>;
+  description?: CompatibleField<RichTextField>;
 };
+
+export interface AccordionDatasourceFields {
+  heading?: CompatibleField<Field<string>>;
+  description?: CompatibleField<Field<string>>;
+  link?: CompatibleField<LinkField>;
+  children?: {
+    results?: AccordionItemProps[];
+  };
+}

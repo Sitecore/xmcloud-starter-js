@@ -1,5 +1,5 @@
 import { Field } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import { ComponentProps, GraphQLDatasource } from '@/lib/component-props';
 
 /**
  * Model used for Sitecore Component integration
@@ -7,7 +7,11 @@ import { ComponentProps } from '@/lib/component-props';
 export type RichTextBlockProps = ComponentProps & RichTextFields;
 
 export interface RichTextFields {
-  fields: {
+  fields:
+    | GraphQLDatasource<{
+        text: Field<string>;
+      }>
+    | {
     text: Field<string>;
-  };
+      };
 }

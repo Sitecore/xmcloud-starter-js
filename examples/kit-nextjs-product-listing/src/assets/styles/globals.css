@@ -29,7 +29,6 @@
   --border-width-4: 0.25rem;
   --border-width-8: 0.5rem;
   --color-background: #ffffff;
-  --color-background: #ffffff;
   --color-foreground: #000000;
   --color-card: #ffffff;
   --color-card-foreground: #000000;
@@ -61,7 +60,6 @@
   --color-light-hover: #f5f5f5b3;
   --color-light-foreground: #18181b;
   --color-overlay: #f5f5f5b3;
-  --disabled: [object Object];
   --figma-automations-logo: Brand A;
   --figma-automations-hero: Hero 1;
   --figma-automations-navigation: Style 1;

@@ -1,8 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useRef, useEffect, useState } from 'react';
 import type { GoogleMapProps } from './google-maps.props';
+import { getFieldValue as getNormalizedFieldValue } from '@/lib/component-props';
 
 declare global {
   interface Window {
@@ -27,7 +28,7 @@ export const GoogleMap = ({
 
   // Helper function to get plain value from Sitecore field
   const getFieldValue = (field: { jsonValue?: { value?: string } } | undefined): string => {
-    return field?.jsonValue?.value || '';
+    return getNormalizedFieldValue<{ value?: string }>(field as never)?.value || '';
   };
 
   // Load Google Maps API
@@ -173,8 +174,7 @@ export const GoogleMap = ({
         if (!dealership.latitude || !dealership.longitude) return null;
 
         const isSelected =
-          selectedDealership?.dealershipName?.jsonValue?.value ===
-          dealership.dealershipName?.jsonValue?.value;
+          getFieldValue(selectedDealership?.dealershipName) === getFieldValue(dealership.dealershipName);
 
         // Use the specified SVG files for markers
         const iconUrl = isSelected ? '/img/icons/location.svg' : '/img/icons/default.svg';

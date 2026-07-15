@@ -25,7 +25,7 @@ export const ImageGalleryNoSpacing: React.FC<ImageGalleryProps> = (props) => {
 
   if (fields) {
     return (
-      <div
+      <section
         ref={containerRef}
         className={cn(
           '@container relative min-h-[100vh] max-w-screen-xl overflow-hidden bg-black text-white',
@@ -34,6 +34,7 @@ export const ImageGalleryNoSpacing: React.FC<ImageGalleryProps> = (props) => {
           }
         )}
         data-class-change
+        aria-label="Image gallery"
       >
         {/* Centered header section */}
         <div className="mb-16 text-center">
@@ -61,52 +62,52 @@ export const ImageGalleryNoSpacing: React.FC<ImageGalleryProps> = (props) => {
 
         <div className="relative">
           {/* Full-width featured image */}
-          <div
+          <figure
             className={`${isParallaxActive ? 'parallax-element' : ''} w-full`}
             data-speed={isMdContainer ? '0.2' : '0.1'}
           >
             {image1 && (
-              <ImageWrapper data-component="image-1" image={image1} className="h-auto w-full" />
+              <ImageWrapper data-component="image-1" image={image1} className="h-auto w-full" page={props.page} />
             )}
-          </div>
+          </figure>
 
           {/* 2x2 Grid with no spacing */}
           <div className="@md:grid-cols-2 grid grid-cols-1">
             <div>
               {/* Top left */}
-              <div
+              <figure
                 className={`${isParallaxActive ? 'parallax-element' : ''}`}
                 data-speed={isMdContainer ? '0.1' : '-0.0'}
               >
                 {image1 && (
-                  <ImageWrapper data-component="image-2" image={image2} className="h-auto w-full" />
+                  <ImageWrapper data-component="image-2" image={image2} className="h-auto w-full" page={props.page} />
                 )}
-              </div>
+              </figure>
 
               {/* bottom left */}
-              <div
+              <figure
                 className={`${isParallaxActive ? 'parallax-element' : ''}`}
                 data-speed={isMdContainer ? '0.05' : '-0.05'}
               >
                 {image3 && (
-                  <ImageWrapper data-component="image-3" image={image3} className="h-auto w-full" />
+                  <ImageWrapper data-component="image-3" image={image3} className="h-auto w-full" page={props.page} />
                 )}
-              </div>
+              </figure>
             </div>
             <div>
               {/* Bottom left */}
-              <div
+              <figure
                 className={`${isParallaxActive ? 'parallax-element' : ''}`}
                 data-speed={isMdContainer ? '0.0' : '-0.1'}
               >
                 {image4 && (
-                  <ImageWrapper data-component="image-4" image={image4} className="h-auto w-full" />
+                  <ImageWrapper data-component="image-4" image={image4} className="h-auto w-full" page={props.page} />
                 )}
-              </div>
+              </figure>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
   return <NoDataFallback componentName="ImageGalleryNoSpacing" />;

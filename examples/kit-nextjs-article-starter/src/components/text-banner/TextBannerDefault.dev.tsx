@@ -2,16 +2,17 @@ import { TextBannerProps } from './text-banner.props';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Flex, FlexItem } from '@/components/flex/Flex.dev';
-import { Link } from '@sitecore-content-sdk/nextjs';
-import { Text } from '@sitecore-content-sdk/nextjs';
+import { Link, Text } from '@sitecore-content-sdk/nextjs';
 import { NoDataFallback } from '@/utils/NoDataFallback';
+import { getDescriptiveLinkText } from '@/utils/link-text';
 
 export const Default: React.FC<TextBannerProps> = (props) => {
-  const { fields, params } = props;
+  const { fields, params, page } = props;
 
   const { heading, description, link, image } = fields ?? {};
   const { excludeTopMargin } = params ?? {};
   const inline = image?.value?.src ? { '--bg-img': `url(${image?.value.src})` } : {};
+  const isPageEditing = page?.mode?.isEditing ?? false;
   if (fields) {
     return (
       <section
@@ -44,7 +45,21 @@ export const Default: React.FC<TextBannerProps> = (props) => {
             {link && (
               <Flex justify="end">
                 <Button asChild>
-                  <Link field={link} />
+                  <Link
+                    field={
+                      // Enhance link with descriptive text for SEO
+                      !isPageEditing && link?.value?.text
+                        ? {
+                            ...link,
+                            value: {
+                              ...link.value,
+                              text: getDescriptiveLinkText(link, heading?.value),
+                            },
+                          }
+                        : link
+                    }
+                    editable={isPageEditing}
+                  />
                 </Button>
               </Flex>
             )}

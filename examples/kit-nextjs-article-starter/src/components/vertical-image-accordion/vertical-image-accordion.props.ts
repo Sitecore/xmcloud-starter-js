@@ -14,8 +14,8 @@ export interface AccordionItem {
 }
 
 interface VerticalImageAccordionFields {
-  data: {
-    datasource: {
+  data?: {
+    datasource?: {
       title?: { jsonValue: Field<string> };
       items?: {
         results: AccordionItem[];
@@ -26,6 +26,6 @@ interface VerticalImageAccordionFields {
 
 export interface VerticalImageAccordionProps extends ComponentProps {
   params: VerticalImageAccordionParams;
-  fields: VerticalImageAccordionFields;
+  fields?: VerticalImageAccordionFields;
   isPageEditing?: boolean;
 }

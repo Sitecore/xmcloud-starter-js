@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { USER_ZIPCODE } from '@/lib/constants';
+import { hasNavigator, hasSessionStorage, isBrowser } from '@/utils/browser';
 
 type ZipcodeState = {
   zipcode: string | null;
@@ -17,7 +18,7 @@ const GEOLOCATION_TIMEOUT = 8000; // 8 seconds timeout before showing modal
 export function useZipcode(defaultZipcode: string) {
   const [state, setState] = useState<ZipcodeState>({
     zipcode: null,
-    loading: true, // Start as true since we'll check on mount
+    loading: false, // Start as false — defer geolocation until after LCP
     error: null,
     showModal: false,
   });
@@ -30,7 +31,6 @@ export function useZipcode(defaultZipcode: string) {
   const showFallbackModal = useCallback(() => {
     // Only show the modal if geolocation hasn't completed yet
     if (!geolocationCompletedRef.current) {
-      console.log('Geolocation timeout - showing fallback modal');
       setState((prev) => ({
         ...prev,
         loading: false,
@@ -42,8 +42,12 @@ export function useZipcode(defaultZipcode: string) {
 
   // Function to fetch zipcode using geolocation
   const fetchZipcode = useCallback(async () => {
-    console.log('Fetching zipcode using geolocation...');
     setState((prev) => ({ ...prev, loading: true, error: null, showModal: false }));
+
+    if (!isBrowser) {
+      setState((prev) => ({ ...prev, loading: false }));
+      return;
+    }
 
     // Reset the geolocation completed flag
     geolocationCompletedRef.current = false;
@@ -57,8 +61,7 @@ export function useZipcode(defaultZipcode: string) {
     timeoutRef.current = setTimeout(showFallbackModal, GEOLOCATION_TIMEOUT);
 
     // Check if geolocation is supported by the browser
-    if (!navigator.geolocation) {
-      console.log('Geolocation not supported');
+    if (!hasNavigator() || !navigator.geolocation) {
       clearTimeout(timeoutRef.current);
       geolocationCompletedRef.current = true;
       setState((prev) => ({
@@ -73,16 +76,15 @@ export function useZipcode(defaultZipcode: string) {
     // Try IP-based geolocation as a fallback if browser geolocation fails
     const tryIpBasedGeolocation = async () => {
       try {
-        console.log('Trying IP-based geolocation as fallback');
         const response = await fetch('https://ipapi.co/json/');
         if (!response.ok) throw new Error('IP geolocation failed');
 
         const data = await response.json();
-        console.log('IP geolocation response:', data);
 
         if (data.postal) {
-          console.log('IP geolocation found zipcode:', data.postal);
-          sessionStorage.setItem(STORAGE_KEY, data.postal);
+          if (hasSessionStorage()) {
+            sessionStorage.setItem(STORAGE_KEY, data.postal);
+          }
 
           setState((prev) => ({
             ...prev,
@@ -113,7 +115,6 @@ export function useZipcode(defaultZipcode: string) {
             timeoutRef.current = null;
           }
 
-          console.log('Got position:', position.coords);
           const { latitude, longitude } = position.coords;
 
           // Use OpenStreetMap's Nominatim service for reverse geocoding
@@ -133,19 +134,17 @@ export function useZipcode(defaultZipcode: string) {
           }
 
           const data = await response.json();
-          console.log('Geocoding response:', data);
 
           // Extract postal code (zipcode)
           const zipcode = data.address?.postcode || null;
-          console.log('Extracted zipcode:', zipcode);
 
           if (zipcode) {
             // Save to sessionStorage
-            sessionStorage.setItem(STORAGE_KEY, zipcode);
-            console.log('Saved zipcode to sessionStorage:', zipcode);
+            if (hasSessionStorage()) {
+              sessionStorage.setItem(STORAGE_KEY, zipcode);
+            }
 
             setState((prev) => {
-              console.log('Updating state with zipcode:', zipcode);
               return {
                 ...prev,
                 zipcode,
@@ -155,7 +154,6 @@ export function useZipcode(defaultZipcode: string) {
               };
             });
           } else {
-            console.log('No zipcode found in geocoding response, trying IP fallback');
             // If no zipcode found in geocoding response, try IP-based geolocation
             const ipGeoSuccess = await tryIpBasedGeolocation();
 
@@ -196,7 +194,6 @@ export function useZipcode(defaultZipcode: string) {
           timeoutRef.current = null;
         }
 
-        console.error('Geolocation error:', error);
         let errorMessage = 'Failed to get location';
 
         // Handle specific geolocation errors
@@ -236,10 +233,12 @@ export function useZipcode(defaultZipcode: string) {
 
   // Function to manually update zipcode
   const updateZipcode = useCallback((newZipcode: string | null) => {
-    if (newZipcode) {
-      sessionStorage.setItem(STORAGE_KEY, newZipcode);
-    } else {
-      sessionStorage.removeItem(STORAGE_KEY);
+    if (hasSessionStorage()) {
+      if (newZipcode) {
+        sessionStorage.setItem(STORAGE_KEY, newZipcode);
+      } else {
+        sessionStorage.removeItem(STORAGE_KEY);
+      }
     }
 
     setState((prev) => ({
@@ -268,14 +267,13 @@ export function useZipcode(defaultZipcode: string) {
   }, []);
 
   useEffect(() => {
-    // Check if we're in a browser environment
-    if (typeof window === 'undefined') {
+    if (!isBrowser) {
       setState((prev) => ({ ...prev, loading: false }));
       return;
     }
 
-    // Try to get zipcode from sessionStorage first
-    const storedZipcode = sessionStorage.getItem(STORAGE_KEY);
+    // Try to get zipcode from sessionStorage first (synchronous & fast)
+    const storedZipcode = hasSessionStorage() ? sessionStorage.getItem(STORAGE_KEY) : null;
 
     if (storedZipcode) {
       setState((prev) => ({
@@ -283,10 +281,11 @@ export function useZipcode(defaultZipcode: string) {
         zipcode: storedZipcode,
         loading: false,
       }));
-    } else {
-      // If not in sessionStorage, automatically try to fetch using geolocation
-      fetchZipcode();
     }
+    // If no stored zipcode, do NOT auto-trigger geolocation.
+    // The consumer component calls fetchZipcode() explicitly on user interaction
+    // (e.g. "Use my location" button) to avoid a disruptive permission prompt
+    // that blocks LCP and degrades page load performance.
 
     // Cleanup timeouts when component unmounts
     return cleanup;

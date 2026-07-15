@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useRef, MutableRefObject } from 'react';
 
 function useVisibility(delay = 0): [boolean, MutableRefObject<HTMLDivElement | null>] {

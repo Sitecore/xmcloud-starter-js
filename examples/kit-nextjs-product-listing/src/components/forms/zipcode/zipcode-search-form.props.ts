@@ -15,7 +15,6 @@ export interface ZipcodeSearchFormProps {
   /**
    * Optional callback function that is called when the form is submitted
    */
-  // eslint-disable-next-line no-unused-vars
   onSubmit?: (values: ZipcodeFormValues) => void;
 
   /**

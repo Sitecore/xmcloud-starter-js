@@ -1,5 +1,6 @@
 import { LinkFieldValue } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import { CompatibleDatasource, CompatibleField, ComponentProps } from '@/lib/component-props';
+import { Field } from '@sitecore-content-sdk/nextjs';
 import { GqlFieldString } from '@/types/gql.props';
 /**
  * Model used for Sitecore Component integration
@@ -7,19 +8,15 @@ import { GqlFieldString } from '@/types/gql.props';
 export type BreadcrumbsProps = ComponentProps & BreadcrumbsData;
 
 export type BreadcrumbsData = {
-  fields: {
-    data: {
-      datasource: {
-        ancestors: BreadcrumbsPage[];
-        name: string;
-      };
-    };
-  };
+  fields: CompatibleDatasource<{
+    ancestors: BreadcrumbsPage[];
+    name: string;
+  }>;
 };
 
 export type BreadcrumbsPage = {
   name: string;
-  title: GqlFieldString;
-  navigationTitle: GqlFieldString;
+  title: CompatibleField<Field<string>>;
+  navigationTitle: CompatibleField<Field<string>>;
   url?: LinkFieldValue;
 };

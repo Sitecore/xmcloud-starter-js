@@ -9,6 +9,12 @@ It's designed to enable users to create their own starter applications and, in t
 
 The monorepo is set up using [PNPM workspaces](https://pnpm.io/workspaces).
 
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Deployment](#deployment)
+- [Local development against the XM Cloud instance](#local-development-against-the-xm-cloud-instance)
+
 ## Getting Started
 
 1. Install PNPM:
@@ -62,7 +68,7 @@ npm run start:<your-spa-app>
 
 1. Log into the Deploy app, locate your `Environment` and select the `Developer Settings` tab.
 2. Ensure that the context switch is set to `Preview`.
-3. In the **Local Development**`** section, click to copy the sample `.env` file contents to your clipboard.
+3. In the **Local Development** section, click to copy the sample `.env` file contents to your clipboard.
 4. Open the `.env` file in the `./examples/basic-spa/<your-spa-app>` folder and paste everything except JSS_EDITING_SECRET.
 5. From the **Local Development** section copy the value of the JSS_EDITING_SECRET variable and paste it into the `.env` file of the proxy app `./examples/basic-spa/proxy`
 6. Run the following commands in the root of the repository to start your SPA application:

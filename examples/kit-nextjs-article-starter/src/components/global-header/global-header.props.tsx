@@ -9,9 +9,9 @@ import { GqlField } from '@/types/gql.props';
 export type GlobalHeaderProps = ComponentProps & PlaceholderProps & GlobalHeaderFields;
 
 export type GlobalHeaderFields = {
-  fields: {
-    data: {
-      item: {
+  fields?: {
+    data?: {
+      item?: {
         logo: {
           jsonValue?: ImageField;
         };

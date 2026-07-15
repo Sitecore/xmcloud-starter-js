@@ -38,7 +38,22 @@ export type FooterSocialLink = {
   socialIcon: { jsonValue: ImageField };
 };
 
-export type FooterNavigationColumnProps = {
+export type FooterNavigationColumnProps = ComponentProps & {
+  fields: {
+    data: {
+      datasource: {
+        header: {
+          jsonValue: Field<string>;
+        };
+        items?: {
+          results: FooterNavigationLink[];
+        };
+      };
+    };
+  };
+};
+
+export type FooterNavigationColumnDevProps = {
   listClassName?: string;
   orientation?: 'horizontal' | 'vertical';
   indicatorClassName?: string;

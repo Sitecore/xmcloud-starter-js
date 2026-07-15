@@ -2,15 +2,17 @@ import { cn } from '@/lib/utils';
 import * as e from '@/lib/enum';
 
 import {
+  AppPlaceholder,
   ComponentFields,
   ComponentParams,
   ComponentRendering,
   getFieldValue,
-  Placeholder,
 } from '@sitecore-content-sdk/nextjs';
 import { Slot } from '@radix-ui/react-slot';
 import { EnumValues } from '@/enumerations/generic.enum';
 import { twMerge } from 'tailwind-merge';
+import componentMap from '.sitecore/component-map';
+import type { ComponentProps } from '@/lib/component-props';
 
 /** Flex Component
  * This component is designed for easy layout within a container,
@@ -261,9 +263,8 @@ export interface FlexItemProps {
 }
 
 // XM Cloud Component Props
-export interface XMComponent {
+export interface XMComponent extends ComponentProps {
   rendering: ComponentRendering & { params: ComponentParams };
-  params: ComponentParams;
   fields: ComponentFields;
 }
 
@@ -336,7 +337,7 @@ export const FlexItem: React.FC<FlexItemProps> = ({
   );
 };
 
-export const XMFlex: React.FC<XMComponent> = ({ params, rendering, fields }) => {
+export const XMFlex: React.FC<XMComponent> = ({ params, rendering, fields, page }) => {
   const phKey = `flex-${params.DynamicPlaceholderId}`;
   return (
     <Flex
@@ -346,12 +347,12 @@ export const XMFlex: React.FC<XMComponent> = ({ params, rendering, fields }) => 
       gap={getFieldValue(fields, 'gap')}
       className={getFieldValue(fields, 'className')}
     >
-      <Placeholder name={phKey} rendering={rendering} />
+      <AppPlaceholder name={phKey} rendering={rendering} page={page} componentMap={componentMap} />
     </Flex>
   );
 };
 
-export const XMFlexItem: React.FC<XMComponent> = ({ params, rendering, fields }) => {
+export const XMFlexItem: React.FC<XMComponent> = ({ params, rendering, fields, page }) => {
   const phKey = `flex-item-${params.DynamicPlaceholderId}`;
   return (
     <FlexItem
@@ -361,7 +362,7 @@ export const XMFlexItem: React.FC<XMComponent> = ({ params, rendering, fields })
       alignSelf={getFieldValue(fields, 'alignSelf')}
       className={getFieldValue(fields, 'className')}
     >
-      <Placeholder name={phKey} rendering={rendering} />
+      <AppPlaceholder name={phKey} rendering={rendering} page={page} componentMap={componentMap} />
     </FlexItem>
   );
 };

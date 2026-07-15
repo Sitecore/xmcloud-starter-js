@@ -25,12 +25,13 @@ export const ImageGalleryDefault: React.FC<ImageGalleryProps> = (props) => {
 
   if (fields) {
     return (
-      <div
+      <section
         ref={containerRef}
         className={cn('@container group relative min-h-[100vh] max-w-screen-xl overflow-hidden', {
           [props?.params?.styles]: props?.params?.styles,
         })}
         data-class-change
+        aria-label="Image gallery"
       >
         <div className="@xl:px-0 px-0 [&:not(.px-6_&):not(.px-8_&):not(.px-10_&)]:px-6">
           {/* Accessibility notice for motion preferences */}
@@ -44,7 +45,7 @@ export const ImageGalleryDefault: React.FC<ImageGalleryProps> = (props) => {
             {/* Layout matching the original design */}
             <div className=" grid grid-cols-12 items-start  gap-4">
               {/* Top left image - Car on city street */}
-              <div
+              <figure
                 className={`@md:col-span-7 col-span-12 ${
                   isParallaxActive ? 'parallax-element' : ''
                 }`}
@@ -54,9 +55,10 @@ export const ImageGalleryDefault: React.FC<ImageGalleryProps> = (props) => {
                     data-component="image-1"
                     image={image1}
                     className="rounded-default h-auto w-full max-w-[581px]"
+                    page={props.page}
                   />
                 )}
-              </div>
+              </figure>
 
               {/* Text content - Right side */}
               <div
@@ -71,7 +73,7 @@ export const ImageGalleryDefault: React.FC<ImageGalleryProps> = (props) => {
             </div>
             <div className="grid grid-cols-12 gap-4">
               {/* Middle right image - Car by concrete wall */}
-              <div
+              <figure
                 className={`@md:col-span-8 @md:col-start-6 z-10 col-span-12 -mt-[80px] mr-[70px] transform-gpu ${
                   isParallaxActive ? 'parallax-element' : ''
                 }`}
@@ -82,13 +84,14 @@ export const ImageGalleryDefault: React.FC<ImageGalleryProps> = (props) => {
                     data-component="image-2"
                     image={image2}
                     className="rounded-default h-auto w-full max-w-[600px]"
+                    page={props.page}
                   />
                 )}
-              </div>
+              </figure>
             </div>
             <div className="grid grid-cols-12 items-end gap-4">
               {/* Bottom left image - Interior panoramic roof */}
-              <div
+              <figure
                 className={`testing-here @md:col-span-7 @md:col-start-1 col-span-12 ${
                   isParallaxActive ? 'parallax-element' : ''
                 }`}
@@ -99,11 +102,12 @@ export const ImageGalleryDefault: React.FC<ImageGalleryProps> = (props) => {
                     data-component="image-3"
                     image={image3}
                     className="rounded-default h-auto w-full"
+                    page={props.page}
                   />
                 )}
-              </div>
+              </figure>
               {/* Bottom right image - Interior detail */}
-              <div
+              <figure
                 className={`@md:col-span-7 @md:col-start-8 col-span-12 items-end ${
                   isParallaxActive ? 'parallax-element' : ''
                 }`}
@@ -114,13 +118,14 @@ export const ImageGalleryDefault: React.FC<ImageGalleryProps> = (props) => {
                     data-component="image-4"
                     image={image4}
                     className="rounded-default h-auto w-full"
+                    page={props.page}
                   />
                 )}
-              </div>
+              </figure>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
   return <NoDataFallback componentName="ImageGalleryDefault" />;

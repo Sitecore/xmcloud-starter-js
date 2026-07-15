@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React from 'react';
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import { Badge } from '@/components/ui/badge';
-export type BackgroundThumbailProps = { children: React.ReactElement<any> };
 import { cn } from '@/lib/utils';
+import type { ComponentProps } from '@/lib/component-props';
+
+export type BackgroundThumbailProps = ComponentProps & { children: React.ReactElement<any> };
 
 export const Default: React.FC<BackgroundThumbailProps> = (props) => {
-  const { children } = props;
-  const { page } = useSitecore();
+  const { children, page } = props;
   const isPageEditing = page.mode.isEditing;
 
   return isPageEditing ? (

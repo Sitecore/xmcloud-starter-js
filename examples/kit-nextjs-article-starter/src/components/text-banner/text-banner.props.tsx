@@ -9,8 +9,8 @@ import { Theme } from '@/enumerations/Theme.enum';
 export type TextBannerProps = ComponentProps & TextBannerFields & TextBannerParams;
 
 export type TextBannerFields = {
-  fields: {
-    heading: Field<string>; // Sitecore editable text field
+  fields?: {
+    heading?: Field<string>; // Sitecore editable text field
     description?: Field<string>; // Sitecore editable text field
     link?: LinkField; // Sitecore editable link field
     link2?: LinkField; // Sitecore editable link field

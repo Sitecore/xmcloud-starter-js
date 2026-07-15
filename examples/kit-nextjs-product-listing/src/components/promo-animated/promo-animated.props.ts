@@ -7,7 +7,8 @@ export interface PromoAnimatedParams {
   [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 interface PromoAnimatedFields {
-  image: ImageField;
+  /** Present on datasource items; may be an empty image field (no `src`) for SDK empty-field UI. */
+  image?: ImageField | null;
   title: Field<string>;
   description?: Field<string>;
   primaryLink?: LinkField;

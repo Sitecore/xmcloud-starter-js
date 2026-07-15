@@ -17,15 +17,16 @@ export const AccordionBlockCentered: React.FC<AccordionProps> = (props) => {
   ];
   if (fields) {
     return (
-      <div
+      <section
         data-component="AccordionBlockCentered"
         className={cn(
           '@container @md:py-16 @lg:py-20 bg-background text-foreground border-b-2 border-t-2 py-10 [.border-b-2+&]:border-t-0',
-          {
-            [props.params.styles]: props?.params?.styles,
-          }
+          props?.params?.styles && {
+    [props.params.styles]: true,
+  }
         )}
         data-class-change
+        aria-labelledby={heading?.jsonValue?.value ? 'accordion-centered-heading' : undefined}
       >
         <div
           className="@xl:px-0 mx-auto grid max-w-screen-xl gap-6 px-0 [&:not(.px-6_&):not(.px-8_&):not(.px-10_&)]:px-6 "
@@ -35,6 +36,7 @@ export const AccordionBlockCentered: React.FC<AccordionProps> = (props) => {
             {heading?.jsonValue && (
               <Text
                 tag="h2"
+                id="accordion-centered-heading"
                 className="font-heading @md:text-6xl @lg:text-7xl mx-auto max-w-screen-md text-pretty text-5xl font-light leading-[1.1] tracking-tighter antialiased"
                 field={heading?.jsonValue}
               />
@@ -69,7 +71,7 @@ export const AccordionBlockCentered: React.FC<AccordionProps> = (props) => {
             )}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 

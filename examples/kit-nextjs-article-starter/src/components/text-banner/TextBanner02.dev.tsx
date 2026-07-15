@@ -2,16 +2,17 @@ import { TextBannerProps } from './text-banner.props';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Flex } from '@/components/flex/Flex.dev';
-import { Link } from '@sitecore-content-sdk/nextjs';
-import { Text } from '@sitecore-content-sdk/nextjs';
+import { Link, Text } from '@sitecore-content-sdk/nextjs';
 import { cva } from 'class-variance-authority';
 import { NoDataFallback } from '@/utils/NoDataFallback';
+import { getDescriptiveLinkText } from '@/utils/link-text';
 
 export const Default: React.FC<TextBannerProps> = (props) => {
-  const { fields, params } = props;
+  const { fields, params, page } = props;
 
   const { heading, description, link, link2, image } = fields ?? {};
   const { excludeTopMargin, theme } = params ?? {};
+  const isPageEditing = page?.mode?.isEditing ?? false;
 
   const componentTheme = cva('p-5 mt-4', {
     variants: {
@@ -66,7 +67,9 @@ export const Default: React.FC<TextBannerProps> = (props) => {
     },
   });
 
-  const backgroundImageStyle = image?.value?.src ? { '--bg-img': `url(${image?.value.src})` } : {};
+  const backgroundImageStyle = image?.value?.src
+    ? { '--bg-img': `url(${image?.value.src})` }
+    : {};
   type BackgroundType = 'image' | 'color';
   const backgroundType: BackgroundType = image?.value?.src ? 'image' : 'color';
   if (fields) {
@@ -81,7 +84,7 @@ export const Default: React.FC<TextBannerProps> = (props) => {
           {
             'mt-0': excludeTopMargin,
             [props?.params?.styles]: props?.params?.styles,
-          }
+          },
         )}
         style={backgroundImageStyle as React.CSSProperties}
       >
@@ -96,14 +99,42 @@ export const Default: React.FC<TextBannerProps> = (props) => {
             {link && (
               <Flex justify="end">
                 <Button asChild size="sm">
-                  <Link field={link} />
+                  <Link
+                    field={
+                      // Enhance link with descriptive text for SEO
+                      !isPageEditing && link?.value?.text
+                        ? {
+                            ...link,
+                            value: {
+                              ...link.value,
+                              text: getDescriptiveLinkText(link, heading?.value),
+                            },
+                          }
+                        : link
+                    }
+                    editable={isPageEditing}
+                  />
                 </Button>
               </Flex>
             )}
             {link2 && (
               <Flex justify="end">
                 <Button asChild variant="secondary" size="sm">
-                  <Link field={link2} />
+                  <Link
+                    field={
+                      // Enhance link with descriptive text for SEO
+                      !isPageEditing && link2?.value?.text
+                        ? {
+                            ...link2,
+                            value: {
+                              ...link2.value,
+                              text: getDescriptiveLinkText(link2, heading?.value),
+                            },
+                          }
+                        : link2
+                    }
+                    editable={isPageEditing}
+                  />
                 </Button>
               </Flex>
             )}

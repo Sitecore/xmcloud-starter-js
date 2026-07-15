@@ -15,6 +15,7 @@ type ToasterToast = ToastProps & {
   action?: ToastActionElement;
 };
 
+// Used only for type inference via typeof
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const actionTypes = {
   ADD_TOAST: 'ADD_TOAST',
@@ -125,7 +126,6 @@ export const reducer = (state: State, action: Action): State => {
   }
 };
 
-// eslint-disable-next-line no-unused-vars
 const listeners: Array<(state: State) => void> = [];
 
 let memoryState: State = { toasts: [] };

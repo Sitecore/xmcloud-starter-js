@@ -2,7 +2,7 @@
 ID: "4487ea75-4dc2-4096-9827-568d022a601f"
 Parent: " 4ce4676b-a882-4e24-b54d-74fa64fc3fb0"
 Template: "83746e54-66fe-4fd4-b79d-ff3fd4acd903"
-Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Enumerations/Page Content/Button Sizes/default"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Enumerations/Enumerations/Page Content/Button Sizes/default"
 BranchID: "a247234e-cd37-46dd-a4c5-d601c1963141"
 SharedFields:
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"

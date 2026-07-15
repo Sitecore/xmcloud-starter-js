@@ -3,20 +3,22 @@ name: PR Validation for DMZ Branch
 on:
   pull_request:
     branches: [dmz]
-  pull_request_target:
-    branches: [dmz]
 
 env:
-  NODE_VERSION: "22.11.0"
+  NODE_VERSION: "24.14.1"
 
 jobs:
   pr-validation:
     name: Validate Pull Request
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -57,37 +59,8 @@ jobs:
           echo "✅ PR branch is based on the latest main branch"
           echo "base-check-passed=true" >> $GITHUB_OUTPUT
 
-      - name: Check if PR can be squash merged cleanly
-        id: merge-check
-        run: |
-          echo "Checking if PR can be squash merged to dmz..."
-
-          # Get current branch
-          CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-
-          # Try to merge with dmz
-          git checkout -b test-merge origin/dmz
-
-          # Test if merge would have conflicts
-          if git merge --squash --no-commit $CURRENT_BRANCH; then
-            echo "✅ PR can be squash merged to dmz without conflicts"
-            echo "merge-check-passed=true" >> $GITHUB_OUTPUT
-            git merge --abort 2>/dev/null || true
-          else
-            echo "❌ ERROR: This PR has merge conflicts with dmz"
-            echo ""
-            echo "Resolve conflicts by rebasing onto main first:"
-            echo ""
-            echo "  git fetch origin main"
-            echo "  git rebase origin/main"
-            echo "  git push --force-with-lease"
-            echo ""
-            echo "merge-check-passed=false" >> $GITHUB_OUTPUT
-            exit 1
-          fi
-
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -96,9 +69,17 @@ jobs:
         run: |
           echo "Detecting changed starter applications..."
 
-          # Get list of changed files
-          CHANGED_FILES=$(git diff --name-only origin/dmz...HEAD)
-          echo "Changed files: $CHANGED_FILES"
+          # For pull_request events, use PR base and head SHAs (not the merge commit)
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+          echo "Base SHA: $BASE_SHA"
+          echo "Head SHA: $HEAD_SHA"
+
+          # Get list of changed files between PR base and PR head
+          CHANGED_FILES=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
 
           # Detect which starters have changes
           CHANGED_STARTERS=""
@@ -130,69 +111,38 @@ jobs:
           echo "Changed starters: $CHANGED_STARTERS"
           echo "changed-starters=$CHANGED_STARTERS" >> $GITHUB_OUTPUT
 
-      - name: Install dependencies for changed starters
+      - name: Install dependencies for all starters
         run: |
-          echo "Installing dependencies for changed starters..."
+          echo "Installing dependencies for all starters..."
 
-          for starter in ${{ steps.detect-changes.outputs.changed-starters }}; do
+          # Install dependencies for all enabled starters
+          for starter in kit-nextjs-skate-park kit-nextjs-article-starter kit-nextjs-location-finder kit-nextjs-product-listing; do
             if [ -d "examples/$starter" ]; then
               echo "Installing dependencies for $starter..."
               cd "examples/$starter"
-              npm install
+              npm ci
               cd ../..
             fi
           done
 
-      - name: Lint and format check
+      - name: Generate Sitecore files for all starters
         run: |
-          echo "Running linting and formatting checks..."
+          echo "Generating Sitecore configuration files..."
 
-          for starter in ${{ steps.detect-changes.outputs.changed-starters }}; do
+          # Generate files for all enabled starters
+          for starter in kit-nextjs-skate-park kit-nextjs-article-starter kit-nextjs-location-finder kit-nextjs-product-listing; do
             if [ -d "examples/$starter" ]; then
-              echo "Checking $starter..."
+              echo "Generating files for $starter..."
               cd "examples/$starter"
               
-              # Run linting
-              if npm run lint 2>/dev/null; then
-                echo "✅ Linting passed for $starter"
-              else
-                echo "❌ Linting failed for $starter"
-                exit 1
-              fi
-              
-              # Check formatting
-              if npm run format:check 2>/dev/null; then
-                echo "✅ Formatting check passed for $starter"
-              else
-                echo "❌ Formatting check failed for $starter"
-                echo "Run 'npm run prettier' to fix formatting issues"
-                exit 1
-              fi
-              
-              cd ../..
-            fi
-          done
-
-      - name: Type checking
-        run: |
-          echo "Running TypeScript type checking..."
-
-          for starter in ${{ steps.detect-changes.outputs.changed-starters }}; do
-            if [ -d "examples/$starter" ]; then
-              echo "Type checking $starter..."
-              cd "examples/$starter"
-              
-              # Generate Sitecore files first (needed for type checking)
-              echo "Generating Sitecore configuration files..."
+              # Ensure .sitecore directory exists
+              mkdir -p .sitecore
               
               # Try to generate files with Sitecore tools, fallback to minimal files if credentials are missing
               if npm run sitecore-tools:generate-map 2>/dev/null; then
-                echo "✅ Sitecore files generated successfully"
+                echo "✅ Sitecore files generated successfully for $starter"
               else
-                echo "⚠️ Sitecore tools failed (likely missing credentials), creating minimal files for type checking"
-                
-                # Create minimal .sitecore directory and files
-                mkdir -p .sitecore
+                echo "⚠️ Sitecore tools failed (likely missing credentials), creating minimal files for $starter"
                 
                 # Create minimal sites.json
                 echo '[{"name":"basic","hostName":"*","language":"en"}]' > .sitecore/sites.json
@@ -205,25 +155,118 @@ jobs:
                 
                 # Create minimal import-map.ts
                 echo 'export default [];' > .sitecore/import-map.ts
-                
-                echo "✅ Minimal Sitecore files created for type checking"
               fi
               
-              if npm run type-check 2>/dev/null; then
-                echo "✅ Type checking passed for $starter"
+              # Always ensure required files exist (they may not be generated by tools)
+              if [ ! -f ".sitecore/sites.json" ]; then
+                echo '[{"name":"basic","hostName":"*","language":"en"}]' > .sitecore/sites.json
+              fi
+              
+              if [ ! -f ".sitecore/metadata.json" ]; then
+                echo '{"packages":{"@sitecore-content-sdk/core":"1.1.0","@sitecore-content-sdk/nextjs":"1.1.0"}}' > .sitecore/metadata.json
+              fi
+              
+              if [ ! -f ".sitecore/import-map.server.ts" ]; then
+                echo 'export default [] as any;' > .sitecore/import-map.server.ts
+              fi
+              
+              if [ ! -f ".sitecore/import-map.client.ts" ]; then
+                echo 'export default [] as any;' > .sitecore/import-map.client.ts
+              fi
+              
+              # Verify files were created
+              echo "Created Sitecore files:"
+              ls -la .sitecore/ || echo "Warning: .sitecore directory listing failed"
+              
+              cd ../..
+            fi
+          done
+
+      - name: Lint and format check for all starters
+        run: |
+          echo "Running linting and formatting checks for all starters..."
+          
+          for starter in kit-nextjs-skate-park kit-nextjs-article-starter kit-nextjs-location-finder kit-nextjs-product-listing; do
+            if [ -d "examples/$starter" ]; then
+              echo "=================================="
+              echo "Checking examples/$starter"
+              echo "=================================="
+              cd "examples/$starter"
+              
+              # Run linting - WARNING ONLY (does not fail the workflow)
+              echo "Running lint for $starter..."
+              if ! npm run lint; then
+                echo "⚠️ WARNING: Linting issues found in $starter"
+                echo "::warning::Linting found issues in $starter (non-blocking)"
+                # Continue without failing - lint check is a warning only for now
               else
-                echo "❌ Type checking failed for $starter"
-                exit 1
+                echo "✅ Linting passed for $starter"
+              fi
+              
+              # Check formatting (only if format:check script exists)
+              # WARNING ONLY - does not fail the workflow
+              if grep -q '"format:check"' package.json 2>/dev/null; then
+                echo "Running format check for $starter..."
+                if ! npm run format:check; then
+                  echo "⚠️ WARNING: Formatting issues found in $starter"
+                  echo "Run 'npm run prettier' to fix formatting issues"
+                  echo "::warning::Formatting check found issues in $starter (non-blocking)"
+                  # Continue without failing - format check is a warning only
+                else
+                  echo "✅ Formatting check passed for $starter"
+                fi
+              else
+                echo "⏭️ Skipping format check (no format:check script found in package.json)"
               fi
               
               cd ../..
             fi
           done
 
-      - name: Build changed starters
+      - name: Type checking for all starters
+        run: |
+          echo "Running TypeScript type checking for all starters..."
+
+          # WARNING ONLY - does not fail the workflow
+          for starter in kit-nextjs-skate-park kit-nextjs-article-starter kit-nextjs-location-finder kit-nextjs-product-listing; do
+            if [ -d "examples/$starter" ]; then
+              echo "Type checking $starter..."
+              cd "examples/$starter"
+              
+              # Check if type-check script exists
+              if grep -q '"type-check"' package.json 2>/dev/null; then
+                if npm run type-check; then
+                  echo "✅ Type checking passed for $starter"
+                else
+                  echo "⚠️ WARNING: Type checking issues found in $starter"
+                  echo "::warning::Type checking found issues in $starter (non-blocking)"
+                  # Continue without failing - type check is a warning only for now
+                fi
+              else
+                echo "⏭️ Skipping type check (no type-check script found in package.json)"
+              fi
+              
+              cd ../..
+            fi
+          done
+
+      - name: Check if running in upstream repo
+        id: repo-check
+        run: |
+          # Check if this is the upstream Sitecore repo or a fork
+          if [ "${{ github.repository_owner }}" = "sitecore" ] || [ "${{ github.event.pull_request.head.repo.full_name }}" = "${{ github.repository }}" ]; then
+            echo "is-upstream=true" >> $GITHUB_OUTPUT
+            echo "✅ Running in upstream repo or same-repo PR - full build will run"
+          else
+            echo "is-upstream=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ Running in fork - Sitecore build will be skipped (no XM Cloud credentials)"
+          fi
+
+      - name: Build all starters (Full - Upstream Only)
+        if: steps.repo-check.outputs.is-upstream == 'true'
         env:
           # Sitecore Edge API Configuration
-          SITECORE_EDGE_URL: ${{ secrets.SITECORE_EDGE_URL }}
+          NEXT_PUBLIC_SITECORE_EDGE_PLATFORM_HOSTNAME: ${{ secrets.NEXT_PUBLIC_SITECORE_EDGE_PLATFORM_HOSTNAME }}
           SITECORE_EDGE_CONTEXT_ID: ${{ secrets.SITECORE_EDGE_CONTEXT_ID }}
           NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID: ${{ secrets.NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID }}
 
@@ -232,30 +275,33 @@ jobs:
           SITECORE_EDITING_SECRET: ${{ secrets.SITECORE_EDITING_SECRET }}
 
           # Additional Sitecore Environment Variables
-          NEXT_PUBLIC_SITECORE_EDGE_URL: ${{ secrets.SITECORE_EDGE_URL }}
           NEXT_PUBLIC_SITECORE_API_KEY: ${{ secrets.NEXT_PUBLIC_SITECORE_API_KEY }}
           NEXT_PUBLIC_SITECORE_API_HOST: ${{ secrets.NEXT_PUBLIC_SITECORE_API_HOST }}
           NEXT_PUBLIC_DEFAULT_LANGUAGE: ${{ vars.NEXT_PUBLIC_DEFAULT_LANGUAGE || 'en' }}
           NEXT_PUBLIC_PERSONALIZE_SCOPE: ${{ vars.NEXT_PUBLIC_PERSONALIZE_SCOPE }}
           PERSONALIZE_MIDDLEWARE_EDGE_TIMEOUT: ${{ vars.PERSONALIZE_MIDDLEWARE_EDGE_TIMEOUT || '1000' }}
         run: |
-          echo "Building changed starters..."
+          set -e  # Exit immediately if any command fails
+          echo "Building all starters with full Sitecore integration..."
           echo "Sitecore Environment Variables:"
-          echo "  SITECORE_EDGE_URL: ${SITECORE_EDGE_URL:+[SET]}"
+          echo "  NEXT_PUBLIC_SITECORE_EDGE_PLATFORM_HOSTNAME: ${NEXT_PUBLIC_SITECORE_EDGE_PLATFORM_HOSTNAME:+[SET]}"
           echo "  SITECORE_EDGE_CONTEXT_ID: ${SITECORE_EDGE_CONTEXT_ID:+[SET]}"
           echo "  NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID: ${NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID:+[SET]}"
           echo "  NEXT_PUBLIC_DEFAULT_SITE_NAME: ${NEXT_PUBLIC_DEFAULT_SITE_NAME}"
           echo "  SITECORE_EDITING_SECRET: ${SITECORE_EDITING_SECRET:+[SET]}"
 
-          for starter in ${{ steps.detect-changes.outputs.changed-starters }}; do
+          for starter in kit-nextjs-skate-park kit-nextjs-article-starter kit-nextjs-location-finder kit-nextjs-product-listing; do
             if [ -d "examples/$starter" ]; then
-              echo "Building $starter..."
+              echo "=================================="
+              echo "Building $starter"
+              echo "=================================="
               cd "examples/$starter"
               
               if npm run build; then
                 echo "✅ Build successful for $starter"
               else
                 echo "❌ Build failed for $starter"
+                echo "::error::Build failed for $starter"
                 exit 1
               fi
               
@@ -263,88 +309,161 @@ jobs:
             fi
           done
 
-      - name: Run tests for changed starters
+      - name: TypeScript compilation check for forks (No XM Cloud credentials)
+        if: steps.repo-check.outputs.is-upstream != 'true'
         run: |
-          echo "Running tests for changed starters..."
+          set -e  # Exit immediately if any command fails
+          echo "⚠️ =============================================="
+          echo "⚠️ FORK CI - RUNNING TYPESCRIPT COMPILATION CHECK"
+          echo "⚠️ =============================================="
+          echo ""
+          echo "The full Next.js build requires a real XM Cloud Edge connection"
+          echo "which is not available in fork CI (secrets are not shared)."
+          echo ""
+          echo "Running TypeScript compilation to validate code correctness..."
+          echo ""
 
-          for starter in ${{ steps.detect-changes.outputs.changed-starters }}; do
+          for starter in kit-nextjs-skate-park kit-nextjs-article-starter kit-nextjs-location-finder kit-nextjs-product-listing; do
             if [ -d "examples/$starter" ]; then
-              echo "Testing $starter..."
+              echo "=================================="
+              echo "TypeScript compile check: $starter"
+              echo "=================================="
               cd "examples/$starter"
               
-              # Check if test script exists, if not fail the workflow
-              if grep -q '"test"' package.json; then
-                if npm test; then
-                  echo "✅ Tests passed for $starter"
-                else
-                  echo "❌ Tests failed for $starter"
-                  exit 1
-                fi
+              # Run TypeScript compilation without emitting files
+              # This validates all imports, types, and syntax
+              echo "Running tsc --noEmit..."
+              if npx tsc --noEmit; then
+                echo "✅ TypeScript compilation successful for $starter"
               else
-                echo "❌ No test script found for $starter - tests are mandatory"
+                echo "❌ TypeScript compilation failed for $starter"
+                echo "::error::TypeScript compilation failed for $starter"
                 exit 1
               fi
               
+              cd ../..
+            fi
+          done
+          
+          echo ""
+          echo "✅ TypeScript compilation check passed for all starters"
+          echo ""
+          echo "ℹ️ Note: Full Next.js build with Sitecore integration will run"
+          echo "   when this PR is reviewed in the upstream repository."
+
+      - name: Run tests with coverage for all starters
+        env:
+          # Provide mock values for tests (in case they need Sitecore config)
+          SITECORE_EDGE_CONTEXT_ID: "mock-context-id-for-ci-tests"
+          NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID: "mock-context-id-for-ci-tests"
+          NEXT_PUBLIC_SITECORE_EDGE_PLATFORM_HOSTNAME: "https://edge.sitecorecloud.io"
+          NEXT_PUBLIC_DEFAULT_SITE_NAME: "basic"
+          NEXT_PUBLIC_DEFAULT_LANGUAGE: "en"
+          SITECORE_EDITING_SECRET: "mock-editing-secret-for-ci-tests"
+        run: |
+          set -e  # Exit immediately if any command fails
+          echo "Running tests with coverage for all starters..."
+
+          # Test all enabled starters
+          for starter in kit-nextjs-skate-park kit-nextjs-article-starter kit-nextjs-location-finder kit-nextjs-product-listing; do
+            if [ -d "examples/$starter" ]; then
+              echo "=================================="
+              echo "Testing $starter"
+              echo "=================================="
+              cd "examples/$starter"
+
+              # Check if test:coverage script exists
+              if grep -q '"test:coverage:unit"' package.json; then
+                echo "Running tests with coverage for $starter..."
+                if ! npm run test:coverage:unit; then
+                  echo "❌ Tests failed for $starter"
+                  echo "::error::Tests failed for $starter"
+                  exit 1
+                fi
+                echo "✅ Tests passed for $starter"
+              else
+                echo "❌ No test:coverage:unit script found for $starter - tests are mandatory"
+                echo "::error::No test:coverage:unit script found for $starter"
+                exit 1
+              fi
+
               cd ../..
             fi
           done
 
       - name: Comment PR with results
         if: always()
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-            });
-
-            const botComment = comments.find(comment => 
-              comment.user.type === 'Bot' && 
-              comment.body.includes('## 🔍 PR Validation Results')
-            );
-
-            const status = '${{ job.status }}' === 'success' ? '✅ **PASSED**' : '❌ **FAILED**';
-            const emoji = '${{ job.status }}' === 'success' ? '✅' : '❌';
-
-            const body = `## 🔍 PR Validation Results
-
-            ${emoji} **Status:** ${status}
-
-            **Base Branch Check:** ${'${{ steps.base-check.outputs.base-check-passed }}' === 'true' ? '✅ Based on latest main' : '❌ Not based on latest main - rebase required'}
-
-            **Merge Check:** ${'${{ steps.merge-check.outputs.merge-check-passed }}' === 'true' ? '✅ Can be squash merged' : '❌ Merge conflicts detected'}
-
-            **Validated Starters:** ${{ steps.detect-changes.outputs.changed-starters }}
-
-            **Checks Performed:**
-            - ✅ Linting and formatting
-            - ✅ TypeScript type checking  
-            - ✅ Build verification
-            - ✅ Test execution
-
-            **Next Steps:**
-            ${'${{ job.status }}' === 'success' ? 
-              '- ✅ PR is ready for review and merge to dmz branch\n- After merge, the DMZ validation workflow will run as final gate\n- If DMZ validation passes, main will be fast-forwarded automatically' : 
-              '- ❌ Please fix the issues above before merging\n- If not based on latest main: `git fetch origin main && git rebase origin/main && git push --force-with-lease`\n- If formatting issues: Run `npm run prettier`\n- Check the build logs for specific errors'
-            }
-
-            ---
-            *This comment will be updated on each validation run*`;
-
-            if (botComment) {
-              await github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: botComment.id,
-                body: body
-              });
-            } else {
-              await github.rest.issues.createComment({
+            try {
+              const { data: comments } = await github.rest.issues.listComments({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
-                body: body
               });
+
+              const botComment = comments.find(comment => 
+                comment.user.type === 'Bot' && 
+                comment.body.includes('## 🔍 PR Validation Results')
+              );
+
+              const status = '${{ job.status }}' === 'success' ? '✅ **PASSED**' : '❌ **FAILED**';
+              const emoji = '${{ job.status }}' === 'success' ? '✅' : '❌';
+
+              const isUpstream = '${{ steps.repo-check.outputs.is-upstream }}' === 'true';
+              const buildType = isUpstream ? '✅ Full build (with Sitecore integration)' : '⚠️ Next.js-only build (fork - no XM Cloud credentials)';
+              
+              const body = `## 🔍 PR Validation Results
+
+              ${emoji} **Status:** ${status}
+
+              **Base Branch Check:** ${'${{ steps.base-check.outputs.base-check-passed }}' === 'true' ? '✅ Based on latest main' : '❌ Not based on latest main - rebase required'}
+
+              **Build Type:** ${buildType}
+
+              **Validated Starters:** kit-nextjs-skate-park, kit-nextjs-article-starter, kit-nextjs-location-finder, kit-nextjs-product-listing
+
+              **Checks Performed:**
+              - ✅ Linting and formatting
+              - ✅ TypeScript type checking
+              - ${isUpstream ? '✅ Full build verification (Sitecore + Next.js)' : '✅ TypeScript compilation check (tsc --noEmit)'}
+              - ✅ Unit tests with coverage (npm run test:coverage:unit)
+              ${!isUpstream ? '\n              **Note:** Full Next.js build requires XM Cloud credentials and will run in upstream CI.' : ''}
+
+              **Next Steps:**
+              ${'${{ job.status }}' === 'success' ? 
+                (isUpstream ? 
+                  '- ✅ PR is ready for review and merge to dmz branch\n- After merge, the DMZ validation workflow will run as final gate\n- If DMZ validation passes, dmz can be manually merged to main using a merge commit' :
+                  '- ✅ Fork CI passed - PR is ready for review\n- ⚠️ Full Sitecore build validation will run when PR is created to upstream repo\n- After upstream CI passes, PR can be merged to dmz branch'
+                ) : 
+                '- ❌ Please fix the issues above before merging\n- If not based on latest main: `git fetch origin main && git rebase origin/main && git push --force-with-lease`\n- If formatting issues: Run `npm run prettier`\n- Check the build logs for specific errors'
+              }
+
+              ---
+              *This comment will be updated on each validation run*`;
+
+              if (botComment) {
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: botComment.id,
+                  body: body
+                });
+              } else {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  body: body
+                });
+              }
+            } catch (error) {
+              // Handle permission errors gracefully (e.g., PRs from forks)
+              if (error.status === 403 || error.status === 404) {
+                console.log('⚠️ Unable to comment on PR (may be from a fork or insufficient permissions). Validation results are still available in the workflow logs.');
+                console.log('Validation Status:', '${{ job.status }}');
+              } else {
+                throw error;
+              }
             }

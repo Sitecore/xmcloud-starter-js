@@ -2,7 +2,7 @@
 ID: "41f0d2a4-ef7f-4f1e-a13d-5d84d60ab3c1"
 Parent: "5a567d26-a1ae-45ab-a539-83190a74d421"
 Template: "b04ab8f4-2bdc-42d0-b8e1-87186dc8bf9c"
-Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Enumerations/Page Content/Icon Positions"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Enumerations/Enumerations/Page Content/Icon Positions"
 BranchID: "a247234e-cd37-46dd-a4c5-d601c1963141"
 SharedFields:
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"

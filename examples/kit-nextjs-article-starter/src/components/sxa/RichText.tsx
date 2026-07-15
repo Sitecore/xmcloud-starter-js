@@ -1,14 +1,6 @@
 import React, { JSX } from 'react';
-import { Field, RichText as ContentSdkRichText } from '@sitecore-content-sdk/nextjs';
-
-interface Fields {
-  Text: Field<string>;
-}
-
-export type RichTextProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import { RichText as ContentSdkRichText } from '@sitecore-content-sdk/nextjs';
+import { RichTextProps } from './sxa-rich-text.props';
 
 export const Default = (props: RichTextProps): JSX.Element => {
   const text = props.fields ? (

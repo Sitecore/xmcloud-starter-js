@@ -1,28 +1,16 @@
 import type React from 'react';
-import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
 import {
   getContainerPlaceholderProps,
   isContainerPlaceholderEmpty,
 } from '@/components/container/container.util';
 import { Flex, FlexItem } from '@/components/flex/Flex.dev';
 import { cn } from '@/lib/utils';
-import { PlaceholderProps } from 'types/Placeholder.props';
-import { ComponentProps } from '@/lib/component-props';
-import type { JSX } from 'react';
-
-/**
- * Model used for Sitecore Component integration
- */
-type Container5050Props = ComponentProps &
-  PlaceholderProps & {
-    left?: JSX.Element;
-    right?: JSX.Element;
-  };
+import componentMap from '.sitecore/component-map';
+import { AppPlaceholder } from '@sitecore-content-sdk/nextjs';
+import { Container5050Props } from './container-5050.props';
 
 export const Default: React.FC<Container5050Props> = (props) => {
-  const { rendering, left, right } = props;
-
-  const { page } = useSitecore();
+  const { rendering, left, right, page } = props;
 
   const isPageEditing = page.mode.isEditing;
 
@@ -48,10 +36,12 @@ export const Default: React.FC<Container5050Props> = (props) => {
     >
       <Flex wrap="nowrap">
         <FlexItem as="div" basis="1/2">
-          <Placeholder name={leftPlaceholders.dynamicKey} rendering={rendering} />
+          <AppPlaceholder name={leftPlaceholders.dynamicKey} rendering={rendering} page={page}
+            componentMap={componentMap}/>
         </FlexItem>
         <FlexItem as="div" basis="1/2">
-          <Placeholder name={rightPlaceholders.dynamicKey} rendering={rendering} />
+          <AppPlaceholder name={rightPlaceholders.dynamicKey} rendering={rendering} page={page}
+            componentMap={componentMap}/>
         </FlexItem>
       </Flex>
     </section>

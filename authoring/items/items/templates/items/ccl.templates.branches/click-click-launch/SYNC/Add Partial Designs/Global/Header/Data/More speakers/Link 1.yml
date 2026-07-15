@@ -33,7 +33,7 @@ Languages:
     - ID: "68c2a603-f98e-42a3-be2d-dd70598c2a63"
       Hint: Link
       Value: |
-        <link linktype="external" url="#" text="SYNC for Business"/>
+        <link linktype="external" url="/" text="SYNC for Business"/>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "d67fd13f-95d7-490a-b8ea-336e0e4ca5f1"

@@ -1,9 +1,10 @@
+'use client';
+
 import type React from 'react';
 import { createContext, useContext, useState } from 'react';
 
 interface VideoContextType {
   playingVideoId: string | null;
-  // eslint-disable-next-line no-unused-vars
   setPlayingVideoId: (id: string | null) => void;
 }
 

@@ -33,7 +33,7 @@ Languages:
     - ID: "68c2a603-f98e-42a3-be2d-dd70598c2a63"
       Hint: Link
       Value: |
-        <link linktype="external" url="#" target="" text="Bluetooth" title="" class=""/>
+        <link linktype="external" url="/" target="" text="Bluetooth" title="" class=""/>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "0bacd1e1-b608-4bbd-8e27-94f5099ad850"

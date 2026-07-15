@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo } from 'react';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
 import { AnimatedSectionProps, StyleObject } from './animated-section.props';

@@ -1,38 +1,13 @@
+'use client';
+
 import React, { useEffect, useState, type JSX } from 'react';
-import { Link as ContentSdkLink, Text, LinkField, TextField } from '@sitecore-content-sdk/nextjs';
-
-type ResultsFieldLink = {
-  field: {
-    link: LinkField;
-  };
-};
-
-interface Fields {
-  data: {
-    datasource: {
-      children: {
-        results: ResultsFieldLink[];
-      };
-      field: {
-        title: TextField;
-      };
-    };
-  };
-}
-
-type LinkListProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-type LinkListItemProps = {
-  key: string;
-  index: number;
-  total: number;
-  field: LinkField;
-};
+import { Link as ContentSdkLink, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import Link from 'next/link';
+import type { LinkListItemProps, LinkListProps, ResultsFieldLink } from './sxa-link-list.props';
 
 const LinkListItem = (props: LinkListItemProps) => {
+  const { page } = useSitecore();
+  const isEditing = props.isPageEditing || page?.mode?.isEditing;
   let className = `item${props.index}`;
   className += (props.index + 1) % 2 == 0 ? ' even' : ' odd';
   if (props.index == 0) {
@@ -44,30 +19,46 @@ const LinkListItem = (props: LinkListItemProps) => {
   return (
     <li className={className}>
       <div>
-        <ContentSdkLink
-          className="text-gray-600 hover:underline focus:border focus:border-dashed focus:border-gray-500 inline-block px-2 py-2 focus:bg-gray-50 focus:outline focus:outline-dashed focus:ring-gray-500 aria-selected:bg-gray-100 text-nowrap word-break-[break-word] text-sm"
-          field={props.field}
-          prefetch={false}
-        />
+        {isEditing ? (
+          <ContentSdkLink
+            className="text-gray-600 hover:underline focus:border focus:border-dashed focus:border-gray-500 inline-block px-2 py-2 focus:bg-gray-50 focus:outline focus:outline-dashed focus:ring-gray-500 aria-selected:bg-gray-100 text-nowrap word-break-[break-word] text-sm"
+            field={props.field}
+            prefetch={false}
+          />
+        ) : (
+          props.field?.value?.href && (
+            <Link
+              href={props.field.value.href}
+              className="text-gray-600 hover:underline focus:border focus:border-dashed focus:border-gray-500 inline-block px-2 py-2 focus:bg-gray-50 focus:outline focus:outline-dashed focus:ring-gray-500 aria-selected:bg-gray-100 text-nowrap word-break-[break-word] text-sm"
+              prefetch={false}
+            >
+              {props.field?.value?.text}
+            </Link>
+          )
+        )}
       </div>
     </li>
   );
 };
 
 export const Default = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
   const datasource = props.fields?.data?.datasource;
   const styles = `max-w-xs p-5 font-sans ${props.params.styles}`.trimEnd();
   const id = props.params.RenderingIdentifier;
 
   if (datasource) {
-    const list = datasource.children.results
+    const results = datasource.children?.results ?? [];
+    const list = results
       .filter((element: ResultsFieldLink) => element?.field?.link)
       .map((element: ResultsFieldLink, key: number) => (
         <LinkListItem
           index={key}
           key={`${key}${element.field.link}`}
-          total={datasource.children.results.length}
+          total={results.length}
           field={element.field.link}
+          isPageEditing={isPageEditing}
         />
       ));
 
@@ -79,7 +70,7 @@ export const Default = (props: LinkListProps): JSX.Element => {
             field={datasource?.field?.title}
             className="text-nowrap mb-5 text-xl font-bold text-gray-600"
           />
-          <ul className="list-none p-0 m-0" role="listbox" aria-label="Navigation options">
+          <ul className="list-none p-0 m-0" aria-label="Navigation options">
             {list}
           </ul>
         </div>
@@ -138,7 +129,8 @@ export const AnchorNav = (props: LinkListProps): JSX.Element => {
   }, []);
 
   if (datasource) {
-    const list = datasource.children.results
+    const results = datasource.children?.results ?? [];
+    const list = results
       .filter((element: ResultsFieldLink) => element?.field?.link)
       .map((element: ResultsFieldLink, key: number) => {
         const link = element.field.link;
@@ -147,16 +139,17 @@ export const AnchorNav = (props: LinkListProps): JSX.Element => {
         const isActive = targetId === activeId;
 
         return (
-          <a
-            key={`${key}${href}`}
-            href={href}
-            onClick={(e) => handleClick(e, href)}
-            className={`text-sm font-semibold py-4 transition-colors border-b-2 ${
-              isActive ? 'border-black' : 'border-transparent'
-            }`}
-          >
-            {link?.value?.text}
-          </a>
+          <li key={`${key}${href}`} className="list-none">
+            <a
+              href={href}
+              onClick={(e) => handleClick(e, href)}
+              className={`text-sm font-semibold py-4 transition-colors border-b-2 block ${
+                isActive ? 'border-black' : 'border-transparent'
+              }`}
+            >
+              {link?.value?.text}
+            </a>
+          </li>
         );
       });
 
@@ -169,7 +162,6 @@ export const AnchorNav = (props: LinkListProps): JSX.Element => {
         <div className="container mx-auto px-4">
           <ul
             className="flex gap-12 list-none p-0 m-0"
-            role="listbox"
             aria-label="Navigation options"
           >
             {list}
@@ -189,32 +181,45 @@ export const AnchorNav = (props: LinkListProps): JSX.Element => {
 };
 
 export const FooterLinks = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
   const datasource = props.fields?.data?.datasource;
   const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
   const id = props.params.RenderingIdentifier;
 
   if (datasource) {
-    const list = datasource.children.results
+    const results = datasource.children?.results ?? [];
+    const list = results
       .filter((element: ResultsFieldLink) => element?.field?.link)
       .map((element: ResultsFieldLink, key: number) => {
         const link = element.field.link;
         const href = link?.value?.href || '';
 
         return (
-          <>
-            <ContentSdkLink
-              key={`${key}${href}-link`}
-              className="font-[inherit]"
-              field={element.field.link}
-              prefetch={false}
-            />
-            <span
-              key={`${key}${href}-separator`}
-              className="font-[inherit] last:!hidden hidden lg:[.with-separators_&]:inline-block"
-            >
+          <React.Fragment key={`${key}${href}`}>
+            {isPageEditing ? (
+              <ContentSdkLink
+                key={`${key}${href}-link`}
+                className="font-[inherit]"
+                field={element.field.link}
+                prefetch={false}
+              />
+            ) : (
+              href && (
+                <Link
+                  key={`${key}${href}-link`}
+                  href={href}
+                  className="font-[inherit]"
+                  prefetch={false}
+                >
+                  {link?.value?.text}
+                </Link>
+              )
+            )}
+            <span className="font-[inherit] last:!hidden hidden lg:[.with-separators_&]:inline-block">
               /
             </span>
-          </>
+          </React.Fragment>
         );
       });
 
@@ -242,12 +247,15 @@ export const FooterLinks = (props: LinkListProps): JSX.Element => {
 };
 
 export const HeaderPrimaryLinks = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
   const datasource = props.fields?.data?.datasource;
   const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
   const id = props.params.RenderingIdentifier;
 
   if (datasource) {
-    const list = datasource.children.results
+    const results = datasource.children?.results ?? [];
+    const list = results
       .filter((element: ResultsFieldLink) => element?.field?.link)
       .map((element: ResultsFieldLink, key: number) => {
         const link = element.field.link;
@@ -255,7 +263,15 @@ export const HeaderPrimaryLinks = (props: LinkListProps): JSX.Element => {
 
         return (
           <li key={`${key}${href}-link`}>
-            <ContentSdkLink field={element.field.link} prefetch={false} />
+            {isPageEditing ? (
+              <ContentSdkLink field={element.field.link} prefetch={false} />
+            ) : (
+              href && (
+                <Link href={href} prefetch={false}>
+                  {link?.value?.text}
+                </Link>
+              )
+            )}
           </li>
         );
       });
@@ -277,12 +293,15 @@ export const HeaderPrimaryLinks = (props: LinkListProps): JSX.Element => {
 };
 
 export const HeaderSecondaryLinks = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
   const datasource = props.fields?.data?.datasource;
   const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
   const id = props.params.RenderingIdentifier;
 
   if (datasource) {
-    const list = datasource.children.results
+    const results = datasource.children?.results ?? [];
+    const list = results
       .filter((element: ResultsFieldLink) => element?.field?.link)
       .map((element: ResultsFieldLink, key: number) => {
         const link = element.field.link;
@@ -290,16 +309,24 @@ export const HeaderSecondaryLinks = (props: LinkListProps): JSX.Element => {
 
         return (
           <li key={`${key}${href}-link`}>
-            <ContentSdkLink field={element.field.link} prefetch={false} />
+            {isPageEditing ? (
+              <ContentSdkLink field={element.field.link} prefetch={false} />
+            ) : (
+              href && (
+                <Link href={href} prefetch={false}>
+                  {link?.value?.text}
+                </Link>
+              )
+            )}
           </li>
         );
       });
 
     return (
       <div className={`flex flex-col gap-2 ${styles}`} id={id ? id : undefined} data-class-change>
-        <h5 className="text-sm font-(family-name:--font-accent) font-medium text-secondary-foreground uppercase">
+        <h2 className="text-sm font-(family-name:--font-accent) font-medium text-secondary-foreground uppercase">
           <Text field={datasource?.field?.title} />
-        </h5>
+        </h2>
         <ul className="flex flex-col gap-1">{list}</ul>
       </div>
     );

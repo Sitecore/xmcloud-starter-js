@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React, { type JSX } from 'react';
 import { Default as Icon } from '@/components/icon/Icon';
 import { IconName } from '@/enumerations/Icon.enum';
 import { Link, LinkField, ComponentRendering } from '@sitecore-content-sdk/nextjs';
+import { CompatibleLink } from '@/components/content-sdk/CompatibleLink';
 import { ComponentProps } from '@/lib/component-props';
 import { Button } from '@/components/ui/button';
 import { EnumValues } from '@/enumerations/generic.enum';
@@ -73,25 +75,27 @@ const ButtonBase = (
   return (
     <Button asChild variant={variant} size={size} className={className}>
       {isPageEditing ? (
-        <Link field={buttonLink} editable={true} />
+        <CompatibleLink field={buttonLink} editable={true} />
       ) : (
-        <Link field={buttonLink} editable={isPageEditing}>
-          {iconPosition === IconPosition.LEADING && icon ? (
-            <Icon
-              iconName={iconName ? iconName : IconName.ARROW_LEFT}
-              className={iconClassName}
-              isAriaHidden={ariaHidden}
-            />
-          ) : null}
-          {buttonLink?.value?.text}
-          {iconPosition !== IconPosition.LEADING && icon ? (
-            <Icon
-              iconName={iconName ? iconName : IconName.ARROW_LEFT}
-              className={iconClassName}
-              isAriaHidden={ariaHidden}
-            />
-          ) : null}
-        </Link>
+        buttonLink?.value?.href && (
+          <CompatibleLink field={buttonLink} editable={false}>
+            {iconPosition === IconPosition.LEADING && icon ? (
+              <Icon
+                iconName={iconName ? iconName : IconName.ARROW_LEFT}
+                className={iconClassName}
+                isAriaHidden={ariaHidden}
+              />
+            ) : null}
+            {buttonLink?.value?.text}
+            {iconPosition !== IconPosition.LEADING && icon ? (
+              <Icon
+                iconName={iconName ? iconName : IconName.ARROW_LEFT}
+                className={iconClassName}
+                isAriaHidden={ariaHidden}
+              />
+            ) : null}
+          </CompatibleLink>
+        )
       )}
     </Button>
   );
@@ -139,7 +143,7 @@ const EditableButton = (props: {
           ) : null}
         </span>
       ) : (
-        <Link
+        <CompatibleLink
           className={className}
           field={buttonLink}
           editable={isPageEditing}
@@ -152,7 +156,7 @@ const EditableButton = (props: {
           {iconPosition !== IconPosition.LEADING && icon?.value?.src ? (
             <ImageWrapper className={iconClassName} image={icon} aria-hidden={ariaHidden} />
           ) : null}
-        </Link>
+        </CompatibleLink>
       )}
     </Button>
   );
@@ -175,17 +179,19 @@ const Default = (props: ButtonComponentProps): JSX.Element | null => {
     return (
       <Button asChild variant={variant} size={size}>
         {isPageEditing ? (
-          <Link field={buttonLink} editable={true} />
+          <CompatibleLink field={buttonLink} editable={true} />
         ) : (
-          <Link editable={isPageEditing} field={buttonLink}>
-            {iconPosition === IconPosition.LEADING && (
-              <Icon iconName={buttonIcon} className={iconClassName} isAriaHidden={ariaHidden} />
-            )}
-            {buttonLink?.value?.text}
-            {iconPosition !== IconPosition.LEADING && (
-              <Icon iconName={buttonIcon} className={iconClassName} isAriaHidden={ariaHidden} />
-            )}
-          </Link>
+          buttonLink?.value?.href && (
+            <CompatibleLink field={buttonLink} editable={false}>
+              {iconPosition === IconPosition.LEADING && (
+                <Icon iconName={buttonIcon} className={iconClassName} isAriaHidden={ariaHidden} />
+              )}
+              {buttonLink?.value?.text}
+              {iconPosition !== IconPosition.LEADING && (
+                <Icon iconName={buttonIcon} className={iconClassName} isAriaHidden={ariaHidden} />
+              )}
+            </CompatibleLink>
+          )
         )}
       </Button>
     );

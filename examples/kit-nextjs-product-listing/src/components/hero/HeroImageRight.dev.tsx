@@ -9,7 +9,7 @@ import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
 import { Default as ZipcodeSearchForm } from '@/components/forms/zipcode/ZipcodeSearchForm.dev';
 import type { HeroProps } from './hero.props';
-import { USER_ZIPCODE } from '@/lib/constants';
+import { storeZipcodeInSession } from '@/utils/zipcode-storage';
 
 export const HeroImageRight: React.FC<HeroProps> = (props) => {
   const { fields, isPageEditing } = props;
@@ -91,7 +91,7 @@ export const HeroImageRight: React.FC<HeroProps> = (props) => {
                 placeholder={dictionary.ZipPlaceholder || ''}
                 buttonText={dictionary?.SubmitCTALabel || ''}
                 onSubmit={(values) => {
-                  sessionStorage.setItem(USER_ZIPCODE, values.zipcode);
+                  storeZipcodeInSession(values.zipcode);
                   if (searchLink?.value?.href) {
                     window.location.href = `${searchLink.value.href}`;
                   }
@@ -107,6 +107,8 @@ export const HeroImageRight: React.FC<HeroProps> = (props) => {
               wrapperClass="max-h-[900px] relative w-full aspect-square @md/herowrapper:aspect-auto @md/herowrapper:absolute @md/herowrapper:top-0 @md/herowrapper:right-0 @md/herowrapper:bottom-0 @md/herowrapper:left-0 "
               className="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover"
               priority={true}
+              loading="eager"
+              fetchPriority="high"
             />
 
             {/* Banner overlay */}

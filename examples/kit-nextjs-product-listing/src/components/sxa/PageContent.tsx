@@ -2,29 +2,11 @@ import React, { type JSX } from 'react';
 import {
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
-  useSitecore,
   RichTextField,
-  LinkField,
   TextField,
 } from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
-
-interface Fields {
-  Title: TextField;
-  Content: RichTextField;
-  MainLink: LinkField;
-}
-
-type PageContentProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-type ComponentContentProps = {
-  id: string;
-  styles: string;
-  children: JSX.Element;
-};
+import type { ComponentContentProps, PageContentProps } from './sxa-page-content.props';
 
 const ComponentContent = (props: ComponentContentProps) => {
   const id = props.id;
@@ -38,7 +20,7 @@ const ComponentContent = (props: ComponentContentProps) => {
 };
 
 export const Default = (props: PageContentProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
   const { route } = page.layout.sitecore;
   const id = props.params.RenderingIdentifier;
 
@@ -57,14 +39,14 @@ export const Default = (props: PageContentProps): JSX.Element => {
   ) as RichTextField;
 
   return (
-    <ComponentContent styles={props.params.styles} id={id}>
+    <ComponentContent styles={props.params.styles || ''} id={id || ''}>
       <ContentSdkRichText field={field} />
     </ComponentContent>
   );
 };
 
 export const TitleAndBody = (props: PageContentProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
   const { route } = page.layout.sitecore;
 
   const fields = {

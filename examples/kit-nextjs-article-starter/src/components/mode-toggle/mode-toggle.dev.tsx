@@ -11,10 +11,7 @@ import {
 import { useTheme } from 'next-themes';
 
 import { Button } from '@/components/ui/button';
-
-interface ModeToggleProps {
-  className?: string;
-}
+import { ModeToggleProps } from './mode-toggle.props';
 export const ModeToggle = ({ className }: ModeToggleProps) => {
   const { setTheme } = useTheme();
 

@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { SxaComponent } from '../sxa.component';
 
 @Component({
-  selector: 'app-column-splitter',
-  templateUrl: './column-splitter.component.html',
-  host: {
-    'class': 'row component column-splitter',
-    '[class]': 'columnSplitterStyles',
-    '[id]' : 'id'
-  }
+    selector: 'app-column-splitter',
+    templateUrl: './column-splitter.component.html',
+    host: {
+        'class': 'row component column-splitter',
+        '[class]': 'columnSplitterStyles',
+        '[id]': 'id'
+    },
+    standalone: false
 })
 export class ColumnSplitterComponent extends SxaComponent {
   get columnSplitterStyles(): string {

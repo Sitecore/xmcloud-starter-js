@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "f804e5e9-2daf-4e1c-847c-b31a6c8df19b"
 Parent: "96372195-e899-4b63-a6a4-29bbe1ba94eb"
 Template: "c241957a-b7cc-4bdd-962f-bf8652ed595c"
@@ -14,7 +14,7 @@ Languages:
     - ID: "2d9c3674-1ac3-4f41-9806-1cd1d57b1a8f"
       Hint: Link2
       Value: |
-        <link text="Buy" linktype="external" url="http://#" anchor="" target="" />
+        <link text="Buy" linktype="external" url="/Speakers/Heritage-30" anchor="" target="" />
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -36,7 +36,7 @@ Languages:
     - ID: "a580050c-e1c7-4d49-a8ad-4862efbc43d5"
       Hint: Link1
       Value: |
-        <link text="Learn more" linktype="external" url="http://#" anchor="" target="" />
+        <link text="Monarch II details" linktype="external" url="/Speakers" anchor="" target="" />
     - ID: "b0d63558-b173-45c0-8169-d2b89270f939"
       Hint: Eyebrow
       Value: Monarch II

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 // import { cva } from 'class-variance-authority';
@@ -49,7 +51,7 @@ export const TextBanner01: React.FC<TextBannerProps> = (props) => {
           'bg-primary text-foreground group relative w-full overflow-hidden border-b-2 border-t-2 [.border-b-2+&]:border-t-0',
           {
             'position-left': !hasPagesPositionStyles,
-            [props?.params?.styles]: props?.params?.styles,
+            [props?.params?.styles as string]: props?.params?.styles,
           }
         )}
       >

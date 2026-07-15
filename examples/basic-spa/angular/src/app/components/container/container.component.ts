@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { SxaComponent } from '../sxa.component';
 
 @Component({
-  selector: 'app-container',
-  templateUrl: './container.component.html',
+    selector: 'app-container',
+    templateUrl: './container.component.html',
+    standalone: false
 })
 export class ContainerComponent extends SxaComponent implements OnInit {
   placeholderName: string;

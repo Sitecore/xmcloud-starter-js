@@ -46,7 +46,7 @@ Languages:
     - ID: "8ec6e4b8-3a38-4115-a892-38051924f3f1"
       Hint: link
       Value: |
-        <link linktype="external" url="#" target="" text="Learn more" title="" class=""/>
+        <link linktype="external" url="/Speakers" target="" text="Learn more" title="" class=""/>
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

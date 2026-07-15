@@ -11,12 +11,6 @@ export const geocodeAddress = async (
   apiKey: string
 ): Promise<{ lat: number; lng: number } | null> => {
   try {
-    // Log the API key for debugging (mask most of it for security)
-    const maskedKey = apiKey
-      ? `${apiKey.substring(0, 4)}...${apiKey.substring(apiKey.length - 4)}`
-      : 'undefined';
-    console.log(`Geocoding address with API key: ${maskedKey}`);
-
     const response = await fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
         address
@@ -102,11 +96,7 @@ export const enrichDealerships = async (
   zipCode: string,
   apiKey: string
 ): Promise<Dealership[]> => {
-  console.log('Enriching dealerships with coordinates and distances from zip code:', zipCode);
-  console.log('Dealerships to enrich:', dealerships);
-
   if (!dealerships || dealerships.length === 0) {
-    console.warn('No dealerships to enrich');
     return [];
   }
 

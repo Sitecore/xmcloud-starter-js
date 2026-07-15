@@ -21,15 +21,7 @@ import { useState } from 'react';
 import { SuccessCompact } from '../success/success-compact.dev';
 import { cn } from '@/lib/utils';
 
-interface EmailSignupFormProps {
-  fields?: {
-    emailPlaceholder?: Field<string>;
-    emailErrorMessage?: Field<string>;
-    emailSubmitLabel?: Field<string>;
-    emailSuccessMessage?: Field<string>;
-    buttonVariant?: EnumValues<typeof ButtonVariants>;
-  };
-}
+import type { EmailSignupFormProps } from './email-signup-form.props';
 
 const formSchema = z.object({
   email: z.string().email({

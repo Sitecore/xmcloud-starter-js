@@ -115,6 +115,7 @@ export const PageHeaderBlueBackground: React.FC<PageHeaderProps & { isPageEditin
                   image={imageRequired?.jsonValue}
                   wrapperClass="aspect-[16/9] w-full before:block before:w-full before:aspect-[16/9]"
                   className="absolute inset-0 aspect-[16/9] h-full w-full object-cover"
+                  page={props.page}
                 />
               </AnimatedSection>
             </div>

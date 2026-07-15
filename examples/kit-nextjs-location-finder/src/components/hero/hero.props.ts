@@ -1,5 +1,5 @@
 import { Field, LinkField, ImageField } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 
 interface HeroParams {
   [key: string]: any; // eslint-disable-line
@@ -18,8 +18,9 @@ export interface HeroFields {
   };
 }
 
-export interface HeroProps extends ComponentProps {
+export interface HeroProps extends OptionalComponentProps {
   params: HeroParams;
   fields: HeroFields;
   isPageEditing?: boolean;
 }
+

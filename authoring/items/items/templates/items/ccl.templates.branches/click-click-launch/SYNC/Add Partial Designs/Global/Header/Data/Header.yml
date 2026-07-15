@@ -11,14 +11,14 @@ Languages:
     - ID: "2230296b-d1f6-4f24-819c-c744ec9782b1"
       Hint: SupportLink
       Value: |
-        <link linktype="external" url="#" target="" text="Support" title="" class=""/>
+        <link linktype="external" url="/" target="" text="Support" title="" class=""/>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20250612T092045Z
     - ID: "34b1e883-e1fa-4bb0-b605-0bf9dd521dc9"
       Hint: SearchLink
       Value: |
-        <link linktype="external" url="#" target="" class="" text="Search" title=""/>
+        <link linktype="external" url="/" target="" class="" text="Search" title=""/>
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -44,4 +44,4 @@ Languages:
     - ID: "fa169fd8-4c46-433e-b61b-c7d6660257dd"
       Hint: CartLink
       Value: |
-        <link linktype="external" url="#" target="" class="" text="Cart" title=""/>
+        <link linktype="external" url="/" target="" class="" text="Cart" title=""/>

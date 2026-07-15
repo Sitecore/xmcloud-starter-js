@@ -15,9 +15,9 @@ export type TestimonialCarouselItemProps = {
 };
 
 type TestimonialCarouselFields = {
-  fields: {
-    data: {
-      datasource: {
+  fields?: {
+    data?: {
+      datasource?: {
         children: { results: TestimonialCarouselItemProps[] };
       };
     };

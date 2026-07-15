@@ -34,6 +34,7 @@ services:
       - "traefik.http.routers.rendering-secure-nextjs.entrypoints=websecure"
       - "traefik.http.routers.rendering-secure-nextjs.rule=Host(`${RENDERING_HOST_NEXTJS}`)"
       - "traefik.http.routers.rendering-secure-nextjs.tls=true"
+      - "traefik.http.services.rendering-nextjs.loadbalancer.server.port=3000"
 
   # Mount the Traefik configuration and certs.
   traefik:

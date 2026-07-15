@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "062c0375-6762-4fbe-bc14-5368c1d70bd9"
 Parent: "2e5acd52-9589-481d-92e8-6dcafce4802c"
 Template: "4dddcbac-a737-4c55-8ec8-508f1550d44a"
@@ -30,7 +30,7 @@ Languages:
     - ID: "6938a6f3-824b-41d6-83ce-bce57f4cb90a"
       Hint: link
       Value: |
-        <link text="Contact us" linktype="external" url="http://#" anchor="" target="" />
+        <link text="Contact us" linktype="external" url="/" anchor="" target="" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "2d60c9ff-c540-4ac1-bcf7-0a7a395040f7"
@@ -44,3 +44,4 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20250630T154634Z
+

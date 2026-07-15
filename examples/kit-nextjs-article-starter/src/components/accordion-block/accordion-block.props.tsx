@@ -10,14 +10,14 @@ export type AccordionProps = ComponentProps &
   };
 
 export interface AccordionFields {
-  fields: {
-    data: {
+  fields?: {
+    data?: {
       datasource?: {
-        heading: { jsonValue: Field<string> };
+        heading?: { jsonValue: Field<string> };
         description?: { jsonValue: Field<string> };
-        link: { jsonValue: LinkField };
-        children: {
-          results: AccordionItemProps[];
+        link?: { jsonValue: LinkField };
+        children?: {
+          results?: AccordionItemProps[];
         };
       };
     };
@@ -25,10 +25,10 @@ export interface AccordionFields {
 }
 
 export type AccordionItemProps = {
-  heading: {
-    jsonValue: Field<string>;
+  heading?: {
+    jsonValue?: Field<string>;
   };
-  description: {
-    jsonValue: RichTextField;
+  description?: {
+    jsonValue?: RichTextField;
   };
 };

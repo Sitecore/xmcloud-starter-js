@@ -1,12 +1,12 @@
 import { Field } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 import { EnumValues } from '@/enumerations/generic.enum';
 import { ThemeLimited as Theme } from '@/enumerations/ThemeLimited.enum';
 
 /**
  * Model used for Sitecore Component integration
  */
-export type TextBannerProps = ComponentProps & TextBannerFields & TextBannerParams;
+export type TextBannerProps = OptionalComponentProps & TextBannerFields & TextBannerParams;
 
 export type TextBannerFields = {
   fields: {
@@ -21,3 +21,4 @@ export type TextBannerParams = {
     theme?: EnumValues<typeof Theme>;
   };
 };
+

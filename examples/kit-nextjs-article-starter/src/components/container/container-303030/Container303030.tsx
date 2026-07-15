@@ -1,35 +1,34 @@
 import type React from 'react';
-import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
 import {
   getContainerPlaceholderProps,
   isContainerPlaceholderEmpty,
 } from '@/components/container/container.util';
 import { cn } from '@/lib/utils';
-import { FlexItemProps } from 'components/flex/Flex.dev';
-import { PlaceholderProps } from 'types/Placeholder.props';
-import { ComponentProps } from '@/lib/component-props';
 import type { JSX } from 'react';
-
-/**
- * Model used for Sitecore Component integration
- */
-type Container303030Props = ComponentProps &
-  PlaceholderProps & {
-    left?: JSX.Element;
-    center?: JSX.Element;
-    right?: JSX.Element;
-  };
+import componentMap from '.sitecore/component-map';
+import { AppPlaceholder } from '@sitecore-content-sdk/nextjs';
+import {
+  Container303030FlexItemProps,
+  Container303030Props,
+} from './container-303030.props';
 
 export const Default: React.FC<Container303030Props> = (props) => {
-  const { rendering, left, center, right } = props;
-
-  const { page } = useSitecore();
+  const { rendering, left, center, right, page } = props;
 
   const isPageEditing = page.mode.isEditing;
 
-  const leftPlaceholder = getContainerPlaceholderProps('container-thirty-left', props.params);
-  const centerPlaceholder = getContainerPlaceholderProps('container-thirty-center', props.params);
-  const rightPlaceholder = getContainerPlaceholderProps('container-thirty-right', props.params);
+  const leftPlaceholder = getContainerPlaceholderProps(
+    'container-thirty-left',
+    props.params,
+  );
+  const centerPlaceholder = getContainerPlaceholderProps(
+    'container-thirty-center',
+    props.params,
+  );
+  const rightPlaceholder = getContainerPlaceholderProps(
+    'container-thirty-right',
+    props.params,
+  );
 
   const isEmptyPlaceholder =
     isContainerPlaceholderEmpty(rendering, leftPlaceholder, left) &&
@@ -40,7 +39,8 @@ export const Default: React.FC<Container303030Props> = (props) => {
     return null;
   }
 
-  const excludeTopMargin = props?.params?.excludeTopMargin === '1' ? true : false;
+  const excludeTopMargin =
+    props?.params?.excludeTopMargin === '1' ? true : false;
 
   return (
     <section
@@ -51,20 +51,35 @@ export const Default: React.FC<Container303030Props> = (props) => {
     >
       <div className="w-full mx-auto max-w-[1760px] flex flex-wrap items-stretch">
         <FlexItem as="div" basis="1/3">
-          <Placeholder name={leftPlaceholder.dynamicKey} rendering={rendering} />
+          <AppPlaceholder
+            name={leftPlaceholder.dynamicKey}
+            rendering={rendering}
+            page={page}
+            componentMap={componentMap}
+          />
         </FlexItem>
         <FlexItem as="div" basis="1/3">
-          <Placeholder name={centerPlaceholder.dynamicKey} rendering={rendering} />
+          <AppPlaceholder
+            name={centerPlaceholder.dynamicKey}
+            rendering={rendering}
+            page={page}
+            componentMap={componentMap}
+          />
         </FlexItem>
         <FlexItem as="div" basis="1/3">
-          <Placeholder name={rightPlaceholder.dynamicKey} rendering={rendering} />
+          <AppPlaceholder
+            name={rightPlaceholder.dynamicKey}
+            rendering={rendering}
+            page={page}
+            componentMap={componentMap}
+          />
         </FlexItem>
       </div>
     </section>
   );
 };
 
-const FlexItem: React.FC<FlexItemProps> = (props) => {
+const FlexItem: React.FC<Container303030FlexItemProps> = (props) => {
   const { children } = props;
   return (
     <div className="w-full p-4 mb-4 md:w-1/2 lg:w-1/3 flex flex-col items-start justify-start">

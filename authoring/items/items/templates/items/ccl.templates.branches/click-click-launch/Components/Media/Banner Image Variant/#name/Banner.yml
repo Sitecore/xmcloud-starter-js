@@ -1,0 +1,32 @@
+---
+ID: "f0a1b2c3-4d5e-6f7a-8b9c-0d1e2f3a4b5c"
+Parent: "e9f0a1b2-3c4d-5e6f-7a8b-9c0d1e2f3a4b"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Components/Media/Banner Image Variant/$name/Banner"
+BranchID: "d8e9f0a1-2b3c-4d5e-6f7a-8b9c0d1e2f3a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{715BA68D-500D-4C0C-A611-8AD2B3478B21}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260120T081832Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\shakya.wijerathne@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "24f70c55-58fc-4328-b2f9-dd4bb26b4bc2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\shakya.wijerathne@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260120T081832Z

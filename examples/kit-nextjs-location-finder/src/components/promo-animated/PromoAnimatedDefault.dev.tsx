@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState, useRef } from 'react';
 import { Text, RichText } from '@sitecore-content-sdk/nextjs';
 import { ButtonBase as Button } from '@/components/button-component/ButtonComponent';
@@ -7,6 +9,7 @@ import { NoDataFallback } from '@/utils/NoDataFallback';
 import { PromoAnimatedProps } from './promo-animated.props';
 import { EnumValues } from '@/enumerations/generic.enum';
 import { ColorSchemeLimited as ColorScheme } from '@/enumerations/ColorSchemeLimited.enum';
+import { PromoAnimatedEmptyImageEditing } from './PromoAnimatedEmptyImageEditing';
 import {
   animatedSpriteRenderingParams as spriteOptions,
   imageBgExtensionRenderingParams as imageBgOptions,
@@ -46,9 +49,11 @@ export const PromoAnimatedDefault: React.FC<PromoAnimatedProps> = (props) => {
                 <ImageWrapper
                   image={image}
                   className="@md:max-w-[452px] aspect-square w-full rounded-full object-cover"
-                  wrapperClass="relative aspect-square w-full"
+                  wrapperClass="relative aspect-square w-full overflow-hidden rounded-full"
+                  emptyFieldEditingComponent={PromoAnimatedEmptyImageEditing}
                   sizes="(min-width: 768px) 452px, 350px"
                   priority={true}
+                  page={props.page}
                 />
                 <AnimatedSection
                   animationType="rotate"

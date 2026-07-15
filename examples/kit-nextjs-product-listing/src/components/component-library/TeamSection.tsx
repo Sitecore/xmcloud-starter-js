@@ -1,12 +1,12 @@
 import {
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
+  LinkField,
   RichText as ContentSdkRichText,
   Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
-import { IGQLImageField, IGQLLinkField, IGQLRichTextField, IGQLTextField } from 'src/types/igql';
 import { Button } from 'shadcd/components/ui/button';
-import { ReactNode, useMemo, type JSX } from 'react';
+import { useMemo, type JSX } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -21,67 +21,14 @@ import {
   faLinkedinIn,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-
-interface Fields {
-  data: {
-    datasource: {
-      children: {
-        results: TeamMemberFields[];
-      };
-      tagLine: IGQLTextField;
-      heading: IGQLTextField;
-      text: IGQLRichTextField;
-      heading2: IGQLTextField;
-      text2: IGQLRichTextField;
-      link: IGQLLinkField;
-    };
-  };
-}
-
-interface TeamMemberFields {
-  id: string;
-  image: IGQLImageField;
-  fullName: IGQLTextField;
-  jobTitle: IGQLTextField;
-  description: IGQLRichTextField;
-  facebook: IGQLLinkField;
-  instagram: IGQLLinkField;
-  linkedIn: IGQLLinkField;
-  twitterX: IGQLLinkField;
-}
-
-type TeamSectionProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-type TeamMemberImageProps = {
-  image: IGQLImageField;
-  type: 'circle' | 'square' | 'rectangle';
-  className?: string;
-};
-
-type TeamMemberStyleProps = {
-  type: 'simple' | 'horizontal';
-  imageType: TeamMemberImageProps['type'];
-  centered?: boolean;
-};
-
-type TeamMemberCardProps = TeamMemberStyleProps & {
-  tm: TeamMemberFields;
-};
-
-type TeamSectionTemplateVerticalProps = TeamSectionProps & {
-  teamMemberProps: TeamMemberStyleProps;
-  columns: 1 | 2 | 3 | 4;
-  centered?: boolean;
-  children?: ReactNode;
-};
-
-type TeamSectionTemplateHorizontalProps = TeamSectionProps & {
-  teamMemberProps: TeamMemberStyleProps;
-  columns: 1 | 2;
-};
+import type {
+  TeamMemberCardProps,
+  TeamMemberImageProps,
+  TeamSectionProps,
+  TeamSectionTemplateHorizontalProps,
+  TeamSectionTemplateVerticalProps,
+} from './team-section.props';
+import { getDatasource, normalizeFieldShape } from '@/lib/component-props';
 
 const TeamMemberImage = (props: TeamMemberImageProps) => {
   switch (props.type) {
@@ -115,22 +62,57 @@ const TeamMemberImage = (props: TeamMemberImageProps) => {
   }
 };
 
+/** Returns true if the link has a valid href (not a placeholder like # or http://#). */
+function hasValidLink(link: { value?: { href?: string } } | undefined): boolean {
+  const href = link?.value?.href;
+  return !!(href && href !== '#' && !href.startsWith('http://#'));
+}
+
+const SocialIcon = ({
+  field,
+  ariaLabel,
+  icon,
+}: {
+  field: { value?: { href?: string } } | undefined;
+  ariaLabel: string;
+  icon: JSX.Element;
+}) =>
+  hasValidLink(field) && field ? (
+    <ContentSdkLink
+      field={field as LinkField}
+      prefetch={false}
+      aria-label={ariaLabel}
+    >
+      {icon}
+    </ContentSdkLink>
+  ) : (
+    <span role="img" aria-label={ariaLabel}>{icon}</span>
+  );
+
 const TeamMemberCard = (props: TeamMemberCardProps) => {
   const socialLinks = useMemo(
     () => (
       <div className={`flex ${props.centered ? 'justify-center' : ''} gap-4 mt-6`}>
-        <ContentSdkLink field={props.tm.facebook?.jsonValue} prefetch={false}>
-          <FontAwesomeIcon icon={faFacebook} width={20} height={20} />
-        </ContentSdkLink>
-        <ContentSdkLink field={props.tm.instagram?.jsonValue} prefetch={false}>
-          <FontAwesomeIcon icon={faInstagram} width={22} height={22} />
-        </ContentSdkLink>
-        <ContentSdkLink field={props.tm.linkedIn?.jsonValue} prefetch={false}>
-          <FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />
-        </ContentSdkLink>
-        <ContentSdkLink field={props.tm.twitterX?.jsonValue} prefetch={false}>
-          <FontAwesomeIcon icon={faXTwitter} width={22} height={22} />
-        </ContentSdkLink>
+        <SocialIcon
+          field={props.tm.facebook?.jsonValue}
+          ariaLabel="Facebook"
+          icon={<FontAwesomeIcon icon={faFacebook} width={20} height={20} />}
+        />
+        <SocialIcon
+          field={props.tm.instagram?.jsonValue}
+          ariaLabel="Instagram"
+          icon={<FontAwesomeIcon icon={faInstagram} width={22} height={22} />}
+        />
+        <SocialIcon
+          field={props.tm.linkedIn?.jsonValue}
+          ariaLabel="LinkedIn"
+          icon={<FontAwesomeIcon icon={faLinkedinIn} width={24} height={24} />}
+        />
+        <SocialIcon
+          field={props.tm.twitterX?.jsonValue}
+          ariaLabel="X (Twitter)"
+          icon={<FontAwesomeIcon icon={faXTwitter} width={22} height={22} />}
+        />
       </div>
     ),
     [
@@ -155,9 +137,9 @@ const TeamMemberCard = (props: TeamMemberCardProps) => {
             <h3 className="text-lg font-bold">
               <ContentSdkText field={props.tm.fullName?.jsonValue} />
             </h3>
-            <h6 className="text-lg mb-4">
+            <p className="text-lg mb-4">
               <ContentSdkText field={props.tm.jobTitle?.jsonValue} />
-            </h6>
+            </p>
             <div>
               <ContentSdkRichText field={props.tm.description?.jsonValue} />
             </div>
@@ -172,9 +154,9 @@ const TeamMemberCard = (props: TeamMemberCardProps) => {
           <h3 className="text-lg font-bold mt-6">
             <ContentSdkText field={props.tm.fullName?.jsonValue} />
           </h3>
-          <h6 className="text-lg mb-4">
+          <p className="text-lg mb-4">
             <ContentSdkText field={props.tm.jobTitle?.jsonValue} />
-          </h6>
+          </p>
           <div>
             <ContentSdkRichText field={props.tm.description?.jsonValue} />
           </div>
@@ -191,9 +173,9 @@ const TeamSectionTemplateVertical = (props: TeamSectionTemplateVerticalProps) =>
     <section className={`py-24 px-4 ${props.params.styles}`} data-class-change>
       <div className="container mx-auto">
         <div className={`${props.centered ? 'max-w-3xl mx-auto text-center' : ''}`}>
-          <h6 className="font-semibold mb-4">
+          <p className="font-semibold mb-4">
             <ContentSdkText field={datasource.tagLine?.jsonValue} />
-          </h6>
+          </p>
           <h2 className="text-5xl font-bold mb-6">
             <ContentSdkText field={datasource.heading?.jsonValue} />
           </h2>
@@ -236,9 +218,9 @@ const TeamSectionTemplateHorizontal = (props: TeamSectionTemplateHorizontalProps
       <div className="container mx-auto">
         <div className={`grid md:grid-cols-${props.columns + 1} gap-x-16 gap-y-12`}>
           <div>
-            <h6 className="font-semibold mb-4">
+            <p className="font-semibold mb-4">
               <ContentSdkText field={datasource.tagLine?.jsonValue} />
-            </h6>
+            </p>
             <h2 className="text-5xl font-bold mb-6">
               <ContentSdkText field={datasource.heading?.jsonValue} />
             </h2>

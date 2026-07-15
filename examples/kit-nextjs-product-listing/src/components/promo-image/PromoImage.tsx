@@ -1,4 +1,3 @@
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import { PromoImageProps } from './promo-image.props';
 import { PromoImageDefault } from './PromoImageDefault.dev';
 import { PromoImageLeft } from './PromoImageLeft.dev';
@@ -10,32 +9,32 @@ import { PromoTitlePartialOverlay } from './PromoImageTitlePartialOverlay.dev';
 
 // Default display of the component
 export const Default: React.FC<PromoImageProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <PromoImageDefault {...props} isPageEditing={isPageEditing} />;
 };
 
 // Variants
 export const ImageLeft: React.FC<PromoImageProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <PromoImageLeft {...props} isPageEditing={isPageEditing} />;
 };
 
 export const ImageRight: React.FC<PromoImageProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <PromoImageRight {...props} isPageEditing={isPageEditing} />;
 };
 
 export const ImageMiddle: React.FC<PromoImageProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <PromoImageMiddle {...props} isPageEditing={isPageEditing} />;
 };
 
 export const TitlePartialOverlay: React.FC<PromoImageProps> = (props) => {
-  const { page } = useSitecore();
+  const { page } = props;
   const isPageEditing = page.mode.isEditing;
   return <PromoTitlePartialOverlay {...props} isPageEditing={isPageEditing} />;
 };

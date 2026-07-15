@@ -1,6 +1,7 @@
 import { Meteors } from '@/components/magicui/meteors';
 import type React from 'react';
 import { Text } from '@sitecore-content-sdk/nextjs';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 import { TopicListingProps } from './topic-listing.props';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { TopicItem } from './TopicItem.dev';
@@ -9,8 +10,11 @@ export const Default: React.FC<TopicListingProps> = (props) => {
   const {
     fields,
     params: { backgroundTheme },
+    page
   } = props;
-  const { title, children } = fields?.data?.datasource ?? {};
+  const datasource = getDatasource(fields);
+  const { title, children } = datasource ?? {};
+  const titleField = getFieldValue(title);
 
   if (fields) {
     return (
@@ -42,10 +46,10 @@ export const Default: React.FC<TopicListingProps> = (props) => {
         <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center gap-16 text-center md:gap-24">
             <div className="flex max-w-4xl flex-col items-center gap-4">
-              {title && (
+              {titleField && (
                 <Text
                   tag="h2"
-                  field={title?.jsonValue}
+                  field={titleField}
                   className="font-heading @sm:text-5xl @md:text-6xl @lg:text-7xl text-4xl font-semibold leading-tight tracking-normal text-white"
                 />
               )}
@@ -53,7 +57,11 @@ export const Default: React.FC<TopicListingProps> = (props) => {
             {children?.results && (
               <div className="flex flex-wrap items-center justify-center gap-6">
                 {children.results.map((topic, index) => (
-                  <TopicItem key={index} {...topic} />
+                  <TopicItem
+                    key={index}
+                    {...topic}
+                    isPageEditing={page?.mode?.isEditing}
+                  />
                 ))}
               </div>
             )}

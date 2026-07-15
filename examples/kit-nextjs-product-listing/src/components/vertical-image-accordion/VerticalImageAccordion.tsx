@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Text } from '@sitecore-content-sdk/nextjs';
@@ -6,12 +8,19 @@ import { NoDataFallback } from '@/utils/NoDataFallback';
 import { VerticalImageAccordionProps } from './vertical-image-accordion.props';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ButtonBase as Button } from '@/components/button-component/ButtonComponent';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 
 export const Default: React.FC<VerticalImageAccordionProps> = ({ fields }) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [isExpanding, setIsExpanding] = useState(false);
 
-  const { title, items } = fields?.data?.datasource ?? {};
+  const datasource = getDatasource(fields) as
+    | {
+        title?: VerticalImageAccordionProps['fields']['data']['datasource']['title'];
+        items?: VerticalImageAccordionProps['fields']['data']['datasource']['items'];
+      }
+    | undefined;
+  const { title, items } = datasource ?? {};
 
   const handleClick = (index: number) => {
     setIsExpanding(true);
@@ -27,17 +36,17 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields }) => {
     }
   };
 
-  if (fields) {
+  if (datasource) {
     return (
       <div
         className="relative mx-auto max-w-7xl my-6 px-4 py-16 sm:px-6 lg:px-8 @container bg-primary rounded-default"
         role="region"
-        aria-label={title?.jsonValue?.value || 'Image Accordion'}
+        aria-label={getFieldValue(title)?.value || 'Image Accordion'}
       >
-        {title && (
+        {getFieldValue(title) && (
           <Text
             tag="h2"
-            field={title.jsonValue}
+            field={getFieldValue(title)}
             className="mb-16 text-4xl font-heading font-light tracking-tight text-primary-foreground @lg:text-6xl"
           />
         )}
@@ -75,11 +84,11 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields }) => {
                   '@md:h-[513px]'
                 )}
                 role="img"
-                aria-label={item?.image?.value?.alt?.toString() || `Image ${index + 1}`}
+                aria-label={getFieldValue(item?.image)?.value?.alt?.toString() || `Image ${index + 1}`}
               >
-                {item?.image && (
+                {getFieldValue(item?.image) && (
                   <ImageWrapper
-                    image={item.image}
+                    image={getFieldValue(item.image)}
                     className="rounded-default h-full w-full object-cover"
                     wrapperClass="h-full w-full"
                     aria-hidden="true"
@@ -109,10 +118,10 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields }) => {
                     activeIndex === index && isExpanding && '@md:opacity-0'
                   )}
                 >
-                  {item?.title && (
+                  {getFieldValue(item?.title) && (
                     <Text
                       tag="h3"
-                      field={item.title.jsonValue}
+                      field={getFieldValue(item.title)}
                       className="font-accent text-2xl font-medium text-primary-foreground"
                       id={`tab-${index}`}
                     />
@@ -137,19 +146,19 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields }) => {
                         opacity: { delay: 0.2 },
                       }}
                     >
-                      {item?.description && (
+                      {getFieldValue(item?.description) && (
                         <Text
                           tag="p"
-                          field={item.description.jsonValue}
+                          field={getFieldValue(item.description)}
                           className="mt-2 text-primary-foreground"
                         />
                       )}
-                      {item?.cta?.jsonValue && (
+                      {getFieldValue(item?.cta) && (
                         <Button
-                          buttonLink={item.cta.jsonValue}
+                          buttonLink={getFieldValue(item.cta)!}
                           variant="secondary"
                           className="mt-4 inline-flex w-fit items-center justify-center px-8 py-2.5 text-sm font-heading font-medium"
-                          aria-label={`Learn more about ${item.title?.jsonValue?.value || ''}`}
+                          aria-label={`Learn more about ${getFieldValue(item.title)?.value || ''}`}
                         />
                       )}
                     </motion.div>

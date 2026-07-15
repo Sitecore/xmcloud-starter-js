@@ -1,16 +1,17 @@
+'use client';
+
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Text, Link } from '@sitecore-content-sdk/nextjs';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { VerticalImageAccordionProps } from './vertical-image-accordion.props';
 import { EditableButton } from '@/components/button-component/ButtonComponent';
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
 
-export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageEditing }) => {
+export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageEditing, page }) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [isExpanding, setIsExpanding] = useState(false);
-  const { page } = useSitecore();
   const isEditMode = isPageEditing || page.mode.isEditing;
 
   const handleClick = (index: number) => {
@@ -33,7 +34,9 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
     }
   };
 
-  const { title, items } = fields?.data?.datasource ?? {};
+  const datasource = getDatasource(fields);
+  const { title, items } = datasource ?? {};
+  const titleField = getFieldValue(title);
 
   // When in editor mode, render all items stacked
   if (fields) {
@@ -42,62 +45,67 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
         <div
           className="@container bg-primary rounded-default text-primary-foreground relative mx-auto my-6 max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
           role="region"
-          aria-label={title?.jsonValue?.value || 'Image Accordion'}
+          aria-label={titleField?.value || 'Image Accordion'}
         >
-          {title?.jsonValue && (
+          {titleField && (
             <Text
               tag="h2"
-              field={title.jsonValue}
+              field={titleField}
               className="font-heading text-primary-foreground @lg:text-6xl mb-16 text-4xl font-light tracking-tight"
             />
           )}
 
           <div className="flex flex-col gap-14">
-            {items?.results.map((item, index) => (
+            {items?.results.map((item, index) => {
+              const itemImage = getFieldValue(item?.image);
+              const itemTitle = getFieldValue(item?.title);
+              const itemDescription = getFieldValue(item?.description);
+              const itemLink = getFieldValue(item?.link);
+
+              return (
               <div key={index} className="flex flex-col overflow-hidden rounded-lg">
                 <div
                   className="@md:h-[513px] relative h-[300px]"
                   role="img"
-                  aria-label={
-                    item?.image?.jsonValue?.value?.alt?.toString() || `Image ${index + 1}`
-                  }
+                  aria-label={itemImage?.value?.alt?.toString() || `Image ${index + 1}`}
                 >
-                  {(isEditMode || item?.image?.jsonValue?.value?.src) && (
+                  {(isEditMode || itemImage?.value?.src) && (
                     <ImageWrapper
-                      image={item.image.jsonValue}
+                      image={itemImage}
                       className="rounded-default h-full w-full object-cover"
                       wrapperClass="h-full w-full"
                       aria-hidden="true"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   )}
                 </div>
 
                 <div className="flex flex-col py-6">
-                  {item?.title && (
+                  {itemTitle && (
                     <Text
                       tag="h3"
-                      field={item.title.jsonValue}
+                      field={itemTitle}
                       className="font-accent text-primary-foreground text-2xl font-medium"
                       id={`tab-${index}`}
                     />
                   )}
 
-                  {item?.description && (
+                  {itemDescription && (
                     <Text
                       tag="p"
-                      field={item.description.jsonValue}
+                      field={itemDescription}
                       className="text-primary-foreground mt-2"
                     />
                   )}
 
                   {/* Always show CTA in edit mode, or only when data exists in normal mode */}
-                  {(isEditMode || item?.link?.jsonValue) && (
+                  {(isEditMode || itemLink) && (
                     <>
                       {isEditMode ? (
                         <div className="font-heading bg-secondary text-secondary-foreground mt-4 inline-flex w-fit items-center justify-center rounded px-8 py-2.5 text-sm font-medium">
                           <Link
                             field={
-                              item.link?.jsonValue || {
+                              itemLink || {
                                 value: {
                                   text: 'Click to edit CTA',
                                   href: '#',
@@ -114,7 +122,7 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
                       ) : (
                         <EditableButton
                           buttonLink={
-                            item.link?.jsonValue || {
+                            itemLink || {
                               value: {
                                 text: '',
                                 href: '',
@@ -127,14 +135,16 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
                           }
                           variant="secondary"
                           className="font-heading mt-4 inline-flex w-fit items-center justify-center px-8 py-2.5 text-sm font-medium"
-                          aria-label={`Learn more about ${item.title?.jsonValue?.value || ''}`}
+                          contextTitle={itemTitle?.value}
+                          aria-label={`Learn more about ${itemTitle?.value || ''}`}
                         />
                       )}
                     </>
                   )}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       );
@@ -145,12 +155,12 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
       <div
         className="@container bg-primary rounded-default text-primary-foreground relative mx-auto my-6 max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
         role="region"
-        aria-label={title?.jsonValue?.value || 'Image Accordion'}
+        aria-label={titleField?.value || 'Image Accordion'}
       >
-        {title?.jsonValue && (
+        {titleField && (
           <Text
             tag="h2"
-            field={title.jsonValue}
+            field={titleField}
             className="font-heading text-primary-foreground @lg:text-6xl mb-16 text-4xl font-light tracking-tight"
           />
         )}
@@ -162,6 +172,10 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
         >
           {items?.results.map((item, index) => {
             const isActive = activeIndex === index;
+            const itemImage = getFieldValue(item?.image);
+            const itemTitle = getFieldValue(item?.title);
+            const itemDescription = getFieldValue(item?.description);
+            const itemLink = getFieldValue(item?.link);
 
             return (
               <div
@@ -199,15 +213,13 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
                     transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
                   }}
                   role="img"
-                  aria-label={
-                    item?.image?.jsonValue?.value?.alt?.toString() || `Image ${index + 1}`
-                  }
+                  aria-label={itemImage?.value?.alt?.toString() || `Image ${index + 1}`}
                 >
-                  {(isEditMode || item?.image?.jsonValue?.value?.src) && (
+                  {(isEditMode || itemImage?.value?.src) && (
                     <div className="absolute inset-0">
                       <div className="h-full w-full">
                         <ImageWrapper
-                          image={item.image.jsonValue}
+                          image={itemImage}
                           className="rounded-default h-full w-full object-cover"
                           wrapperClass="h-full w-full"
                           aria-hidden="true"
@@ -227,10 +239,10 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
                 >
                   {/* Title handling - Always visible for active item */}
                   <div className="transition-opacity duration-500">
-                    {item?.title && (
+                    {itemTitle && (
                       <Text
                         tag="h3"
-                        field={item.title.jsonValue}
+                        field={itemTitle}
                         className="font-accent text-primary-foreground text-2xl font-medium"
                         id={`tab-${index}`}
                       />
@@ -254,21 +266,21 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
                       transitionDelay: !isActive && !isExpanding ? '500ms' : '0s',
                     }}
                   >
-                    {item?.description && (
+                    {itemDescription && (
                       <Text
                         tag="p"
-                        field={item.description.jsonValue}
+                        field={itemDescription}
                         className="text-primary-foreground mt-2"
                       />
                     )}
                     {/* Always show CTA in edit mode, or only when data exists in normal mode */}
-                    {(isEditMode || item?.link?.jsonValue) && (
+                    {(isEditMode || itemLink) && (
                       <>
                         {isEditMode ? (
                           <div className="font-heading bg-secondary text-secondary-foreground mt-4 inline-flex w-fit items-center justify-center rounded px-8 py-2.5 text-sm font-medium">
                             <Link
                               field={
-                                item.link?.jsonValue || {
+                                itemLink || {
                                   value: {
                                     text: 'Click to edit CTA',
                                     href: '#',
@@ -285,7 +297,7 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
                         ) : (
                           <EditableButton
                             buttonLink={
-                              item.link?.jsonValue || {
+                              itemLink || {
                                 value: {
                                   text: '',
                                   href: '',
@@ -298,7 +310,8 @@ export const Default: React.FC<VerticalImageAccordionProps> = ({ fields, isPageE
                             }
                             variant="secondary"
                             className="font-heading mt-4 inline-flex w-fit items-center justify-center px-8 py-2.5 text-sm font-medium"
-                            aria-label={`Learn more about ${item.title?.jsonValue?.value || ''}`}
+                            contextTitle={itemTitle?.value}
+                            aria-label={`Learn more about ${itemTitle?.value || ''}`}
                           />
                         )}
                       </>

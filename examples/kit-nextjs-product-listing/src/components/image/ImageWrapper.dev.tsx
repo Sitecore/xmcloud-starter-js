@@ -1,11 +1,7 @@
-import { useContext } from 'react';
+import type React from 'react';
 import { cn } from '@/lib/utils';
-import { ImageField, Image as ContentSdkImage, useSitecore } from '@sitecore-content-sdk/nextjs';
-import { ImageOptimizationContext } from '@/components/image/image-optimization.context';
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
-import NextImage, { ImageProps } from 'next/image';
-import placeholderImageLoader from '@/utils/placeholderImageLoader';
+import { ImageField } from '@sitecore-content-sdk/nextjs';
+import ClientImage from './ImageWrapper.client';
 
 type ImageWrapperProps = {
   image?: ImageField;
@@ -20,50 +16,17 @@ type ImageWrapperProps = {
 };
 
 export const Default: React.FC<ImageWrapperProps> = (props) => {
-  const { image, className, wrapperClass, sizes, ...rest } = props;
-  const { page } = useSitecore();
-  const { isEditing, isPreview } = page.mode;
+  const { image, wrapperClass } = props;
 
-  const { unoptimized } = useContext(ImageOptimizationContext);
-  const ref = useRef(null);
-  const inView = useInView(ref);
-
-  if (!isEditing && !image?.value?.src) {
-    console.debug('image not found', image);
-    return <></>;
+  if (image == null) {
+    return null;
   }
 
-  const imageSrc = image?.value?.src ? image?.value?.src : '';
-  const isSvg = imageSrc.includes('.svg');
-  // if  unoptimized || svg || external
-  const isUnoptimized =
-    unoptimized ||
-    isSvg ||
-    (imageSrc.startsWith('https://') &&
-      (typeof window !== 'undefined' ? !imageSrc.includes(window.location.hostname) : false));
-
-  const isPicsumImage = imageSrc.includes('picsum.photos');
-
+  // Mount without `src` so Content SDK `Image` can render its empty-field editing UI.
+  // `ClientImage` still returns null on the live site when there is no src and not editing/preview.
   return (
     <div className={cn('image-container', wrapperClass)}>
-      {isEditing || isPreview || isSvg ? (
-        <ContentSdkImage field={image} className={className} />
-      ) : (
-        <NextImage
-          key={image?.value?.src}
-          loader={isPicsumImage ? placeholderImageLoader : undefined}
-          {...(image?.value as ImageProps)}
-          className={className}
-          unoptimized={isUnoptimized}
-          priority={inView ? true : false}
-          sizes={isSvg ? sizes : undefined}
-          blurDataURL={image?.value?.src}
-          placeholder="blur"
-          //if image is an svg and no width is provide, set a default to avoid error, this will be overwritten by css
-          {...(!image?.value?.width && isSvg ? { width: 16, height: 16 } : {})}
-          {...rest}
-        />
-      )}
+      <ClientImage {...props} />
     </div>
   );
 };

@@ -7,9 +7,9 @@ export interface MultiPromoParams {
 }
 
 export interface MultiPromoFields {
-  data: {
-    datasource: {
-      title: { jsonValue: Field<string> };
+  data?: {
+    datasource?: {
+      title?: { jsonValue: Field<string> };
       description?: { jsonValue: Field<string> };
       children?: {
         results: MultiPromoItemProps[];
@@ -23,7 +23,7 @@ export interface MultiPromoFields {
  */
 export interface MultiPromoProps extends ComponentProps {
   params: MultiPromoParams;
-  fields: MultiPromoFields;
+  fields?: MultiPromoFields;
   name: string;
   promos: React.Component[];
 }

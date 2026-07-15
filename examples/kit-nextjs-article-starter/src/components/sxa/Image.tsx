@@ -1,74 +1,97 @@
 import {
-  Field,
-  ImageField,
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
-  LinkField,
-  useSitecore,
+  Text,
 } from '@sitecore-content-sdk/nextjs';
-import React, { JSX } from 'react';
+import React from 'react';
+import { ComponentProps } from '@/lib/component-props';
+import type { SXAImageProps } from './sxa-image.props';
 
-interface Fields {
-  Image: ImageField & { metadata?: { [key: string]: unknown } };
-  ImageCaption: Field<string>;
-  TargetUrl: LinkField;
-}
+type ImageProps = ComponentProps & SXAImageProps;
 
-type ImageProps = {
-  params: { [key: string]: string };
-  fields: Fields;
+const ImageWrapper: React.FC<{
+  className: string;
+  id?: string;
+  children: React.ReactNode;
+}> = ({ className, id, children }) => (
+  <figure className={className.trim()} id={id}>
+    <div className="component-content">{children}</div>
+  </figure>
+);
+
+const ImageDefault: React.FC<ImageProps> = ({ params }) => (
+  <ImageWrapper className={`component image ${params.styles ?? ''}`}>
+    <span className="is-empty-hint">Image</span>
+  </ImageWrapper>
+);
+
+export const Banner: React.FC<ImageProps> = ({ params, fields }) => {
+  const { styles, RenderingIdentifier: id } = params;
+  const imageField = fields?.Image && {
+    ...fields.Image,
+    value: {
+      ...fields.Image.value,
+      style: { objectFit: 'cover', width: '100%', height: '100%' },
+    },
+  };
+
+  const altText =
+    typeof fields?.Image?.value?.alt === 'string' ? fields.Image.value.alt : 'Hero banner';
+
+  const bannerSizes =
+    '(max-width: 640px) 100vw, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1440px) 1280px, 1920px';
+
+  return (
+    <figure
+      className={`component hero-banner ${styles ?? ''}`.trim()}
+      id={typeof id === 'string' ? id : undefined}
+    >
+      <div className="component-content sc-sxa-image-hero-banner">
+        <ContentSdkImage
+          field={imageField || fields?.Image}
+          loading="eager"
+          fetchPriority="high"
+          sizes={bannerSizes}
+          alt={altText}
+        />
+      </div>
+    </figure>
+  );
 };
 
-export const Banner = (props: ImageProps): JSX.Element => {
-  const { page } = useSitecore();
-  const { Image } = props.fields;
-  const { TargetUrl } = props.fields;
-  const sxaStyles = props.params?.Styles ?? '';
-  const classNameList = `component image ${sxaStyles}`.trimEnd();
+export const Default: React.FC<ImageProps> = (props) => {
+  const { fields, params, page } = props;
+  const { styles, RenderingIdentifier: id } = params;
 
-  if (Image?.value && Image?.value.src) {
-    return (
-      <div className={classNameList}>
-        <div className="component-content">
-          {page.mode.isEditing || !props.fields.TargetUrl?.value?.href ? (
-            <ContentSdkImage field={Image} />
-          ) : (
-            <ContentSdkLink field={TargetUrl}>
-              <ContentSdkImage field={Image} />
-            </ContentSdkLink>
-          )}
-        </div>
-      </div>
-    );
+  if (!fields) {
+    return <ImageDefault {...props} />;
   }
 
-  return <div className={classNameList}></div>;
-};
+  const Image = () => (
+    <ContentSdkImage
+      field={fields.Image}
+      sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1200px"
+      alt={typeof fields?.Image?.value?.alt === 'string' ? fields.Image.value.alt : ''}
+    />
+  );
 
-export const Default = (props: ImageProps): JSX.Element => {
-  const { fields, params } = props;
-  const sxaStyles = params?.Styles ?? '';
-  const classNameList = `component image ${sxaStyles}`.trimEnd();
+  const shouldWrapWithLink = !page?.mode?.isEditing && fields.TargetUrl?.value?.href;
 
-  if (fields) {
-    const { Image } = props.fields;
-
-    const modifyImageProps = {
-      ...Image,
-      value: {
-        ...Image?.value,
-        alt: Image?.value?.alt || 'image',
-      },
-    };
-
-    return (
-      <div className={classNameList}>
-        <div className="component-content">
-          <ContentSdkImage field={modifyImageProps} />
-        </div>
-      </div>
-    );
-  }
-
-  return <div className={classNameList}></div>;
+  return (
+    <ImageWrapper
+      className={`component image ${styles ?? ''}`}
+      id={typeof id === 'string' ? id : undefined}
+    >
+      {shouldWrapWithLink && fields.TargetUrl ? (
+        <ContentSdkLink field={fields.TargetUrl}>
+          <Image />
+        </ContentSdkLink>
+      ) : (
+        <Image />
+      )}
+      <figcaption className="image-caption field-imagecaption">
+        <Text tag="span" field={fields.ImageCaption} />
+      </figcaption>
+    </ImageWrapper>
+  );
 };

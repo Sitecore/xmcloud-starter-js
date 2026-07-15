@@ -1,7 +1,10 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { useSitecore } from '@sitecore-content-sdk/nextjs';
-import { VideoComponentFields, VideoComponentProps } from './video-props';
-import { VideoPlayer } from './VideoPlayer.dev';
+import { VideoComponentFields, VideoComponentProps } from './video.props';
+import { VideoPlayer as VideoPlayerDev } from './VideoPlayer.dev';
 import { VideoModal } from './VideoModal.dev';
 import { useVideoModal } from '../../hooks/useVideoModal';
 import { useVideo } from '@/contexts/VideoContext';
@@ -103,12 +106,13 @@ export const VideoBase: React.FC<VideoComponentFields> = (props) => {
                   wrapperClass="absolute inset-0 cover-image"
                 />
               ) : (
-                <div className="cover-image absolute inset-0">
-                  <img
-                    src={fallbackImage}
+                <div className="cover-image relative inset-0">
+                  <Image
+                    src={fallbackImage || '/placeholder.svg'}
                     aria-hidden="true"
                     alt=""
-                    className="absolute inset-0 h-full w-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               )}
@@ -134,7 +138,7 @@ export const VideoBase: React.FC<VideoComponentFields> = (props) => {
           )}
           {/* always use normal player for mobile devices */}
           {!canUseModal && (
-            <VideoPlayer
+            <VideoPlayerDev
               videoUrl={videoUrl}
               isPlaying={isPlaying}
               onPlay={handlePlay}

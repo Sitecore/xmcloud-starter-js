@@ -156,6 +156,7 @@ export const ImageCarouselFullBleed = (props: ImageCarouselProps) => {
                         image={slide.image?.jsonValue}
                         className="relative z-0 h-auto w-full"
                         wrapperClass=" object-cover h-full w-full"
+                        page={props.page}
                       />
                     </div>
                   </div>

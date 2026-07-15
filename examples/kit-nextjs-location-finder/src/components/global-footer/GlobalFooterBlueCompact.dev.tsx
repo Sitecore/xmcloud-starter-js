@@ -1,3 +1,4 @@
+'use client'
 import { useRef } from 'react';
 import { Text } from '@sitecore-content-sdk/nextjs';
 import { GlobalFooterProps } from '@/components/global-footer/global-footer.props';
@@ -21,6 +22,7 @@ export const GlobalFooterBlueCompact: React.FC<GlobalFooterProps> = (props) => {
       <footer
         className="@container bg-primary text-primary-foreground border-foreground relative w-full overflow-hidden border-b-2"
         ref={footerRef}
+        role="contentinfo"
       >
         {/* Background logo - semi-transparent */}
         <div

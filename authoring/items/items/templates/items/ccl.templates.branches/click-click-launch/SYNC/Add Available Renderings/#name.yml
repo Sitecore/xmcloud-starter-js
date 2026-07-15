@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "18b57b84-091c-4a0f-ae24-8ac3efcb323a"
 Parent: "1e8e8145-c3cf-4dac-bb6f-5ed1146cc24c"
 Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
@@ -37,9 +37,10 @@ SharedFields:
     {7943A20A-669D-4921-81EE-F4EC7F2E78A3}
     {F767C9BA-4DE5-4455-B921-EC158E0762EF}
     {90A922AA-E2A7-4553-A7AD-B89AC9318D6B}
+    {F6952169-D48B-4612-9C31-AC13CAC54C61}
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "24d1d1cb-3b82-472b-b7eb-85bf8525430a"
+  Value: "5fe9ddfd-c277-4704-be3a-920b87b36b13"
 Languages:
 - Language: en
   Versions:
@@ -54,11 +55,11 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "98dab066-1dbb-42cb-8f3a-24c8e672e224"
+      Value: "8bad994b-e1f0-4143-be5e-71c2919fdc09"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\richard.seal@sitecore.com
+        sitecore\illia.kovalenko@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250815T184208Z
+      Value: 20251217T073835Z

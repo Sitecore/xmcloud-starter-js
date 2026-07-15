@@ -1,0 +1,31 @@
+---
+ID: "1c3d4e5f-6a7b-4c8d-9e0f-1a2b3c4d5e6f"
+Parent: "1b2c3d4e-5f6a-4b7c-8d9e-0f1a2b3c4d5e"
+Template: "b2c3d4e5-f6a7-4b5c-9d0e-1f2a3b4c5d6e"
+Path: "/sitecore/templates/Branches/Project/click-click-launch/Solterra and Co/Add AI Config/AI Config/Summary"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Fields:
+  - ID: "d4e5f6a7-b8c9-4d5e-1f2a-3b4c5d6e7f8a"
+    Hint: title
+    Value: Solterra & Co.
+  - ID: "e5f6a7b8-c9d0-4e5f-2a3b-4c5d6e7f8a9b"
+    Hint: description
+    Value: Solterra & Co. is a lifestyle and editorial site showcasing content-driven experiences for modern brands. It features modular components, article and topic listings, hero and promo sections, and rich media. Built with Sitecore XM Cloud and Next.js for performance, personalization, and AI-ready content delivery.
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260216T100000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1c3d4e5f-6a7b-4c8d-9e0f-1a2b3c4d5e70"

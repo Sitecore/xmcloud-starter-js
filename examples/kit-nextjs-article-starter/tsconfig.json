@@ -2,43 +2,18 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/tw/*": [
-        "tailwind-config/*"
-      ],
-      "components/*": [
-        "src/components/*"
-      ],
-      "shadcd/*": [
-        "shadcn//*"
-      ],
-      "lib/*": [
-        "src/lib/*"
-      ],
-      "temp/*": [
-        "src/temp/*"
-      ],
-      "assets/*": [
-        "src/assets/*"
-      ],
-      "enumerations/*": [
-        "src/enumerations/*"
-      ],
-      "types/*": [
-        "src/types/*"
-      ],
-      "graphql-types": [
-        "node_modules/@types/graphql-let/__generated__/__types__"
-      ],
-      "react": [
-        "node_modules/react"
+      ".sitecore/*": [
+        ".sitecore/*"
       ],
       "@/*": [
         "./src/*"
       ]
     },
-    "target": "es5",
+    "target": "ES2017",
     "types": [
-      "node"
+      "node",
+      "jest",
+      "@testing-library/jest-dom"
     ],
     "lib": [
       "dom",
@@ -48,28 +23,28 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "strictFunctionTypes": false,
-    "downlevelIteration": true,
     "noEmit": true,
     "esModuleInterop": true,
+    "strictFunctionTypes": false,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "allowSyntheticDefaultImports": true,
-    "noImplicitReturns": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "jsx": "react-jsx",
     "incremental": true,
-    "forceConsistentCasingInFileNames": false
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

@@ -3,11 +3,16 @@ ID: "d61273b7-0f48-4cec-9490-5b2d35072bff"
 Parent: "0e5f271f-2253-4207-ac81-4cc7707aa618"
 Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
 Path: "/sitecore/templates/Branches/Project/click-click-launch/SYNC/Variants/Image Headless Variants/Image/Default"
-BranchID: "ae87ba03-4197-4107-82d5-f8b1cafe3bff"
 SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c1e94a72-3f81-4b29-9d5e-a08c1f6b7d3c"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
-  Value: "{715BA68D-500D-4C0C-A611-8AD2B3478B21}"
+  Value: "{17342388-971F-41E2-B22E-DA3FB9A339DA}"
 Languages:
 - Language: en
   Versions:
@@ -26,11 +31,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "24f70c55-58fc-4328-b2f9-dd4bb26b4bc2"
+      Value: "e5f82b91-6c40-4d17-a83e-2b5c9f0e1d4a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\richard.seal@sitecore.com
+        sitecore\shakya.wijerathne@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250522T185619Z
+      Value: 20260514T090000Z

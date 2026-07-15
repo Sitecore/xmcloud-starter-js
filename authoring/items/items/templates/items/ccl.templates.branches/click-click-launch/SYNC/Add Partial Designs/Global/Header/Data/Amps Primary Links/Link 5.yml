@@ -29,7 +29,7 @@ Languages:
     - ID: "68c2a603-f98e-42a3-be2d-dd70598c2a63"
       Hint: Link
       Value: |
-        <link linktype="external" url="#" target="" text="hybrid" title="" class=""/>
+        <link linktype="external" url="/" target="" text="hybrid" title="" class=""/>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "8f1fc26e-4e1e-4de5-9b9a-346d4eb0f4de"

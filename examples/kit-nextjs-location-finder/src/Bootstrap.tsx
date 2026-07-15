@@ -1,46 +1,55 @@
+'use client';
 import { useEffect, JSX } from 'react';
-import { CloudSDK } from '@sitecore-cloudsdk/core/browser';
-import '@sitecore-cloudsdk/events/browser';
+import { initContentSdk } from '@sitecore-content-sdk/nextjs'; 
+import { eventsPlugin } from '@sitecore-content-sdk/events'; 
+import { analyticsBrowserAdapter, analyticsPlugin } from '@sitecore-content-sdk/analytics-core'; 
 import config from 'sitecore.config';
-import { SitecorePageProps } from '@sitecore-content-sdk/nextjs';
+import { isBrowser } from '@/utils/browser';
 
-/**
- * The Bootstrap component is the entry point for performing any initialization logic
- * that needs to happen early in the application's lifecycle.
- */
-const Bootstrap = (props: SitecorePageProps): JSX.Element | null => {
-  const { page } = props;
-
-  // Browser ClientSDK init allows for page view events to be tracked
+const Bootstrap = ({
+  siteName,
+  isPreviewMode,
+}: {
+  siteName: string;
+  isPreviewMode: boolean;
+}): JSX.Element | null => {
   useEffect(() => {
-    if (!page) {
+    if (!isBrowser) return;
+
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console -- intentional debug message for development
+      console.debug('Browser Events SDK is not initialized in development environment');
       return;
     }
 
-    const { mode } = page;
-
-    if (process.env.NODE_ENV === 'development')
-      console.debug('Browser Events SDK is not initialized in development environment');
-    else if (!mode.isNormal)
+    if (isPreviewMode) {
+      // eslint-disable-next-line no-console -- intentional debug message for preview mode
       console.debug('Browser Events SDK is not initialized in edit and preview modes');
-    else {
-      if (config.api.edge?.clientContextId) {
-        CloudSDK({
-          sitecoreEdgeUrl: config.api.edge.edgeUrl,
-          sitecoreEdgeContextId: config.api.edge.clientContextId,
-          siteName: page.siteName || config.defaultSite,
-          enableBrowserCookie: true,
-          // Replace with the top level cookie domain of the website that is being integrated e.g ".example.com" and not "www.example.com"
-          cookieDomain: window.location.hostname.replace(/^www\./, ''),
-        })
-          .addEvents()
-          .initialize();
-      } else {
-        console.error('Client Edge API settings missing from configuration');
-      }
+      return;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page?.siteName]);
+
+    if (config.api.edge?.clientContextId) {
+      initContentSdk({ 
+        config: { 
+          contextId: config.api.edge.clientContextId, 
+          edgeUrl: config.api.edge.edgeUrl, 
+          siteName: siteName || config.defaultSite, 
+        }, 
+        plugins: [ 
+          analyticsPlugin({ 
+            options: { 
+              enableCookie: true, 
+              cookieDomain: window.location.hostname.replace(/^www\./, ''), 
+            }, 
+            adapter: analyticsBrowserAdapter(), 
+          }), 
+          eventsPlugin(), 
+        ], 
+      });
+    } else {
+      console.error('Client Edge API settings missing from configuration');
+    }
+  }, [siteName, isPreviewMode]);
 
   return null;
 };

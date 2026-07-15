@@ -11,7 +11,7 @@ This directory contains AI coding agent guidance files to help maintain consiste
 - **`safety.mdc`** - Safety rules to prevent editing compiled artifacts and generated files
 
 ### Scoped Rules (Applied to Specific Files)
-- **`javascript.mdc`** - JavaScript/TypeScript naming conventions, performance, JSDoc standards
+- **`javascript.mdc`** - JavaScript/TypeScript naming conventions, performance, and import patterns
 - **`sitecore.mdc`** - Sitecore XM Cloud development patterns and component guidelines
 - **`nextjs.mdc`** - Next.js specific patterns, routing, and API development
 - **`testing.mdc`** - Testing strategies for XM Cloud components and integrations

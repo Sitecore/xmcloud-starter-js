@@ -1,11 +1,11 @@
 import { ButtonBase } from '@/components/button-component/ButtonComponent';
 import { TopicItemProps } from './topic-listing.props';
 import { ButtonVariants } from '@/enumerations/ButtonStyle.enum';
-import { useSitecore, LinkField } from '@sitecore-content-sdk/nextjs';
+import { getFieldValue } from '@/lib/component-props';
+import type { LinkField } from '@sitecore-content-sdk/nextjs';
 
-export const TopicItem: React.FC<TopicItemProps> = ({ link }) => {
-  const { page } = useSitecore();
-  const isPageEditing = page.mode.isEditing;
+export const TopicItem: React.FC<TopicItemProps> = ({ link, isPageEditing = false }) => {
+  const linkField = getFieldValue(link);
 
   // Create an empty link for editing mode
   const emptyLink: LinkField = { value: { href: '#', text: 'Add link' } };
@@ -14,7 +14,7 @@ export const TopicItem: React.FC<TopicItemProps> = ({ link }) => {
   if (isPageEditing) {
     return (
       <ButtonBase
-        buttonLink={link?.jsonValue ?? emptyLink}
+        buttonLink={linkField ?? emptyLink}
         variant={ButtonVariants.TOPIC}
         isPageEditing={true}
       />
@@ -22,11 +22,11 @@ export const TopicItem: React.FC<TopicItemProps> = ({ link }) => {
   }
 
   // In normal viewing mode, only render if we have valid link data
-  if (!link?.jsonValue?.value?.href) {
+  if (!linkField?.value?.href) {
     return null;
   }
 
   return (
-    <ButtonBase buttonLink={link.jsonValue} variant={ButtonVariants.TOPIC} isPageEditing={false} />
+    <ButtonBase buttonLink={linkField} variant={ButtonVariants.TOPIC} isPageEditing={false} />
   );
 };

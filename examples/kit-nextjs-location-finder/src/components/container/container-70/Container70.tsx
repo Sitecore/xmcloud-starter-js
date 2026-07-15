@@ -1,12 +1,11 @@
-import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { AppPlaceholder } from '@sitecore-content-sdk/nextjs';
 import { Container70Props } from '@/components/container/container-70/container-70.props';
 import { Flex, FlexItem } from '@/components/flex/Flex.dev';
 import { cn } from '@/lib/utils';
 
 export const Default: React.FC<Container70Props> = (props) => {
-  const { rendering, children } = props;
+  const { rendering, children, page, componentMap } = props;
 
-  const { page } = useSitecore();
   const { isEditing } = page.mode;
 
   const PLACEHOLDER_FRAGMENT = 'container-seventy';
@@ -30,13 +29,13 @@ export const Default: React.FC<Container70Props> = (props) => {
       className={cn({
         'mt-4': !excludeTopMargin,
         'mt-0': excludeTopMargin,
-        [props.params.styles]: props?.params?.styles,
+        [props.params.styles as string]: props?.params?.styles,
       })}
     >
       <Flex className="group-[.is-inset]:p-0">
         <FlexItem basis="full">
           <div className="mx-auto md:max-w-[70%]">
-            <Placeholder name={PLACEHOLDER_NAME} rendering={rendering} />
+            <AppPlaceholder page={page} componentMap={componentMap} name={PLACEHOLDER_NAME} rendering={rendering} />
           </div>
         </FlexItem>
       </Flex>

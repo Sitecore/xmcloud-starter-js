@@ -3,7 +3,7 @@
 import type React from 'react';
 
 import { useState, useRef, useEffect, useCallback, type ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useMatchMedia } from '@/hooks/use-match-media';
 import { useContainerQuery } from '@/hooks/use-container-query';
 import { cn } from '@/lib/utils';
@@ -169,7 +169,7 @@ export const AnimatedHoverNav = ({
       className={cn('relative', isHorizontal ? 'flex-row' : 'flex-col')}
     >
       {/* Hover background indicator */}
-      <motion.span
+      <m.span
         className={`z-0 absolute block ${indicatorClassName}`}
         initial={{ opacity: 0 }}
         animate={

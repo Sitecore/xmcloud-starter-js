@@ -10,7 +10,7 @@ interface HeroParams {
 }
 
 interface HeroFields {
-  titleRequired: Field<string>;
+  titleRequired?: Field<string>;
   descriptionOptional?: Field<string>;
   linkOptional?: LinkField;
   heroVideoOptional1?: LinkField;
@@ -25,5 +25,5 @@ interface HeroFields {
 
 export interface HeroProps extends ComponentProps {
   params: HeroParams;
-  fields: HeroFields;
+  fields?: HeroFields;
 }

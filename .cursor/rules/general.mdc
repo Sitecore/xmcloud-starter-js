@@ -9,10 +9,11 @@ globs: []
 ## Universal Standards
 
 DRY Principle:
-- Don't Repeat Yourself - extract common functionality
+- Don't Repeat Yourself - extract common functionality within a starter
 - Create reusable utilities and helper functions
 - Use composition over inheritance
-- Share types and interfaces across components
+- Share types and interfaces across components within the same starter
+- Apply DRY within each starter only; do not share code or packages across starters (each starter is self-contained; copy utilities as needed)
 
 SOLID Principles:
 - Single Responsibility: each function/component has one purpose
@@ -26,6 +27,11 @@ Code Clarity:
 - Make dependencies and requirements obvious
 
 ## Architecture Patterns
+
+Starter Independence:
+- Each starter under `examples/` is a standalone, self-contained application
+- Copy shared utilities and components into the starter when needed; do not create shared packages or symlinks across starters
+- This keeps each starter independently runnable and maintainable
 
 Modular Design:
 - Organize code into focused, cohesive components
@@ -46,6 +52,9 @@ Testing:
 - Test behavior, not implementation details
 
 ## Development Standards
+
+Pull request scope (upstream vs fork):
+- If work may become a **PR** to the **official upstream** repository, read **Upstream repository, forks, and pull request scope** in `project-context` rules. Upstream welcomes **improvements, bug fixes, and broadly useful features** in **existing** starters; it does **not** accept **new example sites**, **additional** starters, or **bespoke extensions** meant for a single org—those belong in the user’s **own fork** or **template** copy. Always confirm which repository the user is targeting before planning those kinds of changes.
 
 Version Control:
 - Write descriptive commit messages

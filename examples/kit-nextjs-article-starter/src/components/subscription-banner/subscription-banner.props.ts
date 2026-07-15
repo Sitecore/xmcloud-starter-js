@@ -6,9 +6,9 @@ interface SubscriptionBannerParams {
 }
 
 interface SubscriptionBannerFields {
-  titleRequired: Field<string>;
+  titleRequired?: Field<string>;
   descriptionOptional?: Field<string>;
-  buttonLink: LinkField;
+  buttonLink?: LinkField;
   emailPlaceholder?: Field<string>;
   emailErrorMessage?: Field<string>;
   thankYouMessage?: Field<string>;
@@ -16,5 +16,5 @@ interface SubscriptionBannerFields {
 
 export interface SubscriptionBannerProps extends ComponentProps {
   params: SubscriptionBannerParams;
-  fields: SubscriptionBannerFields;
+  fields?: SubscriptionBannerFields;
 }

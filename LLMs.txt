@@ -3,6 +3,9 @@
 ## Project Context
 XM Cloud Front End Application Starter Kits repository with multiple Next.js and SPA examples for Sitecore XM Cloud development. Each starter demonstrates headless CMS patterns with modern React/TypeScript architecture.
 
+### Upstream, forks, and pull request scope
+Before planning a pull request, determine if the target is the official **upstream** repo or a user **fork** / **template** copy. Upstream accepts **improvements, bug fixes, and generally useful features** in **existing** starters only. Do not propose upstream PRs for **new example sites**, **extra** starters under `examples/`, or **bespoke** single-org product extensions (use a fork or template). Full policy: CONTRIBUTING.md ("What we do not accept"). Cursor rules: .cursor/rules/project-context.mdc.
+
 ## Core Technologies
 - Next.js 14+ (App Router/Pages Router)
 - TypeScript (strict mode)

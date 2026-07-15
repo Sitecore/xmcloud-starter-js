@@ -3,22 +3,8 @@ import {
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
   RichText as ContentSdkRichText,
-  ImageField,
-  Field,
-  LinkField,
 } from '@sitecore-content-sdk/nextjs';
-
-interface Fields {
-  PromoIcon: ImageField;
-  PromoText: Field<string>;
-  PromoLink: LinkField;
-  PromoText2: Field<string>;
-}
-
-type PromoProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import { PromoProps } from './sxa-promo.props';
 
 const PromoDefaultComponent = (props: PromoProps): JSX.Element => (
   <div className={`component promo ${props.params.styles}`}>
@@ -44,7 +30,7 @@ export const Default = (props: PromoProps): JSX.Element => {
               </div>
             </div>
             <div className="field-promolink">
-              <ContentSdkLink field={props.fields.PromoLink} />
+              {props.fields.PromoLink && <ContentSdkLink field={props.fields.PromoLink} />}
             </div>
           </div>
         </div>

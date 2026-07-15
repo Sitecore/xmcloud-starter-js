@@ -1,0 +1,20 @@
+{
+  "services": [
+    {
+      "name": "Article and Topic Listings",
+      "description": "Browse and discover editorial content, articles, and topic-based collections curated for lifestyle and wellness.",
+      "category": "Content"
+    },
+    {
+      "name": "Hero and Promo Sections",
+      "description": "Rich content modules including hero banners, animated promos, and promotional sections for featured content.",
+      "category": "Content"
+    },
+    {
+      "name": "Multi-Locale Content Delivery",
+      "description": "Deliver localized content in multiple languages (English and Canadian English) with automatic locale detection.",
+      "category": "Localization"
+    }
+  ],
+  "lastModified": "2026-03-05T07:41:29Z"
+}

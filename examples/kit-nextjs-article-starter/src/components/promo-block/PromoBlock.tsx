@@ -8,14 +8,16 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { PromoBlockProps, PromoBlockVariationClassesProps } from './promo-block.props';
+import { getDescriptiveLinkText } from '@/utils/link-text';
 import { type JSX } from 'react';
 
 const PromoBlock = (props: PromoBlockProps): JSX.Element => {
-  const { fields, params } = props;
+  const { fields, params, page } = props;
 
   const { heading, description, image, link } = fields ?? {};
   const orientation = params?.orientation ?? Orientation.IMAGE_LEFT;
   const variation = params?.variation ?? Variation.DEFAULT;
+  const isPageEditing = page?.mode?.isEditing ?? false;
 
   const defaultClassesVariation: PromoBlockVariationClassesProps = {
     container: cn('row-start-1', {
@@ -74,7 +76,21 @@ const PromoBlock = (props: PromoBlockProps): JSX.Element => {
           >
             {link && (
               <Button asChild>
-                <Link field={link} />
+                <Link
+                  field={
+                    // Enhance link with descriptive text for SEO
+                    !isPageEditing && link?.value?.text
+                      ? {
+                          ...link,
+                          value: {
+                            ...link.value,
+                            text: getDescriptiveLinkText(link, heading?.value),
+                          },
+                        }
+                      : link
+                  }
+                  editable={isPageEditing}
+                />
               </Button>
             )}
           </Flex>

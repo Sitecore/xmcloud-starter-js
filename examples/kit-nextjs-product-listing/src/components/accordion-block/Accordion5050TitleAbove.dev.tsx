@@ -6,10 +6,15 @@ import type { AccordionProps, AccordionItemProps } from './accordion-block.props
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { cn } from '@/lib/utils';
 import { AccordionBlockItem } from './AccordionBlockItem.dev';
+import { getDatasource, getFieldValue } from '@/lib/component-props';
 export const Accordion5050TitleAbove: React.FC<AccordionProps> = (props) => {
   const { fields, isPageEditing } = props;
 
-  const { heading, description, link, children } = fields?.data?.datasource || {};
+  const datasource = getDatasource(fields);
+  const { heading, description, link, children } = datasource || {};
+  const headingField = getFieldValue(heading);
+  const descriptionField = getFieldValue(description);
+  const linkField = getFieldValue(link);
   const accordionItems = (children?.results ?? []).filter(Boolean);
 
   // Split accordion items into two columns
@@ -20,14 +25,14 @@ export const Accordion5050TitleAbove: React.FC<AccordionProps> = (props) => {
   const leftColumnValues = leftColumnItems.map((_, index) => `left-item-${index + 1}`);
   const rightColumnValues = rightColumnItems.map((_, index) => `right-item-${index + 1}`);
 
-  if (fields) {
+  if (datasource) {
     return (
       <div
         data-component="Accordion5050TitleAbove"
         className={cn(
           '@container @md:py-16 @lg:py-20 bg-background text-foreground border-b-2 border-t-2 py-10 [.border-b-2+&]:border-t-0',
           {
-            [props.params.styles]: props?.params?.styles,
+            [props.params?.styles as string]: props?.params?.styles,
           }
         )}
         data-class-change
@@ -38,25 +43,25 @@ export const Accordion5050TitleAbove: React.FC<AccordionProps> = (props) => {
         >
           <div className="@md:grid @md:grid-cols-2 @md:gap-8 @lg:gap-12 @xl:gap-16 items-end">
             <div>
-              {heading?.jsonValue && (
+              {headingField && (
                 <Text
                   tag="h2"
                   className="font-heading @md:text-6xl @lg:text-7xl mb-8 max-w-screen-sm text-pretty text-5xl font-light leading-[1.1] tracking-tighter antialiased"
-                  field={heading?.jsonValue}
+                  field={headingField}
                 />
               )}
             </div>
-            {(isPageEditing || description?.jsonValue?.value || link?.jsonValue?.value?.href) && (
+            {(isPageEditing || descriptionField?.value || linkField?.value?.href) && (
               <div className="bg-primary @sm:flex-row @sm:text-start @md:flex-col @md:text-center @lg:flex-row @lg:text-start mt-6 flex flex-col flex-nowrap items-center gap-4 p-7 text-center">
                 <Text
                   tag="p"
                   className="text-primary-foreground font-heading text-lg font-light"
-                  field={description?.jsonValue}
+                  field={descriptionField}
                 />
-                {link?.jsonValue && (
+                {linkField && (
                   <EditableButton
                     variant="secondary"
-                    buttonLink={link.jsonValue}
+                    buttonLink={linkField}
                     isPageEditing={isPageEditing}
                   />
                 )}

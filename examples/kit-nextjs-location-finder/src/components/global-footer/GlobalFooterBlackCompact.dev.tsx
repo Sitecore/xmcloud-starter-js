@@ -28,6 +28,7 @@ export const GlobalFooterBlackCompact: React.FC<GlobalFooterProps> = (props) => 
       <footer
         className="@container bg-background text-foreground relative w-full overflow-hidden"
         ref={footerRef}
+        role="contentinfo"
       >
         {/* Main footer content */}
         <div className="relative  mx-auto max-w-screen-2xl">

@@ -31,7 +31,7 @@ export const ImageCarouselLeftRightPreview = (props: ImageCarouselProps) => {
   const controlsWrapperClasses = 'mt-8 flex items-center gap-4';
   const previewImageClasses = 'relative h-auto w-full cursor-pointer';
 
-  const { title, imageItems } = fields?.data?.datasource;
+  const { title, imageItems } = fields?.data?.datasource ?? {};
   const { results: slides = [] } = imageItems || {};
 
   // State for tracking current slide
@@ -100,7 +100,7 @@ export const ImageCarouselLeftRightPreview = (props: ImageCarouselProps) => {
           reducedMotion={isReducedMotion}
         >
           <div className="mb-16 w-full space-y-4 px-4">
-            <Text tag="h2" field={title.jsonValue} className={titleClasses} />
+            <Text tag="h2" field={title?.jsonValue} className={titleClasses} />
           </div>
         </AnimatedSection>
 

@@ -95,7 +95,7 @@ export const ImageCarouselDefault = (props: ImageCarouselProps) => {
           reducedMotion={isReducedMotion}
         >
           <div className={titleWrapperClasses}>
-            <Text tag="h2" field={title.jsonValue} className={titleClasses} />
+            <Text tag="h2" field={title?.jsonValue} className={titleClasses} />
           </div>
         </AnimatedSection>
 

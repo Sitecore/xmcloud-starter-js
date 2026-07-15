@@ -43,6 +43,7 @@ export const ImageCarouselEditMode = (
                     <ImageWrapper
                       image={slide.image?.jsonValue}
                       className="relative z-0 h-auto w-full overflow-hidden rounded-md"
+                      page={props.page}
                     />
                   </div>
 

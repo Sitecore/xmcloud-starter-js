@@ -1,3 +1,5 @@
+'use client';
+
 import { Text } from '@sitecore-content-sdk/nextjs';
 import React, { useState } from 'react';
 import { NoDataFallback } from '@/utils/NoDataFallback';
@@ -46,10 +48,11 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
     const leftColumnProducts = visibleProducts.slice(0, leftCount);
     const rightColumnProducts = visibleProducts.slice(leftCount);
     return (
-      <div
+      <section
         className={cn('@container transform-gpu border-b-2 border-t-2 [.border-b-2+&]:border-t-0', {
           [props?.params?.styles]: props?.params?.styles,
         })}
+        aria-labelledby="product-listing-heading"
       >
         {isPageEditing && (
           <div
@@ -104,6 +107,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
               >
                 <Text
                   tag="h2"
+                  id="product-listing-heading"
                   className="@md:text-6xl @lg:text-7xl w-full text-pretty text-8xl font-light tracking-tight antialiased"
                   field={title?.jsonValue}
                 />
@@ -132,6 +136,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
                           link={viewAllLink?.jsonValue}
                           prefersReducedMotion={isReducedMotion}
                           isPageEditing={isPageEditing}
+                          page={props.page}
                         />
                       </div>
                     </AnimatedSection>
@@ -164,6 +169,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
                           link={viewAllLink?.jsonValue}
                           prefersReducedMotion={isReducedMotion}
                           isPageEditing={isPageEditing}
+                          page={props.page}
                         />
                       </div>
                     </AnimatedSection>
@@ -173,7 +179,7 @@ export const ProductListingDefault: React.FC<ProductListingProps> = (props) => {
             )}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 

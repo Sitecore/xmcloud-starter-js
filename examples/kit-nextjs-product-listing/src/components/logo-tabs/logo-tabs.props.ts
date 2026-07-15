@@ -1,6 +1,6 @@
 import { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
 import { EnumValues } from '@/enumerations/generic.enum';
-import { ComponentProps } from '@/lib/component-props';
+import { CompatibleDatasource, CompatibleField, ComponentProps } from '@/lib/component-props';
 import { ColorSchemeLimited } from '@/enumerations/ColorSchemeLimited.enum';
 
 interface LogoTabsParams {
@@ -9,33 +9,33 @@ interface LogoTabsParams {
 }
 
 export interface LogoTabContent {
-  heading: { jsonValue: Field<string> };
-  cta: { jsonValue: LinkField };
+  heading: CompatibleField<Field<string>>;
+  cta: CompatibleField<LinkField>;
+}
+
+export interface LogoTabsDatasource {
+  title: CompatibleField<Field<string>>;
+  backgroundImage?: CompatibleField<ImageField>;
+  logos?: {
+    results: LogoItemProps[];
+  };
+  logoTabContent?: {
+    results: LogoTabContent[];
+  };
 }
 
 export interface LogoTabsFields {
   data: {
-    datasource: {
-      title: { jsonValue: Field<string> };
-      backgroundImage?: { jsonValue: ImageField };
-      logos?: {
-        results: LogoItemProps[];
-      };
-      logoTabContent?: {
-        results: LogoTabContent[];
-      };
-    };
+    datasource: LogoTabsDatasource;
   };
 }
 
 export interface LogoTabsProps extends ComponentProps {
   params: LogoTabsParams;
-  fields: LogoTabsFields;
+  fields: CompatibleDatasource<LogoTabsDatasource>;
 }
 
 export type LogoItemProps = {
-  title: {
-    jsonValue: Field<string>;
-  };
-  logo: { jsonValue: ImageField };
+  title: CompatibleField<Field<string>>;
+  logo: CompatibleField<ImageField>;
 };

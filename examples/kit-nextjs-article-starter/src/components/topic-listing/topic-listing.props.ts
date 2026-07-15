@@ -7,9 +7,9 @@ export interface TopicListingParams {
 }
 
 export interface TopicListingFields {
-  data: {
-    datasource: {
-      title: { jsonValue: Field<string> };
+  data?: {
+    datasource?: {
+      title?: { jsonValue: Field<string> };
       children?: {
         results: TopicItemProps[];
       };
@@ -19,11 +19,12 @@ export interface TopicListingFields {
 
 export interface TopicListingProps extends ComponentProps {
   params: TopicListingParams;
-  fields: TopicListingFields;
+  fields?: TopicListingFields;
 }
 
 export type TopicItemProps = {
   link?: {
     jsonValue?: LinkField;
   };
+  isPageEditing?: boolean;
 };

@@ -1,11 +1,11 @@
 import { ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from '@/lib/component-props';
+import type { OptionalComponentProps } from '@/lib/component-props';
 import { PlaceholderProps } from '@/types/Placeholder.props';
 
 /**
  * Model used for Sitecore Component integration
  */
-export type GlobalHeaderProps = ComponentProps & PlaceholderProps & GlobalHeaderFields;
+export type GlobalHeaderProps = OptionalComponentProps & PlaceholderProps & GlobalHeaderFields;
 
 export type GlobalHeaderFields = {
   isPageEditing: boolean;
@@ -57,3 +57,4 @@ export type UtilityNavigationItemProps = {
     jsonValue: LinkField;
   };
 };
+

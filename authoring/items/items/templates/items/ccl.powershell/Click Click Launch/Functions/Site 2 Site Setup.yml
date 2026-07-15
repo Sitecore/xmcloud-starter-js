@@ -130,6 +130,7 @@ SharedFields:
             $nexaPage = Get-Item -Path "$sitePath/Home/Products/Nexa" -Language $Site.Language
             $nexaPageHeader = Get-Item -Path "$sitePath/Home/Products/Nexa/Data/Page Header 1" -Language $Site.Language
             $terraPage = Get-Item -Path "$sitePath/Home/Products/Terra" -Language $Site.Language
+            $terraPageHeader = Get-Item -Path "$sitePath/Home/Products/Terra/Data/Page Header 1" -Language $Site.Language
             
             Update-LinkField -Item $aeroLink -FieldName "link" -TargetItem $aeroPage
             Update-LinkField -Item $nexaLink -FieldName "link" -TargetItem $nexaPage
@@ -161,6 +162,8 @@ SharedFields:
             # Re-enable when page header 2 is added to Nexa
             # Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
             # Get-Item -Path "$($item.ItemPath)/Products/Nexa/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
+            Get-Item -Path "$($item.ItemPath)/Products/Terra/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link1" -TargetItem $testDriveItem
+            Get-Item -Path "$($item.ItemPath)/Products/Terra/Data/Page Header 2" -Language $Site.Language | Update-LinkField -FieldName "link2" -TargetItem $item
             
             Write-Verbose "Update product pages with the correct taxonomy"
             $productTag = Get-Item -Path "$sitePath/Data/Taxonomy/Content Types/Product" -Language $Site.Language
@@ -260,6 +263,8 @@ SharedFields:
                 Set-Rendering -Item $nexaPage -FinalLayout
             Update-LinkField -Item $nexaPageHeader -FieldName "link1" -TargetItem $testDriveItem
             Update-LinkField -Item $nexaPageHeader -FieldName "link2" -TargetItem $item
+            Update-LinkField -Item $terraPageHeader -FieldName "link1" -TargetItem $testDriveItem
+            Update-LinkField -Item $terraPageHeader -FieldName "link2" -TargetItem $item
             # update Aero product
             Get-Rendering -Item $aeroPage -Rendering $renderingImageGallery -FinalLayout | `
                 Set-RenderingParameter -Parameter @{ "FieldNames" = $imageGalleryVariant.ID } | `
@@ -270,6 +275,16 @@ SharedFields:
             Get-Rendering -Item $aeroPage -Rendering $renderingTextBanner -FinalLayout | `
                 Set-RenderingParameter -Parameter @{ "FieldNames" = $textBannerVariant.ID } | `
                 Set-Rendering -Item $aeroPage -FinalLayout
+            # update Terra product
+            Get-Rendering -Item $terraPage -Rendering $renderingImageGallery -FinalLayout | `
+                Set-RenderingParameter -Parameter @{ "FieldNames" = $imageGalleryVariant.ID } | `
+                Set-Rendering -Item $terraPage -FinalLayout
+            Get-Rendering -Item $terraPage -Rendering $renderingPageHeader -FinalLayout | `
+                Set-RenderingParameter -Parameter @{ "FieldNames" = $pageHeaderVariant.ID } | `
+                Set-Rendering -Item $terraPage -FinalLayout
+            Get-Rendering -Item $terraPage -Rendering $renderingTextBanner -FinalLayout | `
+                Set-RenderingParameter -Parameter @{ "FieldNames" = $textBannerVariant.ID } | `
+                Set-Rendering -Item $terraPage -FinalLayout
             # update Test Drive landing
             Get-Rendering -Item $testDriveItem -Rendering $renderingPageHeader -FinalLayout | `
                 Set-RenderingParameter -Parameter @{ "FieldNames" = $pageHeaderVariant.ID } | `
@@ -288,31 +303,133 @@ SharedFields:
                 Set-Rendering -Item $testDriveItem -FinalLayout
       
             Write-Verbose "Update home page fields"
-            $title = "Alaris - Get set for an electric future."
+            $title = "Alaris - Get set for an electric future"
             $shortTitle = "Alaris"
-    
+            $description = "Experience the future of electric vehicles with Alaris. Explore our innovative lineup of sustainable cars designed for tomorrow."
             $item."pageTitle" = $title
             $item."pageShortTitle" = $shortTitle
             $item."pageHeaderTitle" = $shortTitle
-            $item."pageSummary" = $title
-    
+            $item."pageSummary" = $description
             $item."metadataTitle" = $title
-            $item."metadataDescription" = $title
-            $item."metadataKeywords" = "Alaris, electric, future"
+            $item."metadataDescription" = $description
+            $item."metadataKeywords" = "Alaris, electric vehicles, EV, sustainable cars, future mobility"
+            $item."metadataAuthor" = "Sitecore"
             $item."ogTitle" = $title
-            $item."ogDescription" = $title
+            $item."ogDescription" = $description
+            $item."ogImage" = "<image mediaid=`"{34DE6E63-EE15-4D55-AEEA-C5600D7E7EB8}`" />"
     
-            # Add Promo variants
-            $promoVariant = Get-Item -Path "$sitePath/Presentation/Headless Variants/Promo" -Language $Site.Language
-            $imageLeftVariant = New-Item -Parent $promoVariant -Name "ImageLeft" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
-            $imageLeftVariant.'__Display name' = "Image Left"
-            $imageMiddleVariant = New-Item -Parent $promoVariant -Name "ImageMiddle" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
-            $imageMiddleVariant.'__Display name' = "Image Middle"
-            $imageRightVariant = New-Item -Parent $promoVariant -Name "ImageRight" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
-            $imageRightVariant.'__Display name' = "Image Right"
-            $titlePartialOverlayVariant = New-Item -Parent $promoVariant -Name "TitlePartialOverlay" -ItemType "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
-            $titlePartialOverlayVariant.'__Display name' = "Title Partial Overlay"
+            Write-Verbose "Create AI config at $sitePath/Data/AI"
+            $dataFolderPath = "$sitePath/Data"
+            if (-not (Test-Path $dataFolderPath)) {
+                $siteFolderTemplateId = "{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}"
+                New-Item -Path $sitePath -Name "Data" -ItemType $siteFolderTemplateId | Out-Null
+            }
+            $dataFolder = Get-Item -Path $dataFolderPath -Language $Site.Language
+            $aiFolderPath = "$($dataFolder.Paths.Path)/AI"
+            if (-not (Test-Path $aiFolderPath)) {
+                $addAiConfigBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add AI Config" -Language $Site.Language
+                New-Item -Parent $dataFolder -Name "AI" -ItemType $addAiConfigBranchTemplate.ID | Out-Null
+            }
+            
+            Write-Verbose "Ensure Image headless rendering variants (Default, Banner) under Presentation"
+            $headlessVariantsPath = "$sitePath/Presentation/Headless Variants"
+            $imageVariantsPath = "$headlessVariantsPath/Image"
+            $imageHeadlessBranchId = "{C549C8C6-0AF4-4AD7-8A89-1E4695B23EF3}"
+            $headlessVariantTemplateId = "{4D50CDAE-C2D9-4DE8-B080-8F992BFB1B55}"
+            $imageDefaultVariantOriginatorId = "{17342388-971F-41E2-B22E-DA3FB9A339DA}"
+            $imageBannerVariantOriginatorId = "{77DE3501-AF38-4EB5-8E6C-740E4DF1348F}"
+            if (Test-Path $headlessVariantsPath) {
+                $hvParent = Get-Item -Path $headlessVariantsPath -Language $Site.Language
+                if (-not (Test-Path $imageVariantsPath)) {
+                    Write-Verbose "Insert shared Default Image Variant branch as Headless Variants/Image"
+                    New-Item -Parent $hvParent -Name "Image" -ItemType $imageHeadlessBranchId | Out-Null
+                }
+                if (Test-Path $imageVariantsPath) {
+                    $imageVariantsFolder = Get-Item -Path $imageVariantsPath -Language $Site.Language
+                    $imageFolderPath = $imageVariantsFolder.Paths.Path
+                    $defaultVariantItem = Get-ChildItem -Path $imageFolderPath -Language $Site.Language | Where-Object { $_.Name -eq "Default" }
+                    if (-not $defaultVariantItem) {
+                        Write-Verbose "Create missing Default rendering variant under Image"
+                        $defaultVariantItem = New-Item -Parent $imageVariantsFolder -Name "Default" -ItemType $headlessVariantTemplateId
+                        $defaultVariantItem.Editing.BeginEdit()
+                        $defaultVariantItem["__Originator"] = $imageDefaultVariantOriginatorId
+                        $defaultVariantItem.Editing.EndEdit() | Out-Null
+                    }
+                    $bannerVariantItem = Get-ChildItem -Path $imageFolderPath -Language $Site.Language | Where-Object { $_.Name -eq "Banner" }
+                    if (-not $bannerVariantItem) {
+                        Write-Verbose "Create missing Banner rendering variant under Image"
+                        $bannerVariantItem = New-Item -Parent $imageVariantsFolder -Name "Banner" -ItemType $headlessVariantTemplateId
+                        $bannerVariantItem.Editing.BeginEdit()
+                        $bannerVariantItem["__Originator"] = $imageBannerVariantOriginatorId
+                        $bannerVariantItem.Editing.EndEdit() | Out-Null
+                    }
+                }
+            }
+            
+            Write-Verbose "Use Media/Image rendering instead of Image Block in layout fields (variant alignment)"
+            $renderingImageForLayout = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Media/Image' -ErrorAction SilentlyContinue
+            $renderingImageBlockLegacy = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Media/Image Block' -ErrorAction SilentlyContinue
+            if ($renderingImageForLayout -and $renderingImageBlockLegacy) {
+                $blockGuid = $renderingImageBlockLegacy.ID.ToString()
+                $imageGuid = $renderingImageForLayout.ID.ToString()
+                $layoutFieldNames = @("__Final Renderings", "__Renderings")
+                foreach ($layoutItem in (Get-ChildItem -Path $sitePath -Recurse -Language $Site.Language)) {
+                    foreach ($layoutFieldName in $layoutFieldNames) {
+                        $layoutField = $layoutItem.Fields[$layoutFieldName]
+                        if ($layoutField -eq $null) { continue }
+                        $layoutValue = $layoutField.Value
+                        if ([string]::IsNullOrEmpty($layoutValue)) { continue }
+                        if ($layoutValue -notlike "*$blockGuid*") { continue }
+                        $updatedValue = $layoutValue.Replace($blockGuid, $imageGuid)
+                        if ($updatedValue -ne $layoutValue) {
+                            $layoutItem.Editing.BeginEdit()
+                            $layoutField.Value = $updatedValue
+                            $layoutItem.Editing.EndEdit() | Out-Null
+                            Write-Verbose "Swapped Image Block to Image on $($layoutItem.Paths.Path) — $layoutFieldName"
+                        }
+                    }
+                }
+            }
+            
+            Write-Verbose "Enforce Default variant for Image renderings"
+            $renderingImage = Get-Item -Path '/sitecore/layout/Renderings/Project/click-click-launch/Media/Image' -ErrorAction SilentlyContinue
+            if ($renderingImage) {
+                $imageVariants = $service.GetAvailableRenderingVariants($Site, $renderingImage.Name, $renderingImage.ID, $item.TemplateID)
+                $imageDefaultVariant = $imageVariants | Where-Object { $_.Name -eq "Default" }
+                if ($imageDefaultVariant) {
+                    $allSiteItems = Get-ChildItem -Path $sitePath -Recurse -Language $Site.Language
+                    foreach ($siteItem in $allSiteItems) {
+                        $imageRenderingInstances = Get-Rendering -Item $siteItem -Rendering $renderingImage -FinalLayout -ErrorAction SilentlyContinue
+                        if ($imageRenderingInstances) {
+                            foreach ($rendering in @($imageRenderingInstances)) {
+                                $rendering | Set-RenderingParameter -Parameter @{ "FieldNames" = $imageDefaultVariant.ID } | Set-Rendering -Item $siteItem -FinalLayout
+                            }
+                        }
+                    }
+                }
+            }
     
+            # Set all pages and content to Approved workflow state
+            Write-Verbose "Set all site content workflow state to Approved"
+            $basicWorkflowApprovedStateId = "{F7FE5BDD-A991-4A58-9735-CD08F9B097AB}"
+            $basicDatasourceWorkflowApprovedStateId = "{4460E76C-87E9-4859-9DE6-DE122774937F}"
+            $basicDatasourceWorkflowDraftStateId = "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+            $workflowStateFieldId = [Sitecore.FieldIDs]::WorkflowState
+            $siteItems = Get-ChildItem -Path $sitePath -Recurse -Language $Site.Language
+            foreach ($siteItem in $siteItems) {
+                if ($siteItem.Versions.Count -eq 0) { continue }
+                $wfField = $siteItem.Fields[$workflowStateFieldId]
+                if ($wfField -eq $null) { continue }
+                $currentState = $wfField.Value
+                $approvedStateId = $basicWorkflowApprovedStateId
+                if ($currentState -eq $basicDatasourceWorkflowDraftStateId) { $approvedStateId = $basicDatasourceWorkflowApprovedStateId }
+                if ($currentState -ne $approvedStateId) {
+                    $siteItem.Editing.BeginEdit()
+                    $siteItem.Fields[$workflowStateFieldId].Value = $approvedStateId
+                    $siteItem.Editing.EndEdit()
+                    Write-Verbose "Set workflow to Approved for $($siteItem.Paths.Path)"
+                }
+            }
             Write-Verbose "Create dictionary items"
             $dictionaryRoot = Get-Item -Path "$sitePath/Dictionary" -Language $Site.Language
             $dictionaryBranchTemplate = Get-Item -Path "/sitecore/templates/Branches/Project/click-click-launch/Alaris/Add Dictionary Items" -Language $Site.Language
@@ -328,7 +445,7 @@ SharedFields:
     #Invoke-ModuleScriptBody -Site $site -Verbose
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "c40fcc67-e9e0-41f8-a0f4-990b5b9cf455"
+  Value: "b8e1d5f3-2a4c-4807-9e6b-d3f0c7a2b9e5"
 Languages:
 - Language: en
   Versions:
@@ -347,11 +464,11 @@ Languages:
         sitecore\richard.seal@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e07650cc-af46-49ed-a8f8-9cffb7645a4d"
+      Value: "d4c7b3a9-1f5e-4826-8c0d-7b2e1a3f9d46"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\richard.seal@sitecore.com
+        sitecore\shakya.wijerathne@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250724T014119Z
+      Value: 20260514T090000Z

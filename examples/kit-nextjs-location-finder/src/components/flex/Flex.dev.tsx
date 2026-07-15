@@ -6,7 +6,9 @@ import {
   ComponentParams,
   ComponentRendering,
   getFieldValue,
-  Placeholder,
+  AppPlaceholder,
+  Page,
+  NextjsContentSdkComponent,
 } from '@sitecore-content-sdk/nextjs';
 import { Slot } from '@radix-ui/react-slot';
 import { EnumValues } from '@/enumerations/generic.enum';
@@ -235,37 +237,9 @@ const flexVariants = {
 // Define the possible keys of the flexVariants object
 type FlexVariantKey = keyof typeof flexVariants;
 
-export interface FlexProps {
-  direction?: EnumValues<typeof flexVariants.direction>; // Flex direction
-  justify?: EnumValues<typeof flexVariants.justify>; // Flex justify options
-  align?: EnumValues<typeof flexVariants.align>; // Align items options
-  gap?: EnumValues<typeof flexVariants.gap>; // Gap between items, e.g., '4', '6', '8'
-  wrap?: EnumValues<typeof flexVariants.wrap>; // Flex wrap options
-  children?: React.ReactNode; // Children elements
-  className?: string; // Additional Tailwind classes, e.g., md:flex-row
-  as?: React.ElementType; // e.g., "div" or "section"
-  asChild?: boolean; // Merges component with child
-  fullBleed?: boolean; // Full bleed container
-}
+import type { FlexItemProps, FlexProps, XMComponentProps } from './flex.props';
 
-export interface FlexItemProps {
-  children: React.ReactNode;
-  className?: string;
-  grow?: EnumValues<typeof flexVariants.grow>;
-  shrink?: EnumValues<typeof flexVariants.shrink>;
-  basis?: EnumValues<typeof flexVariants.basis>;
-  alignSelf?: EnumValues<typeof flexVariants.alignSelf>;
-  as?: React.ElementType; // e.g., "div" or "section"
-  asChild?: boolean; // Merges component with child
-  fullBleed?: boolean;
-}
-
-// XM Cloud Component Props
-export interface XMComponent {
-  rendering: ComponentRendering & { params: ComponentParams };
-  params: ComponentParams;
-  fields: ComponentFields;
-}
+export type { FlexItemProps, FlexProps, XMComponentProps };
 
 const getVariantString = <T extends FlexVariantKey>(
   key: T,
@@ -336,7 +310,7 @@ export const FlexItem: React.FC<FlexItemProps> = ({
   );
 };
 
-export const XMFlex: React.FC<XMComponent> = ({ params, rendering, fields }) => {
+export const XMFlex: React.FC<XMComponentProps> = ({ params, rendering, fields, page, componentMap }) => {
   const phKey = `flex-${params.DynamicPlaceholderId}`;
   return (
     <Flex
@@ -346,12 +320,12 @@ export const XMFlex: React.FC<XMComponent> = ({ params, rendering, fields }) => 
       gap={getFieldValue(fields, 'gap')}
       className={getFieldValue(fields, 'className')}
     >
-      <Placeholder name={phKey} rendering={rendering} />
+      <AppPlaceholder page={page} componentMap={componentMap} name={phKey} rendering={rendering} />
     </Flex>
   );
 };
 
-export const XMFlexItem: React.FC<XMComponent> = ({ params, rendering, fields }) => {
+export const XMFlexItem: React.FC<XMComponentProps> = ({ params, rendering, fields, page, componentMap }) => {
   const phKey = `flex-item-${params.DynamicPlaceholderId}`;
   return (
     <FlexItem
@@ -361,7 +335,7 @@ export const XMFlexItem: React.FC<XMComponent> = ({ params, rendering, fields })
       alignSelf={getFieldValue(fields, 'alignSelf')}
       className={getFieldValue(fields, 'className')}
     >
-      <Placeholder name={phKey} rendering={rendering} />
+      <AppPlaceholder page={page} componentMap={componentMap} name={phKey} rendering={rendering} />
     </FlexItem>
   );
 };

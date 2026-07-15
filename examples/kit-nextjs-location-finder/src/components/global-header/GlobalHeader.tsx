@@ -1,5 +1,5 @@
+'use client';
 import type React from 'react';
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
 import type { GlobalHeaderProps } from './global-header.props';
 import { GlobalHeaderDefault } from './GlobalHeaderDefault.dev';
 import { GlobalHeaderCentered } from './GlobalHeaderCentered.dev';
@@ -7,16 +7,14 @@ import { GlobalHeaderCentered } from './GlobalHeaderCentered.dev';
 
 // Default display of the component
 export const Default: React.FC<GlobalHeaderProps> = (props) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
 
   return <GlobalHeaderDefault {...props} isPageEditing={isEditing} />;
 };
 
 // Variants
 export const Centered: React.FC<GlobalHeaderProps> = (props) => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
+  const { isEditing } = props.page.mode;
 
   return <GlobalHeaderCentered {...props} isPageEditing={isEditing} />;
 };

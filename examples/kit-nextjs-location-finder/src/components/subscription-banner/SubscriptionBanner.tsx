@@ -1,28 +1,12 @@
-import { Text, Field, LinkField } from '@sitecore-content-sdk/nextjs';
+'use client';
+
+import { Text } from '@sitecore-content-sdk/nextjs';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useForm } from 'react-hook-form';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { useState } from 'react';
-import { ComponentProps } from '@/lib/component-props';
-
-interface SubscriptionBannerParams {
-  [key: string]: any; // eslint-disable-line
-}
-
-interface SubscriptionBannerFields {
-  titleRequired: Field<string>;
-  descriptionOptional?: Field<string>;
-  buttonLink: LinkField;
-  emailPlaceholder?: Field<string>;
-  emailErrorMessage?: Field<string>;
-  thankYouMessage?: Field<string>;
-}
-
-interface SubscriptionBannerProps extends ComponentProps {
-  params: SubscriptionBannerParams;
-  fields: SubscriptionBannerFields;
-}
+import type { SubscriptionBannerProps } from './subscription-banner.props';
 
 type FormValues = {
   email: string;
@@ -45,9 +29,10 @@ export const Default: React.FC<SubscriptionBannerProps> = ({ fields }) => {
     mode: 'onTouched',
   });
 
-  const onSubmit = async (data: FormValues) => {
+  const onSubmit = async (
+    _data: FormValues, // eslint-disable-line @typescript-eslint/no-unused-vars -- required by react-hook-form signature
+  ) => {
     // Handle form submission
-    console.log(data);
     setIsSubmitted(true);
     // Reset the form to clear the input, then set the thank you message
     form.reset({ email: thankYouMessage?.value || 'Thank you' });

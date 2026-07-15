@@ -1,33 +1,27 @@
 import type React from 'react';
-import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
 import {
   getContainerPlaceholderProps,
   isContainerPlaceholderEmpty,
 } from '@/components/container/container.util';
 import { Flex, FlexItem } from '@/components/flex/Flex.dev';
 import { cn } from '@/lib/utils';
-import type { JSX } from 'react';
-import { PlaceholderProps } from 'types/Placeholder.props';
-import { ComponentProps } from '@/lib/component-props';
-
-/**
- * Model used for Sitecore Component integration
- */
-type Container6040Props = ComponentProps &
-  PlaceholderProps & {
-    left?: JSX.Element;
-    right?: JSX.Element;
-  };
+import componentMap from '.sitecore/component-map';
+import { AppPlaceholder } from '@sitecore-content-sdk/nextjs';
+import { Container6040Props } from './container-6040.props';
 
 export const Default: React.FC<Container6040Props> = (props) => {
-  const { rendering, left, right } = props;
-
-  const { page } = useSitecore();
+  const { rendering, left, right, page } = props;
 
   const isPageEditing = page.mode.isEditing;
 
-  const leftPlaceholders = getContainerPlaceholderProps('container-sixty-left', props.params);
-  const rightPlaceholders = getContainerPlaceholderProps('container-forty-right', props.params);
+  const leftPlaceholders = getContainerPlaceholderProps(
+    'container-sixty-left',
+    props.params,
+  );
+  const rightPlaceholders = getContainerPlaceholderProps(
+    'container-forty-right',
+    props.params,
+  );
 
   const isEmptyPlaceholder =
     isContainerPlaceholderEmpty(rendering, leftPlaceholders, left) &&
@@ -37,7 +31,8 @@ export const Default: React.FC<Container6040Props> = (props) => {
     return null;
   }
 
-  const excludeTopMargin = props?.params?.excludeTopMargin === '1' ? true : false;
+  const excludeTopMargin =
+    props?.params?.excludeTopMargin === '1' ? true : false;
 
   return (
     <section
@@ -48,10 +43,20 @@ export const Default: React.FC<Container6040Props> = (props) => {
     >
       <Flex wrap="nowrap">
         <FlexItem as="div" basis="6/10">
-          <Placeholder name={leftPlaceholders.dynamicKey} rendering={rendering} />
+          <AppPlaceholder
+            name={leftPlaceholders.dynamicKey}
+            rendering={rendering}
+            page={page}
+            componentMap={componentMap}
+          />
         </FlexItem>
         <FlexItem as="div" basis="4/10">
-          <Placeholder name={rightPlaceholders.dynamicKey} rendering={rendering} />
+          <AppPlaceholder
+            name={rightPlaceholders.dynamicKey}
+            rendering={rendering}
+            page={page}
+            componentMap={componentMap}
+          />
         </FlexItem>
       </Flex>
     </section>

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Text } from '@sitecore-content-sdk/nextjs';
@@ -7,7 +9,7 @@ import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import { Default as AnimatedSection } from '@/components/animated-section/AnimatedSection.dev';
 import { Default as ZipcodeSearchForm } from '@/components/forms/zipcode/ZipcodeSearchForm.dev';
 import { HeroProps } from './hero.props';
-import { USER_ZIPCODE } from '@/lib/constants';
+import { storeZipcodeInSession } from '@/utils/zipcode-storage';
 
 export const HeroDefault: React.FC<HeroProps> = (props) => {
   const { fields, isPageEditing } = props;
@@ -92,7 +94,7 @@ export const HeroDefault: React.FC<HeroProps> = (props) => {
                 placeholder={dictionary.ZipPlaceholder || ''}
                 buttonText={dictionary?.SubmitCTALabel || ''}
                 onSubmit={(values) => {
-                  sessionStorage.setItem(USER_ZIPCODE, values.zipcode);
+                  storeZipcodeInSession(values.zipcode);
                   if (searchLink?.value?.href) {
                     window.location.href = `${searchLink.value.href}`;
                   }
@@ -107,6 +109,8 @@ export const HeroDefault: React.FC<HeroProps> = (props) => {
             wrapperClass="@lg/herowrapper:col-start-3 @lg/herowrapper:col-end-5 @lg/herowrapper:row-start-2 @lg/herowrapper:row-end-5 before:hidden @lg/herowrapper:before:block @lg/herowrapper:before:w-full @lg/herowrapper:before:aspect-[674/600] @lg/herowrapper:relative w-full"
             className="@lg/herowrapper:h-full @lg/herowrapper:aspect-auto @lg/herowrapper:absolute @lg/herowrapper:inset-0 relative z-10 aspect-video w-full object-cover"
             priority={true}
+            loading="eager"
+            fetchPriority="high"
           />
 
           {/* Banner */}

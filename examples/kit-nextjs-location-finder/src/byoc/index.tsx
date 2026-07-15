@@ -1,6 +1,7 @@
+'use client';
 import React, { type JSX } from 'react';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
-import * as Events from '@sitecore-cloudsdk/events/browser';
+import * as Events from '@sitecore-content-sdk/events/browser';
 import '@sitecore/components/context';
 import dynamic from 'next/dynamic';
 import config from 'sitecore.config';

@@ -10,5 +10,5 @@ export type AuthorItemFields = {
   personLinkedIn?: LinkField;
 };
 export type AuthorReferenceField = ReferenceField & {
-  fields: AuthorItemFields;
+  fields?: AuthorItemFields;
 };

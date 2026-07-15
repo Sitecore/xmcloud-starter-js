@@ -1,25 +1,22 @@
-import { Text as ContentSdkText, Field, useSitecore } from '@sitecore-content-sdk/nextjs';
+'use client';
+
+import { Text as ContentSdkText, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { useEffect, useMemo, useRef, useState } from 'react';
-
-interface Fields {
-  Text: Field<string>;
-}
-
-type TextSliderProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
+import { getDatasource, getFieldValue } from '@/lib/component-props';
+import type { TextSliderProps } from './text-slider.props';
 
 export const Default = (props: TextSliderProps) => {
   const { page } = useSitecore();
+  const fields = getDatasource(props.fields);
+  const textField = getFieldValue(fields?.Text);
   const containerRef = useRef<HTMLDivElement>(null);
   const measureRef = useRef<HTMLDivElement>(null);
   const [repeatCount, setRepeatCount] = useState(1);
   const [ready, setReady] = useState(false);
 
   const phrase = useMemo(() => {
-    return props?.fields?.Text?.value || 'No text in field';
-  }, [props?.fields?.Text?.value]);
+    return textField?.value || 'No text in field';
+  }, [textField?.value]);
 
   useEffect(() => {
     if (page.mode.isEditing) {
@@ -87,7 +84,7 @@ export const Default = (props: TextSliderProps) => {
                   key={i}
                   className="font-[inherit] [.bg-gradient-secondary_&:nth-child(4n-3)]:text-white [.bg-gradient-secondary_&:nth-child(4n-2)]:text-white"
                 >
-                  {i === 0 ? <ContentSdkText field={props?.fields?.Text} /> : phrase}
+                  {i === 0 ? <ContentSdkText field={textField} /> : phrase}
                   <span className="font-[inherit] text-primary">. </span>
                 </span>
               ))}
