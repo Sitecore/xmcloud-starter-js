@@ -1,6 +1,6 @@
-# XM Cloud Front End Application Starter Kits
+# SitecoreAI Front End Application Starter Kits
 
-This repository contains multiple Next.js Starter Kits, and the SPA Starters monorepo (which includes a Node Proxy Application and and SPA starter apps) for Sitecore XM Cloud Development. It is intended to get developers up and running quickly with a new front end project that is integrated with Sitecore XM Cloud.
+This repository contains multiple Next.js Starter Kits, and the SPA Starters monorepo (which includes a Node Proxy Application and and SPA starter apps) for Sitecore SitecoreAI Development. It is intended to get developers up and running quickly with a new front end project that is integrated with Sitecore SitecoreAI.
 
 [Deploying XM Cloud](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploying-xm-cloud.html)
 
@@ -25,7 +25,7 @@ Here's a quick overview of the major folders and their purpose:
     * Modules: Each module has its own .module.json file (e.g., nextjs-starter.module.json) to define what items it includes and where they should be deployed in the Sitecore content tree.
 
   - `xmcloud.build.json`: 
-    This is the primary configuration file for building and deploying rendering hosts in your XM Cloud environment.
+    This is the primary configuration file for building and deploying rendering hosts in your SitecoreAI environment.
 
     Key Sections:
       * renderingHosts: Defines one or more front-end apps to build. Each entry includes:
@@ -50,18 +50,18 @@ This Github repository is a template that can be used to create your own reposit
 
 ### Prerequisites
 
-- Access to an Sitecore XM Cloud Environment
+- Access to an Sitecore SitecoreAI Environment
 - [Node.js LTS](https://nodejs.org/en/)
 
 ### Getting Started Guide
 
-For developers new to XM Cloud you can follow the Getting Started Guide on the [Sitecore Documentation Site](https://doc.sitecore.com/xmc) to get up and running with XM Cloud. This will walk you through the process of creating a new XM Cloud Project, provisioning an Environment, deploying the NextJs Starter Kit, and finally creating your first Component.
+For developers new to SitecoreAI you can follow the Getting Started Guide on the [Sitecore Documentation Site](https://doc.sitecore.com/xmc) to get up and running with SitecoreAI. This will walk you through the process of creating a new SitecoreAI Project, provisioning an Environment, deploying the NextJs Starter Kit, and finally creating your first Component.
 
 ### Running the Next.js Starter Kit
 
 >  **Note:** Please refer to the `README.md` of the specific example starter you’re working with for detailed setup instructions.
 > The following outlines the general steps to run the app locally:
-- Log into the Sitecore XM Cloud Deploy Portal, locate your Environment and select the `Developer Settings` tab.
+- Log into the Sitecore SitecoreAI Deploy Portal, locate your Environment and select the `Developer Settings` tab.
 - Ensure that the `Preview` toggle is enabled.
 - In the `Local Development` section, click to copy the sample `.env` file contents to your clipboard.
 - Create a new `.env.local` file in the `./examples/basic-nextjs` folder of this repository and paste the contents from your clipboard.
@@ -75,7 +75,7 @@ For developers new to XM Cloud you can follow the Getting Started Guide on the [
 
 ### SPA Starters Monorepo and Angular SPA
 
-A new starter SPA based on Angular has been introduced with JSS v22.3.0. The Angular starter has been designed to be compatible with XM Cloud and should be used with the provided node XM Cloud proxy application to handle server-side rendering (SSR), data queries, personalization and more. For more details and information on how to run and deploy the Angular starter and proxy to XM Cloud have a look at [SPA starters monorepo](examples/basic-spa/)
+A new starter SPA based on Angular has been introduced with JSS v22.3.0. The Angular starter has been designed to be compatible with SitecoreAI and should be used with the provided node SitecoreAI proxy application to handle server-side rendering (SSR), data queries, personalization and more. For more details and information on how to run and deploy the Angular starter and proxy to SitecoreAI have a look at [SPA starters monorepo](examples/basic-spa/)
 
 ## Development Workflow
 
@@ -106,7 +106,7 @@ This repository uses a **DMZ git workflow** to ensure the `main` branch is alway
 
 ## AI-Assisted Development
 
-This repository includes comprehensive AI guidance files to help maintain consistent code quality and follow Sitecore XM Cloud best practices across all starter applications:
+This repository includes comprehensive AI guidance files to help maintain consistent code quality and follow SitecoreAI best practices across all starter applications:
 
 - **Cursor AI Rules** (`.cursor/rules/`) - Automatically provide context and enforce patterns when using Cursor AI
 - **GitHub Copilot Instructions** (`copilot-instructions.md`) - Detailed development patterns and component guidelines for GitHub Copilot
