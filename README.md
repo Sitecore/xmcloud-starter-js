@@ -1,6 +1,6 @@
 # SitecoreAI Front End Application Starter Kits
 
-This repository contains multiple Next.js Starter Kits, and the SPA Starters monorepo (which includes a Node Proxy Application and and SPA starter apps) for Sitecore SitecoreAI Development. It is intended to get developers up and running quickly with a new front end project that is integrated with Sitecore SitecoreAI.
+This repository contains multiple Next.js Starter Kits, and the SPA Starters monorepo (which includes a Node Proxy Application and and SPA starter apps) for SitecoreAI Development. It is intended to get developers up and running quickly with a new front end project that is integrated with SitecoreAI.
 
 [Deploying SitecoreAI](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploying-xm-cloud.html)
 
@@ -109,7 +109,7 @@ This Github repository is a template that can be used to create your own reposit
 
 ### Prerequisites
 
-- Access to an Sitecore SitecoreAI Environment
+- Access to an SitecoreAI Environment
 - [Node.js LTS](https://nodejs.org/en/)
 
 ### Getting Started Guide
@@ -120,7 +120,7 @@ For developers new to SitecoreAI you can follow the Getting Started Guide on the
 
 > **Note:** Please refer to the `README.md` of the specific example starter you're working with for detailed setup instructions.
 > The following outlines the general steps to run the app locally:
-- Log into the Sitecore SitecoreAI Deploy Portal, locate your Environment and select the `Developer Settings` tab.
+- Log into the SitecoreAI Deploy Portal, locate your Environment and select the `Developer Settings` tab.
 - Ensure that the `Preview` toggle is enabled.
 - In the `Local Development` section, click to copy the sample `.env` file contents to your clipboard.
 - Create a new `.env.local` file in the `./examples/basic-nextjs` folder of this repository and paste the contents from your clipboard.
