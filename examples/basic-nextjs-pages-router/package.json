@@ -29,7 +29,7 @@
     "@sitecore-feaas/clientside": "^0.6.0",
     "@sitecore/components": "~2.1.0",
     "font-awesome": "^4.7.0",
-    "next": "^16.2.6",
+    "next": "^16.3.0",
     "next-localization": "^0.12.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

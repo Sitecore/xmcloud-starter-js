@@ -82,7 +82,7 @@
     "input-otp": "^1.4.2",
     "lucide-react": "^0.475.0",
     "motion": "^12.23.0",
-    "next": "^16.2.6",
+    "next": "^16.3.0",
     "next-intl": "^4.12.0",
     "next-themes": "^0.4.6",
     "radash": "^12.1.1",
