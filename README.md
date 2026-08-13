@@ -1,15 +1,15 @@
-# XM Cloud Front End Application Starter Kits
+# SitecoreAI Front End Application Starter Kits
 
-This repository contains multiple Next.js Starter Kits, and the SPA Starters monorepo (which includes a Node Proxy Application and and SPA starter apps) for Sitecore XM Cloud Development. It is intended to get developers up and running quickly with a new front end project that is integrated with Sitecore XM Cloud.
+This repository contains multiple Next.js Starter Kits, and the SPA Starters monorepo (which includes a Node Proxy Application and and SPA starter apps) for SitecoreAI Development. It is intended to get developers up and running quickly with a new front end project that is integrated with SitecoreAI.
 
-[Deploying XM Cloud](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploying-xm-cloud.html)
+[Deploying SitecoreAI](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploying-xm-cloud.html)
 
 ## Table of Contents
 
 - [Repository Overview](#repository-overview)
 - [Contributing](#contributing)
 - [How to Run a Next.js Starter Locally](#how-to-run-a-nextjs-starter-locally)
-- [How to Add an Editing Host to XM Cloud](#how-to-add-an-editing-host-to-xm-cloud)
+- [How to Add an Editing Host to SitecoreAI](#how-to-add-an-editing-host-to-xm-cloud)
 - [GitHub Template](#github-template)
   - [Prerequisites](#prerequisites)
   - [Getting Started Guide](#getting-started-guide)
@@ -43,8 +43,8 @@ Here's a quick overview of the major folders and their purpose:
     * Powershell, Modules, etc. Organized by namespace under items/items, useful for modular development and deployment.
     * Modules: Each module has its own .module.json file (e.g., nextjs-starter.module.json) to define what items it includes and where they should be deployed in the Sitecore content tree.
 
-  - `xmcloud.build.json`:
-    This is the primary configuration file for building and deploying rendering hosts in your XM Cloud environment.
+  - `xmcloud.build.json`: 
+    This is the primary configuration file for building and deploying rendering hosts in your SitecoreAI environment.
 
     Key Sections:
       * renderingHosts: Defines one or more front-end apps to build. Each entry includes:
@@ -74,10 +74,10 @@ This repository does **not** accept pull requests that add **new example sites**
 Use the **path for your chosen starter** (e.g. `examples/kit-nextjs-article-starter`). The steps are the same for all Next.js starters.
 
 1. **Get environment variables**  
-   Log into the [Sitecore XM Cloud Deploy Portal](https://portal.sitecorecloud.io), open your Environment → **Developer Settings**. Ensure **Preview** is enabled, then copy the sample `.env` contents from **Local Development**.
+   Log into the [SitecoreAI Deploy Portal](https://portal.sitecorecloud.io), open your Environment → **Developer Settings**. Ensure **Preview** is enabled, then copy the sample `.env` contents from **Local Development**.
 
 2. **Create `.env.local`**  
-   In your starter folder (e.g. `examples/kit-nextjs-article-starter`), copy `.env.remote.example` to `.env.local` and paste the contents. Set at least: `SITECORE_EDGE_CONTEXT_ID`, `NEXT_PUBLIC_DEFAULT_SITE_NAME`, `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID`, `SITECORE_EDITING_SECRET`. See [Environment variables in XM Cloud](https://doc.sitecore.com/xmc/en/developers/xm-cloud/get-the-environment-variables-for-a-site.html). Optionally set `NEXT_PUBLIC_SITE_URL` or `NEXT_PUBLIC_BASE_URL` to your public site origin when server-rendered code must build absolute URLs without relying on the request `Host` header (see comments in `.env.remote.example`).
+   In your starter folder (e.g. `examples/kit-nextjs-article-starter`), copy `.env.remote.example` to `.env.local` and paste the contents. Set at least: `SITECORE_EDGE_CONTEXT_ID`, `NEXT_PUBLIC_DEFAULT_SITE_NAME`, `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID`, `SITECORE_EDITING_SECRET`. See [Environment variables in SitecoreAI](https://doc.sitecore.com/xmc/en/developers/xm-cloud/get-the-environment-variables-for-a-site.html). Optionally set `NEXT_PUBLIC_SITE_URL` or `NEXT_PUBLIC_BASE_URL` to your public site origin when server-rendered code must build absolute URLs without relying on the request `Host` header (see comments in `.env.remote.example`).
 
 3. **Install and run**
    ```bash
@@ -89,13 +89,13 @@ Use the **path for your chosen starter** (e.g. `examples/kit-nextjs-article-star
 
 > **Note:** For kit-specific details (editing host name, preconditions), see that starter’s [README](examples/kit-nextjs-article-starter/README.md#overview).
 
-## How to Add an Editing Host to XM Cloud
+## How to Add an Editing Host to SitecoreAI
 
 If **split deployment** is **not** enabled, editing hosts are created automatically from `xmcloud.build.json` when `enabled` is `true`. You can skip this section.
 
 If split deployment **is** enabled:
 
-1. Go to [Sitecore Cloud Portal](https://portal.sitecorecloud.io) → XM Cloud Deploy.
+1. Go to [Sitecore Cloud Portal](https://portal.sitecorecloud.io) → SitecoreAI Deploy.
 2. Select your project → **Editing Hosts** → **Add editing host**.
 3. Use the **editing host name** from `xmcloud.build.json` for that starter (e.g. `kit-nextjs-article-starter`, `nextjsstarter`).
 4. Confirm: link to authoring, source provider, GitHub account, repository, branch. Enable **Auto deploy** if desired.
@@ -109,18 +109,18 @@ This Github repository is a template that can be used to create your own reposit
 
 ### Prerequisites
 
-- Access to an Sitecore XM Cloud Environment
+- Access to an SitecoreAI Environment
 - [Node.js LTS](https://nodejs.org/en/)
 
 ### Getting Started Guide
 
-For developers new to XM Cloud you can follow the Getting Started Guide on the [Sitecore Documentation Site](https://doc.sitecore.com/xmc) to get up and running with XM Cloud. This will walk you through the process of creating a new XM Cloud Project, provisioning an Environment, deploying the NextJs Starter Kit, and finally creating your first Component.
+For developers new to SitecoreAI you can follow the Getting Started Guide on the [Sitecore Documentation Site](https://doc.sitecore.com/xmc) to get up and running with SitecoreAI. This will walk you through the process of creating a new SitecoreAI Project, provisioning an Environment, deploying the NextJs Starter Kit, and finally creating your first Component.
 
 ### Running the Next.js Starter Kit
 
 > **Note:** Please refer to the `README.md` of the specific example starter you're working with for detailed setup instructions.
 > The following outlines the general steps to run the app locally:
-- Log into the Sitecore XM Cloud Deploy Portal, locate your Environment and select the `Developer Settings` tab.
+- Log into the SitecoreAI Deploy Portal, locate your Environment and select the `Developer Settings` tab.
 - Ensure that the `Preview` toggle is enabled.
 - In the `Local Development` section, click to copy the sample `.env` file contents to your clipboard.
 - Create a new `.env.local` file in the `./examples/basic-nextjs` folder of this repository and paste the contents from your clipboard.
@@ -145,7 +145,7 @@ For developers new to XM Cloud you can follow the Getting Started Guide on the [
 
 ### SPA Starters Monorepo and Angular SPA
 
-A new starter SPA based on Angular has been introduced with JSS v22.3.0. The Angular starter has been designed to be compatible with XM Cloud and should be used with the provided node XM Cloud proxy application to handle server-side rendering (SSR), data queries, personalization and more. For more details and information on how to run and deploy the Angular starter and proxy to XM Cloud have a look at [SPA starters monorepo](examples/basic-spa/)
+A new starter SPA based on Angular has been introduced with JSS v22.3.0. The Angular starter has been designed to be compatible with SitecoreAI and should be used with the provided node SitecoreAI proxy application to handle server-side rendering (SSR), data queries, personalization and more. For more details and information on how to run and deploy the Angular starter and proxy to SitecoreAI have a look at [SPA starters monorepo](examples/basic-spa/)
 
 ## Development Workflow
 
@@ -198,7 +198,7 @@ For testing and validation, see the [GEO Compliance Checklist](docs/GEO_COMPLIAN
 
 ## AI-Assisted Development
 
-This repository includes comprehensive AI guidance files to help maintain consistent code quality and follow Sitecore XM Cloud best practices across all starter applications:
+This repository includes comprehensive AI guidance files to help maintain consistent code quality and follow SitecoreAI best practices across all starter applications:
 
 - **Skills: Capability Map** ([docs/Skills.md](docs/Skills.md)) - High-level capability groupings for the starter kits; helps AI tools and developers understand what the starters support and when to use each area
 - [**Agents.md**](Agents.md) - AI agent guidance: structure, commands, DOs/DON'Ts, boundaries, and quick reference
@@ -212,7 +212,7 @@ These files ensure consistent development patterns whether you're using Claude C
 
 ## FAQ
 
-### Do I need to create rendering host items in XM Cloud?
+### Do I need to create rendering host items in SitecoreAI?
 
 No. Rendering host items are created automatically when you create a rendering host. Site-to-editing-host mapping is also automatic.
 
@@ -226,7 +226,7 @@ Create your PR against **`dmz`**, not `main`. Branch from the latest `main`. See
 
 ### Where do I get environment variables for local development?
 
-In XM Cloud Deploy Portal → your Environment → **Developer Settings** → **Local Development**, copy the sample `.env` and use it in your starter’s `.env.local`. See [How to Run a Next.js Starter Locally](#how-to-run-a-nextjs-starter-locally).
+In SitecoreAI Deploy Portal → your Environment → **Developer Settings** → **Local Development**, copy the sample `.env` and use it in your starter’s `.env.local`. See [How to Run a Next.js Starter Locally](#how-to-run-a-nextjs-starter-locally).
 
 ### When do I need to add an editing host manually?
 

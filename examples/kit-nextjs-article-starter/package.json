@@ -59,9 +59,9 @@
     "@radix-ui/react-tooltip": "^1.2.7",
     "@radix-ui/themes": "^3.2.1",
     "@sitecore-content-sdk/analytics-core": "^2.1.0",
-    "@sitecore-content-sdk/personalize": "^2.1.0",
     "@sitecore-content-sdk/events": "^2.1.0",
     "@sitecore-content-sdk/nextjs": "^2.2.0",
+    "@sitecore-content-sdk/personalize": "^2.1.0",
     "@sitecore-feaas/clientside": "^0.6.0",
     "@sitecore/components": "~2.1.0",
     "@tailwindcss/cli": "^4.1.11",
@@ -108,7 +108,7 @@
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
-    "zod": "^3.25.71"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -151,7 +151,7 @@
     "micromatch": {
       "picomatch": "2.3.2"
     },
-    "brace-expansion@^5.0.0": "5.0.6",
+    "brace-expansion@^5.0.0": "5.0.9",
     "lodash": "4.18.1",
     "lodash-es": "4.18.1",
     "flatted": "3.4.2",

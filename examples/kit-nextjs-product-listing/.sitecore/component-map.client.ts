@@ -1,11 +1,14 @@
 // Client-safe component map for App Router
+import { NextjsContentSdkComponent } from '@sitecore-content-sdk/nextjs';
 
-import { BYOCClientWrapper, NextjsContentSdkComponent, FEaaSClientWrapper } from '@sitecore-content-sdk/nextjs';
+
+import { BYOCClientWrapper, FEaaSClientWrapper } from '@sitecore-content-sdk/nextjs';
 import { Form } from '@sitecore-content-sdk/nextjs';
 
-import * as zipcodemodaldev from 'src/components/zipcode-modal/zipcode-modal.dev';
+// end of built-in import section
+import * as ZipcodeModaldev from 'src/components/zipcode-modal/zipcode-modal.dev';
 import * as VerticalImageAccordion from 'src/components/vertical-image-accordion/VerticalImageAccordion';
-import * as themeproviderdev from 'src/components/theme-provider/theme-provider.dev';
+import * as ThemeProviderdev from 'src/components/theme-provider/theme-provider.dev';
 import * as TextBannerTextTopdev from 'src/components/text-banner/TextBannerTextTop.dev';
 import * as TextBannerDefaultdev from 'src/components/text-banner/TextBannerDefault.dev';
 import * as TextBannerBlueTitleRightdev from 'src/components/text-banner/TextBannerBlueTitleRight.dev';
@@ -35,11 +38,11 @@ import * as MiniCart from 'src/components/site-three/non-sitecore/MiniCart';
 import * as SecondaryNavigation from 'src/components/secondary-navigation/SecondaryNavigation';
 import * as SearchExperienceLoadMore from 'src/components/search-experience/SearchExperience.LoadMore';
 import * as SearchExperience from 'src/components/search-experience/SearchExperience';
-import * as useSearchField from 'src/components/search-experience/search-components/useSearchField';
-import * as useRouter from 'src/components/search-experience/search-components/useRouter';
-import * as useParams from 'src/components/search-experience/search-components/useParams';
-import * as useEvent from 'src/components/search-experience/search-components/useEvent';
-import * as useDebounce from 'src/components/search-experience/search-components/useDebounce';
+import * as UseSearchField from 'src/components/search-experience/search-components/useSearchField';
+import * as UseRouter from 'src/components/search-experience/search-components/useRouter';
+import * as UseParams from 'src/components/search-experience/search-components/useParams';
+import * as UseEvent from 'src/components/search-experience/search-components/useEvent';
+import * as UseDebounce from 'src/components/search-experience/search-components/useDebounce';
 import * as SearchSkeletonItem from 'src/components/search-experience/search-components/SearchSkeletonItem';
 import * as SearchPagination from 'src/components/search-experience/search-components/SearchPagination';
 import * as SearchItemCommon from 'src/components/search-experience/search-components/SearchItemCommon';
@@ -53,7 +56,7 @@ import * as SearchItemSubTitle from 'src/components/search-experience/search-com
 import * as SearchItemLink from 'src/components/search-experience/search-components/SearchItem/SearchItemLink';
 import * as SearchItemImage from 'src/components/search-experience/search-components/SearchItem/SearchItemImage';
 import * as SearchItemCategory from 'src/components/search-experience/search-components/SearchItem/SearchItemCategory';
-import * as index from 'src/components/search-experience/search-components/SearchItem/index';
+import * as Index from 'src/components/search-experience/search-components/SearchItem/index';
 import * as PromoAnimatedImageRightdev from 'src/components/promo-animated/PromoAnimatedImageRight.dev';
 import * as PromoAnimatedDefaultdev from 'src/components/promo-animated/PromoAnimatedDefault.dev';
 import * as PromoAnimated from 'src/components/promo-animated/PromoAnimated';
@@ -61,7 +64,7 @@ import * as ProductListingThreeUpdev from 'src/components/product-listing/Produc
 import * as ProductListingSliderdev from 'src/components/product-listing/ProductListingSlider.dev';
 import * as ProductListingDefaultdev from 'src/components/product-listing/ProductListingDefault.dev';
 import * as ProductListing from 'src/components/product-listing/ProductListing';
-import * as portaldev from 'src/components/portal/portal.dev';
+import * as Portaldev from 'src/components/portal/portal.dev';
 import * as PageHeaderFiftyFiftydev from 'src/components/page-header/PageHeaderFiftyFifty.dev';
 import * as PageHeaderDefaultdev from 'src/components/page-header/PageHeaderDefault.dev';
 import * as PageHeaderCentereddev from 'src/components/page-header/PageHeaderCentered.dev';
@@ -69,9 +72,9 @@ import * as PageHeaderBlueTextdev from 'src/components/page-header/PageHeaderBlu
 import * as PageHeaderBlueBackgrounddev from 'src/components/page-header/PageHeaderBlueBackground.dev';
 import * as PageHeader from 'src/components/page-header/PageHeader';
 import * as MultiPromoTabs from 'src/components/multi-promo-tabs/MultiPromoTabs';
-import * as modetoggledev from 'src/components/mode-toggle/mode-toggle.dev';
+import * as ModeToggledev from 'src/components/mode-toggle/mode-toggle.dev';
 import * as MediaSectiondev from 'src/components/media-section/MediaSection.dev';
-import * as meteors from 'src/components/magicui/meteors';
+import * as Meteors from 'src/components/magicui/meteors';
 import * as LogoTabs from 'src/components/logo-tabs/LogoTabs';
 import * as LocationSearchTitleZipCentereddev from 'src/components/location-search/LocationSearchTitleZipCentered.dev';
 import * as LocationSearchMapTopAllCentereddev from 'src/components/location-search/LocationSearchMapTopAllCentered.dev';
@@ -87,7 +90,6 @@ import * as ImageGalleryFeaturedImagedev from 'src/components/image-gallery/Imag
 import * as ImageGallerydev from 'src/components/image-gallery/ImageGallery.dev';
 import * as ImageGallery from 'src/components/image-gallery/ImageGallery';
 import * as ImageWrapperclient from 'src/components/image/ImageWrapper.client';
-import * as imageoptimizationcontext from 'src/components/image/image-optimization.context';
 import * as Icon from 'src/components/icon/Icon';
 import * as HeroImageRightdev from 'src/components/hero/HeroImageRight.dev';
 import * as HeroImageBottomInsetdev from 'src/components/hero/HeroImageBottomInset.dev';
@@ -109,14 +111,14 @@ import * as FooterNavigationColumn from 'src/components/global-footer/FooterNavi
 import * as ZipcodeSearchFormdev from 'src/components/forms/zipcode/ZipcodeSearchForm.dev';
 import * as SubmitInfoFormdev from 'src/components/forms/submitinfo/SubmitInfoForm.dev';
 import * as EmailSignupFormdev from 'src/components/forms/email/EmailSignupForm.dev';
-import * as floatingdockdev from 'src/components/floating-dock/floating-dock.dev';
+import * as FloatingDockdev from 'src/components/floating-dock/floating-dock.dev';
 import * as ProductsSection from 'src/components/component-library/ProductsSection';
 import * as Header from 'src/components/component-library/Header';
 import * as FeaturesSection from 'src/components/component-library/FeaturesSection';
 import * as FAQ from 'src/components/component-library/FAQ';
 import * as ContactSection from 'src/components/component-library/ContactSection';
 import * as Carousel from 'src/components/carousel/Carousel';
-import * as cardspotlightdev from 'src/components/card-spotlight/card-spotlight.dev';
+import * as CardSpotlightdev from 'src/components/card-spotlight/card-spotlight.dev';
 import * as ArticleHeader from 'src/components/article-header/ArticleHeader';
 import * as AnimatedSectiondev from 'src/components/animated-section/AnimatedSection.dev';
 import * as AlertBannerdev from 'src/components/alert-banner/AlertBanner.dev';
@@ -125,9 +127,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCClientWrapper],
   ['FEaaSWrapper', FEaaSClientWrapper],
   ['Form', Form],
-  ['zipcode-modal', { ...zipcodemodaldev }],
+  ['ZipcodeModal', { ...ZipcodeModaldev }],
   ['VerticalImageAccordion', { ...VerticalImageAccordion }],
-  ['theme-provider', { ...themeproviderdev }],
+  ['ThemeProvider', { ...ThemeProviderdev }],
   ['TextBannerTextTop', { ...TextBannerTextTopdev }],
   ['TextBannerDefault', { ...TextBannerDefaultdev }],
   ['TextBannerBlueTitleRight', { ...TextBannerBlueTitleRightdev }],
@@ -156,11 +158,11 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['MiniCart', { ...MiniCart }],
   ['SecondaryNavigation', { ...SecondaryNavigation }],
   ['SearchExperience', { ...SearchExperienceLoadMore, ...SearchExperience }],
-  ['useSearchField', { ...useSearchField }],
-  ['useRouter', { ...useRouter }],
-  ['useParams', { ...useParams }],
-  ['useEvent', { ...useEvent }],
-  ['useDebounce', { ...useDebounce }],
+  ['UseSearchField', { ...UseSearchField }],
+  ['UseRouter', { ...UseRouter }],
+  ['UseParams', { ...UseParams }],
+  ['UseEvent', { ...UseEvent }],
+  ['UseDebounce', { ...UseDebounce }],
   ['SearchSkeletonItem', { ...SearchSkeletonItem }],
   ['SearchPagination', { ...SearchPagination }],
   ['SearchItemCommon', { ...SearchItemCommon }],
@@ -174,7 +176,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SearchItemLink', { ...SearchItemLink }],
   ['SearchItemImage', { ...SearchItemImage }],
   ['SearchItemCategory', { ...SearchItemCategory }],
-  ['index', { ...index }],
+  ['Index', { ...Index }],
   ['PromoAnimatedImageRight', { ...PromoAnimatedImageRightdev }],
   ['PromoAnimatedDefault', { ...PromoAnimatedDefaultdev }],
   ['PromoAnimated', { ...PromoAnimated }],
@@ -182,7 +184,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ProductListingSlider', { ...ProductListingSliderdev }],
   ['ProductListingDefault', { ...ProductListingDefaultdev }],
   ['ProductListing', { ...ProductListing }],
-  ['portal', { ...portaldev }],
+  ['Portal', { ...Portaldev }],
   ['PageHeaderFiftyFifty', { ...PageHeaderFiftyFiftydev }],
   ['PageHeaderDefault', { ...PageHeaderDefaultdev }],
   ['PageHeaderCentered', { ...PageHeaderCentereddev }],
@@ -190,9 +192,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PageHeaderBlueBackground', { ...PageHeaderBlueBackgrounddev }],
   ['PageHeader', { ...PageHeader }],
   ['MultiPromoTabs', { ...MultiPromoTabs }],
-  ['mode-toggle', { ...modetoggledev }],
+  ['ModeToggle', { ...ModeToggledev }],
   ['MediaSection', { ...MediaSectiondev }],
-  ['meteors', { ...meteors }],
+  ['Meteors', { ...Meteors }],
   ['LogoTabs', { ...LogoTabs }],
   ['LocationSearchTitleZipCentered', { ...LocationSearchTitleZipCentereddev }],
   ['LocationSearchMapTopAllCentered', { ...LocationSearchMapTopAllCentereddev }],
@@ -207,7 +209,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ImageGalleryFeaturedImage', { ...ImageGalleryFeaturedImagedev }],
   ['ImageGallery', { ...ImageGallerydev, ...ImageGallery }],
   ['ImageWrapper', { ...ImageWrapperclient }],
-  ['image-optimization', { ...imageoptimizationcontext }],
   ['Icon', { ...Icon }],
   ['HeroImageRight', { ...HeroImageRightdev }],
   ['HeroImageBottomInset', { ...HeroImageBottomInsetdev }],
@@ -228,14 +229,14 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ZipcodeSearchForm', { ...ZipcodeSearchFormdev }],
   ['SubmitInfoForm', { ...SubmitInfoFormdev }],
   ['EmailSignupForm', { ...EmailSignupFormdev }],
-  ['floating-dock', { ...floatingdockdev }],
+  ['FloatingDock', { ...FloatingDockdev }],
   ['ProductsSection', { ...ProductsSection }],
   ['Header', { ...Header }],
   ['FeaturesSection', { ...FeaturesSection }],
   ['FAQ', { ...FAQ }],
   ['ContactSection', { ...ContactSection }],
   ['Carousel', { ...Carousel }],
-  ['card-spotlight', { ...cardspotlightdev }],
+  ['CardSpotlight', { ...CardSpotlightdev }],
   ['ArticleHeader', { ...ArticleHeader }],
   ['AnimatedSection', { ...AnimatedSectiondev }],
   ['AlertBanner', { ...AlertBannerdev }],

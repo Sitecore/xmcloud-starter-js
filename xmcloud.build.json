@@ -3,6 +3,7 @@
     "nextjsstarter": {
       "path": "./examples/kit-nextjs-skate-park",
       "nodeVersion": "24.14.1",
+      "packageManager": "npm",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -12,6 +13,7 @@
     "angularstarter": {
       "path": "./examples/basic-spa",
       "nodeVersion": "22.22.0",
+      "packageManager": "pnpm",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": false,
       "type": "sxa",
@@ -21,6 +23,7 @@
     "kit-nextjs-article-starter": {
       "path": "./examples/kit-nextjs-article-starter",
       "nodeVersion": "24.14.1",
+      "packageManager": "npm",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -30,6 +33,7 @@
     "kit-nextjs-location-starter": {
       "path": "./examples/kit-nextjs-location-finder",
       "nodeVersion": "24.14.1",
+      "packageManager": "npm",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -39,6 +43,7 @@
     "kit-nextjs-product-starter": {
       "path": "./examples/kit-nextjs-product-listing",
       "nodeVersion": "24.14.1",
+      "packageManager": "npm",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -48,6 +53,7 @@
     "basic-nextjs": {
       "path": "./examples/basic-nextjs",
       "nodeVersion": "24.14.1",
+      "packageManager": "npm",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
@@ -57,6 +63,7 @@
     "basic-nextjs-pages-router": {
       "path": "./examples/basic-nextjs-pages-router",
       "nodeVersion": "24.14.1",
+      "packageManager": "npm",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": false,
       "type": "sxa",
