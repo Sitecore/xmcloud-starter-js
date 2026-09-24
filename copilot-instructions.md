@@ -5,7 +5,7 @@
 This repository contains **XM Cloud Front End Application Starter Kits** - multiple Next.js starter applications and SPA examples for Sitecore XM Cloud development. Each starter demonstrates modern headless CMS patterns with Sitecore XM Cloud integration.
 
 ### Repository Structure:
-- `/examples/` - Contains starter front-end applications (Next.js and SPA)
+- `/examples/` - Contains starter front-end applications (Next.js and Angular)
 - `/authoring/` - Sitecore content items, templates, and deployment configurations  
 - `/local-containers/` - Docker setup for local development environments
 - `xmcloud.build.json` - Primary configuration for XM Cloud deployment
@@ -17,7 +17,7 @@ This repository contains **XM Cloud Front End Application Starter Kits** - multi
 - **kit-nextjs-location-finder** - **Alaris** - Car brand template with location finder functionality
 - **kit-nextjs-product-listing** - **SYNC** - Product-focused template for audio gear companies
 - **kit-nextjs-skate-park** - Simple demo site showcasing component examples
-- **basic-spa** - SPA starter kit with Angular and Node proxy
+- **kit-angular-skate-park** - Angular starter kit built on the Sitecore Content SDK for Angular, with server-side rendering (SSR)
 
 ### Each starter demonstrates:
 - Tailwind-based styling with Shadcn/ui components

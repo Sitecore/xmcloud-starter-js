@@ -1,6 +1,6 @@
 # SitecoreAI Front End Application Starter Kits
 
-This repository contains multiple Next.js Starter Kits, and the SPA Starters monorepo (which includes a Node Proxy Application and and SPA starter apps) for SitecoreAI Development. It is intended to get developers up and running quickly with a new front end project that is integrated with SitecoreAI.
+This repository contains multiple Next.js Starter Kits, and an Angular starter kit built on the Sitecore Content SDK for Angular, for SitecoreAI Development. It is intended to get developers up and running quickly with a new front end project that is integrated with SitecoreAI.
 
 [Deploying SitecoreAI](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploying-xm-cloud.html)
 
@@ -14,7 +14,7 @@ This repository contains multiple Next.js Starter Kits, and the SPA Starters mon
   - [Prerequisites](#prerequisites)
   - [Getting Started Guide](#getting-started-guide)
   - [Running the Next.js Starter Kit](#running-the-nextjs-starter-kit)
-  - [SPA Starters Monorepo and Angular SPA](#spa-starters-monorepo-and-angular-spa)
+  - [Angular Starter Kit](#angular-starter-kit)
 - [Development Workflow](#development-workflow)
 - [SEO & AI Crawler Access](#seo--ai-crawler-access)
 - [GEO Optimization & Compliance](#geo-optimization--compliance)
@@ -28,7 +28,7 @@ Here's a quick overview of the major folders and their purpose:
   - `/examples`:
   Contains starter front-end applications. Each subfolder is a working app. Each starter is independent and self-contained
     * basic-nextjs: [README](https://github.com/Sitecore/xmcloud-starter-js/tree/main/examples/basic-nextjs/README.md)
-    * basic-spa: [README](https://github.com/Sitecore/xmcloud-starter-js/tree/main/examples/basic-spa/README.md)
+    * kit-angular-skate-park: [README](https://github.com/Sitecore/xmcloud-starter-js/tree/main/examples/kit-angular-skate-park/README.md)
     * kit-nextjs-article-starter: [README](https://github.com/Sitecore/xmcloud-starter-js/tree/main/examples/kit-nextjs-article-starter/README.md)
     * kit-nextjs-location-finder: [README](https://github.com/Sitecore/xmcloud-starter-js/blob/main/examples/kit-nextjs-location-finder/README.md)
     * kit-nextjs-product-listing: [README](https://github.com/Sitecore/xmcloud-starter-js/blob/main/examples/kit-nextjs-product-listing/README.md)
@@ -143,9 +143,19 @@ For developers new to SitecoreAI you can follow the Getting Started Guide on the
   ```
   This builds the app and runs it in production mode. Access the site at `http://localhost:3000`.
 
-### SPA Starters Monorepo and Angular SPA
+### Angular Starter Kit
 
-A new starter SPA based on Angular has been introduced with JSS v22.3.0. The Angular starter has been designed to be compatible with SitecoreAI and should be used with the provided node SitecoreAI proxy application to handle server-side rendering (SSR), data queries, personalization and more. For more details and information on how to run and deploy the Angular starter and proxy to SitecoreAI have a look at [SPA starters monorepo](examples/basic-spa/)
+`kit-angular-skate-park` is an Angular starter built on the [Sitecore Content SDK for Angular](https://doc.sitecore.com/sai/en/developers/content-sdk/angular/sitecore-content-sdk-for-angular.html), integrating directly with SitecoreAI for server-side rendering (SSR), data queries, personalization and more.
+
+```bash
+cd examples/kit-angular-skate-park
+cp .env.example .env
+# Edit .env with your SitecoreAI values
+npm install
+npm run dev
+```
+
+For more details, see the [kit-angular-skate-park README](examples/kit-angular-skate-park/README.md).
 
 ## Development Workflow
 
