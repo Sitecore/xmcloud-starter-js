@@ -1,42 +1,92 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
+import {
+  DEFAULT_LLMS_TXT,
+  LLMS_TXT_CONTENT_TYPE,
+  SiteResolver,
+} from '@sitecore-content-sdk/content/site';
+import type { SiteInfo } from '@sitecore-content-sdk/nextjs';
+import sites from '.sitecore/sites.json';
+import client from '@/lib/sitecore-client';
+
+/**
+ * API route for serving llms.txt
+ *
+ * Content is authored in Sitecore (Settings → Crawlers → LLMs.txt) as markdown
+ * with root-relative links, for example [About](/about). Those links are
+ * resolved against the current request origin the same way a browser resolves
+ * a relative anchor href.
+ */
 
 export const dynamic = 'force-dynamic';
 
+function requestHostHeader(req: NextRequest): string {
+  return (
+    req.headers.get('x-forwarded-host')?.split(',')[0].trim() ||
+    req.headers.get('host') ||
+    'localhost:3000'
+  );
+}
+
+function resolveOrigin(req: NextRequest): string {
+  const host = requestHostHeader(req);
+  const proto =
+    req.headers.get('x-forwarded-proto')?.split(',')[0].trim() ||
+    (host.includes('localhost') ? 'http' : 'https');
+  return `${proto}://${host}`;
+}
+
+/** True for path-relative hrefs. Absolute, protocol-relative, and fragment links stay as authored. */
+function isRelativeHref(href: string): boolean {
+  return !/^[a-zA-Z][a-zA-Z\d+\-.]*:/.test(href) && !href.startsWith('//') && !href.startsWith('#');
+}
+
 /**
- * Serves the public llms.txt file for AI search engines and LLM consumption.
- * Follows the llms.txt specification: https://llmstxt.org/
+ * Resolves relative markdown links against the request origin.
+ * [About](/about) on http://localhost:3000 becomes [About](http://localhost:3000/about).
  */
-export async function GET(request: NextRequest): Promise<NextResponse> {
-  const baseUrl = new URL(request.url).origin;
+function resolveRelativeUrls(markdown: string, origin: string): string {
+  const base = origin.endsWith('/') ? origin : `${origin}/`;
 
-  const content = `# Solterra & Co.
-
-> Solterra & Co. is an editorial-style lifestyle brand site built with Next.js and Sitecore XM Cloud, featuring articles, storytelling, and content-driven experiences.
-
-The site offers a curated reading experience with hero sections, article listings, and full article pages. Content is managed in Sitecore and delivered headlessly. Supports English and Canadian English.
-
-## Key pages
-
-- [Home](${baseUrl}/): Brand landing and featured content
-- [Articles](${baseUrl}/Articles): Article listing and editorial index
-- [Article page](${baseUrl}/Article-Page): Full article layout and reading experience
-- [Landing page](${baseUrl}/Landing-Page): Full landing page layout and experience
-
-## Optional
-
-- [Sitemap](${baseUrl}/sitemap.xml): Full XML sitemap for search engines
-- [LLM Sitemap](${baseUrl}/sitemap-llm.xml): LLM-optimized sitemap for AI crawlers
-- [Robots](${baseUrl}/robots.txt): Crawler and bot access rules
-- [AI metadata](${baseUrl}/.well-known/ai.txt): AI crawler and LLM metadata (ai.txt)
-- [FAQ (JSON)](${baseUrl}/ai/faq.json): Frequently asked questions
-- [Summary (JSON)](${baseUrl}/ai/summary.json): Site summary for AI consumption
-- [Service (JSON)](${baseUrl}/ai/service.json): Service information for AI consumption
-`;
-
-  return new NextResponse(content, {
-    headers: {
-      'Content-Type': 'text/markdown; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
-    },
+  return markdown.replace(/\[([^\]]*)\]\(([^)\s]+)\)/g, (match, label: string, href: string) => {
+    if (!isRelativeHref(href)) return match;
+    return `[${label}](${new URL(href, base).href})`;
   });
+}
+
+export async function GET(req: NextRequest) {
+  try {
+    const hostName = requestHostHeader(req).split(':')[0] || 'localhost';
+    const sitesNormalized: SiteInfo[] = (
+      sites as { name: string; hostName?: string; language?: string }[]
+    ).map((site) => ({
+      name: site.name,
+      hostName: site.hostName ?? '*',
+      language: site.language ?? 'en',
+    }));
+    const site = new SiteResolver(sitesNormalized).getByHost(hostName);
+    const content = await client.getLlmsTxt({ siteName: site.name });
+
+    if (!content) {
+      return new Response(DEFAULT_LLMS_TXT, {
+        status: 404,
+        headers: { 'Content-Type': LLMS_TXT_CONTENT_TYPE },
+      });
+    }
+
+    return new Response(resolveRelativeUrls(content, resolveOrigin(req)), {
+      status: 200,
+      headers: { 'Content-Type': LLMS_TXT_CONTENT_TYPE },
+    });
+  } catch (error) {
+    if (error instanceof Error && (error as { digest?: string }).digest === 'NEXT_PRERENDER_INTERRUPTED') {
+      throw error;
+    }
+
+    console.log('Llms.txt route handler failed:');
+    console.log(error);
+
+    return new Response('Internal Server Error', {
+      status: 500,
+    });
+  }
 }

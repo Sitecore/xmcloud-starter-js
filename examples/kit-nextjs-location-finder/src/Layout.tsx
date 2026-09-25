@@ -3,6 +3,7 @@ import {
   Field,
   ImageField,
   Page,
+  PageMetadataFields,
   AppPlaceholder,
 } from '@sitecore-content-sdk/nextjs';
 import Scripts from 'src/Scripts';
@@ -40,7 +41,7 @@ interface LayoutProps {
   baseUrl?: string;
 }
 
-export interface RouteFields {
+export interface RouteFields extends PageMetadataFields {
   [key: string]: unknown;
   metadataTitle?: Field;
   metadataAuthor?: Field;

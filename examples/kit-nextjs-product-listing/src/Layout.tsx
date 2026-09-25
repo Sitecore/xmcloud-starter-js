@@ -2,7 +2,13 @@
  * This Layout is needed for Starter Kit.
  */
 import React, { type JSX } from 'react';
-import { Field, ImageField, Page, AppPlaceholder } from '@sitecore-content-sdk/nextjs';
+import {
+  Field,
+  ImageField,
+  Page,
+  PageMetadataFields,
+  AppPlaceholder,
+} from '@sitecore-content-sdk/nextjs';
 import Scripts from 'src/Scripts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Providers from 'src/Providers';
@@ -62,7 +68,7 @@ interface LayoutProps {
   baseUrl?: string;
 }
 
-export interface RouteFields {
+export interface RouteFields extends PageMetadataFields {
   [key: string]: unknown;
   metadataTitle?: Field;
   metadataAuthor?: Field;

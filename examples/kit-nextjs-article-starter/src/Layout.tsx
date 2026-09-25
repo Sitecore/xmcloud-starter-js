@@ -6,6 +6,7 @@ import {
   Page,
   Field,
   ImageField,
+  PageMetadataFields,
   AppPlaceholder,
   DesignLibraryApp,
 } from '@sitecore-content-sdk/nextjs';
@@ -32,7 +33,7 @@ interface LayoutProps {
   page: Page;
 }
 
-export interface RouteFields {
+export interface RouteFields extends PageMetadataFields {
   [key: string]: unknown;
   Title?: Field;
   metadataTitle?: Field;

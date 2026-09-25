@@ -1,5 +1,11 @@
 import React, { JSX } from "react";
-import { Field, ImageField, Page, DesignLibraryApp } from "@sitecore-content-sdk/nextjs";
+import {
+  Field,
+  ImageField,
+  Page,
+  PageMetadataFields,
+  DesignLibraryApp,
+} from "@sitecore-content-sdk/nextjs";
 import Scripts from "src/Scripts";
 import SitecoreStyles from "components/content-sdk/SitecoreStyles";
 import { AppPlaceholder } from "@sitecore-content-sdk/nextjs";
@@ -9,7 +15,7 @@ interface LayoutProps {
   page: Page;
 }
 
-export interface RouteFields {
+export interface RouteFields extends PageMetadataFields {
   [key: string]: unknown;
   Title?: Field;
   metadataTitle?: Field;

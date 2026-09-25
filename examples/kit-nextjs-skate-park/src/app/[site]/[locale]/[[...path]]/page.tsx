@@ -1,12 +1,14 @@
 import { isDesignLibraryPreviewData } from "@sitecore-content-sdk/nextjs/editing";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { draftMode, headers as nextHeaders } from "next/headers";
+import { getPageMetadata } from "@sitecore-content-sdk/nextjs";
 import { SiteInfo } from "@sitecore-content-sdk/nextjs";
 import sites from ".sitecore/sites.json";
 import { routing } from "src/i18n/routing";
 import scConfig from "sitecore.config";
 import client from "src/lib/sitecore-client";
-import Layout, { RouteFields } from "src/Layout";
+import Layout from "src/Layout";
 import components from ".sitecore/component-map";
 import Providers from "src/Providers";
 import { NextIntlClientProvider } from "next-intl";
@@ -86,10 +88,50 @@ export const generateStaticParams = async () => {
   return [];
 };
 
+type AuthoredField = { value?: unknown };
+
+/** Maps this starter's page fields onto the names getPageMetadata reads. */
+function toSdkMetadataFields(
+  fields: Record<string, AuthoredField | undefined> | undefined
+) {
+  const text = (field?: AuthoredField) => {
+    const value = field?.value;
+    if (typeof value !== "string" && typeof value !== "number") return undefined;
+    return String(value) ? field : undefined;
+  };
+  const title =
+    text(fields?.Title) ??
+    text(fields?.metadataTitle) ??
+    text(fields?.pageTitle) ??
+    text(fields?.ogTitle);
+
+  return {
+    ...fields,
+    Title: title,
+    baseMetadataTitle: text(fields?.baseMetadataTitle) ?? text(fields?.metadataTitle) ?? title,
+    baseMetadataDescription:
+      text(fields?.baseMetadataDescription) ??
+      text(fields?.metadataDescription) ??
+      text(fields?.pageSummary) ??
+      text(fields?.ogDescription),
+    baseMetadataKeywords: text(fields?.baseMetadataKeywords) ?? text(fields?.metadataKeywords),
+    baseMetadataAuthor: text(fields?.baseMetadataAuthor) ?? text(fields?.metadataAuthor),
+    baseOgTitle: text(fields?.baseOgTitle) ?? text(fields?.ogTitle) ?? title,
+    baseOgDescription:
+      text(fields?.baseOgDescription) ??
+      text(fields?.ogDescription) ??
+      text(fields?.metadataDescription) ??
+      text(fields?.pageSummary),
+    baseOgImage: fields?.baseOgImage ?? fields?.ogImage ?? fields?.thumbnailImage,
+  };
+}
+
 // Metadata fields for the page.
-export const generateMetadata = async ({ params }: PageProps) => {
+export const generateMetadata = async ({
+  params,
+}: PageProps): Promise<Metadata> => {
   const baseUrl = getBaseUrl();
-  
+
   const { path, site, locale } = await params;
 
   // Canonical URL: base URL + content path only (no site/locale segments)
@@ -98,34 +140,21 @@ export const generateMetadata = async ({ params }: PageProps) => {
 
   // The same call as for rendering the page. Should be cached by default react behavior
   const page = await client.getPage(path ?? [], { site, locale });
-  const fields = page?.layout.sitecore.route?.fields as RouteFields;
-
-  // Parse keywords from comma-separated string to array
-  const keywordsString = fields?.metadataKeywords?.value?.toString() || "";
-  const keywords = keywordsString
-    ? keywordsString.split(",").map((k: string) => k.trim())
-    : [];
+  const route = page?.layout.sitecore.route;
 
   return {
-    title: fields?.Title?.value?.toString() || "Page",
-    description:
-      fields?.ogDescription?.value?.toString() ||
-      fields?.metadataDescription?.value?.toString() ||
-      "Sitecore Next.js Skate Park Example",
-    keywords,
+    ...getPageMetadata(
+      route && {
+        ...route,
+        fields: toSdkMetadataFields(
+          route.fields as Record<string, AuthoredField | undefined> | undefined
+        ) as typeof route.fields,
+      }
+    ),
     ...(canonicalUrl && {
       alternates: {
         canonical: canonicalUrl,
       },
     }),
-    openGraph: {
-      title: fields?.ogTitle?.value?.toString() || "Page",
-      description:
-        fields?.ogDescription?.value?.toString() ||
-        fields?.metadataDescription?.value?.toString() ||
-        "Sitecore Next.js Skate Park Example",
-      url: canonicalUrl,
-      images: fields?.ogImage?.value?.src || fields?.thumbnailImage?.value?.src,
-    },
   };
 };

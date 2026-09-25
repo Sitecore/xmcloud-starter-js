@@ -82,6 +82,11 @@ jest.mock('@radix-ui/react-slot', () => ({
     SlotComponent.displayName = `Slot(${name})`;
     return SlotComponent;
   },
+  createSlottable: (ownerName) => {
+    const SlottableComponent = ({ children }) => React.createElement(React.Fragment, {}, children);
+    SlottableComponent.displayName = `${ownerName}.Slottable`;
+    return SlottableComponent;
+  },
 }));
 
 // ---------------------------

@@ -37,6 +37,62 @@ SharedFields:
             $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
             Write-Verbose "My site: $sitePath"
             
+            # Default llms.txt. The rendering host resolves relative links against the request host.
+            $nl = [char]10
+            $colon = [char]58
+            $hash = [char]35
+            $gt = [char]62
+            $llmsTxt = $hash.ToString() + ' Alaris' + $nl + $nl
+            $llmsTxt += $gt.ToString() + ' Alaris is a car brand template with a location finder, showcasing vehicle lineups and helping visitors find dealers and test drive options.' + $nl + $nl
+            $llmsTxt += 'The site highlights product models (Aero, Terra, Nexa), supports test drive discovery, and provides dealer locator functionality. Built with Next.js and Sitecore XM Cloud.' + $nl + $nl
+            $llmsTxt += $hash.ToString() + $hash.ToString() + ' Key pages' + $nl + $nl
+            $llmsTxt += '- [Home](/)' + $colon + ' Brand overview and featured vehicles' + $nl
+            $llmsTxt += '- [Products - Aero](/Products/Aero)' + $colon + ' Aero model information' + $nl
+            $llmsTxt += '- [Products - Terra](/Products/Terra)' + $colon + ' Terra model information' + $nl
+            $llmsTxt += '- [Products - Nexa](/Products/Nexa)' + $colon + ' Nexa model information' + $nl
+            $llmsTxt += '- [Test Drive](/Test-Drive)' + $colon + ' Test drive and dealer locator' + $nl + $nl
+            $llmsTxt += $hash.ToString() + $hash.ToString() + ' Optional' + $nl + $nl
+            $llmsTxt += '- [Sitemap](/sitemap.xml)' + $colon + ' Full XML sitemap for search engines' + $nl
+            $llmsTxt += '- [LLM Sitemap](/sitemap-llm.xml)' + $colon + ' LLM-optimized sitemap for AI crawlers' + $nl
+            $llmsTxt += '- [Robots](/robots.txt)' + $colon + ' Crawler and bot access rules' + $nl
+            $llmsTxt += '- [AI metadata](/.well-known/ai.txt)' + $colon + ' AI crawler and LLM metadata (ai.txt)' + $nl
+            $llmsTxt += '- [FAQ (JSON)](/ai/faq.json)' + $colon + ' Frequently asked questions' + $nl
+            $llmsTxt += '- [Summary (JSON)](/ai/summary.json)' + $colon + ' Site summary for AI consumption' + $nl
+            $llmsTxt += '- [Service (JSON)](/ai/service.json)' + $colon + ' Service information for AI consumption'
+            $settingsItem = Get-Item -Path "$sitePath/Settings" -Language $Site.Language
+            $llmsTargets = @($settingsItem)
+            $siteDefinitionPath = "$sitePath/Settings/Site Grouping/$($Site.Name)"
+            if (Test-Path -Path $siteDefinitionPath) {
+                $llmsTargets += Get-Item -Path $siteDefinitionPath -Language $Site.Language
+            }
+            foreach ($llmsTarget in $llmsTargets) {
+                if ($null -eq $llmsTarget) { continue }
+                if ($llmsTarget.Versions.Count -eq 0) {
+                    $llmsTarget = Add-ItemVersion -Item $llmsTarget -Language $Site.Language
+                }
+                $llmsTarget.Fields.ReadAll()
+                $llmsField = $null
+                foreach ($field in $llmsTarget.Fields) {
+                    $fieldName = [string]$field.Name
+                    $fieldTitle = [string]$field.Title
+                    $fieldSection = [string]$field.Section
+                    $nameMatch = ($fieldName -eq 'LLMs.txt') -or ($fieldTitle -eq 'LLMs.txt') -or ($fieldName -eq 'LlmsTxt') -or ($fieldName -eq 'llmsTxt') -or ($fieldName -eq 'LLMs content') -or ($fieldTitle -eq 'LLMs content')
+                    $sectionMatch = ($fieldSection -eq 'Crawlers') -and (($fieldName -like '*llm*') -or ($fieldTitle -like '*llm*'))
+                    if ($nameMatch -or $sectionMatch) {
+                        $llmsField = $field
+                        break
+                    }
+                }
+                if ($null -eq $llmsField) {
+                    Write-Verbose "No LLMs.txt field on $($llmsTarget.Paths.Path)"
+                    continue
+                }
+                $llmsTarget.Editing.BeginEdit()
+                $llmsField.Value = $llmsTxt
+                $llmsTarget.Editing.EndEdit() | Out-Null
+                Write-Verbose "Wrote field $($llmsField.Name) on $($llmsTarget.Paths.Path)"
+            }
+            
             Write-Verbose "Reset the start item and the rendering host"
             # reset the start item and the rendering host
             $siteName = $Site.Name
