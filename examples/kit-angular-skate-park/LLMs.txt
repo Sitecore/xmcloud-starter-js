@@ -1,0 +1,149 @@
+# Claude/Windsurf Guidance for Sitecore Content SDK Angular Project
+
+## Project Context
+This is a Sitecore Content SDK application built with Angular, TypeScript, and Angular SSR. The project integrates with SitecoreAI (XM Cloud) for headless content management. An Express server in `src/server.ts` serves the rendered app, editing endpoints, sitemap, robots.txt, and personalization middleware.
+
+## Architecture Overview
+- **Framework**: Angular 21 with server-side rendering (`@angular/ssr`)
+- **Language**: TypeScript
+- **CMS**: SitecoreAI / XM Cloud (headless)
+- **SDK**: `@sitecore-content-sdk/angular`
+- **Server**: Express (`src/server.ts`), started in production with `npm run serve:ssr`
+- **Styling**: Tailwind CSS plus component CSS under `src/assets/components`
+- **Internationalization**: `@ngx-translate/core` with the Sitecore dictionary loader
+- **Routing**: A locale-aware catch-all route in `src/app/app.routes.ts`
+- **Data loading**: Route loaders in `src/content-sdk/loaders` (page, dictionary, 404, 500)
+
+## Folder Layout
+```
+src/
+  app/
+    components/        # Sitecore renderings (*.component.ts)
+    pages/             # Page, 404, and 500 route components
+    shared/            # Layout (header, main, footer placeholders)
+    app.routes.ts
+    app.config.ts
+  content-sdk/
+    client/            # SitecoreClient singleton
+    loaders/           # Page, dictionary, and error loaders
+  assets/              # Tailwind entry and per-component CSS
+  environments/        # Generated from .env by npm run gen:env
+  server.ts            # Express SSR server
+sitecore.config.ts     # Content SDK config
+sitecore.cli.config.ts # Component map paths for sitecore-tools
+```
+
+## Development Principles
+
+### Code Organization
+- Keep one Sitecore rendering per `*.component.ts` file under `src/app/components`
+- Extend `SxaComponent` for standard SXA renderings so styles and rendering ids stay consistent
+- Put page-level route components in `src/app/pages`
+- Fetch Sitecore data in loaders, not inside component constructors
+- Register new renderings by placing them on a path listed in `sitecore.cli.config.ts` (`src/app/components`)
+
+### TypeScript Standards
+- Type Sitecore fields with the SDK field types (`Field`, `TextField`, `LinkField`)
+- Define a fields interface per component
+- Avoid `any`
+- Read field values through computed signals when the component uses the Angular signals style already in this app
+
+### Angular Patterns
+- Standalone components with inline templates
+- Use Angular control flow (`@if`, `@for`) in templates
+- Inject Sitecore context with `inject(SitecoreContextService)`
+- Client hydration is disabled in `app.config.ts` so router links attach correctly. Do not turn on `provideClientHydration()` without retesting in-app navigation
+
+## Sitecore Integration Patterns
+
+### Content Fetching
+- Use `getClient()` from `src/content-sdk/client/sitecore-client.ts`
+- Page data is loaded by `pageLoader`, which calls `getPage`, `getPreview`, or `getDesignLibraryData`
+- Pass personalization variant ids from the request into `getPage`
+- Dictionary phrases are loaded by `dictionaryLoader` for the current site and locale
+
+### Component Development
+- Render Sitecore fields with SDK directives such as `*scText`, `*scRichText`, `*scLink`, and `sc-placeholder`
+- Check that a field exists before rendering it
+- Show the Sitecore field name in brackets when the field is empty, matching the other components in this app
+- Export the component class as the default export so the component map can pick it up
+
+### Field Handling
+```typescript
+interface TitleFields {
+  data?: { datasource?: { field?: { jsonValue?: Field<string> } } };
+}
+
+// Template
+@if (titleField(); as title) {
+  <span *scText="title"></span>
+}
+```
+
+### Placeholders
+The layout renders three placeholders from the Sitecore route:
+
+- `headless-header`
+- `headless-main`
+- `headless-footer`
+
+```html
+<sc-placeholder name="headless-main" [rendering]="scRoute()!"></sc-placeholder>
+```
+
+## Server and Middleware
+`src/server.ts` wires, in order:
+
+- `GET /healthz`
+- `POST /api/revalidate` for on-demand cache refresh
+- `/sitemap.xml`, `/sitemap-{id}.xml`, and `/robots.txt`
+- `/api/editing/config`, experimental features, and `/api/editing/render`
+- Multisite, bot tracking, redirects, and personalization middleware
+- `/_data` for client-side route data
+- The Angular SSR engine for every other request
+
+Personalization needs an Edge context id. It does not run against local containers.
+
+## Environment
+- Copy `.env.example` to `.env` and fill in Sitecore values
+- Only `CSDK_PUBLIC_*` variables are copied into Angular environment files
+- `npm run dev` runs `gen:env:dev` before the dev server starts
+- `npm run build` runs `gen:env:prod` before the production build
+- Do not commit `.env` or `.env.dev`
+
+## Performance
+- The Express server gzip-compresses responses
+- Page loaders can use the in-memory loader cache configured in `src/server.ts`
+- Static browser files are served with a long cache lifetime
+- Keep Sitecore API calls in loaders so they run once per request on the server
+
+## Security
+- Keep Edge context ids and API keys in `.env`, not in source
+- `CSDK_PUBLIC_*` values are exposed to the browser. Do not put secrets behind that prefix
+- When `SITECORE_REVALIDATE_SECRET` is set, callers of `POST /api/revalidate` must send the same value in the `x-revalidate-secret` header
+- The server disables the `X-Powered-By` header
+
+## Code Quality
+- Components: `kebab-case.component.ts`, class names in PascalCase (`TitleComponent`)
+- Selectors: `app-` prefix (`app-title`)
+- Run `npm run lint` before committing
+- `npm test` runs the Angular unit test builder. This starter does not yet include spec files
+
+## Development Workflow
+1. `cd examples/kit-angular-skate-park`
+2. Copy `.env.example` to `.env` and set the Sitecore values
+3. `npm install`
+4. `npm run dev`
+5. Production: `npm run build` then `npm run serve:ssr`
+
+The editing host name in `xmcloud.build.json` is `angularstarter`. The cloud run command is `serve:ssr`.
+
+## Best Practices Summary
+1. Render Sitecore fields with SDK directives
+2. Type every component's fields
+3. Load layout and dictionary data in loaders
+4. Keep new renderings under `src/app/components` so the component map includes them
+5. Leave hydration disabled unless navigation is retested
+6. Put browser-safe config in `CSDK_PUBLIC_*` and secrets in unprefixed env vars
+7. Follow the existing SXA component pattern (`SxaComponent`, `component` CSS classes, rendering id)
+8. Match empty-field placeholders to the other components in this app
