@@ -1,0 +1,50 @@
+﻿---
+ID: "dff1ce97-d682-4577-96e6-5469b79b758c"
+Parent: "8f4f5eb1-6310-4236-9e56-7f23331ff57c"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/business/Data/Questions 1/Question 3
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8C4A7FF3-185F-4E9E-82EC-9EB3F4181951}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ca78dc31-3082-4f34-aa51-3deebffa077b"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "How is a business account different from a personal account?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: The Personal Account is an account for everyday banking unrelated to your business. The Business Account is a business account designed for easier management of your business finances for government and tax reporting purposes, bookkeeping, and cash flow.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "97ea3225-7ef9-482a-add6-d0dec532d29a"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "En quoi un compte professionnel est-il différent d'un compte personnel ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Le compte personnel est un compte pour les opérations bancaires quotidiennes sans rapport avec votre entreprise. Le compte professionnel est conçu pour faciliter la gestion de vos finances d'entreprise à des fins de déclarations gouvernementales et fiscales, de comptabilité et de trésorerie.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "42349ed5-e96c-4ebc-96ab-a9830508a829"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: ビジネスアカウントと個人アカウントはどう違うのですか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: パーソナル・アカウントは、ビジネスとは関係のない日常的なバンキング用のアカウントです。 ビジネスアカウントは、政府・税務報告、帳簿管理、キャッシュフローを目的としたビジネス財務管理を容易にするためのビジネスアカウントです。

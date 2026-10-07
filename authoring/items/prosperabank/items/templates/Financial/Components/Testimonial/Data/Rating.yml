@@ -1,0 +1,27 @@
+﻿---
+ID: "347076d0-eb36-489e-9452-b0d48ee2641a"
+Parent: "2e7871b5-7d32-4b72-b3c7-159ecccfa3a9"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Testimonial/Data/Rating
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Number
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "895f431b-42ca-49c4-92da-4e4c1d8f1eca"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b21b283c-bb04-4f6a-9b10-21db9a5f79a2"

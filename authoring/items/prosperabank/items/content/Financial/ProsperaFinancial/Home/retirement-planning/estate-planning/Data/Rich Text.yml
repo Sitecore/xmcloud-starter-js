@@ -1,0 +1,60 @@
+﻿---
+ID: "332ee56d-3818-45df-b4a5-71846f57ce8c"
+Parent: "bd0edfa4-e4d8-40de-9e5f-886c4e38a968"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/retirement-planning/estate-planning/Data/Rich Text"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Securing Your Legacy for Future Generations</h2>
+        <p>Estate planning is a vital component of financial planning that involves arranging for the transfer of your assets and wealth to your heirs and beneficiaries upon your death.</p>
+        <p>One of the primary goals of estate planning is to ensure that your assets are distributed according to your wishes and that your loved ones are provided for after you're gone. Estate planning allows you to designate beneficiaries for your assets, such as bank accounts, retirement accounts, life insurance policies, and real estate properties.</p>
+        <h2>Plan to plan</h2>
+        <p>Estate planning enables you to minimize estate taxes and probate costs, allowing more of your assets to pass to your beneficiaries rather than being consumed by taxes and legal fees.</p>
+        <p>Estate planning provides the opportunity to establish trusts to manage and distribute assets according to specific instructions and timelines, such as providing for minor children or charitable organizations. Estate planning allows you to appoint guardians for minor children and designate healthcare proxies and power of attorney agents to make medical and financial decisions on your behalf if you become incapacitated.</p>
+        <p>Staying organized and keeping your estate plan up to date is essential for ensuring that it accurately reflects your current wishes and circumstances.</p>
+        <p>Ultimately, estate planning is not just about distributing your assets; it's about creating a lasting legacy and providing peace of mind for yourself and your loved ones.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "92e64dcb-25bb-4883-ba73-f10ae9d169d7"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Assurer votre héritage pour les générations futures</h2>
+        <p>La planification successorale est un élément vital de la planification financière qui consiste à organiser le transfert de vos actifs et de votre patrimoine à vos héritiers et bénéficiaires après votre décès.</p>
+        <p>L'un des principaux objectifs de la planification successorale est de garantir que vos actifs sont distribués selon vos souhaits et que vos proches sont pris en charge après votre départ. La planification successorale vous permet de désigner des bénéficiaires pour vos actifs, tels que les comptes bancaires, les comptes de retraite, les polices d'assurance-vie et les biens immobiliers.</p>
+        <h2>Planifier pour planifier</h2>
+        <p>La planification successorale vous permet de minimiser les droits de succession et les coûts de succession, permettant à une plus grande partie de vos actifs de passer à vos bénéficiaires plutôt que d'être consommée par les impôts et les frais juridiques.</p>
+        <p>La planification successorale offre l'opportunité d'établir des fiducies pour gérer et distribuer les actifs selon des instructions et des calendriers spécifiques, comme subvenir aux besoins des enfants mineurs ou des organisations caritatives. La planification successorale vous permet de désigner des tuteurs pour les enfants mineurs et de désigner des mandataires de soins de santé et des agents de procuration pour prendre des décisions médicales et financières en votre nom si vous devenez incapable.</p>
+        <p>Rester organisé et maintenir votre plan successoral à jour est essentiel pour garantir qu'il reflète fidèlement vos souhaits et circonstances actuels.</p>
+        <p>En fin de compte, la planification successorale ne consiste pas seulement à distribuer vos actifs ; il s'agit de créer un héritage durable et de fournir une tranquillité d'esprit pour vous-même et vos proches.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9db4ae32-66d1-499a-a321-e86b403b0748"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>将来の世代のために遺産を確保する</h2>
+        <p>エステート・プランニングは、ファイナンシャル・プランニングの重要な要素であり、あなたの死後、あなたの資産や富を相続人や受益者に移転するための手配を行うものです。</p>
+        <p>財産設計の主な目的のひとつは、あなたの財産があなたの希望に従って分配され、あなたの愛する人があなたの死後も養われるようにすることです。 エステート・プランニングでは、銀行口座、退職金口座、生命保険契約、不動産物件などの資産の受取人を指定することができます。</p>
+        <h2>計画から計画へ</h2>
+        <p>エステート・プランニングを行うことで、相続税や遺言検認の費用を最小限に抑えることができ、税金や弁護士費用で資産を消費することなく、より多くの資産を受益者に渡すことができます。</p>
+        <p>エステート・プランニングは、未成年の子供や慈善団体への資金提供など、特定の指示やスケジュールに従って資産を管理・分配するための信託を設定する機会を提供する。 エステート・プランニングでは、未成年の子供の後見人を任命したり、医療委任状や委任状代理人を指定し、あなたが無能力になった場合に、あなたに代わって医療や財務に関する決定を下すことができます。</p>
+        <p>遺産分割協議書を常に整理し、最新の状態に保つことは、あなたの現在の希望や状況を正確に反映させるために不可欠です。</p>
+        <p>結局のところ、遺産分割計画とは、単に資産を分配することではなく、永続的な遺産を築き、あなた自身とあなたの愛する人たちに安心を提供することなのです。</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f40dc24f-4f6c-4b99-8b5c-4b50c7fe803f"

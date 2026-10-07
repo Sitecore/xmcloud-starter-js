@@ -1,0 +1,49 @@
+﻿---
+ID: "1fc53620-6da2-4341-98fd-4782c564070c"
+Parent: "2a3dbf56-ac6b-43b2-9cfc-7f0ae30ee272"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Project/Financial/ProsperaFinancial/SVG/pFinanceLogo
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/1FC536206DA2434198FD4782C564070C.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 217
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "1fc53620-6da2-4341-98fd-4782c564070c"
+  Value: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMTcgMjc3LjAxIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICNmZjNjMjg7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+CiAgICA8Zz4KICAgICAgPHBhdGggaWQ9IlBhdGhfODgiIGRhdGEtbmFtZT0iUGF0aCA4OCIgY2xhc3M9ImNscy0xIiBkPSJNMTE2LjIsMEgzNC4zN0MxNi42NywwLDEuMjcsMTMuMzgsLjA4LDMxLjA0Yy0xLjI4LDE4LjM3LDEyLjU3LDM0LjMsMzAuOTQsMzUuNTgsLjc4LC4wNSwxLjU2LC4wOCwyLjM0LC4wOEgxMDYuODNjMTguNywwLDI1Ljg3LDkuNzQsMjUuODcsMjQuMzRzLTcuMTYsMjQuMzctMjUuODcsMjQuMzdIMzIuOEMxNC42OCwxMTUuNDcsLjA1LDEzMC4yMSwuMTEsMTQ4LjMzYy4wNiwxOC4wMywxNC42NiwzMi42MiwzMi42OSwzMi42OUgxMTYuMmM2Ni43LDAsMTAwLjgtNDAuODgsMTAwLjgtODkuOThDMjE3LDM3LjQ1LDE4Mi44OSwwLDExNi4yLDAiLz4KICAgICAgPHJlY3QgY2xhc3M9ImNscy0yIiB4PSIwIiB5PSIxOTQuMDEiIHdpZHRoPSI4MyIgaGVpZ2h0PSI4MyIgcng9IjQxLjUiIHJ5PSI0MS41Ii8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4=
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 800
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 277
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215319Z
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: "PLAY! Finance"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9aa3c796-2b42-4b19-b40e-216cd32919fc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215319Z

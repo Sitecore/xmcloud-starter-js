@@ -1,0 +1,94 @@
+﻿---
+ID: "2cefb3b8-247f-41d6-85b3-7100029f91ff"
+Parent: "8c2d6765-91be-4bd8-a0b3-4f81256e75a6"
+Template: "aad350f5-9331-4d71-a942-e3643653c028"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/authors/Patricia Ball
+SharedFields:
+- ID: "2404bb97-b42a-439a-be76-de66213cb281"
+  Hint: BackgroundImage
+  Value: |
+    <image mediaid="{DC65B8CF-63A5-424E-A739-3B6345F75F92}" alt="Author Paper" height="" width="" hspace="" vspace="" />
+- ID: "6be59cd8-74bd-4c67-b611-e81e140679b4"
+  Hint: Photo
+  Value: |
+    <image mediaid="{4859F21A-8F82-4ABC-AD20-F6CED8CF82AC}" alt="Patricia Bio Image" height="" width="" hspace="" vspace="" />
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: 
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Patricia Ball
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: Digital marketer
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "159629eb-b163-4e84-86fd-a731b29554c9"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: |
+        <div class="ck-content"><p>Patricia is a seasoned digital marketer with a passion for driving results through innovative digital strategies. With a background in digital advertising, social media management, and content marketing, she excels at creating compelling campaigns that engage audiences and drive conversions.</p></div>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: Patricia Ball
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Patricia Ball
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: Responsable marketing digital
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0232d812-299c-4cbe-a6db-5210e8498c9c"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: |
+        <div class="ck-content"><p>Patricia est une spécialiste expérimentée en marketing digital, passionnée par l'obtention de résultats grâce à des stratégies numériques innovantes. Avec une expérience en publicité numérique, en gestion des réseaux sociaux et en marketing de contenu, elle excelle dans la création de campagnes captivantes qui engagent les audiences et génèrent des conversions.</p></div>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: Patricia Ball
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: パトリシア・ボール
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{171CCFD4-8543-428E-9A9B-8E6557E63B6D}"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: パトリシア・ボール
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: デジタルマーケター
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fbe23f3c-d39f-4eef-b756-236edcc4d7e1"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: |
+        <div class="ck-content"><p>パトリシアは、革新的なデジタル戦略で成果を上げることに情熱を注ぐベテランのデジタルマーケター。 デジタル広告、ソーシャルメディア管理、コンテンツマーケティングのバックグラウンドを持ち、オーディエンスを惹きつけ、コンバージョンを促進する魅力的なキャンペーン作りを得意とする。</p></div>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: パトリシア・ボール

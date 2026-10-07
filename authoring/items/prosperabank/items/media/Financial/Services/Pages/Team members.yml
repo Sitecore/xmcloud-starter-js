@@ -1,0 +1,23 @@
+﻿---
+ID: "72029c0e-28d6-41ba-a128-cd318f4eb469"
+Parent: "da9d8c8c-a783-41b7-9f60-08ee4d583df2"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/Financial/Services/Pages/Team members
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215329Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b2a24a84-8d03-4f7a-b6d2-bb5aa3d05a7d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215329Z

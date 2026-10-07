@@ -1,0 +1,72 @@
+﻿---
+ID: "f2f5265f-32e4-48eb-a3c0-551d416e6b46"
+Parent: "60fe154b-e0bc-4fa8-b87c-55ab54015a49"
+Template: "60fe154b-e0bc-4fa8-b87c-55ab54015a49"
+Path: /sitecore/templates/Project/Financial/Pages/Project Page/__Standard Values
+SharedFields:
+- ID: "4600cff7-676d-4d2f-b646-a44ba7939705"
+  Hint: Thumbnail
+  Value: |
+    <image mediaid="{32909CAB-5F82-4428-A428-DF531E7776DD}" alt="Market report" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{E9B6C600-C6E8-4867-BCB7-8B0DC5F19840}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          ds="{D6149E88-DD83-4A57-ADB8-5CD17A22798C}"
+          id="{9D7DE58D-9DA4-43D8-8371-3C728A582ADC}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          ph="/headless-main/sxa-article-content/article-meta-0-1"
+          uid="{1333C7A2-2A6C-4310-AE74-8D5DE936F8B3}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "10c6bd9b-7e77-47aa-a1fb-0e2ae97f81d0"
+      Hint: Title
+      Value: $name
+    - ID: "2d078f28-3700-4ab1-a5bd-24fcc36316c4"
+      Hint: Category
+      Value: Branding
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "724ce031-cd1a-49c3-bd66-f12eab969347"
+    - ID: "c9ffb36d-8811-4406-b6e7-382a9cbda5e6"
+      Hint: Problem
+      Value: |
+        <p><strong>Lorem Ipsum Finance</strong></p>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper neque id elit convallis, at varius lorem aliquet. Phasellus consequat, ante sed tristique commodo, felis mi vehicula justo, id finibus neque velit vitae nunc.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin at mauris vel purus vestibulum consectetur. Nam efficitur lectus auctor, hendrerit ligula nec, pharetra ex.</p>
+        <p>Suspendisse potenti. Sed ac arcu scelerisque, hendrerit risus eu, ultricies libero. Pellentesque ut magna eu elit fringilla viverra. Quisque ullamcorper orci a magna finibus, nec feugiat urna semper. Praesent blandit purus vel ligula finibus, nec fermentum dui ultrices. Nulla vitae justo a felis luctus dignissim. Aliquam eu tortor eget libero placerat semper.</p>
+        <p>In consequat, libero sed viverra placerat, metus lectus accumsan velit, a suscipit elit dui sit amet justo. Fusce vitae purus vel justo aliquam hendrerit. Integer pretium mi vel ex convallis, vel dignissim ex finibus.</p>
+    - ID: "f9fc60e0-645c-4889-bc5e-ecca56535542"
+      Hint: Client
+      Value: |
+        <image mediaid="{BE5D7615-900B-467B-AD19-58A3907E43EE}" alt="Sample Logo" height="" width="" hspace="" vspace="" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b37d1d52-2014-432f-aa1a-3078d2d88560"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "57515208-5e43-4b89-bfbb-32a9ef1ef3a6"

@@ -1,0 +1,49 @@
+﻿---
+ID: "b9de5e6b-8414-4a6d-91a3-868d14c0857d"
+Parent: "2a3dbf56-ac6b-43b2-9cfc-7f0ae30ee272"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Project/Financial/ProsperaFinancial/SVG/Path 91
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/B9DE5E6B84144A6D91A3868D14C0857D.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 84
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "b9de5e6b-8414-4a6d-91a3-868d14c0857d"
+  Value: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMTAuMjYiIGhlaWdodD0iMzE0LjI0NCIgdmlld0JveD0iMCAwIDMxMC4yNiAzMTQuMjQ0Ij4KICA8cGF0aCBpZD0iUGF0aF85MSIgZGF0YS1uYW1lPSJQYXRoIDkxIiBkPSJNMzEwLjI2LDE3NC4zNHYzLjk3OWExNTUuMTMsMTU1LjEzLDAsMSwxLTMxMC4yNiwwVjE3NC4zNGExNTUuMTMsMTU1LjEzLDAsMSwxLDMxMC4yNiwwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0xOS4yMDcpIiBmaWxsPSIjYzVlNGYzIi8+Cjwvc3ZnPgo=
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 290
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 84
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215318Z
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: Dot icon
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0cb13b2a-a445-4ead-a300-0fc867da4742"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215318Z

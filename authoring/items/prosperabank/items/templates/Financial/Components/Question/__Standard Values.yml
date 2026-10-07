@@ -1,0 +1,23 @@
+﻿---
+ID: "7b0ee795-16f7-403e-bb1f-09b682071ff4"
+Parent: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: /sitecore/templates/Project/Financial/Components/Question/__Standard Values
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50e1a745-fbe8-493b-8633-3ee2880d074c"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: Lorem ipsum dolor sit amet
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

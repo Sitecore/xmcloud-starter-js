@@ -1,0 +1,183 @@
+﻿---
+ID: "f48cfb42-d442-489f-8d2e-31927382366b"
+Parent: "0b45c71d-61ae-44f3-9f7d-6c88185f0b15"
+Template: "f83ccefd-fc41-4a60-9882-8f7ea5cf41a8"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/articles/five-tips-for-new-retirees"
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}"
+- ID: "ad26114f-29dd-4ef9-b5bf-1d64d558872d"
+  Hint: BackgroundImage
+  Value: |
+    <image mediaid="{10CB9C1E-EDEB-45AE-9598-EAD7CF3B3204}" alt="Blurred background image - fountain pen on notebook" height="" width="" hspace="" vspace="" />
+- ID: "ba2b872d-f67d-40dc-be41-6366b7030144"
+  Hint: Thumbnail
+  Value: |
+    <image mediaid="{ED89F2D3-E214-499F-9EFE-26A24D0792D3}" alt="People sitting on a bench" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{1333C7A2-2A6C-4310-AE74-8D5DE936F8B3}">
+          <p:d />
+        </r>
+        <r
+          uid="{061D1008-CB92-4D3E-BF5B-16CD37E496CE}"
+          s:ds="3f95924a-2a12-4e2f-aa5b-67de6e77b91c"
+          s:id="{9D7DE58D-9DA4-43D8-8371-3C728A582ADC}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="/headless-main/sxa-article-content/article-meta-0-1" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: 5 tips for new retirees
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: 
+    - ID: "03117268-f84f-4fd8-ad9e-5990b3a21fe6"
+      Hint: Content
+      Value: |
+        <p>Retirement marks the beginning of a new chapter in life&mdash;one filled with freedom, opportunities, and new adventures. As you embark on this exciting journey, it's important to be prepared and equipped with the knowledge and resources to make the most of your retirement years.
+        </p>
+        <p><strong>1. Financial Planning</strong>
+        </p>
+        <p>One of the first steps in preparing for retirement is to create a comprehensive financial plan. Evaluate your retirement savings, investments, and sources of income, and determine a budget that aligns with your lifestyle and goals. Consider consulting with a financial advisor to ensure that your retirement plan is robust and sustainable for the long term.</p>
+        <p>
+        <strong>2. Health Care Coverage</strong>
+        </p>
+        <p>Health care costs can be a significant expense in retirement, so it's essential to understand your health care coverage options. If you're eligible for Medicare, familiarize yourself with the different parts and coverage options available to you. Consider supplemental insurance plans to fill any gaps in coverage and protect yourself against unexpected medical expenses.</p>
+        <p><strong>3. Social Security Benefits</strong></p>
+        <p>Make sure you understand how Social Security benefits work and when is the best time to start claiming them. While you can begin receiving benefits as early as age 62, delaying retirement can increase your monthly benefit amount. Consider your financial situation and retirement goals carefully before making a decision about when to start claiming Social Security.</p>
+        <p>
+        <strong>4. Lifestyle Adjustments</strong></p>
+        <p>Retirement often involves significant lifestyle changes, both in terms of how you spend your time and how you manage your finances. Take the time to assess your priorities, interests, and goals for retirement, and adjust your lifestyle accordingly. Explore new hobbies, travel opportunities, and ways to stay active and engaged in your community.</p>
+        <p>
+        <strong>5. Estate Planning</strong></p>
+        <p>Estate planning is an essential aspect of retirement planning that many people overlook. Review your estate plan, including your will, trusts, and powers of attorney, to ensure that your wishes are documented and your assets are protected. Consider updating your beneficiaries and designating someone to make financial and medical decisions on your behalf if necessary.</p>
+        <p>
+        <strong>Conclusion</strong></p>
+        <p>Retirement is an exciting milestone that offers the opportunity to embrace new experiences and enjoy the fruits of your labor. By taking the time to plan and prepare for retirement, you can ensure a smooth transition and set yourself up for a fulfilling and financially secure future. Remember to stay informed, stay engaged, and make the most of every moment as you embark on this new chapter of your life.
+        </p>
+        <p><strong><em>Are you ready to start your retirement journey? Contact us today to learn more about how we can help you plan for a successful retirement.</em></strong></p>
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "3e700dce-26eb-4bf0-990f-9d9fe555990d"
+      Hint: Excerpt
+      Value: Whether you're just starting to plan for retirement or have recently retired, here are some essential tips to help you navigate this transition with confidence and peace of mind.
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: 5 tips for new retirees
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "64e46c09-6a08-4f64-9254-bca2da71e206"
+    - ID: "e81c4912-a4d2-4466-842c-02f0b2c9dc42"
+      Hint: Title
+      Value: "Starting your retirement journey: 5 tips for new retirees"
+- Language: "fr-CA"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: 5 conseils pour les nouveaux retraités
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "03117268-f84f-4fd8-ad9e-5990b3a21fe6"
+      Hint: Content
+      Value: |
+        <p>La retraite marque le début d'un nouveau chapitre de la vie&mdash;un chapitre rempli de liberté, d'opportunités et de nouvelles aventures. Alors que vous commencez ce voyage passionnant, il est important d'être préparé et équipé des connaissances et des ressources nécessaires pour tirer le meilleur parti de vos années de retraite.</p>
+        
+        <p><strong>1. Planification financière</strong></p>
+        <p>Une des premières étapes pour se préparer à la retraite est de créer un plan financier complet. Évaluez vos économies de retraite, vos investissements et vos sources de revenus, et déterminez un budget qui correspond à votre style de vie et à vos objectifs. Envisagez de consulter un conseiller financier pour vous assurer que votre plan de retraite est solide et durable à long terme.</p>
+        
+        <p><strong>2. Couverture des soins de santé</strong></p>
+        <p>Les coûts des soins de santé peuvent représenter une dépense importante à la retraite, il est donc essentiel de comprendre vos options de couverture. Si vous êtes éligible à Medicare, familiarisez-vous avec les différentes parties et options de couverture qui s'offrent à vous. Envisagez des plans d'assurance complémentaire pour combler les lacunes de la couverture et vous protéger contre les dépenses médicales imprévues.</p>
+        
+        <p><strong>3. Prestations de sécurité sociale</strong></p>
+        <p>Assurez-vous de comprendre le fonctionnement des prestations de sécurité sociale et le moment idéal pour commencer à les réclamer. Bien que vous puissiez commencer à recevoir des prestations dès l'âge de 62 ans, retarder votre retraite peut augmenter le montant de vos prestations mensuelles. Réfléchissez attentivement à votre situation financière et à vos objectifs de retraite avant de décider quand commencer à réclamer la sécurité sociale.</p>
+        
+        <p><strong>4. Ajustements de style de vie</strong></p>
+        <p>La retraite implique souvent des changements de style de vie importants, tant en termes de façon dont vous passez votre temps que de gestion de vos finances. Prenez le temps d'évaluer vos priorités, vos intérêts et vos objectifs pour la retraite, et ajustez votre style de vie en conséquence. Explorez de nouveaux passe-temps, des opportunités de voyage et des moyens de rester actif et engagé dans votre communauté.</p>
+        
+        <p><strong>5. Planification successorale</strong></p>
+        <p>La planification successorale est un aspect essentiel de la planification de la retraite que beaucoup de gens négligent. Passez en revue votre plan successoral, y compris votre testament, vos fiducies et vos procurations, pour vous assurer que vos souhaits sont documentés et que vos actifs sont protégés. Envisagez de mettre à jour vos bénéficiaires et de désigner quelqu'un pour prendre des décisions financières et médicales en votre nom si nécessaire.</p>
+        
+        <p><strong>Conclusion</strong></p>
+        <p>La retraite est une étape passionnante qui offre l'opportunité de vivre de nouvelles expériences et de profiter des fruits de votre travail. En prenant le temps de planifier et de vous préparer à la retraite, vous pouvez assurer une transition en douceur et vous préparer à un avenir épanouissant et financièrement sécurisé. N'oubliez pas de rester informé, de rester engagé et de tirer le meilleur parti de chaque moment alors que vous entamez ce nouveau chapitre de votre vie.</p>
+        
+        <p><strong><em>Êtes-vous prêt à commencer votre parcours de retraite ? Contactez-nous dès aujourd'hui pour en savoir plus sur la façon dont nous pouvons vous aider à planifier une retraite réussie.</em></strong></p>
+    - ID: "3e700dce-26eb-4bf0-990f-9d9fe555990d"
+      Hint: Excerpt
+      Value: Que vous commenciez tout juste à planifier votre retraite ou que vous veniez de prendre votre retraite, voici quelques conseils essentiels pour vous aider à naviguer cette transition avec confiance et tranquillité d'esprit.
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: 5 conseils pour les nouveaux retraités
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6fb5707b-a1ee-493b-a498-50be7054279d"
+    - ID: "e81c4912-a4d2-4466-842c-02f0b2c9dc42"
+      Hint: Title
+      Value: "Commencer votre parcours de retraite : 5 conseils pour les nouveaux retraités"
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: 新規退職者のための5つのヒント
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "03117268-f84f-4fd8-ad9e-5990b3a21fe6"
+      Hint: Content
+      Value: |
+        <p>退職は人生の新たな章の始まりです&mdash;自由や機会、新たな冒険に満ちた章です。このエキサイティングな旅に出る際には、退職後の生活を最大限に楽しむために、必要な知識とリソースで準備を整えておくことが重要です。</p>
+        
+        <p><strong>1. 財務計画</strong></p>
+        <p>退職準備の最初のステップの一つは、包括的な財務計画を立てることです。退職貯蓄、投資、収入源を評価し、ライフスタイルや目標に合った予算を決定します。長期的に持続可能な退職計画を確保するために、ファイナンシャルアドバイザーに相談することを検討してください。</p>
+        
+        <p><strong>2. 医療保険のカバレッジ</strong></p>
+        <p>医療費は退職後の大きな支出になる可能性があるため、医療保険の選択肢を理解することが不可欠です。もしメディケアの資格がある場合、利用できる様々なパートやカバレッジオプションについてよく理解しましょう。カバレッジのギャップを埋めるために補完保険を検討し、予期せぬ医療費に備えましょう。</p>
+        
+        <p><strong>3. 社会保障給付</strong></p>
+        <p>社会保障給付の仕組みや給付開始の最適な時期について理解しておくことが重要です。62歳から給付を受け始めることができますが、退職を遅らせると毎月の給付額が増加する可能性があります。自身の財政状況や退職後の目標を慎重に考慮した上で、給付開始時期を決定しましょう。</p>
+        
+        <p><strong>4. ライフスタイルの調整</strong></p>
+        <p>退職は、時間の使い方や財務管理の方法において大きなライフスタイルの変化を伴います。退職後の優先事項、興味、目標を評価し、それに合わせてライフスタイルを調整してください。新しい趣味を見つけたり、旅行したり、地域社会で活動するなど、アクティブで充実した生活を目指しましょう。</p>
+        
+        <p><strong>5. 遺産計画</strong></p>
+        <p>遺産計画は、多くの人が見落としがちな退職計画の重要な側面です。遺言、信託、委任状などを含む遺産計画を見直し、自分の意思が文書化され、資産が保護されていることを確認しましょう。必要に応じて受益者を更新し、財務および医療の意思決定を代行する人を指名することを検討してください。</p>
+        
+        <p><strong>結論</strong></p>
+        <p>退職は、これまでの努力の成果を享受し、新たな経験に挑戦するための機会を提供するエキサイティングなマイルストーンです。退職に向けて計画と準備を整えることで、スムーズな移行を確保し、充実した財政的に安定した未来への備えができます。常に情報にアクセスし、積極的に関わり、人生の新たな章を最大限に楽しんでください。</p>
+        
+        <p><strong><em>退職の旅を始める準備はできましたか？成功する退職計画をお手伝いするために、ぜひお問い合わせください。</em></strong></p>
+        
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{13D6CCE7-A6C3-4EE1-A1D9-8A8E34225ED7}"
+    - ID: "3e700dce-26eb-4bf0-990f-9d9fe555990d"
+      Hint: Excerpt
+      Value: リタイア後の生活設計を始めたばかりでも、最近リタイアしたばかりでも、自信と安心をもってこの移行を乗り切るために欠かせないヒントがここにある。
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: 新規退職者のための5つのヒント
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "531ed9b3-5913-4526-bcc7-1dcb264b1285"
+    - ID: "e81c4912-a4d2-4466-842c-02f0b2c9dc42"
+      Hint: Title
+      Value: 引退後の旅立ち 新規退職者のための5つのヒント

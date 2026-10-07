@@ -1,0 +1,166 @@
+﻿---
+ID: "b2f566b8-603f-4c07-9541-e338eb46d0bb"
+Parent: "8522d94a-3b27-4e87-baa6-511f9068177b"
+Template: "3b41d9fc-0edf-48e1-966c-e260339ba815"
+Path: /sitecore/content/Financial/ProsperaFinancial/Data/Promos/Five Column CTA/Available Services
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1d581533-1aa5-4679-9e2a-e7fe765218ba"
+      Hint: Link3
+      Value: |
+        <link class="" querystring="" id="{B6D8EF4D-8137-4081-B939-7058C1FD944A}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/investing" />
+    - ID: "2490d428-27e2-4daa-8337-4e34f37fc26b"
+      Hint: Link2
+      Value: |
+        <link class="" querystring="" id="{C63FF335-ABDA-42B1-83FD-18E67881FAAA}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/borrowing/line-of-credit" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165630Z
+    - ID: "41910271-6970-45e7-8819-3d531826d4a6"
+      Hint: Link5
+      Value: |
+        <link class="" querystring="" id="{D0E2F5F1-E984-4DDD-9A32-BE0D90674E6C}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/borrowing/credit-cards" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ce736940-75c6-4012-a0cf-7da08111ef48"
+    - ID: "8f49a654-7b7f-4c0b-b6df-d3ce2389c1bf"
+      Hint: Text2
+      Value: Line of Credit
+    - ID: "b867909f-d20c-4c76-b82f-778d25239cd1"
+      Hint: Link1
+      Value: |
+        <link class="" querystring="" id="{D26AF0F1-5E54-41F0-B026-C96D4D2BEEA3}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "b8b8fa51-0c41-442e-8757-07b7a59d6d3f"
+      Hint: Link4
+      Value: |
+        <link class="" querystring="" id="{AF81673A-E745-40B2-8EA7-34E0589693A7}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/business" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165659Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12ece9de-445a-42be-a483-9e8095ca3b8f"
+      Hint: Text5
+      Value: Cartes de crédit
+    - ID: "1d581533-1aa5-4679-9e2a-e7fe765218ba"
+      Hint: Link3
+      Value: |
+        <link class="" querystring="" id="{B6D8EF4D-8137-4081-B939-7058C1FD944A}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/investing" />
+    - ID: "2490d428-27e2-4daa-8337-4e34f37fc26b"
+      Hint: Link2
+      Value: |
+        <link class="" querystring="" id="{C63FF335-ABDA-42B1-83FD-18E67881FAAA}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/borrowing/line-of-credit" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165630Z
+    - ID: "41910271-6970-45e7-8819-3d531826d4a6"
+      Hint: Link5
+      Value: |
+        <link class="" querystring="" id="{D0E2F5F1-E984-4DDD-9A32-BE0D90674E6C}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/borrowing/credit-cards" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d419532a-20e4-47cb-a665-dc65988cc734"
+    - ID: "8f49a654-7b7f-4c0b-b6df-d3ce2389c1bf"
+      Hint: Text2
+      Value: Ligne de crédit
+    - ID: "91d94aff-4137-4702-93f7-8db4eacde4d5"
+      Hint: Text3
+      Value: Options de placement
+    - ID: "9ea34c36-7e22-4d12-b632-032361c3b17c"
+      Hint: Text1
+      Value: Prêt personnel
+    - ID: "b867909f-d20c-4c76-b82f-778d25239cd1"
+      Hint: Link1
+      Value: |
+        <link class="" querystring="" id="{D26AF0F1-5E54-41F0-B026-C96D4D2BEEA3}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "b8b8fa51-0c41-442e-8757-07b7a59d6d3f"
+      Hint: Link4
+      Value: |
+        <link class="" querystring="" id="{AF81673A-E745-40B2-8EA7-34E0589693A7}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/business" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165659Z
+    - ID: "f5e90981-3210-4316-bcf5-f083fe639e66"
+      Hint: Text4
+      Value: Petites entreprises
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12ece9de-445a-42be-a483-9e8095ca3b8f"
+      Hint: Text5
+      Value: クレジットカード
+    - ID: "1d581533-1aa5-4679-9e2a-e7fe765218ba"
+      Hint: Link3
+      Value: |
+        <link class="" querystring="" id="{B6D8EF4D-8137-4081-B939-7058C1FD944A}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/investing" />
+    - ID: "2490d428-27e2-4daa-8337-4e34f37fc26b"
+      Hint: Link2
+      Value: |
+        <link class="" querystring="" id="{C63FF335-ABDA-42B1-83FD-18E67881FAAA}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/borrowing/line-of-credit" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165630Z
+    - ID: "41910271-6970-45e7-8819-3d531826d4a6"
+      Hint: Link5
+      Value: |
+        <link class="" querystring="" id="{D0E2F5F1-E984-4DDD-9A32-BE0D90674E6C}" anchor="" target="|Custom" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/personal/borrowing/credit-cards" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4ea88e71-0202-4cd4-b50b-6c0b8dd79420"
+    - ID: "8f49a654-7b7f-4c0b-b6df-d3ce2389c1bf"
+      Hint: Text2
+      Value: 信用枠
+    - ID: "91d94aff-4137-4702-93f7-8db4eacde4d5"
+      Hint: Text3
+      Value: 投資オプション
+    - ID: "9ea34c36-7e22-4d12-b632-032361c3b17c"
+      Hint: Text1
+      Value: 個人ローン
+    - ID: "b867909f-d20c-4c76-b82f-778d25239cd1"
+      Hint: Link1
+      Value: |
+        <link class="" querystring="" id="{D26AF0F1-5E54-41F0-B026-C96D4D2BEEA3}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "b8b8fa51-0c41-442e-8757-07b7a59d6d3f"
+      Hint: Link4
+      Value: |
+        <link class="" querystring="" id="{AF81673A-E745-40B2-8EA7-34E0589693A7}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/business" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165659Z
+    - ID: "f5e90981-3210-4316-bcf5-f083fe639e66"
+      Hint: Text4
+      Value: 中小企業

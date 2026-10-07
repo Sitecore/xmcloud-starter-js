@@ -1,0 +1,38 @@
+{
+  "$schema": "../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "prosperabank",
+  "items": {
+    "includes": [
+      {
+        "name": "templates",
+        "path": "/sitecore/templates/Project/financial",
+        "scope": "ItemAndDescendants", 
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "layout",
+        "path": "/sitecore/layout/Renderings/Project/financial",
+        "scope": "ItemAndDescendants", 
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "placeholder-settings",
+        "path": "/sitecore/layout/Placeholder Settings/Project/Financial",
+        "scope": "ItemAndDescendants", 
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "content",
+        "path": "/sitecore/content/financial",
+        "scope": "ItemAndDescendants",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "media",
+        "path": "/sitecore/media library/Project/financial",
+        "scope": "ItemAndDescendants", 
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      }
+    ]
+  }
+}

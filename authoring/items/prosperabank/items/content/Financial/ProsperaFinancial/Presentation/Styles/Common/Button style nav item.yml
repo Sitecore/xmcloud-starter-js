@@ -1,0 +1,17 @@
+﻿---
+ID: "367ba3f8-234e-4964-ad4f-63c46cd259a5"
+Parent: "daa43709-cc30-4f33-bb61-c714c8ea95c6"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Styles/Common/Button style nav item
+SharedFields:
+- ID: "09147fb2-ebfb-4949-8c8e-26a424409d5e"
+  Hint: Value
+  Value: "button-nav-item"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "85242f6b-7979-4207-8d57-e65c56c5e6a7"

@@ -1,0 +1,50 @@
+﻿---
+ID: "43d4a6ad-46cf-4a7f-b7ba-dc291bd51adf"
+Parent: "d5d73d45-0f16-4b32-ba70-9241370c8ce8"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/retirement-planning/Data/Questions 1/Question 4"
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{42F8779C-8AB1-4D2D-9119-9AE9AC43F286}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3d1e4e3e-2532-4e0c-9695-b6ea0dcbd8c7"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "How can I start planning for my retirement?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: To kickstart your retirement planning journey, begin by evaluating your current financial status and start thinking about your retirement goals. Next, consult with  one of our advisors to create a personalized retirement plan tailored to your needs.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "92b82a8c-86ad-4024-8a4e-91b1394f6eb0"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Comment puis-je commencer à planifier ma retraite ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Pour démarrer votre parcours de planification de la retraite, commencez par évaluer votre situation financière actuelle et réfléchissez à vos objectifs de retraite. Ensuite, consultez l'un de nos conseillers pour créer un plan de retraite personnalisé adapté à vos besoins.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "af0e2d53-214d-42c7-9011-14e2eb9cc02e"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: 退職後の生活設計はどのように始めればよいのでしょうか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: リタイアメント・プランニングの旅を始めるには、まず現在の財務状況を評価し、リタイアメントの目標を考えることから始めよう。 次に、私どものアドバイザーにご相談いただき、お客様のニーズに合った退職プランをお作りください。

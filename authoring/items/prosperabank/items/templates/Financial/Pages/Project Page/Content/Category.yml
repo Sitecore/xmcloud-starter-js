@@ -1,0 +1,27 @@
+﻿---
+ID: "2d078f28-3700-4ab1-a5bd-24fcc36316c4"
+Parent: "e8fdd1e3-4636-4459-8228-bb39f8c3041d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Pages/Project Page/Content/Category
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 150
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "af35bfd2-8d8a-4e71-bfa5-5c4e0aa65729"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c0e21f7d-e7e4-4571-9af8-8735d1b551fe"

@@ -1,0 +1,13 @@
+.row.column-splitter {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 5px * 0.5;
+    padding-right: 5px * 0.5;
+    max-width: none;
+    row-gap: 1rem;
+
+    > div {
+       padding-left: 5px;
+       padding-right: 5px;
+    }
+}

@@ -1,0 +1,185 @@
+project:
+  reactComponentRoot: "src/components/uiim"
+  shadcnImportBase: "@/components/ui"
+  componentMapPath: ".sitecore/component-map.ts"
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"
+  usesTailwind: true
+  usesShadcn: true
+
+tools:
+  marketerMcp:
+    preferred: true
+    useFor:
+      - "create or update Sitecore templates"
+      - "create or update standard values"
+      - "create or update folder templates"
+      - "create or update datasource folders"
+      - "create or update renderings"
+      - "set insert options / __Masters"
+      - "set datasource location and ComponentQuery"
+  documentationMcp:
+    allowed: true
+    useWhen:
+      - "official Sitecore behavior is unclear"
+      - "GraphQL/rendering configuration is uncertain"
+
+siteCollection: "acme"
+siteName: "main"
+category: "banners"
+
+component:
+  namePascal: "PromoBanner"
+  nameKebab: "promo-banner"
+  kind: "simple"
+  filePath: "src/components/uiim/banners/PromoBanner.tsx"
+  componentMapKey: "promo-banner"
+  componentMapImportAlias: "promoBanner"
+
+design:
+  references: []
+  extractedLayout:
+    summary: "Dark promo banner with left image, right text (gradient headline, body, CTA)."
+    visibleElements:
+      - "Title"
+      - "Description"
+      - "PromoImage"
+      - "PrimaryLink"
+    inferredFields:
+      - "Title"
+      - "Description"
+      - "PromoImage"
+      - "PrimaryLink"
+    repeatedItems: false
+    likelyVariantNames:
+      - "Default"
+    responsiveViews: []
+  assumptions: []
+  openQuestions: []
+
+context:
+  usesRouteFields: false
+  routeTemplateName: ""
+  routeFields: []
+
+templates:
+  parent:
+    create: true
+    path: "/sitecore/templates/Project/acme/Components/Banners/Promo Banner"
+    name: "Promo Banner"
+    sectionName: "Data"
+    fields:
+      - name: "Title"
+        type: "Single-Line Text"
+      - name: "Description"
+        type: "Rich Text"
+      - name: "PromoImage"
+        type: "Image"
+      - name: "PrimaryLink"
+        type: "General Link"
+    baseTemplates:
+      - "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"  # Standard Template
+      - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters
+    standardValues:
+      create: true
+      defaults:
+        Title: "$name"
+      masters: []
+      addHorizonDatasourceGrouping: false
+
+  child:
+    create: false
+    path: ""
+    name: ""
+    sectionName: "Data"
+    fields: []
+    baseTemplates: []
+    standardValues:
+      create: false
+      defaults: {}
+      masters: []
+
+folderTemplate:
+  create: true
+  path: "/sitecore/templates/Project/acme/Folders/Promo Banner Folder"
+  name: "Promo Banner Folder"
+  standardValues:
+    create: true
+    masters:
+      - "Promo Banner"
+
+datasourceFolder:
+  create: true
+  path: "/sitecore/content/acme/main/Data/Promo Banners"
+  name: "Promo Banners"
+
+  insertOptions: []  # REQUIRED: set on the folder item itself
+  exampleItem:
+    create: true
+    name: "Promo Banner"
+    fields: {}
+renderingParamsTemplate:
+  create: true
+  path: "/sitecore/templates/Project/acme/Rendering Parameters/Banners/Promo Banner"
+  name: "Promo Banner"
+  baseTemplates:
+    - "{4247AAD4-EBDE-4994-998F-E067A51B1FE4}"  # IComponentVariant
+    - "{5C74E985-E055-43FF-B28C-DB6C6A6450A2}"  # IStyling
+    - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters
+    - "{3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}"  # IRenderingId
+
+headlessVariants:
+  create: true
+  containerPath: "/sitecore/content/acme/main/Presentation/Headless Variants/PromoBanner"
+  variants:
+  - "Default"
+
+availableRenderings:
+  register: true
+  targetPath: "/sitecore/content/acme/main/Presentation/Available Renderings/Page Content"
+
+rendering:
+  create: true
+  path: "/sitecore/layout/Renderings/Project/acme/Banners/Promo Banner"
+  name: "Promo Banner"
+  componentName: "PromoBanner"  # MUST be PascalCase matching TSX filename exactly
+  datasourceRequired: true
+  datasourceTemplatePath: "/sitecore/templates/Project/acme/Components/Banners/Promo Banner"
+  datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Promo Banner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Promo Banner Folder']"
+  dataSource: ""
+  addFieldEditorButton: "1"
+  parametersTemplateId: ""  # MUST be Item ID (GUID) resolved via MCP — never a path
+  useComponentQuery: false
+  componentQuery: ""
+
+react:
+  propsShape: "default-jss"
+  usesSitecoreJssHelpers: true
+  usesShadcn: true
+  usesTailwind: true
+  variants:
+    - "Default"
+
+mcp:
+  useMcp: true
+  planOnly: false
+
+verification:
+  checks:
+    - "Template exists"
+    - "__Standard Values exists"
+    - "Folder template exists"
+    - "Folder template __Masters points to Promo Banner"
+    - "Content folder exists under /Data"
+    - "Rendering exists"
+    - "Datasource Template uses full path"
+    - "ComponentQuery is empty"
+    - "React file exists under src/components/uiim"
+    - "React uses top-level fields.Title / fields.Description / fields.PromoImage / fields.PrimaryLink"
+    - "Component map updated"
+    - "Tailwind + shadcn/ui pattern used"
+
+notes:
+  - "Sitecore items created via marketer MCP (create_content_item, update_fields_on_content_item)."
+  - "Prefer shadcn Card/Button primitives with Sitecore Content SDK editable field helpers."
+  - "MCP-created items: datasource template (ce483486), Data section, Title/Description/PromoImage/PrimaryLink fields, __Standard Values (41e0101a, templateId=Promo Banner), folder template (34d06ac8), folder __Standard Values (26a3d955, templateId=Promo Banner Folder), datasource folder Promo Banners (f684a188), JSON Rendering (b8a741b2)."
+  - "If datasource picker is empty: verify Datasource Template and Datasource Location on rendering in Content Editor; verify folder template __Standard Values __Masters = Promo Banner template."

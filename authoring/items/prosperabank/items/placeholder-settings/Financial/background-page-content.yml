@@ -1,0 +1,20 @@
+﻿---
+ID: "936bbb4a-6772-4db5-a0ea-fabee542eba9"
+Parent: "886787bc-afe2-43a0-bc26-38178f98ad34"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/Financial/background-page-content"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "background-page-content"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ea216732-ac1b-4907-805e-c6bb91681a07"

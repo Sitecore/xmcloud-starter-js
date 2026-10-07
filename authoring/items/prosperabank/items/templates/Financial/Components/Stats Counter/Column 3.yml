@@ -1,0 +1,17 @@
+﻿---
+ID: "e8ed6863-9dcc-41c8-a8f7-9154b1151da3"
+Parent: "c24bfc74-c6e2-413a-aebd-903180dfaff7"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Stats Counter/Column 3
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 235
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "64791b58-e931-400e-a03f-96e6704d1e75"

@@ -1,0 +1,180 @@
+project:  
+  reactComponentRoot: "src/components/uiim"  
+  shadcnImportBase: "@/components/ui"  
+  componentMapPath: ".sitecore/component-map.ts"  
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"  
+  usesTailwind: true  
+  usesShadcn: true  
+  
+tools:  
+  marketerMcp:  
+    preferred: true  
+    useFor:  
+      - "create or update Sitecore renderings"  
+      - "create or update route/page templates when explicitly in scope"  
+      - "create or update standard values when page template changes are required"  
+  documentationMcp:  
+    allowed: true  
+    useWhen:  
+      - "official Sitecore behavior is unclear"  
+      - "rendering configuration is uncertain"  
+      - "the agent needs product documentation verification"  
+  
+siteCollection: "acme"  
+siteName: "main"  
+category: "Page"  
+  
+component:  
+  namePascal: "PageHero"  
+  nameKebab: "page-hero"  
+  kind: "context-only"  
+  filePath: "src/components/uiim/page/PageHero.tsx"  
+  componentMapKey: "page-hero"  
+  componentMapImportAlias: "pageHero"  
+  
+design:  
+  references: []  
+  extractedLayout:  
+    summary: "A page-level hero rendered from route fields with eyebrow, title, description, image, and CTA."  
+    visibleElements:  
+      - "Eyebrow text"  
+      - "Title"  
+      - "Description"  
+      - "Hero image"  
+      - "Primary CTA"  
+    inferredFields:  
+      - "EyebrowText"  
+      - "Title"  
+      - "Description"  
+      - "HeroImage"  
+      - "PrimaryLink"  
+    repeatedItems: false  
+    likelyVariantNames:  
+      - "Default"  
+    responsiveViews: []  
+  assumptions:  
+    - "The Content Page route template already contains the required fields"  
+  openQuestions:  
+    - "If the fields are missing from Content Page, should the route template be updated?"  
+  
+context:  
+  usesRouteFields: true  
+  routeTemplateName: "Content Page"  
+  routeFields:  
+    - name: "EyebrowText"  
+      type: "Single-Line Text"  
+    - name: "Title"  
+      type: "Single-Line Text"  
+    - name: "Description"  
+      type: "Rich Text"  
+    - name: "HeroImage"  
+      type: "Image"  
+    - name: "PrimaryLink"  
+      type: "General Link"  
+  
+templates:  
+  parent:  
+    create: false  
+    path: ""  
+    name: ""  
+    sectionName: "Data"  
+    fields: []  
+    baseTemplates: []  
+    standardValues:  
+      create: false  
+      defaults: {}  
+      masters: []  
+      addHorizonDatasourceGrouping: false  
+  
+  child:  
+    create: false  
+    path: ""  
+    name: ""  
+    sectionName: "Data"  
+    fields: []  
+    baseTemplates: []  
+    standardValues:  
+      create: false  
+      defaults: {}  
+      masters: []  
+  
+folderTemplate:  
+  create: false  
+  path: ""  
+  name: ""  
+  standardValues:  
+    create: false  
+    masters: []  
+  
+datasourceFolder:  
+  create: false  
+  path: ""  
+  name: ""  
+  exampleItem:
+    create: false
+  
+renderingParamsTemplate:
+  create: true
+  path: "/sitecore/templates/Project/acme/Rendering Parameters/Page/Page Hero"
+  name: "Page Hero"
+  baseTemplates:
+    - "{4247AAD4-EBDE-4994-998F-E067A51B1FE4}"  # IComponentVariant
+    - "{5C74E985-E055-43FF-B28C-DB6C6A6450A2}"  # IStyling
+    - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters
+    - "{3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}"  # IRenderingId
+
+headlessVariants:
+  create: true
+  containerPath: "/sitecore/content/acme/main/Presentation/Headless Variants/PageHero"
+  variants:
+  - "Default"
+
+availableRenderings:
+  register: true
+  targetPath: "/sitecore/content/acme/main/Presentation/Available Renderings/Page Content"
+
+rendering:
+  create: true  
+  path: "/sitecore/layout/Renderings/Project/acme/Page/PageHero"  
+  name: "PageHero"  
+  componentName: "PageHero"  # MUST be PascalCase matching TSX filename exactly  
+  datasourceRequired: false  
+  datasourceTemplatePath: ""  
+  datasourceLocationQuery: ""  
+  dataSource: ""  
+  addFieldEditorButton: "1"  
+  parametersTemplateId: ""  # MUST be Item ID (GUID) resolved via MCP — never a path
+  useComponentQuery: false
+  componentQuery: ""  
+  
+react:  
+  propsShape: "context-route"  
+  usesSitecoreJssHelpers: true  
+  usesShadcn: true  
+  usesTailwind: true  
+  variants:  
+    - "Default"  
+  
+mcp:  
+  useMcp: true  
+  planOnly: false  
+  
+verification:  
+  checks:  
+    - "Rendering exists"  
+    - "Rendering is JSON Rendering"  
+    - "Rendering does not require datasource"  
+    - "Datasource Template is empty"  
+    - "Datasource Location is empty"  
+    - "ComponentQuery is empty"  
+    - "React file exists under src/components/uiim"  
+    - "React uses useSitecore() (SDK 2.0)"
+    - "React reads page?.layout?.sitecore?.route?.fields"  
+    - "Sitecore JSS helpers render editable route fields"  
+    - "Component map updated"  
+    - "Tailwind + shadcn/ui pattern used"  
+    - "If route template changed, __Standard Values exists"  
+  
+notes:  
+  - "Assumes the Content Page template already contains the required route fields."  
+  - "If not, confirm page template changes before using marketer MCP to update the route template."  

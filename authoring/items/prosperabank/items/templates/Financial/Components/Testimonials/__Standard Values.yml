@@ -1,0 +1,27 @@
+﻿---
+ID: "9152325a-786c-4f07-99c8-1ece924f3a77"
+Parent: "91cd4de0-ed0b-457b-9936-a333e8a874a3"
+Template: "91cd4de0-ed0b-457b-9936-a333e8a874a3"
+Path: /sitecore/templates/Project/Financial/Components/Testimonials/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{40472280-0A67-4C52-A06B-79E327AF9F44}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4df470bf-98d6-498a-a2ea-1c5867f529b2"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f0a618f7-9c93-46dd-abba-751d1a8221ad"

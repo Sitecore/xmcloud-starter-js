@@ -1,0 +1,108 @@
+.stats-counter {
+  .container-wide-fluid {
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .container {
+    @include respond-to(mobile-large) {
+      padding-left: $size-padding;
+      padding-right: $size-padding;
+    }
+
+    > .row {
+      position: relative;
+      border: 1px solid var(--border-color);
+      border-radius: var(--roundness);
+      background-color: var(--bg-body);
+      z-index: 2;
+
+      > div {
+        padding: 3em;
+
+        &:nth-child(2) {
+          border-left: 1px solid var(--border-color);
+          border-right: 1px solid var(--border-color);
+
+          @include respond-to(mobile-large) {
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-left: none;
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
+  .image-left,
+  .image-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17rem;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--roundness);
+    object-fit: cover;
+
+    @include respond-to(mobile-large) {
+      position: static;
+      transform: none;
+      width: 100%;
+      height: 17rem;
+      aspect-ratio: unset;
+    }
+  }
+
+  .image-left {
+    left: 0;
+
+    @include respond-to(mobile-large) {
+      margin-bottom: -3rem;
+    }
+  }
+
+  .image-right {
+    right: 0;
+
+    @include respond-to(mobile-large) {
+      margin-top: -3rem;
+    }
+  }
+
+  &.with-dotted-accents {
+    .dotted-accent {
+      position: absolute;
+      z-index: 1;
+
+      &-top {
+        top: -3rem;
+        left: 19rem;
+
+        @include respond-to(mobile-large) {
+          top: 0;
+          right: 0;
+          left: unset;
+        }
+      }
+
+      &-bottom {
+        bottom: -3rem;
+        right: 19rem;
+
+        @include respond-to(mobile-large) {
+          bottom: 0;
+          left: 0;
+          right: unset;
+        }
+      }
+    }
+  }
+
+  &:not(.with-dotted-accents) {
+    .dotted-accent {
+      display: none;
+    }
+  }
+}

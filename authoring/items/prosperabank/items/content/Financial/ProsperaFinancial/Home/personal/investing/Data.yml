@@ -1,0 +1,24 @@
+﻿---
+ID: "6a4de0f3-8048-427a-884b-da146da7f4e0"
+Parent: "b6d8ef4d-8137-4081-b939-7058c1fd944a"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/personal/investing/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8f548452-7d04-47a8-be73-0bea72237110"
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: データ
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0943a781-25c2-4e3e-a4ba-9ef7cb7b3ffb"

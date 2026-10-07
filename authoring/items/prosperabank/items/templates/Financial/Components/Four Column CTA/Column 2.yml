@@ -1,0 +1,17 @@
+﻿---
+ID: "773a0333-471a-4d95-be11-77ddb61a5b67"
+Parent: "1b694ef9-154d-429a-9c3f-d7774cd4a852"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Four Column CTA/Column 2
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0666ecec-1b8a-497c-8d7f-1a4ce53d4b7e"

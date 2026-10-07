@@ -1,0 +1,13 @@
+﻿---
+ID: "ec889e0f-ea0a-4490-9114-83a84249b495"
+Parent: "e68ae959-c283-44db-8c79-75f4854aa3e4"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/articles/beware-of-financial-online-scams/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cb1beeb7-f135-479e-ba59-4eea42f97a6d"

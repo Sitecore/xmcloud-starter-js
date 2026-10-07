@@ -1,0 +1,44 @@
+﻿---
+ID: "bdff6718-efbe-4357-9290-01394d008f42"
+Parent: "32f00428-21ac-4dc0-aa2b-f2e31ca3e97e"
+Template: "32f00428-21ac-4dc0-aa2b-f2e31ca3e97e"
+Path: /sitecore/templates/Project/Financial/Components/Comparison/__Standard Values
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/navigate_right.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "03daa2fa-f925-4c70-b195-b52a5889f803"
+      Hint: Value1
+      Value: /
+    - ID: "139b10e3-2363-40f9-8351-59a724c1a135"
+      Hint: Amount1
+      Value: 5000
+    - ID: "22ea3b6c-7d16-47dc-b1d7-9e6686c6bd9b"
+      Hint: Amount2
+      Value: 700000
+    - ID: "55199a29-334d-41c9-b133-7163c9e82a7c"
+      Hint: Currency2
+      Value: euro
+    - ID: "620c2827-7248-4310-8de3-7c55ab40a5e3"
+      Hint: Subtitle1
+      Value: Minimum
+    - ID: "811c52c9-9a0d-4c2b-88c5-817193be5c7d"
+      Hint: Title1
+      Value: Amount
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "679fdbac-d923-49e2-8d45-d64f658b5b83"
+    - ID: "bd2c7af4-8f8f-4518-8d5d-2c1006bce654"
+      Hint: Subtitle2
+      Value: Maximum
+    - ID: "ef3b1e0a-490d-4340-8ebc-5612d6be5e74"
+      Hint: Currency1
+      Value: euro

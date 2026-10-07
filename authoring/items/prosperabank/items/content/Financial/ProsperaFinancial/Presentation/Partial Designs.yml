@@ -1,0 +1,18 @@
+﻿---
+ID: "ed95dbf0-cd26-40c0-874d-7b6fb1b5c0ea"
+Parent: "bfd19688-08f7-47b3-b703-0ff0f56effb9"
+Template: "5dce5575-a107-421a-aefc-d67ea7b846fa"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Partial Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{703ABB6D-BE33-4F9D-97FF-EE1571A14C81}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d3a2f31e-f3e0-4e74-b3a7-ef73dcdd8850"

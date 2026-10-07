@@ -1,0 +1,56 @@
+﻿---
+ID: "75a0e531-1e29-4e01-b6d4-76c215b4c16f"
+Parent: "d3fdded9-44ae-4410-961c-3320cc82d638"
+Template: "d3fdded9-44ae-4410-961c-3320cc82d638"
+Path: /sitecore/templates/Project/Financial/Components/Features/__Standard Values
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/transform.png
+- ID: "3ead9061-0aaf-4743-9278-1206162fe9ac"
+  Hint: Image1
+  Value: |
+    <image mediaid="{F9AC5643-A093-4C1E-9630-C3FB850E924C}" alt="features_icon" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "07f9bc8b-d647-4c6f-a67f-dc3b813f93cc"
+      Hint: Text1
+      Value: Full service range including technical skills, design.
+    - ID: "188ab916-1cc0-4034-b57a-7d62bafcca30"
+      Hint: Title2
+      Value: Accessibility
+    - ID: "2ea267e1-7e99-40db-b919-2ab9ade0658c"
+      Hint: Link
+      Value: |
+        <link text="CONTACT US" linktype="anchor" url="contact-us" anchor="contact-us" title="CONTACT US" class="" />
+    - ID: "5d056c68-5c1a-4f1e-b5e1-55ff37357f95"
+      Hint: Eyebrow
+      Value: Features
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bfe4207c-f8c0-4abd-b65b-0829ff5afc2b"
+    - ID: "c4e8a8a6-23ee-4204-a871-d7615b0ccd3e"
+      Hint: Text2
+      Value: Business understanding, ability to put themselves.
+    - ID: "e325f933-a74c-4ab8-a40e-a6298391e093"
+      Hint: Title1
+      Value: Professional
+    - ID: "ea0498ea-e265-4f30-a26d-0650429f5f56"
+      Hint: Text
+      Value: Long run, and work as an extension of the merchant's team.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "679fdbac-d923-49e2-8d45-d64f658b5b83"
+    - ID: "ea0498ea-e265-4f30-a26d-0650429f5f56"
+      Hint: Text
+      Value: Amount

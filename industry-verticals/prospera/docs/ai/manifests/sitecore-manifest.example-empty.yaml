@@ -1,0 +1,131 @@
+# Sitecore AI Manifest
+# Auto-maintained by the AI agent during every Sitecore component task.
+# Commit this file to the repo. The agent reads it before every task to avoid
+# duplicates and understand the current state of AI-created Sitecore items.
+#
+# Do not edit manually unless correcting a known drift between this file and
+# the actual Sitecore instance. If you do edit manually, add a note in the
+# entry's `notes` field.
+#
+# This file is an *example* only and should not be used for source-of-truth
+# tracking (it intentionally starts empty).
+
+generatedAt: "2026-03-20T09:00:00Z"          # ISO timestamp of initial creation
+lastUpdatedAt: "2026-03-20T09:00:00Z"        # ISO timestamp of most recent agent update
+lastUpdatedBy: "cursor"        # agent identifier or session hint (e.g. "cursor", "cline", "claude")
+
+project:
+  siteCollection: "new"     # from docs/ai/config/project.yaml
+  siteName: "fmc"           # from docs/ai/config/project.yaml
+  sdk: "@sitecore-content-sdk/nextjs"                # from docs/ai/config/project.yaml
+  renderingsRoot: "/sitecore/layout/Renderings/Project/new"
+  projectTemplatesRoot: "/sitecore/templates/Project/new"
+  dataRoot: "/sitecore/content/new/fmc/Data"           # derived
+  projectFoldersRoot: "/sitecore/templates/Project/new/Folders" # derived
+  renderingParamsRoot: "/sitecore/templates/Project/new/Rendering Parameters" # derived
+  headlessVariantsRoot: "/sitecore/content/new/fmc/Presentation/Headless Variants" # derived
+
+# ─────────────────────────────────────────────
+# Component registry — one entry per component
+# ─────────────────────────────────────────────
+#
+# This example is intentionally empty, so `components: []`.
+# When populated, each entry follows the shape shown in the real manifest file.
+components: []
+ # Each entry follows this shape:
+  #
+  # - name: "Hero"                        # PascalCase component name
+  #   kind: "simple"                      # simple | list | context-only
+  #   category: "Banners"                 # PascalCase category
+  #   status: "complete"                  # complete | partial | planned | failed
+  #   createdAt: "2026-03-21T14:00:00Z"
+  #   updatedAt: "2026-03-21T14:30:00Z"
+  #
+  #   react:
+  #     filePath: "src/components/uiim/banners/Hero.tsx"
+  #     componentMapKey: "hero"
+  #     variants:
+  #       - "Default"
+  #
+  #   templates:
+  #     datasource:
+  #       name: "Hero"
+  #       path: "/sitecore/templates/Project/greece/Components/Banners/Hero"
+  #       itemId: ""
+  #       sectionName: "Data"
+  #       fields:
+  #         - { name: "Title", type: "Single-Line Text" }
+  #         - { name: "Description", type: "Rich Text" }
+  #         - { name: "BackgroundImage", type: "Image" }
+  #         - { name: "CtaLink", type: "General Link" }
+  #       baseTemplatesSet: true
+  #       standardValues:
+  #         itemId: ""
+  #         linked: true          # template's Standard values field set
+  #
+  #     child:                    # only for list components
+  #       name: ""
+  #       path: ""
+  #       itemId: ""
+  #       sectionName: "Data"
+  #       fields: []
+  #       baseTemplatesSet: false
+  #       standardValues:
+  #         itemId: ""
+  #         linked: false
+  #
+  #     folder:
+  #       name: "Hero Folder"
+  #       path: "/sitecore/templates/Project/greece/Folders/Hero Folder"
+  #       itemId: ""
+  #       standardValues:
+  #         itemId: ""
+  #         linked: true
+  #         masters: ["Hero"]     # insert options on folder template SV
+  #
+  #     renderingParams:
+  #       name: "Hero"
+  #       path: "/sitecore/templates/Project/greece/Rendering Parameters/Banners/Hero"
+  #       itemId: ""
+  #       baseTemplatesSet: true
+  #
+  #   datasourceFolder:
+  #     name: "Heroes"
+  #     path: "/sitecore/content/greece/eurobankgr/Data/Heroes"
+  #     itemId: ""
+  #     insertOptionsSet: true    # insert options on the folder instance
+  #     exampleItem:
+  #       name: "Hero"
+  #       itemId: ""
+  #
+  #   rendering:
+  #     name: "Hero"
+  #     path: "/sitecore/layout/Renderings/Project/greece/Banners/Hero"
+  #     itemId: ""
+  #     componentName: "Hero"
+  #     datasourceTemplatePath: "/sitecore/templates/Project/greece/Components/Banners/Hero"
+  #     datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Hero Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Hero Folder']"
+  #     parametersTemplateId: ""
+  #     componentQuery: ""
+  #     addFieldEditorButton: "1"
+  #     registeredInAvailableRenderings: true
+  #
+  #   headlessVariants:
+  #     containerPath: "/sitecore/content/greece/eurobankgr/Presentation/Headless Variants/Hero"
+  #     containerId: ""
+  #     variants:
+  #       - { name: "Default", itemId: "" }
+  #
+  #   verification:
+  #     checkedAt: "2026-03-21T14:30:00Z"
+  #     passed: []               # list of checks that passed
+  #     failed: []               # list of checks that failed
+  #     pendingManual: []        # silent-write fields needing Content Editor check
+  #
+  #   notes: []                  # free-form agent or human notes
+
+# ─────────────────────────────────────────────
+# Lookup cache (optional)
+# ─────────────────────────────────────────────
+lookups: []
+

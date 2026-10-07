@@ -1,0 +1,20 @@
+﻿---
+ID: "baa7750c-6f60-479a-84f2-f74c6db52b6c"
+Parent: "90d315e8-aa42-4b23-a7eb-4491396453f8"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Hero/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "259dbb22-6dad-4e0e-b1e5-ea73aab2c2e5"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2057e225-5db4-4b6d-b0b6-c78f6c137b56"

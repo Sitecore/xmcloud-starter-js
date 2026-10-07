@@ -1,0 +1,72 @@
+﻿---
+ID: "eb39b85b-ccd0-4cee-93a6-fde652f124bd"
+Parent: "7c636d37-263c-4134-8f97-1fa3124285fd"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/personal/borrowing/Data/Rich Text
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        
+        <h2>Smart Borrowing: Your Path to Financial Freedom</h2>
+        <p>Smart borrowing is more than just obtaining a loan; it's about strategically leveraging financial tools to achieve your goals while minimizing risk. By understanding the principles of responsible borrowing, you can pave the way towards a more secure financial future.</p>
+        <p>One fundamental aspect of smart borrowing is borrowing only what you need and can afford to repay. Before taking out a loan or utilizing credit, carefully assess your financial situation and determine the amount you realistically need to achieve your objectives.</p>
+        <p>Additionally, it's crucial to compare loan options and terms from multiple lenders to ensure you secure the most favorable terms. Look for loans with competitive interest rates, transparent fees, and flexible repayment options that align with your budget and financial goals.</p>
+        <p>Furthermore, prioritize borrowing for investments that have the potential to generate long-term value or improve your financial situation, such as education, homeownership, or business ventures. Avoid using borrowed funds for discretionary expenses or non-essential purchases that could lead to unnecessary debt.</p>
+        <p>When borrowing, it's essential to have a clear repayment plan in place to avoid falling into a cycle of debt. Create a budget that incorporates loan payments and allows you to meet your financial obligations while still saving for the future and covering unexpected expenses.</p>
+        <h2>Your Path to Financial Freedom</h2>
+        <p>Consistently monitor your credit score and credit report to ensure accuracy and identify any potential issues or discrepancies. A strong credit history can open doors to better loan terms and opportunities for future borrowing, so it's essential to maintain responsible credit management habits.</p>
+        <p>Lastly, in times of financial hardship or difficulty, don't hesitate to reach out to your lenders to discuss potential repayment options or assistance programs. Many lenders offer hardship provisions or loan modification options to help borrowers during challenging times.</p>
+        <p>By embracing the principles of smart borrowing and making informed financial decisions, you can take control of your financial future and work towards achieving your dreams with confidence.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "23b8d88b-fac6-4c38-9f77-335a236188c6"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Emprunter intelligemment : Votre chemin vers la liberté financière</h2>
+        <p>Emprunter intelligemment ne se résume pas à obtenir un prêt ; il s'agit de tirer parti des outils financiers de manière stratégique pour atteindre vos objectifs tout en minimisant les risques. En comprenant les principes de l'emprunt responsable, vous pouvez vous ouvrir la voie vers un avenir financier plus sûr.</p>
+        <p>Un aspect fondamental de l'emprunt intelligent est d'emprunter seulement ce dont vous avez besoin et que vous pouvez vous permettre de rembourser. Avant de contracter un prêt ou d'utiliser un crédit, évaluez soigneusement votre situation financière et déterminez le montant dont vous avez réellement besoin pour atteindre vos objectifs.</p>
+        <p>De plus, il est crucial de comparer les options de prêt et les conditions proposées par plusieurs prêteurs pour vous assurer d'obtenir les conditions les plus favorables. Recherchez des prêts avec des taux d'intérêt compétitifs, des frais transparents et des options de remboursement flexibles qui correspondent à votre budget et à vos objectifs financiers.</p>
+        <p>En outre, privilégiez les emprunts pour des investissements qui ont le potentiel de générer une valeur à long terme ou d'améliorer votre situation financière, tels que l'éducation, l'accession à la propriété ou les projets d'entreprise. Évitez d'utiliser des fonds empruntés pour des dépenses discrétionnaires ou des achats non essentiels qui pourraient entraîner une dette inutile.</p>
+        <p>Lorsque vous empruntez, il est essentiel d'avoir un plan de remboursement clair pour éviter de tomber dans un cycle d'endettement. Créez un budget qui intègre les paiements de prêt et vous permet de respecter vos obligations financières tout en épargnant pour l'avenir et en couvrant les dépenses imprévues.</p>
+        <h2>Votre chemin vers la liberté financière</h2>
+        <p>Surveillez régulièrement votre cote de crédit et votre rapport de crédit pour en assurer l'exactitude et identifier tout problème ou toute divergence potentielle. Un historique de crédit solide peut ouvrir des portes à de meilleures conditions de prêt et à des opportunités d'emprunt futur, il est donc essentiel de maintenir des habitudes responsables de gestion du crédit.</p>
+        <p>Enfin, en période de difficultés financières, n'hésitez pas à contacter vos prêteurs pour discuter des options de remboursement potentielles ou des programmes d'assistance. De nombreux prêteurs offrent des dispositions pour les difficultés ou des options de modification de prêt pour aider les emprunteurs en période difficile.</p>
+        <p>En adoptant les principes de l'emprunt intelligent et en prenant des décisions financières éclairées, vous pouvez prendre le contrôle de votre avenir financier et travailler à la réalisation de vos rêves en toute confiance.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "585b92fb-ebb6-4d06-8a18-e53cac976956"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        
+        <h2>賢い借り入れ 経済的自由への道</h2>
+        <p>賢い借り入れとは、単にローンを組むことではなく、金融ツールを戦略的に活用し、リスクを最小限に抑えながら目標を達成することです。 責任ある借り入れの原則を理解することで、より安全な経済的未来への道を開くことができます。</p>
+        <p>賢い借り入れの基本的な側面のひとつは、必要な分だけを借り入れ、返済する余裕があることだ。 ローンを組んだりクレジットを利用したりする前に、自分の経済状況を慎重に見極め、目的を達成するために現実的に必要な金額を見極めましょう。</p>
+        <p>さらに、最も有利な条件を確保するためには、複数の金融機関のローン・オプションと条件を比較することが極めて重要です。 競争力のある金利、透明性の高い手数料、予算や財務目標に沿った柔軟な返済方法を備えたローンを探しましょう。</p>
+        <p>さらに、教育、持ち家、事業など、長期的な価値を生み出す可能性のある投資や、財務状況を改善する可能性のある投資のための借り入れを優先しましょう。 不必要な負債につながる可能性のある、裁量的な支出や必要のない買い物に借入資金を使うのは避けましょう。</p>
+        <p>借金をする際には、借金の連鎖に陥らないよう、明確な返済計画を立てることが不可欠だ。 ローンの支払いを織り込んだ予算を立て、将来のための貯蓄や予期せぬ出費をカバーしつつ、金銭的な義務を果たせるようにしましょう。</p>
+        <h2>経済的自由への道</h2>
+        <p>クレジット・スコアと信用報告書を常に監視し、正確性を確保し、潜在的な問題や不一致を特定する。 強力なクレジットヒストリーは、より良いローン条件や将来の借入の機会への扉を開くことができますので、責任あるクレジット管理の習慣を維持することが不可欠です。</p>
+        <p>最後に、経済的に苦しい時や困難な時には、遠慮なく金融機関に連絡し、返済オプションや支援プログラムの可能性について相談してください。 多くの金融機関は、困難な時期に借り手を支援するために、ハードシップ条項やローン変更オプションを提供しています。</p>
+        <p>賢い借り入れの原則を受け入れ、十分な情報を得た上で財務上の決断を下すことで、経済的な未来をコントロールし、自信を持って夢の実現に取り組むことができます。</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7bbfd731-92da-4b6c-9310-86674dad1345"

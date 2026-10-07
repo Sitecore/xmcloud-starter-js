@@ -1,0 +1,20 @@
+﻿---
+ID: "c22dfae5-d27c-4f09-adbe-7f324fe709d2"
+Parent: "aef71d24-a81f-4be5-abda-df88e5497f07"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Styles/Theming/Dark Image
+SharedFields:
+- ID: "09147fb2-ebfb-4949-8c8e-26a424409d5e"
+  Hint: Value
+  Value: dark
+- ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
+  Hint: Allowed Renderings
+  Value: "{B7CDF75E-716A-4C59-B9B1-CD970AE0A4AE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "910894a3-5042-4434-a9c6-2ecc42b788ed"

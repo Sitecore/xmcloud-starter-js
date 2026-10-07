@@ -1,0 +1,52 @@
+﻿---
+ID: "7947114d-a907-4f6b-82ce-db1fa33c799e"
+Parent: "1fb854c6-9c57-40f7-a440-6da1356b9046"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/about-us/Data/Rich text"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: "<p>At PLAY! Finance, we believe that managing your finances should be as enjoyable as it is essential. We're not just a bank; we're your financial partner, committed to making banking a seamless and rewarding experience.</p><h2>Our Mission</h2><p>Our mission is to empower our customers to achieve their financial goals and dreams by providing innovative banking solutions and personalized service. We strive to create a banking experience that is simple, convenient, and enjoyable, allowing you to focus on what matters most—living your best life.</p><h2>Who We Are</h2><p>PLAY! Finance is a dynamic and forward-thinking financial institution dedicated to reimagining banking for the modern world. We combine cutting-edge technology with a human touch to deliver tailored financial solutions that meet the unique needs of our diverse customer base.</p><h2>What Sets Us Apart</h2><p>At PLAY! Finance, we understand that one size does not fit all when it comes to banking. That's why we offer a wide range of products and services designed to cater to individuals, families, and businesses of all sizes. Whether you're saving for a dream vacation, buying your first home, or growing your business, we have the tools and expertise to help you succeed.</p><h2>Our Commitment to You</h2><p>At the heart of PLAY! Finance is a commitment to putting our customers first. We believe in transparency, integrity, and accountability in everything we do. Our team of experienced banking professionals is dedicated to providing exceptional service and guidance every step of the way, ensuring that you have the support you need to make informed financial decisions.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2fefba2c-819e-4ad0-af30-83a867fee82d"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <p>Chez PLAY! Finance, nous croyons que gérer vos finances devrait être aussi agréable qu'essentiel. Nous ne sommes pas seulement une banque; nous sommes votre partenaire financier, engagé à rendre l'expérience bancaire fluide et gratifiante.</p>
+        
+        <h2>Notre mission</h2>
+        <p>Notre mission est de donner à nos clients les moyens d'atteindre leurs objectifs et leurs rêves financiers en offrant des solutions bancaires innovantes et un service personnalisé. Nous nous efforçons de créer une expérience bancaire simple, pratique et agréable, vous permettant de vous concentrer sur ce qui compte le plus : vivre votre meilleure vie.</p>
+        
+        <h2>Qui nous sommes</h2>
+        <p>PLAY! Finance est une institution financière dynamique et avant-gardiste dédiée à réinventer la banque pour le monde moderne. Nous combinons une technologie de pointe avec une touche humaine pour offrir des solutions financières adaptées aux besoins uniques de notre clientèle diversifiée.</p>
+        
+        <h2>Ce qui nous distingue</h2>
+        <p>Chez PLAY! Finance, nous comprenons qu'une approche unique ne convient pas à tous en matière de banque. C'est pourquoi nous proposons une large gamme de produits et de services conçus pour répondre aux besoins des individus, des familles et des entreprises de toutes tailles. Que vous épargniez pour des vacances de rêve, achetiez votre première maison ou développiez votre entreprise, nous avons les outils et l'expertise pour vous aider à réussir.</p>
+        
+        <h2>Notre engagement envers vous</h2>
+        <p>Au cœur de PLAY! Finance se trouve un engagement à mettre nos clients en premier. Nous croyons en la transparence, l'intégrité et la responsabilité dans tout ce que nous faisons. Notre équipe de professionnels bancaires expérimentés est dédiée à fournir un service et des conseils exceptionnels à chaque étape, vous assurant le soutien nécessaire pour prendre des décisions financières éclairées.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f06afd93-edb7-41eb-b5a9-5a0de53bb3cb"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: "<p>PLAY！ Financeでは、財務管理は必要不可欠であると同時に楽しいものであるべきだと考えています。 PLAY!Financeは単なる銀行ではなく、お客様のファイナンシャル・パートナーとして、シームレスでやりがいのあるバンキング体験をお約束します。</p><h2>私たちの使命</h2><p>当行の使命は、革新的なバンキング・ソリューションとお客さま一人ひとりに合ったサービスを提供することにより、お客さまが金融面での目標や夢を達成できるようお手伝いすることです。 シンプルで便利、そして楽しいバンキング体験を提供することで、お客様が最も重要なこと、つまり最高の人生を送ることに集中できるよう、努めています。</p><h2>会社概要</h2><p>PLAY！ ファイナンスは、ダイナミックで先進的な金融機関です。 最先端のテクノロジーとヒューマン・タッチを融合させ、多様なお客様のニーズに合わせた金融ソリューションを提供しています。</p><h2>他社との違い</h2><p>PLAY！ Financeでは、銀行業務に関して1つのサイズがすべてにフィットするわけではないことを理解しています。 PLAY!Financeでは、個人、家族、企業など、あらゆる規模のお客様にご利用いただけるよう、幅広い商品とサービスをご用意しています。 夢のバケーションのための貯蓄、初めてのマイホームの購入、ビジネスの成長など、お客様の成功をサポートするツールと専門知識をご用意しています。</p><h2>お客様へのコミットメント</h2><p>PLAYの核心！ ファイナンスの核心は、お客様を第一に考えるというコミットメントです。 私たちは、透明性、誠実さ、説明責任を信条としています。 経験豊富なバンキング・プロフェッショナル・チームが、卓越したサービスとガイダンスをあらゆるステップでご提供し、お客様が十分な情報に基づいた財務上の意思決定を行うために必要なサポートをお約束します。</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4dbea95b-1a92-44f3-8919-6bac35860713"

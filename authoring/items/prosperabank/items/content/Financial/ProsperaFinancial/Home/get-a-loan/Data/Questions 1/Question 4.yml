@@ -1,0 +1,45 @@
+﻿---
+ID: "df0160a8-eeb8-49f2-9ff8-8b090f6ac0ed"
+Parent: "1df23e4f-432f-4aff-863b-4d1d7e3925fd"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/get-a-loan/Data/Questions 1/Question 4"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "927a190b-8f05-4a89-ac2d-40f978eaab4d"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "How much can I borrow?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Loan amounts vary depending on factors such as your credit worthiness, income, and the type of loan you're applying for. During the application process, you'll have the opportunity to specify the amount you need, and we'll work with you to determine the appropriate loan amount.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "28330792-659c-46d5-9334-a071f232b596"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Combien puis-je emprunter?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Les montants des prêts varient en fonction de facteurs tels que votre solvabilité, vos revenus et le type de prêt que vous demandez. Au cours du processus de demande, vous aurez l'occasion de préciser le montant dont vous avez besoin, et nous travaillerons avec vous pour déterminer le montant de prêt approprié.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "27bc225a-d541-45d3-a55f-9cf75c95661b"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: いくら借りられますか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 融資額は、あなたの信用度、収入、申請するローンの種類などの要因によって異なります。 お申し込みの過程で、必要な金額をご指定いただく機会があり、適切な融資額をお客様と一緒に決定します。

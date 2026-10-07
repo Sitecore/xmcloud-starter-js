@@ -1,0 +1,45 @@
+﻿---
+ID: "2f527452-aa79-4c1e-ac77-64680c45ac94"
+Parent: "1df23e4f-432f-4aff-863b-4d1d7e3925fd"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/get-a-loan/Data/Questions 1/Question 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5a3aad80-bf19-4e3b-97b2-89c9ece7b802"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "What types of loans do you offer?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: We offer a variety of loans to suit your needs, including personal loans, business loans, car loans, home loans, and more. Whether you need funds for personal expenses or business ventures, we have options available.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "578958f6-13e6-4f50-ba46-214f11dad96d"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Quels types de prêts offrez-vous?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Nous proposons une variété de prêts pour répondre à vos besoins, y compris des prêts personnels, des prêts pour entreprises, des prêts automobiles, des prêts immobiliers, et bien plus encore. Que vous ayez besoin de fonds pour des dépenses personnelles ou des projets commerciaux, nous avons des options disponibles.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bdd62419-0ece-41b4-9593-ea6ec0cd3efb"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: どのような種類のローンを提供していますか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 個人ローン、ビジネスローン、マイカーローン、住宅ローンなど、お客様のニーズに合った様々なローンをご用意しております。 個人的な出費のために資金が必要な場合も、ビジネス・ベンチャーのために資金が必要な場合も、私どもには選択肢があります。

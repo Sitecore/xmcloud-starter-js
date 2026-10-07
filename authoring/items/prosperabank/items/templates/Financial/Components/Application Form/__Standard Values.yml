@@ -1,0 +1,34 @@
+﻿---
+ID: "ddb077dd-3692-48ac-a172-5b25ded5969c"
+Parent: "ae920ce6-5c6e-4842-b54c-e4b516dc0752"
+Template: "ae920ce6-5c6e-4842-b54c-e4b516dc0752"
+Path: /sitecore/templates/Project/Financial/Components/Application Form/__Standard Values
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: apps/32x32/listmanagement.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "111a810d-f802-4236-a4c1-ee1d2baccbc9"
+    - ID: "d663bd4f-2e16-421d-84a8-6c54fa9ddc0e"
+      Hint: Title
+      Value: Apply
+    - ID: "de1ea50c-6bff-4b85-ab2f-c99e57326322"
+      Hint: Subtitle
+      Value: "Apply online for consumer loan without fee for application review and approval!"
+    - ID: "e8781b03-b723-42ee-b5c4-3acb1a639f39"
+      Hint: Footnote
+      Value: |
+        By clicking the 'Submit' button, you agree to the <a href="#terms-and-conditions">Terms of Personal Data Processing and Online Application Submission</a>
+    - ID: "ef4297fb-1ef8-4b4e-ae14-2edb6069d9d8"
+      Hint: SubmitButton
+      Value: |
+        <link text="Submit" linktype="anchor" url="submit" anchor="submit" title="Submit button" class="" />

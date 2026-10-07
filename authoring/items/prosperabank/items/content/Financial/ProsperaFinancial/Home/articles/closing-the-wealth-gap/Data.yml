@@ -1,0 +1,13 @@
+﻿---
+ID: "ca8c5ef2-3fa5-4395-9fdf-f271e699f442"
+Parent: "fb9b938e-df02-46e7-9354-613d29e0b4ac"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/articles/closing-the-wealth-gap/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a00873a7-7e19-4221-94f4-f7654ba4f0e1"

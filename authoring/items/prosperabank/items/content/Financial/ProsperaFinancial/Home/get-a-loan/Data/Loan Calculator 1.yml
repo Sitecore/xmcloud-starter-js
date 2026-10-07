@@ -1,0 +1,102 @@
+﻿---
+ID: "a31edba7-d777-49f1-9d66-b35d09d87326"
+Parent: "5a737b43-b61a-431b-965e-29f28fc81962"
+Template: "8a299404-ec7c-4bc2-84c5-b6f4c5af6121"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/get-a-loan/Data/Loan Calculator 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "2b5affa6-eba2-40df-82fb-76f12d38b66e"
+      Hint: MaxTerm
+      Value: 120
+    - ID: "45ba99ae-78ab-4ae8-bd68-b5b1ae174735"
+      Hint: BankFee
+      Value: 499.99
+    - ID: "6b969172-2899-4e35-b6ec-53b6eb670f45"
+      Hint: MinTerm
+      Value: 12
+    - ID: "6e34ac44-29b8-4e35-9d5f-a01d00d0dad9"
+      Hint: TermName
+      Value: mo.
+    - ID: "7e3f75ea-27ac-4402-8dae-1773f8f49915"
+      Hint: MaxAmount
+      Value: 80000
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d146234d-e0cc-4d58-9537-b569245b2f2c"
+    - ID: "9bb8d058-6016-458e-8f27-cc12d57e7939"
+      Hint: Currency
+      Value: eur
+    - ID: "b3aa7233-e4a9-4a10-9a00-8b4c48219a5a"
+      Hint: MinAmount
+      Value: 1000
+    - ID: "fb933aba-b552-421b-82ba-664282b1a5bf"
+      Hint: InterestRate
+      Value: 6.78
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2b5affa6-eba2-40df-82fb-76f12d38b66e"
+      Hint: MaxTerm
+      Value: 120
+    - ID: "45ba99ae-78ab-4ae8-bd68-b5b1ae174735"
+      Hint: BankFee
+      Value: 499.99
+    - ID: "6b969172-2899-4e35-b6ec-53b6eb670f45"
+      Hint: MinTerm
+      Value: 12
+    - ID: "6e34ac44-29b8-4e35-9d5f-a01d00d0dad9"
+      Hint: TermName
+      Value: mo.
+    - ID: "7e3f75ea-27ac-4402-8dae-1773f8f49915"
+      Hint: MaxAmount
+      Value: 80000
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4755f01b-21fd-440e-b252-6660ab7bc8ad"
+    - ID: "9bb8d058-6016-458e-8f27-cc12d57e7939"
+      Hint: Currency
+      Value: eur
+    - ID: "b3aa7233-e4a9-4a10-9a00-8b4c48219a5a"
+      Hint: MinAmount
+      Value: 1000
+    - ID: "fb933aba-b552-421b-82ba-664282b1a5bf"
+      Hint: InterestRate
+      Value: 6.78
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "2b5affa6-eba2-40df-82fb-76f12d38b66e"
+      Hint: MaxTerm
+      Value: 120
+    - ID: "45ba99ae-78ab-4ae8-bd68-b5b1ae174735"
+      Hint: BankFee
+      Value: 499.99
+    - ID: "6b969172-2899-4e35-b6ec-53b6eb670f45"
+      Hint: MinTerm
+      Value: 12
+    - ID: "6e34ac44-29b8-4e35-9d5f-a01d00d0dad9"
+      Hint: TermName
+      Value: mo.
+    - ID: "7e3f75ea-27ac-4402-8dae-1773f8f49915"
+      Hint: MaxAmount
+      Value: 80000
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "237a3763-76fd-4f39-a5a6-8cb3e9826993"
+    - ID: "9bb8d058-6016-458e-8f27-cc12d57e7939"
+      Hint: Currency
+      Value: eur
+    - ID: "b3aa7233-e4a9-4a10-9a00-8b4c48219a5a"
+      Hint: MinAmount
+      Value: 1000
+    - ID: "fb933aba-b552-421b-82ba-664282b1a5bf"
+      Hint: InterestRate
+      Value: 6.78

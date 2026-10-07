@@ -1,0 +1,27 @@
+﻿---
+ID: "fa47153c-25d7-4f2c-af2d-1889ef5a2e76"
+Parent: "bd5988c0-88ea-4e5d-8cba-a88755dd0fb8"
+Template: "bd5988c0-88ea-4e5d-8cba-a88755dd0fb8"
+Path: /sitecore/templates/Project/Financial/Components/Image Gallery/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{D885DF8C-B2D6-4007-B34B-2BBAFB527304}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "67971da4-e065-430d-95cf-268b68fa1c4d"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f0a618f7-9c93-46dd-abba-751d1a8221ad"

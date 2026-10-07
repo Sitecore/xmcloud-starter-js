@@ -1,0 +1,71 @@
+﻿---
+ID: "8d897ee7-99a7-4c0f-8ee7-4a4303ddde13"
+Parent: "5109a19b-e647-4ef6-9b82-c6d8645fed58"
+Template: "bc79b430-f5e0-4363-83f8-5fb8ccd79c61"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/Data/Documents List 1
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1900
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b755bbbf-40de-4adf-9265-87ea6a18a432"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "22ed4827-cc6b-4a00-a358-0ccfadbea4eb"
+      Hint: Link3
+      Value: |
+        <link text="Informations concernant le traitement des données personnelles des actionnaires de la DSK Bank" linktype="anchor" url="shareholders" anchor="shareholders" title="" class="" />
+    - ID: "67fdca76-8a62-4424-a499-236787bd226c"
+      Hint: Subtitle2
+      Value: Fichier PDF
+    - ID: "742e047d-3a1f-4643-ae1e-c78847a8b700"
+      Hint: Subtitle1
+      Value: Fichier PDF
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2bd3765d-97af-4a49-b056-5f117598430b"
+    - ID: "926c0ca9-eaa5-468e-919e-de8c15876439"
+      Hint: Subtitle3
+      Value: Fichier PDF
+    - ID: "95989e20-ee37-47bf-bae1-1dedf4d57a1a"
+      Hint: Link4
+      Value: |
+        <link text=" Protection des données personnelles des particuliers chez Play! financier" linktype="anchor" url="data-protection" anchor="data-protection" title="" class="" />
+    - ID: "b2d03f41-06ad-4238-bcf2-7055674ea2a6"
+      Hint: Subtitle4
+      Value: Fichier PDF
+    - ID: "b39d2c2c-ff8b-49f4-9856-03c1d163decf"
+      Hint: Link2
+      Value: |
+        <link text="Référence bancaire - Modèle" linktype="anchor" url="bank" anchor="bank" title="" class="" />
+    - ID: "be4d4a97-19b9-4d92-a28e-38e5b09c2bc4"
+      Hint: Link1
+      Value: |
+        <link text="Formulaire de demande d'exercice d'un droit en vertu du Règlement général sur la protection des données" linktype="anchor" url="gdpr" anchor="gdpr" title="" class="" />
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "67fdca76-8a62-4424-a499-236787bd226c"
+      Hint: Subtitle2
+      Value: PDF ファイル
+    - ID: "742e047d-3a1f-4643-ae1e-c78847a8b700"
+      Hint: Subtitle1
+      Value: PDF ファイル
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5a733d7e-efcb-49cc-aabc-985c8edd8682"
+    - ID: "926c0ca9-eaa5-468e-919e-de8c15876439"
+      Hint: Subtitle3
+      Value: PDF ファイル
+    - ID: "b2d03f41-06ad-4238-bcf2-7055674ea2a6"
+      Hint: Subtitle4
+      Value: PDF ファイル

@@ -1,0 +1,31 @@
+﻿---
+ID: "5914dab5-7831-494e-ac68-b9e3a207a42f"
+Parent: "8c5008a7-e5fb-42fe-8d18-7c191e6bc510"
+Template: "35e75c72-4985-4e09-88c3-0eac6cd1e64f"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Page Branches/Default Content Page/Content Page
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Apps/32x32/logviewer.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8077b581-37bf-4aab-8673-941beca26ce6"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0ca065b6-32b6-4b96-9085-5f6b874af185"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f1b1420a-469d-426e-b604-f7fb49b8e3bb"

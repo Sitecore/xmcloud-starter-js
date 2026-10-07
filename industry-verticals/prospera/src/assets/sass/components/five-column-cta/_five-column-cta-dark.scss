@@ -1,0 +1,8 @@
+.dark .five-column-cta {
+  .image-container {
+    img {
+      filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(2%) hue-rotate(199deg)
+        brightness(103%) contrast(100%);
+    }
+  }
+}

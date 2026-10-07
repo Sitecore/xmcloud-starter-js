@@ -1,0 +1,20 @@
+﻿---
+ID: "45ba99ae-78ab-4ae8-bd68-b5b1ae174735"
+Parent: "c63cbb1e-a1e5-4162-8bec-bc21c5059215"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Loan Calculator/Data/BankFee
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Number
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 800
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a73bce44-98ba-48d7-9075-72a9cc6641e9"

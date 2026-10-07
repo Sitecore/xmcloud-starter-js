@@ -1,0 +1,17 @@
+﻿---
+ID: "77e563b7-f51f-4272-bd1b-9129fdb9340a"
+Parent: "bc79b430-f5e0-4363-83f8-5fb8ccd79c61"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Documents List/Item 3
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 250
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1277208c-f409-4b58-9c7d-92aa74dfe42d"

@@ -1,0 +1,27 @@
+﻿---
+ID: "160d7609-b15c-4d78-ab6e-cd6b9cdbbda3"
+Parent: "31860239-b0f2-4dcd-88dc-d45e87b2a03a"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/Financial/ProsperaFinancial/Personal/Borrowing
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 350
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215318Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c74f03ee-2fd7-4f98-bb2a-6f6b90a8a019"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215318Z

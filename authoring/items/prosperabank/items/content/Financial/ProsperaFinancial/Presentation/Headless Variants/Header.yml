@@ -1,0 +1,13 @@
+﻿---
+ID: "ca0a5fb7-bf12-46fc-a8e4-2838c9211ad0"
+Parent: "2d02fa8c-30c1-4025-9eb7-5b3c062f7035"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Headless Variants/Header
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d1e285fd-9db6-4b18-a215-98c2d9183ab9"

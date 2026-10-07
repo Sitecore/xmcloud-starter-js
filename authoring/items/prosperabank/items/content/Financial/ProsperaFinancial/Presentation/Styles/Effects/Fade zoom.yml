@@ -1,0 +1,26 @@
+﻿---
+ID: "62745c41-81a9-47a3-beb4-9f48077ab420"
+Parent: "46fe9ffa-add7-4887-8bfd-9fc1cab06058"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Styles/Effects/Fade zoom
+SharedFields:
+- ID: "09147fb2-ebfb-4949-8c8e-26a424409d5e"
+  Hint: Value
+  Value: "with-fade-zoom"
+- ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
+  Hint: Allowed Renderings
+  Value: |
+    {3A9A9D22-C092-4B54-9511-EB202CEABE8D}
+    {AD385021-CE2B-4FC1-89AA-207D408034A8}
+    {35075000-760E-4FF3-BD1C-F2EEBA251DCB}
+    {333DEF3E-C272-4AD9-A493-8D5CCAE08312}
+    {1A375FAC-6CC1-4A5A-A159-9BC6DBC66B80}
+    {CCC3A815-5DE9-4529-BAD5-874548667D66}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "77b17564-5cb5-44a7-a254-066f9e4ffb69"

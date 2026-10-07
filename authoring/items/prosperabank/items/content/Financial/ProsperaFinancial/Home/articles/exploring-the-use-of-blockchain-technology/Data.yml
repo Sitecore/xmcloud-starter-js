@@ -1,0 +1,13 @@
+﻿---
+ID: "ac4cffb5-73d3-48e7-8434-b8c078606d29"
+Parent: "4a598abf-4d86-4eb2-9dfc-9a0f992c8284"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/articles/exploring-the-use-of-blockchain-technology/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6c01178a-830d-455f-a7a0-c7d2b368aea0"

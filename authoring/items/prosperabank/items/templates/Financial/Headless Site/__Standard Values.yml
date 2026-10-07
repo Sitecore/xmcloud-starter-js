@@ -1,0 +1,13 @@
+﻿---
+ID: "3cdd488e-3450-4a51-9a9d-73484a91acd9"
+Parent: "598c1f44-5fd6-4e7b-b77f-d09d2e4090ee"
+Template: "598c1f44-5fd6-4e7b-b77f-d09d2e4090ee"
+Path: /sitecore/templates/Project/Financial/Headless Site/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "520791d3-c73d-40f3-8687-1b0aa1cced82"

@@ -1,0 +1,28 @@
+﻿---
+ID: "d07ee972-d50f-4313-a47d-b62a77308388"
+Parent: "e9e1dd13-15f8-47fd-8f02-29bb043faf57"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Partial Designs/Footer/Data/Address
+BranchID: "8204a950-cbaa-4d06-878b-11ced5ddc1ad"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4408DD99-867B-4A64-AD48-0914432251CB}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <span id="docs-internal-guid-17237c97-7fff-f61d-384b-b66bc74de880"></span>
+        <p><span>PLAY! Finance</span></p>
+        <p><span>12 Forever Street</span></p>
+        <p><span>A99 B44</span></p>
+        <p><span>The Nation of Skate</span></p>
+        <p><span>Made by <a href="https://www.sitecore.com/">Sitecore</a></span></p>
+        <div><span><br /></span></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8bcdd8ef-de79-4dd2-8e4b-ff5284a1e73f"

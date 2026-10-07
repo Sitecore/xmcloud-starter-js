@@ -1,0 +1,29 @@
+﻿---
+ID: "3672db17-4154-4101-8433-9195780a88e6"
+Parent: "738793d8-2cb9-46b3-8f54-eb7f6032fcc3"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/business/small-business-loans/Data"
+BranchID: "e6952b59-41b9-4f19-a6a8-e995ea78df57"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F9F119A8-598E-4175-BF31-651905A97C56}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f815924d-bac5-4ded-a6bd-1f5e6bab7a51"
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: データ
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "493e07ca-7e44-4319-9472-198555e71a6a"

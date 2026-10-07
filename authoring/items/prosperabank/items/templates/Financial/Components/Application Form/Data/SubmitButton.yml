@@ -1,0 +1,20 @@
+﻿---
+ID: "ef4297fb-1ef8-4b4e-ae14-2edb6069d9d8"
+Parent: "fbfe99a3-ffe5-4a7b-8f94-b25188e51bbb"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Application Form/Data/SubmitButton
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: General Link
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cd6f1580-243e-4af7-a740-9addddc6ed52"

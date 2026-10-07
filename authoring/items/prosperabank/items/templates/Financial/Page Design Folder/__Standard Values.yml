@@ -1,0 +1,19 @@
+﻿---
+ID: "ad3c590b-dee7-455f-82c1-4c33447471ab"
+Parent: "3030339a-2efe-4fca-aebb-f84de5c0f2eb"
+Template: "3030339a-2efe-4fca-aebb-f84de5c0f2eb"
+Path: /sitecore/templates/Project/Financial/Page Design Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {3030339A-2EFE-4FCA-AEBB-F84DE5C0F2EB}
+    {1105B8F8-1E00-426B-BF1F-C840742D827B}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bc33ae97-7c20-4e12-8f64-9ce04caee4b1"

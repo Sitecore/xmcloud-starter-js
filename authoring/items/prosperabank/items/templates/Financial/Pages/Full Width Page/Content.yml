@@ -1,0 +1,13 @@
+﻿---
+ID: "d676753d-2294-4b6d-be6a-0924dc0466aa"
+Parent: "5282d418-6c18-46eb-85af-9116cde9e6eb"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Pages/Full Width Page/Content
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b1494664-e492-49ef-bda0-a0a1e6fa07a7"

@@ -1,0 +1,13 @@
+﻿---
+ID: "78172df1-7e03-4e72-81b4-ce95ac6739e5"
+Parent: "5c48bd53-e997-45fc-b318-672cfa349bb3"
+Template: "c237d144-647a-4afe-aa7b-1570f3e3f139"
+Path: /sitecore/content/Financial/ProsperaFinancial/Data/Link Lists
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4c47e8a6-6788-4a08-b1bf-9bae21edbbdb"

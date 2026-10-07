@@ -1,0 +1,17 @@
+﻿---
+ID: "ba1f34c4-5735-4e26-b35d-8b2040a7d284"
+Parent: "9c4c36b7-f63a-4a3f-a19b-fd071212a6dc"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Placeholder Settings/Partial Design/Article Content
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-article-content"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "01391ed3-9555-45f5-a56f-93a4047cd789"

@@ -1,0 +1,27 @@
+.site-financial {
+  --heading-cta-text-opacity: 1;
+}
+
+.site-services {
+  --heading-cta-text-opacity: 0.65;
+}
+
+.heading-cta {
+  @include respond-to(mobile-large) {
+    padding: 0 $size-padding;
+  }
+
+  .heading-content-wrapper {
+    max-width: 33rem;
+  }
+
+  p {
+    opacity: var(--heading-cta-text-opacity);
+  }
+
+  &.compact {
+    .heading-content-wrapper {
+      max-width: 27rem;
+    }
+  }
+}

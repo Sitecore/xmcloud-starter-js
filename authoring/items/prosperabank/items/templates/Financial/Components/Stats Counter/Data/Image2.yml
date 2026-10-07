@@ -1,0 +1,27 @@
+﻿---
+ID: "239a7f68-3d70-4c7a-81c3-c280e5283e02"
+Parent: "07d56f02-fc4e-4e5f-b214-5df578a34553"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Stats Counter/Data/Image2
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Image
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 25
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "db00d9dd-f6f5-4477-a5dd-05e21544069e"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50697e2a-11f2-4ce6-83e5-6b0960b4e99d"

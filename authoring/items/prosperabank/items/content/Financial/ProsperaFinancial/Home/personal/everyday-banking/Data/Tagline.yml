@@ -1,0 +1,43 @@
+﻿---
+ID: "1da32860-b427-46d6-97cc-479f2a1acd0a"
+Parent: "4ff8991d-72fb-4a9c-83f0-6f74f6bd13dc"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/personal/everyday-banking/Data/Tagline"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>There's always something <em style="color: var(--bg-accent);">exciting to plan for.</em> That means&nbsp;<em style="color: var(--bg-accent);">more everyday banking to love.</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f4bc1d2b-2f63-487e-b467-e8a7034efd5f"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Il y a toujours quelque chose <em style="color: var(--bg-accent);">d'excitant à planifier.</em> Cela signifie&nbsp;<em style="color: var(--bg-accent);">plus de services bancaires quotidiens à apprécier.</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4eee5a92-8de9-4c4a-8fbc-c4fe56d93660"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>常に何か<em style="color: var(--bg-accent);">エキサイティングな計画</em> がある。 それはつまり、<em style="color: var(--bg-accent);">愛すべき日常の銀行が増えるということだ</em>。</h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0def7f3a-ee79-4e1c-bf4a-56ee265afd2d"

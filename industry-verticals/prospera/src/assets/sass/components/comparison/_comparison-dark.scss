@@ -1,0 +1,17 @@
+.dark .comparison {
+  .item {
+    .value {
+      .amount {
+        color: var(--text-colored);
+      }
+
+      .currency {
+        color: var(--text-body);
+      }
+    }
+
+    .subtitle {
+      color: var(--text-body);
+    }
+  }
+}

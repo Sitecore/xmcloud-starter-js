@@ -1,0 +1,96 @@
+﻿---
+ID: "b43abc74-c300-4709-a89d-a36029a20208"
+Parent: "e551c010-8085-470e-a178-32f936abdbbb"
+Template: "e551c010-8085-470e-a178-32f936abdbbb"
+Path: /sitecore/templates/Project/Financial/Pages/Blog Post/__Standard Values
+SharedFields:
+- ID: "9344088a-f78e-4157-ab6e-2d5730f385ab"
+  Hint: Thumbnail
+  Value: |
+    <image mediaid="{32909CAB-5F82-4428-A428-DF531E7776DD}" alt="Market report" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{63CC4D0D-63F1-4BFB-BF63-7EC9D231AFA8}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f36db8bf-8126-45ed-b336-88f23521d812"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          ds=""
+          id="{9D7DE58D-9DA4-43D8-8371-3C728A582ADC}"
+          par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;DynamicPlaceholderId=1"
+          ph="/headless-main/sxa-article-content/article-meta-0-1"
+          uid="{1333C7A2-2A6C-4310-AE74-8D5DE936F8B3}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165908Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ad165192-0588-409e-bad5-171c4aec813c"
+    - ID: "95c8ce75-41ba-4036-9722-fd143984f630"
+      Hint: Content
+      Value: |
+        <p><strong>Lorem Ipsum Finance</strong></p>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper neque id elit convallis, at varius lorem aliquet. Phasellus consequat, ante sed tristique commodo, felis mi vehicula justo, id finibus neque velit vitae nunc.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin at mauris vel purus vestibulum consectetur. Nam efficitur lectus auctor, hendrerit ligula nec, pharetra ex.</p>
+        <p>Suspendisse potenti. Sed ac arcu scelerisque, hendrerit risus eu, ultricies libero. Pellentesque ut magna eu elit fringilla viverra. Quisque ullamcorper orci a magna finibus, nec feugiat urna semper. Praesent blandit purus vel ligula finibus, nec fermentum dui ultrices. Nulla vitae justo a felis luctus dignissim. Aliquam eu tortor eget libero placerat semper.</p>
+        <p>In consequat, libero sed viverra placerat, metus lectus accumsan velit, a suscipit elit dui sit amet justo. Fusce vitae purus vel justo aliquam hendrerit. Integer pretium mi vel ex convallis, vel dignissim ex finibus.</p>
+    - ID: "9756a066-a311-41b8-9613-477bfd471c23"
+      Hint: Excerpt
+      Value: "Maintaining a healthy work-life balance is crucial for employee satisfaction and productivity. Explore practical strategies that employees can implement to support their team’s well-being and create a more balanced, productive work environment."
+    - ID: "afa77e48-1e92-44b7-ae46-db24b601e6d1"
+      Hint: Title
+      Value: $name
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165908Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: $name
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "108f2a5e-e4b9-4f69-a8d8-34bcaeb4dec7"
+    - ID: "95c8ce75-41ba-4036-9722-fd143984f630"
+      Hint: Content
+      Value: |
+        <p><strong>Lorem Ipsum Finance</strong></p>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper neque id elit convallis, at varius lorem aliquet. Phasellus consequat, ante sed tristique commodo, felis mi vehicula justo, id finibus neque velit vitae nunc.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin at mauris vel purus vestibulum consectetur. Nam efficitur lectus auctor, hendrerit ligula nec, pharetra ex.</p>
+        <p>Suspendisse potenti. Sed ac arcu scelerisque, hendrerit risus eu, ultricies libero. Pellentesque ut magna eu elit fringilla viverra. Quisque ullamcorper orci a magna finibus, nec feugiat urna semper. Praesent blandit purus vel ligula finibus, nec fermentum dui ultrices. Nulla vitae justo a felis luctus dignissim. Aliquam eu tortor eget libero placerat semper.</p>
+        <p>In consequat, libero sed viverra placerat, metus lectus accumsan velit, a suscipit elit dui sit amet justo. Fusce vitae purus vel justo aliquam hendrerit. Integer pretium mi vel ex convallis, vel dignissim ex finibus.</p>
+    - ID: "9756a066-a311-41b8-9613-477bfd471c23"
+      Hint: Excerpt
+      Value: Découvrez les clés de la littératie financière grâce aux conseils d'experts en budgétisation, épargne, investissement et planification de la retraite. Découvrez des astuces et des stratégies pratiques pour prendre le contrôle de vos finances et bâtir un avenir sûr pour vous et votre famille.
+    - ID: "afa77e48-1e92-44b7-ae46-db24b601e6d1"
+      Hint: Title
+      Value: $name

@@ -1,0 +1,152 @@
+.cta-banner {
+  @include respond-to(mobile-large) {
+    padding-left: $size-padding;
+    padding-right: $size-padding;
+  }
+
+  .container-widest-fluid {
+    background-color: var(--bg-saturated);
+    border-radius: var(--roundness);
+    margin-top: 6.5rem;
+    margin-bottom: 6.5rem;
+    color: var(--hr-color);
+
+    @include respond-to(mobile-large) {
+      margin-top: 0 !important;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .eyebrow-accent {
+      color: var(--hr-color);
+    }
+
+    .button-main {
+      background-color: var(--text-body);
+      color: var(--bg-body);
+
+      &:hover {
+        filter: brightness(85%);
+      }
+    }
+  }
+
+  .image-wrapper {
+    margin-top: -6.5rem;
+    margin-bottom: -6.5rem;
+
+    @include respond-to(mobile-large) {
+      margin-top: 0 !important;
+    }
+
+    img {
+      border-radius: var(--roundness);
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  }
+
+  .content-wrapper {
+    margin: 3rem 0;
+
+    @include respond-to(mobile-large) {
+      margin: 2rem 0 0;
+    }
+  }
+
+  .text-content {
+    opacity: 0.85;
+  }
+
+  &.reverse {
+    .main-content {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.bordered {
+    .image-wrapper img {
+      border-radius: 0;
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  &.with-dotted-accents {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include respond-to(mobile-large) {
+      padding-top: 0;
+    }
+
+    .image-wrapper {
+      position: relative;
+      color: var(--text-body);
+
+      .dotted-accent {
+        position: absolute;
+        z-index: 2;
+
+        &-top {
+          top: -50px;
+          right: -50px;
+        }
+
+        &-bottom {
+          bottom: -50px;
+          left: -50px;
+        }
+      }
+    }
+  }
+
+  &:not(.with-dotted-accents) {
+    .dotted-accent {
+      display: none;
+    }
+  }
+
+  &.with-icon-accent {
+    .icon-accent {
+      margin-top: -4rem;
+    }
+
+    @include respond-to(mobile-large) {
+      margin-top: 4rem;
+    }
+  }
+
+  &:not(.with-icon-accent) {
+    .icon-accent {
+      display: none;
+    }
+  }
+
+  &.with-large-image {
+    .container-widest-fluid {
+      margin-top: 8.5rem;
+      margin-bottom: 8.5rem;
+    }
+
+    .image-wrapper {
+      margin-top: -8.5rem;
+      margin-bottom: -8.5rem;
+    }
+
+    .content-column {
+      @media (width>= 992px) {
+        padding-left: calc((100vw - 960px - 1.5rem) / 2);
+      }
+
+      @media (width>= 1200px) {
+        padding-left: calc((100vw - 1140px - 1.5rem) / 2);
+        padding-right: 8rem;
+      }
+
+      @media (width>= 1400px) {
+        padding-left: calc((min(1650px, 100vw) - 1250px) / 2);
+      }
+    }
+  }
+}

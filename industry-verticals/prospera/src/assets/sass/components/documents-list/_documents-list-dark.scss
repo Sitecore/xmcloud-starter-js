@@ -1,0 +1,16 @@
+.dark .documents-list {
+  .documents-container {
+    background-color: var(--bg-main);
+
+    .item {
+      img {
+        filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(2%) hue-rotate(199deg)
+          brightness(103%) contrast(100%);
+      }
+
+      a {
+        color: var(--text-body);
+      }
+    }
+  }
+}

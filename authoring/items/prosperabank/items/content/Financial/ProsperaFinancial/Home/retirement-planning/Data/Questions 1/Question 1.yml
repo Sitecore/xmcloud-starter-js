@@ -1,0 +1,56 @@
+﻿---
+ID: "1a12b091-e18c-4d10-94f6-fe544b2a4d1c"
+Parent: "d5d73d45-0f16-4b32-ba70-9241370c8ce8"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/retirement-planning/Data/Questions 1/Question 1"
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FE577AD4-C2F1-4056-91A9-C864C8D2199D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ba599512-a33b-47b7-b666-62d422528dfb"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "How easy is it to transfer from an existing organization?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: |
+        No problem! We do it all the time.
+        
+        To transfer an existing retirement plan, send a termination notice to us and your current provider. We'll coordinate the rest and keep you updated throughout the entire process.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "54afdb50-85f3-4602-923d-e47ac867d8a9"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Quelle est la facilité de transférer depuis une organisation existante ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: |
+        Aucun problème ! Nous le faisons tout le temps.
+        
+        Pour transférer un plan de retraite existant, envoyez-nous un avis de résiliation ainsi qu'à votre fournisseur actuel. Nous nous occuperons du reste et vous tiendrons informé tout au long du processus.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "39808961-def9-44cf-bd47-7082f22905a0"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: 既存の組織からの移籍は簡単ですか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 問題ありません！ 私たちはいつもそうしています。 既存の退職金制度を移行するには、当社と現在のプロバイダーに解約通知を送付してください。 あとは私たちが調整し、プロセス全体を通して最新情報をお知らせします。

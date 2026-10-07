@@ -1,0 +1,46 @@
+﻿---
+ID: "6b02f657-d02c-48bd-9b41-363a876fd3dd"
+Parent: "40472280-0a67-4c52-a06b-79e327af9f44"
+Template: "40472280-0a67-4c52-a06b-79e327af9f44"
+Path: /sitecore/templates/Project/Financial/Components/Testimonial/__Standard Values
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "347076d0-eb36-489e-9452-b0d48ee2641a"
+      Hint: Rating
+      Value: 5
+    - ID: "68135ba0-9f86-45d8-8744-a22ed6f2e82f"
+      Hint: AuthorPosition
+      Value: Marketing Expert
+    - ID: "89aa75c0-8a07-43ce-b0be-989877ace891"
+      Hint: Content
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "54831775-0cbc-4ae0-9310-0624f33243dd"
+    - ID: "f89cca04-3f6d-4d2d-8dc2-10dcf0981d8b"
+      Hint: AuthorImage
+      Value: |
+        <image mediaid="{7B90D0EB-5CC2-4B14-890D-4277BE776C3B}" />
+    - ID: "f8bed196-3478-41ea-9487-254ee08b2e2e"
+      Hint: AuthorName
+      Value: John Doe
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "347076d0-eb36-489e-9452-b0d48ee2641a"
+      Hint: Rating
+      Value: Lorem ipsum dolor sit amet
+    - ID: "89aa75c0-8a07-43ce-b0be-989877ace891"
+      Hint: Content
+      Value: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50e1a745-fbe8-493b-8633-3ee2880d074c"

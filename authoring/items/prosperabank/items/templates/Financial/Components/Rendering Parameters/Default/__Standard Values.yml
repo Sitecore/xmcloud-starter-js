@@ -1,0 +1,13 @@
+﻿---
+ID: "78d1c1ca-bdeb-4f4a-b0b0-500478f299f3"
+Parent: "a65aea73-8224-408b-913c-b1cedae0c443"
+Template: "a65aea73-8224-408b-913c-b1cedae0c443"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Default/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a6428413-5527-4df0-98bd-d5ef7efbe8ed"

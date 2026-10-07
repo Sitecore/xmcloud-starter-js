@@ -1,0 +1,49 @@
+﻿---
+ID: "8845b07e-7f3b-46f0-9748-57f7acf56bb1"
+Parent: "aac59603-dfd5-42ff-857d-8b8cc72edc54"
+Template: "309eb383-99b6-4722-9fab-58d8ae802d72"
+Path: /sitecore/media library/Project/Financial/Services/Mockups/tcc3
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/8845B07E7F3B46F0974857F7ACF56BB1.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 32
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "8845b07e-7f3b-46f0-9748-57f7acf56bb1"
+  Value: UklGRvwAAABXRUJQVlA4WAoAAAAQAAAAHwAAHwAAQUxQSK8AAAABgBXbbtjoQQgkQzAEMaoZ1BCWQc2gYeAwkBi8D7kriUFETACCXbWjdJM7SagCNJJsgCgloiTfL3p9vUlq5Gb4jqzYClwa0+uX6PejTNTPVnEsdVZhTirEYeZNHEfeODTmawP6ZunuymK1KutPzdOBZnnW4EfewPEvbx6EheK0Qh1Lndi9LMPWbeL8ZTG78P8VWwju2DdiJOc42JgkLSI0AZprgBgl8vMhH5R2sx4BAFZQOCAmAAAA0AIAnQEqIAAgAD6RRJ1KpaOioagIALASCWkAAD2joAD++E0AAAA=
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 260
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/webp
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: webp
+- ID: "cb09946f-3218-4823-87d2-d5007c199a96"
+  Hint: Dimensions
+  Value: 32 x 32
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 32
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215327Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f19c90c1-57ba-4a54-82f5-8b45af997fa9"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215327Z

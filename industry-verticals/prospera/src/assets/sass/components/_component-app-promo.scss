@@ -1,0 +1,14 @@
+@import 'src/assets/sass/abstracts/vars';
+
+.app-promo {
+  background-color: var(--bg-main);
+  padding-top: 3rem;
+
+  .image-wrapper {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="522.52" height="435.859" viewBox="0 0 522.52 435.859"><path id="Path_88" data-name="Path 88" d="M279.792,2.88H82.755C40.149,2.88,3.055,35.092.2,77.613a80.28,80.28,0,0,0,80.128,85.87H257.232c45.033,0,62.281,23.445,62.281,58.6,0,35.182-17.248,58.684-62.281,58.684H78.985a78.988,78.988,0,0,0,0,157.975H279.792c160.6,0,242.727-98.435,242.727-216.659,0-129.019-82.127-219.2-242.727-219.2" transform="translate(0.001 -2.88)" fill="%23c5e4f3"/></svg>');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto;
+    overflow: hidden;
+  }
+}

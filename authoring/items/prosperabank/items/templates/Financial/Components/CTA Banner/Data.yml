@@ -1,0 +1,13 @@
+﻿---
+ID: "8e7e9812-8ee0-49a6-9acb-6659163e91f0"
+Parent: "4900d7e5-61b0-483a-a9d6-69419d4d5982"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/CTA Banner/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "100a9889-4c9b-4383-8cfc-ce4c03cfc84b"

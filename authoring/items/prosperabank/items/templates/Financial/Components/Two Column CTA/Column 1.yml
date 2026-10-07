@@ -1,0 +1,13 @@
+﻿---
+ID: "e9e2fb59-370f-46ae-927d-bc939fa37897"
+Parent: "1812bf3e-6bdd-466d-99b2-0d7cebb020fc"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Two Column CTA/Column 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ba3fa270-9523-4088-993e-85bf6758b8c3"

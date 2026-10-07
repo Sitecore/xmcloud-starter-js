@@ -1,0 +1,137 @@
+@import 'swiper/css';
+@import 'swiper/css/effect-coverflow';
+@import 'swiper/css/pagination';
+@import 'swiper/css/navigation';
+
+.site-services,
+.site-financial {
+  --swiper-pagination-bullet-size: 0.75rem;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+  --swiper-pagination-color: var(--bg-saturated);
+  --swiper-pagination-bullet-inactive-color: var(--bg-body);
+  --swiper-pagination-bullet-inactive-border-color: var(--border-color);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-theme-color: var(--bg-saturated);
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 1rem;
+
+  &-bullet {
+    border: 2px solid var(--swiper-pagination-bullet-inactive-border-color);
+
+    &.swiper-pagination-bullet-active {
+      border: 2px solid var(--swiper-pagination-color);
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  margin-top: 0;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--border-color);
+  border-radius: 100%;
+  margin-left: 1rem;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: var(--text-body);
+    clip-path: polygon(
+      99.977% 63.506%,
+      99.977% 63.506%,
+      100.747% 62.601%,
+      101.345% 61.611%,
+      101.772% 60.557%,
+      102.029% 59.461%,
+      102.114% 58.343%,
+      102.029% 57.225%,
+      101.772% 56.128%,
+      101.345% 55.074%,
+      100.747% 54.084%,
+      99.977% 53.18%,
+      63.506% 16.708%,
+      63.506% 16.708%,
+      62.601% 15.939%,
+      61.611% 15.341%,
+      60.557% 14.913%,
+      59.461% 14.657%,
+      58.343% 14.571%,
+      57.225% 14.657%,
+      56.128% 14.913%,
+      55.074% 15.341%,
+      54.084% 15.939%,
+      53.18% 16.708%,
+      53.18% 16.708%,
+      52.411% 17.613%,
+      51.812% 18.603%,
+      51.385% 19.657%,
+      51.128% 20.753%,
+      51.043% 21.871%,
+      51.128% 22.989%,
+      51.385% 24.086%,
+      51.812% 25.14%,
+      52.411% 26.13%,
+      53.18% 27.034%,
+      77.228% 51.06%,
+      7.294% 51.06%,
+      7.294% 51.06%,
+      6.11% 51.155%,
+      4.986% 51.431%,
+      3.939% 51.873%,
+      2.984% 52.466%,
+      2.134% 53.194%,
+      1.406% 54.044%,
+      0.813% 54.999%,
+      0.371% 56.046%,
+      0.095% 57.17%,
+      0% 58.354%,
+      0% 58.354%,
+      0.095% 59.539%,
+      0.371% 60.662%,
+      0.813% 61.709%,
+      1.406% 62.665%,
+      2.134% 63.514%,
+      2.984% 64.243%,
+      3.939% 64.835%,
+      4.986% 65.277%,
+      6.11% 65.553%,
+      7.294% 65.649%,
+      77.205% 65.649%,
+      53.203% 89.674%,
+      53.203% 89.674%,
+      52.433% 90.579%,
+      51.835% 91.569%,
+      51.408% 92.622%,
+      51.151% 93.719%,
+      51.066% 94.837%,
+      51.151% 95.955%,
+      51.408% 97.052%,
+      51.835% 98.105%,
+      52.433% 99.095%,
+      53.203% 100%,
+      53.203% 100%,
+      54.107% 100.769%,
+      55.097% 101.368%,
+      56.151% 101.795%,
+      57.248% 102.052%,
+      58.366% 102.137%,
+      59.484% 102.052%,
+      60.58% 101.795%,
+      61.634% 101.368%,
+      62.624% 100.769%,
+      63.529% 100%,
+      100% 63.529%
+    );
+  }
+}
+
+.swiper-button-prev {
+  transform: scaleX(-1);
+}

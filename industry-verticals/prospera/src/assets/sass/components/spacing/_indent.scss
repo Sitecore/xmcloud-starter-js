@@ -1,0 +1,29 @@
+@import 'src/assets/sass/abstracts/vars';
+
+.indent {
+  margin: 0 $extralarge-margin;
+
+  &.col-xxl-12,
+  &.col-xl-12,
+  &.col-lg-12,
+  &.col-md-12,
+  &.col-12 {
+    width: calc(100% - ($extralarge-margin * 2));
+  }
+}
+
+.indent-top {
+  margin-top: $middle-margin;
+
+  &.component {
+    margin-top: $component-margin;
+  }
+}
+
+.indent-bottom {
+  margin-bottom: $middle-margin;
+
+  &.component {
+    margin-bottom: $component-margin;
+  }
+}

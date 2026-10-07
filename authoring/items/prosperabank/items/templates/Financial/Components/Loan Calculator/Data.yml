@@ -1,0 +1,13 @@
+﻿---
+ID: "c63cbb1e-a1e5-4162-8bec-bc21c5059215"
+Parent: "8a299404-ec7c-4bc2-84c5-b6f4c5af6121"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Loan Calculator/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2d6587fa-ca19-4af3-9819-346236c8be2c"

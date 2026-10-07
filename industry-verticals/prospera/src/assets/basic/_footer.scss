@@ -1,0 +1,22 @@
+@import 'src/assets/sass/abstracts/mixins';
+@import 'variables';
+
+footer {
+  background-color: var(--bg-footer);
+  color: var(--text-footer);
+
+  @include respond-to(mobile-large) {
+    padding: 0 $size-padding;
+  }
+
+  a {
+    color: var(--text-footer);
+    text-decoration: none;
+    opacity: 1;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

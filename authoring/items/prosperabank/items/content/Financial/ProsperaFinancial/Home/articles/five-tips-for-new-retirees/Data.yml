@@ -1,0 +1,13 @@
+﻿---
+ID: "9e328da1-a661-463e-bd9b-048dfa862093"
+Parent: "f48cfb42-d442-489f-8d2e-31927382366b"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/articles/five-tips-for-new-retirees/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f625de0f-d4d8-4662-bc69-05aa8ad08db3"

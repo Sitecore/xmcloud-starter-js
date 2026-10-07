@@ -1,0 +1,17 @@
+﻿---
+ID: "6b206c8e-3f5e-4d9d-b36f-4089d1328473"
+Parent: "6630c97b-f037-4f1f-87bc-907c43f167d1"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Project/Financial/Navigation
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cbb9e7dc-8e4c-4214-a0c2-92ce27a9d360"

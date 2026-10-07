@@ -1,0 +1,58 @@
+.four-column-cta {
+  @include respond-to(mobile-large) {
+    padding: 0 $size-padding;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: unset;
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: var(--roundness) var(--roundness) 0 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .row {
+    @include respond-to(mobile-large) {
+      gap: 3em;
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    border-radius: var(--roundness);
+    overflow: hidden;
+  }
+
+  .text-wrapper {
+    width: 100%;
+    flex-grow: 1;
+    background-color: var(--bg-main);
+    padding: 1em;
+    border-radius: 0 0 var(--roundness) var(--roundness);
+  }
+
+  &.bordered {
+    .text-wrapper {
+      background-color: $bg-transparent;
+      border: 5px solid var(--border-color);
+      border-top: none;
+    }
+  }
+}

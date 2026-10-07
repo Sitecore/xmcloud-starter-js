@@ -1,0 +1,3077 @@
+generatedAt: "2026-03-20T09:00:00Z"
+lastUpdatedAt: "2026-06-09T00:00:00Z"
+lastUpdatedBy: "claude-agent"
+
+project:
+  siteCollection: "main"
+  siteName: "main-website"
+  sdk: "@sitecore-content-sdk/nextjs"
+  renderingsRoot: "/sitecore/layout/Renderings/Project/fmc-custom-demo"
+  projectTemplatesRoot: "/sitecore/templates/Project/fmc-custom-demo"
+  dataRoot: "/sitecore/content/main/main-website/Data"
+  projectFoldersRoot: "/sitecore/templates/Project/fmc-custom-demo/Folders"
+  renderingParamsRoot: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters"
+  headlessVariantsRoot: "/sitecore/content/main/main-website/Presentation/Headless Variants"
+
+availableRenderings:
+  itemId: "{2BF7E311-E3A5-4290-A043-AB97EA1DFB15}"
+  lastKnownValue: "{55790BFE-783E-4FF0-BD53-F81D3857DAD4}|{C5F905F8-FD1F-444E-A9E5-AC6B774FF0DE}|{2492BAC4-DA07-4C86-87F0-9873D40E2276}|{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}|{3836D951-BB14-43AC-9231-649B7F245DC5}|{E97DCF2B-8011-41E0-A605-8A379F3DF1AA}|{A41A47A5-D305-4ADC-BFC8-CCB0F301DDCF}|{EFE73752-6046-45A8-92F4-7A68430A0759}|{EAA7CC9B-4657-410E-9A25-CD33C700261B}|{58490557-5582-4B19-9E31-CE6A80F95D93}|{4281E3CD-2309-4427-9A3E-D69FDD32FCDA}|{E6D0C7C1-ACFF-4E85-8600-196649FEFFB9}|{90021266-66B3-47B6-9709-A070F56064A1}|{F6A1FA05-15FC-46C9-B921-98E79EFF5F4E}|{E194B962-0617-4A10-B4DB-2A4D19248C13}|{E1BCD607-51C4-4248-8EE2-B7F474D40B3E}|{A53006E8-C66B-419F-859D-7CFA92E7E26B}|{4E7E77EF-529C-4C28-A5D8-94C5ACA065FF}|{C739DB42-43E5-4DAC-B5FC-404EDDC9E37C}|{0F7C27E2-B960-47E9-AB85-F8A9C45D0F9C}|{D008D5FE-B27E-419F-889C-115B3D48A114}|{85CC2A41-AC6F-4C10-9C2F-44308B48C453}|{4C5C1FA5-C077-491D-9686-40D0F68EF03E}|{83BD1231-A48F-4F54-A361-20904C69A641}|{0E64EDCA-06DD-469A-B3D1-93D8700A8F41}|{505B6BB0-DEEA-46F9-9AB2-7020E386F4F0}|{C9FFEF83-C928-4346-AA68-14B3EE0B0017}|{B92A0B89-790F-4D94-89C7-B361C8688765}|{9E525B59-B9BF-4EB7-B75D-10811EF6100D}|{66E80043-36E4-48AE-8CAF-EEF4A77690BE}|{5A8724FB-D6E6-4C9D-8A4A-EFD8750B0019}|{14FCB11C-364D-4BC2-9238-B29B4C6F8145}"
+  lastUpdatedAt: "2026-06-09T00:00:00Z"
+  renderingCount: 32
+  warning: "MCP cannot read this field — value may be stale if modified outside this session. Also: MCP write returned empty updatedFields — silent-write. Verify in Content Editor."
+
+components:
+  - name: "AnnouncementBar"
+    kind: "simple"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-03-25T12:00:00Z"
+    updatedAt: "2026-03-25T12:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/navigation/AnnouncementBar.tsx"
+      componentMapKey: "AnnouncementBar"
+      variants:
+        - "Default"
+        - "Highlight"
+
+    templates:
+      datasource:
+        name: "AnnouncementBar"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/AnnouncementBar"
+        itemId: "{0903ACAD-5503-4CF9-9059-27BF4D93D80E}"
+        sectionName: "Data"
+        fields:
+          - { name: "Message", type: "Single-Line Text" }
+          - { name: "BarLink", type: "General Link" }
+          - { name: "BackgroundColor", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{8A42EB7E-5911-422A-9C26-F89F85EF90F4}"
+          linked: true
+
+      folder:
+        name: "AnnouncementBar Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/AnnouncementBar Folder"
+        itemId: "{505568E9-7842-4E74-AA8F-D31C529C7E47}"
+        standardValues:
+          itemId: "{BD98B8D4-E43A-4EA8-B462-0CDF7019C9DF}"
+          linked: true
+          masters: ["AnnouncementBar"]
+
+      renderingParams:
+        name: "AnnouncementBar"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Navigation/AnnouncementBar"
+        itemId: "{2B0A6906-521D-46B0-A53F-D839F40E51DD}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "AnnouncementBars"
+      path: "/sitecore/content/main/main-website/Data/AnnouncementBars"
+      itemId: "{93B0A4DC-4E8A-42DB-85A4-D54E7A64D737}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Announcement Bar"
+        itemId: "{BEEDF7F8-4F1B-4072-832A-F9C50D92CD50}"
+
+    rendering:
+      name: "AnnouncementBar"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Navigation/AnnouncementBar"
+      itemId: "{55790BFE-783E-4FF0-BD53-F81D3857DAD4}"
+      componentName: "AnnouncementBar"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/AnnouncementBar"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='AnnouncementBar Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='AnnouncementBar Folder']"
+      parametersTemplateId: "{2B0A6906-521D-46B0-A53F-D839F40E51DD}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/AnnouncementBar"
+      containerId: "{6F2C4B0A-5592-4E3C-A1D1-DDA54BD90CC0}"
+      variants:
+        - { name: "Default", itemId: "{C443BF0E-5B40-4F84-98A2-F0825E83E345}" }
+        - { name: "Highlight", itemId: "{6A6E7095-E948-46F1-A37B-260ADA3604FF}" }
+
+    verification:
+      checkedAt: "2026-03-25T12:00:00Z"
+      passed:
+        - "Template exists"
+        - "Base templates set"
+        - "Fields created with correct Type"
+        - "Standard Values created and linked (silent-write)"
+        - "Folder template created"
+        - "Folder template Standard Values created and linked (silent-write)"
+        - "Rendering Parameters template created with 4 base templates"
+        - "Rendering created as JSON Rendering"
+        - "Component Name is PascalCase matching TSX filename"
+        - "Parameters Template set to GUID"
+        - "AddFieldEditorButton set to 1"
+        - "Datasource folder created"
+        - "Example datasource item created"
+        - "Headless Variants container created"
+        - "Default and Highlight Variant Definitions created"
+        - "React file created"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Datasource Template (silent-write)"
+        - "Datasource Location (silent-write)"
+        - "__Masters on folder SV (silent-write)"
+        - "__Masters on datasource folder instance (silent-write)"
+        - "Renderings on Available Renderings (silent-write)"
+        - "__Standard values link on datasource template (silent-write)"
+        - "__Standard values link on folder template (silent-write)"
+
+    notes: []
+
+  - name: "NavigationHeader"
+    kind: "list"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-03-25T12:30:00Z"
+    updatedAt: "2026-05-05T16:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/navigation/NavigationHeader.tsx"
+      componentMapKey: "NavigationHeader"
+      dataStrategy: "ComponentQuery (BrandLogo + CtaLabel + CtaLink from datasource, NavigationLink children)"
+      variants:
+        - "Default"
+        - "Transparent"
+        - "Minimal"
+
+    templates:
+      parent:
+        name: "NavigationHeaderData"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/NavigationHeaderData"
+        itemId: "{9B720C4E-E7E7-4C12-BCA1-E92270B476CC}"
+        sectionName: "Data"
+        fields:
+          - { name: "BrandLogo", type: "Image" }
+          - { name: "CtaLabel", type: "Single-Line Text" }
+          - { name: "CtaLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{65112E1D-30AB-4BDF-9EA3-A74AD7ADB657}"
+          linked: true
+          masters: ["NavigationLink"]
+        horizonDatasourceGrouping: true
+
+      child:
+        name: "NavigationLink"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/NavigationLink"
+        itemId: "{626C308F-5897-48F3-BF83-AEFB503CB1E4}"
+        sectionName: "Data"
+        fields:
+          - { name: "LinkText", type: "Single-Line Text" }
+          - { name: "LinkUrl", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{A47220D9-9448-484B-85F7-571141E21375}"
+          linked: true
+
+      folder:
+        name: "NavigationHeaderData Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/NavigationHeaderData Folder"
+        itemId: "{C26817C1-89F4-435A-B3CC-5CB20692886E}"
+        standardValues:
+          itemId: "{59F8657F-CEEB-4B18-BABB-3787A053E193}"
+          linked: true
+          masters: ["NavigationHeaderData"]
+
+      renderingParams:
+        name: "NavigationHeader"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Navigation/NavigationHeader"
+        itemId: "{2072AD97-A552-49A4-A417-2C8F40C52F9A}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "NavigationHeaders"
+      path: "/sitecore/content/main/main-website/Data/NavigationHeaders"
+      itemId: "{A1055559-2113-4BAF-B3C3-05C38404DED2}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Main Navigation"
+        itemId: "{8254EB2C-9F05-4082-8CB7-48A968EA6EF1}"
+      exampleChildren:
+        - { name: "Home", itemId: "{F244D21A-540D-4451-B3E0-7BDEDCB00DC3}" }
+        - { name: "About", itemId: "{C3B693C8-0135-4B86-BE16-7823180171DD}" }
+
+    rendering:
+      name: "NavigationHeader"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Navigation/NavigationHeader"
+      itemId: "{E97DCF2B-8011-41E0-A605-8A379F3DF1AA}"
+      componentName: "NavigationHeader"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/NavigationHeaderData"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='NavigationHeaderData Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='NavigationHeaderData Folder']"
+      parametersTemplateId: "{2072AD97-A552-49A4-A417-2C8F40C52F9A}"
+      componentQuery: "query NavigationHeaderQuery($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { brandLogo: field(name: \"BrandLogo\") { jsonValue } ctaLabel: field(name: \"CtaLabel\") { jsonValue } ctaLink: field(name: \"CtaLink\") { jsonValue } children { results { id linkText: field(name: \"LinkText\") { jsonValue } linkUrl: field(name: \"LinkUrl\") { jsonValue } } } } }"
+      addFieldEditorButton: "1"
+      renderingContentsResolver: ""
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/NavigationHeader"
+      containerId: "{C215D8ED-461E-4AE4-8D57-94CC5CDEC8DF}"
+      variants:
+        - { name: "Default", itemId: "{150B9AFE-2B9F-48AD-8F01-036666057814}" }
+        - { name: "Transparent", itemId: "{A46EFC9D-7CF0-4C92-9577-1D94FD1D9782}" }
+        - { name: "Minimal", itemId: "{608E0EC7-E2C6-4093-A1A1-3962FF17885A}" }
+
+    verification:
+      checkedAt: "2026-05-05T16:00:00Z"
+      passed:
+        - "Parent template with base templates + HorizonDatasourceGrouping"
+        - "Child template with base templates"
+        - "All fields with correct Types"
+        - "SVs created and linked"
+        - "Parent __Masters → NavigationLink"
+        - "Folder template with __Masters → NavigationHeaderData"
+        - "Datasource folder under /Data"
+        - "Example parent + 2 child items"
+        - "Rendering with ComponentQuery (generic field access)"
+        - "React rewritten as list component"
+      failed: []
+      pendingManual:
+        - "Remove Navigation Contents Resolver from rendering in Content Editor"
+        - "Silent-write fields (Datasource Template, Location, __Masters, insert options)"
+        - "Assign Main Navigation datasource to NavigationHeader in Header partial design"
+
+    notes:
+      - "2026-05-05: Converted from context-only (Navigation Contents Resolver) to list datasource component. Nav links now authored as child items instead of auto-generated from site tree."
+
+  - name: "HeroBanner"
+    kind: "simple"
+    category: "Banners"
+    status: "complete"
+    createdAt: "2026-03-25T13:30:00Z"
+    updatedAt: "2026-03-25T13:30:00Z"
+
+    react:
+      filePath: "src/components/uiim/banners/HeroBanner.tsx"
+      componentMapKey: "HeroBanner"
+      variants:
+        - "Default"
+        - "SplitImageText"
+        - "BackgroundImage"
+        - "VideoBackground"
+        - "Minimal"
+
+    templates:
+      datasource:
+        name: "HeroBanner"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners/HeroBanner"
+        itemId: "{EBB89BFF-86FF-496D-B4F7-57FE722342B6}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Subtitle", type: "Rich Text" }
+          - { name: "HeroImage", type: "Image" }
+          - { name: "PrimaryLink", type: "General Link" }
+          - { name: "SecondaryLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{07745080-E4BF-4D2A-B3BC-94EC512C8B2B}"
+          linked: true
+
+      folder:
+        name: "HeroBanner Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/HeroBanner Folder"
+        itemId: "{BCB19CD2-C0A8-421C-9566-CDE9491EE8AE}"
+        standardValues:
+          itemId: "{11D28942-0C79-4041-8EB9-65E1EE1E62BD}"
+          linked: true
+          masters: ["HeroBanner"]
+
+      renderingParams:
+        name: "HeroBanner"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Banners/HeroBanner"
+        itemId: "{394BC316-29C9-46DF-9BB7-348172E2DAE8}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "HeroBanners"
+      path: "/sitecore/content/main/main-website/Data/HeroBanners"
+      itemId: "{79A9DFE3-D529-4ED3-8105-DCA4C0A3B25C}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Hero Banner"
+        itemId: "{8DF02A79-10AC-4650-A995-FCAAE45743F4}"
+
+    rendering:
+      name: "HeroBanner"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Banners/HeroBanner"
+      itemId: "{A41A47A5-D305-4ADC-BFC8-CCB0F301DDCF}"
+      componentName: "HeroBanner"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners/HeroBanner"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='HeroBanner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='HeroBanner Folder']"
+      parametersTemplateId: "{394BC316-29C9-46DF-9BB7-348172E2DAE8}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/HeroBanner"
+      containerId: "{D28D8B6E-3030-4D49-9558-44B7EED789B8}"
+      variants:
+        - { name: "Default", itemId: "{51E32CC6-C761-4E8D-A9EB-03A11D358DC4}" }
+        - { name: "SplitImageText", itemId: "{085ED09F-42C4-4C25-BB70-CC13D3F9AF8F}" }
+        - { name: "BackgroundImage", itemId: "{948210B2-B8AF-47C1-A04F-E220071C0A63}" }
+        - { name: "VideoBackground", itemId: "{96586509-EBD7-4642-A127-0C65AEE1BD99}" }
+        - { name: "Minimal", itemId: "{FA46BF9A-3783-4615-B4E6-5F5B33A78B48}" }
+
+    verification:
+      checkedAt: "2026-03-25T13:30:00Z"
+      passed:
+        - "Template exists with base templates set"
+        - "Fields created with correct Types"
+        - "Standard Values created and linked (silent-write)"
+        - "Folder template created with Standard Values"
+        - "Rendering Parameters template created with 4 base templates"
+        - "Rendering created as JSON Rendering"
+        - "Component Name is PascalCase matching TSX filename"
+        - "Parameters Template set to GUID"
+        - "Datasource folder created with insert options"
+        - "Example datasource item created"
+        - "Rendering registered in Available Renderings (appended)"
+        - "All 5 Headless Variant Definitions created"
+        - "React file created with 5 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Datasource Template (silent-write)"
+        - "Datasource Location (silent-write)"
+        - "__Masters on folder SV (silent-write)"
+        - "__Masters on datasource folder instance (silent-write)"
+        - "Renderings on Available Renderings (silent-write)"
+        - "__Standard values link on templates (silent-write)"
+
+    notes: []
+
+  - name: "TabNavigationSection"
+    kind: "list"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-03-25T14:30:00Z"
+    updatedAt: "2026-03-25T15:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/navigation/TabNavigationSection.tsx"
+      componentMapKey: "TabNavigationSection"
+      variants:
+        - "Default"
+        - "Underline"
+        - "Boxed"
+
+    templates:
+      datasource:
+        name: "TabNavigationSection"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/TabNavigationSection"
+        itemId: "{B2B2EE2C-F290-4E92-BFC8-14CD367E3EA3}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        standardValues:
+          itemId: "{DEB2FE39-E998-4045-ADC0-D5CA575BF77A}"
+          linked: true
+          masters: ["TabItem"]
+
+      child:
+        name: "TabItem"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/TabItem"
+        itemId: "{7F966A80-EA45-48BB-AF11-A9416836739A}"
+        sectionName: "Data"
+        fields:
+          - { name: "TabLabel", type: "Single-Line Text" }
+          - { name: "TabLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{3DFA15FC-7F73-450F-A4D7-CB622AC16FC8}"
+          linked: true
+
+      folder:
+        name: "TabNavigationSection Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/TabNavigationSection Folder"
+        itemId: "{7D48B2C0-AF38-4868-B69F-D8F6CD41CB25}"
+        standardValues:
+          itemId: "{268BBECD-1538-4831-92BA-4B445A0E32CD}"
+          linked: true
+          masters: ["TabNavigationSection"]
+
+      renderingParams:
+        name: "TabNavigationSection"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Navigation/TabNavigationSection"
+        itemId: "{E730897A-05CD-45F5-91F5-0EB9396DF42F}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "TabNavigationSections"
+      path: "/sitecore/content/main/main-website/Data/TabNavigationSections"
+      itemId: "{62A76B57-53E0-4F57-A793-E5CF0CC8ADA5}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Tab Navigation Section"
+        itemId: "{3687232D-B7AC-41E2-8821-05F31416C78D}"
+        children:
+          - { name: "All", itemId: "{449AAA42-2DEA-4203-9172-B64F852E5A0D}" }
+          - { name: "Featured", itemId: "{A820C51B-B29C-480F-B6F4-D394C570E5AB}" }
+
+    rendering:
+      name: "TabNavigationSection"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Navigation/TabNavigationSection"
+      itemId: "{EFE73752-6046-45A8-92F4-7A68430A0759}"
+      componentName: "TabNavigationSection"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/TabNavigationSection"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='TabNavigationSection Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='TabNavigationSection Folder']"
+      parametersTemplateId: "{E730897A-05CD-45F5-91F5-0EB9396DF42F}"
+      componentQuery: "query TabNavigationSection($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: \"Title\") { jsonValue } children { results { id tabLabel: field(name: \"TabLabel\") { jsonValue } tabLink: field(name: \"TabLink\") { jsonValue } } } } }"
+      componentQueryPattern: "generic-field-access"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/TabNavigationSection"
+      containerId: "{5DF30ECF-56D0-4599-BB2A-C6737C30C333}"
+      variants:
+        - { name: "Default", itemId: "{37CD0AB0-A6F4-4F5B-9032-666FA10925D4}" }
+        - { name: "Underline", itemId: "{F6AB5E2B-D266-4BAC-8536-48404A6EF04A}" }
+        - { name: "Boxed", itemId: "{3A61A7A8-3D68-498D-A79D-9D0191AE4F90}" }
+
+    verification:
+      checkedAt: "2026-03-25T14:30:00Z"
+      passed:
+        - "Parent template created with base templates + HorizonDatasourceGrouping"
+        - "Child template created with base templates"
+        - "All fields created with correct Types"
+        - "Parent SV created with __Masters → child template"
+        - "Child SV created with defaults"
+        - "Folder template created with __Masters → parent template"
+        - "Datasource folder created with insert options on instance"
+        - "Example parent + 2 child items created"
+        - "Rendering Parameters template created with 4 base templates"
+        - "Rendering created with ComponentQuery (updated to generic field access pattern)"
+        - "Component Name is PascalCase matching TSX filename"
+        - "Parameters Template set to GUID"
+        - "Rendering registered in Available Renderings (appended)"
+        - "All 3 Headless Variant Definitions created"
+        - "React file created with 3 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Datasource Template (silent-write)"
+        - "Datasource Location (silent-write)"
+        - "__Masters on parent SV (silent-write)"
+        - "__Masters on folder SV (silent-write)"
+        - "__Masters on datasource folder instance (silent-write)"
+        - "Renderings on Available Renderings (silent-write)"
+        - "__Standard values link on all templates (silent-write)"
+
+    notes:
+      - "2026-03-25: ComponentQuery originally used '... on TabNavigationSection' fragments which failed due to GraphQL type name conflicts with other templates of the same name. Switched to generic field(name: ...) pattern which bypasses type conflicts entirely."
+
+  - name: "ProductPricingCards"
+    kind: "list"
+    category: "Cards"
+    status: "complete"
+    createdAt: "2026-03-25T15:30:00Z"
+    updatedAt: "2026-03-25T15:30:00Z"
+
+    react:
+      filePath: "src/components/uiim/cards/ProductPricingCards.tsx"
+      componentMapKey: "ProductPricingCards"
+      variants:
+        - "Default"
+        - "Horizontal"
+        - "Compact"
+        - "Highlighted"
+
+    templates:
+      datasource:
+        name: "ProductPricingCards"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Cards/ProductPricingCards"
+        itemId: "{31C6BC75-A564-4E78-A887-7C664C3F284B}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        standardValues:
+          itemId: "{F38BF46F-8A46-456F-B499-9CA3B221176B}"
+          linked: true
+          masters: ["ProductCard"]
+
+      child:
+        name: "ProductCard"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Cards/ProductCard"
+        itemId: "{ED669B5F-4392-498E-8F5B-A550F75B8C87}"
+        sectionName: "Data"
+        fields:
+          - { name: "CardTitle", type: "Single-Line Text" }
+          - { name: "CardDescription", type: "Rich Text" }
+          - { name: "CardImage", type: "Image" }
+          - { name: "BadgeText", type: "Single-Line Text" }
+          - { name: "PriceText", type: "Single-Line Text" }
+          - { name: "CardLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{FA20443C-8D02-4926-8C83-5816CDCFAB6A}"
+          linked: true
+
+      folder:
+        name: "ProductPricingCards Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/ProductPricingCards Folder"
+        itemId: "{F9A2B3CB-9532-410B-A181-7CFE190D69E5}"
+        standardValues:
+          itemId: "{E521B7A2-CED4-4BF5-8970-80D682B0DC4B}"
+          linked: true
+          masters: ["ProductPricingCards"]
+
+      renderingParams:
+        name: "ProductPricingCards"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Cards/ProductPricingCards"
+        itemId: "{09A830E9-9170-482D-94A9-B024957C7962}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "ProductPricingCards"
+      path: "/sitecore/content/main/main-website/Data/ProductPricingCards"
+      itemId: "{B5C8AA4C-5B7D-4008-8945-68F7D909134F}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Product Pricing Cards"
+        itemId: "{4E17DE1D-616D-4E56-BF24-1878FD35BF6E}"
+        children:
+          - { name: "Starter", itemId: "{F87942F8-35D2-48E4-BCB1-4865C4999652}" }
+          - { name: "Professional", itemId: "{7A22498C-2D6F-4835-BB4C-738ADB43AA90}" }
+          - { name: "Enterprise", itemId: "{2B80F1CF-1D5E-45BA-8603-CFC49A0FBD60}" }
+
+    rendering:
+      name: "ProductPricingCards"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Cards/ProductPricingCards"
+      itemId: "{EAA7CC9B-4657-410E-9A25-CD33C700261B}"
+      componentName: "ProductPricingCards"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Cards/ProductPricingCards"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='ProductPricingCards Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='ProductPricingCards Folder']"
+      parametersTemplateId: "{09A830E9-9170-482D-94A9-B024957C7962}"
+      componentQuery: "query ProductPricingCards($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: \"Title\") { jsonValue } description: field(name: \"Description\") { jsonValue } children { results { id cardTitle: field(name: \"CardTitle\") { jsonValue } cardDescription: field(name: \"CardDescription\") { jsonValue } cardImage: field(name: \"CardImage\") { jsonValue } badgeText: field(name: \"BadgeText\") { jsonValue } priceText: field(name: \"PriceText\") { jsonValue } cardLink: field(name: \"CardLink\") { jsonValue } } } } }"
+      componentQueryPattern: "generic-field-access"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/ProductPricingCards"
+      containerId: "{2D0654D5-0BFB-4ABB-9B42-83278B8AEC42}"
+      variants:
+        - { name: "Default", itemId: "{8059925F-0667-437B-AD6F-450BAF663C08}" }
+        - { name: "Horizontal", itemId: "{C9B441F5-71A8-46E6-AE86-478930CA907F}" }
+        - { name: "Compact", itemId: "{CBAF513B-7C47-498C-83C6-43B3EE92F68C}" }
+        - { name: "Highlighted", itemId: "{4DE413CD-B593-48C7-AB27-C60D88549C5B}" }
+
+    verification:
+      checkedAt: "2026-03-25T15:30:00Z"
+      passed:
+        - "Parent template created with base templates + HorizonDatasourceGrouping"
+        - "Child template created with base templates"
+        - "All 8 fields created with correct Types"
+        - "Parent SV created with __Masters → child template"
+        - "Child SV created with defaults"
+        - "Folder template created with __Masters → parent template"
+        - "Datasource folder created with insert options on instance"
+        - "Example parent + 3 child items created"
+        - "Rendering Parameters template created with 4 base templates"
+        - "Rendering created with ComponentQuery (generic field access)"
+        - "Component Name is PascalCase matching TSX filename"
+        - "Parameters Template set to GUID"
+        - "All 4 Headless Variant Definitions created"
+        - "React file created with 4 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Datasource Template (silent-write)"
+        - "Datasource Location (silent-write)"
+        - "__Masters on parent SV (silent-write)"
+        - "__Masters on folder SV (silent-write)"
+        - "__Masters on datasource folder instance (silent-write)"
+        - "__Standard values link on all templates (silent-write)"
+
+    notes: []
+
+  - name: "LegalComplianceBanner"
+    kind: "simple"
+    category: "Content"
+    status: "complete"
+    createdAt: "2026-03-25T16:00:00Z"
+    updatedAt: "2026-03-25T16:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/content/LegalComplianceBanner.tsx"
+      componentMapKey: "LegalComplianceBanner"
+      variants:
+        - "Default"
+        - "WithImage"
+
+    templates:
+      datasource:
+        name: "LegalComplianceBanner"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/LegalComplianceBanner"
+        itemId: "{460F2B72-A839-4A13-8A9E-4C75B93CE1A5}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+          - { name: "BannerImage", type: "Image" }
+          - { name: "PrimaryLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{8BFB1F44-9D47-42E9-917C-BAAA27DA21EC}"
+          linked: true
+
+      folder:
+        name: "LegalComplianceBanner Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/LegalComplianceBanner Folder"
+        itemId: "{01E1E871-F228-46E6-817E-F5E9A0018BE6}"
+        standardValues:
+          itemId: "{B7291FCF-6414-4FA0-9C29-B5DE7F20C84C}"
+          linked: true
+          masters: ["LegalComplianceBanner"]
+
+      renderingParams:
+        name: "LegalComplianceBanner"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Content/LegalComplianceBanner"
+        itemId: "{E9DA71E0-F51B-42CE-980D-C959E2A8D427}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "LegalComplianceBanners"
+      path: "/sitecore/content/main/main-website/Data/LegalComplianceBanners"
+      itemId: "{6565D16E-5989-481B-AF40-CFFA4D58DF12}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Legal Compliance Banner"
+        itemId: "{DB2AC33D-71C5-4FD6-9BBC-E79F97BCC027}"
+
+    rendering:
+      name: "LegalComplianceBanner"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Content/LegalComplianceBanner"
+      itemId: "{58490557-5582-4B19-9E31-CE6A80F95D93}"
+      componentName: "LegalComplianceBanner"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/LegalComplianceBanner"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LegalComplianceBanner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LegalComplianceBanner Folder']"
+      parametersTemplateId: "{E9DA71E0-F51B-42CE-980D-C959E2A8D427}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LegalComplianceBanner"
+      containerId: "{A5368715-1C3A-49CC-88A7-1FFB98645A93}"
+      variants:
+        - { name: "Default", itemId: "{E3E57B11-8697-4BC7-B56F-352091BDC6BC}" }
+        - { name: "WithImage", itemId: "{21600F34-BAD3-4EF8-88C9-03F723EEE608}" }
+
+    verification:
+      checkedAt: "2026-03-25T16:00:00Z"
+      passed:
+        - "Template created with base templates"
+        - "All 4 fields created with correct Types"
+        - "Standard Values created and linked"
+        - "Folder template created with Standard Values and __Masters"
+        - "Datasource folder created with insert options on instance"
+        - "Example datasource item created"
+        - "Rendering Parameters template created with 4 base templates"
+        - "Rendering created as JSON Rendering (no ComponentQuery)"
+        - "Component Name is PascalCase matching TSX filename"
+        - "Parameters Template set to GUID"
+        - "Headless Variants container + Default + WithImage created"
+        - "React file created with 2 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Datasource Template (silent-write)"
+        - "Datasource Location (silent-write)"
+        - "__Masters on folder SV (silent-write)"
+        - "__Masters on datasource folder instance (silent-write)"
+        - "__Standard values link on templates (silent-write)"
+
+    notes: []
+
+  - name: "ValuePropositionGrid"
+    kind: "list"
+    category: "Content"
+    status: "complete"
+    createdAt: "2026-03-25T16:30:00Z"
+    updatedAt: "2026-03-25T16:30:00Z"
+
+    react:
+      filePath: "src/components/uiim/content/ValuePropositionGrid.tsx"
+      componentMapKey: "ValuePropositionGrid"
+      variants:
+        - "Default"
+        - "TwoColumn"
+        - "FourColumn"
+        - "Horizontal"
+
+    templates:
+      datasource:
+        name: "ValuePropositionGrid"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/ValuePropositionGrid"
+        itemId: "{C0E69319-CE82-4A4A-B23C-F291A306F7BE}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        standardValues:
+          itemId: "{272F5BCE-8362-4DB8-BD1D-306DE657DA40}"
+          linked: true
+          masters: ["ValuePropositionItem"]
+
+      child:
+        name: "ValuePropositionItem"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/ValuePropositionItem"
+        itemId: "{18975833-7FD9-4CA6-A4DC-D01CD3454D4B}"
+        sectionName: "Data"
+        fields:
+          - { name: "ItemTitle", type: "Single-Line Text" }
+          - { name: "ItemDescription", type: "Rich Text" }
+          - { name: "ItemIcon", type: "Image" }
+          - { name: "ItemLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{20D68899-606B-44F9-88C0-C13BAD9A38B3}"
+          linked: true
+
+      folder:
+        name: "ValuePropositionGrid Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/ValuePropositionGrid Folder"
+        itemId: "{1C4155D9-9038-4372-8D50-DF5230CC3D5F}"
+        standardValues:
+          itemId: "{D4817FA6-99AD-4471-9442-959B2BEF168C}"
+          linked: true
+          masters: ["ValuePropositionGrid"]
+
+      renderingParams:
+        name: "ValuePropositionGrid"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Content/ValuePropositionGrid"
+        itemId: "{C2D23D84-A2C4-46E3-BA20-B33C5BA1E21D}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "ValuePropositionGrids"
+      path: "/sitecore/content/main/main-website/Data/ValuePropositionGrids"
+      itemId: "{BE69F95D-9D08-4C4B-ADF3-59007B2E0BB4}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Value Proposition Grid"
+        itemId: "{3CA50B19-5852-4B00-8A4D-9FBC0333DA2D}"
+        children:
+          - { name: "Fast Delivery", itemId: "{4CB4CC1E-3D2E-44D4-97F8-2CB307BD3590}" }
+          - { name: "Secure Platform", itemId: "{CE518DFD-154F-4BE2-8B44-28F51FABF854}" }
+          - { name: "Expert Support", itemId: "{ACC45023-344C-4AC9-A499-D53502577CFF}" }
+
+    rendering:
+      name: "ValuePropositionGrid"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Content/ValuePropositionGrid"
+      itemId: "{4281E3CD-2309-4427-9A3E-D69FDD32FCDA}"
+      componentName: "ValuePropositionGrid"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/ValuePropositionGrid"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='ValuePropositionGrid Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='ValuePropositionGrid Folder']"
+      parametersTemplateId: "{C2D23D84-A2C4-46E3-BA20-B33C5BA1E21D}"
+      componentQuery: "query ValuePropositionGrid($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: \"Title\") { jsonValue } description: field(name: \"Description\") { jsonValue } children { results { id itemTitle: field(name: \"ItemTitle\") { jsonValue } itemDescription: field(name: \"ItemDescription\") { jsonValue } itemIcon: field(name: \"ItemIcon\") { jsonValue } itemLink: field(name: \"ItemLink\") { jsonValue } } } } }"
+      componentQueryPattern: "generic-field-access"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/ValuePropositionGrid"
+      containerId: "{24A8E37E-7102-407A-9899-8CD940160F39}"
+      variants:
+        - { name: "Default", itemId: "{B2D75BE0-CE27-431F-BF59-9F49EEC5DF31}" }
+        - { name: "TwoColumn", itemId: "{3935D1DD-DC84-4A01-B271-BEF9475C5AE1}" }
+        - { name: "FourColumn", itemId: "{5F5B90A2-F88D-4415-B8B1-D9DCDE1A6B5C}" }
+        - { name: "Horizontal", itemId: "{EF716EAC-BEBF-484A-8826-D2051F549F2F}" }
+
+    verification:
+      checkedAt: "2026-03-25T16:30:00Z"
+      passed:
+        - "Parent template created with base templates + HorizonDatasourceGrouping"
+        - "Child template created with base templates"
+        - "All 6 fields created with correct Types"
+        - "Parent SV with __Masters → child, Child SV with defaults"
+        - "Folder template with __Masters → parent"
+        - "Datasource folder with insert options on instance"
+        - "Example parent + 3 child items created"
+        - "Rendering Parameters template with 4 base templates"
+        - "Rendering with ComponentQuery (generic field access)"
+        - "Component Name PascalCase, Parameters Template GUID"
+        - "All 4 Headless Variant Definitions created"
+        - "React file created with 4 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Datasource Template (silent-write)"
+        - "Datasource Location (silent-write)"
+        - "__Masters on parent SV, folder SV, folder instance (silent-write)"
+        - "__Standard values link on all templates (silent-write)"
+
+    notes: []
+
+  - name: "TrustStatsRow"
+    kind: "list"
+    category: "Content"
+    status: "complete"
+    createdAt: "2026-03-25T17:00:00Z"
+    updatedAt: "2026-03-25T17:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/content/TrustStatsRow.tsx"
+      componentMapKey: "TrustStatsRow"
+      variants:
+        - "Default"
+        - "WithIcons"
+        - "LogoRow"
+
+    templates:
+      datasource:
+        name: "TrustStatsRow"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/TrustStatsRow"
+        itemId: "{88376EB8-A0B7-4FFB-AEA1-AD143726CFD3}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "EyebrowText", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        standardValues:
+          itemId: "{D4D05B7F-4530-4150-B05C-9D5C4DFF7456}"
+          linked: true
+          masters: ["StatItem"]
+
+      child:
+        name: "StatItem"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/StatItem"
+        itemId: "{D7A407DE-322F-432E-8D2C-4F46D11835B1}"
+        sectionName: "Data"
+        fields:
+          - { name: "StatValue", type: "Single-Line Text" }
+          - { name: "StatLabel", type: "Single-Line Text" }
+          - { name: "StatDescription", type: "Rich Text" }
+          - { name: "StatIcon", type: "Image" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{FEBB650C-4307-47D8-8D99-A4F277D2BF86}"
+          linked: true
+
+      folder:
+        name: "TrustStatsRow Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/TrustStatsRow Folder"
+        itemId: "{46D41D60-385E-46C3-BC78-B050A45B2684}"
+        standardValues:
+          itemId: "{632023A3-2280-49D7-B935-B85D997274B0}"
+          linked: true
+          masters: ["TrustStatsRow"]
+
+      renderingParams:
+        name: "TrustStatsRow"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Content/TrustStatsRow"
+        itemId: "{16C3AA57-3944-427A-B2B8-15CD03355885}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "TrustStatsRows"
+      path: "/sitecore/content/main/main-website/Data/TrustStatsRows"
+      itemId: "{6A826E8E-4AB2-4F62-8605-40430028C64C}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Trust Stats Row"
+        itemId: "{0DCA9141-175E-4553-A2C6-6B64C71D88AB}"
+        children:
+          - { name: "40 Plus", itemId: "{A4DA80FA-B38B-4B9C-A5D6-235581FCD116}" }
+          - { name: "1M Plus", itemId: "{1D758415-F391-4BE2-80DB-57ED74DC4706}" }
+          - { name: "99 Percent", itemId: "{DA541F3A-3B7A-41AB-B6BC-E62584B080EF}" }
+          - { name: "24-7", itemId: "{B59B63AE-D545-4472-9421-B7207B71BD03}" }
+
+    rendering:
+      name: "TrustStatsRow"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Content/TrustStatsRow"
+      itemId: "{E6D0C7C1-ACFF-4E85-8600-196649FEFFB9}"
+      componentName: "TrustStatsRow"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/TrustStatsRow"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='TrustStatsRow Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='TrustStatsRow Folder']"
+      parametersTemplateId: "{16C3AA57-3944-427A-B2B8-15CD03355885}"
+      componentQuery: "query TrustStatsRow($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: \"Title\") { jsonValue } eyebrowText: field(name: \"EyebrowText\") { jsonValue } children { results { id statValue: field(name: \"StatValue\") { jsonValue } statLabel: field(name: \"StatLabel\") { jsonValue } statDescription: field(name: \"StatDescription\") { jsonValue } statIcon: field(name: \"StatIcon\") { jsonValue } } } } }"
+      componentQueryPattern: "generic-field-access"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/TrustStatsRow"
+      containerId: "{7AE37D15-B227-4274-809B-27023796BACD}"
+      variants:
+        - { name: "Default", itemId: "{71BDCB75-6061-460C-98BE-86C4E5E79B3A}" }
+        - { name: "WithIcons", itemId: "{A31EA0E4-1E93-43EE-9615-EC73A1451E63}" }
+        - { name: "LogoRow", itemId: "{1E5484B5-F633-4339-9A3E-AD6416C3B8AD}" }
+
+    verification:
+      checkedAt: "2026-03-25T17:00:00Z"
+      passed:
+        - "Parent template with base templates + HorizonDatasourceGrouping"
+        - "Child template with base templates"
+        - "All 6 fields with correct Types"
+        - "SVs created, linked, __Masters set"
+        - "Folder template with __Masters → parent"
+        - "Datasource folder with insert options"
+        - "Example parent + 4 child items"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering with ComponentQuery (generic field access)"
+        - "All 3 Headless Variant Definitions"
+        - "React file with 3 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
+
+    notes: []
+
+  - name: "TestimonialBlock"
+    kind: "list"
+    category: "Social Proof"
+    status: "complete"
+    createdAt: "2026-03-25T17:30:00Z"
+    updatedAt: "2026-03-25T17:30:00Z"
+
+    react:
+      filePath: "src/components/uiim/social-proof/TestimonialBlock.tsx"
+      componentMapKey: "TestimonialBlock"
+      variants:
+        - "Default"
+        - "Carousel"
+        - "Grid"
+        - "WithPhoto"
+
+    templates:
+      datasource:
+        name: "TestimonialBlock"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Social Proof/TestimonialBlock"
+        itemId: "{BBF97517-1FE5-405B-AAE7-5309BE26249A}"
+        sectionName: "Data"
+        fields:
+          - { name: "SectionTitle", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        standardValues:
+          itemId: "{8C535A32-282F-41AF-9EE4-5E93E269CF24}"
+          linked: true
+          masters: ["TestimonialItem"]
+
+      child:
+        name: "TestimonialItem"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Social Proof/TestimonialItem"
+        itemId: "{29792B9C-9B29-4D8F-BF71-02084EE8102A}"
+        sectionName: "Data"
+        fields:
+          - { name: "QuoteText", type: "Rich Text" }
+          - { name: "AuthorName", type: "Single-Line Text" }
+          - { name: "AuthorRole", type: "Single-Line Text" }
+          - { name: "AuthorImage", type: "Image" }
+          - { name: "CompanyName", type: "Single-Line Text" }
+          - { name: "CompanyLogo", type: "Image" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{CA2888A0-91EA-4FB8-9381-899D1AC58907}"
+          linked: true
+
+      folder:
+        name: "TestimonialBlock Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/TestimonialBlock Folder"
+        itemId: "{15CD446D-4B70-44A4-B422-E746D4EE75A7}"
+        standardValues:
+          itemId: "{3738A485-A0D7-45C3-A9BB-36F3485F4231}"
+          linked: true
+          masters: ["TestimonialBlock"]
+
+      renderingParams:
+        name: "TestimonialBlock"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Social Proof/TestimonialBlock"
+        itemId: "{670B1F23-39B4-4CBD-8E94-9E019B8B3546}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "TestimonialBlocks"
+      path: "/sitecore/content/main/main-website/Data/TestimonialBlocks"
+      itemId: "{E5004E14-EA49-43B7-A093-006648A14A60}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Testimonial Block"
+        itemId: "{126E29DA-5CDC-46E2-98E9-3B87893109D6}"
+        children:
+          - { name: "Jane Smith", itemId: "{ADD30D80-C33E-4766-AC7D-1D552852A268}" }
+          - { name: "John Doe", itemId: "{C032D564-D696-4914-8884-9D47B9785B51}" }
+
+    rendering:
+      name: "TestimonialBlock"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Social Proof/TestimonialBlock"
+      itemId: "{90021266-66B3-47B6-9709-A070F56064A1}"
+      componentName: "TestimonialBlock"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Social Proof/TestimonialBlock"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='TestimonialBlock Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='TestimonialBlock Folder']"
+      parametersTemplateId: "{670B1F23-39B4-4CBD-8E94-9E019B8B3546}"
+      componentQuery: "query TestimonialBlock($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { sectionTitle: field(name: \"SectionTitle\") { jsonValue } children { results { id quoteText: field(name: \"QuoteText\") { jsonValue } authorName: field(name: \"AuthorName\") { jsonValue } authorRole: field(name: \"AuthorRole\") { jsonValue } authorImage: field(name: \"AuthorImage\") { jsonValue } companyName: field(name: \"CompanyName\") { jsonValue } companyLogo: field(name: \"CompanyLogo\") { jsonValue } } } } }"
+      componentQueryPattern: "generic-field-access"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/TestimonialBlock"
+      containerId: "{77FA9798-E911-41DC-804F-5A3649087CB4}"
+      variants:
+        - { name: "Default", itemId: "{7C588A0F-5720-4CA7-A50A-4AD02E272B62}" }
+        - { name: "Carousel", itemId: "{0F34A807-A42C-4E7D-BD54-EF222EB2D952}" }
+        - { name: "Grid", itemId: "{508FF66A-D30F-4C2D-B82F-2009E0B6E207}" }
+        - { name: "WithPhoto", itemId: "{9C2EFAD0-6E36-415A-AFC5-EDCD1DA4A805}" }
+
+    verification:
+      checkedAt: "2026-03-25T17:30:00Z"
+      passed:
+        - "Parent template with base templates + HorizonDatasourceGrouping"
+        - "Child template with base templates"
+        - "All 7 fields with correct Types"
+        - "SVs created, linked, __Masters set"
+        - "Folder template with __Masters → parent"
+        - "Datasource folder with insert options"
+        - "Example parent + 2 child items"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering with ComponentQuery (generic field access)"
+        - "All 4 Headless Variant Definitions"
+        - "React file with 4 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
+
+    notes: []
+
+  - name: "CTABanner"
+    kind: "simple"
+    category: "Banners"
+    status: "complete"
+    createdAt: "2026-03-25T18:00:00Z"
+    updatedAt: "2026-03-25T18:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/banners/CTABanner.tsx"
+      componentMapKey: "CTABanner"
+      variants:
+        - "Default"
+        - "WithImage"
+        - "Split"
+        - "Minimal"
+
+    templates:
+      datasource:
+        name: "CTABanner"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners/CTABanner"
+        itemId: "{980CB544-BD26-4866-83BB-6DBEB9156558}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+          - { name: "PrimaryLink", type: "General Link" }
+          - { name: "SecondaryLink", type: "General Link" }
+          - { name: "BackgroundImage", type: "Image" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{4E6C3F69-DC7C-413A-8602-C171D2D4B133}"
+          linked: true
+
+      folder:
+        name: "CTABanner Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/CTABanner Folder"
+        itemId: "{FC43C070-0F25-4C89-84B4-6B3BD4867D2D}"
+        standardValues:
+          itemId: "{FC79E10D-D927-46C1-9F3A-4044007C266A}"
+          linked: true
+          masters: ["CTABanner"]
+
+      renderingParams:
+        name: "CTABanner"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Banners/CTABanner"
+        itemId: "{1C5F5CAE-E35F-4DEA-9A14-E1AB0DD0376A}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "CTABanners"
+      path: "/sitecore/content/main/main-website/Data/CTABanners"
+      itemId: "{F86BE13D-2F5E-4D7E-B2E5-EF4C9637FC4C}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "CTA Banner"
+        itemId: "{721BA459-90CD-4899-A293-C1C9DBB0DF95}"
+
+    rendering:
+      name: "CTABanner"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Banners/CTABanner"
+      itemId: "{F6A1FA05-15FC-46C9-B921-98E79EFF5F4E}"
+      componentName: "CTABanner"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners/CTABanner"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='CTABanner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='CTABanner Folder']"
+      parametersTemplateId: "{1C5F5CAE-E35F-4DEA-9A14-E1AB0DD0376A}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/CTABanner"
+      containerId: "{A739A883-D5E1-4CAD-A8EE-5D3287D6B238}"
+      variants:
+        - { name: "Default", itemId: "{B526E0D8-C4F9-4A21-AFA9-B828119FA988}" }
+        - { name: "WithImage", itemId: "{2DC4E1E9-79A0-48C7-A6D9-AC7DD8AFAAA0}" }
+        - { name: "Split", itemId: "{9DBA839A-E0F8-47D2-AA8E-29EDA7CC68E6}" }
+        - { name: "Minimal", itemId: "{E63EE25F-C889-4FE1-81B7-4611CF5969BE}" }
+
+    verification:
+      checkedAt: "2026-03-25T18:00:00Z"
+      passed:
+        - "Template with base templates"
+        - "All 5 fields with correct Types"
+        - "SVs created and linked"
+        - "Folder template with __Masters"
+        - "Datasource folder with insert options"
+        - "Example item created"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering created (no ComponentQuery)"
+        - "Component Name PascalCase, Parameters Template GUID"
+        - "All 4 Headless Variant Definitions"
+        - "React file with 4 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
+
+    notes: []
+
+  - name: "FeatureCardsGrid"
+    kind: "list"
+    category: "Cards"
+    status: "complete"
+    createdAt: "2026-03-25T18:30:00Z"
+    updatedAt: "2026-03-25T18:30:00Z"
+
+    react:
+      filePath: "src/components/uiim/cards/FeatureCardsGrid.tsx"
+      componentMapKey: "FeatureCardsGrid"
+      variants:
+        - "Default"
+        - "TwoColumn"
+        - "WithImages"
+        - "Carousel"
+
+    templates:
+      datasource:
+        name: "FeatureCardsGrid"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Cards/FeatureCardsGrid"
+        itemId: "{E94D3C21-7DE5-4270-B691-8E29673A1E2C}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        standardValues:
+          itemId: "{E868789E-23EE-4751-B235-8430A05F08F3}"
+          linked: true
+          masters: ["FeatureCardItem"]
+
+      child:
+        name: "FeatureCardItem"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Cards/FeatureCardItem"
+        itemId: "{E2014BDC-3AF2-4ADD-A731-86E873EBF24C}"
+        sectionName: "Data"
+        fields:
+          - { name: "CardTitle", type: "Single-Line Text" }
+          - { name: "CardDescription", type: "Rich Text" }
+          - { name: "CardImage", type: "Image" }
+          - { name: "CardLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{42662D04-63C7-4F16-9D5F-8A10B158FA4D}"
+          linked: true
+
+      folder:
+        name: "FeatureCardsGrid Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/FeatureCardsGrid Folder"
+        itemId: "{D78F8FC7-D951-4771-A3E7-F2709984D4ED}"
+        standardValues:
+          itemId: "{54FB5F51-C345-40FB-A065-54A62E7AB7E4}"
+          linked: true
+          masters: ["FeatureCardsGrid"]
+
+      renderingParams:
+        name: "FeatureCardsGrid"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Cards/FeatureCardsGrid"
+        itemId: "{F337398E-5A93-4D46-B893-6AA2DCCB6E80}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "FeatureCardsGrids"
+      path: "/sitecore/content/main/main-website/Data/FeatureCardsGrids"
+      itemId: "{BAB76C01-9A6E-49D5-9F44-22D7EDBE13FE}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Feature Cards Grid"
+        itemId: "{BC7314D7-D4F4-4E49-A78E-2A482DDFABBC}"
+        children:
+          - { name: "Analytics", itemId: "{132F39A3-E7B4-4EDD-BB2C-A38DF87DFF5C}" }
+          - { name: "Automation", itemId: "{E6738454-58FA-4ED3-9ECB-6F1AAE129237}" }
+          - { name: "Integration", itemId: "{F068FB91-35B7-45B3-9782-DA99D2078D69}" }
+
+    rendering:
+      name: "FeatureCardsGrid"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Cards/FeatureCardsGrid"
+      itemId: "{E194B962-0617-4A10-B4DB-2A4D19248C13}"
+      componentName: "FeatureCardsGrid"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Cards/FeatureCardsGrid"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='FeatureCardsGrid Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='FeatureCardsGrid Folder']"
+      parametersTemplateId: "{F337398E-5A93-4D46-B893-6AA2DCCB6E80}"
+      componentQuery: "query FeatureCardsGrid($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: \"Title\") { jsonValue } description: field(name: \"Description\") { jsonValue } children { results { id cardTitle: field(name: \"CardTitle\") { jsonValue } cardDescription: field(name: \"CardDescription\") { jsonValue } cardImage: field(name: \"CardImage\") { jsonValue } cardLink: field(name: \"CardLink\") { jsonValue } } } } }"
+      componentQueryPattern: "generic-field-access"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/FeatureCardsGrid"
+      containerId: "{72669095-6581-4595-9C9E-2F650BCA4404}"
+      variants:
+        - { name: "Default", itemId: "{495EF058-D306-4328-ABE4-261E7CFE8E9E}" }
+        - { name: "TwoColumn", itemId: "{0BCA5162-9643-49F3-BEE2-6B5243287D5E}" }
+        - { name: "WithImages", itemId: "{0378DF47-C562-4BE1-8BA7-DFE429A2015A}" }
+        - { name: "Carousel", itemId: "" }  # TODO: create in Sitecore
+
+    verification:
+      checkedAt: "2026-03-25T18:30:00Z"
+      passed:
+        - "Parent template with base templates + HorizonDatasourceGrouping"
+        - "Child template with base templates"
+        - "All 6 fields with correct Types"
+        - "SVs created, linked, __Masters set"
+        - "Folder template with __Masters → parent"
+        - "Datasource folder with insert options"
+        - "Example parent + 3 child items"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering with ComponentQuery (generic field access)"
+        - "All 3 Headless Variant Definitions"
+        - "React file with 3 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
+
+    notes: []
+
+  - name: "ImageGallery"
+    kind: "simple"
+    category: "Media"
+    status: "complete"
+    createdAt: "2026-03-25T19:00:00Z"
+    updatedAt: "2026-03-25T19:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/media/ImageGallery.tsx"
+      componentMapKey: "ImageGallery"
+      variants:
+        - "Default"
+        - "Gallery"
+        - "Parallax"
+
+    templates:
+      datasource:
+        name: "ImageGallery"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Media/ImageGallery"
+        itemId: "{2CA92B60-D88F-428E-A222-8A601C3D99DE}"
+        sectionName: "Data"
+        fields:
+          - { name: "GalleryImage", type: "Image" }
+          - { name: "Caption", type: "Single-Line Text" }
+          - { name: "AltText", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{7EBFC2AA-CB94-4D39-8979-3656AF605CD1}"
+          linked: true
+
+      folder:
+        name: "ImageGallery Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/ImageGallery Folder"
+        itemId: "{C291EC18-A95F-4792-9778-C27D29C83062}"
+        standardValues:
+          itemId: "{B30B0625-DC67-4951-866C-0C31E24F2C6D}"
+          linked: true
+          masters: ["ImageGallery"]
+
+      renderingParams:
+        name: "ImageGallery"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Media/ImageGallery"
+        itemId: "{21B5B0D2-34FB-47FF-B995-906EBAC653EB}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "ImageGalleries"
+      path: "/sitecore/content/main/main-website/Data/ImageGalleries"
+      itemId: "{98392731-3CBC-498C-888B-9669BA639B96}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Image Gallery"
+        itemId: "{C77C86FE-8E47-46EF-AA77-30EEA9160834}"
+
+    rendering:
+      name: "ImageGallery"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Media/ImageGallery"
+      itemId: "{E1BCD607-51C4-4248-8EE2-B7F474D40B3E}"
+      componentName: "ImageGallery"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Media/ImageGallery"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='ImageGallery Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='ImageGallery Folder']"
+      parametersTemplateId: "{21B5B0D2-34FB-47FF-B995-906EBAC653EB}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/ImageGallery"
+      containerId: "{C022A2B3-EF0B-4035-9103-F752D98E0C6A}"
+      variants:
+        - { name: "Default", itemId: "{36325627-294D-44ED-BD63-2E622F782684}" }
+        - { name: "Gallery", itemId: "{CF1F5876-5157-441C-A6FB-7BF150651345}" }
+        - { name: "Parallax", itemId: "{CBFFE582-C802-49D8-BFB0-94353D067F8E}" }
+
+    verification:
+      checkedAt: "2026-03-25T19:00:00Z"
+      passed:
+        - "Template with base templates"
+        - "All 3 fields with correct Types"
+        - "SVs created and linked"
+        - "Folder template with __Masters"
+        - "Datasource folder with insert options"
+        - "Example item created"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering created (no ComponentQuery)"
+        - "All 3 Headless Variant Definitions"
+        - "React file with 3 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
+
+    notes: []
+
+  - name: "LogoCloud"
+    kind: "list"
+    category: "Social Proof"
+    status: "complete"
+    createdAt: "2026-03-25T19:30:00Z"
+    updatedAt: "2026-03-25T19:30:00Z"
+
+    react:
+      filePath: "src/components/uiim/social-proof/LogoCloud.tsx"
+      componentMapKey: "LogoCloud"
+      variants:
+        - "Default"
+        - "Grid"
+        - "WithLabels"
+
+    templates:
+      datasource:
+        name: "LogoCloud"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Social Proof/LogoCloud"
+        itemId: "{2409D9AA-E711-431D-BEC8-7FF278DC4D6B}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        standardValues:
+          itemId: "{C2071A35-FF2B-4904-B5A6-691D7D1A0A5E}"
+          linked: true
+          masters: ["LogoItem"]
+
+      child:
+        name: "LogoItem"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Social Proof/LogoItem"
+        itemId: "{C48880B3-B0B9-49EA-BF19-931C68A8A37C}"
+        sectionName: "Data"
+        fields:
+          - { name: "LogoImage", type: "Image" }
+          - { name: "CompanyName", type: "Single-Line Text" }
+          - { name: "LogoLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{E3EE065E-21D8-45A0-B189-0D140B61131C}"
+          linked: true
+
+      folder:
+        name: "LogoCloud Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/LogoCloud Folder"
+        itemId: "{250B1404-5B91-4249-AA2E-B8ADF034E768}"
+        standardValues:
+          itemId: "{9D3E77AE-C168-42EC-AC40-E035CF8DCD0A}"
+          linked: true
+          masters: ["LogoCloud"]
+
+      renderingParams:
+        name: "LogoCloud"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Social Proof/LogoCloud"
+        itemId: "{27BD1A7E-77B6-4F1C-9F91-EF317149F541}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "LogoClouds"
+      path: "/sitecore/content/main/main-website/Data/LogoClouds"
+      itemId: "{A0F83F36-4BFB-4C6A-9079-A01EC54A5276}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Logo Cloud"
+        itemId: "{A20A4FAD-1EB6-4CFD-A2B0-4F89F4D81978}"
+        children:
+          - { name: "Partner A", itemId: "{8D76F105-0C05-4996-8811-09EEF6D79BAF}" }
+          - { name: "Partner B", itemId: "{3FB87281-FD53-4418-AC26-8823B4DD96FE}" }
+          - { name: "Partner C", itemId: "{8E50D2DC-2383-409A-AA3F-9DEDD9485301}" }
+
+    rendering:
+      name: "LogoCloud"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Social Proof/LogoCloud"
+      itemId: "{A53006E8-C66B-419F-859D-7CFA92E7E26B}"
+      componentName: "LogoCloud"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Social Proof/LogoCloud"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='LogoCloud Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='LogoCloud Folder']"
+      parametersTemplateId: "{27BD1A7E-77B6-4F1C-9F91-EF317149F541}"
+      componentQuery: "query LogoCloud($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: \"Title\") { jsonValue } children { results { id logoImage: field(name: \"LogoImage\") { jsonValue } companyName: field(name: \"CompanyName\") { jsonValue } logoLink: field(name: \"LogoLink\") { jsonValue } } } } }"
+      componentQueryPattern: "generic-field-access"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LogoCloud"
+      containerId: "{0D58C38F-2601-444C-8981-6FB3DCA202EC}"
+      variants:
+        - { name: "Default", itemId: "{125C1A27-2F29-4A84-B45A-DD43279C23CE}" }
+        - { name: "Grid", itemId: "{8CCCB55E-D891-4F4B-B8C7-E254DC95C9F1}" }
+        - { name: "WithLabels", itemId: "{2D8CB372-0881-4F56-ACE4-A69E3ABDEC1E}" }
+
+    verification:
+      checkedAt: "2026-03-25T19:30:00Z"
+      passed:
+        - "Parent template with base templates + HorizonDatasourceGrouping"
+        - "Child template with base templates"
+        - "All 4 fields with correct Types"
+        - "SVs created, linked, __Masters set"
+        - "Folder template with __Masters → parent"
+        - "Datasource folder with insert options"
+        - "Example parent + 3 child items"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering with ComponentQuery (generic field access)"
+        - "All 3 Headless Variant Definitions"
+        - "React file with 3 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
+
+    notes: []
+
+  - name: "SiteFooter"
+    kind: "context-only+datasource"
+    category: "Navigation"
+    status: "complete"
+    createdAt: "2026-03-25T20:00:00Z"
+    updatedAt: "2026-05-05T13:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/navigation/SiteFooter.tsx"
+      componentMapKey: "SiteFooter"
+      dataStrategy: "ComponentQuery (BrandLogo from datasource)"
+      variants:
+        - "Default"
+        - "Minimal"
+        - "MegaFooter"
+
+    templates:
+      datasource:
+        name: "SiteFooterData"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/SiteFooterData"
+        itemId: "{98B34BFF-0D74-4798-B2D8-CB52C19F7C92}"
+        sectionName: "Data"
+        fields:
+          - { name: "BrandLogo", type: "Image" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{CF55F07A-22B3-4514-B099-F390A90E187C}"
+          linked: true
+
+      folder:
+        name: "SiteFooterData Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/SiteFooterData Folder"
+        itemId: "{08DFAE03-D93A-4882-ADC4-2AB81ECEBCA1}"
+        standardValues:
+          itemId: "{FA1F6EE1-6678-441A-820E-0F6136B64EE2}"
+          linked: true
+          masters: ["SiteFooterData"]
+
+      renderingParams:
+        name: "SiteFooter"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Navigation/SiteFooter"
+        itemId: "{E7E0DD7B-2039-4895-970B-20BB8FCD8C89}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "SiteFooters"
+      path: "/sitecore/content/main/main-website/Data/SiteFooters"
+      itemId: "{79F4A73C-71D2-4959-8FDE-C7D9C8748990}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Site Footer"
+        itemId: "{F8FDFEFE-119A-49DE-9EAE-36849C17B9D3}"
+
+    rendering:
+      name: "SiteFooter"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Navigation/SiteFooter"
+      itemId: "{4E7E77EF-529C-4C28-A5D8-94C5ACA065FF}"
+      componentName: "SiteFooter"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation/SiteFooterData"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='SiteFooterData Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='SiteFooterData Folder']"
+      parametersTemplateId: "{E7E0DD7B-2039-4895-970B-20BB8FCD8C89}"
+      componentQuery: "query SiteFooterData($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { brandLogo: field(name: \"BrandLogo\") { jsonValue } } }"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/SiteFooter"
+      containerId: "{613FAEEA-7FDC-453E-96DC-9B52337AC257}"
+      variants:
+        - { name: "Default", itemId: "{143CFE84-1E77-4961-975C-38564DC43DB9}" }
+        - { name: "Minimal", itemId: "{AF87D61B-F6A8-4036-9BF8-FDB586268D24}" }
+        - { name: "MegaFooter", itemId: "{DA131066-F9A2-47F0-A099-F614E61817AA}" }
+
+    verification:
+      checkedAt: "2026-03-25T20:00:00Z"
+      passed:
+        - "No datasource template (context-only)"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering created (no datasource, no ComponentQuery)"
+        - "Component Name PascalCase"
+        - "All 3 Headless Variant Definitions"
+        - "React file with 3 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+
+    notes: []
+
+  - name: "NewsletterSignup"
+    kind: "simple"
+    category: "Forms"
+    status: "complete"
+    createdAt: "2026-03-25T20:30:00Z"
+    updatedAt: "2026-03-25T20:30:00Z"
+
+    react:
+      filePath: "src/components/uiim/forms/NewsletterSignup.tsx"
+      componentMapKey: "NewsletterSignup"
+      variants:
+        - "Default"
+        - "Banner"
+        - "Compact"
+
+    templates:
+      datasource:
+        name: "NewsletterSignup"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Forms/NewsletterSignup"
+        itemId: "{A16CAF37-8EF7-4FB1-A6D4-A85638F4EB15}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+          - { name: "PlaceholderText", type: "Single-Line Text" }
+          - { name: "ButtonText", type: "Single-Line Text" }
+          - { name: "SuccessMessage", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{FB47B169-832D-43A9-9A82-071E0D6C5037}"
+          linked: true
+
+      folder:
+        name: "NewsletterSignup Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/NewsletterSignup Folder"
+        itemId: "{AA127BAE-6335-477A-B960-B01E852D8E6A}"
+        standardValues:
+          itemId: "{48C7A44C-F842-45E8-809B-5A1CDE1052F9}"
+          linked: true
+          masters: ["NewsletterSignup"]
+
+      renderingParams:
+        name: "NewsletterSignup"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Forms/NewsletterSignup"
+        itemId: "{CD463E67-290F-4365-B96D-DE763DC43CC2}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "NewsletterSignups"
+      path: "/sitecore/content/main/main-website/Data/NewsletterSignups"
+      itemId: "{4046B0A4-5F07-4F4B-8D6F-E04EDE1E1204}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Newsletter Signup"
+        itemId: "{8D599DD4-86EC-4636-8AFD-A1F3C878A3B7}"
+
+    rendering:
+      name: "NewsletterSignup"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Forms/NewsletterSignup"
+      itemId: "{C739DB42-43E5-4DAC-B5FC-404EDDC9E37C}"
+      componentName: "NewsletterSignup"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Forms/NewsletterSignup"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='NewsletterSignup Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='NewsletterSignup Folder']"
+      parametersTemplateId: "{CD463E67-290F-4365-B96D-DE763DC43CC2}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/NewsletterSignup"
+      containerId: "{3DC77ED9-7155-4AE9-A658-D884E35D949A}"
+      variants:
+        - { name: "Default", itemId: "{F0F09912-52F5-4429-8CBF-F6FAA8AD2453}" }
+        - { name: "Banner", itemId: "{5FE28EAE-3DC9-4DF5-89B8-0576C940BE01}" }
+        - { name: "Compact", itemId: "{1B8FF6FD-6E4A-4A9A-903A-5B512672A552}" }
+
+    verification:
+      checkedAt: "2026-03-25T20:30:00Z"
+      passed:
+        - "Template with base templates"
+        - "All 5 fields with correct Types"
+        - "SVs created with defaults (PlaceholderText, ButtonText)"
+        - "Folder template with __Masters"
+        - "Datasource folder with insert options"
+        - "Example item created"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering created (no ComponentQuery)"
+        - "All 3 Headless Variant Definitions"
+        - "React file with 3 variants (use client for state)"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
+
+    notes: []
+
+  - name: "FAQAccordion"
+    kind: "list"
+    category: "Content"
+    status: "complete"
+    createdAt: "2026-03-25T21:00:00Z"
+    updatedAt: "2026-03-25T21:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/content/FAQAccordion.tsx"
+      componentMapKey: "FAQAccordion"
+      variants:
+        - "Default"
+        - "AllOpen"
+        - "TwoColumn"
+
+    templates:
+      datasource:
+        name: "FAQAccordion"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/FAQAccordion"
+        itemId: "{0A12DF91-36FC-4579-8DBC-A1D23C13ED74}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+        baseTemplatesSet: true
+        horizonDatasourceGrouping: true
+        standardValues:
+          itemId: "{814734F6-501D-4A97-AF16-4B2BCE721449}"
+          linked: true
+          masters: ["FAQItem"]
+
+      child:
+        name: "FAQItem"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/FAQItem"
+        itemId: "{73DF51E6-E92D-4742-9E0A-74D2CA36EF7F}"
+        sectionName: "Data"
+        fields:
+          - { name: "Question", type: "Single-Line Text" }
+          - { name: "Answer", type: "Rich Text" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{38D7A3E0-AEC0-4EEC-BA2E-A87A4298ACB5}"
+          linked: true
+
+      folder:
+        name: "FAQAccordion Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/FAQAccordion Folder"
+        itemId: "{241185E3-179A-4689-A63B-760B3E9FDDE3}"
+        standardValues:
+          itemId: "{74047873-7F8F-4136-BB98-C965E2A20248}"
+          linked: true
+          masters: ["FAQAccordion"]
+
+      renderingParams:
+        name: "FAQAccordion"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Content/FAQAccordion"
+        itemId: "{76972C36-B419-4693-8D06-441D9837D77B}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "FAQAccordions"
+      path: "/sitecore/content/main/main-website/Data/FAQAccordions"
+      itemId: "{547BF25D-1445-4C45-9C04-66FCB3FD339B}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "FAQ Accordion"
+        itemId: "{7FE9E03E-EC08-4C6F-8C79-D20D2ED29130}"
+        children:
+          - { name: "What is your refund policy", itemId: "{6C0FCF9E-71C1-4721-9957-B5ABD0232724}" }
+          - { name: "How do I get started", itemId: "{92C6A1EB-2EE2-43CD-9F21-96725C79812A}" }
+          - { name: "Do you offer support", itemId: "{4F8E85D7-E408-4564-A4C9-F048A5C9164D}" }
+
+    rendering:
+      name: "FAQAccordion"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Content/FAQAccordion"
+      itemId: "{0F7C27E2-B960-47E9-AB85-F8A9C45D0F9C}"
+      componentName: "FAQAccordion"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/FAQAccordion"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='FAQAccordion Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='FAQAccordion Folder']"
+      parametersTemplateId: "{76972C36-B419-4693-8D06-441D9837D77B}"
+      componentQuery: "query FAQAccordion($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: \"Title\") { jsonValue } description: field(name: \"Description\") { jsonValue } children { results { id question: field(name: \"Question\") { jsonValue } answer: field(name: \"Answer\") { jsonValue } } } } }"
+      componentQueryPattern: "generic-field-access"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/FAQAccordion"
+      containerId: "{55FB6F57-5566-4CAF-ADDD-18BFB0152893}"
+      variants:
+        - { name: "Default", itemId: "{3D01B4ED-75E0-4AD3-A6F4-FA47606082CB}" }
+        - { name: "AllOpen", itemId: "{FFC0D7F8-8D1C-4A6E-8FC1-DD429718057A}" }
+        - { name: "TwoColumn", itemId: "{9221A2EC-3D89-40AF-9569-ADF828F398F4}" }
+
+    verification:
+      checkedAt: "2026-03-25T21:00:00Z"
+      passed:
+        - "Parent template with base templates + HorizonDatasourceGrouping"
+        - "Child template with base templates"
+        - "All 4 fields with correct Types"
+        - "SVs created, linked, __Masters set"
+        - "Folder template with __Masters → parent"
+        - "Datasource folder with insert options"
+        - "Example parent + 3 child items"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering with ComponentQuery (generic field access)"
+        - "All 3 Headless Variant Definitions"
+        - "React file with 3 variants (native details/summary)"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields (Datasource Template, Location, __Masters, __Standard values)"
+
+    notes:
+      - "shadcn/ui Accordion not available — used native HTML details/summary with chevron SVG and group-open:rotate-180 transition"
+
+  - name: "RichTextBlock"
+    kind: "simple"
+    category: "Content"
+    status: "complete"
+    createdAt: "2026-03-25T21:30:00Z"
+    updatedAt: "2026-03-25T21:30:00Z"
+
+    react:
+      filePath: "src/components/uiim/content/RichTextBlock.tsx"
+      componentMapKey: "RichTextBlock"
+      variants:
+        - "Default"
+        - "Centered"
+        - "Narrow"
+
+    templates:
+      datasource:
+        name: "RichTextBlock"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/RichTextBlock"
+        itemId: "{D74F19B9-2239-4F05-8B2F-727393777ED8}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Body", type: "Rich Text" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{2E5AD440-2DC2-4BA2-92A1-7604E2555E40}"
+          linked: true
+
+      folder:
+        name: "RichTextBlock Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/RichTextBlock Folder"
+        itemId: "{95048E8F-2500-4046-A1A3-385BD346D67E}"
+        standardValues:
+          itemId: "{A66F194D-2FB8-48BD-A699-B869194BD8C4}"
+          linked: true
+          masters: ["RichTextBlock"]
+
+      renderingParams:
+        name: "RichTextBlock"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Content/RichTextBlock"
+        itemId: "{F4E4FB5D-1AA3-4851-B349-14765BD8D390}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "RichTextBlocks"
+      path: "/sitecore/content/main/main-website/Data/RichTextBlocks"
+      itemId: "{E94DA9F2-19A0-4EEB-9F1C-C5B53DF8D8ED}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Rich Text Block"
+        itemId: "{17F2A696-2C61-435E-AED7-D91582BE3FE3}"
+
+    rendering:
+      name: "RichTextBlock"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Content/RichTextBlock"
+      itemId: "{D008D5FE-B27E-419F-889C-115B3D48A114}"
+      componentName: "RichTextBlock"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/RichTextBlock"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='RichTextBlock Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='RichTextBlock Folder']"
+      parametersTemplateId: "{F4E4FB5D-1AA3-4851-B349-14765BD8D390}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/RichTextBlock"
+      containerId: "{F11626A1-AE7B-46F7-AB3A-F9EB9779C5EC}"
+      variants:
+        - { name: "Default", itemId: "{68885D4E-9808-421D-AB93-30E9FF27D8F1}" }
+        - { name: "Centered", itemId: "{61BF7CB2-B65C-4C85-902D-CFA95D0F429D}" }
+        - { name: "Narrow", itemId: "{CCF0292C-9EE3-4BF8-A4F1-3FFA774CA133}" }
+
+    verification:
+      checkedAt: "2026-03-25T21:30:00Z"
+      passed:
+        - "Template with base templates"
+        - "All 2 fields with correct Types"
+        - "SVs created and linked"
+        - "Folder template with __Masters"
+        - "Datasource folder with insert options"
+        - "Example item created"
+        - "Rendering Parameters with 4 base templates"
+        - "Rendering created (no ComponentQuery)"
+        - "All 3 Headless Variant Definitions"
+        - "React file with 3 variants"
+        - "Component map updated"
+      failed: []
+      pendingManual:
+        - "Renderings on Available Renderings (silent-write, appended with user-provided value)"
+        - "Silent-write fields"
+
+    notes: []
+
+  - name: "FeatureHighlight"
+    kind: "simple"
+    category: "Content"
+    status: "complete"
+    createdAt: "2026-03-25T22:00:00Z"
+    updatedAt: "2026-03-25T22:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/content/FeatureHighlight.tsx"
+      componentMapKey: "FeatureHighlight"
+      variants:
+        - "Default"
+        - "Centered"
+        - "WithVideo"
+        - "IconLeft"
+
+    templates:
+      datasource:
+        name: "FeatureHighlight"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/FeatureHighlight"
+        itemId: "{73A389EE-482A-4974-B4CF-76996B15A5F3}"
+        sectionName: "Data"
+        fields:
+          - { name: "EyebrowText", type: "Single-Line Text" }
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+          - { name: "FeatureImage", type: "Image" }
+          - { name: "PrimaryLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{57077D65-DBD5-49D8-98A1-6A3A5FFA5F69}"
+          linked: true
+
+      folder:
+        name: "FeatureHighlight Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/FeatureHighlight Folder"
+        itemId: "{2FEF6352-04FC-434B-A550-A0EAF916F630}"
+        standardValues:
+          itemId: "{30783D70-1791-4E45-BFEA-E152E66504E4}"
+          linked: true
+          masters: ["FeatureHighlight"]
+
+      renderingParams:
+        name: "FeatureHighlight"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Content/FeatureHighlight"
+        itemId: "{6EA32325-4741-42DF-B476-C9426314C5AA}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "FeatureHighlights"
+      path: "/sitecore/content/main/main-website/Data/FeatureHighlights"
+      itemId: "{0A212E28-4EDE-45DE-8A8F-E1004E8AAD25}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Feature Highlight"
+        itemId: "{E86837AF-5335-45AA-93FD-75259674404D}"
+
+    rendering:
+      name: "FeatureHighlight"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Content/FeatureHighlight"
+      itemId: "{85CC2A41-AC6F-4C10-9C2F-44308B48C453}"
+      componentName: "FeatureHighlight"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/FeatureHighlight"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='FeatureHighlight Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='FeatureHighlight Folder']"
+      parametersTemplateId: "{6EA32325-4741-42DF-B476-C9426314C5AA}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/FeatureHighlight"
+      containerId: "{D3E5415A-9247-4572-B146-73E4AEF78195}"
+      variants:
+        - { name: "Default", itemId: "{0FDFE204-724E-4850-8891-ECC443607643}" }
+        - { name: "Centered", itemId: "{3C33C16D-F0D3-4FBF-8D78-CE70CEA0868B}" }
+        - { name: "WithVideo", itemId: "{E58A4CB1-BFB4-4FDF-B48D-6254708B05CA}" }
+        - { name: "IconLeft", itemId: "{E39E52FE-885D-433B-A2D3-B20F66E8F767}" }
+
+    verification:
+      checkedAt: "2026-03-25T22:00:00Z"
+      passed:
+        - "Template with base templates, all 5 fields"
+        - "SVs created and linked"
+        - "Folder template with __Masters"
+        - "Datasource folder with insert options"
+        - "Example item, rendering params, rendering"
+        - "All 4 Headless Variant Definitions"
+        - "Available Renderings appended (using manifest lastKnownValue)"
+        - "React file with 4 variants, component map updated"
+      failed: []
+      pendingManual:
+        - "Silent-write fields"
+
+    notes: []
+
+  - name: "HeroBannerCarousel"
+    kind: "list"
+    category: "Banners"
+    status: "complete"
+    createdAt: "2026-05-05T12:00:00Z"
+    updatedAt: "2026-05-05T12:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/banners/HeroBannerCarousel.tsx"
+      componentMapKey: "HeroBannerCarousel"
+      variants:
+        - "Default"
+        - "WithThumbnails"
+
+    templates:
+      parent:
+        name: "HeroBannerCarousel"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners/HeroBannerCarousel"
+        itemId: "{91715B4F-D2EF-4748-AB3A-3653739F4C19}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{7C6C2C5E-8273-4399-8B7E-5527EC1A4259}"
+          linked: true
+          masters: ["HeroBannerCarouselSlide"]
+        horizonDatasourceGrouping: true
+
+      child:
+        name: "HeroBannerCarouselSlide"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners/HeroBannerCarouselSlide"
+        itemId: "{4828B260-DC19-4C4F-BF0E-1DD5AE47EDCC}"
+        sectionName: "Data"
+        fields:
+          - { name: "SlideTitle", type: "Single-Line Text" }
+          - { name: "SlideSubtitle", type: "Rich Text" }
+          - { name: "SlideImage", type: "Image" }
+          - { name: "PrimaryLink", type: "General Link" }
+          - { name: "SecondaryLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{192ECD6A-4F0A-4BFB-AAF5-8E865F55B945}"
+          linked: true
+
+      folder:
+        name: "HeroBannerCarousel Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners/HeroBannerCarousel Folder"
+        itemId: "{40F156B6-8298-4EDD-AE19-CCB4030CA11E}"
+        standardValues:
+          itemId: "{D781C7A3-99D1-4EBB-8D75-969E1468D83C}"
+          linked: true
+          masters: ["HeroBannerCarousel"]
+
+      renderingParams:
+        name: "HeroBannerCarousel"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Banners/HeroBannerCarousel"
+        itemId: "{F159AA7F-9083-4F44-90C7-97F13AC725CC}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "HeroBannerCarousels"
+      path: "/sitecore/content/main/main-website/Data/HeroBannerCarousels"
+      itemId: "{E4703202-A87E-4387-987C-6B69E67ACADC}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Hero Banner Carousel"
+        itemId: "{DF14FC47-D277-434F-B8FF-3CDBBBEDA1DE}"
+      exampleChildren:
+        - { name: "Slide 1", itemId: "{F70268F3-F6BE-44A8-9CA5-B5BD36003115}" }
+        - { name: "Slide 2", itemId: "{53464312-21AC-4ED5-851D-8F1433F07EFC}" }
+
+    rendering:
+      name: "HeroBannerCarousel"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Banners/HeroBannerCarousel"
+      itemId: "{4C5C1FA5-C077-491D-9686-40D0F68EF03E}"
+      componentName: "HeroBannerCarousel"
+      datasourceTemplatePath: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners/HeroBannerCarousel"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='HeroBannerCarousel Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='HeroBannerCarousel Folder']"
+      parametersTemplateId: "{F159AA7F-9083-4F44-90C7-97F13AC725CC}"
+      componentQuery: "query HeroBannerCarousel($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { title: field(name: \"Title\") { jsonValue } children { results { id slideTitle: field(name: \"SlideTitle\") { jsonValue } slideSubtitle: field(name: \"SlideSubtitle\") { jsonValue } slideImage: field(name: \"SlideImage\") { jsonValue } primaryLink: field(name: \"PrimaryLink\") { jsonValue } secondaryLink: field(name: \"SecondaryLink\") { jsonValue } } } } }"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    verification:
+      passed:
+        - "Parent template created with base templates"
+        - "Child template created with base templates"
+        - "Parent + child sections + fields created with explicit Type"
+        - "Parent + child __Standard Values created and linked"
+        - "Folder template + SV created"
+        - "Datasource folder under /Data"
+        - "Example parent + 2 child items created"
+        - "Rendering created as Json Rendering with ComponentQuery"
+        - "Rendering registered in Available Renderings"
+      pendingManual:
+        - "Silent-write fields (__Masters on parent SV, folder SV, folder instance insert options)"
+        - "Available Renderings (silent-write)"
+
+    notes: []
+
+  - name: "ArticleHero"
+    kind: "context-only"
+    category: "Article"
+    status: "complete"
+    createdAt: "2026-05-18T12:00:00Z"
+    updatedAt: "2026-05-18T12:00:00Z"
+    githubIssue: "#11"
+
+    react:
+      filePath: "src/components/uiim/article/ArticleHero.tsx"
+      componentMapKey: "ArticleHero"
+      variants:
+        - "Default"
+        - "Minimal"
+        - "SplitImage"
+
+    templates:
+      renderingParams:
+        name: "ArticleHero"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Article/ArticleHero"
+        itemId: "{04e653c6-cd34-4435-8a9f-2224164f1cc5}"
+        baseTemplatesSet: true
+
+    rendering:
+      name: "ArticleHero"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Article/ArticleHero"
+      itemId: "{83bd1231-a48f-4f54-a361-20904c69a641}"
+      componentName: "ArticleHero"
+      parametersTemplate: "{04E653C6-CD34-4435-8A9F-2224164F1CC5}"
+      datasourceRequired: false
+      registeredInAvailableRenderings: true
+
+    verification:
+      renderingExists: passed
+      componentNamePascalCase: passed
+      parametersTemplateIsGuid: passed
+      datasourceTemplateEmpty: passed
+      datasourceLocationEmpty: passed
+      componentQueryEmpty: passed
+      registeredInAvailableRenderings: passed
+      reactComponentExists: passed
+      componentMapUpdated: passed
+      testsCreated: passed
+
+    headlessVariants:
+      containerId: "{9894746a-f336-4856-bd1f-c1663374703c}"
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/ArticleHero"
+      definitions:
+        - { name: "Default", itemId: "{71d4165d-543e-4b4f-8c88-da9d8d395163}" }
+        - { name: "Minimal", itemId: "{fc567658-54d2-465e-80f4-85feb79c8598}" }
+        - { name: "SplitImage", itemId: "{f039eb26-e4f5-46b9-86dd-ca050ed2fbf2}" }
+
+    notes:
+      - "2026-05-18: Created ArticleHero context component (Issue #11). Default variant."
+      - "2026-05-18: Added Minimal + SplitImage variants (Issue #13). 3 Variant Definitions created."
+
+  - name: "ArticleBody"
+    kind: "context-only"
+    category: "Article"
+    status: "complete"
+    createdAt: "2026-05-18T12:00:00Z"
+    updatedAt: "2026-05-18T12:00:00Z"
+    githubIssue: "#12"
+
+    react:
+      filePath: "src/components/uiim/article/ArticleBody.tsx"
+      componentMapKey: "ArticleBody"
+      variants:
+        - "Default"
+        - "WithSidebar"
+        - "Wide"
+
+    templates:
+      renderingParams:
+        name: "ArticleBody"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Article/ArticleBody"
+        itemId: "{93d4326d-3525-45c4-bc6b-bc3b5d9c1e9a}"
+        baseTemplatesSet: true
+
+    rendering:
+      name: "ArticleBody"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Article/ArticleBody"
+      itemId: "{0e64edca-06dd-469a-b3d1-93d8700a8f41}"
+      componentName: "ArticleBody"
+      parametersTemplate: "{93D4326D-3525-45C4-BC6B-BC3B5D9C1E9A}"
+      datasourceRequired: false
+      registeredInAvailableRenderings: true
+
+    verification:
+      renderingExists: passed
+      componentNamePascalCase: passed
+      parametersTemplateIsGuid: passed
+      datasourceTemplateEmpty: passed
+      datasourceLocationEmpty: passed
+      componentQueryEmpty: passed
+      registeredInAvailableRenderings: passed
+      reactComponentExists: passed
+      componentMapUpdated: passed
+      testsCreated: passed
+
+    headlessVariants:
+      containerId: "{2e05330b-e438-4006-9096-165a2c36e425}"
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/ArticleBody"
+      definitions:
+        - { name: "Default", itemId: "{4ffc7bca-050e-4867-838d-f3bd19238f8c}" }
+        - { name: "WithSidebar", itemId: "{bae365fb-8958-4b03-b494-1beccfd5d897}" }
+        - { name: "Wide", itemId: "{fd852024-0d88-48a5-ba05-5783887456ef}" }
+
+    notes:
+      - "2026-05-18: Created ArticleBody context component (Issue #12). Default variant."
+      - "2026-05-18: Added WithSidebar + Wide variants (Issue #14). 3 Variant Definitions created."
+
+  - name: "LandingHero"
+    kind: "context-only"
+    category: "Landing"
+    status: "complete"
+    createdAt: "2026-06-09T00:00:00Z"
+    updatedAt: "2026-06-09T00:00:00Z"
+    react:
+      filePath: "src/components/uiim/landing/LandingHero.tsx"
+      componentMapKey: "LandingHero"
+      variants: ["Default", "SplitImage", "Minimal"]
+    templates:
+      renderingParams:
+        name: "LandingHero"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Landing/LandingHero"
+        itemId: "{38646376-EC1A-4367-A527-58108E8FFDA6}"
+        baseTemplatesSet: true
+    rendering:
+      name: "LandingHero"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Landing/LandingHero"
+      itemId: "{C9FFEF83-C928-4346-AA68-14B3EE0B0017}"
+      componentName: "LandingHero"
+      parametersTemplate: "{38646376-EC1A-4367-A527-58108E8FFDA6}"
+      datasourceRequired: false
+      registeredInAvailableRenderings: pendingManual
+    headlessVariants:
+      containerId: "{2571BE88-7763-4827-B661-1C6792B95847}"
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingHero"
+      definitions:
+        - { name: "Default", itemId: "{D1B9E599-F9C5-416F-A204-16F8EBC1E10C}" }
+        - { name: "SplitImage", itemId: "{E000909A-01DA-498C-BAB3-54EAC6E2C89F}" }
+        - { name: "Minimal", itemId: "{52F4AECD-818D-4A1A-8CC5-DFDCE5F5C928}" }
+    verification:
+      renderingExists: passed
+      componentNamePascalCase: passed
+      parametersTemplateIsGuid: passed
+      datasourceTemplateEmpty: passed
+      datasourceLocationEmpty: passed
+      componentQueryEmpty: passed
+      registeredInAvailableRenderings: pendingManual
+      reactComponentExists: passed
+      componentMapUpdated: passed
+    notes:
+      - "2026-06-09: Created LandingHero (3 variants — Default, SplitImage, Minimal). Renders heroVideo if set else heroImage. ABM swap surface."
+
+  - name: "LandingFeatures"
+    kind: "context-only"
+    category: "Landing"
+    status: "complete"
+    createdAt: "2026-06-09T00:00:00Z"
+    updatedAt: "2026-06-09T00:00:00Z"
+    react:
+      filePath: "src/components/uiim/landing/LandingFeatures.tsx"
+      componentMapKey: "LandingFeatures"
+      variants: ["Default"]
+    templates:
+      renderingParams:
+        name: "LandingFeatures"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Landing/LandingFeatures"
+        itemId: "{6AA6E2B1-9DD8-4FB6-8608-E5D653826F5B}"
+        baseTemplatesSet: true
+    rendering:
+      name: "LandingFeatures"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Landing/LandingFeatures"
+      itemId: "{B92A0B89-790F-4D94-89C7-B361C8688765}"
+      componentName: "LandingFeatures"
+      parametersTemplate: "{6AA6E2B1-9DD8-4FB6-8608-E5D653826F5B}"
+      datasourceRequired: false
+      registeredInAvailableRenderings: pendingManual
+    headlessVariants:
+      containerId: "{5ADEF5CB-11B4-4743-AA96-4D7EFEE55C5D}"
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingFeatures"
+      definitions:
+        - { name: "Default", itemId: "{31A214D5-7824-476C-8C63-4FB5F942DD28}" }
+    verification:
+      renderingExists: passed
+      componentNamePascalCase: passed
+      parametersTemplateIsGuid: passed
+      registeredInAvailableRenderings: pendingManual
+      reactComponentExists: passed
+      componentMapUpdated: passed
+    notes:
+      - "2026-06-09: Created. 3 fixed feature slots. Icons via lucide-react dynamic lookup (PascalCase icon name strings → React component)."
+
+  - name: "LandingStats"
+    kind: "context-only"
+    category: "Landing"
+    status: "complete"
+    createdAt: "2026-06-09T00:00:00Z"
+    updatedAt: "2026-06-09T00:00:00Z"
+    react:
+      filePath: "src/components/uiim/landing/LandingStats.tsx"
+      componentMapKey: "LandingStats"
+      variants: ["Default"]
+    templates:
+      renderingParams:
+        name: "LandingStats"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Landing/LandingStats"
+        itemId: "{112EFD22-E816-4654-BDCC-6A8AFCB312EB}"
+        baseTemplatesSet: true
+    rendering:
+      name: "LandingStats"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Landing/LandingStats"
+      itemId: "{9E525B59-B9BF-4EB7-B75D-10811EF6100D}"
+      componentName: "LandingStats"
+      parametersTemplate: "{112EFD22-E816-4654-BDCC-6A8AFCB312EB}"
+      datasourceRequired: false
+      registeredInAvailableRenderings: pendingManual
+    headlessVariants:
+      containerId: "{5619F2D9-B432-4A47-AA8A-911937AB991B}"
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingStats"
+      definitions:
+        - { name: "Default", itemId: "{2623EBAE-BF3D-471A-8E7D-176BCF6E4BE6}" }
+    verification:
+      renderingExists: passed
+      componentNamePascalCase: passed
+      parametersTemplateIsGuid: passed
+      registeredInAvailableRenderings: pendingManual
+      reactComponentExists: passed
+      componentMapUpdated: passed
+    notes:
+      - "2026-06-09: Created. 3 fixed stat tiles. Validation regex enforces 8-char limit on numbers."
+
+  - name: "LandingSocialProof"
+    kind: "context-only"
+    category: "Landing"
+    status: "complete"
+    createdAt: "2026-06-09T00:00:00Z"
+    updatedAt: "2026-06-09T00:00:00Z"
+    react:
+      filePath: "src/components/uiim/landing/LandingSocialProof.tsx"
+      componentMapKey: "LandingSocialProof"
+      variants: ["Default"]
+    templates:
+      renderingParams:
+        name: "LandingSocialProof"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Landing/LandingSocialProof"
+        itemId: "{292054A5-FC43-40FE-8398-EA7744F50E5C}"
+        baseTemplatesSet: true
+    rendering:
+      name: "LandingSocialProof"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Landing/LandingSocialProof"
+      itemId: "{66E80043-36E4-48AE-8CAF-EEF4A77690BE}"
+      componentName: "LandingSocialProof"
+      parametersTemplate: "{292054A5-FC43-40FE-8398-EA7744F50E5C}"
+      datasourceRequired: false
+      registeredInAvailableRenderings: pendingManual
+    headlessVariants:
+      containerId: "{1077B0D2-420D-48E4-ADA2-853C6C0E880A}"
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingSocialProof"
+      definitions:
+        - { name: "Default", itemId: "{8ED8A4F7-10C3-4867-AC0E-B3F79BECC356}" }
+    verification:
+      renderingExists: passed
+      componentNamePascalCase: passed
+      parametersTemplateIsGuid: passed
+      registeredInAvailableRenderings: pendingManual
+      reactComponentExists: passed
+      componentMapUpdated: passed
+    notes:
+      - "2026-06-09: Created. Single inline testimonial + composite logo strip image (no Treelist)."
+
+  - name: "LandingFAQ"
+    kind: "context-only"
+    category: "Landing"
+    status: "complete"
+    createdAt: "2026-06-09T00:00:00Z"
+    updatedAt: "2026-06-09T00:00:00Z"
+    react:
+      filePath: "src/components/uiim/landing/LandingFAQ.tsx"
+      componentMapKey: "LandingFAQ"
+      componentType: "client"
+      variants: ["Default"]
+    templates:
+      renderingParams:
+        name: "LandingFAQ"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Landing/LandingFAQ"
+        itemId: "{102619E2-6891-46B8-821D-755F85FF5D84}"
+        baseTemplatesSet: true
+    rendering:
+      name: "LandingFAQ"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Landing/LandingFAQ"
+      itemId: "{5A8724FB-D6E6-4C9D-8A4A-EFD8750B0019}"
+      componentName: "LandingFAQ"
+      parametersTemplate: "{102619E2-6891-46B8-821D-755F85FF5D84}"
+      datasourceRequired: false
+      registeredInAvailableRenderings: pendingManual
+    headlessVariants:
+      containerId: "{4FC4C30A-8A86-43CD-AFF9-4D6C53CB0594}"
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingFAQ"
+      definitions:
+        - { name: "Default", itemId: "{DCA2DB12-8D54-4AD6-8D43-082683AFA518}" }
+    verification:
+      renderingExists: passed
+      componentNamePascalCase: passed
+      parametersTemplateIsGuid: passed
+      registeredInAvailableRenderings: pendingManual
+      reactComponentExists: passed
+      componentMapUpdated: passed
+    notes:
+      - "2026-06-09: Created. 5 fixed Q/A pairs. Custom accordion (useState) — shadcn does not ship an Accordion primitive in this repo. Marked componentType: client."
+
+  - name: "LandingFinalCTA"
+    kind: "context-only"
+    category: "Landing"
+    status: "complete"
+    createdAt: "2026-06-09T00:00:00Z"
+    updatedAt: "2026-06-09T00:00:00Z"
+    react:
+      filePath: "src/components/uiim/landing/LandingFinalCTA.tsx"
+      componentMapKey: "LandingFinalCTA"
+      variants: ["Default"]
+    templates:
+      renderingParams:
+        name: "LandingFinalCTA"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Landing/LandingFinalCTA"
+        itemId: "{17AD398D-2EC8-4FB5-8693-89FE5676458A}"
+        baseTemplatesSet: true
+    rendering:
+      name: "LandingFinalCTA"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Landing/LandingFinalCTA"
+      itemId: "{14FCB11C-364D-4BC2-9238-B29B4C6F8145}"
+      componentName: "LandingFinalCTA"
+      parametersTemplate: "{17AD398D-2EC8-4FB5-8693-89FE5676458A}"
+      datasourceRequired: false
+      registeredInAvailableRenderings: pendingManual
+    headlessVariants:
+      containerId: "{C27474AD-EC5C-421E-AAAE-1DE43C9FC0D4}"
+      containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingFinalCTA"
+      definitions:
+        - { name: "Default", itemId: "{2FFE0507-9D6D-4D93-BFFE-43504C63D10C}" }
+    verification:
+      renderingExists: passed
+      componentNamePascalCase: passed
+      parametersTemplateIsGuid: passed
+      registeredInAvailableRenderings: pendingManual
+      reactComponentExists: passed
+      componentMapUpdated: passed
+    notes:
+      - "2026-06-09: Created. Closing CTA band on dark background."
+
+sharedDataTemplates:
+  - name: "Person"
+    kind: "shared-data"
+    category: "Data"
+    status: "complete"
+    createdAt: "2026-05-18T12:00:00Z"
+    updatedAt: "2026-05-18T12:00:00Z"
+    githubIssue: "#9"
+
+    templates:
+      datasource:
+        name: "Person"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Data/Person"
+        itemId: "{513c2b76-7415-48b7-84a5-e663d3bb9129}"
+        sectionName: "Person Data"
+        sectionId: "{b6dcff32-14b5-4942-b443-fb57f6431bfb}"
+        fields:
+          - { name: "personFirstName", type: "Single-Line Text", itemId: "{3d30f382-ff2d-4687-ba06-450575f55a7f}" }
+          - { name: "personLastName", type: "Single-Line Text", itemId: "{93cd7933-7e2d-4423-a9ae-3d745868bcc5}" }
+          - { name: "personJobTitle", type: "Single-Line Text", itemId: "{7703b7da-c3db-44aa-baad-ffc8a0fc0620}" }
+          - { name: "personProfileImage", type: "Image", itemId: "{b1b2a570-7edf-4bd7-8598-842d735c2e24}" }
+          - { name: "personBio", type: "Rich Text", itemId: "{1ef53a42-6d08-4e93-a944-754ba96073f6}" }
+          - { name: "personLinkedIn", type: "General Link", itemId: "{6389c179-2aa6-43d2-bf2c-b1332a4e8a85}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{22957218-e642-406f-80f2-bb81d44c965f}"
+          linked: true
+
+      folder:
+        name: "Person Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/Person Folder"
+        itemId: "{b3f8d738-07bf-4f8d-b4af-68a875d78ac6}"
+        standardValues:
+          itemId: "{4fe086ce-ebbe-4d8d-ae49-c7091f16d6b6}"
+          linked: true
+          masters: ["Person"]
+
+    datasourceFolder:
+      name: "People"
+      path: "/sitecore/content/main/main-website/Data/People"
+      itemId: "{b4a7e448-2620-458e-9108-e6123c433660}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Jane Smith"
+        itemId: "{18a183c6-6e69-40f3-a0d9-0973d05c8d3b}"
+
+    verification:
+      templateExists: passed
+      baseTemplatesSet: passed
+      sectionExists: passed
+      fieldsExist: passed
+      fieldTypesCorrect: passed
+      standardValuesLinked: passed
+      folderTemplateExists: passed
+      folderStandardValuesLinked: passed
+      dataFolderExists: passed
+      insertOptions: pendingManual
+      exampleItemExists: passed
+
+    notes:
+      - "2026-05-18: Created Person data model (Issue #9). Insert options set via __Masters on folder SV and folder instance — MCP returned empty updatedFields (known silent-write behavior). Verify insert options in Content Editor if needed."
+
+pageTemplates:
+  - name: "Article Page"
+    kind: "page-template"
+    category: "Page Types"
+    status: "complete"
+    createdAt: "2026-05-18T12:00:00Z"
+    updatedAt: "2026-05-18T12:00:00Z"
+    githubIssue: "#10"
+
+    baseTemplate:
+      name: "Page"
+      itemId: "{CEBD0936-6B37-42B5-B169-369BB1C3C06A}"
+
+    templates:
+      pageTemplate:
+        name: "Article Page"
+        path: "/sitecore/templates/Project/main/Page Types/Article Page"
+        itemId: "{74360ad2-d3df-4fce-834c-2f5420488677}"
+        sectionName: "Article Data"
+        sectionId: "{522fdf75-94d9-4aa8-882b-cbe30fe54efb}"
+        fields:
+          - { name: "ArticleContent", type: "Rich Text", itemId: "{63471bba-943c-4d82-b7bf-d7ec82babbf7}" }
+          - { name: "ArticleImage", type: "Image", itemId: "{bb96e156-f355-4cc6-894b-5e70a45d8f30}" }
+          - { name: "ArticleAuthor", type: "Droptree", itemId: "{068d4fa8-7b15-4b86-b38a-9e40a58c548b}", source: "/sitecore/content/main/main-website/Data/People" }
+          - { name: "ArticlePublicationDate", type: "Date", itemId: "{2fecdae7-6f5d-46a8-a9c9-c128dc4f4d0c}" }
+          - { name: "ArticleKeyTakeaways", type: "Rich Text", itemId: "{bfa05db5-8ccf-4ba2-b312-21194a8a5d75}" }
+          - { name: "ArticleReadTime", type: "Single-Line Text", itemId: "{76c93dec-a8a6-4185-9fd9-8247ebfb2dd0}" }
+        inheritsFrom: "Page"
+        standardValues:
+          itemId: "{f3ebd849-cdfb-43e5-84f0-7609e70c04d9}"
+          linked: true
+
+    contentTree:
+      articlesParent:
+        name: "Articles"
+        path: "/sitecore/content/main/main-website/Home/Articles"
+        itemId: "{d8b01498-2838-4388-a68f-86665d9c1c80}"
+        insertOptionsSet: true
+
+    codeChanges:
+      - "Layout.tsx: RouteFields updated with ArticleContent, ArticleImage, ArticleAuthor, ArticlePublicationDate, ArticleKeyTakeaways, ArticleReadTime. Aspirational fields (Content, Expert, MainImage, Author, PublicationDate, Excerpt, KeyTakeaways, ReadTime) removed. PersonFields and PersonReference interfaces added."
+
+    verification:
+      templateExists: passed
+      baseTemplateSet: passed
+      sectionExists: passed
+      fieldsExist: passed
+      fieldTypesCorrect: passed
+      droptreeSourceSet: passed
+      standardValuesLinked: passed
+      articlesParentExists: passed
+      insertOptions: pendingManual
+      layoutTsxUpdated: passed
+
+    partialDesign:
+      name: "Article Layout"
+      path: "/sitecore/content/main/main-website/Presentation/Partial Designs/Article Layout"
+      itemId: "{4e09b734-6f98-4599-bc8d-9b15b07b291c}"
+      components: ["ArticleHero", "ArticleBody"]
+      placeholder: "headless-main"
+
+    pageDesign:
+      name: "Article"
+      path: "/sitecore/content/main/main-website/Presentation/Page Designs/Article"
+      itemId: "{ea8b44fc-b855-40ea-b8e5-b210119c9aab}"
+
+    notes:
+      - "2026-05-18: Created Article Page template (Issue #10). Inherits from Page template. Insert options on Articles parent set via __Masters (silent-write)."
+      - "2026-05-18: Template moved from /sitecore/templates/Project/fmc-custom-demo/Page Types to /sitecore/templates/Project/main/Page Types per project conventions."
+      - "2026-05-18: Created Article Layout partial design + Article page design (Issue #15). Components placed in headless-main. Page Design and Partial Design association via MCP (silent-write) — verify linkage in Content Editor."
+
+  - name: "Landing Page"
+    kind: "page-template"
+    category: "Page Types"
+    status: "complete"
+    createdAt: "2026-06-09T00:00:00Z"
+    updatedAt: "2026-06-09T00:00:00Z"
+    designIntent: "Agentic-Studio-fillable, ABM-ready, fixed-shape (3 features, 3 stats, 5 FAQs). All content on the page template — no datasources."
+
+    baseTemplate:
+      name: "Page"
+      itemId: "{CEBD0936-6B37-42B5-B169-369BB1C3C06A}"
+
+    templates:
+      pageTemplate:
+        name: "Landing Page"
+        path: "/sitecore/templates/Project/main/Page Types/Landing Page"
+        itemId: "{50AF6EC7-85FD-4B9B-ADF7-1FDE9D9136FE}"
+        sections:
+          - { name: "Hero Data", itemId: "{C4C0EAC9-964E-42D2-B4CD-BE26344026EB}" }
+          - { name: "Features Data", itemId: "{B17C9DF3-C754-4152-BC58-222362055AEC}" }
+          - { name: "Stats Data", itemId: "{AE9BCEFB-1175-4562-AA9F-A65B5688887E}" }
+          - { name: "Social Proof Data", itemId: "{296F0E42-A06B-4A84-B107-5518ADA4286B}" }
+          - { name: "FAQ Data", itemId: "{E8B0DB8B-8178-4583-B5B4-7D9BDD7E4859}" }
+          - { name: "Final CTA Data", itemId: "{3987AC22-27BA-4E8C-BF2A-6D9D00E8E0C2}" }
+        fields:
+          # Hero Data (7)
+          - { name: "heroEyebrow", type: "Single-Line Text", itemId: "{872E5129-743B-48BA-98E9-9DB9F994114E}", validation: "^.{1,40}$" }
+          - { name: "heroHeadline", type: "Single-Line Text", itemId: "{593FDD00-9595-47F9-8BBD-C148AF1086C9}", validation: "^.{1,80}$" }
+          - { name: "heroSubhead", type: "Single-Line Text", itemId: "{C5555B26-DD7B-4027-AFCD-999E670EB995}", validation: "^.{1,200}$" }
+          - { name: "heroPrimaryCta", type: "General Link", itemId: "{0DC2E1C8-D594-441B-AA18-2132A1546775}" }
+          - { name: "heroSecondaryCta", type: "General Link", itemId: "{E6055701-1EE7-4EA4-8E8E-BEA8BB869C22}" }
+          - { name: "heroImage", type: "Image", itemId: "{126DC528-FCC5-425A-800D-EFAEA500BCCC}" }
+          - { name: "heroVideo", type: "General Link", itemId: "{2380CF5F-86C1-42BB-A3E1-1DD111C97B73}" }
+          # Features Data (9)
+          - { name: "feature1IconName", type: "Single-Line Text", itemId: "{EA3B0E8E-2E61-43E3-BDA7-E9776FE89562}", validation: "^[A-Z][A-Za-z0-9]{1,30}$" }
+          - { name: "feature1Title", type: "Single-Line Text", itemId: "{C629BD84-BF4D-4AD3-929A-1953DB4CB530}", validation: "^.{1,40}$" }
+          - { name: "feature1Description", type: "Rich Text", itemId: "{26938ADF-AA20-4C38-A40A-52BA925031DC}" }
+          - { name: "feature2IconName", type: "Single-Line Text", itemId: "{2428D498-A53A-410B-B1A7-BE458E82A6DA}", validation: "^[A-Z][A-Za-z0-9]{1,30}$" }
+          - { name: "feature2Title", type: "Single-Line Text", itemId: "{4BE16324-F69F-438B-9DF4-5BDF5C2CC44C}", validation: "^.{1,40}$" }
+          - { name: "feature2Description", type: "Rich Text", itemId: "{BD90861E-5DB9-49F3-AB72-242CB1C2DC86}" }
+          - { name: "feature3IconName", type: "Single-Line Text", itemId: "{AEA8E7E8-1AE1-49C4-9238-8FE043058F4D}", validation: "^[A-Z][A-Za-z0-9]{1,30}$" }
+          - { name: "feature3Title", type: "Single-Line Text", itemId: "{ACC0EC77-5D02-47F4-93F1-DC0971623CD5}", validation: "^.{1,40}$" }
+          - { name: "feature3Description", type: "Rich Text", itemId: "{E82CA53F-5B52-40D6-83EA-9D414DD04978}" }
+          # Stats Data (6)
+          - { name: "stat1Number", type: "Single-Line Text", itemId: "{35C67A2F-620D-466D-A4A8-3B717CF2ED96}", validation: "^.{1,8}$" }
+          - { name: "stat1Label", type: "Single-Line Text", itemId: "{BC0DFED4-3B88-49CA-A34D-098141889CF2}", validation: "^.{1,30}$" }
+          - { name: "stat2Number", type: "Single-Line Text", itemId: "{1A7417C0-310D-4E7D-B5EC-92114E7BD533}", validation: "^.{1,8}$" }
+          - { name: "stat2Label", type: "Single-Line Text", itemId: "{FAF62BD1-B7FE-4D6E-959E-A9F8CC9ACA4D}", validation: "^.{1,30}$" }
+          - { name: "stat3Number", type: "Single-Line Text", itemId: "{E712E34F-E20A-49A8-A372-E8F2EC077537}", validation: "^.{1,8}$" }
+          - { name: "stat3Label", type: "Single-Line Text", itemId: "{21DFBD1B-5F08-49C3-9DEE-DA6B5F5BFD86}", validation: "^.{1,30}$" }
+          # Social Proof Data (5)
+          - { name: "testimonialQuote", type: "Rich Text", itemId: "{CC51C74E-B2E4-414B-AB35-5CC711B08E2F}" }
+          - { name: "testimonialAuthorName", type: "Single-Line Text", itemId: "{699BC92B-F349-48D0-8D1C-38AF76BC6D7E}", validation: "^.{1,60}$" }
+          - { name: "testimonialAuthorTitle", type: "Single-Line Text", itemId: "{80F81BB3-7127-48AF-A8CD-553858610C66}", validation: "^.{1,80}$" }
+          - { name: "testimonialAuthorImage", type: "Image", itemId: "{A5CCB94C-223D-4B12-AC4B-59DCBF5945BB}" }
+          - { name: "partnerLogosImage", type: "Image", itemId: "{EF14FB95-FBF5-46FC-87EC-3A6B1A1AA8FE}" }
+          # FAQ Data (10)
+          - { name: "faq1Question", type: "Single-Line Text", itemId: "{A210B32E-FF19-4909-AFEA-6AFDE0D1E41B}", validation: "^.{1,140}$" }
+          - { name: "faq1Answer", type: "Rich Text", itemId: "{6900EAA8-748F-4A12-864B-2115BE3C5E5E}" }
+          - { name: "faq2Question", type: "Single-Line Text", itemId: "{F5BC97A7-8CEB-419B-89D6-B6EC2A480A86}", validation: "^.{1,140}$" }
+          - { name: "faq2Answer", type: "Rich Text", itemId: "{2E6E2359-E8D4-440C-A7AE-07BFB4C952EC}" }
+          - { name: "faq3Question", type: "Single-Line Text", itemId: "{4A6E980B-FC61-454C-8954-F7DF8DE56283}", validation: "^.{1,140}$" }
+          - { name: "faq3Answer", type: "Rich Text", itemId: "{0DAE8540-D34C-49C1-89C8-0DF5BA0E4E8E}" }
+          - { name: "faq4Question", type: "Single-Line Text", itemId: "{246DCC86-704D-4438-942F-1B79C4ADF78E}", validation: "^.{1,140}$" }
+          - { name: "faq4Answer", type: "Rich Text", itemId: "{9A7B6EA1-BFB8-4572-9AAC-25D584E7E2DF}" }
+          - { name: "faq5Question", type: "Single-Line Text", itemId: "{7A0E27FF-561A-4D4F-864C-B1576AC1F6BA}", validation: "^.{1,140}$" }
+          - { name: "faq5Answer", type: "Rich Text", itemId: "{4440D454-0CBE-4716-AB07-1EE3A6686936}" }
+          # Final CTA Data (3)
+          - { name: "finalCtaHeadline", type: "Single-Line Text", itemId: "{69875F2F-766C-43D6-8DAD-12AB207C879C}", validation: "^.{1,80}$" }
+          - { name: "finalCtaSubhead", type: "Rich Text", itemId: "{21B8A23C-A8E3-4536-BBC1-64E0C34BE37F}" }
+          - { name: "finalCtaButton", type: "General Link", itemId: "{F32737A7-4950-4D3D-8C51-E8375EB3C856}" }
+        inheritsFrom: "Page"
+        standardValues:
+          itemId: "{0014CD13-F3F1-4049-A866-3F30F508202E}"
+          linked: true
+          defaultsPopulated: true
+
+    contentTree:
+      lpParent:
+        name: "lp"
+        path: "/sitecore/content/main/main-website/Home/lp"
+        itemId: "{AF65681C-5C75-40D2-89A3-3779D5A47A27}"
+        insertOptionsSet: pendingManual
+
+    codeChanges:
+      - "Layout.tsx: RouteFields extended with 40 optional landing-page fields"
+      - ".sitecore/component-map.ts: added 6 entries for Landing* components (LandingFAQ marked componentType: client)"
+      - "Created 6 React component files under src/components/uiim/landing/"
+
+    verification:
+      templateExists: passed
+      baseTemplateSet: passed
+      sectionsExist: passed
+      fieldsExist: passed
+      fieldTypesCorrect: passed
+      validationRegexesSet: passed
+      shortDescriptionPopulated: pendingManual
+      standardValuesLinked: passed
+      standardValuesDefaults: passed
+      lpParentExists: passed
+      insertOptions: pendingManual
+      layoutTsxUpdated: passed
+      componentMapUpdated: passed
+
+    partialDesign:
+      name: "Landing Page Layout"
+      path: "/sitecore/content/main/main-website/Presentation/Partial Designs/Landing Page Layout"
+      itemId: "{BEF9B1FC-E7F6-4296-B60B-780728B557C0}"
+      components: ["LandingHero", "LandingFeatures", "LandingStats", "LandingSocialProof", "LandingFAQ", "LandingFinalCTA"]
+      placeholder: "headless-main"
+      renderingsPlaced: pendingManual
+
+    pageDesign:
+      name: "Landing Page"
+      path: "/sitecore/content/main/main-website/Presentation/Page Designs/Landing Page"
+      itemId: "{E38ABC20-C7EA-43C8-AAAF-22CA71342814}"
+      partialDesignsLinked: pendingManual
+      linkedToStandardValues: pendingManual
+
+    pendingManual:
+      - "Insert options on /Home/lp (__Masters silent-write — set in Content Editor)"
+      - "Renderings on Available Renderings (silent-write — verify Renderings [shared] on Page Content includes the 6 new GUIDs)"
+      - "6 renderings placed on Landing Page Layout's headless-main placeholder (Pages Builder)"
+      - "Page Design 'Landing Page' references Partial Designs (Header + Landing Page Layout + Footer) (Content Editor)"
+      - "Landing Page __Standard Values references Page Design 'Landing Page' (Content Editor)"
+      - "Validation regex + __Short description silent-write on 40 fields — verify a sample in Content Editor"
+
+    notes:
+      - "2026-06-09: Created via grilling session. Agentic-Studio-fillable, ABM-ready. Fixed-shape (3 features, 3 stats, 5 FAQs). 40 route fields across 6 sections with validation regexes + agent help text. __Standard Values populated with v1 SaaS-flavored defaults (marked for review before first ABM campaign)."
+      - "2026-06-09: 6 context components created (LandingHero, LandingFeatures, LandingStats, LandingSocialProof, LandingFAQ, LandingFinalCTA). 8 Variant Definitions total — Hero gets 3 (Default, SplitImage, Minimal), others get Default only (lean v1 scope)."
+      - "2026-06-09: Partial Design and Page Design items created but rendering placement and standard-values linkage are silent-write — finalize via Pages Builder / Content Editor."
+      - "2026-06-09: Registry entry in docs/ai/catalog/page-template-registry.yaml under id=landing is the canonical schema source of truth. Orchestrator skill at docs/ai/skills/sitecore-create-landing-page.md. Router updated at docs/ai/rules/01-sitecore-router.md."
+
+  - name: "SearchExperience"
+    kind: "simple"
+    category: "Search"
+    status: "complete"
+    createdAt: "2026-05-18T12:00:00Z"
+    updatedAt: "2026-05-20T12:00:00Z"
+    note: "V1 OOTB component from starter kit. Preserved for comparison with V2. See ADR 0003."
+
+    react:
+      filePath: "src/components/search-experience/SearchExperience.tsx"
+      componentMapKey: "SearchExperience"
+      variants:
+        - "Default"
+        - "LoadMore"
+
+    templates:
+      datasource:
+        name: "Search Experience"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Search/Search Experience"
+        itemId: "{51121015-6E69-4E58-AD50-48D426F75816}"
+        baseTemplatesSet: true
+
+      folder:
+        name: "SearchExperience Folder"
+        itemId: "{79C97264-71EF-4573-85AB-32B5AAE59592}"
+
+      renderingParams:
+        name: "SearchExperience"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Search/SearchExperience"
+        itemId: "{1CEDC37D-38EB-46AB-A4D4-FBFC708DEA96}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "Search Experiences"
+      path: "/sitecore/content/main/main-website/Data/Search Experiences"
+      itemId: "{1E320CFC-62AD-4378-97F7-6BFF5875BB3A}"
+
+    rendering:
+      name: "SearchExperience"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Search/SearchExperience"
+      itemId: "{01FAB68F-ADAE-4AD1-BFC6-1AE6125E71E7}"
+      componentName: "SearchExperience"
+      parametersTemplate: "{1CEDC37D-38EB-46AB-A4D4-FBFC708DEA96}"
+      registeredInAvailableRenderings: false
+
+    notes:
+      - "2026-05-20: Backfilled into manifest from live Sitecore. Created before manifest existed."
+      - "2026-05-20: Not registered in Available Renderings (Page Content). V1 uses a different registration path."
+
+  - name: "PreviewSearch"
+    kind: "simple"
+    category: "Search"
+    status: "complete"
+    createdAt: "2026-05-18T12:00:00Z"
+    updatedAt: "2026-05-20T12:00:00Z"
+    note: "OOTB preview/typeahead search from starter kit."
+
+    templates:
+      datasource:
+        name: "PreviewSearch"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Search/PreviewSearch"
+        itemId: "{9E0A42E1-0D5C-4E7D-9CBD-65B95AE302B0}"
+        baseTemplatesSet: true
+
+      folder:
+        name: "PreviewSearch Folder"
+        itemId: "{33F32834-88F1-4AF3-BBF2-0FE1F65A280A}"
+
+      renderingParams:
+        name: "PreviewSearch"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Search/PreviewSearch"
+        itemId: "{5CB6E348-70EC-4408-AB41-ACBD8CA97B37}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "PreviewSearches"
+      path: "/sitecore/content/main/main-website/Data/PreviewSearches"
+      itemId: "{047DA76C-BF7A-4B53-A5EA-3A356A45B6F1}"
+
+    rendering:
+      name: "PreviewSearch"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Search/PreviewSearch"
+      itemId: "{2EC8DE4B-5A47-4217-8C53-E57BD1B80F03}"
+      componentName: "PreviewSearch"
+      parametersTemplate: "{5CB6E348-70EC-4408-AB41-ACBD8CA97B37}"
+
+    notes:
+      - "2026-05-20: Backfilled into manifest from live Sitecore. Created before manifest existed."
+
+  - name: "SearchResults"
+    kind: "simple"
+    category: "Search"
+    status: "complete"
+    createdAt: "2026-05-18T12:00:00Z"
+    updatedAt: "2026-05-20T12:00:00Z"
+    note: "Old Cloud SDK search results component. Deleted from React but Sitecore items remain."
+
+    templates:
+      datasource:
+        name: "SearchResults"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Search/SearchResults"
+        itemId: "{5CF70CBE-F1C9-4E58-A424-A6614EBD7071}"
+        baseTemplatesSet: true
+
+      folder:
+        name: "SearchResults Folder"
+        itemId: "{DB87528F-801E-4170-A642-A48200AF38D0}"
+
+      renderingParams:
+        name: "SearchResults"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Search/SearchResults"
+        itemId: "{5406C548-15C9-4377-89B4-E58BC1D62DDF}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "SearchResults"
+      path: "/sitecore/content/main/main-website/Data/SearchResults"
+      itemId: "{A03B9129-4D08-435E-B038-29802CE6A603}"
+
+    rendering:
+      name: "SearchResults"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Search/SearchResults"
+      itemId: "{D33F0079-E54F-48C3-A33A-6A3A83146DA8}"
+      componentName: "SearchResults"
+      parametersTemplate: "{5406C548-15C9-4377-89B4-E58BC1D62DDF}"
+
+    notes:
+      - "2026-05-20: Backfilled into manifest from live Sitecore. Created before manifest existed."
+      - "2026-05-20: React component was deleted (ADR 0003 pivot). Sitecore items remain as orphans — safe to clean up later."
+
+  - name: "SearchExperienceV2"
+    kind: "simple"
+    category: "Search"
+    status: "complete"
+    createdAt: "2026-05-20T12:00:00Z"
+    updatedAt: "2026-05-20T12:00:00Z"
+
+    react:
+      filePath: "src/components/uiim/search/SearchExperienceV2.tsx"
+      componentMapKey: "SearchExperienceV2"
+      variants:
+        - "Default"
+        - "LoadMore"
+
+    templates:
+      datasource:
+        name: "Search Experience V2"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Components/Search/Search Experience V2"
+        itemId: "{C48E0097-5DEC-4A99-9780-CC6C5F5ED0DB}"
+        sectionName: "Search Configuration"
+        fields:
+          - { name: "SearchIndex", type: "Single-Line Text" }
+          - { name: "TitleMapping", type: "Single-Line Text" }
+          - { name: "DescriptionMapping", type: "Single-Line Text" }
+          - { name: "ImageMapping", type: "Single-Line Text" }
+          - { name: "TagsMapping", type: "Single-Line Text" }
+          - { name: "LinkMapping", type: "Single-Line Text" }
+          - { name: "TypeMapping", type: "Single-Line Text" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{2EE6D31B-1491-4076-8724-370B1238335A}"
+          linked: true
+
+      folder:
+        name: "Search Experience V2 Folder"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Folders/Search Experience V2 Folder"
+        itemId: "{A75BC153-964F-4F97-8A3D-AB3FA61496CB}"
+        standardValues:
+          itemId: "{B451D7E9-63F7-4FB4-9098-EB8DD2B56EBC}"
+          linked: true
+          masters: ["Search Experience V2"]
+
+      renderingParams:
+        name: "SearchExperienceV2"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Search/SearchExperienceV2"
+        itemId: "{8D097502-7D90-4690-822E-A1C9D3432F91}"
+        baseTemplatesSet: true
+        fields:
+          - { name: "columns", type: "Single-Line Text" }
+          - { name: "pageSize", type: "Single-Line Text" }
+
+    datasourceFolder:
+      name: "Search Experiences V2"
+      path: "/sitecore/content/main/main-website/Data/Search Experiences V2"
+      itemId: "{D5C6A76F-1A01-4B05-8B62-337B1B684D45}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Search Experience V2 Example"
+        itemId: "{0AF8CFA6-8411-4E37-9D1C-6CDA9795449C}"
+
+    rendering:
+      name: "SearchExperienceV2"
+      path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Search/SearchExperienceV2"
+      itemId: "{505B6BB0-DEEA-46F9-9AB2-7020E386F4F0}"
+      componentName: "SearchExperienceV2"
+      datasourceTemplate: "/sitecore/templates/Project/fmc-custom-demo/Components/Search/Search Experience V2"
+      datasourceLocation: "/sitecore/content/main/main-website/Data/Search Experiences V2"
+      parametersTemplate: "{8D097502-7D90-4690-822E-A1C9D3432F91}"
+      addFieldEditorButton: true
+      registeredInAvailableRenderings: true
+
+    verification:
+      templateExists: true
+      templateFields: true
+      templateBaseTemplates: true
+      standardValuesLinked: true
+      folderTemplateExists: true
+      folderStandardValuesLinked: true
+      datasourceFolderExists: true
+      renderingExists: true
+      renderingComponentName: true
+      renderingParametersTemplate: true
+      renderingDatasourceTemplate: true
+      renderingDatasourceLocation: true
+      registeredInAvailableRenderings: true
+
+    notes:
+      - "2026-05-20: Created SearchExperienceV2 (Issue #34). Replaces JSON config with 7 individual template fields. ADR 0004."
+      - "2026-05-20: All 3 pendingManual items verified via get_component and get_allowed_comps_by_ph — datasource template, datasource location, and available renderings all confirmed."
+
+lookups:
+  - path: "/sitecore/content/main/main-website/Data"
+    itemId: "{E6C852B5-B70D-412C-B5C6-E6502842F74E}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components/Search"
+    itemId: "{44092340-AF76-44F3-A6C3-AA7347CE9D8B}"
+    lastReadAt: "2026-05-20T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Search"
+    itemId: "{F741895B-29B4-4DC4-BDB7-053860880C4C}"
+    lastReadAt: "2026-05-20T12:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Search"
+    itemId: "{E1647CE1-4C12-4F5D-86A6-60848D035B4B}"
+    lastReadAt: "2026-05-20T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo"
+    itemId: "{9CAD33DE-63B0-46A0-9EF0-B5B0F1C81630}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components"
+    itemId: "{EB0D4C3C-A85E-4F74-A989-9D3BABBDB3CA}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Folders"
+    itemId: "{55F36BEC-24C5-428E-BB45-B2385B03D492}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters"
+    itemId: "{BEC41516-9F60-48E0-8E80-D515482B6BCC}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/content/main/main-website/Presentation/Headless Variants"
+    itemId: "{7BC665DC-D7DA-418E-AEC6-124D6291E93F}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/content/main/main-website/Presentation/Available Renderings/Page Content"
+    itemId: "{2BF7E311-E3A5-4290-A043-AB97EA1DFB15}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+    note: "Available Renderings — NEVER replace, always concatenate"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo"
+    itemId: "{4A1F0B51-F3F3-43D2-B184-C7A9F549154D}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components/Navigation"
+    itemId: "{137B3477-F05E-417E-8720-80C78F734A16}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Navigation"
+    itemId: "{E585C82C-539D-4CE3-9549-5516B8E446E1}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Navigation"
+    itemId: "{084FE23E-1222-4990-95E5-CB9699EF8BF0}"
+    lastReadAt: "2026-03-25T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components/Banners"
+    itemId: "{BDA5E409-2215-4D36-8935-0D088468BF30}"
+    lastReadAt: "2026-03-25T13:30:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Banners"
+    itemId: "{64C89015-C579-4F00-BA9D-479C8F88517B}"
+    lastReadAt: "2026-03-25T13:30:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Banners"
+    itemId: "{2616307D-811D-4C01-9F2A-7E1613B7B582}"
+    lastReadAt: "2026-03-25T13:30:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components/Cards"
+    itemId: "{2737F062-D331-43A0-9680-4B4FF0297BF5}"
+    lastReadAt: "2026-03-25T15:30:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Cards"
+    itemId: "{920FEF90-2A9E-47FD-9BB0-DE3FF919976C}"
+    lastReadAt: "2026-03-25T15:30:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Cards"
+    itemId: "{A7D72959-F0B0-4557-AAD0-2A93D55D936D}"
+    lastReadAt: "2026-03-25T15:30:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content"
+    itemId: "{5B2102A8-73B8-42A8-A150-67516452B20F}"
+    lastReadAt: "2026-03-25T16:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Content"
+    itemId: "{4FAF69C8-C273-47E0-A5FE-8DAD6E00F1B5}"
+    lastReadAt: "2026-03-25T16:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Content"
+    itemId: "{2A701448-0CEB-4B4F-9162-2B9D46434E3D}"
+    lastReadAt: "2026-03-25T16:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components/Social Proof"
+    itemId: "{BBE9CB99-05F3-41F7-874B-9C5F7F741E0F}"
+    lastReadAt: "2026-03-25T17:30:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Social Proof"
+    itemId: "{89311674-1D2F-4561-A279-4695A061DD18}"
+    lastReadAt: "2026-03-25T17:30:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Social Proof"
+    itemId: "{9F6CB1FD-6EC5-4633-A6EF-A447DA39E9E3}"
+    lastReadAt: "2026-03-25T17:30:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components/Media"
+    itemId: "{40BBF51C-CF04-4568-A62C-FE146C454E76}"
+    lastReadAt: "2026-03-25T19:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Media"
+    itemId: "{7D1061A3-70D2-4C07-BF3E-BE3D1683B489}"
+    lastReadAt: "2026-03-25T19:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Media"
+    itemId: "{64E2BB4F-B6A7-4AA4-82A9-937CA81BBB19}"
+    lastReadAt: "2026-03-25T19:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Components/Forms"
+    itemId: "{294DE541-F302-4ACC-A490-FE3D203A1E23}"
+    lastReadAt: "2026-03-25T20:30:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Forms"
+    itemId: "{7E8CEA1D-2EE5-4CCA-A51F-7DC33EE7A01A}"
+    lastReadAt: "2026-03-25T20:30:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Forms"
+    itemId: "{0A7AA74E-9652-4890-B218-EAC82F157663}"
+    lastReadAt: "2026-03-25T20:30:00Z"
+
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Data"
+    itemId: "{6a4bb397-d787-422d-896a-1f3f9941f0ec}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Data/Person"
+    itemId: "{513c2b76-7415-48b7-84a5-e663d3bb9129}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+  - path: "/sitecore/content/main/main-website/Data/People"
+    itemId: "{b4a7e448-2620-458e-9108-e6123c433660}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+  - path: "/sitecore/templates/Project/main/Page Types"
+    itemId: "{e7769708-59a5-4636-a9ea-c02245185e61}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+  - path: "/sitecore/templates/Project/main/Page Types/Article Page"
+    itemId: "{74360ad2-d3df-4fce-834c-2f5420488677}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+  - path: "/sitecore/content/main/main-website/Home/Articles"
+    itemId: "{d8b01498-2838-4388-a68f-86665d9c1c80}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+  - path: "/sitecore/content/main/main-website/Home"
+    itemId: "{e2124310-f817-4644-8671-bff8e72b66d7}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Article"
+    itemId: "{e29ea544-4c99-4a0e-af12-f2c7309db279}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Article"
+    itemId: "{222fab12-4e0e-49c6-85f8-363b1956528f}"
+    lastReadAt: "2026-05-18T12:00:00Z"
+
+  # Landing Page lookups (added 2026-06-09)
+  - path: "/sitecore/templates/Project/main/Page Types/Landing Page"
+    itemId: "{50AF6EC7-85FD-4B9B-ADF7-1FDE9D9136FE}"
+    lastReadAt: "2026-06-09T00:00:00Z"
+  - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Landing"
+    itemId: "{3F3D0A73-3486-4AEA-9F4F-CDC12F6ADC4A}"
+    lastReadAt: "2026-06-09T00:00:00Z"
+  - path: "/sitecore/layout/Renderings/Project/fmc-custom-demo/Landing"
+    itemId: "{142E3FB6-A1D0-4D7A-8AF3-F0E7DD155024}"
+    lastReadAt: "2026-06-09T00:00:00Z"
+  - path: "/sitecore/content/main/main-website/Home/lp"
+    itemId: "{AF65681C-5C75-40D2-89A3-3779D5A47A27}"
+    lastReadAt: "2026-06-09T00:00:00Z"
+  - path: "/sitecore/content/main/main-website/Presentation/Partial Designs"
+    itemId: "{B9355266-E4F8-4352-8F64-2700D071D46A}"
+    lastReadAt: "2026-06-09T00:00:00Z"
+  - path: "/sitecore/content/main/main-website/Presentation/Page Designs"
+    itemId: "{0E863278-EA75-48C0-82C0-762B566CC40E}"
+    lastReadAt: "2026-06-09T00:00:00Z"
+  - path: "/sitecore/content/main/main-website/Presentation/Partial Designs/Landing Page Layout"
+    itemId: "{BEF9B1FC-E7F6-4296-B60B-780728B557C0}"
+    lastReadAt: "2026-06-09T00:00:00Z"
+  - path: "/sitecore/content/main/main-website/Presentation/Page Designs/Landing Page"
+    itemId: "{E38ABC20-C7EA-43C8-AAAF-22CA71342814}"
+    lastReadAt: "2026-06-09T00:00:00Z"
+
+# Demo datasource items (AI-created content, not new component definitions)
+demoContent: []

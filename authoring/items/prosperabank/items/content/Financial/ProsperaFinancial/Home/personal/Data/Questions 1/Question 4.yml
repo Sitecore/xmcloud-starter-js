@@ -1,0 +1,50 @@
+﻿---
+ID: "484482a7-f5d5-4a30-b863-33ee799bbaa7"
+Parent: "e6379828-bae3-4d2d-94d7-762a6397b9dc"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/personal/Data/Questions 1/Question 4
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{42F8779C-8AB1-4D2D-9119-9AE9AC43F286}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "08cabd3e-b635-4402-969e-37de42852b97"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "What tools and resources do you provide to help me track and improve my credit score?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Our website provides access to credit monitoring tools and educational resources to help you understand and improve your credit score. You can track changes to your score over time, receive alerts about potential fraud or identity theft, and access personalized tips for boosting your creditworthiness. Whether you're working to build credit from scratch or aiming to raise your score, we're here to support you every step of the way.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "edad9f5f-d052-4752-874e-87259c5e9c50"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Quels outils et ressources fournissez-vous pour m'aider à suivre et améliorer mon score de crédit ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Notre site web offre des outils de surveillance de crédit et des ressources éducatives pour vous aider à comprendre et améliorer votre score de crédit. Vous pouvez suivre les changements de votre score au fil du temps, recevoir des alertes sur d'éventuelles fraudes ou vols d'identité, et accéder à des conseils personnalisés pour augmenter votre solvabilité. Que vous cherchiez à bâtir un crédit à partir de zéro ou à augmenter votre score, nous sommes là pour vous soutenir à chaque étape.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a44e5614-d61c-4171-962b-9992e88e386f"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: クレジット・スコアを追跡し、向上させるために、どのようなツールやリソースを提供していますか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 当ウェブサイトでは、クレジット・スコアの理解と向上に役立つクレジット・モニタリング・ツールや教育リソースへのアクセスを提供しています。 時間の経過に伴うスコアの変化を追跡したり、詐欺やなりすましの可能性に関するアラートを受信したり、信用力を高めるための個別のヒントにアクセスしたりすることができます。 ゼロから信用を築こうとしている方にも、スコアアップを目指している方にも、あらゆるステップでサポートいたします。

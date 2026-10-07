@@ -1,0 +1,43 @@
+﻿---
+ID: "868b75a1-3166-4b4c-90cc-c3bc5a7c62a7"
+Parent: "01fde529-59e4-417f-97cd-947bb8eb525c"
+Template: "6d1cd897-1936-4a3a-a511-289a94c2a7b1"
+Path: /sitecore/content/Financial/ProsperaFinancial/Dictionary/Financial/Read more
+SharedFields:
+- ID: "580c75a8-c01a-4580-83cb-987776ceb3af"
+  Hint: Key
+  Value: Read more
+Languages:
+- Language: en
+  Fields:
+  - ID: "2ba3454a-9a9c-4cdf-a9f8-107fd484eb6e"
+    Hint: Phrase
+    Value: Read more
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d61994ec-4369-454c-97f8-084ba6374f11"
+- Language: "fr-CA"
+  Fields:
+  - ID: "2ba3454a-9a9c-4cdf-a9f8-107fd484eb6e"
+    Hint: Phrase
+    Value: Lire la suite
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4148ffdf-a8e5-4cf7-8823-0e9530e75acb"
+- Language: "ja-JP"
+  Fields:
+  - ID: "2ba3454a-9a9c-4cdf-a9f8-107fd484eb6e"
+    Hint: Phrase
+    Value: 詳細を確認
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2a175b80-a6ee-470b-bc3a-41a0dcc58990"

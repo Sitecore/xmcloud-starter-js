@@ -1,0 +1,43 @@
+﻿---
+ID: "f7988bda-29eb-41f1-94fa-f07e35e0b5d5"
+Parent: "1cc5b501-8eba-4526-8334-ef2dc054b9a4"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/Financial/Services/Mockups/Logos/logoipsum-317"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/F7988BDA29EB41F194FAF07E35E0B5D5.ashx?h=16&thn=1&w=16"
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "f7988bda-29eb-41f1-94fa-f07e35e0b5d5"
+  Value: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzYiIGhlaWdodD0iNDAiIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxNzYgNDAiPjxwYXRoIGZpbGw9IiMzOTE0MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE1IDI4YTUgNSAwIDAgMS01LTVWMEgwdjIzYzAgOC4yODQgNi43MTYgMTUgMTUgMTVoMTFWMjhIMTVaTTQ1IDEwYTkgOSAwIDEgMCAwIDE4IDkgOSAwIDAgMCAwLTE4Wm0tMTkgOUMyNiA4LjUwNyAzNC41MDcgMCA0NSAwczE5IDguNTA3IDE5IDE5LTguNTA3IDE5LTE5IDE5LTE5LTguNTA3LTE5LTE5Wk0xNTMgMTBhOSA5IDAgMCAwLTkgOSA5IDkgMCAwIDAgOSA5IDkgOSAwIDAgMCA5LTkgOSA5IDAgMCAwLTktOVptLTE5IDljMC0xMC40OTMgOC41MDctMTkgMTktMTlzMTkgOC41MDcgMTkgMTktOC41MDcgMTktMTkgMTktMTktOC41MDctMTktMTlaTTg1IDBDNzQuNTA3IDAgNjYgOC41MDcgNjYgMTlzOC41MDcgMTkgMTkgMTloMjhjMS45NjkgMCAzLjg2OC0uMyA1LjY1NC0uODU2TDEyNCA0MGw1Ljc2OC0xMC44MDRBMTkuMDA3IDE5LjAwNyAwIDAgMCAxMzIgMjAuMjYxVjE5YzAtMTAuNDkzLTguNTA3LTE5LTE5LTE5SDg1Wm0zNyAxOWE5IDkgMCAwIDAtOS05SDg1YTkgOSAwIDEgMCAwIDE4aDI4YTkgOSAwIDAgMCA5LTguOTNWMTlaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjwvcGF0aD48cGF0aCBmaWxsPSIjMzkxNDAwIiBkPSJNMTc2IDIuNWEyLjUgMi41IDAgMSAxLTUgMCAyLjUgMi41IDAgMCAxIDUgMFoiPjwvcGF0aD48L3N2Zz4=
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 785
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215332Z
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: LogoIpsum3
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ac5628a5-d2b4-46ea-8dc9-48057a80c16e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215332Z

@@ -1,0 +1,89 @@
+﻿---
+ID: "d6149e88-dd83-4a57-adb8-5cd17a22798c"
+Parent: "8c2d6765-91be-4bd8-a0b3-4f81256e75a6"
+Template: "aad350f5-9331-4d71-a942-e3643653c028"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/authors/Olly Damon
+SharedFields:
+- ID: "2404bb97-b42a-439a-be76-de66213cb281"
+  Hint: BackgroundImage
+  Value: |
+    <image mediaid="{DC65B8CF-63A5-424E-A739-3B6345F75F92}" alt="Author Paper" height="" width="" hspace="" vspace="" />
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: 
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Olly Damon
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: Client Services Manager
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e72e9f30-7507-4933-a4d6-58e6340b8c44"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: |
+        <div class="ck-content"><p>Olly is dedicated to delivering exceptional service and support to our clients. With a focus on building strong client relationships and exceeding expectations, she leads our client services team in providing timely and responsive assistance to address client inquiries, resolve issues, and ensure satisfaction.</p></div>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: Olly Damon
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Olly Damon
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: Responsable des services à la clientèle
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bea1791a-0da3-41d8-a355-960f275f4786"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: |
+        <div class="ck-content"><p>Olly se consacre à offrir un service et un soutien exceptionnels à nos clients. Avec un accent mis sur la création de relations solides avec les clients et le dépassement des attentes, elle dirige notre équipe des services à la clientèle en fournissant une assistance rapide et réactive pour répondre aux demandes des clients, résoudre les problèmes et assurer leur satisfaction.</p></div>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: Olly Damon
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: オリー・デイモン
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{171CCFD4-8543-428E-9A9B-8E6557E63B6D}"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: オリー・デイモン
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: クライアント・サービス・マネージャー
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ca0aba06-a94a-4f8e-a23a-4d6d1fefedca"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: <p>オリーはクライアントに卓越したサービスとサポートを提供することに専念している。 顧客との強固な関係を築き、期待を上回るサービスを提供することに重点を置き、顧客サービスチームを率いて、顧客からの問い合わせに対応し、問題を解決し、満足を確保するために、タイムリーで迅速な支援を提供しています。</p>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: オリー・デイモン

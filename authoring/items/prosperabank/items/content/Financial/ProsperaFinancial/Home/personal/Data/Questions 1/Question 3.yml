@@ -1,0 +1,50 @@
+﻿---
+ID: "c14bf212-337b-45f0-a976-567bd62a5072"
+Parent: "e6379828-bae3-4d2d-94d7-762a6397b9dc"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/personal/Data/Questions 1/Question 3
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8C4A7FF3-185F-4E9E-82EC-9EB3F4181951}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f5c316f0-aac3-4a3e-af0c-7a109ded2fc9"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "How can I protect myself from identity theft and online fraud?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: "Protecting your financial information is a top priority for us. We employ state-of-the-art security measures to safeguard your data and prevent unauthorized access. Additionally, we offer tips and guidance on how to recognize and avoid common scams and phishing attempts. Our online banking platform is equipped with encryption technology to ensure that your transactions are secure at all times."
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fd35cc6d-09a7-4f73-bddb-9c993d2c5c8a"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Comment puis-je me protéger contre le vol d'identité et la fraude en ligne ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: La protection de vos informations financières est une priorité pour nous. Nous utilisons des mesures de sécurité de pointe pour protéger vos données et prévenir les accès non autorisés. De plus, nous offrons des conseils et des astuces pour reconnaître et éviter les escroqueries courantes et les tentatives de phishing. Notre plateforme de banque en ligne est équipée de technologies de cryptage pour garantir que vos transactions sont sécurisées en tout temps.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5ab26db1-6acb-410e-b908-516a075904eb"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: 個人情報の盗難やオンライン詐欺から身を守るには？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: お客様の財務情報を保護することは、当社にとって最優先事項です。 お客様のデータを保護し、不正アクセスを防止するために、最先端のセキュリティ対策を採用しています。 さらに、一般的な詐欺やフィッシングを見分け、回避するためのヒントやガイダンスも提供しています。 当行のオンライン・バンキング・プラットフォームには暗号化技術が採用されており、お客様のお取引が常に安全であることを保証いたします。

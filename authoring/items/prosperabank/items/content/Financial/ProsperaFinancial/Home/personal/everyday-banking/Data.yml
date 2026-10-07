@@ -1,0 +1,24 @@
+﻿---
+ID: "4ff8991d-72fb-4a9c-83f0-6f74f6bd13dc"
+Parent: "944b4714-233c-4bc7-8e24-604e758c0f85"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/personal/everyday-banking/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8f548452-7d04-47a8-be73-0bea72237110"
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: データ
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4259e5ac-5897-4686-bfd5-ac6f30d90f01"

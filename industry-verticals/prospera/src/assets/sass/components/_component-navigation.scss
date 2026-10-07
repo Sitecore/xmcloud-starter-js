@@ -1,0 +1,73 @@
+@import 'src/assets/sass/abstracts/mixins';
+@import 'src/assets/sass/abstracts/vars';
+
+.navigation {
+  .button-nav-item a {
+    @extend .button;
+    @extend .button-main;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  .level0,
+  .level1 {
+    &:not(.button-nav-item) {
+      > .navigation-title > a {
+        font-size: $navigation-font-basic;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  li {
+    &.submenu {
+      margin-bottom: 0;
+    }
+
+    > .navigation-title {
+      > a {
+        text-decoration: none;
+      }
+    }
+
+    > ul a {
+      font-size: $navigation-font-basic-submenu;
+    }
+  }
+
+  .submenu > ul {
+    padding-left: 10px;
+  }
+
+  &.navigation-centered {
+    .component-content ul li.level1:not(.button-nav-item) > .navigation-title > a {
+      font-weight: normal;
+    }
+
+    @media (width > 992px) {
+      > .menu-mobile-navigate-wrapper {
+        width: 100%;
+
+        > .component-content {
+          width: 100%;
+        }
+      }
+
+      li.level1.item0.first,
+      li.button-nav-item {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@import 'src/assets/sass/components/navigation/navigation-main-horizontal-vertical';
+@import 'src/assets/sass/components/navigation/navigation-mobile';
+@import 'src/assets/sass/components/navigation/navigation-sidebar';
+@import 'src/assets/sass/components/navigation/sitemap-navigation';
+@import 'src/assets/sass/components/navigation/navigation-fat';

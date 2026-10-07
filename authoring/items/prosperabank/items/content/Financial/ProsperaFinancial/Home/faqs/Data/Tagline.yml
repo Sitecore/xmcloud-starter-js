@@ -1,0 +1,39 @@
+﻿---
+ID: "b4f00bb2-9a29-4d39-a76c-3f6f3c6f63cd"
+Parent: "089fbe67-5720-4e9b-a51e-ab77b5c39fcf"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/faqs/Data/Tagline
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Take hold of your finances,<em style="color: var(--bg-accent);"> take hold of your life.</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5472da1d-df3d-4880-b2ac-bd1cd2cee403"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Prenez en main vos finances,<em style="color: var(--bg-accent);"> prenez en main votre vie.</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a30d9d37-0dfe-4fa1-8d3a-29e034e999a9"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>財政を管理し、<em style="color: var(--bg-accent);">人生を管理する。</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "68cb71c7-c0c4-49ef-9ae8-744850ecf818"

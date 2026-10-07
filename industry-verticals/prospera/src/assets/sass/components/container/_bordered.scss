@@ -1,0 +1,31 @@
+@import 'src/assets/sass/abstracts/vars';
+@import 'src/assets/sass/abstracts/mixins';
+
+.sxa-bordered {
+  box-sizing: border-box;
+
+  > .component-content {
+    padding: 0;
+
+    @include border-basic;
+
+    border-radius: 5px;
+  }
+}
+
+.column-splitter,
+.row-splitter {
+  box-sizing: border-box;
+
+  .sxa-bordered {
+    padding: $default-padding !important;
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    > .scEmptyPlaceholder,
+    .component {
+      @include border-basic;
+
+      border-radius: 5px;
+    }
+  }
+}

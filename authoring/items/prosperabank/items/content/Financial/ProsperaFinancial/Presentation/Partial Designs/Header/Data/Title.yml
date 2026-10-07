@@ -1,0 +1,115 @@
+﻿---
+ID: "df497d4d-a720-4900-92a7-d5df174b54e7"
+Parent: "195ddd73-2de8-49e0-95e4-e419b7d66891"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Partial Designs/Header/Data/Title
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{89F92411-6F78-42D7-A789-5066D7092839}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <a href="/">
+        <h1>
+        <span class="play">
+        <?xml version="1.0" encoding="UTF-8" />
+        <svg id="p-sign" data-name="p-sign" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 20.42">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: currentColor;
+              }
+        
+              .cls-2 {
+                fill: #ff3c28;
+              }
+            </style>
+          </defs>
+          <g id="Layer_1-2" data-name="Layer 1">
+            <g>
+              <path id="Path_88" data-name="Path 88" class="cls-1" d="M8.57,0H2.53C1.23,0,.09,.99,0,2.29c-.09,1.35,.93,2.53,2.28,2.62,.06,0,.11,0,.17,0H7.88c1.38,0,1.91,.72,1.91,1.79s-.53,1.8-1.91,1.8H2.42C1.08,8.51,0,9.6,0,10.94c0,1.33,1.08,2.41,2.41,2.41h6.15c4.92,0,7.43-3.01,7.43-6.63C16,2.76,13.49,0,8.57,0"></path>
+              <rect class="cls-2" x="0" y="14.31" width="6.12" height="6.12" rx="3.06" ry="3.06"></rect>
+            </g>
+          </g>
+        </svg>
+        <span>LAY!</span></span><span class="finance">finance</span></h1>
+        </a>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "721ca742-25d0-4d00-ad23-7a2417681a50"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <a href="/fr-CA">
+        <h1>
+        <span class="play">
+        <?xml version="1.0" encoding="UTF-8" />
+        <svg id="p-sign" data-name="p-sign" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 20.42">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: currentColor;
+              }
+        
+              .cls-2 {
+                fill: #ff3c28;
+              }
+            </style>
+          </defs>
+          <g id="Layer_1-2" data-name="Layer 1">
+            <g>
+              <path id="Path_88" data-name="Path 88" class="cls-1" d="M8.57,0H2.53C1.23,0,.09,.99,0,2.29c-.09,1.35,.93,2.53,2.28,2.62,.06,0,.11,0,.17,0H7.88c1.38,0,1.91,.72,1.91,1.79s-.53,1.8-1.91,1.8H2.42C1.08,8.51,0,9.6,0,10.94c0,1.33,1.08,2.41,2.41,2.41h6.15c4.92,0,7.43-3.01,7.43-6.63C16,2.76,13.49,0,8.57,0"></path>
+              <rect class="cls-2" x="0" y="14.31" width="6.12" height="6.12" rx="3.06" ry="3.06"></rect>
+            </g>
+          </g>
+        </svg>
+        <span>LAY!</span></span><span class="finance">financier</span></h1>
+        </a>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e017a2af-0439-4687-973c-c934adb6bff2"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <a href="/ja-JP">
+        <h1>
+        <span class="play">
+        <?xml version="1.0" encoding="UTF-8" />
+        <svg id="p-sign" data-name="p-sign" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 20.42">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: currentColor;
+              }
+        
+              .cls-2 {
+                fill: #ff3c28;
+              }
+            </style>
+          </defs>
+          <g id="Layer_1-2" data-name="Layer 1">
+            <g>
+              <path id="Path_88" data-name="Path 88" class="cls-1" d="M8.57,0H2.53C1.23,0,.09,.99,0,2.29c-.09,1.35,.93,2.53,2.28,2.62,.06,0,.11,0,.17,0H7.88c1.38,0,1.91,.72,1.91,1.79s-.53,1.8-1.91,1.8H2.42C1.08,8.51,0,9.6,0,10.94c0,1.33,1.08,2.41,2.41,2.41h6.15c4.92,0,7.43-3.01,7.43-6.63C16,2.76,13.49,0,8.57,0"></path>
+              <rect class="cls-2" x="0" y="14.31" width="6.12" height="6.12" rx="3.06" ry="3.06"></rect>
+            </g>
+          </g>
+        </svg>
+        <span>LAY!</span></span><span class="finance">finance</span></h1>
+        </a>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "388cab5c-5764-4ac5-b6f5-3cf1fd0350a2"

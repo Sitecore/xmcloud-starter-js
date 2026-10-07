@@ -1,0 +1,17 @@
+﻿---
+ID: "211a6c46-1d88-42e7-beb1-5694e526e206"
+Parent: "886787bc-afe2-43a0-bc26-38178f98ad34"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/Financial/project-additional-content"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "project-additional-content"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5da42d01-b821-4f7c-9923-6fe10015e63f"

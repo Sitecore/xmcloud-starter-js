@@ -1,0 +1,27 @@
+﻿---
+ID: "8b77b250-9318-47a8-9b33-6d35b27f5897"
+Parent: "825b30b4-b40b-422e-9920-23a1b6bda89c"
+Template: "77157d54-90c8-4014-9b9e-540d24e71d03"
+Path: /sitecore/templates/Project/Financial
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T170610Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9e07e016-04c8-4291-a6ce-40732b8eac21"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T170610Z

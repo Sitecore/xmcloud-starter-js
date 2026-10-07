@@ -1,0 +1,13 @@
+﻿---
+ID: "b1bf25c7-68fc-4931-bb57-936e0c06b7f2"
+Parent: "3784a738-6d25-4283-98e2-759db694efd7"
+Template: "3784a738-6d25-4283-98e2-759db694efd7"
+Path: /sitecore/templates/Project/Financial/JSS Settings/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de351a5b-8f9b-4f32-ac98-ff5ac4e7ce83"

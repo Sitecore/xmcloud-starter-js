@@ -1,0 +1,13 @@
+﻿---
+ID: "5d52ab88-be9c-4f11-9c3f-11ad9dd08a25"
+Parent: "947db8f8-dc76-453f-aca1-a27babfe633b"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Footer/Logo
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a6fe1ab6-d1f1-4302-ab45-e09a176c888d"

@@ -1,0 +1,49 @@
+﻿---
+ID: "03a4c5c6-a34f-4a6b-b8bc-6cdc2b2b5deb"
+Parent: "aac59603-dfd5-42ff-857d-8b8cc72edc54"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Project/Financial/Services/Mockups/pServicesLogo
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/03A4C5C6A34F4A6BB8BC6CDC2B2B5DEB.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 245
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "03a4c5c6-a34f-4a6b-b8bc-6cdc2b2b5deb"
+  Value: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTAuNzUgMTE3LjAyIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjRkY3MTQ1OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPgogICAgPGc+CiAgICAgIDxwYXRoIGlkPSJQYXRoXzEwMCIgZGF0YS1uYW1lPSJQYXRoIDEwMCIgY2xhc3M9ImNscy0xIiBkPSJNMCwzOVYxMTcuMDFIOS43NVYyOS4yNUwwLDM5WiIvPgogICAgICA8cGF0aCBpZD0iUGF0aF8xMDEiIGRhdGEtbmFtZT0iUGF0aCAxMDEiIGNsYXNzPSJjbHMtMSIgZD0iTTE5LjUsMTkuNVYxMTcuMDJoOS43NVY5Ljc1bC05Ljc1LDkuNzZaIi8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTcxLjc0LDBIMzlWMTE3LjAxaDkuNzV2LTM5aDIyLjk5YzIxLjU0LDAsMzkuMDEtMTcuNDYsMzkuMDEtMzkuMDFTOTMuMjgsMCw3MS43NCwwWiIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 621
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 181
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215328Z
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: "Play! Services"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3b80d6e1-2d0d-4e69-838d-aa3b4e570fc4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215328Z

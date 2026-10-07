@@ -1,0 +1,34 @@
+@import 'src/assets/sass/abstracts/vars';
+@import 'src/assets/sass/abstracts/mixins';
+@import 'font-awesome/scss/mixins';
+@import 'font-awesome/scss/variables';
+
+.navigation.sitemap-navigation {
+  @include respond-to(mobile-large) {
+    padding-left: $size-padding;
+    padding-right: $size-padding;
+  }
+
+  line-height: 2;
+
+  li > ul {
+    margin-top: 0.5rem;
+  }
+
+  .level2 a {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+
+    &::before {
+      @include font-size(1.4);
+      @include fa-icon;
+
+      transform: translateY(-50%) scale(1, -1);
+      position: absolute;
+      content: $fa-var-share;
+      top: 30%;
+      left: 0;
+    }
+  }
+}

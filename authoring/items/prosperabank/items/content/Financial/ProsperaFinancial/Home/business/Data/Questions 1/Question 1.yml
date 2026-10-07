@@ -1,0 +1,50 @@
+﻿---
+ID: "8f0901fe-120c-44d0-a2c8-a2db32594486"
+Parent: "8f4f5eb1-6310-4236-9e56-7f23331ff57c"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/business/Data/Questions 1/Question 1
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FE577AD4-C2F1-4056-91A9-C864C8D2199D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fedb8354-47d0-45aa-9a5c-37e49aa3abe0"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Who is eligible to open a business account?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: You can open an account if you own a business (incorporated or unincorporated) or are a registered/unregistered sole proprietor.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0363227c-9ceb-4bb4-a092-4248dda1a9e4"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Qui est éligible pour ouvrir un compte pour entreprises ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: You can open an account if you own a business (incorporated or unincorporated) or are a registered/unregistered sole proprietor.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "68ecbbcd-23d9-4e06-8588-0422596e4b10"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: ビジネス口座を開設できるのはどのような人ですか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 口座を開設できるのは、事業（法人・非法人）をお持ちの方、または登録・未登録の個人事業主の方です。

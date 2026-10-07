@@ -1,0 +1,13 @@
+﻿---
+ID: "225fb91e-61d9-4691-bba1-f389cd32de73"
+Parent: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Question/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "37c259bc-1aaf-4fd3-a4f3-0376ef7090cc"

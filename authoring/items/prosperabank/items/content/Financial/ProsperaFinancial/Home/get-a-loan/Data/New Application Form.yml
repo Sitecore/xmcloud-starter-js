@@ -1,0 +1,62 @@
+﻿---
+ID: "7a144273-00d4-41c4-8b7b-8122e859c06f"
+Parent: "5a737b43-b61a-431b-965e-29f28fc81962"
+Template: "ae920ce6-5c6e-4842-b54c-e4b516dc0752"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/get-a-loan/Data/New Application Form"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e1f1b795-1163-4e2d-87d9-8f9ec439bc6e"
+    - ID: "a68b430b-d594-4dc9-90f4-c8fed1aa4244"
+      Hint: FullName
+      Value: 
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50b65341-d540-4ca7-b494-1371b72e7111"
+    - ID: "a68b430b-d594-4dc9-90f4-c8fed1aa4244"
+      Hint: FullName
+      Value: 
+    - ID: "d663bd4f-2e16-421d-84a8-6c54fa9ddc0e"
+      Hint: Title
+      Value: Appliquer
+    - ID: "de1ea50c-6bff-4b85-ab2f-c99e57326322"
+      Hint: Subtitle
+      Value: "Postulez en ligne pour un prêt à la consommation sans frais pour l'examen et l'approbation de la demande!"
+    - ID: "e8781b03-b723-42ee-b5c4-3acb1a639f39"
+      Hint: Footnote
+      Value: |
+        
+        En cliquant sur le bouton « Soumettre », vous acceptez les <a href="#terms-and-conditions">Conditions de traitement des données personnelles et de soumission de la demande en ligne</a>
+    - ID: "ef4297fb-1ef8-4b4e-ae14-2edb6069d9d8"
+      Hint: SubmitButton
+      Value: |
+        <link text="Soumettre" linktype="anchor" url="submit" anchor="submit" title="Submit button" class="" />
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2d5193ee-6481-468b-a6d2-2281ed5035c2"
+    - ID: "d663bd4f-2e16-421d-84a8-6c54fa9ddc0e"
+      Hint: Title
+      Value: 応募する
+    - ID: "de1ea50c-6bff-4b85-ab2f-c99e57326322"
+      Hint: Subtitle
+      Value: 消費者金融のオンライン申し込みは、審査と承認に手数料がかかりません！
+    - ID: "e8781b03-b723-42ee-b5c4-3acb1a639f39"
+      Hint: Footnote
+      Value: |
+        送信ボタンをクリックすると、以下の内容に同意したものとみなされます。 <a href="#terms-and-conditions">個人情報の取り扱いおよびオンライン申請について</a>
+    - ID: "ef4297fb-1ef8-4b4e-ae14-2edb6069d9d8"
+      Hint: SubmitButton
+      Value: |
+        <link text="送信" linktype="anchor" url="Submit" anchor="Submit" title="Submit button" class="" />

@@ -1,0 +1,13 @@
+﻿---
+ID: "9c4c36b7-f63a-4a3f-a19b-fd071212a6dc"
+Parent: "958084fc-3752-452c-882b-f6903e65555b"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Placeholder Settings/Partial Design
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c190dd23-ba4b-4154-a4a7-3389c598315e"

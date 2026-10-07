@@ -1,0 +1,73 @@
+.testimonials {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include respond-to(mobile-large) {
+    padding-left: $size-padding;
+    padding-right: $size-padding;
+  }
+
+  .testimonial-item {
+    background-color: var(--text-body);
+    color: var(--bg-body);
+    border-radius: var(--roundness);
+    padding: 3rem;
+
+    .star-rating {
+      display: flex;
+      gap: 0.25rem;
+
+      .star {
+        width: 22px;
+        height: 22px;
+        background-color: gray;
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+
+        &.star-filled {
+          background-color: #f6d021;
+        }
+      }
+    }
+
+    .author-image {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-wrapper {
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .swiper-slide {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    border-radius: var(--roundness);
+    overflow: hidden;
+
+    &:not(.swiper-slide-active) {
+      opacity: 0.5;
+    }
+
+    &.swiper-slide-active {
+      @media (width >= 992px) {
+        transform: scale(1.1) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+﻿---
+ID: "4f66c413-eb4c-4f68-99b0-318e3ea2ccce"
+Parent: "1df23e4f-432f-4aff-863b-4d1d7e3925fd"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/get-a-loan/Data/Questions 1/Question 2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "469b459a-cfae-4d86-b3bc-390c8228ea2d"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Do you require collateral for loans?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Collateral requirements vary depending on the type of loan. Some loans, such as secured loans, may require collateral such as a vehicle or property.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "40e5fd5e-f7de-4a58-9da8-410a46f07190"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Demandez-vous des garanties pour les prêts ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Les exigences en matière de garanties varient en fonction du type de prêt. Certains prêts, comme les prêts garantis, peuvent nécessiter des garanties telles qu'un véhicule ou une propriété.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "812afd1d-0a0f-4d21-b7be-963ab2dcc966"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: 融資に担保は必要ですか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 担保要件はローンの種類によって異なる。 有担保ローンなど一部のローンでは、車両や不動産などの担保が必要となる場合があります。

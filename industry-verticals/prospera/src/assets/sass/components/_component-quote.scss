@@ -1,0 +1,37 @@
+.quote {
+  position: relative;
+
+  .quote-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    opacity: 0.4;
+  }
+
+  &:not(.simple) {
+    blockquote {
+      padding-top: 4rem;
+      line-height: 1.25;
+    }
+
+    .author-position {
+      font-size: 0.875rem;
+      opacity: 0.65;
+    }
+  }
+
+  &.simple {
+    blockquote {
+      opacity: 0.65;
+    }
+  }
+
+  .author-image {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+}

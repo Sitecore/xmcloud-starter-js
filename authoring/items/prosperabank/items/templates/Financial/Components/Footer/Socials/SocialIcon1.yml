@@ -1,0 +1,20 @@
+﻿---
+ID: "dcf0b02e-fa59-48c0-bc92-5bce6ddfde18"
+Parent: "8311239c-5dbc-486e-b2aa-ff44138ff776"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Footer/Socials/SocialIcon1
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Image
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "55dd685e-1eb0-48f8-8e35-91e60c9c4f51"

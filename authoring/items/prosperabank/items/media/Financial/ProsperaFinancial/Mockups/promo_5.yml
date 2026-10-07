@@ -1,0 +1,49 @@
+﻿---
+ID: "2b337bc4-73d7-4917-b5ce-ef675f20ba33"
+Parent: "66cc7dbc-efea-46b5-8e9e-97ca56f1fd02"
+Template: "309eb383-99b6-4722-9fab-58d8ae802d72"
+Path: /sitecore/media library/Project/Financial/ProsperaFinancial/Mockups/promo_5
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/2B337BC473D74917B5CEEF675F20BA33.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 229
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "2b337bc4-73d7-4917-b5ce-ef675f20ba33"
+  Value: UklGRqQEAABXRUJQVlA4IJgEAADwKQCdASrlANQAPpFIokslpKOhpvPocLASCWVu4WuUIldJveY/4vAB/jfVlzYuWAnf/TqNhkyGEO61VDnzsNfGr66vdM/q3OWwRR4D+0eNBAx4bHHokrsbqTEtHsgnCOrYcejU7AHD85HsDBA9VgAqL8mC0Vb/3zWFBmgF4BNP+msz//klk7hDLQHSE+opT+X1+r0dIXslt//PHpr8xvxKImKmoBFkcVb6fBZn6StlUvQnlr/zGSnGJtm1NebPNiTMJ8YEmnF8OUCYUpRp50Rhj8o6ff5/WDPkenuYiC8RFSsZ9n/9T4m+vrQY/pMwWfQ9z5VLGVZjIGx7e0l/Ft/OxLcTnJCg2o39Z9vRA244SFTbb6fIWqkhwdLvllFStZGURtxuCA398IAeMgV2aVVzGZE3zhRFTGNlWEtCpl+OaS3GEdPuZOFu3PClmAmZrKIrL9EX2/sWAAD+/YnrA8dEW5cJpOmOwVLl4fy0qWkOoFNF6DV2ZIiCfYIClfBW+XHwDjD45G1APEOALk8C4HPOlZpwKAY5thdsOXanxcyACugKQpwDm8Von0ACdFix4BH2omWVZ7z+HKchoihVrTrMrtBajyrjIXcLwi/lBryQ/VQZZ+q/21h72QS8iNdj7OKaFuJtESQUJl2hsasLJsYisDqRtdz+lQjSwDuzbwFoi4c3jD9OvTMhy1PbMC6VdEu+g7UR77K6Kt2AM+gtZ8iAlIlE+jGr/DgOYqkqk6T35GAg0C6bfnQYV1CnGsBqfHDUMXHNKC0HMJB2QokxdN2pfWtmUf+rfqJgHZslENlLxNPB+mBsTGVKuQypuuiKrhmLS7bI34nOSkP1EmMmezfoL6LoJuFGO5+xdDePdXsKbmkWKxOAHq6ME6u60M28N/PpVBbG+dOcqZeFQDOzBmBPHa62ExN/fLBBHBuQ3fjh1Zju6Zbpli2xJhXH4UHOUWDwz0D/nXI7iv9f1t19CBXK1T+wY6SV5PllR8SdXASwI4BXK4nDdG5RiLPyZWUmjqGC9i/ESDCzQ0mC/qXaOrC3JhjHL22SxYqDa+kph32/pn/+DN6nG/gjiUd8PKbeI8C9sMkXLS62V3NXWh7WRSo0scPGLieZOXboYXtbsaKKpXjv2GEfoQSVgC2OExzdjLOJYhm/vGrIFg4q6W3diEKODnQl/pISmgcZe4Ke2dZqG9cDZoEWLrTGJCXVXEGL2WtClzspK7Ug3/DFEfOcpbJlV0UizgNtD5OO5b54h9Q/iGEW1/lPA9fSoFi4lazjxQ8GsBaZoYP1wlB+92I9fg9vohsRw9smHhcfDQFnkp1ZeBtebg2UT94ekfZJ8dsSc1c14yarx4HoVT7GL/K5d3Xg8OyPAODjac4aNnCEAFxVWe+lVzjBwdln+9ymE7yA+c7yATY8xnITMbuEdO0JI2KpQCXJRD+5CcB3O5oajX57ly73LRSAQKDqe9Rd2iYYJyAcsQiZOLgWImHH2sup7FuE3gdKw/enM/rMOr2igAqS7s+AlBF3mtTjL3O01wNBoagP+vSltqWHD6pq8344h8x4ugAAAAAAAAA=
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 1196
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/webp
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: webp
+- ID: "cb09946f-3218-4823-87d2-d5007c199a96"
+  Hint: Dimensions
+  Value: 229 x 212
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 212
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215322Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1da8505e-c3fa-484c-ab7e-743922d01b1b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215322Z

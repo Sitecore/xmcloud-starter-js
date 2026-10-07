@@ -1,0 +1,27 @@
+﻿---
+ID: "5ba03d3f-ffbc-412e-80ff-6dd0fe312042"
+Parent: "55647f98-3d8e-4e22-89b3-b2b34ac1f0c1"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Parallax Banner/Data/Link
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: General Link
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a103edb3-7f7b-478b-b12f-4e3b4239bdfa"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "29b00586-58cf-4497-943c-ef529433f26f"

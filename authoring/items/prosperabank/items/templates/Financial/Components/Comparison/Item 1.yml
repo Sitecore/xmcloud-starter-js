@@ -1,0 +1,13 @@
+﻿---
+ID: "2d53f018-a799-4b0b-90c6-88b682ddbdb9"
+Parent: "32f00428-21ac-4dc0-aa2b-f2e31ca3e97e"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Comparison/Item 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b87af509-56b5-4bca-9722-57a3aea84692"

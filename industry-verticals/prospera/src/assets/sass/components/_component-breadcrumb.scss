@@ -1,0 +1,69 @@
+.breadcrumb {
+  @extend .overflow-hidden;
+  @extend .bg-transparent;
+  @extend .pt-5;
+
+  ol {
+    @extend .p-0;
+  }
+
+  li {
+    @extend .d-inline-block;
+
+    a,
+    span {
+      @extend .d-inline-block;
+
+      color: var(--text-colored);
+      text-decoration: none;
+
+      &::before {
+        @extend .d-block;
+        @extend .fw-bold;
+        @extend .overflow-hidden;
+        @extend .invisible;
+
+        height: 0;
+        content: attr(title);
+        padding-left: 5px;
+        padding-right: 3px;
+      }
+
+      &:hover {
+        @extend .fw-bold;
+      }
+    }
+
+    &:not(:first-of-type)::before {
+      @extend .fw-normal;
+      @extend .d-inline;
+      @include fa-icon;
+
+      content: $fa-var-chevron-right;
+      vertical-align: middle;
+      font-size: 1.5em;
+      padding-right: 15px;
+    }
+
+    &:first-of-type::before {
+      @extend .fw-normal;
+      @extend .d-inline;
+      @include fa-icon;
+
+      content: $fa-var-home;
+      vertical-align: middle;
+      font-size: 2em;
+      padding-right: 15px;
+    }
+
+    &:first-of-type {
+      a {
+        display: none !important;
+      }
+    }
+
+    &:last-child {
+      @extend .fw-bold;
+    }
+  }
+}

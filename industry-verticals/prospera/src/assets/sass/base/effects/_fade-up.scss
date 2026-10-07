@@ -1,0 +1,23 @@
+@import 'src/assets/sass/abstracts/mixins.scss';
+
+.with-fade-up {
+  .fade-section {
+    opacity: 0;
+    transform: translateY(200px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.8s ease-out;
+    will-change: opacity, visibility;
+
+    @include respond-to(mobile-large) {
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+    }
+
+    &.is-visible {
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+    }
+  }
+}

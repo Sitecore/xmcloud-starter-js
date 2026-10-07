@@ -1,0 +1,204 @@
+﻿---
+ID: "0fc845cd-2387-4726-b713-3d7a027ba8dd"
+Parent: "fc381363-3e7c-4945-a119-5fcfd2fc92f0"
+Template: "1b694ef9-154d-429a-9c3f-d7774cd4a852"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/customer-support/Data/Four Column CTA 1"
+SharedFields:
+- ID: "23f621dd-d403-49df-93f6-391a1757feb3"
+  Hint: Image4
+  Value: |
+    <image mediaid="ef4c0417-cc75-4483-ba8e-1dbe32dd7487" />
+- ID: "84c2cd69-b897-4e4a-a336-66d3222fe1b5"
+  Hint: Image1
+  Value: |
+    <image mediaid="4986f57f-1293-4b48-86bb-1281b6a31573" />
+- ID: "954a7e15-cdad-4e9c-8949-ab0ee63200c6"
+  Hint: Image3
+  Value: |
+    <image mediaid="a66b93b7-7a89-47a4-a44f-492c4381b75e" />
+- ID: "a98fc4bc-b088-4296-aa32-fba35f964ebd"
+  Hint: Image2
+  Value: |
+    <image mediaid="032b60ed-5aa8-4da5-a142-c96693c88d17" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "07f3e30f-8075-4c1b-912e-e27fffeda904"
+      Hint: Text1
+      Value: We will get in touch with you.
+    - ID: "256528b0-4d93-44a1-85c9-0cd544091a3f"
+      Hint: Text4
+      Value: 0700 11 333 / *2375
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165628Z
+    - ID: "34f50b54-e781-493a-85c0-8e9af1969d64"
+      Hint: Title3
+      Value: Feedback
+    - ID: "4e62adbe-4082-45fe-9e77-66ef0945fb18"
+      Hint: Title4
+      Value: Call us
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bd59c23c-c920-4cec-a0dc-6435de5940e3"
+    - ID: "8f23bb30-a050-47b3-bc66-6ca478213eef"
+      Hint: Text3
+      Value: For evaluation and recommendations
+    - ID: "94e8b735-889e-44f3-a980-c7c8143bae19"
+      Hint: Title2
+      Value: Find a location
+    - ID: "b1b9e108-7c50-4a04-8e7a-37f30c6a784c"
+      Hint: Link3
+      Value: |
+        <link id="{b2a38fb8-2e85-4d58-afe5-c12beccbee3a}" querystring="sc_lang=en&amp;sc_site=Financial" anchor="" target="" title="" linktype="internal" text="Home" url="/Financial/ProsperaBank/Home" />
+    - ID: "b2befdd5-351d-4c5e-85fd-2402e3ff96bf"
+      Hint: Link1
+      Value: |
+        <link id="{b2a38fb8-2e85-4d58-afe5-c12beccbee3a}" querystring="sc_lang=en&amp;sc_site=Financial" anchor="" target="" title="" linktype="internal" text="Home" url="/Financial/ProsperaBank/Home" />
+    - ID: "ba2af883-e3bb-43cf-8c97-ab5c97edc09d"
+      Hint: Link4
+      Value: |
+        <link id="{b2a38fb8-2e85-4d58-afe5-c12beccbee3a}" querystring="sc_lang=en&amp;sc_site=Financial" anchor="" target="" title="" linktype="internal" text="Home" url="/Financial/ProsperaBank/Home" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "be5597c5-a55d-4a6a-bf53-7fe1a7bf4bdc"
+      Hint: Title1
+      Value: Customer support
+    - ID: "c24d6ca7-49ab-4f08-9dae-e5a844d79139"
+      Hint: Text2
+      Value: Explore our network of branch offices and ATMS
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165651Z
+    - ID: "df548755-6a31-445f-bb84-c704698d6048"
+      Hint: Link2
+      Value: |
+        <link id="{b2a38fb8-2e85-4d58-afe5-c12beccbee3a}" querystring="sc_lang=en&amp;sc_site=Financial" anchor="" target="" title="" linktype="internal" text="Home" url="/Financial/ProsperaBank/Home" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "07f3e30f-8075-4c1b-912e-e27fffeda904"
+      Hint: Text1
+      Value: Nous vous contacterons.
+    - ID: "256528b0-4d93-44a1-85c9-0cd544091a3f"
+      Hint: Text4
+      Value: 0700 11 333 / *2375
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165628Z
+    - ID: "34f50b54-e781-493a-85c0-8e9af1969d64"
+      Hint: Title3
+      Value: Commentaires
+    - ID: "4e62adbe-4082-45fe-9e77-66ef0945fb18"
+      Hint: Title4
+      Value: "Appelez-nous"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "92b4265c-1c5a-42de-ae3d-7d788b5c5aa3"
+    - ID: "8f23bb30-a050-47b3-bc66-6ca478213eef"
+      Hint: Text3
+      Value: Pour évaluation et recommandation
+    - ID: "94e8b735-889e-44f3-a980-c7c8143bae19"
+      Hint: Title2
+      Value: Trouvez une succursale
+    - ID: "b1b9e108-7c50-4a04-8e7a-37f30c6a784c"
+      Hint: Link3
+      Value: |
+        <link id="{b2a38fb8-2e85-4d58-afe5-c12beccbee3a}" querystring="sc_lang=en&amp;sc_site=Financial" anchor="" target="" title="" linktype="internal" text="Accueil" url="/Financial/ProsperaBank/Home" />
+    - ID: "b2befdd5-351d-4c5e-85fd-2402e3ff96bf"
+      Hint: Link1
+      Value: |
+        <link id="{b2a38fb8-2e85-4d58-afe5-c12beccbee3a}" querystring="sc_lang=en&amp;sc_site=Financial" anchor="" target="" title="" linktype="internal" text="Accueil" url="/Financial/ProsperaBank/Home" />
+    - ID: "ba2af883-e3bb-43cf-8c97-ab5c97edc09d"
+      Hint: Link4
+      Value: |
+        <link id="{b2a38fb8-2e85-4d58-afe5-c12beccbee3a}" querystring="sc_lang=en&amp;sc_site=Financial" anchor="" target="" title="" linktype="internal" text="Accueil" url="/Financial/ProsperaBank/Home" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "be5597c5-a55d-4a6a-bf53-7fe1a7bf4bdc"
+      Hint: Title1
+      Value: Service à la clientèle
+    - ID: "c24d6ca7-49ab-4f08-9dae-e5a844d79139"
+      Hint: Text2
+      Value: Explorez notre réseau d'agences et de distributeurs automatiques (DAB).
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165651Z
+    - ID: "df548755-6a31-445f-bb84-c704698d6048"
+      Hint: Link2
+      Value: |
+        <link id="{b2a38fb8-2e85-4d58-afe5-c12beccbee3a}" querystring="sc_lang=en&amp;sc_site=Financial" anchor="" target="" title="" linktype="internal" text="Accueil" url="/Financial/ProsperaBank/Home" />
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "07f3e30f-8075-4c1b-912e-e27fffeda904"
+      Hint: Text1
+      Value: 折り返しご連絡いたします。
+    - ID: "256528b0-4d93-44a1-85c9-0cd544091a3f"
+      Hint: Text4
+      Value: 0700 11 333 / *2375
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165629Z
+    - ID: "34f50b54-e781-493a-85c0-8e9af1969d64"
+      Hint: Title3
+      Value: フィードバック
+    - ID: "4e62adbe-4082-45fe-9e77-66ef0945fb18"
+      Hint: Title4
+      Value: お問い合わせ
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2651852c-a7e8-48e7-bee2-ea0ea47cbfaa"
+    - ID: "8f23bb30-a050-47b3-bc66-6ca478213eef"
+      Hint: Text3
+      Value: 評価と提言のために
+    - ID: "94e8b735-889e-44f3-a980-c7c8143bae19"
+      Hint: Title2
+      Value: 場所を探す
+    - ID: "b1b9e108-7c50-4a04-8e7a-37f30c6a784c"
+      Hint: Link3
+      Value: |
+        <link class="" querystring="" id="{B2A38FB8-2E85-4D58-AFE5-C12BECCBEE3A}" anchor="" target="|Custom" title="" linktype="internal" text="ホーム" url="/Financial/ProsperaBank/Home" />
+    - ID: "ba2af883-e3bb-43cf-8c97-ab5c97edc09d"
+      Hint: Link4
+      Value: |
+        <link class="" querystring="" id="{B2A38FB8-2E85-4D58-AFE5-C12BECCBEE3A}" anchor="" target="" title="" linktype="internal" text="ホーム" url="/Financial/ProsperaBank/Home" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "be5597c5-a55d-4a6a-bf53-7fe1a7bf4bdc"
+      Hint: Title1
+      Value: カスタマーサポート
+    - ID: "c24d6ca7-49ab-4f08-9dae-e5a844d79139"
+      Hint: Text2
+      Value: 支店とATMSのネットワークをご覧ください。
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165651Z

@@ -1,0 +1,20 @@
+﻿---
+ID: "d12ed4b9-522e-42b3-b77c-ecd0e59e084f"
+Parent: "e8ed6863-9dcc-41c8-a8f7-9154b1151da3"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Stats Counter/Column 3/Symbol3
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8ac29e56-8d0c-4fa8-968c-d9e556b36652"

@@ -1,0 +1,86 @@
+﻿---
+ID: "a2b60ea2-0530-4e50-b6f1-b3e92f97ab1d"
+Parent: "2433b2df-27ef-4e74-8497-5656283ffe09"
+Template: "bbcccd48-218c-4f19-a1d4-bb3dbf1f4d89"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Data/Promos/App Promos/App Promo - Retirement"
+SharedFields:
+- ID: "23fec4a6-1e53-4d30-8bb4-1a08632f3545"
+  Hint: Image
+  Value: |
+    <image mediaid="{22277B76-BF4E-4F1C-90FF-EE0936D7DF63}" alt="Two hands holding mobile phone" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>Introducing your new financial companion for everyday help with real-time spending advice, investments, and keeping you on track.</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: "Stick to your retirement plan with our easy-to-use mobile companion app"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "abf4fb28-9963-48c7-a2a9-30bb8b0c4fad"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>Voici votre nouveau compagnon financier pour vous aider au quotidien avec des conseils en temps r&eacute;el sur les d&eacute;penses, les investissements et pour vous maintenir sur la bonne voie.</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: Respectez votre plan de retraite avec notre application mobile facile à utiliser.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b00ece5a-382e-48e0-81db-37756e4dc996"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>リアルタイムの支出アドバイス、投資、軌道修正など、毎日をサポートする新しいファイナンシャル・コンパニオンをご紹介します。</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: 使いやすいモバイルコンパニオンアプリでリタイアメントプランに忠実な生活を
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "684ca426-7061-46bc-ac76-3b028b08b9f1"

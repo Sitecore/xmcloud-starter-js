@@ -1,0 +1,96 @@
+# Skinned Demo Setup — Progress Tracker
+# Created after inputs are collected. Updated after each step.
+# Used by "resume skinned demo setup" to skip completed work.
+# Do NOT store secrets (tokens, client secrets, passwords) in this file.
+
+customer:
+  name: ""
+  systemName: ""            # <customer-system-name>
+  folder: ""                # <customer-folder> kebab-case
+  url: ""
+  screenshotPath: ""        # path or attachment note — not binary
+  startedAt: ""
+  lastUpdatedAt: ""
+
+selection:
+  collectionMode: ""        # new | existing
+  customerCollection: ""
+  collectionId: ""
+  sourceSiteName: ""
+  sourceSiteId: ""
+  sourceCollectionId: ""
+  sourceFolder: ""
+  needsMove: null           # true | false
+
+artifacts:
+  newSiteId: ""
+  ehEnvironmentId: ""
+  cmEnvironmentId: ""       # authoring env id if editing host path used
+  renderingHostKey: ""
+
+steps:
+  inputs:
+    status: "pending"       # pending | complete
+
+  preflight_auth:
+    status: "pending"       # pending | complete | failed
+    sitesApiOk: false
+    marketerMcpOk: false
+    error: ""
+
+  collection_source_selection:
+    status: "pending"       # pending | complete
+
+  source_verification:
+    status: "pending"       # pending | complete | failed
+    error: ""
+
+  step1a_collection:
+    status: "pending"       # pending | complete | skipped
+    # skipped = existing collection reused
+
+  step1a_duplicate:
+    status: "pending"       # pending | complete | failed
+    tempSiteName: ""
+    error: ""
+
+  step1a_rename:
+    status: "pending"       # pending | complete | failed
+    error: ""
+
+  step1a_move_notify:
+    status: "pending"       # pending | complete | skipped
+    # skipped when needsMove is false
+
+  step1b_local_copy:
+    status: "pending"       # pending | complete | failed
+    error: ""
+
+  step1c_env_local:
+    status: "pending"       # pending | complete | failed
+    error: ""
+
+  step1c_xmcloud_build:
+    status: "pending"       # pending | complete | failed
+    error: ""
+
+  move_verify:
+    status: "pending"       # pending | complete | skipped | failed
+    error: ""
+
+  step1d_editing_host:
+    status: "pending"       # pending | complete | skipped | failed
+    optedIn: null           # true | false
+    error: ""
+
+  step1_verification:
+    status: "pending"       # pending | complete | failed
+    error: ""
+
+  step2_build_demo:
+    status: "pending"       # pending | complete | failed | handed_off
+    # handed_off = sitecore-build-demo started; further resume is that skill’s demo-progress.yaml
+    error: ""
+
+notes: []
+# - "2026-09-25T15:00:00Z — Waiting on Content Editor move."

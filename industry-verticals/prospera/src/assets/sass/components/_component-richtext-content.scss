@@ -1,0 +1,62 @@
+@import 'src/assets/sass/abstracts/vars';
+@import 'src/assets/sass/abstracts/mixins';
+
+.site-financial {
+  --rich-text-base-size: 1.25rem;
+}
+
+.site-services {
+  --rich-text-base-size: 1rem;
+  --rich-text-p-opacity: 0.65;
+}
+
+.content,
+.rich-text {
+  border: $rich-content-border;
+  overflow: hidden;
+  font-size: var(--rich-text-base-size);
+
+  * {
+    max-width: 100%;
+  }
+
+  p {
+    opacity: var(--rich-text-p-opacity);
+  }
+
+  p,
+  li {
+    line-height: 1.75;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1em !important;
+    margin-bottom: 0.5em !important;
+
+    &:first-child {
+      margin-top: 0 !important;
+    }
+  }
+
+  ul li {
+    &::marker {
+      color: var(--text-accent);
+    }
+  }
+
+  @import 'src/assets/sass/base/richtext/richtext';
+  @import 'src/assets/sass/base/richtext/richtext-files-icons';
+}
+
+.rich-text {
+  @import 'src/assets/sass/variants/rich-text';
+}
+
+.content {
+  @import 'src/assets/sass/variants/page-content';
+}

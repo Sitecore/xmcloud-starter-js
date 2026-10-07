@@ -1,0 +1,20 @@
+﻿---
+ID: "4dac9ce2-719f-4f59-87e0-4296db56f5ec"
+Parent: "0089bcb3-0117-43f2-a760-0771d5ff7417"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/HeroBanner/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "60ffc624-a1cc-4b86-83a4-c33889f206e7"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2057e225-5db4-4b6d-b0b6-c78f6c137b56"

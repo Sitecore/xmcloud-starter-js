@@ -1,0 +1,51 @@
+.documents-list {
+  @include respond-to(mobile-large) {
+    padding: 0 $size-padding;
+  }
+
+  .title {
+    font-weight: bold;
+    color: var(--text-body);
+    margin-bottom: 0.5em;
+  }
+
+  .documents-container {
+    padding: 3em 3em 2em;
+    border: 5px solid var(--bg-main);
+    border-radius: 16px;
+
+    @include respond-to(mobile-large) {
+      padding: 2em 2em 1em;
+    }
+
+    .item {
+      display: flex;
+      gap: 1em;
+      text-align: start;
+      margin-bottom: 1em;
+
+      img {
+        filter: brightness(0) saturate(100%) invert(13%) sepia(63%) saturate(4790%)
+          hue-rotate(192deg) brightness(96%) contrast(97%);
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          color: var(--text-colored);
+          font-weight: bold;
+          font-size: 18px;
+          text-decoration: none;
+        }
+
+        .subtitle {
+          color: var(--text-body);
+          font-style: italic;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

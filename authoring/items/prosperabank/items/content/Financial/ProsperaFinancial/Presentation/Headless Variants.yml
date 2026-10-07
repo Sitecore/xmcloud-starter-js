@@ -1,0 +1,18 @@
+﻿---
+ID: "2d02fa8c-30c1-4025-9eb7-5b3c062f7035"
+Parent: "bfd19688-08f7-47b3-b703-0ff0f56effb9"
+Template: "da26c636-96e1-45e4-88d6-3fcec70d5699"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Headless Variants
+BranchID: "ab383616-86fa-41a3-bb12-2c478166886f"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C731A7FC-9233-4913-A35B-B6EE5AA35DE5}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2b66335b-522a-4b94-b507-954c1564d58a"

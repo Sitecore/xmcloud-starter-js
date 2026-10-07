@@ -1,0 +1,25 @@
+﻿---
+ID: "4f54253c-bbeb-430a-8428-11eb11df1e09"
+Parent: "67e69c10-7b84-475a-94fb-fb50edd28694"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Project List
+SharedFields:
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {8CA06D6A-B353-44E8-BC31-B528C7306971}
+    {4247AAD4-EBDE-4994-998F-E067A51B1FE4}
+    {5C74E985-E055-43FF-B28C-DB6C6A6450A2}
+    {44A022DB-56D3-419A-B43B-E27E4D8E9C41}
+    {3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{A0B44399-B72A-4401-A668-236632815160}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "caeb14d2-e2aa-4165-bf37-8b840205ac5d"

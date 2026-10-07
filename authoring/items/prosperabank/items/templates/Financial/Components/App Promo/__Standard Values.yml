@@ -1,0 +1,24 @@
+﻿---
+ID: "137bd4c1-9f6c-4827-9990-6b3be2bb31c0"
+Parent: "bbcccd48-218c-4f19-a1d4-bb3dbf1f4d89"
+Template: "bbcccd48-218c-4f19-a1d4-bb3dbf1f4d89"
+Path: /sitecore/templates/Project/Financial/Components/App Promo/__Standard Values
+SharedFields:
+- ID: "23fec4a6-1e53-4d30-8bb4-1a08632f3545"
+  Hint: Image
+  Value: |
+    <image mediaid="{B097209E-D865-4282-90AC-0980C254A507}" alt="Hand holding mobile phone" height="" width="" hspace="" vspace="" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: Lorem ipsum dolor sit amet
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cad99a15-3a83-432e-b5c9-ef582879222b"

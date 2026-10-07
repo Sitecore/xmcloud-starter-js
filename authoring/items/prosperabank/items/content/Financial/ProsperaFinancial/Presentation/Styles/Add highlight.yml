@@ -1,0 +1,24 @@
+﻿---
+ID: "ad0bbce8-225b-443a-9baa-7da6b6879c44"
+Parent: "3553d078-0ee7-4b60-803d-aa873a65075b"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Styles/Add highlight
+BranchID: "75653e9d-3c5c-45d4-823d-1bb04474400b"
+SharedFields:
+- ID: "62ca1c9e-71a4-465f-835e-55bda7bb270b"
+  Hint: Type
+  Value: "icon-button-group-check"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{341D8014-7FA0-4966-8CA7-23D6D346E880}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9c34c314-f1ee-4df1-afc1-b953fff501cd"

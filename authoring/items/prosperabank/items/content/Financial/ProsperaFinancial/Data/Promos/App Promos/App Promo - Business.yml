@@ -1,0 +1,86 @@
+﻿---
+ID: "d5ce16d6-7e8c-405c-a87c-3295091b1118"
+Parent: "2433b2df-27ef-4e74-8497-5656283ffe09"
+Template: "bbcccd48-218c-4f19-a1d4-bb3dbf1f4d89"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Data/Promos/App Promos/App Promo - Business"
+SharedFields:
+- ID: "23fec4a6-1e53-4d30-8bb4-1a08632f3545"
+  Hint: Image
+  Value: |
+    <image mediaid="{B097209E-D865-4282-90AC-0980C254A507}" alt="Hand holding mobile phone" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>Introducing your new financial companion for everyday help with payroll, international payments, and day-to-day business banking.</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: "Managing your business is a 24/7 job - we've got you covered"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4c6273b6-9f9c-4548-8ad1-a376620a361f"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>Voici votre nouveau compagnon financier pour vous aider au quotidien avec la paie, les paiements internationaux et les op&eacute;rations bancaires courantes de votre entreprise.</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: "Gérer votre entreprise est un travail de tous les instants - nous sommes là pour vous."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f2ae3201-d37e-47a3-ae08-0692f7803e05"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>給与計算、国際的な支払い、日々のビジネス・バンキングなど、毎日をサポートする新しいファイナンシャル・コンパニオンをご紹介します。</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: ビジネス経営は年中無休の仕事です
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "31812bca-e27f-480f-b2b4-63ddfa95a52c"

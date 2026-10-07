@@ -1,0 +1,134 @@
+@import 'src/assets/sass/abstracts/vars/colors';
+@import 'src/assets/sass/abstracts/mixins';
+
+.site-financial {
+  --button-main-color: #fff;
+  --button-main-bg-color: var(--bg-saturated);
+  --button-secondary-color: var(--text-colored);
+  --button-simple-color: var(--text-colored);
+  --button-padding: 10px 50px;
+  --button-roundness: 40px;
+  --button-font-weight: 500;
+  --button-font-size: 1.125rem;
+}
+
+.site-services {
+  --button-main-color: #fff;
+  --button-main-bg-color: var(--bg-saturated);
+  --button-secondary-color: var(--text-body);
+  --button-simple-color: var(--text-body);
+  --button-padding: 1rem 1.5rem 0.75rem;
+  --button-roundness: var(--roundness);
+  --button-font-weight: 800;
+  --button-font-size: 0.875rem;
+  --button-text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  border-radius: var(--button-roundness);
+  padding: var(--button-padding);
+  transition: all 0.2s ease-in-out;
+}
+
+.button-main {
+  background-color: var(--button-main-bg-color);
+  color: var(--button-main-color);
+  text-transform: var(--button-text-transform);
+  border: none;
+
+  a {
+    color: var(--button-main-color);
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: var(--button-main-color);
+    filter: brightness(125%);
+  }
+}
+
+.button-secondary {
+  border: 2px solid var(--button-secondary-color);
+  color: var(--button-secondary-color);
+  text-transform: var(--button-text-transform);
+
+  a {
+    color: var(--button-secondary-color);
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: var(--button-secondary-color);
+    filter: brightness(125%);
+  }
+}
+
+.button-accent {
+  background-color: var(--bg-accent);
+  color: var(--button-main-color);
+
+  &:hover {
+    color: var(--button-main-color);
+    filter: brightness(85%);
+  }
+}
+
+.button-simple {
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background-color: unset;
+  text-decoration: none;
+  color: var(--button-simple-color);
+  font-weight: var(--button-font-weight);
+}
+
+// Sort of a style reset for <a> when we want to use it as a wrapper element
+// e.g. when the whole card is a link
+.wrapper-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.button-default,
+.default {
+  @include default-link-button;
+
+  background: #f6f6f6;
+  color: $text-basic;
+}
+
+.button-success,
+.success {
+  @include default-link-button;
+
+  background: $btn-green-light;
+  color: $text-white;
+
+  &:hover {
+    color: $text-white;
+    background: $btn-green;
+  }
+}
+
+.button-warning,
+.warning {
+  @include default-link-button;
+
+  background: $btn-red;
+  color: $text-white;
+
+  &:hover {
+    color: $text-white;
+    background: $btn-red-active;
+  }
+}

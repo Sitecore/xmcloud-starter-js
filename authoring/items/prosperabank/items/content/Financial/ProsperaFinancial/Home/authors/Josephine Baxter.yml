@@ -1,0 +1,94 @@
+﻿---
+ID: "50f7c322-1c9f-4f58-a93b-2157be20bf50"
+Parent: "8c2d6765-91be-4bd8-a0b3-4f81256e75a6"
+Template: "aad350f5-9331-4d71-a942-e3643653c028"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/authors/Josephine Baxter
+SharedFields:
+- ID: "2404bb97-b42a-439a-be76-de66213cb281"
+  Hint: BackgroundImage
+  Value: |
+    <image mediaid="{DC65B8CF-63A5-424E-A739-3B6345F75F92}" alt="Newspaper image" height="" width="" hspace="" vspace="" />
+- ID: "6be59cd8-74bd-4c67-b611-e81e140679b4"
+  Hint: Photo
+  Value: |
+    <image mediaid="{6135F03F-7CE3-45E4-BF8C-4119D75B6C75}" alt="Josephine Author Bio" height="" width="" hspace="" vspace="" />
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: 
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Josephine Baxter
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: Investment Specialist
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ce90e247-cfc7-4b3d-bea7-62becb2f19ef"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: <p>Josephine specializes in helping clients grow and protect their wealth through strategic investment planning. With a background in asset management and financial advisory services, she provides clients with personalized investment strategies and guidance to navigate today's complex financial markets.</p>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: Josephine Baxter
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Josephine Baxter
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: Spécialiste en investissements
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bfc332a3-122d-4333-b4bf-9812cae10c26"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: <p>Josephine est spécialisée dans l'aide aux clients pour la croissance et la protection de leur patrimoine grâce à une planification stratégique des investissements. Avec une expérience en gestion d'actifs et en services de conseil financier, elle offre aux clients des stratégies d'investissement personnalisées et des conseils pour naviguer dans les marchés financiers complexes d'aujourd'hui.</p>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: Josephine Baxter
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: ジョセフィン・バクスター
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{171CCFD4-8543-428E-9A9B-8E6557E63B6D}"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: ジョセフィン・バクスター
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: 製品スペシャリスト
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "451c3c96-d5b5-4958-a09c-da5d884ec1fc"
+    - ID: "97b19c3f-9341-48ac-be54-22e1caaa1d48"
+      Hint: Bio
+      Value: <p>ジョセフィンは、戦略的な投資計画を通じて、顧客の富の増大と保護を支援することを専門としている。 資産運用とファイナンシャル・アドバイザリー・サービスの経験を生かし、今日の複雑な金融市場をナビゲートするため、クライアントに個別の投資戦略とガイダンスを提供している。</p>
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: ジョセフィン・バクスター

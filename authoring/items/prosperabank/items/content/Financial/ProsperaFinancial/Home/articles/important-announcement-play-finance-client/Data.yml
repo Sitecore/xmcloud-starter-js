@@ -1,0 +1,13 @@
+﻿---
+ID: "9930734c-69fd-41c3-9e29-1ab5b1a0447c"
+Parent: "bfcff490-4d41-4b86-907b-7760788d38e6"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/articles/important-announcement-play-finance-client/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e011df2c-2d66-4a2f-80fb-129002aa166e"

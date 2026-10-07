@@ -1,0 +1,43 @@
+﻿---
+ID: "8ae94e1d-b00c-4407-aeec-e075d599fb49"
+Parent: "786662e0-39cf-4203-9bd1-009f2101639a"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/business/employee-management/Data/Tagline"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{8A63E4E5-E82F-4BC4-84E8-AE611D960D99}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Powering small businesses,<em style="color: var(--bg-accent);"> one transaction at a time.</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "daedb547-78b5-4119-bb4e-f79d24d21f1c"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Propulser les petites entreprises,<em style="color: var(--bg-accent);"> une transaction à la fois.</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "35a0c60e-6dec-4acf-b60d-1c51736cd1d0"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2><em style="color: var(--bg-accent);">一度に1つのトランザクション</em>、中小企業の力を支えます。</h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2efe5ea5-fa65-4a13-8626-7bd051766fb1"

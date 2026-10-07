@@ -1,0 +1,23 @@
+﻿---
+ID: "609a79ac-e186-41e2-a3fa-771e95c26815"
+Parent: "8b77b250-9318-47a8-9b33-6d35b27f5897"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Financial/Page Designs
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/document_chart.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{DAAF41FD-96DB-4892-BE99-F62F16D036C4}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{D99631B6-651A-44DA-9AAD-4BA5D22241E3}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "05e4d29d-a743-4e70-b19e-606d24c7a8af"

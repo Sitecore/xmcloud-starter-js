@@ -1,0 +1,13 @@
+﻿---
+ID: "01fde529-59e4-417f-97cd-947bb8eb525c"
+Parent: "58307e4b-ec38-4eb0-ae47-6c238e33b7cd"
+Template: "267d9ac7-5d85-4e9d-af89-99ab296cc218"
+Path: /sitecore/content/Financial/ProsperaFinancial/Dictionary/Financial
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b2c3c982-4ab4-4152-8469-97fe49555e4e"

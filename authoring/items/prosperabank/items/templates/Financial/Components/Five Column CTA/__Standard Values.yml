@@ -1,0 +1,72 @@
+﻿---
+ID: "de904dac-b6a9-4513-aa79-404b81e73e86"
+Parent: "3b41d9fc-0edf-48e1-966c-e260339ba815"
+Template: "3b41d9fc-0edf-48e1-966c-e260339ba815"
+Path: /sitecore/templates/Project/Financial/Components/Five Column CTA/__Standard Values
+SharedFields:
+- ID: "3b0a6484-9ce0-4386-b2b3-5792c0db7b72"
+  Hint: Image3
+  Value: |
+    <image mediaid="{2F831857-9B12-4901-BB71-21080A723266}" alt="Investing options image" height="" width="" hspace="" vspace="" />
+- ID: "4301130a-505e-4a6d-ba47-f783d47a1750"
+  Hint: Image2
+  Value: |
+    <image mediaid="{3FE72BF3-5300-452C-BCAA-8FD38FD1D522}" alt="Mortgage image" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "c5d0b517-0ed6-4cd4-9354-8adf7a04bc7d"
+  Hint: Image4
+  Value: |
+    <image mediaid="{9718505E-A239-495C-B20A-701DECD54C65}" alt="Small businesses image" height="" width="" hspace="" vspace="" />
+- ID: "df3b6320-8a59-49d6-98a6-917ba4a400cf"
+  Hint: Image5
+  Value: |
+    <image mediaid="{DBEA34F0-D634-4A6B-A7ED-2CFE5AF909AA}" alt="Credit card image" height="" width="" hspace="" vspace="" />
+- ID: "f762ad0b-e486-48ca-acb3-d8523551a990"
+  Hint: Image1
+  Value: |
+    <image mediaid="{08B36B47-DC43-4F6B-8CE1-95A195829509}" alt="Personal loan image" height="" width="" hspace="" vspace="" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12ece9de-445a-42be-a483-9e8095ca3b8f"
+      Hint: Text5
+      Value: Credit Cards
+    - ID: "1d581533-1aa5-4679-9e2a-e7fe765218ba"
+      Hint: Link3
+      Value: |
+        <link text=" " linktype="anchor" url="investing-options" anchor="investing-options" title="" class="" />
+    - ID: "2490d428-27e2-4daa-8337-4e34f37fc26b"
+      Hint: Link2
+      Value: |
+        <link text=" " linktype="anchor" url="mortgage" anchor="mortgage" title="" class="" />
+    - ID: "41910271-6970-45e7-8819-3d531826d4a6"
+      Hint: Link5
+      Value: |
+        <link text=" " linktype="anchor" url="credit-cards" anchor="credit-cards" title="" class="" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "224867e7-3fea-43d7-baa7-201acbbe2b35"
+    - ID: "8f49a654-7b7f-4c0b-b6df-d3ce2389c1bf"
+      Hint: Text2
+      Value: Mortgage
+    - ID: "91d94aff-4137-4702-93f7-8db4eacde4d5"
+      Hint: Text3
+      Value: Investing Options
+    - ID: "9ea34c36-7e22-4d12-b632-032361c3b17c"
+      Hint: Text1
+      Value: Personal loan
+    - ID: "b867909f-d20c-4c76-b82f-778d25239cd1"
+      Hint: Link1
+      Value: |
+        <link text=" " linktype="anchor" url="get-a-loan" anchor="get-a-loan" title="" class="" />
+    - ID: "b8b8fa51-0c41-442e-8757-07b7a59d6d3f"
+      Hint: Link4
+      Value: |
+        <link text=" " linktype="anchor" url="small-businesses" anchor="small-businesses" title="" class="" />
+    - ID: "f5e90981-3210-4316-bcf5-f083fe639e66"
+      Hint: Text4
+      Value: Small Businesses

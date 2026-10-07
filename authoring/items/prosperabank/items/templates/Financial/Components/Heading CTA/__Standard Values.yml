@@ -1,0 +1,30 @@
+﻿---
+ID: "6f44290f-b08b-412f-905d-b2ba5b222872"
+Parent: "fa136527-6302-471d-83ab-e66fc72bda99"
+Template: "fa136527-6302-471d-83ab-e66fc72bda99"
+Path: /sitecore/templates/Project/Financial/Components/Heading CTA/__Standard Values
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0c0e0473-6a84-404a-af95-8705ac79d768"
+    - ID: "bbd90ce3-fdf4-425e-844b-63c5b3db8916"
+      Hint: Text
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - ID: "be9c7836-a932-4e3b-a4a0-c7d5aa869337"
+      Hint: Link
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "cef85d28-d6bc-4204-a2e4-8706c80d8a3c"
+      Hint: Heading
+      Value: Lorem ipsum dolor sit amet
+    - ID: "ee323ed7-4732-4a64-a008-18df97dc0737"
+      Hint: Eyebrow
+      Value: suscipit lectus

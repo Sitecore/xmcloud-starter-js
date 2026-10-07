@@ -1,0 +1,13 @@
+﻿---
+ID: "953917a3-f8d4-4264-902d-434209232782"
+Parent: "6630c97b-f037-4f1f-87bc-907c43f167d1"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Project/Financial/Articles
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d1703f52-5839-403f-8bc1-3ec292287af1"

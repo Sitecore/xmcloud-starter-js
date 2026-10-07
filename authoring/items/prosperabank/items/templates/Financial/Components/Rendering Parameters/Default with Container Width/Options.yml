@@ -1,0 +1,13 @@
+﻿---
+ID: "fd833ce1-61d3-4d9c-8c82-f0f3e427c9d8"
+Parent: "f03f2904-7182-4125-acae-8fe8ab0d398c"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Default with Container Width/Options
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "087431f1-c484-43dc-a504-cac95e0c82b0"

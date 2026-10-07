@@ -1,0 +1,83 @@
+﻿---
+ID: "7c52e43f-6b20-4165-86ea-108fd1d2436d"
+Parent: "2433b2df-27ef-4e74-8497-5656283ffe09"
+Template: "bbcccd48-218c-4f19-a1d4-bb3dbf1f4d89"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Data/Promos/App Promos/App Promo - Personal"
+SharedFields:
+- ID: "23fec4a6-1e53-4d30-8bb4-1a08632f3545"
+  Hint: Image
+  Value: |
+    <image mediaid="{63E17DDD-8E91-4AF6-8052-FF666914C5DF}" alt="close-up-hand-holding-smartphone" height="" width="" hspace="" vspace="" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>Introducing your new financial companion for everyday help with saving, investing, bill payments and more.</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: Say hello to convenient banking with our mobile application
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4697bc62-b1d6-4131-8964-e2c6072b9d8a"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>Voici votre nouveau compagnon financier pour vous aider au quotidien avec l'&eacute;pargne, l'investissement, le paiement des factures et bien plus encore.</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: Dites bonjour à la banque pratique avec notre application mobile.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "072d8571-2b8b-4cca-b343-09939c8b46a8"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "19611527-1e31-4490-8042-482e61e3ce84"
+      Hint: Text
+      Value: |
+        <p>貯蓄、投資、請求書の支払いなど、毎日の生活をサポートする新しいファイナンシャル・コンパニオンをご紹介します。</p>
+        <div class="container">
+        <div class="row  row-gap-3">
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/FEAF65D3394846DAB95213780D61AADA.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="Google Play" src="-/media/DCDCD7A8F8DA4110BA4FD19FEFFD1465.ashx?h=46&amp;w=150" style="height: 46px; width: 150px;" /></a></div>
+        <div class="col-sm">
+        <a rel="noopener noreferrer" href="http://www.sitecore.com" target="_blank"><img alt="" src="-/media/3FB814AFD8E846FF9BFD4312B2213EC4.ashx?h=44&amp;w=150" style="height: 44px; width: 150px;" /></a></div>
+        </div>
+        </div>
+    - ID: "1f0455dc-9254-4487-b94d-6c66f103e7bf"
+      Hint: Title
+      Value: モバイルアプリケーションで便利なバンキングを
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "47bc8406-bb97-4fe4-a557-72384f388513"

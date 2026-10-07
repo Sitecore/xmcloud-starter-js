@@ -1,0 +1,17 @@
+﻿---
+ID: "eea2e840-00e0-4757-8aad-8a23cb0c0055"
+Parent: "32f00428-21ac-4dc0-aa2b-f2e31ca3e97e"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Comparison/Item 2
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "24a2868a-d14d-4d01-b753-6e8e8e9a56be"

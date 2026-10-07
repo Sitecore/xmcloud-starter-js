@@ -1,0 +1,13 @@
+﻿---
+ID: "e7077939-8f32-4c4f-aaad-a7c53f623ce0"
+Parent: "54670690-3107-45f4-aa52-b83f5a1801d2"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Headless Variants/Promo CTA/Default
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb8dea5e-cfa5-4e92-aa31-3091e67c7b15"

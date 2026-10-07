@@ -1,0 +1,13 @@
+﻿---
+ID: "e80b2eb2-f3c4-4c86-b76c-041808116d0e"
+Parent: "5c48bd53-e997-45fc-b318-672cfa349bb3"
+Template: "8fe7f8dc-cb5d-42c2-99f8-76608c243f10"
+Path: /sitecore/content/Financial/ProsperaFinancial/Data/Promos
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "491cdebd-157d-412d-8c5f-0208065677e5"

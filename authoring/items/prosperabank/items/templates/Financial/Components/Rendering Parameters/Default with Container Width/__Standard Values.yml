@@ -1,0 +1,23 @@
+﻿---
+ID: "76786701-71d9-43f3-8a7a-231e206e82f8"
+Parent: "f03f2904-7182-4125-acae-8fe8ab0d398c"
+Template: "f03f2904-7182-4125-acae-8fe8ab0d398c"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Default with Container Width/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2ef4c56d-3637-4c4d-b489-c2585525e983"
+    - ID: "da98fd54-e21c-4d1c-8f2f-e316a4112cbd"
+      Hint: ContainerWidth
+      Value: 
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a6428413-5527-4df0-98bd-d5ef7efbe8ed"

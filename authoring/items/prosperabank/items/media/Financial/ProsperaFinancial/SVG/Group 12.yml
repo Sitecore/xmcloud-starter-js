@@ -1,0 +1,49 @@
+﻿---
+ID: "dbea34f0-d634-4a6b-a7ed-2cfe5af909aa"
+Parent: "2a3dbf56-ac6b-43b2-9cfc-7f0ae30ee272"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Project/Financial/ProsperaFinancial/SVG/Group 12
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/DBEA34F0D6344A6BA7ED2CFE5AF909AA.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 110
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "dbea34f0-d634-4a6b-a7ed-2cfe5af909aa"
+  Value: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTIyLjY3NyIgaGVpZ2h0PSI4Mi4wMzciIHZpZXdCb3g9IjAgMCAxMjIuNjc3IDgyLjAzNyI+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCI+CiAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfMjAiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDIwIiB3aWR0aD0iMTIyLjY3NyIgaGVpZ2h0PSI4Mi4wMzciIGZpbGw9Im5vbmUiLz4KICAgIDwvY2xpcFBhdGg+CiAgPC9kZWZzPgogIDxnIGlkPSJHcm91cF8xMiIgZGF0YS1uYW1lPSJHcm91cCAxMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCkiPgogICAgPGcgaWQ9Ikdyb3VwXzExIiBkYXRhLW5hbWU9Ikdyb3VwIDExIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwKSIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAtcGF0aCkiPgogICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzE5IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSAxOSIgd2lkdGg9IjExNi4xMTQiIGhlaWdodD0iNzUuNDc0IiByeD0iNy42ODUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMuMjgyIDMuMjgxKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDM0YzgxIiBzdHJva2Utd2lkdGg9IjUiLz4KICAgICAgPHBhdGggaWQ9IlBhdGhfNTEiIGRhdGEtbmFtZT0iUGF0aCA1MSIgZD0iTTY2Ljg2NSwyNC40OTRINy4zNTdhMi41NCwyLjU0LDAsMCwxLDAtNS4wOEg2Ni44NjVhMi41NCwyLjU0LDAsMCwxLDAsNS4wOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNS43MjEgMjMuMDU3KSIgZmlsbD0iIzAzNGM4MSIvPgogICAgICA8cGF0aCBpZD0iUGF0aF81MiIgZGF0YS1uYW1lPSJQYXRoIDUyIiBkPSJNMS41LDI3LjZIMTE2LjE2MVY5LjQ2MkgxLjVabTI3LjIxNC03LjI1NkgxMS4zYTIuNTQsMi41NCwwLDEsMSwwLTUuMDhIMjguNzE0YTIuNTQsMi41NCwwLDEsMSwwLDUuMDgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuNzgxIDExLjIzOCkiIGZpbGw9IiMwMzRjODEiLz4KICAgICAgPHBhdGggaWQ9IlBhdGhfNTMiIGRhdGEtbmFtZT0iUGF0aCA1MyIgZD0iTTQzLjYzLDMxLjkyOWEyLjgyMiwyLjgyMiwwLDEsMCwyLjgyMi0yLjgyMiwyLjgyMywyLjgyMywwLDAsMC0yLjgyMiwyLjgyMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTEuODE3IDM0LjU2OSkiIGZpbGw9IiMwMzRjODEiLz4KICAgICAgPHBhdGggaWQ9IlBhdGhfNTQiIGRhdGEtbmFtZT0iUGF0aCA1NCIgZD0iTTQ3LjYxMSwzMS45MjlhMi44MjIsMi44MjIsMCwxLDAsMi44MjItMi44MjIsMi44MjMsMi44MjMsMCwwLDAtMi44MjIsMi44MjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU2LjU0NSAzNC41NjkpIiBmaWxsPSIjMDM0YzgxIi8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 1410
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 110
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215319Z
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: Credit card image
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c5161dc6-6b98-4fba-99ec-b0b7bcb3d712"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215319Z

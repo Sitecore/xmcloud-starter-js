@@ -1,0 +1,20 @@
+﻿---
+ID: "63e1abec-67cb-4aea-ab72-8b5b60b69473"
+Parent: "239a5000-0adc-4f34-b444-f45acde5e927"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Three Column CTA/Column 1/Link1
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: General Link
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "47cf582f-23c5-4c37-a62e-d38e74d7619a"

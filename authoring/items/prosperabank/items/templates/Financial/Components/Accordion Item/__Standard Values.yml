@@ -1,0 +1,40 @@
+﻿---
+ID: "dcd10149-e845-468b-a2ef-2aae12d18f5e"
+Parent: "02fc3e8b-a97f-4a7a-844b-3047e24432a0"
+Template: "02fc3e8b-a97f-4a7a-844b-3047e24432a0"
+Path: /sitecore/templates/Project/Financial/Components/Accordion Item/__Standard Values
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4cea0fff-861b-4220-b782-13c4b4d87602"
+      Hint: Title
+      Value: Lorem ipsum
+    - ID: "60494f49-e98c-480e-a699-5765703e0497"
+      Hint: Content
+      Value: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d2bc73e8-0fbf-433c-9041-4c4ffc07ee80"
+    - ID: "b5316ca6-a961-499b-b65e-3d98d49a8f47"
+      Hint: Icon
+      Value: |
+        <image mediaid="{8845B07E-7F3B-46F0-9748-57F7ACF56BB1}" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4cea0fff-861b-4220-b782-13c4b4d87602"
+      Hint: Title
+      Value: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50e1a745-fbe8-493b-8633-3ee2880d074c"
+    - ID: "b5316ca6-a961-499b-b65e-3d98d49a8f47"
+      Hint: Icon
+      Value: Lorem ipsum dolor sit amet

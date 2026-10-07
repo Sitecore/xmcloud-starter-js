@@ -1,0 +1,290 @@
+# Page Template Registry
+# Machine-readable index of page types and their associated context components.
+# Separate from component-registry.yaml which catalogs datasource-based homepage components.
+#
+# Used by page-type creation skills (sitecore-create-article-page, future page-type skills)
+# to understand what templates, fields, and components a page type requires.
+
+pageTemplates:
+
+  - id: article
+    name: "Article Page"
+    inheritsFrom: "base-page-template"  # resolved via MCP at implementation time
+    description: "Blog post, news article, or editorial content page"
+    templateSection: "Article Data"
+    fields:
+      - { name: "ArticleContent", type: "Rich Text", purpose: "article body text" }
+      - { name: "ArticleImage", type: "Image", purpose: "hero/featured image" }
+      - { name: "ArticleAuthor", type: "Droptree", purpose: "reference to Person item", source: "/sitecore/content/main/main-website/Data/People" }
+      - { name: "ArticlePublicationDate", type: "Date", purpose: "publication date" }
+      - { name: "ArticleKeyTakeaways", type: "Rich Text", purpose: "highlights or bullet summary" }
+      - { name: "ArticleReadTime", type: "Single-Line Text", purpose: "e.g. 5 min read" }
+    inheritedFieldsUsed:
+      - "Title"
+      - "pageSummary"
+      - "ogTitle"
+      - "ogDescription"
+      - "ogImage"
+      - "thumbnailImage"
+      - "metadataTitle"
+      - "metadataDescription"
+      - "metadataKeywords"
+
+    sharedDataTemplates:
+      - id: person
+        name: "Person"
+        path: "/sitecore/templates/Project/fmc-custom-demo/Data/Person"
+        section: "Person Data"
+        fields:
+          - { name: "personFirstName", type: "Single-Line Text" }
+          - { name: "personLastName", type: "Single-Line Text" }
+          - { name: "personJobTitle", type: "Single-Line Text" }
+          - { name: "personProfileImage", type: "Image" }
+          - { name: "personBio", type: "Rich Text" }
+          - { name: "personLinkedIn", type: "General Link" }
+        dataFolder:
+          name: "People"
+          path: "/sitecore/content/main/main-website/Data/People"
+
+    contextComponents:
+      - id: article-hero
+        name: "ArticleHero"
+        category: "article"
+        filePath: "src/components/uiim/article/ArticleHero.tsx"
+        routeFieldsUsed:
+          - "ArticleImage"
+          - "Title"
+          - "ArticleAuthor"
+          - "ArticlePublicationDate"
+          - "ArticleReadTime"
+        variants:
+          - name: "Default"
+            description: "full-bleed image with dark overlay, centered title, metadata row, share buttons"
+          - name: "Minimal"
+            description: "no image, clean background, large title, metadata row"
+          - name: "SplitImage"
+            description: "two-column: image right, title + metadata left"
+
+      - id: article-body
+        name: "ArticleBody"
+        category: "article"
+        filePath: "src/components/uiim/article/ArticleBody.tsx"
+        routeFieldsUsed:
+          - "ArticleContent"
+          - "ArticleKeyTakeaways"
+          - "ArticleAuthor"
+        variants:
+          - name: "Default"
+            description: "narrow centered column, key takeaways callout above body, author bio card at bottom"
+          - name: "WithSidebar"
+            description: "two-column: body left (~65%), sticky sidebar right with takeaways + author bio"
+          - name: "Wide"
+            description: "full-width body, takeaways inline as highlighted section, author bio as full-width band"
+
+    partialDesign:
+      name: "Article Layout"
+      placeholder: "headless-main"
+      components: ["ArticleHero", "ArticleBody"]
+
+    contentTree:
+      parentPage:
+        name: "Articles"
+        path: "/Home/Articles"
+        template: "base-page-template"
+        insertOptions: ["Article Page"]
+
+  - id: landing
+    name: "Landing Page"
+    inheritsFrom: "base-page-template"  # resolved via MCP at implementation time (same Page base as Article)
+    description: "Campaign / conversion / ABM landing page with deterministic fixed-shape structure. All content fields live on the page template — no datasource components. Agentic Studio fills fields directly from a marketer prompt. Personalize swaps field values per ABM account."
+    designIntent: "agent-fillable, fixed counts, per-section variant swaps for ABM, no variable lists"
+
+    # Six sections in page render order. Field names are verbose semantic and position-indexed
+    # so an LLM can map brief sentence → field name unambiguously.
+    # Validation regex applied at template-field level; help text exposed via __Short description.
+    templateSections:
+      - name: "Hero Data"
+        fields:
+          - { name: "heroEyebrow", type: "Single-Line Text", validation: "^.{1,40}$", help: "Optional eyebrow above the headline. Max 40 chars. Example: 'For DevOps leaders'." }
+          - { name: "heroHeadline", type: "Single-Line Text", validation: "^.{1,80}$", help: "Benefit-led headline. Max 80 chars, single line, no trailing period. Example: 'Deploy 70% faster with zero downtime'." }
+          - { name: "heroSubhead", type: "Single-Line Text", validation: "^.{1,200}$", help: "Supporting subhead. 1-2 sentences, max 200 chars. Reinforces the headline. Example: 'Stop firefighting releases. Ship to production in minutes with automated rollback.'" }
+          - { name: "heroPrimaryCta", type: "General Link", help: "Primary conversion CTA. Action verb. Example: 'Request a demo' → /demo." }
+          - { name: "heroSecondaryCta", type: "General Link", help: "Optional lower-commitment CTA. Example: 'Watch the 2-min tour' → /tour." }
+          - { name: "heroImage", type: "Image", help: "Hero visual rendered when heroVideo is empty. 16:9 product screenshot or lifestyle image. Min 1600px wide." }
+          - { name: "heroVideo", type: "General Link", help: "Optional. Link to MP4 or YouTube URL. When set, replaces heroImage. Use for product demos or customer story videos." }
+
+      - name: "Features Data"
+        fields:
+          - { name: "feature1IconName", type: "Single-Line Text", validation: "^[A-Z][A-Za-z0-9]{1,30}$", help: "Lucide icon name in PascalCase. Examples: Zap, ShieldCheck, Rocket, BarChart3, Clock, Users. See https://lucide.dev/icons." }
+          - { name: "feature1Title", type: "Single-Line Text", validation: "^.{1,40}$", help: "Feature name. 2-4 words, max 40 chars. Example: 'Automated rollback'." }
+          - { name: "feature1Description", type: "Rich Text", help: "1-2 sentences, 100-180 chars. Explain the outcome, not the mechanism. Avoid jargon." }
+          - { name: "feature2IconName", type: "Single-Line Text", validation: "^[A-Z][A-Za-z0-9]{1,30}$", help: "See feature1IconName." }
+          - { name: "feature2Title", type: "Single-Line Text", validation: "^.{1,40}$", help: "See feature1Title." }
+          - { name: "feature2Description", type: "Rich Text", help: "See feature1Description." }
+          - { name: "feature3IconName", type: "Single-Line Text", validation: "^[A-Z][A-Za-z0-9]{1,30}$", help: "See feature1IconName." }
+          - { name: "feature3Title", type: "Single-Line Text", validation: "^.{1,40}$", help: "See feature1Title." }
+          - { name: "feature3Description", type: "Rich Text", help: "See feature1Description." }
+
+      - name: "Stats Data"
+        fields:
+          - { name: "stat1Number", type: "Single-Line Text", validation: "^.{1,8}$", help: "The number with units. Max 8 chars. Examples: '70%', '10x', '$2.3M', '500K+'." }
+          - { name: "stat1Label", type: "Single-Line Text", validation: "^.{1,30}$", help: "What the number describes. Max 30 chars. Example: 'Faster deployments'." }
+          - { name: "stat2Number", type: "Single-Line Text", validation: "^.{1,8}$", help: "See stat1Number." }
+          - { name: "stat2Label", type: "Single-Line Text", validation: "^.{1,30}$", help: "See stat1Label." }
+          - { name: "stat3Number", type: "Single-Line Text", validation: "^.{1,8}$", help: "See stat1Number." }
+          - { name: "stat3Label", type: "Single-Line Text", validation: "^.{1,30}$", help: "See stat1Label." }
+
+      - name: "Social Proof Data"
+        fields:
+          - { name: "testimonialQuote", type: "Rich Text", help: "Customer quote, 1-3 sentences, 100-250 chars. Should reference a measurable outcome. Real customer voice, not marketing speak." }
+          - { name: "testimonialAuthorName", type: "Single-Line Text", validation: "^.{1,60}$", help: "Full name. Max 60 chars. Example: 'Sarah Chen'." }
+          - { name: "testimonialAuthorTitle", type: "Single-Line Text", validation: "^.{1,80}$", help: "Job title + Company. Max 80 chars. Example: 'VP of Engineering, Northwind'." }
+          - { name: "testimonialAuthorImage", type: "Image", help: "Author headshot. Square crop, min 200x200." }
+          - { name: "partnerLogosImage", type: "Image", help: "Single composite image with 5-7 partner/customer logos in a horizontal strip. Min 1200px wide, transparent PNG preferred." }
+
+      - name: "FAQ Data"
+        fields:
+          - { name: "faq1Question", type: "Single-Line Text", validation: "^.{1,140}$", help: "Buyer-perspective question. Max 140 chars. Natural language. Example: 'How long does setup take?'" }
+          - { name: "faq1Answer", type: "Rich Text", help: "1-3 sentence answer. Direct and concrete. Avoid 'it depends'." }
+          - { name: "faq2Question", type: "Single-Line Text", validation: "^.{1,140}$", help: "See faq1Question." }
+          - { name: "faq2Answer", type: "Rich Text", help: "See faq1Answer." }
+          - { name: "faq3Question", type: "Single-Line Text", validation: "^.{1,140}$", help: "See faq1Question." }
+          - { name: "faq3Answer", type: "Rich Text", help: "See faq1Answer." }
+          - { name: "faq4Question", type: "Single-Line Text", validation: "^.{1,140}$", help: "See faq1Question." }
+          - { name: "faq4Answer", type: "Rich Text", help: "See faq1Answer." }
+          - { name: "faq5Question", type: "Single-Line Text", validation: "^.{1,140}$", help: "See faq1Question." }
+          - { name: "faq5Answer", type: "Rich Text", help: "See faq1Answer." }
+
+      - name: "Final CTA Data"
+        fields:
+          - { name: "finalCtaHeadline", type: "Single-Line Text", validation: "^.{1,80}$", help: "Closing headline. Max 80 chars. Different angle from the hero — urgency or action. Example: 'Ready to ship faster?'" }
+          - { name: "finalCtaSubhead", type: "Rich Text", help: "1 sentence supporting the final CTA. Address the warmer scrolled-this-far visitor." }
+          - { name: "finalCtaButton", type: "General Link", help: "Closing CTA. Usually same destination as heroPrimaryCta but a different verb. Example: 'Start free trial'." }
+
+    inheritedFieldsUsed:
+      - "Title"
+      - "pageSummary"
+      - "ogTitle"
+      - "ogDescription"
+      - "ogImage"
+      - "thumbnailImage"
+      - "metadataTitle"
+      - "metadataDescription"
+      - "metadataKeywords"
+
+    # No shared data templates — landing pages have no reused entities (no Person-equivalent).
+    sharedDataTemplates: []
+
+    # One context component per section. Each consumes route fields via useSitecore().
+    # ABM rationale: per-section variant swaps let one account get a SplitImage hero
+    # while another gets Minimal, without touching the rest of the page.
+    contextComponents:
+      - id: landing-hero
+        name: "LandingHero"
+        category: "landing"
+        filePath: "src/components/uiim/landing/LandingHero.tsx"
+        routeFieldsUsed: ["heroEyebrow", "heroHeadline", "heroSubhead", "heroPrimaryCta", "heroSecondaryCta", "heroImage", "heroVideo"]
+        variants:
+          - { name: "Default", description: "Centered eyebrow + headline + subhead + dual CTAs above hero image/video. Conventional above-the-fold." }
+          - { name: "SplitImage", description: "Two-column: text left, hero image/video right. Higher engagement for known-account ABM (split feels more personal)." }
+          - { name: "Minimal", description: "Text-only hero, no media. Use for retargeting where the visitor has already seen the product." }
+
+      - id: landing-features
+        name: "LandingFeatures"
+        category: "landing"
+        filePath: "src/components/uiim/landing/LandingFeatures.tsx"
+        routeFieldsUsed: ["feature1IconName", "feature1Title", "feature1Description", "feature2IconName", "feature2Title", "feature2Description", "feature3IconName", "feature3Title", "feature3Description"]
+        variants:
+          - { name: "Default", description: "3-up card grid. Icon + title + description per card. Responsive: 3 cols desktop, 1 col mobile." }
+
+      - id: landing-stats
+        name: "LandingStats"
+        category: "landing"
+        filePath: "src/components/uiim/landing/LandingStats.tsx"
+        routeFieldsUsed: ["stat1Number", "stat1Label", "stat2Number", "stat2Label", "stat3Number", "stat3Label"]
+        variants:
+          - { name: "Default", description: "3-up stat tiles. Large number + label below. Responsive: 3 cols desktop, stacked mobile." }
+
+      - id: landing-social-proof
+        name: "LandingSocialProof"
+        category: "landing"
+        filePath: "src/components/uiim/landing/LandingSocialProof.tsx"
+        routeFieldsUsed: ["testimonialQuote", "testimonialAuthorName", "testimonialAuthorTitle", "testimonialAuthorImage", "partnerLogosImage"]
+        variants:
+          - { name: "Default", description: "Testimonial card (quote + author block) above the partner logo strip image. Logo strip hidden when partnerLogosImage is empty (unless editing)." }
+
+      - id: landing-faq
+        name: "LandingFAQ"
+        category: "landing"
+        filePath: "src/components/uiim/landing/LandingFAQ.tsx"
+        routeFieldsUsed: ["faq1Question", "faq1Answer", "faq2Question", "faq2Answer", "faq3Question", "faq3Answer", "faq4Question", "faq4Answer", "faq5Question", "faq5Answer"]
+        variants:
+          - { name: "Default", description: "shadcn Accordion, 5 items, all collapsed by default. Empty Q/A pairs hidden in non-editing mode." }
+
+      - id: landing-final-cta
+        name: "LandingFinalCTA"
+        category: "landing"
+        filePath: "src/components/uiim/landing/LandingFinalCTA.tsx"
+        routeFieldsUsed: ["finalCtaHeadline", "finalCtaSubhead", "finalCtaButton"]
+        variants:
+          - { name: "Default", description: "Centered headline + subhead + single button on a contrast background band. Full-width." }
+
+    partialDesign:
+      name: "Landing Page Layout"
+      placeholder: "headless-main"
+      components: ["LandingHero", "LandingFeatures", "LandingStats", "LandingSocialProof", "LandingFAQ", "LandingFinalCTA"]
+
+    contentTree:
+      parentPage:
+        name: "lp"
+        path: "/Home/lp"
+        template: "base-page-template"
+        insertOptions: ["Landing Page"]
+        note: "Short prefix '/lp/' chosen for ABM URL brevity. Landing page URLs render as /lp/<slug>."
+
+    # v1 standard values defaults — Claude-drafted (Path β). Marked for review before first
+    # ABM campaign goes live. Override per-campaign in the actual page item, not the SVs.
+    standardValuesDefaults:
+      heroEyebrow: "For DevOps leaders"
+      heroHeadline: "Deploy 70% faster with zero downtime"
+      heroSubhead: "Stop firefighting releases. Ship to production in minutes with automated rollback and instant health checks."
+      heroPrimaryCta: { text: "Request a demo", href: "/demo" }
+      heroSecondaryCta: { text: "Watch the 2-min tour", href: "/tour" }
+      feature1IconName: "Zap"
+      feature1Title: "Ship in seconds"
+      feature1Description: "Push code at lunch, see it live before coffee. Sub-30-second deploys across every environment."
+      feature2IconName: "ShieldCheck"
+      feature2Title: "Roll back instantly"
+      feature2Description: "One click reverses any deploy. Automated health checks catch regressions before users do."
+      feature3IconName: "BarChart3"
+      feature3Title: "See every release"
+      feature3Description: "Real-time deploy health and rollout dashboards across every service and environment."
+      stat1Number: "70%"
+      stat1Label: "Faster deploys"
+      stat2Number: "10x"
+      stat2Label: "Less downtime"
+      stat3Number: "99.99%"
+      stat3Label: "Uptime SLA"
+      testimonialQuote: "We cut our release cycle from 2 weeks to 2 hours. Game changer for our team."
+      testimonialAuthorName: "Sarah Chen"
+      testimonialAuthorTitle: "VP of Engineering, Northwind"
+      faq1Question: "How long does setup take?"
+      faq1Answer: "Most teams are running in under 30 minutes. Our setup wizard handles infrastructure configuration automatically."
+      faq2Question: "Will this work with our existing CI/CD?"
+      faq2Answer: "Yes. We integrate with Jenkins, GitHub Actions, GitLab CI, CircleCI, and Argo natively."
+      faq3Question: "What about security and compliance?"
+      faq3Answer: "SOC 2 Type II, ISO 27001, and HIPAA compliant. SSO, audit logs, and field-level encryption are included on every plan."
+      faq4Question: "Can we self-host?"
+      faq4Answer: "Yes. Fully managed cloud, dedicated cloud, and on-prem deployments are all supported."
+      faq5Question: "How does pricing work?"
+      faq5Answer: "Per-engineer monthly with volume discounts above 50 seats. No deploy or environment limits."
+      finalCtaHeadline: "Ready to ship faster?"
+      finalCtaSubhead: "Join 2,000+ engineering teams shipping with confidence every day."
+      finalCtaButton: { text: "Start free 14-day trial", href: "/signup" }
+
+    agentNotes:
+      naming: "Verbose semantic, position-indexed. Agents map brief sentence → field name via name match."
+      fieldTypes: "SLT for short prose, Rich Text for paragraphs, General Link for CTAs, Image for visuals, SLT (lucide name) for icons."
+      noControlBooleans: "Visibility derives from emptiness. No showSecondaryCta or hideTestimonial flags."
+      variantSelection: "Layout choice is a Variant Definition picker, not a template field."
+      personalizationReady: "Every field individually personalizable via Sitecore Personalize. ABM = same template, different field values per audience."

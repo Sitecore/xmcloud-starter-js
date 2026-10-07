@@ -1,0 +1,60 @@
+.parallax-banner {
+  padding: 0 !important;
+
+  .parallax-banner-inner {
+    min-height: 80vh;
+  }
+
+  .parallax-banner-foreground {
+    background-position: bottom center !important;
+  }
+
+  .parallax-banner-background {
+    /* stylelint-disable */
+    mask-image: radial-gradient(ellipse, rgba(255, 255, 255, 0.7) 10%, rgba(255, 255, 255, 1) 100%);
+    /* stylelint-enable */
+  }
+
+  .parallax-banner-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-inner {
+      max-width: 50%;
+
+      @include respond-to(mobile-large) {
+        max-width: 80%;
+      }
+    }
+  }
+
+  &:not(.edit-mode) {
+    .parallax-banner-foreground {
+      pointer-events: none;
+    }
+  }
+
+  &.edit-mode {
+    .parallax-banner-background,
+    .parallax-banner-foreground {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .parallax-banner-foreground {
+      height: 80%;
+      top: 20%;
+      object-position: bottom center;
+    }
+
+    .parallax-banner-content {
+      z-index: 2;
+    }
+  }
+}

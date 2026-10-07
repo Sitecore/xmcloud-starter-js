@@ -1,0 +1,61 @@
+.comparison {
+  max-width: fit-content;
+  background-color: var(--bg-main);
+  border-radius: var(--roundness);
+  box-shadow: 0 3px 6px #00000029;
+  padding: 2rem 5rem;
+
+  &.full-width {
+    max-width: 100%;
+  }
+
+  &.simple {
+    background-color: unset;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-colored);
+    text-align: center;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .value {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+
+      .amount {
+        color: var(--text-body);
+      }
+
+      .currency {
+        color: var(--text-colored);
+      }
+    }
+
+    .subtitle {
+      max-width: 160px;
+      font-size: 18px;
+      color: var(--text-body);
+      opacity: 0.9;
+      text-align: center;
+    }
+  }
+
+  .operator {
+    font-size: 122px;
+    line-height: 1;
+    font-weight: lighter;
+    color: var(--text-colored);
+    padding: 0 1.5rem;
+  }
+}

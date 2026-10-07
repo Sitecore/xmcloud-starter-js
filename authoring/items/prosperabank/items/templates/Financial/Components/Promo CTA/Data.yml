@@ -1,0 +1,13 @@
+﻿---
+ID: "0799ce0d-c5c5-49df-a3e1-93cfb71e95b9"
+Parent: "c0943942-ae0f-4205-86fa-84884cce4a53"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Promo CTA/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3fdb308c-6abc-4b05-92fd-853ba49ebb98"

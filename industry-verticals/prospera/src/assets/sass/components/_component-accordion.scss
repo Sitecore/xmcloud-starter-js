@@ -1,0 +1,84 @@
+.accordion {
+  @include respond-to(mobile-large) {
+    padding: 0 $size-padding;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+
+    h3 {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+
+    .icon-wrapper,
+    .button-icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 100%;
+      background-color: var(--bg-saturated);
+    }
+
+    .icon-wrapper {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 2.25rem;
+
+      @include respond-to(mobile-large) {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.5rem;
+      }
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+
+        @include respond-to(mobile-large) {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+
+    .button-icon-wrapper {
+      margin-left: auto;
+      width: 2rem;
+      height: 2rem;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+        color: #fff;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    &.expanded {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .accordion-group:first-child button {
+    border-top: 1px solid var(--border-color);
+  }
+
+  .content-wrapper {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+
+    @include respond-to(mobile-large) {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}

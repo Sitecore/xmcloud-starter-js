@@ -1,0 +1,149 @@
+.site-financial .loan-calculator {
+  --range-slider-color-active: #034c81;
+  --range-slider-color-inactive: #929292;
+  --calc-bg-main: var(--bg-main);
+  --calc-bg-box: var(--bg-body);
+
+  .dark & {
+    --range-slider-color-active: #031827;
+    --range-slider-color-inactive: #707070;
+  }
+
+  &.colored {
+    --range-slider-color-active: #034c81;
+    --range-slider-color-inactive: #929292;
+    --calc-bg-main: var(--bg-body);
+    --calc-bg-box: var(--bg-main-alt);
+
+    .dark & {
+      --range-slider-color-active: #fff;
+      --range-slider-color-inactive: #707070;
+      --calc-bg-main: var(--bg-saturated);
+    }
+  }
+}
+
+.loan-calculator {
+  &-input-group {
+    margin-bottom: 2rem;
+
+    label {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  input[type='range'] {
+    width: 100%;
+    appearance: none;
+    height: 3px;
+    background-color: var(--range-slider-color-inactive);
+    border-radius: var(--roundness);
+    background-image: linear-gradient(
+      var(--range-slider-color-active),
+      var(--range-slider-color-active)
+    );
+    background-repeat: no-repeat;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background: var(--range-slider-color-active);
+      cursor: pointer;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 24" fill="%23fff" ><path d="M13.479,20.178L5.531,12.04L13.446,3.899L10.582,1L0,12.042L10.602,23L13.479,20.178ZM16.52,3.832L24.489,12L16.574,20.131L19.418,23L30,11.958L19.398,1L16.52,3.832Z" /></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &::-webkit-slider-runnable-track {
+      appearance: none;
+      box-shadow: none;
+      border: none;
+      background: transparent;
+    }
+  }
+
+  &-input-wrapper {
+    position: relative;
+    padding: 0.25rem 1rem;
+    background-color: var(--calc-bg-box);
+    border-radius: calc(var(--roundness) * 2);
+
+    svg {
+      position: absolute;
+      z-index: 1;
+    }
+
+    input {
+      position: relative;
+      color: inherit;
+      appearance: none;
+      border: none;
+      background-color: unset;
+      text-align: center;
+      margin-right: 0.5rem;
+      padding-left: 1rem;
+      width: 5rem;
+      z-index: 2;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        appearance: none;
+        margin: 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &-range-wrapper {
+    min-height: 40px;
+    margin-top: 10px;
+  }
+
+  &-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25rem;
+    background-color: var(--calc-bg-box);
+    border-radius: var(--roundness);
+    padding: 2rem 1rem 1rem;
+    clip-path: polygon(
+      0 0,
+      calc(50% - 20px) 0,
+      50% 20px,
+      calc(50% + 20px) 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+
+    > .row {
+      align-self: stretch;
+    }
+
+    .fw-bold {
+      font-size: 1.5rem;
+    }
+  }
+
+  &-monthly-payment {
+    padding: 0.25rem 1.25rem;
+    margin: 1rem 0 0.75rem;
+    border-radius: calc(var(--roundness) * 2);
+    background-color: var(--calc-bg-main);
+  }
+
+  .dark & {
+    &.colored {
+      ::-webkit-slider-thumb {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 24" fill="%23034c81" ><path d="M13.479,20.178L5.531,12.04L13.446,3.899L10.582,1L0,12.042L10.602,23L13.479,20.178ZM16.52,3.832L24.489,12L16.574,20.131L19.418,23L30,11.958L19.398,1L16.52,3.832Z" /></svg>');
+      }
+    }
+  }
+}

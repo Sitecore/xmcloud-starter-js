@@ -1,0 +1,20 @@
+﻿---
+ID: "7f3a1598-c7af-4962-b3e9-4a2fa9ba6156"
+Parent: "886787bc-afe2-43a0-bc26-38178f98ad34"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/Financial/header-left"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "header-left"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "65b652b0-74e7-4bef-a4b3-1304a82a5925"

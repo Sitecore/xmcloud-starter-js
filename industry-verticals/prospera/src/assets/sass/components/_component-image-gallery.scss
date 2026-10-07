@@ -1,0 +1,65 @@
+.image-gallery {
+  @include respond-to(mobile-large) {
+    padding-left: $size-padding;
+    padding-right: $size-padding;
+  }
+
+  > .container {
+    position: relative;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+
+    @include respond-to(mobile-large) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  &-item {
+    aspect-ratio: 1/1;
+    border-radius: var(--roundness);
+    overflow: hidden;
+
+    &:first-child {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.with-dotted-accents {
+    .dotted-accent {
+      position: absolute;
+      z-index: 1;
+
+      @include respond-to(mobile-large) {
+        display: none;
+      }
+
+      &-top {
+        top: -4.5rem;
+        left: -4.5rem;
+      }
+
+      &-bottom {
+        bottom: -4.5rem;
+        left: -4.5rem;
+      }
+    }
+  }
+
+  &:not(.with-dotted-accents) {
+    .dotted-accent {
+      display: none;
+    }
+  }
+}

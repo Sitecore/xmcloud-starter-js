@@ -1,0 +1,19 @@
+﻿---
+ID: "f9afb71c-1042-4090-8d7a-10d0765952de"
+Parent: "139c4cac-d954-45cf-bb38-6000cefa64d4"
+Template: "139c4cac-d954-45cf-bb38-6000cefa64d4"
+Path: /sitecore/templates/Project/Financial/Partial Design Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {139C4CAC-D954-45CF-BB38-6000CEFA64D4}
+    {FD2059FD-6043-4DFE-8C04-E2437CE87634}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5449890b-e2f8-4ea9-a7eb-4558f9dfa32b"

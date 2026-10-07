@@ -1,0 +1,22 @@
+﻿---
+ID: "0a1963db-4325-4b54-a75f-3127f9c44bfd"
+Parent: "cad49c2a-bd85-44fd-852a-10c1a1c8fd72"
+Template: "cad49c2a-bd85-44fd-852a-10c1a1c8fd72"
+Path: /sitecore/templates/Project/Financial/Components/Quote/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "484bfdc6-2cca-4dcf-841d-d511e647db36"
+    - ID: "93414330-5cd6-467d-b28f-a39b14a40a89"
+      Hint: AuthorPosition
+      Value: CMO at Rightside Digital
+    - ID: "a386d33d-fd48-47b5-94c6-1db67b44a93c"
+      Hint: Quote
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - ID: "a6fe216e-7eb0-4e8b-9ab9-355b3ffbf8c1"
+      Hint: AuthorName
+      Value: Alison Rogers

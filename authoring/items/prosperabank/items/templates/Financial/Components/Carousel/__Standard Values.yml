@@ -1,0 +1,17 @@
+﻿---
+ID: "8398da8d-aa09-4850-814a-6250801afa2c"
+Parent: "c7b8468f-4290-400f-93bb-d46c5f8db126"
+Template: "c7b8468f-4290-400f-93bb-d46c5f8db126"
+Path: /sitecore/templates/Project/Financial/Components/Carousel/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{54DB209D-CD0F-49D9-AE4E-ECB65D72CC4D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "baae2535-3c3a-4b49-aca2-f1fceda76658"

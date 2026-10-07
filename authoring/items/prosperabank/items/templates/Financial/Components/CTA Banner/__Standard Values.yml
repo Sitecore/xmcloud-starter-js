@@ -1,0 +1,38 @@
+﻿---
+ID: "41a2d94b-8111-48d9-960d-10d4d7ab1067"
+Parent: "4900d7e5-61b0-483a-a9d6-69419d4d5982"
+Template: "4900d7e5-61b0-483a-a9d6-69419d4d5982"
+Path: /sitecore/templates/Project/Financial/Components/CTA Banner/__Standard Values
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "34c7ca9b-6c24-4133-bd83-b453b838eb0b"
+      Hint: Link
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "6f94c5b4-e2b4-41eb-899f-9a29904b8e18"
+      Hint: Image
+      Value: |
+        <image mediaid="{4A120536-025E-42C8-8F24-8412246D7C26}" />
+    - ID: "72b19acc-d575-4ae4-a0cf-2182e0c64562"
+      Hint: Eyebrow
+      Value: suscipit lectus
+    - ID: "7f7e12e1-0768-4edd-b86b-ea9db84d71b5"
+      Hint: Icon
+      Value: |
+        <image mediaid="{23592312-2C5F-49EE-8517-2D9DF508280B}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "29a4c99d-59b6-4dae-9195-aca91b5fb15f"
+    - ID: "b03c10d8-11a2-48ca-9822-3640768ed2b7"
+      Hint: Text
+      Value: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    - ID: "e62af488-48ce-4ae4-a2bb-37ad346981a4"
+      Hint: Title
+      Value: Lorem ipsum dolor sit amet

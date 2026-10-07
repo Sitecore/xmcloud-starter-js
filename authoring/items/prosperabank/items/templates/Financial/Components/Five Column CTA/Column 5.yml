@@ -1,0 +1,17 @@
+﻿---
+ID: "8293577b-8979-4a90-b5e1-b84113efe561"
+Parent: "3b41d9fc-0edf-48e1-966c-e260339ba815"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Five Column CTA/Column 5
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a83633ad-4e4d-4b64-a187-1cabe00ec87c"

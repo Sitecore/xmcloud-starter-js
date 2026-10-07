@@ -1,0 +1,45 @@
+﻿---
+ID: "384d1b81-bee0-495d-b240-40f26273ebfd"
+Parent: "1812bf3e-6bdd-466d-99b2-0d7cebb020fc"
+Template: "1812bf3e-6bdd-466d-99b2-0d7cebb020fc"
+Path: /sitecore/templates/Project/Financial/Components/Two Column CTA/__Standard Values
+SharedFields:
+- ID: "168fed07-0f41-44f5-a14e-f134e16b1477"
+  Hint: Image1
+  Value: |
+    <image mediaid="{A4CE3822-1BFC-4876-9353-0D43914FDDC9}" alt="two-col-cta-1" height="" width="" hspace="" vspace="" />
+- ID: "41c85ac6-5f19-48ac-9dfb-e81d5f1450f6"
+  Hint: Image2
+  Value: |
+    <image mediaid="{F64C8C16-8C71-44E1-A658-B3070574B89E}" alt="two-col-cta-2" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "301fab64-5268-445d-8380-6b43861bb434"
+      Hint: Link1
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "4e43fdc3-7a40-469c-a93a-231545ee01e9"
+      Hint: Title1
+      Value: Lorem ipsum dolor
+    - ID: "53845417-9058-4342-90a9-50783ffd8c25"
+      Hint: Link2
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "56a3b6a6-bd8b-4d2e-a86d-f791169ebe7b"
+      Hint: Title2
+      Value: Lorem ipsum dolor
+    - ID: "5eacc805-137b-41d5-a43c-67d981abf6f9"
+      Hint: Text1
+      Value: Lorem ipsum dolor sit amet consectetur adipiscing elit.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b41d5ce9-e98d-4652-b555-eaea650cb333"
+    - ID: "eeb59bf3-72d2-4e49-9a37-3902b7a236a9"
+      Hint: Text2
+      Value: Lorem ipsum dolor sit amet consectetur adipiscing elit.

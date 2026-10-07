@@ -1,0 +1,43 @@
+﻿---
+ID: "a189b217-82d9-4d5d-b415-5a7ba9a4acb6"
+Parent: "6c9392f9-7c16-44e9-b198-6ebe5a47067d"
+Template: "c71d8566-35c8-49b7-a84d-9d176e9cbd05"
+Path: /sitecore/content/Financial/ProsperaFinancial/Settings/Sitemap
+SharedFields:
+- ID: "674a7926-436f-4882-add1-0f92ea860c19"
+  Hint: Include xdefault
+  Value: 0
+- ID: "7f070bc5-5cd4-474f-aa2f-ab2a0a128f00"
+  Hint: GenerateSitemapMediaItems
+  Value: 
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "be9c8243-20c1-47ac-95a5-db64f0bbe50c"
+- ID: "eb78b584-b22e-47cd-88da-e80d6dbb9238"
+  Hint: Generate Alternate Links
+  Value: 0
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{39E85A50-1AC7-4A65-A7F5-C726259BEC26}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251031T232727Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2991c715-e10a-4916-8237-4791ec570e46"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251031T232727Z

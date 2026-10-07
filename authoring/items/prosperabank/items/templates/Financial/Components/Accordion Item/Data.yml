@@ -1,0 +1,20 @@
+﻿---
+ID: "55f3c5ce-d541-4650-98c6-07bbc668b51e"
+Parent: "02fc3e8b-a97f-4a7a-844b-3047e24432a0"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Accordion Item/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e8584dcd-cb37-46eb-b6db-4a8e56b87e46"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "37c259bc-1aaf-4fd3-a4f3-0376ef7090cc"

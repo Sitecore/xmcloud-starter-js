@@ -1,0 +1,13 @@
+﻿---
+ID: "8237a426-6c6a-4564-ab35-a6066a050f2e"
+Parent: "e80b2eb2-f3c4-4c86-b76c-041808116d0e"
+Template: "8fe7f8dc-cb5d-42c2-99f8-76608c243f10"
+Path: /sitecore/content/Financial/ProsperaFinancial/Data/Promos/Two Column CTA
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "57cffbd1-db83-404f-b7fc-e83400082461"

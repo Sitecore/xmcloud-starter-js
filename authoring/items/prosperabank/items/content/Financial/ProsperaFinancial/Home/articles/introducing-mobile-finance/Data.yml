@@ -1,0 +1,13 @@
+﻿---
+ID: "c7490873-703e-4c5c-b44b-e7492ca03066"
+Parent: "bc031618-4a29-40c4-b18c-4da61dbd6c53"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/articles/introducing-mobile-finance/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8a28d097-1b08-4781-81f4-3b97de965b93"

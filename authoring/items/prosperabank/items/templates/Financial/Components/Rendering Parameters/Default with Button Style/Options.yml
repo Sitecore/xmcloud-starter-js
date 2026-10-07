@@ -1,0 +1,13 @@
+﻿---
+ID: "154ef870-3ae7-41cd-aeec-377f09f7a225"
+Parent: "a94d823b-94ad-4a04-8238-3a5fd72c0e7c"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Default with Button Style/Options
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "36deed0c-7b7f-4d10-afaa-c1ce975a36be"

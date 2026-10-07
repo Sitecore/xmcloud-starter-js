@@ -1,0 +1,34 @@
+@import 'src/assets/sass/abstracts/mixins';
+
+$size-padding: 0.75rem;
+
+.container-wrapper {
+  width: 100%;
+}
+
+.component {
+  position: relative;
+  padding: 0 $size-padding;
+
+  @include respond-to(mobile-large) {
+    padding: 0;
+  }
+}
+
+.container {
+  padding: 0;
+
+  &.fullwidth-container {
+    max-width: unset;
+  }
+
+  .component-content {
+    @include clearfix;
+  }
+}
+
+#content > .container-wrapper > .container-default > .component-content > .row > div.component {
+  @include respond-to(mobile-large) {
+    padding: 0 $size-padding;
+  }
+}

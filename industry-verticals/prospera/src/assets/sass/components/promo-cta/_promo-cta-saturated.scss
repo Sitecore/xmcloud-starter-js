@@ -1,0 +1,14 @@
+.promo-cta.saturated {
+  background-color: var(--bg-color);
+
+  .dark & {
+    .button-main {
+      background-color: var(--text-body);
+      color: var(--bg-body);
+
+      &:hover {
+        filter: brightness(85%);
+      }
+    }
+  }
+}

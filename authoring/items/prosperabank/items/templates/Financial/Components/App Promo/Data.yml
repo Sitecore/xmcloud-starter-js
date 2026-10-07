@@ -1,0 +1,13 @@
+﻿---
+ID: "271aba20-28bc-4e98-bf38-6c591a5e0328"
+Parent: "bbcccd48-218c-4f19-a1d4-bb3dbf1f4d89"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/App Promo/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2057e225-5db4-4b6d-b0b6-c78f6c137b56"

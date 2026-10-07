@@ -1,0 +1,52 @@
+﻿---
+ID: "49985546-7afe-45f5-902b-a49779effa07"
+Parent: "eec66907-3559-4fa4-9c4e-a34911fa65e1"
+Template: "309eb383-99b6-4722-9fab-58d8ae802d72"
+Path: "/sitecore/media library/Project/Financial/ProsperaFinancial/Home page/Carousels/Default/finance-default-carousel-image"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/499855467AFE45F5902BA49779EFFA07.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 192
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "49985546-7afe-45f5-902b-a49779effa07"
+  Value: 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
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 1884
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/webp
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: webp
+- ID: "cb09946f-3218-4823-87d2-d5007c199a96"
+  Hint: Dimensions
+  Value: 192 x 108
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 108
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T215337Z
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: Default video thumbnail
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bbd196c4-f50d-4b91-a712-0d09acd07081"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\bTfF99UyBRBxXgXQUev3m9NCncHiuQHi
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T215337Z

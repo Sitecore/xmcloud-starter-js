@@ -1,0 +1,50 @@
+﻿---
+ID: "36e283c1-b294-4083-9131-cb021db8b49c"
+Parent: "e6379828-bae3-4d2d-94d7-762a6397b9dc"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/personal/Data/Questions 1/Question 2
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{1B3E2AF0-8A50-401D-B32C-5F3C293EFBCE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dc74dc9f-a021-4da9-ac55-b815c63708e9"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "What types of accounts do you offer, and which one is best suited for my financial goals?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: "We offer a variety of accounts tailored to different financial needs, including savings accounts, checking accounts, money market accounts, and more. The best account for you depends on factors such as your short-term and long-term financial goals, your spending habits, and your preferences for accessibility and interest rates. Our team can help you find the account that aligns with your objectives."
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a74f796e-85ad-4694-b653-770afef4448f"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Quels types de comptes offrez-vous, et lequel est le mieux adapté à mes objectifs financiers ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Nous offrons une variété de comptes adaptés à différents besoins financiers, y compris des comptes d'épargne, des comptes courants, des comptes sur le marché monétaire, et plus encore. Le meilleur compte pour vous dépend de facteurs tels que vos objectifs financiers à court et à long terme, vos habitudes de dépense, et vos préférences en matière d'accessibilité et de taux d'intérêt. Notre équipe peut vous aider à trouver le compte qui correspond à vos objectifs.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b67ca871-fd1a-4ca2-9a88-fe12f1b665c8"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: どのような種類の口座があり、どれが私の財務目標に最も適していますか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 当行では、普通預金口座、当座預金口座、マネーマーケット口座など、さまざまな金融ニーズに合わせた口座をご用意しています。 お客様に最適な口座は、短期的・長期的な財務目標、支出の習慣、利用しやすさや金利の好みなどの要素によって異なります。 お客様の目的に合った口座を見つけるお手伝いをいたします。

@@ -1,0 +1,43 @@
+.language-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+  white-space: nowrap;
+
+  .selected-language {
+    margin-right: 0;
+  }
+
+  .chevron-icon {
+    flex-shrink: 0;
+    position: static;
+    top: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .language-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 0;
+    background-color: var(--bg-footer);
+    border-radius: var(--roundness);
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+    z-index: 50;
+  }
+
+  &.expanded {
+    .chevron-icon {
+      transform: rotate(180deg);
+    }
+  }
+}

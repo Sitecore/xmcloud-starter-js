@@ -1,0 +1,59 @@
+﻿---
+ID: "39fbacd5-3f54-4128-9169-4b8329246a1b"
+Parent: "148d07ba-f923-4fb2-8907-0bd440d5db44"
+Template: "148d07ba-f923-4fb2-8907-0bd440d5db44"
+Path: /sitecore/templates/Project/Financial/Components/Three Column CTA/__Standard Values
+SharedFields:
+- ID: "39b3d592-0895-4f30-9c17-454b171f0b2e"
+  Hint: Image3
+  Value: |
+    <image mediaid="{CF40EE41-9D96-4764-9DCF-77684EE004AF}" alt="Woman looking at laptop" height="" width="" hspace="" vspace="" />
+- ID: "39fe4fb3-3794-4b9a-a584-ff877e93e33b"
+  Hint: Image2
+  Value: |
+    <image mediaid="{D3A0CC0B-EAAE-4A88-AD26-E5DC28DCDEBF}" alt="People in a meeting room with two people shaking hands" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "c511247c-fec1-4690-81d6-ce791da18d4a"
+  Hint: Image1
+  Value: |
+    <image mediaid="{A6E1E406-694C-41DB-8F9B-AE69C32CA47E}" alt="Woman smiling in front of an ATM" height="" width="" hspace="" vspace="" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0a10d09c-166b-464e-99cb-4401b527f3f2"
+      Hint: Link2
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "2731b4d6-b866-466a-9731-5161788d662b"
+      Hint: SubText2
+      Value: Lorem ipsum dolor sit amet consectetur adipiscing elit.
+    - ID: "277e3acc-b359-4c11-88b9-4016574419dc"
+      Hint: Link3
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "34f6d379-9a96-4cb8-839f-0d224a4f6db1"
+      Hint: Text2
+      Value: Lorem ipsum dolor
+    - ID: "4c50be2f-021e-4846-abb0-50feb2df5eed"
+      Hint: SubText1
+      Value: Lorem ipsum dolor sit amet consectetur adipiscing elit.
+    - ID: "5264d7eb-64cd-4203-98e5-a4d0380f57e6"
+      Hint: Text1
+      Value: Lorem ipsum dolor
+    - ID: "5eb6058f-3f45-4dd4-8153-8c74390859f4"
+      Hint: Text3
+      Value: Lorem ipsum dolor
+    - ID: "63e1abec-67cb-4aea-ab72-8b5b60b69473"
+      Hint: Link1
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "21577105-1b5b-4730-ae19-d8ed820f17f4"
+    - ID: "a3a36b2d-a20b-4344-9f1d-ad867cb99aa4"
+      Hint: SubText3
+      Value: Lorem ipsum dolor sit amet consectetur adipiscing elit.

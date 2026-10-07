@@ -1,0 +1,17 @@
+﻿---
+ID: "a0283539-8671-41be-87bd-65e3397f2028"
+Parent: "aad350f5-9331-4d71-a942-e3643653c028"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Pages/Author Page/Socials
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c26cd273-9587-4fd7-b72b-11ec9a2911fe"

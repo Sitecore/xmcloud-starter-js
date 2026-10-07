@@ -1,0 +1,21 @@
+﻿---
+ID: "e6379828-bae3-4d2d-94d7-762a6397b9dc"
+Parent: "3064b748-c9ff-49c9-84f4-b97c856f794a"
+Template: "fae81bf9-1117-4f97-9133-00e752f41772"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/personal/Data/Questions 1
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C018CF92-1701-4C31-B9BB-A6B245852225}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "44b8036f-5afa-480d-9568-b0d466422b8b"

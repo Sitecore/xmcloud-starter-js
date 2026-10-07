@@ -1,0 +1,61 @@
+﻿---
+ID: "554305e5-c5fd-40a0-8c33-bb2f75d5f505"
+Parent: "54df39b5-4d04-492e-9e2c-de961c914209"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/personal/borrowing/credit-cards/Data/Rich Text"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Understanding which credit card are right for you</h2>
+        <p>When it comes to managing your finances, having a credit card can be a valuable tool for convenience, security, and building credit. Understanding how credit cards work and the various features they offer is essential for making informed decisions about your financial well-being.</p>
+        <p>At its core, a credit card is a revolving line of credit that allows you to borrow money from a financial institution to make purchases, with the promise of repaying the borrowed amount at a later date. Unlike debit cards, which draw funds directly from your bank account, credit cards provide you with a temporary loan that must be paid back according to the terms of your agreement with the card issuer.</p>
+        <p>One of the key benefits of using a credit card is the ability to build and improve your credit score. By making timely payments and keeping your credit utilization low, you can demonstrate responsible borrowing behavior to credit reporting agencies, which can positively impact your creditworthiness over time. A higher credit score can lead to better loan terms, lower interest rates, and access to more favorable financial products in the future.</p>
+        <h2>Responsible credit card habits</h2>
+        <p>It's important to use credit cards responsibly and avoid falling into debt. Carrying a balance from month to month can result in hefty interest charges, potentially negating any rewards or benefits you may receive from using the card. Creating a budget, paying your balance in full each month, and only charging what you can afford are crucial steps to maintaining healthy financial habits and maximizing the benefits of your credit card.</p>
+        <p>With a wide array of credit cards available on the market, it's essential to compare your options carefully and choose a card that aligns with your spending habits, financial goals, and lifestyle preferences. Whether you're interested in earning cashback rewards, travel perks, or building credit, there's a credit card out there to suit your needs. Take the time to research and explore your options, and remember to read the fine print to fully understand the terms and conditions associated with each card.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2aa1ee0b-7491-4cec-ab1c-f7eeae9f73f7"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Comprendre quelle carte de crédit vous convient</h2>
+        <p>En matière de gestion de vos finances, avoir une carte de crédit peut être un outil précieux pour la commodité, la sécurité et la constitution de crédit. Comprendre comment fonctionnent les cartes de crédit et les différentes fonctionnalités qu'elles offrent est essentiel pour prendre des décisions éclairées sur votre bien-être financier.</p>
+        <p>Au cœur de son fonctionnement, une carte de crédit est une ligne de crédit renouvelable qui vous permet d'emprunter de l'argent auprès d'une institution financière pour effectuer des achats, avec la promesse de rembourser le montant emprunté à une date ultérieure. Contrairement aux cartes de débit, qui prélèvent des fonds directement sur votre compte bancaire, les cartes de crédit vous offrent un prêt temporaire qui doit être remboursé selon les termes de votre accord avec l'émetteur de la carte.</p>
+        <p>L'un des principaux avantages de l'utilisation d'une carte de crédit est la possibilité de construire et d'améliorer votre cote de crédit. En effectuant des paiements ponctuels et en maintenant une faible utilisation du crédit, vous pouvez démontrer un comportement d'emprunt responsable aux agences de crédit, ce qui peut avoir un impact positif sur votre solvabilité au fil du temps. Une cote de crédit plus élevée peut conduire à de meilleures conditions de prêt, des taux d'intérêt plus bas et un accès à des produits financiers plus favorables à l'avenir.</p>
+        <h2>Habitudes responsables en matière de cartes de crédit</h2>
+        <p>Il est important d'utiliser les cartes de crédit de manière responsable et d'éviter de s'endetter. Porter un solde d'un mois à l'autre peut entraîner des frais d'intérêt élevés, annulant potentiellement les récompenses ou les avantages que vous pourriez recevoir en utilisant la carte. Créer un budget, payer votre solde en entier chaque mois et ne charger que ce que vous pouvez vous permettre sont des étapes cruciales pour maintenir des habitudes financières saines et maximiser les avantages de votre carte de crédit.</p>
+        <p>Avec une large gamme de cartes de crédit disponibles sur le marché, il est essentiel de comparer vos options avec soin et de choisir une carte qui correspond à vos habitudes de dépenses, vos objectifs financiers et vos préférences de style de vie. Que vous souhaitiez gagner des récompenses en cashback, des avantages de voyage ou construire votre crédit, il y a une carte de crédit qui répond à vos besoins. Prenez le temps de rechercher et d'explorer vos options, et n'oubliez pas de lire les petits caractères pour bien comprendre les termes et conditions associés à chaque carte.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3c5bdf93-801e-4b2d-92b6-aad09985d4dc"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>どのクレジットカードが自分に合っているかを理解する</h2>
+        <p>家計を管理する上で、クレジットカードを持つことは、利便性、安全性、そして信用を築くための貴重なツールとなる。 クレジットカードがどのように機能し、どのような特徴があるのかを理解することは、経済的な豊かさについて十分な情報を得た上で決断するために不可欠です。</p>
+        <p>クレジットカードの核心は、金融機関からお金を借りて買い物をすることができ、後日、借りた金額を返済することを約束するリボルビング枠です。 あなたの銀行口座から直接資金を引き出すデビットカードとは異なり、クレジットカードは、カード発行会社との契約条件に従って返済しなければならない一時的な融資を提供します。</p>
+        <p>クレジットカードを利用する主なメリットの一つは、クレジット・スコアを構築し、向上させることができることです。 適時に支払いを行い、クレジット利用率を低く抑えることで、信用調査機関に責任ある借入行動を示すことができ、長期的に信用力にプラスの影響を与えることができます。 クレジット・スコアが高ければ、将来、より良いローン条件、より低い金利、より有利な金融商品へのアクセスが可能になります。</p>
+        <h2>責任あるクレジットカード習慣</h2>
+        <p>クレジットカードは責任を持って使い、借金に陥らないようにすることが大切です。 毎月残高を持ち越すと、多額の利息を請求され、カードの利用で得られる特典や恩恵が無効になる可能性があります。 予算を立て、毎月残高を全額支払い、余裕のある金額だけを請求することが、健全な金融習慣を維持し、クレジットカードのメリットを最大限に生かすための重要なステップです。</p>
+        <p>多種多様なクレジットカードが市場に出回っているため、選択肢を慎重に比較し、自分の消費習慣、経済的目標、ライフスタイルの好みに合ったカードを選ぶことが重要です。 キャッシュバック特典を得たい、旅行特典を得たい、信用を築きたいなど、あなたのニーズに合ったクレジットカードがあるはずだ。 時間をかけてリサーチし、選択肢を探し、各カードに関連する条件を完全に理解するために細かい活字を読むことを忘れないでください。</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "01e50577-8520-4e1e-92da-ceba0c6266b7"

@@ -1,0 +1,20 @@
+﻿---
+ID: "e8fdd1e3-4636-4459-8228-bb39f8c3041d"
+Parent: "60fe154b-e0bc-4fa8-b87c-55ab54015a49"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Pages/Project Page/Content
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dc586796-339a-4e37-8248-8e02997e9b95"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b621bf4c-1a21-4a52-93ac-25718557ee69"

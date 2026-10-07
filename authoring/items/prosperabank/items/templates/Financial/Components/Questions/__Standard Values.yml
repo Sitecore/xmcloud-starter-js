@@ -1,0 +1,20 @@
+﻿---
+ID: "310d2ea5-b590-4f90-b2cf-908349dd8e38"
+Parent: "fae81bf9-1117-4f97-9133-00e752f41772"
+Template: "fae81bf9-1117-4f97-9133-00e752f41772"
+Path: /sitecore/templates/Project/Financial/Components/Questions/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{2DC7A13E-6753-47EF-805A-1CDE39012EEC}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f0a618f7-9c93-46dd-abba-751d1a8221ad"

@@ -1,0 +1,13 @@
+﻿---
+ID: "a5bcf7e8-8469-4a59-bfbb-fcecc2cff2a4"
+Parent: "4f54253c-bbeb-430a-8428-11eb11df1e09"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Project List/Options
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f4b8b5e5-942a-4e9f-90da-43522cb68026"

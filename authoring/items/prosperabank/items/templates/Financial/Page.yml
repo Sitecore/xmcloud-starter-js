@@ -1,0 +1,28 @@
+﻿---
+ID: "4ad644a8-7cdb-4574-8df1-d01c3bb7b624"
+Parent: "8b77b250-9318-47a8-9b33-6d35b27f5897"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Financial/Page
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/document_text.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {47151711-26CA-434E-8132-D3E0B7D26683}
+    {371D5FBB-5498-4D94-AB2B-E3B70EEBE78C}
+    {4414A1F9-826A-4647-8DF4-ED6A95E64C43}
+    {F39A594A-7BC9-4DB0-BAA1-88543409C1F9}
+    {6650FB34-7EA1-4245-A919-5CC0F002A6D7}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{4AFB1065-D0DF-4F48-848F-D3B046D8A054}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1a2bd49d-fffb-4a29-a1f2-53664b63756c"

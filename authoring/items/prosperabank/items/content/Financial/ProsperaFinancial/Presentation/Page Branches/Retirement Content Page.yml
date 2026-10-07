@@ -1,0 +1,37 @@
+﻿---
+ID: "049d8697-b9a8-4c5f-b746-3d9b07dcef2a"
+Parent: "18a4ed12-adbe-462b-ae96-6f46e99bb7b5"
+Template: "fbc802e5-4b9e-480f-93da-3f2a80cae5cb"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Page Branches/Retirement Content Page
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "bb3391dd-f8be-4b2e-ae9f-47bb63c166ce"
+  Hint: Rule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{8C8DE469-540C-4410-B109-583B8951B468}">
+        <conditions>
+          <condition
+            id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}"
+            uid="2DEC1D095877488B92952D70064537E4"
+            itemid="{524F5CD2-4FB9-437D-B733-CF5861B8CED3}" />
+        </conditions>
+        <actions>
+          <action
+            id="{D46EC8E5-7B46-47DE-B44A-4C5C30EF48D1}"
+            uid="5756E57FF81043F28781CB0228669C48"
+            PageBranchId="{F4216084-AE14-4CBB-ADF1-22292083F63C}" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "916c19ce-e563-43e8-8db6-5d7a8b55a757"

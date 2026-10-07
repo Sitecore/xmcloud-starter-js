@@ -1,0 +1,36 @@
+﻿---
+ID: "2c8db814-943a-444a-abae-2e5f697dc8d3"
+Parent: "6d166c16-d4cc-4ba9-b1e1-fe6378916533"
+Template: "6d166c16-d4cc-4ba9-b1e1-fe6378916533"
+Path: /sitecore/templates/Project/Financial/Components/Contact Form/__Standard Values
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "045048cb-2ac6-4433-b659-12b8081b399c"
+      Hint: EmailLabel
+      Value: Name
+    - ID: "11224208-126d-401b-8078-60f06bc6de27"
+      Hint: Title
+      Value: Get in touch
+    - ID: "3d50e5fe-4db1-4e42-b6de-c6da940aa44d"
+      Hint: SubjectLabel
+      Value: Subject
+    - ID: "49ca97c4-25a0-4f09-a979-13146898f32e"
+      Hint: MessageLabel
+      Value: Message
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "efb5c6e8-b914-41d2-909d-ed716fad8de9"
+    - ID: "c0d914c0-cff5-4ba8-9edd-632e4c269c65"
+      Hint: ButtonLabel
+      Value: Submit now
+    - ID: "e02dc97a-475d-44ce-9619-cac2e8cb7365"
+      Hint: BackgroundImage
+      Value: |
+        <image mediaid="{001E150C-8C21-444B-8919-6127D58193EB}" />

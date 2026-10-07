@@ -1,0 +1,24 @@
+﻿---
+ID: "1fb854c6-9c57-40f7-a440-6da1356b9046"
+Parent: "312d7889-330c-49e6-9a8b-6c97a06268e0"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/about-us/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ac113221-c86c-4832-b031-e36389e31c7e"
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: データ
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ca41cfe7-dd80-429e-b883-f5b15b4a9e88"

@@ -1,0 +1,110 @@
+﻿---
+ID: "d9f03e12-a5bb-4d3f-9d45-d512e9afe343"
+Parent: "947db8f8-dc76-453f-aca1-a27babfe633b"
+Template: "947db8f8-dc76-453f-aca1-a27babfe633b"
+Path: /sitecore/templates/Project/Financial/Components/Footer/__Standard Values
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "edf38721-e3f4-4a5f-b94b-44b9749ef0fb"
+  Hint: Image1
+  Value: |
+    <image mediaid="{A5957956-20A2-4FCC-B203-388D7C696FA7}" alt="P logo" height="" width="" hspace="" vspace="" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24fe8274-d95f-439f-9aeb-6c240759ab6b"
+      Hint: Text1
+      Value: |
+        <p>
+        <a href="#our-story">Our Story</a>
+        </p>
+        <p>
+        <a href="#careers">Careers</a></p>
+        <p>
+        <a href="#benefits">Benefits &amp; services</a></p>
+        <p>
+        <a href="#rewards">Rewards</a></p>
+        <p>
+        <a href="#special-offers">Special Offers</a></p>
+    - ID: "33526cb5-70d7-401e-bb5c-fdd6c2c974c2"
+      Hint: SocialIcon2
+      Value: |
+        <image mediaid="{B5E0C7F5-5693-4875-B68F-70B99E7F34EF}" />
+    - ID: "342fb66b-0e4b-419d-ba86-2355e33ee1bf"
+      Hint: Title1
+      Value: "Why PLAY! finance"
+    - ID: "4770eb87-8856-4251-b831-6c8522c39da1"
+      Hint: Copyright
+      Value: Copyright © Sitecore
+    - ID: "4bf70960-7097-4f87-a67a-8a7e87d1cd01"
+      Hint: Text4
+      Value: |
+        <p>
+              <a href="#contact-us">Contact Us</a>
+            </p>
+        <p> <a href="#faq">Help &amp; FAQs</a></p>
+        <p> <a href="#security-center">Security center</a></p>
+    - ID: "63ec28c9-bceb-4180-ba86-5a6b3c975d52"
+      Hint: Link1
+      Value: |
+        <link text="Privacy Policy" linktype="anchor" url="privacy-policy" anchor="privacy-policy" title="Privacy Policy" class="" />
+    - ID: "798d70ab-9044-4c10-8792-8879857b22ac"
+      Hint: Link2
+      Value: |
+        <link text="Term of Use" linktype="anchor" url="terms-of-use" anchor="terms-of-use" title="Term of Use" class="" />
+    - ID: "7ce64d4f-9943-4db3-92f2-882703a73e83"
+      Hint: SocialLink2
+      Value: |
+        <link text="Instagram" linktype="external" url="https://instagram.com/" anchor="" target="" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7ef666f6-92d0-4681-8d7f-af32d8501c3c"
+    - ID: "92612ddf-b3fd-4597-a655-de6da2eb553f"
+      Hint: Text3
+      Value: |
+        <p>
+              <a href="#personal-banking">Personal Banking</a>
+            </p>
+        <p> <a href="#credit-cards">Credit Cards</a></p>
+        <p> <a href="#mortgage">Mortgage</a></p>
+        <p> <a href="#home-equity">Home Equity</a></p>
+        <p> <a href="#lending">Lending</a></p>
+    - ID: "940de628-0ffa-4d7b-8ffb-187fe90c760a"
+      Hint: SocialIcon3
+      Value: |
+        <image mediaid="{D7668912-4C04-4881-8C8B-3EEDBC4277A6}" />
+    - ID: "9b41e129-1410-48d0-832e-d812d38fc892"
+      Hint: SocialLink3
+      Value: |
+        <link text="Twitter" linktype="external" url="https://www.x.com/" anchor="" target="" />
+    - ID: "9bab16e3-3b9d-425e-8adc-06c0838f7706"
+      Hint: SocialsTitle
+      Value: Share on
+    - ID: "af34efbc-ee7c-4106-8772-c851c58b7b56"
+      Hint: SocialLink1
+      Value: |
+        <link text="Facebook" linktype="external" url="https://www.facebook.com/" anchor="" target="" />
+    - ID: "ca370d33-63e1-4e1b-986d-fe82ae23027c"
+      Hint: Text2
+      Value: |
+        <p>
+              <a href="#business-accounts">Small Business Accounts</a>
+            </p>
+        <p><a href="#commercial-accounts">Commercial Accounts</a></p>
+    - ID: "dcf0b02e-fa59-48c0-bc92-5bce6ddfde18"
+      Hint: SocialIcon1
+      Value: |
+        <image mediaid="{37E8F17D-5AA1-4AF4-9CB1-45C4F07BDD4C}" />
+    - ID: "e71e7e6c-29a7-4a9a-a7f8-a4e29609cb64"
+      Hint: Title2
+      Value: Business Banking
+    - ID: "ee146d7d-5c17-47f9-acf4-1583573db084"
+      Hint: Title3
+      Value: Rates
+    - ID: "f17614b2-487a-472c-a509-3e56df0930d4"
+      Hint: Title4
+      Value: Help & Support

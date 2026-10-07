@@ -1,0 +1,45 @@
+﻿---
+ID: "dbf24105-6c86-4689-accd-7f92c582f9fb"
+Parent: "1df23e4f-432f-4aff-863b-4d1d7e3925fd"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/get-a-loan/Data/Questions 1/Question 3"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de5ad136-ca0c-4d70-87bd-004c1ffda47e"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "What are the eligibility requirements for obtaining a loan?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: "Eligibility requirements may vary depending on the type of loan you're interested in. Generally, factors such as credit score, income, employment status, and debt-to-income ratio are considered. Specific eligibility criteria will be outlined during the application process."
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "839d41ae-5e9c-40e5-bf7b-0ba3ca13466b"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Quelles sont les conditions d'éligibilité pour obtenir un prêt ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Les conditions d'éligibilité peuvent varier en fonction du type de prêt qui vous intéresse. En général, des facteurs tels que le score de crédit, les revenus, la situation professionnelle et le ratio d'endettement sont pris en compte. Les critères d'éligibilité spécifiques seront détaillés au cours du processus de demande.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a7b81b5b-6e70-445e-a26c-8f761d01147a"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: 融資を受けるための資格要件は何ですか？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 資格要件は、あなたが興味を持っているローンの種類によって異なる場合があります。 一般的には、クレジット・スコア、収入、雇用形態、負債比率などの要素が考慮されます。 具体的な資格基準は、申請手続きの際に説明されます。

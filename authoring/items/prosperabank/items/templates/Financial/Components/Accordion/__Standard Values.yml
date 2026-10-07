@@ -1,0 +1,27 @@
+﻿---
+ID: "ce76611b-133e-48b3-86d0-627b177d4a0d"
+Parent: "9bc52f2f-feed-47dc-88ec-1946fa308af0"
+Template: "9bc52f2f-feed-47dc-88ec-1946fa308af0"
+Path: /sitecore/templates/Project/Financial/Components/Accordion/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{02FC3E8B-A97F-4A7A-844B-3047E24432A0}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "40fe06d3-f333-4316-88a6-ec522b0a75fc"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f0a618f7-9c93-46dd-abba-751d1a8221ad"

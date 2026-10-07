@@ -1,0 +1,144 @@
+﻿---
+ID: "1cece0c1-837c-4c8b-8755-c979583218a3"
+Parent: "8237a426-6c6a-4564-ab35-a6066a050f2e"
+Template: "1812bf3e-6bdd-466d-99b2-0d7cebb020fc"
+Path: /sitecore/content/Financial/ProsperaFinancial/Data/Promos/Two Column CTA/Two Column CTA 1
+SharedFields:
+- ID: "168fed07-0f41-44f5-a14e-f134e16b1477"
+  Hint: Image1
+  Value: |
+    <image mediaid="{A4CE3822-1BFC-4876-9353-0D43914FDDC9}" alt="Woman fanning cash in front of her face" height="" width="" hspace="" vspace="" />
+- ID: "41c85ac6-5f19-48ac-9dfb-e81d5f1450f6"
+  Hint: Image2
+  Value: |
+    <image mediaid="{F64C8C16-8C71-44E1-A658-B3070574B89E}" alt="Alarm clock surrounded by stacks of coins" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1600
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165636Z
+    - ID: "301fab64-5268-445d-8380-6b43861bb434"
+      Hint: Link1
+      Value: |
+        <link class="" id="d26af0f1-5e54-41f0-b026-c96d4d2beea3" querystring="" anchor="" target="" title="" linktype="internal" text="Get a loan" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "4e43fdc3-7a40-469c-a93a-231545ee01e9"
+      Hint: Title1
+      Value: Check out our loan calculator
+    - ID: "53845417-9058-4342-90a9-50783ffd8c25"
+      Hint: Link2
+      Value: |
+        <link class="" id="d26af0f1-5e54-41f0-b026-c96d4d2beea3" querystring="" anchor="" target="" title="" linktype="internal" text="Get a loan" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "56a3b6a6-bd8b-4d2e-a86d-f791169ebe7b"
+      Hint: Title2
+      Value: Flexible payment options and timeframe
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "5eacc805-137b-41d5-a43c-67d981abf6f9"
+      Hint: Text1
+      Value: "See all the details with our self-service loan calculator."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6f5245cc-8e78-4077-9406-77461a761b63"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165659Z
+    - ID: "eeb59bf3-72d2-4e49-9a37-3902b7a236a9"
+      Hint: Text2
+      Value: Find a loan duration that works for you with our loan calculator. 
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165636Z
+    - ID: "301fab64-5268-445d-8380-6b43861bb434"
+      Hint: Link1
+      Value: |
+        <link class="" id="d26af0f1-5e54-41f0-b026-c96d4d2beea3" querystring="" anchor="" target="" title="" linktype="internal" text="Obtenez un prêt" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "4e43fdc3-7a40-469c-a93a-231545ee01e9"
+      Hint: Title1
+      Value: Découvrez notre calculatrice de prêt
+    - ID: "53845417-9058-4342-90a9-50783ffd8c25"
+      Hint: Link2
+      Value: |
+        <link class="" id="d26af0f1-5e54-41f0-b026-c96d4d2beea3" querystring="" anchor="" target="" title="" linktype="internal" text="Obtenez un prêt" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "56a3b6a6-bd8b-4d2e-a86d-f791169ebe7b"
+      Hint: Title2
+      Value: Options de paiement et échéancier flexibles
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "5eacc805-137b-41d5-a43c-67d981abf6f9"
+      Hint: Text1
+      Value: "Découvrez tous les détails avec notre calculatrice de prêt en libre-service."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b32e4e50-755a-4901-8192-196cff463701"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165659Z
+    - ID: "eeb59bf3-72d2-4e49-9a37-3902b7a236a9"
+      Hint: Text2
+      Value: Trouvez une durée de prêt qui vous convient avec notre calculatrice de prêt.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165636Z
+    - ID: "301fab64-5268-445d-8380-6b43861bb434"
+      Hint: Link1
+      Value: |
+        <link class="" querystring="" id="{D26AF0F1-5E54-41F0-B026-C96D4D2BEEA3}" anchor="" target="|Custom" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "4e43fdc3-7a40-469c-a93a-231545ee01e9"
+      Hint: Title1
+      Value: ローン計算機をチェック
+    - ID: "53845417-9058-4342-90a9-50783ffd8c25"
+      Hint: Link2
+      Value: |
+        <link class="" querystring="" id="{D26AF0F1-5E54-41F0-B026-C96D4D2BEEA3}" anchor="" target="" title="" linktype="internal" text="" url="/Financial/ProsperaBank/Home/get-a-loan" />
+    - ID: "56a3b6a6-bd8b-4d2e-a86d-f791169ebe7b"
+      Hint: Title2
+      Value: 柔軟な支払い方法と期間
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "5eacc805-137b-41d5-a43c-67d981abf6f9"
+      Hint: Text1
+      Value: セルフサービスのローン計算機で詳細をご確認ください。
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0e473acc-3274-478e-b451-a013e6ed4a11"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165659Z
+    - ID: "eeb59bf3-72d2-4e49-9a37-3902b7a236a9"
+      Hint: Text2
+      Value: ローン計算機で自分に合ったローン期間を見つけよう。

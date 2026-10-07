@@ -1,0 +1,20 @@
+﻿---
+ID: "a0b44399-b72a-4401-a668-236632815160"
+Parent: "4f54253c-bbeb-430a-8428-11eb11df1e09"
+Template: "4f54253c-bbeb-430a-8428-11eb11df1e09"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Project List/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "43b7b15f-18fe-4b9c-9f62-e876febd7690"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "151f10ab-b32e-4814-9b74-e7dd79bf48b1"

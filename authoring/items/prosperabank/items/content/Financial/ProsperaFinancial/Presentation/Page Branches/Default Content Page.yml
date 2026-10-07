@@ -1,0 +1,91 @@
+﻿---
+ID: "8c5008a7-e5fb-42fe-8d18-7c191e6bc510"
+Parent: "18a4ed12-adbe-462b-ae96-6f46e99bb7b5"
+Template: "fbc802e5-4b9e-480f-93da-3f2a80cae5cb"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Page Branches/Default Content Page
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "bb3391dd-f8be-4b2e-ae9f-47bb63c166ce"
+  Hint: Rule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{8C8DE469-540C-4410-B109-583B8951B468}">
+        <conditions>
+          <and
+            uid="F5CEC1E956A1482C90CA6ED0B7A33622">
+            <condition
+              id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}"
+              uid="2DEC1D095877488B92952D70064537E4"
+              itemid="{B2A38FB8-2E85-4D58-AFE5-C12BECCBEE3A}" />
+            <and
+              uid="391E23DE4F9640119366D39536A697D9">
+              <condition
+                id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}"
+                uid="1A54C42B142C478197BD59BD2F74F038"
+                except="true"
+                itemid="{406FD98C-50E4-4F30-90E4-6245498A2D10}" />
+              <and
+                uid="492C9A417DA0486283034F6AFB0970C2">
+                <condition
+                  id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}"
+                  uid="5E0B6418E58A400EAC85B8A58F5423CD"
+                  except="true"
+                  itemid="{AF81673A-E745-40B2-8EA7-34E0589693A7}" />
+                <and
+                  uid="FBE8FAE465074812932B210ED5437846">
+                  <condition
+                    id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}"
+                    uid="241C42921F804BDF9E7373544A79E9FB"
+                    except="true"
+                    itemid="{524F5CD2-4FB9-437D-B733-CF5861B8CED3}" />
+                  <and
+                    uid="C8B8E46987DB4410967CC564F850B38B">
+                    <condition
+                      id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}"
+                      uid="F4E576622445425E954ED733A3E407AB"
+                      except="true"
+                      itemid="{0B45C71D-61AE-44F3-9F7D-6C88185F0B15}" />
+                    <condition
+                      id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}"
+                      uid="96B170E9A8424F21A2EE397E6B597E9E"
+                      except="true"
+                      itemid="{8C2D6765-91BE-4BD8-A0B3-4F81256E75A6}" />
+                  </and>
+                </and>
+              </and>
+            </and>
+          </and>
+        </conditions>
+        <actions>
+          <action
+            id="{D46EC8E5-7B46-47DE-B44A-4C5C30EF48D1}"
+            uid="5756E57FF81043F28781CB0228669C48"
+            PageBranchId="{5914DAB5-7831-494E-AC68-B9E3A207A42F}" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6f902cce-3957-418e-9d08-6bc4571eee35"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "afee6d65-3126-46ca-a5e2-aa0bd0b7bb36"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dcf0c103-9a86-42bd-8317-90c732726264"

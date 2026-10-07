@@ -1,0 +1,144 @@
+﻿---
+ID: "4f1019eb-b316-4736-b4bc-cf88dcb80929"
+Parent: "7c636d37-263c-4134-8f97-1fa3124285fd"
+Template: "1812bf3e-6bdd-466d-99b2-0d7cebb020fc"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/personal/borrowing/Data/Two Column CTA 1
+SharedFields:
+- ID: "168fed07-0f41-44f5-a14e-f134e16b1477"
+  Hint: Image1
+  Value: |
+    <image mediaid="0a676ec0-8e42-4060-ab50-40bad4accc00" alt="Credit card on top of cash" height="" width="" hspace="" vspace="" />
+- ID: "41c85ac6-5f19-48ac-9dfb-e81d5f1450f6"
+  Hint: Image2
+  Value: |
+    <image mediaid="5820ac50-1c11-4113-9155-4242a548f623" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "-100"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165631Z
+    - ID: "301fab64-5268-445d-8380-6b43861bb434"
+      Hint: Link1
+      Value: |
+        <link class="" querystring="" id="{D0E2F5F1-E984-4DDD-9A32-BE0D90674E6C}" anchor="" target="" title="" linktype="internal" text="Sign up today" url="/Financial/ProsperaBank/Home/personal/borrowing/credit-cards" />
+    - ID: "4e43fdc3-7a40-469c-a93a-231545ee01e9"
+      Hint: Title1
+      Value: Credit cards
+    - ID: "53845417-9058-4342-90a9-50783ffd8c25"
+      Hint: Link2
+      Value: |
+        <link class="" querystring="" id="{C63FF335-ABDA-42B1-83FD-18E67881FAAA}" anchor="" target="" title="" linktype="internal" text="Apply now" url="/Financial/ProsperaBank/Home/personal/borrowing/line-of-credit" />
+    - ID: "56a3b6a6-bd8b-4d2e-a86d-f791169ebe7b"
+      Hint: Title2
+      Value: Line of credit
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "5eacc805-137b-41d5-a43c-67d981abf6f9"
+      Hint: Text1
+      Value: Unlock a world of possibilities today with our premium credit card offerings.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2d5e157f-6439-457f-8325-034b1b7c5ff1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165654Z
+    - ID: "eeb59bf3-72d2-4e49-9a37-3902b7a236a9"
+      Hint: Text2
+      Value: Gain access to funds whenever you need them with our versatile personal line of credit.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165631Z
+    - ID: "301fab64-5268-445d-8380-6b43861bb434"
+      Hint: Link1
+      Value: |
+        <link class="" querystring="" id="{D0E2F5F1-E984-4DDD-9A32-BE0D90674E6C}" anchor="" target="" title="" linktype="internal" text="Abonnez-vous" url="/Financial/ProsperaBank/Home/personal/borrowing/credit-cards" />
+    - ID: "4e43fdc3-7a40-469c-a93a-231545ee01e9"
+      Hint: Title1
+      Value: Cartes de crédit
+    - ID: "53845417-9058-4342-90a9-50783ffd8c25"
+      Hint: Link2
+      Value: |
+        <link class="" querystring="" id="{C63FF335-ABDA-42B1-83FD-18E67881FAAA}" anchor="" target="" title="" linktype="internal" text="Faites votre demande" url="/Financial/ProsperaBank/Home/personal/borrowing/line-of-credit" />
+    - ID: "56a3b6a6-bd8b-4d2e-a86d-f791169ebe7b"
+      Hint: Title2
+      Value: Ligne de crédit
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "5eacc805-137b-41d5-a43c-67d981abf6f9"
+      Hint: Text1
+      Value: Débloquez un monde de possibilités dès aujourd'hui avec nos offres de cartes de crédit premium.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fbb6eba6-860c-47c1-9cdc-101b5b14d09e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165654Z
+    - ID: "eeb59bf3-72d2-4e49-9a37-3902b7a236a9"
+      Hint: Text2
+      Value: Accédez à des fonds quand vous en avez besoin avec notre ligne de crédit personnelle polyvalente.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251030T165631Z
+    - ID: "301fab64-5268-445d-8380-6b43861bb434"
+      Hint: Link1
+      Value: |
+        <link class="" querystring="" id="{D0E2F5F1-E984-4DDD-9A32-BE0D90674E6C}" anchor="" target="" title="" linktype="internal" text="今すぐ登録" url="/Financial/ProsperaBank/Home/personal/borrowing/credit-cards" />
+    - ID: "4e43fdc3-7a40-469c-a93a-231545ee01e9"
+      Hint: Title1
+      Value: クレジットカード
+    - ID: "53845417-9058-4342-90a9-50783ffd8c25"
+      Hint: Link2
+      Value: |
+        <link class="" querystring="" id="{C63FF335-ABDA-42B1-83FD-18E67881FAAA}" anchor="" target="" title="" linktype="internal" text="今すぐ申し込む" url="/Financial/ProsperaBank/Home/personal/borrowing/line-of-credit" />
+    - ID: "56a3b6a6-bd8b-4d2e-a86d-f791169ebe7b"
+      Hint: Title2
+      Value: 信用枠
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "5eacc805-137b-41d5-a43c-67d981abf6f9"
+      Hint: Text1
+      Value: プレミアム・クレジットカードで、今すぐ可能性の扉を開きましょう。
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5f89c943-8496-48dd-a15d-be984ba98deb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251030T165654Z
+    - ID: "eeb59bf3-72d2-4e49-9a37-3902b7a236a9"
+      Hint: Text2
+      Value: 多目的にご利用いただける個人向け融資枠で、必要なときにいつでも資金をご利用いただけます。

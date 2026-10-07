@@ -1,0 +1,20 @@
+﻿---
+ID: "af34efbc-ee7c-4106-8772-c851c58b7b56"
+Parent: "8311239c-5dbc-486e-b2aa-ff44138ff776"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Footer/Socials/SocialLink1
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: General Link
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "943d9d0b-8426-4de2-a593-bdb11c4598a3"

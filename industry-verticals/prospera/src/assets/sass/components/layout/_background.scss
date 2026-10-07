@@ -1,0 +1,31 @@
+@import 'src/assets/sass/abstracts/vars';
+@import 'src/assets/sass/abstracts/mixins';
+
+%cover-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cover-background {
+  > .component-content {
+    @extend %cover-bg;
+  }
+}
+
+.fix-background {
+  > .component-content {
+    @extend %cover-bg;
+    @include fixed-bg(left top);
+  }
+}
+
+.parallax-background {
+  > .component-content {
+    @extend %cover-bg;
+    @include fixed-bg(50% 0);
+
+    @include respond-to(mobile-large) {
+      background-attachment: scroll;
+    }
+  }
+}

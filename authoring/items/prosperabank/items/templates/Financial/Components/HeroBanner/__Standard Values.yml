@@ -1,0 +1,56 @@
+﻿---
+ID: "f2ac3691-36ab-44bf-aa17-e2c1b20d6c1f"
+Parent: "0089bcb3-0117-43f2-a760-0771d5ff7417"
+Template: "0089bcb3-0117-43f2-a760-0771d5ff7417"
+Path: /sitecore/templates/Project/Financial/Components/HeroBanner/__Standard Values
+SharedFields:
+- ID: "5a8416e1-a058-47d2-96df-69d2a08e69fc"
+  Hint: Image
+  Value: |
+    <image mediaid="{DC65B8CF-63A5-424E-A739-3B6345F75F92}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e25a144-5899-4c7e-b0b8-d7209cd76d27"
+      Hint: Text
+      Value: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    - ID: "27b909fd-63d0-4f13-b449-fa185536d493"
+      Hint: Tagline
+      Value: Dolor amet
+    - ID: "5485235d-569d-44d5-aa06-7df61f596638"
+      Hint: Cta1
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "5c3d6a49-c5e9-4caa-809d-98184f118223"
+      Hint: Icon
+      Value: |
+        <image mediaid="{03F22709-A426-4DF2-8B93-C27C3FA48D43}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "19aeb62f-4068-4e20-968b-0aa13b0bfb0b"
+    - ID: "dcd33f8a-fed4-4740-8729-e11d3c5eee64"
+      Hint: Cta2
+      Value: |
+        <link linktype="external" url="https://example.com" />
+    - ID: "e91adc46-b038-4092-bc72-afd5ec708db5"
+      Hint: Title
+      Value: Lorem ipsum dolor sit amet
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e25a144-5899-4c7e-b0b8-d7209cd76d27"
+      Hint: Text
+      Value: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    - ID: "5485235d-569d-44d5-aa06-7df61f596638"
+      Hint: Cta1
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "098585dd-31d0-4f64-aed2-9deaef046038"
+    - ID: "e91adc46-b038-4092-bc72-afd5ec708db5"
+      Hint: Title
+      Value: Lorem ipsum dolor sit amet

@@ -1,0 +1,79 @@
+@import 'src/assets/sass/abstracts/vars';
+
+.header {
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @include respond-to(mobile-large) {
+    padding: 1.5rem $size-padding;
+  }
+
+  .rich-text,
+  .navigation {
+    padding: 0 !important;
+  }
+}
+
+// PLAY! finance specific styles
+.site-financial .header {
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    text-align: left;
+
+    @media (width < 1200px) {
+      flex-direction: column;
+    }
+
+    @include respond-to(mobile-large) {
+      flex-direction: row;
+    }
+
+    .play {
+      display: flex;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #255be3;
+
+      svg {
+        width: 1rem;
+      }
+
+      .dark & {
+        color: #fff;
+      }
+    }
+
+    .finance {
+      color: var(--bg-accent);
+      font-weight: 300;
+    }
+  }
+}
+
+// PLAY! services specific styles
+.site-services .header {
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    svg {
+      width: 2.5rem;
+      margin-right: 1rem;
+    }
+
+    .services {
+      color: var(--text-accent);
+      font-weight: normal;
+    }
+  }
+}

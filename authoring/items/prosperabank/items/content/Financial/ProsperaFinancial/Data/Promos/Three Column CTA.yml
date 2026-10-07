@@ -1,0 +1,13 @@
+﻿---
+ID: "03d1b052-3ec9-4196-abbe-45ef8863b50d"
+Parent: "e80b2eb2-f3c4-4c86-b76c-041808116d0e"
+Template: "8fe7f8dc-cb5d-42c2-99f8-76608c243f10"
+Path: /sitecore/content/Financial/ProsperaFinancial/Data/Promos/Three Column CTA
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0956570b-d85c-4225-9071-907beaf0975a"

@@ -1,0 +1,80 @@
+﻿---
+ID: "e3cc065a-be56-4795-9702-4ae503fb39a7"
+Parent: "aad350f5-9331-4d71-a942-e3643653c028"
+Template: "aad350f5-9331-4d71-a942-e3643653c028"
+Path: /sitecore/templates/Project/Financial/Pages/Author Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {1226C3C7-2D1F-48F5-87B4-C1DA459F05E5}
+    {F83CCEFD-FC41-4A60-9882-8F7EA5CF41A8}
+    {14431DCE-508D-4D54-9D04-C22ABBDC8F83}
+- ID: "2404bb97-b42a-439a-be76-de66213cb281"
+  Hint: BackgroundImage
+  Value: |
+    <image mediaid="{DC65B8CF-63A5-424E-A739-3B6345F75F92}" />
+- ID: "6be59cd8-74bd-4c67-b611-e81e140679b4"
+  Hint: Photo
+  Value: |
+    <image mediaid="{62F6A36E-BFB0-432D-8502-B8E7E9F1E90A}" alt="Olly Bio Image" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{E9B6C600-C6E8-4867-BCB7-8B0DC5F19840}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "229e3024-997c-4fe7-9fcd-bfcc657da145"
+      Hint: SocialIcon3
+      Value: |
+        <image mediaid="{D7668912-4C04-4881-8C8B-3EEDBC4277A6}" />
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: Product Specialist
+    - ID: "612e1483-8de4-4fa8-adc5-1a0663b4788f"
+      Hint: SocialIcon1
+      Value: |
+        <image mediaid="{37E8F17D-5AA1-4AF4-9CB1-45C4F07BDD4C}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2659c20e-3903-4db9-964a-5c1cb15fbb75"
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: $name
+    - ID: "a5c03008-537d-481f-834d-e1e89d12c304"
+      Hint: SocialLink1
+      Value: |
+        <link linktype="external" url="http://www.facebook.com" anchor="" target="" />
+    - ID: "bdbbe5c9-d950-444c-90cd-a00674c10b0b"
+      Hint: SocialLink2
+      Value: |
+        <link linktype="external" url="http://www.instagram.com" anchor="" target="" />
+    - ID: "e2e9b7ce-f57c-4752-99e5-b0d56e3c8864"
+      Hint: SocialIcon2
+      Value: |
+        <image mediaid="{B5E0C7F5-5693-4875-B68F-70B99E7F34EF}" />
+    - ID: "f7c9be6b-b582-453b-a9f9-add8c74ac508"
+      Hint: SocialLink3
+      Value: |
+        <link linktype="external" url="http://www.twitter.com" anchor="" target="" />
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: $name
+    - ID: "524c9c82-80d5-4d65-b7e3-4dd0e365b762"
+      Hint: Position
+      Value: Spécialiste Produit
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "22dc588e-68b4-4aa1-a19f-23a5a6282378"
+    - ID: "996749ca-6a47-463d-a759-7db65676f179"
+      Hint: Name
+      Value: $name

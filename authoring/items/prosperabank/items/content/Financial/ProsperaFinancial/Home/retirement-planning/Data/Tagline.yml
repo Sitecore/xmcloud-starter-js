@@ -1,0 +1,43 @@
+﻿---
+ID: "cd43d357-8908-49ed-bebb-3287979394a9"
+Parent: "643110e7-68af-400c-8538-a2e22974c29e"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/retirement-planning/Data/Tagline"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>A partner in your retirement journey,<em style="color: var(--bg-accent);"> where every transaction counts.</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f6b37d7f-1e77-43a5-8c24-ecd6517b3512"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Un partenaire dans votre parcours de retraite,<em style="color: var(--bg-accent);"> où chaque transaction compte.</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9c6ec360-ee23-4a89-9562-0d1a81948576"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>リタイアメント・ジャーニーのパートナー、<em style="color: var(--bg-accent);"> すべての取引が重要である。</em></h2>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "24308f8f-e9cc-47c8-b663-547d19e41a0a"

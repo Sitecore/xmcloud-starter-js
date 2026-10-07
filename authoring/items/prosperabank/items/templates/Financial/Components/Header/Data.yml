@@ -1,0 +1,13 @@
+﻿---
+ID: "8ed317ef-3e97-450c-bdfc-4665a36dcccf"
+Parent: "0da7aa52-0c24-4721-9b6c-f6d8d9faaaa0"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Header/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "470c4cf6-8454-4735-96d1-82eefeaf4e65"

@@ -1,0 +1,20 @@
+﻿---
+ID: "4c50be2f-021e-4846-abb0-50feb2df5eed"
+Parent: "239a5000-0adc-4f34-b444-f45acde5e927"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Financial/Components/Three Column CTA/Column 1/SubText1
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 150
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1d003778-cf90-4b58-ad03-99b73297f1dd"

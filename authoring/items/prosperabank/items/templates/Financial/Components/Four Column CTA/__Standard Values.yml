@@ -1,0 +1,73 @@
+﻿---
+ID: "f82123c4-81da-4a63-ae34-bdebb81587ed"
+Parent: "1b694ef9-154d-429a-9c3f-d7774cd4a852"
+Template: "1b694ef9-154d-429a-9c3f-d7774cd4a852"
+Path: /sitecore/templates/Project/Financial/Components/Four Column CTA/__Standard Values
+SharedFields:
+- ID: "23f621dd-d403-49df-93f6-391a1757feb3"
+  Hint: Image4
+  Value: |
+    <image mediaid="{EF4C0417-CC75-4483-BA8E-1DBE32DD7487}" alt="four-col-promo-4" height="" width="" hspace="" vspace="" />
+- ID: "84c2cd69-b897-4e4a-a336-66d3222fe1b5"
+  Hint: Image1
+  Value: |
+    <image mediaid="{4986F57F-1293-4B48-86BB-1281B6A31573}" alt="four-col-promo-1" height="" width="" hspace="" vspace="" />
+- ID: "954a7e15-cdad-4e9c-8949-ab0ee63200c6"
+  Hint: Image3
+  Value: |
+    <image mediaid="{A66B93B7-7A89-47A4-A44F-492C4381B75E}" alt="four-col-promo-3" height="" width="" hspace="" vspace="" />
+- ID: "a98fc4bc-b088-4296-aa32-fba35f964ebd"
+  Hint: Image2
+  Value: |
+    <image mediaid="{032B60ED-5AA8-4DA5-A142-C96693C88D17}" alt="four-col-promo-2" height="" width="" hspace="" vspace="" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "07f3e30f-8075-4c1b-912e-e27fffeda904"
+      Hint: Text1
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+    - ID: "256528b0-4d93-44a1-85c9-0cd544091a3f"
+      Hint: Text4
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+    - ID: "34f50b54-e781-493a-85c0-8e9af1969d64"
+      Hint: Title3
+      Value: Lorem ipsum dolor sit amet
+    - ID: "4e62adbe-4082-45fe-9e77-66ef0945fb18"
+      Hint: Title4
+      Value: Lorem ipsum dolor sit amet
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8dbf8cbc-1b39-40c1-b54c-b18d5d5ddae4"
+    - ID: "8f23bb30-a050-47b3-bc66-6ca478213eef"
+      Hint: Text3
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+    - ID: "94e8b735-889e-44f3-a980-c7c8143bae19"
+      Hint: Title2
+      Value: Lorem ipsum dolor sit amet
+    - ID: "b1b9e108-7c50-4a04-8e7a-37f30c6a784c"
+      Hint: Link3
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "b2befdd5-351d-4c5e-85fd-2402e3ff96bf"
+      Hint: Link1
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "ba2af883-e3bb-43cf-8c97-ab5c97edc09d"
+      Hint: Link4
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />
+    - ID: "be5597c5-a55d-4a6a-bf53-7fe1a7bf4bdc"
+      Hint: Title1
+      Value: Lorem ipsum dolor sit amet
+    - ID: "c24d6ca7-49ab-4f08-9dae-e5a844d79139"
+      Hint: Text2
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+    - ID: "df548755-6a31-445f-bb84-c704698d6048"
+      Hint: Link2
+      Value: |
+        <link text="Details" linktype="external" url="https://example.com" anchor="" target="" />

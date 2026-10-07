@@ -1,0 +1,13 @@
+﻿---
+ID: "0820eab1-0e83-405e-8099-98b33b30541d"
+Parent: "f182ba51-dcd6-4782-b66c-faff77ae143d"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Headless Variants/Article List/ThreeColumn
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2ce852bb-7441-4bcc-9a20-4c91bf15f9ca"

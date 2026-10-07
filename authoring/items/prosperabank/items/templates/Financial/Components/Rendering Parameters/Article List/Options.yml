@@ -1,0 +1,13 @@
+﻿---
+ID: "a7f34974-fb1d-4ecf-9feb-c7dfa9fc877e"
+Parent: "175a5b0f-a181-446d-a0ea-4b8f5ee42db2"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Article List/Options
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ba50fe61-ea76-4e94-9a8a-f1ec76d3d22d"

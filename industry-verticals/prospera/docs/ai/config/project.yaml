@@ -1,0 +1,18 @@
+# Sitecore AI project configuration
+# Read by the AI agent at the start of every Sitecore task.
+# Commit this file to the repo. Update it when the project changes.
+#
+# Required fields — agent will ask and create this file if it does not exist.
+
+# XM Cloud site identity
+siteCollection: "main"
+siteName: "main-website"
+
+# Sitecore SDK used by this repo's React components
+sdk: "@sitecore-content-sdk/nextjs"
+
+# Sitecore item root paths
+# Override these only if your project uses a non-standard structure.
+# If omitted, the agent derives them from siteCollection and siteName using defaults.
+renderingsRoot: "/sitecore/layout/Renderings/Project/fmc-custom-demo"
+projectTemplatesRoot: "/sitecore/templates/Project/fmc-custom-demo"

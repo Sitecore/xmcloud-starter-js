@@ -1,0 +1,21 @@
+﻿---
+ID: "4d89565a-2f36-4ecd-bba2-cd0c8cf317c2"
+Parent: "5109a19b-e647-4ef6-9b82-c6d8645fed58"
+Template: "c7b8468f-4290-400f-93bb-d46c5f8db126"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/Data/Carousel - Default"
+BranchID: "ce40209e-3961-4d15-871f-d959ef53797e"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 900
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{CE777CFB-34F8-4D8B-8623-F9D696202E1F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f6b71465-031f-42fd-81ee-617f9c9bb045"

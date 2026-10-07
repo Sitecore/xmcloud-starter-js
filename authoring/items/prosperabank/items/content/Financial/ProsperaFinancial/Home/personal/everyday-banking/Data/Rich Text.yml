@@ -1,0 +1,41 @@
+﻿---
+ID: "111bb8ae-0a16-45f9-a0e7-b5153380978a"
+Parent: "4ff8991d-72fb-4a9c-83f0-6f74f6bd13dc"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/personal/everyday-banking/Data/Rich Text"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Checking accounts</h2><p> Sometimes a one-size-fits-all approach doesn’t fit your unique needs. That’s why, when it comes to personal checking, we love the term "options". You will discover the right option with all the right features to fit your banking needs.  Getting the most out of your money takes smart solutions. In addition to a full range of checking account benefits, you may also qualify to earn monthly interest rewards. </p><h2>Preferred checking</h2><p>Preferred checking comes with all the bells and whistles. Searching for a competitive rate shouldn’t require endless shopping around. As one of our most valued customers, you’ll qualify for it instantly when you open a PLAY! Finance Preferred Checking account. You’ll combine all of the smart features of our regular checking account and enjoy exclusive benefits such as better rates, increased services, and a dedicated account executive. Plus, you can earn a higher interest rate by keeping a higher balance in your account. That’s a win-win relationship you can bank on.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "37b3c389-3ae2-40b4-80de-f7ec164ef1b0"
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Comptes courants</h2><p> Parfois, une approche unique ne correspond pas à vos besoins spécifiques. C'est pourquoi, en matière de compte courant personnel, nous aimons le terme "options". Vous découvrirez l'option qui vous convient avec toutes les fonctionnalités nécessaires pour répondre à vos besoins bancaires. Pour tirer le meilleur parti de votre argent, des solutions intelligentes s'imposent. En plus d'une gamme complète d'avantages de compte courant, vous pouvez également être éligible à des récompenses d'intérêt mensuelles. </p><h2>Compte courant préféré</h2><p>Le compte courant préféré est doté de toutes les cloches et sifflets. Rechercher un taux compétitif ne devrait pas nécessiter des recherches interminables. En tant que l'un de nos clients les plus précieux, vous y serez éligible instantanément lorsque vous ouvrirez un compte courant préféré PLAY! Finance. Vous combinerez toutes les fonctionnalités intelligentes de notre compte courant régulier et bénéficierez d'avantages exclusifs tels que de meilleurs taux, des services accrus et un chargé de compte dédié. De plus, vous pouvez gagner un taux d'intérêt plus élevé en maintenant un solde plus élevé dans votre compte. C'est une relation gagnant-gagnant sur laquelle vous pouvez compter.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e9db6a26-a6b9-4a86-9f4e-d75df1bd41f3"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: "<h2>当座預金</h2><p> 画一的なアプローチでは、お客様それぞれのニーズに合わないこともあります。 だからこそ、個人向け当座預金に関しては、「オプション」という言葉を大切にしています。 お客様のバンキング・ニーズに合った、適切な機能を備えたオプションがきっと見つかります。 お金を最大限に活用するには、賢いソリューションが必要です。 充実した当座預金口座の特典に加え、毎月の金利特典を獲得できる場合もあります。</p><h2>優先チェック</h2><p>プリファード・チェックは、あらゆる特典を備えています。 お得な金利を探すために、何度も買い物をする必要はありません。 PLAY! Financeの大切なお客様のお一人として、PLAY! Financeのプリファード・チェッキング口座を開設していただければ、即座に金利優遇の対象となります！ ファイナンス・プリファード・チェッキング口座を開設すれば、すぐにその資格が得られます。 通常の当座預金口座のスマートな機能をすべて兼ね備え、より良い金利、より充実したサービス、専任のアカウント・エグゼクティブなどの特別な特典をお楽しみいただけます。 さらに、口座の残高を増やすことで、より高い金利を得ることができます。 Win-Winの関係をお約束します。</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1ff09e28-5806-492c-aacd-556fc5accc39"

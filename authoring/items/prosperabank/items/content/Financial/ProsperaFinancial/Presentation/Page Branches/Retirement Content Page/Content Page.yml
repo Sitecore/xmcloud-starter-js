@@ -1,0 +1,17 @@
+﻿---
+ID: "f4216084-ae14-4cbb-adf1-22292083f63c"
+Parent: "049d8697-b9a8-4c5f-b746-3d9b07dcef2a"
+Template: "35e75c72-4985-4e09-88c3-0eac6cd1e64f"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Page Branches/Retirement Content Page/Content Page
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: apps/32x32/logviewer.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "45f5b620-85f2-433f-93c7-547838a6496d"

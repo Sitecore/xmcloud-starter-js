@@ -1,0 +1,71 @@
+{
+  "name": "content-sdk-nextjs-app-router",
+  "description": "Application utilizing Content SDK and Next.js",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Sitecore Corporation",
+    "url": "https://doc.sitecore.com/xmc/en/developers/content-sdk/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitecore/content-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sitecore/content-sdk/issues"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build next:build",
+    "lint": "eslint ./src/**/*.tsx ./src/**/*.ts",
+    "next:build": "next build",
+    "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "next:start": "next start",
+    "sitecore-tools:generate-map": "sitecore-tools project component generate-map",
+    "sitecore-tools:generate-map:watch": "sitecore-tools project component generate-map --watch",
+    "sitecore-tools:build": "sitecore-tools project build",
+    "dev": "cross-env NODE_ENV=development npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build --parallel next:dev sitecore-tools:generate-map:watch",
+    "start": "cross-env-shell NODE_ENV=production npm-run-all --serial build next:start"
+  },
+  "dependencies": {
+    "@sitecore-content-sdk/analytics-core": "^2.1.2",
+    "@sitecore-content-sdk/core": "^2.1.4",
+    "@sitecore-content-sdk/content": "^2.3.0",
+    "@sitecore-content-sdk/events": "^2.1.2",
+    "@sitecore-content-sdk/nextjs": "^2.4.0",
+    "@sitecore-content-sdk/personalize": "2.1.0",
+    "@sitecore-content-sdk/react": "^2.4.0",
+    "@sitecore-content-sdk/search": "0.5.0",
+    "@sitecore-feaas/clientside": "^0.6.0",
+    "@sitecore-search/react": "^3.0.0",
+    "@sitecore-search/ui": "^3.0.0",
+    "@sitecore/components": "^2.1.2",
+    "bootstrap": "^5.3.8",
+    "create-content-sdk-app": "^2.4.0",
+    "font-awesome": "^4.7.0",
+    "lucide-react": "^1.47.0",
+    "next": "^16.2.0",
+    "next-intl": "^4.3.5",
+    "playwright": "^1.62.1",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-scroll-parallax": "^3.4.5",
+    "react-share": "^5.1.0",
+    "sass": "^1.52.3",
+    "sass-alias": "^1.0.5",
+    "swiper": "^11.1.4"
+  },
+  "devDependencies": {
+    "@sitecore-content-sdk/cli": "^2.3.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24.10.4",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.33.0",
+    "eslint-config-next": "16.2.2",
+    "npm-run-all2": "^8.0.4",
+    "tailwindcss": "^4",
+    "typescript": "~5.8.3"
+  }
+}

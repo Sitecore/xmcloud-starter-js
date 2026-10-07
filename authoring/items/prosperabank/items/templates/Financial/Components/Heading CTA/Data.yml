@@ -1,0 +1,13 @@
+﻿---
+ID: "a284d326-c272-4f24-828b-eb37fda943c5"
+Parent: "fa136527-6302-471d-83ab-e66fc72bda99"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Heading CTA/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8cf74200-0224-439b-86a1-a458b08a2804"

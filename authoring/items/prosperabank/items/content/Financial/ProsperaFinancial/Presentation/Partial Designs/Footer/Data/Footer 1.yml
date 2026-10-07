@@ -1,0 +1,167 @@
+﻿---
+ID: "8f85a815-26fe-4985-910e-da5cf14e5eeb"
+Parent: "e9e1dd13-15f8-47fd-8f02-29bb043faf57"
+Template: "947db8f8-dc76-453f-aca1-a27babfe633b"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Partial Designs/Footer/Data/Footer 1
+SharedFields:
+- ID: "edf38721-e3f4-4a5f-b94b-44b9749ef0fb"
+  Hint: Image1
+  Value: |
+    <image mediaid="{1FC53620-6DA2-4341-98FD-4782C564070C}" alt="PLAY! Finance" height="" width="" hspace="" vspace="" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "24fe8274-d95f-439f-9aeb-6c240759ab6b"
+      Hint: Text1
+      Value: |
+        <div class="ck-content"><p><a class="ck-link_selected" href="~/link.aspx?_id=312D7889330C49E69A8B6C97A06268E0&amp;_z=z">About us</a></p><p><a href="~/link.aspx?_id=5D60619D833B44F3AA73CA51FE3A0F3C&amp;_z=z">FAQs</a></p><p><a href="~/link.aspx?_id=38E1734C163E47E3B51FA5EE2AB85BA6&amp;_z=z">Customer support</a></p></div>
+    - ID: "342fb66b-0e4b-419d-ba86-2355e33ee1bf"
+      Hint: Title1
+      Value: "PLAY! Finance"
+    - ID: "4770eb87-8856-4251-b831-6c8522c39da1"
+      Hint: Copyright
+      Value: Copyright © Sitecore
+    - ID: "4bf70960-7097-4f87-a67a-8a7e87d1cd01"
+      Hint: Text4
+      Value: |
+        <p><a href="/?utm_campaign=business">Business campaign</a></p>
+        <p><a href="/?utm_campaign=retirement">Retirement campaign</a></p>
+    - ID: "63ec28c9-bceb-4180-ba86-5a6b3c975d52"
+      Hint: Link1
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com/legal/privacy-policy" target="" text="Privacy Policy" title="" class=""/>
+    - ID: "798d70ab-9044-4c10-8792-8879857b22ac"
+      Hint: Link2
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com/legal" target="" text="Terms of Use" title="" class=""/>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c4799270-339a-4407-89b3-2749e6fb33b3"
+    - ID: "92612ddf-b3fd-4597-a655-de6da2eb553f"
+      Hint: Text3
+      Value: |
+        <p>
+        <a href="~/link.aspx?_id=D26AF0F15E5441F0B026C96D4D2BEEA3&amp;_z=z">Get a loan</a>&nbsp;</p>
+        <p> <a href="~/link.aspx?_id=0B45C71D61AE44F39F7D6C88185F0B15&amp;_z=z">Articles</a></p>
+        <p> <a href="~/link.aspx?_id=8C2D676591BE4BD8A0B34F81256E75A6&amp;_z=z">Authors</a></p>
+    - ID: "ca370d33-63e1-4e1b-986d-fe82ae23027c"
+      Hint: Text2
+      Value: |
+        <p><a href="~/link.aspx?_id=406FD98C50E44F3090E46245498A2D10&amp;_z=z">Personal</a></p>
+        <p><a href="~/link.aspx?_id=AF81673AE74540B28EA734E0589693A7&amp;_z=z">Small business</a></p>
+        <p><a href="~/link.aspx?_id=524F5CD24FB9437DB733CF5861B8CED3&amp;_z=z">Retirement planning</a></p>
+    - ID: "e71e7e6c-29a7-4a9a-a7f8-a4e29609cb64"
+      Hint: Title2
+      Value: Services
+    - ID: "ee146d7d-5c17-47f9-acf4-1583573db084"
+      Hint: Title3
+      Value: Resources
+    - ID: "f17614b2-487a-472c-a509-3e56df0930d4"
+      Hint: Title4
+      Value: Quick links
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24fe8274-d95f-439f-9aeb-6c240759ab6b"
+      Hint: Text1
+      Value: |
+        <div class="ck-content"><p><a class="ck-link_selected" href="~/link.aspx?_id=312D7889330C49E69A8B6C97A06268E0&amp;_z=z">À propos de nous</a></p><p><a href="~/link.aspx?_id=5D60619D833B44F3AA73CA51FE3A0F3C&amp;_z=z">FAQs</a></p><p><a href="~/link.aspx?_id=38E1734C163E47E3B51FA5EE2AB85BA6&amp;_z=z">Service à la clientèle</a></p></div>
+    - ID: "342fb66b-0e4b-419d-ba86-2355e33ee1bf"
+      Hint: Title1
+      Value: "PLAY! financier"
+    - ID: "4bf70960-7097-4f87-a67a-8a7e87d1cd01"
+      Hint: Text4
+      Value: |
+        <p><a href="/?utm_campaign=business">Campagne affaires</a></p>
+        <p><a href="/?utm_campaign=retirement">Campagne retraite</a></p>
+    - ID: "63ec28c9-bceb-4180-ba86-5a6b3c975d52"
+      Hint: Link1
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com/legal/privacy-policy" target="" text="Politique de confidentialité" title="" class=""/>
+    - ID: "798d70ab-9044-4c10-8792-8879857b22ac"
+      Hint: Link2
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com/legal" target="" text="Conditions d'utilisation" title="" class=""/>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4ddf6bc2-3189-43e8-a4a7-fe09611cdba0"
+    - ID: "92612ddf-b3fd-4597-a655-de6da2eb553f"
+      Hint: Text3
+      Value: |
+        <p>
+        <a href="~/link.aspx?_id=D26AF0F15E5441F0B026C96D4D2BEEA3&amp;_z=z">Obtenez un prêt</a>&nbsp;</p>
+        <p> <a href="~/link.aspx?_id=0B45C71D61AE44F39F7D6C88185F0B15&amp;_z=z">Articles</a></p>
+        <p> <a href="~/link.aspx?_id=8C2D676591BE4BD8A0B34F81256E75A6&amp;_z=z">Auteurs</a></p>
+    - ID: "9bab16e3-3b9d-425e-8adc-06c0838f7706"
+      Hint: SocialsTitle
+      Value: Partagez
+    - ID: "ca370d33-63e1-4e1b-986d-fe82ae23027c"
+      Hint: Text2
+      Value: |
+        <p><a href="~/link.aspx?_id=406FD98C50E44F3090E46245498A2D10&amp;_z=z">Personnel</a></p>
+        <p><a href="~/link.aspx?_id=AF81673AE74540B28EA734E0589693A7&amp;_z=z">Petites entreprises</a></p>
+        <p><a href="~/link.aspx?_id=524F5CD24FB9437DB733CF5861B8CED3&amp;_z=z">Planification de la retraite</a></p>
+    - ID: "e71e7e6c-29a7-4a9a-a7f8-a4e29609cb64"
+      Hint: Title2
+      Value: Services
+    - ID: "ee146d7d-5c17-47f9-acf4-1583573db084"
+      Hint: Title3
+      Value: Ressources
+    - ID: "f17614b2-487a-472c-a509-3e56df0930d4"
+      Hint: Title4
+      Value: Liens rapides
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "24fe8274-d95f-439f-9aeb-6c240759ab6b"
+      Hint: Text1
+      Value: |
+        <div class="ck-content"><p><a class="ck-link_selected" href="~/link.aspx?_id=312D7889330C49E69A8B6C97A06268E0&amp;_z=z">会社概要</a></p><p><a href="~/link.aspx?_id=5D60619D833B44F3AA73CA51FE3A0F3C&amp;_z=z">よくある質問と回答</a></p><p><a href="~/link.aspx?_id=38E1734C163E47E3B51FA5EE2AB85BA6&amp;_z=z">カスタマーサポート</a></p></div>
+    - ID: "342fb66b-0e4b-419d-ba86-2355e33ee1bf"
+      Hint: Title1
+      Value: "PLAY! Finance"
+    - ID: "4bf70960-7097-4f87-a67a-8a7e87d1cd01"
+      Hint: Text4
+      Value: |
+        <p><a href="/ja-JP?utm_campaign=business">法人向けキャンペーン</a></p>
+        <p><a href="/ja-JP?utm_campaign=retirement">年金運用キャンペーン</a></p>
+    - ID: "63ec28c9-bceb-4180-ba86-5a6b3c975d52"
+      Hint: Link1
+      Value: |
+        <link text="プライバシー" linktype="external" url="https://www.sitecore.com/legal/privacy-policy" anchor="" title="プライバシー" target="" />
+    - ID: "798d70ab-9044-4c10-8792-8879857b22ac"
+      Hint: Link2
+      Value: |
+        <link text="使用条件" linktype="external" url="https://www.sitecore.com/legal" anchor="" title="使用条件" target="" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9b94d063-d1c0-45da-97ae-174414f046b4"
+    - ID: "92612ddf-b3fd-4597-a655-de6da2eb553f"
+      Hint: Text3
+      Value: |
+        <p>
+        <a href="~/link.aspx?_id=D26AF0F15E5441F0B026C96D4D2BEEA3&amp;_z=z">ローンを組む</a>&nbsp;</p>
+        <p> <a href="~/link.aspx?_id=0B45C71D61AE44F39F7D6C88185F0B15&amp;_z=z">記事</a></p>
+        <p> <a href="~/link.aspx?_id=8C2D676591BE4BD8A0B34F81256E75A6&amp;_z=z">著者</a></p>
+    - ID: "ca370d33-63e1-4e1b-986d-fe82ae23027c"
+      Hint: Text2
+      Value: |
+        <p><a href="~/link.aspx?_id=406FD98C50E44F3090E46245498A2D10&amp;_z=z">個人のお客さま</a></p>
+        <p><a href="~/link.aspx?_id=AF81673AE74540B28EA734E0589693A7&amp;_z=z">企業のお客様</a></p>
+        <p><a href="~/link.aspx?_id=524F5CD24FB9437DB733CF5861B8CED3&amp;_z=z">年金運用プラン</a></p>
+    - ID: "e71e7e6c-29a7-4a9a-a7f8-a4e29609cb64"
+      Hint: Title2
+      Value: サービス
+    - ID: "ee146d7d-5c17-47f9-acf4-1583573db084"
+      Hint: Title3
+      Value: リソース
+    - ID: "f17614b2-487a-472c-a509-3e56df0930d4"
+      Hint: Title4
+      Value: ヘルプ & サポート

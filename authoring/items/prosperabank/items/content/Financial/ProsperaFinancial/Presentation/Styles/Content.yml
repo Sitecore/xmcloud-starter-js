@@ -1,0 +1,20 @@
+﻿---
+ID: "680eb0ae-42e4-4357-9434-6c7a2a772eeb"
+Parent: "3553d078-0ee7-4b60-803d-aa873a65075b"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Styles/Content
+SharedFields:
+- ID: "62ca1c9e-71a4-465f-835e-55bda7bb270b"
+  Hint: Type
+  Value: droplist
+- ID: "c91e098f-a65c-4625-b166-0ed004adaa75"
+  Hint: AllowEmpty
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d9be4b48-2bc2-4086-b202-717ab253931a"

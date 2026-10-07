@@ -1,0 +1,41 @@
+﻿---
+ID: "c630f66c-f059-4d49-9595-49d92ccd1645"
+Parent: "18a4ed12-adbe-462b-ae96-6f46e99bb7b5"
+Template: "fbc802e5-4b9e-480f-93da-3f2a80cae5cb"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Page Branches/Personal Content Page
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+- ID: "bb3391dd-f8be-4b2e-ae9f-47bb63c166ce"
+  Hint: Rule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{8C8DE469-540C-4410-B109-583B8951B468}">
+        <conditions>
+          <condition
+            id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}"
+            uid="2DEC1D095877488B92952D70064537E4"
+            itemid="{406FD98C-50E4-4F30-90E4-6245498A2D10}" />
+        </conditions>
+        <actions>
+          <action
+            id="{D46EC8E5-7B46-47DE-B44A-4C5C30EF48D1}"
+            uid="5756E57FF81043F28781CB0228669C48"
+            PageBranchId="{F1E90846-D2FC-4EF5-8970-891D0D88737F}" />
+        </actions>
+      </rule>
+    </ruleset>
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{6E98EAB7-1C05-43E1-AD32-63936EF4B57B}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0a8e97b8-8058-4c6f-97de-c9470c464fe8"

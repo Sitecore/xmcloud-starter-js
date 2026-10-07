@@ -1,0 +1,17 @@
+﻿---
+ID: "5b7ef581-6008-4781-8ec8-4293c3d8761d"
+Parent: "947db8f8-dc76-453f-aca1-a27babfe633b"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Footer/Footnote
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "084e2069-e982-41e6-8b15-797c9fb6de9b"

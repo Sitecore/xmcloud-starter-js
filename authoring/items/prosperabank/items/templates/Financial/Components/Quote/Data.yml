@@ -1,0 +1,13 @@
+﻿---
+ID: "04f952b7-6218-4bd6-8c74-da565ed219e4"
+Parent: "cad49c2a-bd85-44fd-852a-10c1a1c8fd72"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Financial/Components/Quote/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a8fc9eea-b321-4601-94a1-ddd937e29deb"

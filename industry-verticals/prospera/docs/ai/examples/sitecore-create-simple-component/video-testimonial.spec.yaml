@@ -1,0 +1,100 @@
+project:
+  reactComponentRoot: "src/components/uiim"
+  shadcnImportBase: "@/components/ui"
+  componentMapPath: ".sitecore/component-map.ts"
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"
+  usesTailwind: true
+  usesShadcn: true
+
+siteCollection: "acme"
+siteName: "main"
+category: "content"
+
+component:
+  namePascal: "VideoTestimonial"
+  nameKebab: "video-testimonial"
+  kind: "simple"
+  filePath: "src/components/uiim/content/VideoTestimonial.tsx"
+  componentMapKey: "video-testimonial"
+  componentMapImportAlias: "videoTestimonial"
+
+design:
+  extractedLayout:
+    summary: "Testimonial block with left quote panel (dark), right image with video play button overlay."
+    visibleElements:
+      - "Quote"
+      - "Attribution"
+      - "TestimonialImage"
+      - "VideoLink"
+    inferredFields:
+      - "Quote"
+      - "Attribution"
+      - "TestimonialImage"
+      - "VideoLink"
+    repeatedItems: false
+
+templates:
+  parent:
+    path: "/sitecore/templates/Project/acme/Components/Content/Video Testimonial"
+    name: "Video Testimonial"
+    sectionName: "Data"
+    fields:
+      - name: "Quote"
+        type: "Rich Text"
+      - name: "Attribution"
+        type: "Single-Line Text"
+      - name: "TestimonialImage"
+        type: "Image"
+      - name: "VideoLink"
+        type: "General Link"
+
+folderTemplate:
+  path: "/sitecore/templates/Project/acme/Folders/Video Testimonial Folder"
+  name: "Video Testimonial Folder"
+
+datasourceFolder:
+  create: true
+  path: "/sitecore/content/acme/main/Data/Video Testimonials"
+  name: "Video Testimonials"
+  insertOptions: []  # REQUIRED: set on the folder item itself
+  exampleItem:
+    create: true
+    name: "Video Testimonial"
+    fields: {}
+
+renderingParamsTemplate:
+  create: true
+  path: "/sitecore/templates/Project/acme/Rendering Parameters/Content/Video Testimonial"
+  name: "Video Testimonial"
+  baseTemplates:
+    - "{4247AAD4-EBDE-4994-998F-E067A51B1FE4}"  # IComponentVariant
+    - "{5C74E985-E055-43FF-B28C-DB6C6A6450A2}"  # IStyling
+    - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters
+    - "{3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}"  # IRenderingId
+
+headlessVariants:
+  create: true
+  containerPath: "/sitecore/content/acme/main/Presentation/Headless Variants/VideoTestimonial"
+  variants:
+  - "Default"
+
+availableRenderings:
+  register: true
+  targetPath: "/sitecore/content/acme/main/Presentation/Available Renderings/Page Content"
+
+rendering:
+  path: "/sitecore/layout/Renderings/Project/acme/Content/Video Testimonial"
+  componentName: "VideoTestimonial"  # MUST be PascalCase matching TSX filename exactly
+  datasourceTemplatePath: "/sitecore/templates/Project/acme/Components/Content/Video Testimonial"
+  datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Video Testimonial Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Video Testimonial Folder']"
+
+react:
+  propsShape: "default-jss"
+  usesSitecoreJssHelpers: true
+  usesTailwind: true
+  variants:
+    - "Default"
+
+notes:
+  - "MCP-created items. Template fields may need Type set in Content Editor: Quote→Rich Text, TestimonialImage→Image, VideoLink→General Link."
+  - "Folder __Standard Values __Masters = Video Testimonial template (43572184-179b-4dde-8714-353530072f25)."

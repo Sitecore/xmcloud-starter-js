@@ -1,0 +1,22 @@
+﻿---
+ID: "4afb1065-d0df-4f48-848f-d3b046d8a054"
+Parent: "4ad644a8-7cdb-4574-8df1-d01c3bb7b624"
+Template: "4ad644a8-7cdb-4574-8df1-d01c3bb7b624"
+Path: /sitecore/templates/Project/Financial/Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {4AD644A8-7CDB-4574-8DF1-D01C3BB7B624}
+    {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0d700f38-e16c-4beb-b031-657f8530f1b8"
+    - ID: "ca15ff2f-1966-4a91-81bf-bf2eba17c20c"
+      Hint: Title
+      Value: $name

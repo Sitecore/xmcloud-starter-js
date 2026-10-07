@@ -1,0 +1,81 @@
+﻿---
+ID: "8ab5362e-27ee-4425-97ab-4727b5b75a81"
+Parent: "5a737b43-b61a-431b-965e-29f28fc81962"
+Template: "32f00428-21ac-4dc0-aa2b-f2e31ca3e97e"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/get-a-loan/Data/Comparison Duration"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "139b10e3-2363-40f9-8351-59a724c1a135"
+      Hint: Amount1
+      Value: 12
+    - ID: "22ea3b6c-7d16-47dc-b1d7-9e6686c6bd9b"
+      Hint: Amount2
+      Value: 10
+    - ID: "55199a29-334d-41c9-b133-7163c9e82a7c"
+      Hint: Currency2
+      Value: years
+    - ID: "811c52c9-9a0d-4c2b-88c5-817193be5c7d"
+      Hint: Title1
+      Value: Duration
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50c2b094-1f28-4dce-84b6-086fa4ad3119"
+    - ID: "ef3b1e0a-490d-4340-8ebc-5612d6be5e74"
+      Hint: Currency1
+      Value: months
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "139b10e3-2363-40f9-8351-59a724c1a135"
+      Hint: Amount1
+      Value: 12
+    - ID: "22ea3b6c-7d16-47dc-b1d7-9e6686c6bd9b"
+      Hint: Amount2
+      Value: 10
+    - ID: "55199a29-334d-41c9-b133-7163c9e82a7c"
+      Hint: Currency2
+      Value: années
+    - ID: "811c52c9-9a0d-4c2b-88c5-817193be5c7d"
+      Hint: Title1
+      Value: Durée
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5fe3b759-0a25-414f-a659-554d642b7a0c"
+    - ID: "ef3b1e0a-490d-4340-8ebc-5612d6be5e74"
+      Hint: Currency1
+      Value: mois
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "139b10e3-2363-40f9-8351-59a724c1a135"
+      Hint: Amount1
+      Value: 12
+    - ID: "22ea3b6c-7d16-47dc-b1d7-9e6686c6bd9b"
+      Hint: Amount2
+      Value: 10
+    - ID: "55199a29-334d-41c9-b133-7163c9e82a7c"
+      Hint: Currency2
+      Value: 年
+    - ID: "620c2827-7248-4310-8de3-7c55ab40a5e3"
+      Hint: Subtitle1
+      Value: 最短
+    - ID: "811c52c9-9a0d-4c2b-88c5-817193be5c7d"
+      Hint: Title1
+      Value: 期間
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5bfa90f7-cb09-4836-b2fd-248e61f3414c"
+    - ID: "bd2c7af4-8f8f-4518-8d5d-2c1006bce654"
+      Hint: Subtitle2
+      Value: 最長
+    - ID: "ef3b1e0a-490d-4340-8ebc-5612d6be5e74"
+      Hint: Currency1
+      Value: ヵ月

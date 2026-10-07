@@ -1,0 +1,50 @@
+﻿---
+ID: "84c036b8-f9a8-4024-a3ed-7a774ae60d5e"
+Parent: "e6379828-bae3-4d2d-94d7-762a6397b9dc"
+Template: "2dc7a13e-6753-47ef-805a-1cde39012eec"
+Path: /sitecore/content/Financial/ProsperaFinancial/Home/personal/Data/Questions 1/Question 1
+BranchID: "bba2c8f4-b940-4820-bf71-1b089bc5f86a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FE577AD4-C2F1-4056-91A9-C864C8D2199D}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0e3cc1b8-56b4-4147-b774-deea8d5a7b6e"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "How can I effectively manage my budget and save more money?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Our website offers a range of budgeting tools and resources to help you effectively manage your finances. From customizable budget templates to expense tracking features, we provide everything you need to stay on top of your spending and save more money each month.
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2747d9e7-97b3-470b-8e55-1b412ba345af"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: "Comment puis-je gérer efficacement mon budget et économiser davantage d'argent ?"
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: Notre site web offre une gamme d'outils et de ressources pour vous aider à gérer efficacement vos finances. Des modèles de budget personnalisables aux fonctionnalités de suivi des dépenses, nous vous fournissons tout ce dont vous avez besoin pour maîtriser vos dépenses et économiser plus d'argent chaque mois.
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7fc241d0-d8e0-4602-bfc9-dbba6fa353aa"
+    - ID: "93ba0221-aa2a-4a04-b8f6-39c2ab65c694"
+      Hint: Question
+      Value: 予算を効果的に管理し、より多くのお金を節約するには？
+    - ID: "ef205dfd-6af2-4514-b694-77efa748f951"
+      Hint: Answer
+      Value: 当協会のウェブサイトでは、効果的な財務管理に役立つさまざまな予算管理ツールや資料を提供しています。 カスタマイズ可能な予算テンプレートから支出追跡機能まで、毎月の支出を管理し、より多くのお金を節約するために必要なすべてを提供します。

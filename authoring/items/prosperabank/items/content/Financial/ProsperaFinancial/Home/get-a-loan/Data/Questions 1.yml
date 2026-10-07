@@ -1,0 +1,13 @@
+﻿---
+ID: "1df23e4f-432f-4aff-863b-4d1d7e3925fd"
+Parent: "5a737b43-b61a-431b-965e-29f28fc81962"
+Template: "fae81bf9-1117-4f97-9133-00e752f41772"
+Path: "/sitecore/content/Financial/ProsperaFinancial/Home/get-a-loan/Data/Questions 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "06c9c4a0-a511-42d0-a825-c9c087cc5d5b"

@@ -1,0 +1,13 @@
+﻿---
+ID: "f3ca9d26-9794-4ef6-ab18-38357aa4e64b"
+Parent: "0a960855-c92c-4666-8ff8-a6ec784a6e55"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: /sitecore/content/Financial/ProsperaFinancial/Presentation/Partial Designs/Author Content/Data
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "15e82c62-340e-406b-979a-57a989e592d5"

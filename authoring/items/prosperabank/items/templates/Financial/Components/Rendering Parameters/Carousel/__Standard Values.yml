@@ -1,0 +1,13 @@
+﻿---
+ID: "28101399-af99-44d2-918f-59b03f492258"
+Parent: "a1abd5cf-c257-4bb1-9f7a-93e6f3375391"
+Template: "a1abd5cf-c257-4bb1-9f7a-93e6f3375391"
+Path: /sitecore/templates/Project/Financial/Components/Rendering Parameters/Carousel/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f42d9057-a8bc-4c15-b5e2-bf0e57a82029"
