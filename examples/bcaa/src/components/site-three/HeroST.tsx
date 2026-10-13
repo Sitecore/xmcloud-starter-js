@@ -338,10 +338,10 @@ export const BlogHeader = (props: PageHeaderSTProps) => {
           </h1>
           {(hasLink1 || hasLink2) && (
             <div className="mt-4 flex flex-wrap gap-3">
-              {hasLink1 && (
+              {link1 && hasLink1 && (
                 <ContentSdkLink field={link1} prefetch={false} className={heroBtnPrimary} />
               )}
-              {hasLink2 && (
+              {link2 && hasLink2 && (
                 <ContentSdkLink field={link2} prefetch={false} className={heroBtnSecondary} />
               )}
             </div>
