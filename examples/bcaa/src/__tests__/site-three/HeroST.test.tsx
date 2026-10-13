@@ -7,6 +7,7 @@ import {
   Centered as HeroSTCentered,
   SplitScreen as HeroSTSplitScreen,
   Stacked as HeroSTStacked,
+  BlogHeader as HeroSTBlogHeader,
 } from '@/components/site-three/HeroST';
 
 // Mock useContainerOffsets hook
@@ -92,6 +93,12 @@ describe('HeroST', () => {
       render(<HeroSTDefault {...mockProps} />);
       expect(screen.getByText('Shop Now')).toBeInTheDocument();
       expect(screen.getByText('Learn More')).toBeInTheDocument();
+    });
+
+    it('uses square buttons', () => {
+      render(<HeroSTDefault {...mockProps} />);
+      expect(screen.getByText('Shop Now')).toHaveClass('!rounded-none');
+      expect(screen.getByText('Learn More')).toHaveClass('!rounded-none');
     });
   });
 
@@ -248,6 +255,38 @@ describe('HeroST', () => {
       const { container } = render(<HeroSTStacked {...mockProps} />);
       const section = container.querySelector('section');
       expect(section).toHaveClass('test-styles');
+    });
+  });
+
+  describe('BlogHeader variant', () => {
+    it('renders a compact banner without the full-height hero min-height', () => {
+      const { container } = render(<HeroSTBlogHeader {...mockProps} />);
+      const section = container.querySelector('section');
+      expect(section).not.toHaveClass('lg:min-h-[50rem]');
+      expect(container.innerHTML).toContain('max-h-[16rem]');
+    });
+
+    it('renders eyebrow and title', () => {
+      render(<HeroSTBlogHeader {...mockProps} />);
+      expect(screen.getByText('New Collection')).toBeInTheDocument();
+      expect(screen.getByText('Premium Audio Experience')).toBeInTheDocument();
+    });
+
+    it('renders square call-to-action links', () => {
+      render(<HeroSTBlogHeader {...mockProps} />);
+      expect(screen.getByText('Shop Now')).toHaveClass('!rounded-none');
+      expect(screen.getByText('Learn More')).toHaveClass('!rounded-none');
+    });
+
+    it('uses readable button text colors', () => {
+      render(<HeroSTBlogHeader {...mockProps} />);
+      expect(screen.getByText('Shop Now')).toHaveClass('!text-primary-foreground');
+      expect(screen.getByText('Learn More')).toHaveClass('!text-primary');
+    });
+
+    it('applies custom styles', () => {
+      const { container } = render(<HeroSTBlogHeader {...mockProps} />);
+      expect(container.querySelector('section')).toHaveClass('test-styles');
     });
   });
 

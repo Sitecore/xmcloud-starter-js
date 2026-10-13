@@ -9,6 +9,9 @@ import {
 import { getDatasource, getFieldValue } from '@/lib/component-props';
 import type { PageHeaderSTProps } from './hero-st.props';
 
+const heroBtnPrimary = 'btn btn-primary btn-sharp !rounded-none !text-primary-foreground';
+const heroBtnSecondary = 'btn btn-secondary btn-sharp !rounded-none !text-primary';
+
 export const Default = (props: PageHeaderSTProps) => {
   const { containerRef, rightOffset } = useContainerOffsets();
   const fields = getDatasource(props.fields);
@@ -41,12 +44,12 @@ export const Default = (props: PageHeaderSTProps) => {
               <ContentSdkLink
                 field={getFieldValue(fields?.Link1)!}
                 prefetch={false}
-                className="btn btn-primary mr-4"
+                className={`${heroBtnPrimary} mr-4`}
               />
               <ContentSdkLink
                 field={getFieldValue(fields?.Link2)!}
                 prefetch={false}
-                className="btn btn-secondary"
+                className={heroBtnSecondary}
               />
             </div>
           </div>
@@ -104,12 +107,12 @@ export const Right = (props: PageHeaderSTProps) => {
               <ContentSdkLink
                 field={getFieldValue(fields?.Link1)!}
                 prefetch={false}
-                className="btn btn-primary mr-4"
+                className={`${heroBtnPrimary} mr-4`}
               />
               <ContentSdkLink
                 field={getFieldValue(fields?.Link2)!}
                 prefetch={false}
-                className="btn btn-secondary"
+                className={heroBtnSecondary}
               />
             </div>
           </div>
@@ -162,12 +165,12 @@ export const Centered = (props: PageHeaderSTProps) => {
               <ContentSdkLink
                 field={getFieldValue(fields?.Link1)!}
                 prefetch={false}
-                className="btn btn-primary mr-4"
+                className={`${heroBtnPrimary} mr-4`}
               />
               <ContentSdkLink
                 field={getFieldValue(fields?.Link2)!}
                 prefetch={false}
-                className="btn btn-secondary"
+                className={heroBtnSecondary}
               />
             </div>
           </div>
@@ -208,12 +211,12 @@ export const SplitScreen = (props: PageHeaderSTProps) => {
             <ContentSdkLink
               field={getFieldValue(fields?.Link1)!}
               prefetch={false}
-              className="btn btn-secondary mr-4"
+              className={`${heroBtnSecondary} mr-4`}
             />
             <ContentSdkLink
               field={getFieldValue(fields?.Link2)!}
               prefetch={false}
-              className="btn btn-secondary"
+              className={heroBtnSecondary}
             />
           </div>
         </div>
@@ -262,12 +265,12 @@ export const Stacked = (props: PageHeaderSTProps) => {
             <ContentSdkLink
               field={getFieldValue(fields?.Link1)!}
               prefetch={false}
-              className="btn btn-secondary mr-4"
+              className={`${heroBtnSecondary} mr-4`}
             />
             <ContentSdkLink
               field={getFieldValue(fields?.Link2)!}
               prefetch={false}
-              className="btn btn-secondary"
+              className={heroBtnSecondary}
             />
           </div>
         </div>
@@ -296,6 +299,53 @@ export const Stacked = (props: PageHeaderSTProps) => {
               className="absolute w-[calc(100%-5rem)] h-full left-20 top-0 right-0 bottom-0 object-cover"
             />
           </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const BlogHeader = (props: PageHeaderSTProps) => {
+  const fields = getDatasource(props.fields);
+  const link1 = getFieldValue(fields?.Link1);
+  const link2 = getFieldValue(fields?.Link2);
+  const hasLink1 = Boolean(link1?.value?.href || link1?.value?.text);
+  const hasLink2 = Boolean(link2?.value?.href || link2?.value?.text);
+
+  return (
+    <section
+      className={`relative overflow-hidden ${props?.params?.styles || ''}`}
+      data-class-change
+    >
+      <div className="relative min-h-[10rem] max-h-[16rem] lg:min-h-[12rem] lg:max-h-[18rem]">
+        <div className="absolute inset-0">
+          <ContentSdkImage
+            field={getFieldValue(fields?.Image1)}
+            width={1920}
+            height={720}
+            priority={true}
+            fetchPriority="high"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+        <div className="relative z-10 mx-auto flex min-h-[10rem] max-w-7xl flex-col justify-end px-4 py-6 lg:min-h-[12rem] lg:px-8 lg:py-8">
+          <p className="pb-1 text-xs uppercase tracking-wide text-white/80 lg:text-sm">
+            <ContentSdkText field={getFieldValue(fields?.Eyebrow)} />
+          </p>
+          <h1 className="max-w-3xl text-2xl font-semibold text-white lg:text-4xl">
+            <ContentSdkText field={getFieldValue(fields?.Title)} />
+          </h1>
+          {(hasLink1 || hasLink2) && (
+            <div className="mt-4 flex flex-wrap gap-3">
+              {hasLink1 && (
+                <ContentSdkLink field={link1} prefetch={false} className={heroBtnPrimary} />
+              )}
+              {hasLink2 && (
+                <ContentSdkLink field={link2} prefetch={false} className={heroBtnSecondary} />
+              )}
+            </div>
+          )}
         </div>
       </div>
     </section>

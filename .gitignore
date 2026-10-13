@@ -49,3 +49,11 @@ packages/
 
 # VS Code settings
 .vscode/
+
+# Starter local artifacts (never commit these from examples/*)
+examples/**/node_modules/
+examples/**/.next/
+examples/**/.jest-cache/
+examples/**/coverage/
+examples/**/.env.local
+examples/**/.env.*.local

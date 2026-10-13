@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-10-08T15:25:00Z"
+lastUpdatedAt: "2026-10-13T14:00:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -11588,7 +11588,7 @@ ia:
     category: "Promos"
     status: "complete"
     createdAt: "2026-08-25T13:45:00Z"
-    updatedAt: "2026-10-08T15:25:00Z"
+    updatedAt: "2026-10-08T16:55:00Z"
 
     react:
       filePath: "src/components/site-three/MultiPromo.tsx"
@@ -11704,6 +11704,50 @@ ia:
         - { name: "Insurance", itemId: "{75995E82-B0C3-4FAB-935E-FA63C339D21E}", path: "/sitecore/content/bcaa/bcaa/Data/MultiPromos/Moving British Columbians Forward/Insurance", imageMediaId: "{5EDE601F-8913-497E-8C9D-51A972F2D3B3}", linkPageId: "{B34B7E61-1448-4EE0-83EC-18891055D7D2}", linkText: "Learn more" }
         - { name: "Automotive", itemId: "{F94D9215-75F9-4A5C-8B7B-44D44137D5C2}", path: "/sitecore/content/bcaa/bcaa/Data/MultiPromos/Moving British Columbians Forward/Automotive", imageMediaId: "{8BDD11E3-C90C-4CFE-99F8-E8838D36B49A}", linkPageId: "{5CD7A3CA-8858-4EFE-AE87-E0D1B0D33896}", linkText: "Learn more" }
 
+    bcaaAudienceDatasources:
+      note: "2026-10-08: Four MultiPromo parents (4 SimplePromo children each) for homepage personalization. Default homepage instance can stay Moving British Columbians Forward. Assign these as personalized datasources in Pages."
+      items:
+        - name: "Members Ways to Save"
+          itemId: "{24C777B4-B5E5-4183-8361-FE412D114520}"
+          path: "/sitecore/content/bcaa/bcaa/Data/MultiPromos/Members Ways to Save"
+          audience: "Existing members / member-savings"
+          title: "Ways to save"
+          children:
+            - { name: "BCAA Insurance", itemId: "{E09FF233-6FA3-4302-94BD-AF2FBCF6CE74}" }
+            - { name: "Membership Plans", itemId: "{9A400EA8-4B82-458D-B2BB-F7B7463B9FFF}" }
+            - { name: "Evo and Evo Extras", itemId: "{189BDC9E-748F-462D-8E8C-B5E3C1B9CB05}" }
+            - { name: "More Ways to Save", itemId: "{E1A2FECE-699F-45C6-9D6E-DF498E8EFA63}" }
+        - name: "Insurance Shoppers"
+          itemId: "{E61D05E0-F737-4631-9CE3-162DDDED1406}"
+          path: "/sitecore/content/bcaa/bcaa/Data/MultiPromos/Insurance Shoppers"
+          audience: "Insurance shoppers / policy holders"
+          title: "Protect what matters"
+          children:
+            - { name: "Home Insurance", itemId: "{902721EB-324F-4DDF-A07E-87BC1BDF54B6}" }
+            - { name: "Car Insurance", itemId: "{2C54D06F-887B-46BE-80EC-3EDC920471F7}" }
+            - { name: "Travel Insurance", itemId: "{FA8308D9-61B6-4237-94C1-ED813FA88B63}" }
+            - { name: "Claims", itemId: "{D3D05BAA-4441-4852-A70B-D3A41D141409}" }
+        - name: "Vehicle Owners"
+          itemId: "{B0A7EA17-E962-444E-8140-6D6A1C2A710A}"
+          path: "/sitecore/content/bcaa/bcaa/Data/MultiPromos/Vehicle Owners"
+          audience: "Vehicle owners / EV / Evo drivers"
+          title: "Keep British Columbia moving"
+          children:
+            - { name: "Auto Service Centres", itemId: "{6B7F212B-55FB-4D35-A498-146C3BB36C38}" }
+            - { name: "Evo Car Share", itemId: "{234BD779-0E5A-49E8-B5FC-C7A8C40F1C5D}" }
+            - { name: "Electric Vehicles", itemId: "{CCBF9C01-65E2-4557-9920-B923CE86A897}" }
+            - { name: "Battery Service", itemId: "{0E7D33C8-0E96-491E-A23A-D4192F03D61F}" }
+        - name: "Travellers"
+          itemId: "{8DC969AC-31F3-4A7A-8F36-271114C600FD}"
+          path: "/sitecore/content/bcaa/bcaa/Data/MultiPromos/Travellers"
+          audience: "Travellers / trip planners"
+          title: "Travel with confidence"
+          children:
+            - { name: "Trip Planning", itemId: "{E257B391-B02E-4315-83CF-554613CB334C}" }
+            - { name: "Travel Insurance", itemId: "{110BB301-7E60-4B4A-99C9-D11349401B0D}" }
+            - { name: "Passport Photos", itemId: "{32FE7A55-3105-47A8-9ABD-BD120BD6CAE4}" }
+            - { name: "International Driving Permit", itemId: "{F011EF47-9057-43C9-927B-1C901A60C048}" }
+
     leftoverDatasource:
       name: "MultiPromo 2"
       itemId: "{A48AADE0-A051-4865-932E-0A1D5FF7633B}"
@@ -11739,6 +11783,7 @@ ia:
         - "bcaa enumerations Text Centered {9B4B4507-8CA2-4DB5-A11A-8273C7143B1F} and Text Justified {2C6775FE-70AA-47A2-B173-9A5F763FF7F9}"
         - "Deleted Presentation/Styles/MultiPromo/Text Alignment grouping so it is not a Styling-panel style"
         - "React Default + FlexColumn apply TextAlignment / text-justified via swapped header classes and MutationObserver"
+        - "Four audience MultiPromos under Data/MultiPromos: Members Ways to Save, Insurance Shoppers, Vehicle Owners, Travellers (4 SimplePromo children each, verified via get_content_item_by_path)"
       failed: []
       pendingManual:
         - "Publish Headless Variants (lcmc, site-base, pkm) + MultiPromo template/rendering + Home/Data/MultiPromo for Edge"
@@ -11757,6 +11802,8 @@ ia:
         - "Confirm Pages preview of /Packaging/Memory after publish: white/teal tabs, image beside copy on the right"
         - "Publish MultiPromo Parameters TextAlignment field and bcaa Presentation/Enumerations/Promos/Text Alignment for Edge"
         - "In Pages, close/reopen the MultiPromo so Advanced styling shows Text Alignment next to Number of Columns. MCP cannot set instance rendering parameters."
+        - "Publish Data/MultiPromos audience items (Members Ways to Save, Insurance Shoppers, Vehicle Owners, Travellers) for Edge"
+        - "In Pages personalization, assign each audience MultiPromo as a datasource variant on the homepage Flex column instance. MCP does not create the page personalization rules."
 
     headlessVariantsAmkor:
       containerPath: "/sitecore/content/amkor/amkor/Presentation/Headless Variants/MultiPromo"
@@ -13015,12 +13062,16 @@ externalImageOptimizerAudit:
     category: "Carousel"
     status: "complete"
     createdAt: "2026-10-06T08:50:00Z"
-    updatedAt: "2026-10-06T15:20:00Z"
+    updatedAt: "2026-10-11T20:25:00Z"
     notes:
       - "2026-10-06: Created click-click-launch Carousel templates to match Image Carousel / Image Carousel Item / Image Carousels Folder."
       - "2026-10-06: Created JSON Rendering, Rendering Parameters (Image Carousel four bases), Data/Carousels folder, example parent + two slides, Headless Variants Default, and appended to Available Renderings/click-click-launch next to ImageCarousel."
       - "2026-10-06: Added CTALeft variant (Sitecore item + named export). Left-aligns title/body/CTA and uses overlay dash indicators. Home Carousel FieldNames still Default — select CTALeft in Pages. MCP cannot set rendering FieldNames."
       - "2026-10-06: Slide counter showed 1 dash in Pages with 3 Carousel Item children. ComponentQuery now children(first: 20). React reads children.results, children.nodes, or a children array. CTALeft dashes sit outside overflow-hidden in a dark pill so inactive marks stay visible."
+      - "2026-10-11: Added 3 audience Carousel datasources under Data/Carousels for product_interest home/auto/travel. Each has 3 Carousel Item slides with bcaa.com copy. Default homepage Carousel unchanged. Assign these as personalized datasources in Pages."
+      - "2026-10-11: Rewrote Carousel_upcoming Renewal {E7109CDA} slides for a guest with car insurance due in the next 90 days (ICBC renew, optional coverage review, myBCAA)."
+      - "2026-10-11: Replaced Carousel_upcoming Renewal DAM homepage images with media library Cars on road {E16E4730}, electric car {8BDD11E3}, and person {5EDE601F}."
+      - "2026-10-11: Rewrote Carousel_Renewal_past {D83C9E4A} for a lapsed renewal — caring win-back copy, new images, links to Car / ICBC / Book an Appointment."
 
     react:
       filePath: "src/components/carousel/Carousel.tsx"
@@ -13093,6 +13144,45 @@ externalImageOptimizerAudit:
           - { name: "Slide 1", itemId: "{1E465DA9-2E91-471E-BAD6-534A81B7E297}" }
           - { name: "Slide 2", itemId: "{11632646-97AC-4C5B-9505-4E5C7B8467B5}" }
           - { name: "Slide 3", itemId: "{70FC9B4C-8406-4FA4-BF4B-C3C8D8C1AF0A}" }
+      audienceDatasources:
+        note: "2026-10-11: Three Carousel parents (3 Carousel Item children each) for homepage personalization by product_interest. Default homepage instance can stay Data/Carousels/Carousel. Assign these as personalized datasources in Pages."
+        items:
+          - name: "Home Interest"
+            itemId: "{5056EF0B-A8D5-470B-B198-D9BC07CB29E6}"
+            path: "/sitecore/content/bcaa/bcaa/Data/Carousels/Home Interest"
+            audience: "product_interest=home"
+            title: "Weather any storm"
+            children:
+              - { name: "Homeowners", itemId: "{AA793C45-4EA8-4935-9A60-FF948AF4B2F7}", linkPageId: "{E9A4CF89-0FB2-4593-AB42-CA79D2F601E1}" }
+              - { name: "Renters", itemId: "{73E169D9-F2CF-4387-9DA5-4D1C4A662276}", linkPageId: "{C25F0EC8-3405-48EA-8EF6-0B84E929DB17}" }
+              - { name: "FireSmart Savings", itemId: "{777D2DA4-4A8D-47EF-AE45-F17DD8C5A369}", linkPageId: "{0002C758-589F-405E-AF6A-8CCA1B23F8DA}" }
+          - name: "Auto Interest"
+            itemId: "{8EF5DA44-213B-4D76-8A46-BC6AE4D109B2}"
+            path: "/sitecore/content/bcaa/bcaa/Data/Carousels/Auto Interest"
+            audience: "product_interest=auto"
+            title: "Car insurance made easy"
+            children:
+              - { name: "ICBC Autoplan", itemId: "{20C3F891-4DB2-4028-966D-68B406A152F4}", linkPageId: "{78755BA6-DFB8-4519-88F6-09254C30674F}" }
+              - { name: "Optional Car Insurance", itemId: "{9D3F2D79-3297-4EED-8CFF-87826717D5FA}", linkPageId: "{A1A17E81-98D2-40BC-BA73-ACA6477285F9}" }
+              - { name: "Motorcycle and RV", itemId: "{E0688B3C-0A21-4770-AA7B-88929FA0B4AB}", linkPageId: "{6BBE9B68-0F49-4705-97EE-3B73F63FEDE0}" }
+          - name: "Travel Interest"
+            itemId: "{438BD116-5694-4345-8AAE-B180770DF91A}"
+            path: "/sitecore/content/bcaa/bcaa/Data/Carousels/Travel Interest"
+            audience: "product_interest=travel"
+            title: "Travel with confidence"
+            children:
+              - { name: "Emergency Medical", itemId: "{21B5B7C2-0A9F-41CE-A31B-FD0EBE48E3E0}", linkPageId: "{1761958F-CB60-428C-8021-4EAB84191F12}" }
+              - { name: "Trip Protection", itemId: "{8F4DDDD1-1C04-4B6F-8801-1F37A2CE6D61}", linkPageId: "{E26B89A6-0C24-4733-8782-4BE0AA6C5B11}" }
+              - { name: "Travel Delay", itemId: "{C367D420-05FE-4E90-AF35-690CF2290B8D}", linkPageId: "{2A3102DF-D8DF-4157-AB8F-6FA203B5ED6E}" }
+          - name: "Carousel_upcoming Renewal"
+            itemId: "{E7109CDA-4980-4A26-AEF7-BD1E254190FA}"
+            path: "/sitecore/content/bcaa/bcaa/Data/Carousels/Carousel_upcoming Renewal"
+            audience: "car insurance renewal within 90 days"
+            title: "Your car insurance renewal is coming up"
+            children:
+              - { name: "Slide 1", itemId: "{6E9EA811-A034-42C7-AEA7-5F82BD3DAE0D}", linkPageId: "{78755BA6-DFB8-4519-88F6-09254C30674F}" }
+              - { name: "Slide 2", itemId: "{38B23D36-ECBE-4673-8BB3-AB142B1C541C}", linkPageId: "{A1A17E81-98D2-40BC-BA73-ACA6477285F9}" }
+              - { name: "Slide 3", itemId: "{89A926CE-5C95-4947-8B1F-DB46E1943D3E}", linkPageId: "{70C13551-7C50-4792-95E0-599005047DE0}" }
 
     rendering:
       name: "Carousel"
@@ -13137,11 +13227,96 @@ externalImageOptimizerAudit:
         - "Example parent Carousel + Slide 1 + Slide 2 created under Data/Carousels"
         - "Headless Variants container + Default Variant Definition created"
         - "Available Renderings/click-click-launch concatenated with {79823B84-9278-43FE-912E-A248A01A3987}; MCP read-back confirmed"
+        - "2026-10-11: Home Interest, Auto Interest, Travel Interest parents + 9 slides verified via get_content_item_by_id"
       failed: []
       pendingManual:
         - "Confirm __Masters in Content Editor: Carousel SV → Carousel Item; Carousels Folder SV → Carousel (MCP insert-options read is site-scoped and cannot verify template SVs)"
         - "Confirm Rendering Parameters template __Standard values link in Content Editor (MCP silent-write)"
         - "No Image Carousel-style Branch template was created; Datasource Template points at the Carousel datasource template path"
+        - "Publish Data/Carousels audience items (Home Interest, Auto Interest, Travel Interest) for Edge"
+        - "In Pages personalization, assign each audience Carousel as a datasource variant when product_interest is home, auto, or travel. MCP does not create the page personalization rules."
+        - "__Sortorder on audience slides is silent-write; confirm Content Editor order is Homeowners/Renters/FireSmart, ICBC/Optional/Motorcycle, Emergency/Trip Protection/Travel Delay"
+
+  - name: "bcaa-herost-service-datasources"
+    kind: "content-create"
+    category: "Hero"
+    status: "complete"
+    createdAt: "2026-10-13T10:30:00Z"
+    updatedAt: "2026-10-13T14:00:00Z"
+    siteCollection: "bcaa"
+    siteName: "bcaa"
+    componentName: "HeroST"
+    datasourceTemplateId: "{C241957A-B7CC-4BDD-962F-BF8652ED595C}"
+    sourceSite: "https://www.bcaa.com/"
+    notes: >
+      Six reusable HeroST datasources under Data/HeroST Items for BCAA services
+      (Membership, Home Insurance, Car Insurance, Travel Insurance, Automotive,
+      Evo Car Share). Rewrote the placeholder Automotive item. Copy and CTAs
+      aligned to bcaa.com. Assign as HeroST datasources in Pages.
+      2026-10-13: HeroST buttons are square (btn-sharp + !rounded-none) on all variants.
+      Added BlogHeader named export + Variant Definition {9C2A75D5} — compact banner
+      (max ~18rem) so article body stays in view. Select BlogHeader on blog pages.
+      MCP cannot set FieldNames.
+    folder:
+      name: "HeroST Items"
+      itemId: "{B2C4FCF4-5248-46B9-BF86-81A4946390BA}"
+      path: "/sitecore/content/bcaa/bcaa/Data/HeroST Items"
+      templateId: "{91F1954F-86D9-4859-9885-3E42E8D8A2A9}"
+    items:
+      - name: "Membership"
+        itemId: "{F7780A7E-3EBE-4954-AD34-FAF40D030BF5}"
+        path: "/sitecore/content/bcaa/bcaa/Data/HeroST Items/Membership"
+        eyebrow: "Membership"
+        title: "Join the movement"
+        link1: { text: "JOIN BCAA", targetId: "{BBF62BA8-0DBB-4440-BE45-B308745C6FFD}" }
+        link2: { text: "COMPARE PLANS", targetId: "{A12CBB20-B5CB-4A0E-8598-4A15CB93EF83}" }
+      - name: "Home Insurance"
+        itemId: "{4880E0A2-AB1A-460B-839E-647814D6FDF4}"
+        path: "/sitecore/content/bcaa/bcaa/Data/HeroST Items/Home Insurance"
+        eyebrow: "Home Insurance"
+        title: "Protection made for life in BC"
+        link1: { text: "GET A QUOTE", targetId: "{0002C758-589F-405E-AF6A-8CCA1B23F8DA}" }
+        link2: { text: "FOR HOMEOWNERS", targetId: "{E9A4CF89-0FB2-4593-AB42-CA79D2F601E1}" }
+      - name: "Car Insurance"
+        itemId: "{066FFC40-1213-48DC-BDEF-232054DD0CFE}"
+        path: "/sitecore/content/bcaa/bcaa/Data/HeroST Items/Car Insurance"
+        eyebrow: "Car Insurance"
+        title: "Car insurance made easy"
+        link1: { text: "RENEW ICBC", targetId: "{78755BA6-DFB8-4519-88F6-09254C30674F}" }
+        link2: { text: "OPTIONAL COVERAGE", targetId: "{A1A17E81-98D2-40BC-BA73-ACA6477285F9}" }
+      - name: "Travel Insurance"
+        itemId: "{FC119B8B-49AC-4BE7-94B3-14F462BAABFD}"
+        path: "/sitecore/content/bcaa/bcaa/Data/HeroST Items/Travel Insurance"
+        eyebrow: "Travel Insurance"
+        title: "Coverage from $20 a trip"
+        link1: { text: "BUY TRAVEL", targetId: "{91F51DCE-D53C-487E-A6DA-BEC0A75220B7}" }
+        link2: { text: "EMERGENCY MEDICAL", targetId: "{1761958F-CB60-428C-8021-4EAB84191F12}" }
+      - name: "Automotive"
+        itemId: "{7137A1A8-C464-4867-AA69-D912AE42DA73}"
+        path: "/sitecore/content/bcaa/bcaa/Data/HeroST Items/Automotive"
+        eyebrow: "Automotive"
+        title: "Trusted auto service"
+        link1: { text: "BOOK A SERVICE", targetId: "{25B2A392-D531-4381-A96D-EFC882EF5F92}" }
+        link2: { text: "APPROVED REPAIR", targetId: "{CCC511C3-41B6-4DFC-8CE3-E83112DD89CF}" }
+      - name: "Evo Car Share"
+        itemId: "{A3D8517F-C447-4DF4-8391-5870F5918FF5}"
+        path: "/sitecore/content/bcaa/bcaa/Data/HeroST Items/Evo Car Share"
+        eyebrow: "Evo Car Share"
+        title: "Made for getting around BC"
+        link1: { text: "LEARN ABOUT EVO", targetId: "{0759F6F2-FC63-4B46-8EBE-3C58F6FBB7F5}" }
+        link2: { text: "JOIN BCAA", targetId: "{BBF62BA8-0DBB-4440-BE45-B308745C6FFD}" }
+    verification:
+      checkedAt: "2026-10-13T10:30:00Z"
+      passed:
+        - "Folder /sitecore/content/bcaa/bcaa/Data/HeroST Items has 6 HeroST children"
+        - "Eyebrow, Title, Image1, Image2, Link1, Link2 verified on all six via get_content_item_by_path"
+        - "BlogHeader Variant Definition {9C2A75D5} verified under bcaa Headless Variants/HeroST"
+      failed: []
+      pendingManual:
+        - "Publish /sitecore/content/bcaa/bcaa/Data/HeroST Items for Edge"
+        - "In Pages, assign each HeroST instance a datasource from this folder"
+        - "Publish Presentation/Headless Variants/HeroST/BlogHeader for Edge"
+        - "On blog pages, set HeroST variant to BlogHeader (MCP cannot set FieldNames)"
 
   - name: "bcaa-blog-articles"
     kind: "content-update"

@@ -83,18 +83,18 @@
     @apply inline-block text-sm font-medium transition-colors;
 
     &.btn-primary {
-      @apply py-3 px-5 rounded-full bg-primary;
+      @apply py-3 px-5 rounded-full bg-primary text-primary-foreground;
 
       &:hover {
-        @apply bg-primary-hover;
+        @apply bg-primary-hover text-primary-foreground;
       }
     }
 
     &.btn-secondary {
-      @apply py-3 px-5 rounded-full bg-light text-secondary-foreground;
+      @apply py-3 px-5 rounded-full bg-light text-primary;
 
       &:hover {
-        @apply bg-light-hover;
+        @apply bg-light-hover text-primary;
       }
     }
 
@@ -111,11 +111,7 @@
     }
 
     &.btn-outline {
-      @apply py-3 px-5 rounded-full bg-primary outline;
-    }
-
-    &:hover {
-      @apply bg-primary-hover;
+      @apply py-3 px-5 rounded-full bg-primary text-primary-foreground outline;
     }
   }
 }
