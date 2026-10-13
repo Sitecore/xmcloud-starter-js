@@ -20,6 +20,7 @@ export default defineCliConfig({
           // Exclude non-component sidecars from import map generation
           '**/*.props.ts',
           '**/*.props.tsx',
+          '**/*.facets.ts',
           '**/*.util.ts',
           '**/*.util.tsx',
           '**/*.dictionary.ts',
@@ -48,6 +49,7 @@ export default defineCliConfig({
       // Exclude non-component sidecars from component map generation
       '**/*.props.ts',
       '**/*.props.tsx',
+      '**/*.facets.ts',
       '**/*.schema.ts',
       '**/*.util.ts',
       '**/*.util.tsx',

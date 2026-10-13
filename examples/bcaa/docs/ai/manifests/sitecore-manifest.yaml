@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-10-13T14:00:00Z"
+lastUpdatedAt: "2026-10-13T16:50:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -3258,7 +3258,7 @@ lookups:
   - path: "/sitecore/content/bcaa/bcaa/Presentation/Available Renderings/click-click-launch"
     itemId: "{0101102F-25A6-4191-B1C6-8D66A14D2C13}"
     lastReadAt: "2026-10-07T17:45:00Z"
-    note: "Available Renderings — NEVER replace, always concatenate. lastKnownValue ends with ArticleContent {3835A3FE-0943-407F-ACD3-6818F9AFA8A0}"
+    note: "Available Renderings — NEVER replace, always concatenate. lastKnownValue ends with BlogListing {7D365EF8-ED8C-44CD-BEBF-363D8D89361C}"
   - path: "/sitecore/content/progressive/pkm/Data"
     itemId: "{D37965BE-ED74-4694-9040-57AD038A3B70}"
     lastReadAt: "2026-08-24T12:30:00Z"
@@ -12969,7 +12969,7 @@ externalImageOptimizerAudit:
     category: "Navigation"
     status: "partial"
     createdAt: "2026-10-05T22:10:00Z"
-    updatedAt: "2026-10-06T00:45:00Z"
+    updatedAt: "2026-10-13T16:45:00Z"
     siteName: "bcaa"
     notes: >
       Rebuilt the main mega menu under
@@ -13004,6 +13004,12 @@ externalImageOptimizerAudit:
       In Pages, pick the variants by name. Impact secondary order on the placeholder is
       Road Safety, Wildfire Resilience, Giving Back (IA order is Wildfire, Road Safety, Giving Back).
       MCP cannot reorder or set FieldNames.
+      2026-10-13: Added a BCAA Blog Link child to each L1 mega menu, targeting
+      /sitecore/content/bcaa/bcaa/Home/BCAA Blog {77866688}. Membership/Insurance/
+      Automotive/Marketplace Primary Links gained a new child. Impact had no primary
+      list, so created Impact Primary Links {3F2FCF70} + Link 1 and placed LinkList
+      {58FF3395} on mega-menu-item-primary-links-3. Leftover empty
+      Impact_Primary_Links_Placeholder {FE6C5BA3} is unused.
     relatedItems:
       headerPartialDesignId: "{4895B993-C924-4AB2-94EC-2BD51FB92FA6}"
       headerDataFolderId: "{F9A2F2AC-FD65-4572-B5CD-1D7867A82ACB}"
@@ -13018,6 +13024,7 @@ externalImageOptimizerAudit:
         - { itemName: "Insurance Primary Links", itemId: "{11DF34D7-081B-440C-B204-DB19C301C731}", path: "/sitecore/content/bcaa/bcaa/Presentation/Partial Designs/Global/Header/Data/Insurance Primary Links" }
         - { itemName: "Automotive Primary Links", itemId: "{426FEE43-B542-4C1C-91C8-F8FD6A2BBE7B}", path: "/sitecore/content/bcaa/bcaa/Presentation/Partial Designs/Global/Header/Data/Automotive Primary Links" }
         - { itemName: "Marketplace Primary Links", itemId: "{3DAA9D03-901A-4080-948D-29CF332C42E3}", path: "/sitecore/content/bcaa/bcaa/Presentation/Partial Designs/Global/Header/Data/Marketplace Primary Links" }
+        - { itemName: "Impact Primary Links", itemId: "{3F2FCF70-E66B-4FBE-B55D-12E1CF847FDF}", path: "/sitecore/content/bcaa/bcaa/Presentation/Partial Designs/Global/Header/Data/Impact Primary Links" }
       secondaryLinkLists:
         - { itemName: "Membership Plans", itemId: "{D3429226-909A-4DEA-8F0C-DDDE62356052}", title: "Plans" }
         - { itemName: "Insurance Home", itemId: "{6B3C4D7A-CCE9-4432-AD83-82816C48F0C7}", title: "Home" }
@@ -13323,7 +13330,7 @@ externalImageOptimizerAudit:
     category: "IA"
     status: "complete"
     createdAt: "2026-10-06T13:00:00Z"
-    updatedAt: "2026-10-06T13:10:00Z"
+    updatedAt: "2026-10-13T16:30:00Z"
     siteName: "bcaa"
     siteCollection: "bcaa"
     contentRootPath: "/sitecore/content/bcaa/bcaa/Home/BCAA Blog"
@@ -13341,6 +13348,10 @@ externalImageOptimizerAudit:
       pageThumbnail (need taxonomy IDs / media). Workflow: Draft. create_page failed
       (GraphQL field name); create_content_item succeeded despite Page+Redirect-only
       insert options on the parent.
+      2026-10-13: Copied Beat the heat FINAL presentation (HeroST BlogHeader + Automotive DS,
+      ArticleContent context, CTA Banner {DABDC6F5}, Container Full Bleed DP2/DP6, Container 70
+      DP4+Styles) onto the other 9 Article Page siblings via __Final Renderings. Left BCAA Blog
+      listing parent unchanged.
     blogPages:
       - { title: "How to maximize your BC summer road trip (and save on the way)", itemId: "{7AD64539-A3CC-48E5-9353-AA5AC40F03E9}", path: "/sitecore/content/bcaa/bcaa/Home/BCAA Blog/How to maximize your BC summer road trip", date: "2026-07-01", source: "https://www.bcaa.com/blog/membership/great-bc-road-trips-for-your-bucket-list" }
       - { title: "Six tips when you protect your trip with Travel Insurance", itemId: "{3087710E-9790-4663-ACCF-11865A042F1C}", path: "/sitecore/content/bcaa/bcaa/Home/BCAA Blog/Six tips when you protect your trip with Travel Insurance", date: "2026-06-15", source: "https://www.bcaa.com/blog/travel/six-tips-to-protect-your-trip-with-travel-insurance" }
@@ -13480,7 +13491,7 @@ externalImageOptimizerAudit:
         - "Confirm __Standard values link on the RP template in Content Editor (MCP silent-write)"
         - "Publish ArticleContent rendering, Headless Variants, Available Renderings, and Beat the heat page for Edge"
         - "Optional: remove empty Rich Text {D61AB6FE-6379-4953-B42A-797F650313EE} from the sample page; MCP cannot delete renderings"
-        - "Optional: place ArticleContent on remaining BCAA Blog Article Pages"
+        - "ArticleContent is now on all 10 BCAA Blog Article Pages (2026-10-13 presentation copy)"
 
   - name: "bcaa-footer-version2"
     kind: "content-update"
@@ -13540,3 +13551,141 @@ externalImageOptimizerAudit:
         - "Set Secondary Links FieldNames to FooterCtas {F6713F30}"
         - "Publish Footer partial design and Data folder for Edge"
         - "MCP cannot set FieldNames; variantId on set_component_datasource is personalization only"
+
+  - name: "bcaa-blog-article-presentation-copy"
+    kind: "content-update"
+    category: "Presentation"
+    status: "complete"
+    createdAt: "2026-10-13T16:00:00Z"
+    updatedAt: "2026-10-13T16:30:00Z"
+    siteName: "bcaa"
+    siteCollection: "bcaa"
+    sourcePage:
+      name: "Beat the heat summer checklist"
+      itemId: "{C3528652-4FE4-480A-A860-5BF899B716DF}"
+      path: "/sitecore/content/bcaa/bcaa/Home/BCAA Blog/Beat the heat summer checklist"
+    method: "MCP update_fields_on_item __Final Renderings (silent write; verified via get_components_on_page)"
+    notes: >
+      Copied Beat the heat FINAL layout onto all 9 sibling Article Pages under BCAA Blog.
+      Did not apply to the BCAA Blog listing parent {77866688}. Shared HeroST Automotive
+      {7137A1A8} and CTA Banner {DABDC6F5} (local to Beat the heat Data) so siblings without
+      their own CTA still render. FieldNames set in XML: HeroST BlogHeader {9C2A75D5},
+      ArticleContent Default {2F6EE827}.
+    layout:
+      deviceId: "{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+      layoutId: "{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"
+      components:
+        - { name: "Container Full Bleed", uid: "{1E24F50F-ECAD-4925-B028-654B93A1652E}", ph: "headless-main", dp: "2" }
+        - { name: "Container 70", uid: "{75B94739-C82C-4BEC-978D-C2811C31B09A}", ph: "headless-main", dp: "4", styles: "{417CFF95}|{AE80F34C}|{EF966498}" }
+        - { name: "Container Full Bleed", uid: "{E3602665-E6C8-4A63-B397-C4A4BD09DD59}", ph: "headless-main", dp: "6" }
+        - { name: "HeroST", uid: "{8F8E7183-C23A-42F3-AA2F-7686A5B12DD5}", ph: "/headless-main/container-fullbleed-2", ds: "{7137A1A8-C464-4867-AA69-D912AE42DA73}", fieldNames: "{9C2A75D5-51AE-499A-AE25-49C139FD8112}", dp: "9" }
+        - { name: "ArticleContent", uid: "{DA6A774A-2885-4009-84A3-82F57983FC1F}", ph: "/headless-main/container-seventy-4", fieldNames: "{2F6EE827-E1D1-4463-90A8-20A61FE089C7}", dp: "8" }
+        - { name: "CTA Banner", uid: "{D5047C48-4899-4E9B-AC74-3D047C742DD4}", ph: "/headless-main/container-fullbleed-6", ds: "{DABDC6F5-B4A2-4519-BE3C-F5E567375824}", dp: "7" }
+    appliedTo:
+      - "{7AD64539-A3CC-48E5-9353-AA5AC40F03E9}"
+      - "{3087710E-9790-4663-ACCF-11865A042F1C}"
+      - "{AFABC1CF-4EEC-4725-9E4C-6D2279199C1B}"
+      - "{99B4E352-A317-48D9-9B1D-CB68B7F70FEE}"
+      - "{E1BDAFB5-D391-4DA6-8C02-91355E4C37AD}"
+      - "{F3C75B1E-18F6-4274-A936-515DCABA22B0}"
+      - "{3BC0AAA3-B95E-474A-9E88-B0006838467F}"
+      - "{6EBA5EEC-773E-479B-986F-E666BE1B611A}"
+      - "{351F13CC-3607-44BC-A462-2E379A67BB19}"
+    verification:
+      checkedAt: "2026-10-13T16:30:00Z"
+      passed:
+        - "get_components_on_page FINAL on all 9 siblings returns the same 6 renderings as Beat the heat"
+        - "HeroST FieldNames BlogHeader {9C2A75D5} + Automotive DS {7137A1A8}"
+        - "ArticleContent FieldNames Default {2F6EE827} in container-seventy-4"
+        - "CTA Banner DS {DABDC6F5} in container-fullbleed-6"
+      failed: []
+      pendingManual:
+        - "Publish the 9 sibling Article Pages (and shared HeroST/CTA datasources) for Edge"
+        - "Optionally give each article its own HeroST datasource later; all currently share Automotive"
+
+  - name: "BlogListing"
+    kind: "simple"
+    category: "Page Content"
+    status: "complete"
+    createdAt: "2026-10-13T16:35:00Z"
+    updatedAt: "2026-10-13T16:50:00Z"
+    siteName: "bcaa"
+    siteCollection: "bcaa"
+    notes: >
+      BCAA BlogListing lists Article Page children of BlogsRoot (Droptree) with client
+      search and FilterFacets topic chips. Placed on /Home/BCAA Blog headless-main.
+      ComponentQuery also reads contextItem children as fallback. Cards variant is
+      currently selected on the page instance.
+    react:
+      filePath: "src/components/uiim/article/BlogListing.tsx"
+      componentMapKey: "BlogListing"
+      propsShape: "graphql-datasource"
+      variants:
+        - "Default"
+        - "Cards"
+    templates:
+      parent:
+        path: "/sitecore/templates/Project/click-click-launch/Components/Page Content/BlogListing"
+        itemId: "{C05D87AA-214D-4F24-A1AD-DDAAC4A77955}"
+        standardValues: "{BB6DAF12-02BF-420B-8D94-03D5A242FC80}"
+        fields:
+          - { name: "Title", type: "Single-Line Text", itemId: "{B2D38B87-CF32-439F-B1C7-D14822831D15}" }
+          - { name: "Intro", type: "Rich Text", itemId: "{D60FC030-E82F-4D61-BE60-596E7FB3EA19}" }
+          - { name: "BlogsRoot", type: "Droptree", itemId: "{E5A7DB93-B113-45DB-A468-8AF02735FEA7}", source: "/sitecore/content/bcaa/bcaa/Home" }
+          - { name: "EmptyResultsText", type: "Single-Line Text", itemId: "{A06FE6A8-9603-434C-8887-5CBB25DE451C}" }
+          - { name: "ShowFilters", type: "Checkbox", itemId: "{752CDE64-A7CD-4FF3-9865-7E6219DD79A0}" }
+          - { name: "FilterFacets", type: "Multi-Line Text", itemId: "{2F6437E5-CE81-4F68-B940-5DBFE18D2784}" }
+          - { name: "FilterFacetLabel", type: "Single-Line Text", itemId: "{1C7EFD22-7612-4003-B9B3-602D3EA43CC0}" }
+          - { name: "SearchPlaceholder", type: "Single-Line Text", itemId: "{69C2FFBF-87C0-44A0-A6DC-9F3591FAE657}" }
+      folder:
+        path: "/sitecore/templates/Project/click-click-launch/Components/Page Content/BlogListing Folder"
+        itemId: "{6C5ABB1B-079C-4CFD-A23D-1C493734F942}"
+        standardValues: "{13154029-D9A9-42EE-AE31-009A631EDB16}"
+      renderingParams:
+        path: "/sitecore/templates/Project/click-click-launch/Components/Page Content/Rendering Parameters/BlogListing"
+        itemId: "{3CF527A9-7CC9-4B3B-82E0-D498541E092E}"
+        standardValues: "{4B673C12-7A6F-4253-BB8F-D77831A8208A}"
+    rendering:
+      path: "/sitecore/layout/Renderings/Project/click-click-launch/Page Content/BlogListing"
+      itemId: "{7D365EF8-ED8C-44CD-BEBF-363D8D89361C}"
+      componentName: "BlogListing"
+      datasourceTemplatePath: "/sitecore/templates/Project/click-click-launch/Components/Page Content/BlogListing"
+      useComponentQuery: true
+      registeredInAvailableRenderings: true
+      availableRenderingsItemId: "{B0C76346-9DDC-4BE7-BFC0-48CF79CF263C}"
+      clickClickLaunchAvailableRenderingsItemId: "{0101102F-25A6-4191-B1C6-8D66A14D2C13}"
+    datasourceFolder:
+      path: "/sitecore/content/bcaa/bcaa/Data/Blog Listings"
+      itemId: "{7FAA50EF-51AA-4F25-B3DF-0BF9B21FDBDA}"
+      exampleItem:
+        name: "BCAA Blog Listing"
+        itemId: "{8DB4F72B-9ACA-4E69-8EF5-71BBE9F27F84}"
+        blogsRoot: "{77866688-BF56-4708-B308-14D3996B9585}"
+    pagePlacement:
+      pagePath: "/sitecore/content/bcaa/bcaa/Home/BCAA Blog"
+      pageId: "{77866688-BF56-4708-B308-14D3996B9585}"
+      placeholder: "headless-main"
+      instanceId: "{F90D4CA2-211B-4A27-80C8-9B440582161E}"
+      datasourceId: "{8DB4F72B-9ACA-4E69-8EF5-71BBE9F27F84}"
+      fieldNames: "{803F1987-328C-436F-99AC-9C8D73F709FC}"
+    variants:
+      containerPath: "/sitecore/content/bcaa/bcaa/Presentation/Headless Variants/BlogListing"
+      containerId: "{E9C9588E-67DE-40AB-B009-24BC91D6DF40}"
+      definitions:
+        - { name: "Default", itemId: "{27E2802C-42A0-4DEE-82F8-C58CD85B06F6}" }
+        - { name: "Cards", itemId: "{803F1987-328C-436F-99AC-9C8D73F709FC}" }
+    verification:
+      checkedAt: "2026-10-13T16:50:00Z"
+      passed:
+        - "get_component datasourceRequired=true; Droptree BlogsRoot + filter fields"
+        - "JSON Rendering componentName=BlogListing; Parameters Template GUID; ComponentQuery set"
+        - "Datasource Location points at BlogListing Folder"
+        - "Registered in Available Renderings/Page Content and click-click-launch (concatenated)"
+        - "Placed on BCAA Blog with BlogsRoot={77866688} and ShowFilters=1"
+        - "9/9 BlogListing + facet unit tests passed"
+      failed: []
+      pendingManual:
+        - "Publish BlogListing rendering, Headless Variants, Data/Blog Listings, and BCAA Blog for Edge"
+        - "Optional leftover local DS /sitecore/content/bcaa/bcaa/Home/BCAA Blog/Data/BCAA_Blog_Listing {6565F732} is unused after rebind"
+        - "pageThumbnail is empty on current articles so cards render without images until DAM is assigned"
+        - "Switch FieldNames from Cards to Default in Pages if a row layout is preferred"
