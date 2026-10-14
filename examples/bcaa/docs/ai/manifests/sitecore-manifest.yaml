@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-10-13T16:50:00Z"
+lastUpdatedAt: "2026-10-14T13:00:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -13069,7 +13069,7 @@ externalImageOptimizerAudit:
     category: "Carousel"
     status: "complete"
     createdAt: "2026-10-06T08:50:00Z"
-    updatedAt: "2026-10-11T20:25:00Z"
+    updatedAt: "2026-10-14T01:00:00Z"
     notes:
       - "2026-10-06: Created click-click-launch Carousel templates to match Image Carousel / Image Carousel Item / Image Carousels Folder."
       - "2026-10-06: Created JSON Rendering, Rendering Parameters (Image Carousel four bases), Data/Carousels folder, example parent + two slides, Headless Variants Default, and appended to Available Renderings/click-click-launch next to ImageCarousel."
@@ -13079,6 +13079,7 @@ externalImageOptimizerAudit:
       - "2026-10-11: Rewrote Carousel_upcoming Renewal {E7109CDA} slides for a guest with car insurance due in the next 90 days (ICBC renew, optional coverage review, myBCAA)."
       - "2026-10-11: Replaced Carousel_upcoming Renewal DAM homepage images with media library Cars on road {E16E4730}, electric car {8BDD11E3}, and person {5EDE601F}."
       - "2026-10-11: Rewrote Carousel_Renewal_past {D83C9E4A} for a lapsed renewal — caring win-back copy, new images, links to Car / ICBC / Book an Appointment."
+      - "2026-10-14: Added Carousel_Prospect {F8F14F74} for guests who are not members (membership_status=false). Three slides: Join Roadside, Ways to Save, Compare Plans."
 
     react:
       filePath: "src/components/carousel/Carousel.tsx"
@@ -13190,6 +13191,15 @@ externalImageOptimizerAudit:
               - { name: "Slide 1", itemId: "{6E9EA811-A034-42C7-AEA7-5F82BD3DAE0D}", linkPageId: "{78755BA6-DFB8-4519-88F6-09254C30674F}" }
               - { name: "Slide 2", itemId: "{38B23D36-ECBE-4673-8BB3-AB142B1C541C}", linkPageId: "{A1A17E81-98D2-40BC-BA73-ACA6477285F9}" }
               - { name: "Slide 3", itemId: "{89A926CE-5C95-4947-8B1F-DB46E1943D3E}", linkPageId: "{70C13551-7C50-4792-95E0-599005047DE0}" }
+          - name: "Carousel_Prospect"
+            itemId: "{F8F14F74-DBFA-4A4D-9515-FA27FEFDF642}"
+            path: "/sitecore/content/bcaa/bcaa/Data/Carousels/Carousel_Prospect"
+            audience: "membership_status=false / not a member"
+            title: "British Columbia is better with BCAA"
+            children:
+              - { name: "Join Roadside", itemId: "{9DC30C0C-DE80-4A45-A3EB-8F465DBFA03E}", linkPageId: "{BBF62BA8-0DBB-4440-BE45-B308745C6FFD}" }
+              - { name: "Ways to Save", itemId: "{6A073E70-AEBC-46EF-8695-AFD1FBAD3533}", linkPageId: "{3390420C-357D-49C0-BCA3-40B4DD3ED77F}" }
+              - { name: "Compare Plans", itemId: "{A2B31019-C577-4DC5-BEAC-D7CBDEE33E44}", linkPageId: "{A12CBB20-B5CB-4A0E-8598-4A15CB93EF83}" }
 
     rendering:
       name: "Carousel"
@@ -13608,14 +13618,19 @@ externalImageOptimizerAudit:
     category: "Page Content"
     status: "complete"
     createdAt: "2026-10-13T16:35:00Z"
-    updatedAt: "2026-10-13T16:50:00Z"
+    updatedAt: "2026-10-14T01:20:00Z"
     siteName: "bcaa"
     siteCollection: "bcaa"
     notes: >
-      BCAA BlogListing lists Article Page children of BlogsRoot (Droptree) with client
-      search and FilterFacets topic chips. Placed on /Home/BCAA Blog headless-main.
-      ComponentQuery also reads contextItem children as fallback. Cards variant is
-      currently selected on the page instance.
+      BCAA BlogListing lists Article Page children of the blog page with client
+      search and a Topics dropdown. Placed on /Home/BCAA Blog headless-main (Cards).
+      2026-10-14: Pages showed only Search + "No articles match" because the layout
+      ComponentQuery still failed (children expansion). Query is now chrome-only.
+      Articles load from GET /api/blog-listing via Edge children of BlogsRoot
+      {77866688}. Topics dropdown uses authored FilterFacets or DEFAULT_FILTER_FACETS.
+      2026-10-14: Cards now use image-left rows with pageSummary and READ MORE.
+      ComponentQuery requests pageThumbnail/pageSummary; React merges API details
+      when layout children are name/url only. Thumbnails are authored on pageThumbnail.
     react:
       filePath: "src/components/uiim/article/BlogListing.tsx"
       componentMapKey: "BlogListing"
@@ -13675,17 +13690,19 @@ externalImageOptimizerAudit:
         - { name: "Default", itemId: "{27E2802C-42A0-4DEE-82F8-C58CD85B06F6}" }
         - { name: "Cards", itemId: "{803F1987-328C-436F-99AC-9C8D73F709FC}" }
     verification:
-      checkedAt: "2026-10-13T16:50:00Z"
+      checkedAt: "2026-10-14T02:10:00Z"
       passed:
         - "get_component datasourceRequired=true; Droptree BlogsRoot + filter fields"
-        - "JSON Rendering componentName=BlogListing; Parameters Template GUID; ComponentQuery set"
+        - "JSON Rendering componentName=BlogListing; Parameters Template still {3CF527A9}"
+        - "ComponentQuery verified chrome-only (no children / LookupField)"
+        - "15/15 BlogListing + util unit tests passed"
         - "Datasource Location points at BlogListing Folder"
         - "Registered in Available Renderings/Page Content and click-click-launch (concatenated)"
         - "Placed on BCAA Blog with BlogsRoot={77866688} and ShowFilters=1"
-        - "9/9 BlogListing + facet unit tests passed"
+        - "pageThumbnail set on Beat the heat and sibling articles"
       failed: []
       pendingManual:
-        - "Publish BlogListing rendering, Headless Variants, Data/Blog Listings, and BCAA Blog for Edge"
+        - "Publish BlogListing rendering, Data/Blog Listings, BCAA Blog, and article pages for Edge"
+        - "Restart localhost:3000 so /api/blog-listing and the client fetch are live in Pages"
         - "Optional leftover local DS /sitecore/content/bcaa/bcaa/Home/BCAA Blog/Data/BCAA_Blog_Listing {6565F732} is unused after rebind"
-        - "pageThumbnail is empty on current articles so cards render without images until DAM is assigned"
         - "Switch FieldNames from Cards to Default in Pages if a row layout is preferred"

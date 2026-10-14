@@ -7,6 +7,7 @@ import {
   Link as ContentSdkLink,
 } from '@sitecore-content-sdk/nextjs';
 import { getDatasource, getFieldValue } from '@/lib/component-props';
+import { normalizeSitecoreImageField } from '@/lib/sitecore-image';
 import type { PageHeaderSTProps } from './hero-st.props';
 
 const heroBtnPrimary = 'btn btn-primary btn-sharp !rounded-none !text-primary-foreground';
@@ -309,6 +310,7 @@ export const BlogHeader = (props: PageHeaderSTProps) => {
   const fields = getDatasource(props.fields);
   const link1 = getFieldValue(fields?.Link1);
   const link2 = getFieldValue(fields?.Link2);
+  const image1 = normalizeSitecoreImageField(getFieldValue(fields?.Image1) ?? fields?.Image1);
   const hasLink1 = Boolean(link1?.value?.href || link1?.value?.text);
   const hasLink2 = Boolean(link2?.value?.href || link2?.value?.text);
 
@@ -317,16 +319,18 @@ export const BlogHeader = (props: PageHeaderSTProps) => {
       className={`relative overflow-hidden ${props?.params?.styles || ''}`}
       data-class-change
     >
-      <div className="relative min-h-[10rem] max-h-[16rem] lg:min-h-[12rem] lg:max-h-[18rem]">
+      <div className="relative min-h-[10rem] overflow-hidden lg:min-h-[12rem]">
         <div className="absolute inset-0">
-          <ContentSdkImage
-            field={getFieldValue(fields?.Image1)}
-            width={1920}
-            height={720}
-            priority={true}
-            fetchPriority="high"
-            className="h-full w-full object-cover"
-          />
+          {image1 && (
+            <ContentSdkImage
+              field={image1}
+              fill
+              sizes="100vw"
+              priority={true}
+              fetchPriority="high"
+              className="object-cover"
+            />
+          )}
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative z-10 mx-auto flex min-h-[10rem] max-w-7xl flex-col justify-end px-4 py-6 lg:min-h-[12rem] lg:px-8 lg:py-8">

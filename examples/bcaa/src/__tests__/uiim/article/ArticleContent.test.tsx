@@ -74,6 +74,7 @@ describe('ArticleContent', () => {
       )
     ).toBeInTheDocument();
     expect(screen.getByTestId('article-body').innerHTML).toContain('How to keep your home cool');
+    expect(screen.getByText('July 15, 2026')).toBeInTheDocument();
   });
 
   it('applies styles and rendering identifier', () => {

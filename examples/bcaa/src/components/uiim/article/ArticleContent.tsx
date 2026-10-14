@@ -9,6 +9,21 @@ import type { ArticleContentProps, ArticleContentRouteFields } from './article-c
 const hasText = (field?: Field<string>): boolean => Boolean(field?.value);
 const hasRichText = (field?: RichTextField): boolean => Boolean(field?.value);
 
+const formatDisplayDate = (raw?: string): string => {
+  if (!raw) return '';
+  const sitecore = raw.match(/^(\d{4})(\d{2})(\d{2})/);
+  const parsed = sitecore
+    ? new Date(Date.UTC(Number(sitecore[1]), Number(sitecore[2]) - 1, Number(sitecore[3])))
+    : new Date(raw);
+  if (Number.isNaN(parsed.getTime())) return raw;
+  return new Intl.DateTimeFormat('en-CA', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  }).format(parsed);
+};
+
 const ArticleContentEmpty = (): JSX.Element => (
   <div className="component article-content">
     <div className="component-content">
@@ -83,11 +98,14 @@ export const Default = ({ params, page }: ArticleContentProps): JSX.Element => {
 
         {showMeta && (
           <div className="text-muted-foreground mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
-            {showDate && (
-              <time dateTime={pageDisplayDate?.value || undefined}>
+            {showDate &&
+              (isEditing ? (
                 <Text field={pageDisplayDate} />
-              </time>
-            )}
+              ) : (
+                <time dateTime={pageDisplayDate?.value || undefined}>
+                  {formatDisplayDate(pageDisplayDate?.value)}
+                </time>
+              ))}
             {showDate && showReadTime && <span aria-hidden="true">•</span>}
             {showReadTime && <Text field={pageReadTime} />}
           </div>

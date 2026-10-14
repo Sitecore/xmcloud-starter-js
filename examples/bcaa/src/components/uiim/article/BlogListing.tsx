@@ -1,21 +1,24 @@
 'use client';
 
 import type { JSX } from 'react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import {
-  NextImage as ContentSdkImage,
-  RichText as ContentSdkRichText,
-  Text,
-  useSitecore,
-} from '@sitecore-content-sdk/nextjs';
+import { RichText as ContentSdkRichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { getFieldValue } from '@/lib/component-props';
 import { hasFacetConfig, matchFacets, parseFacetConfig } from './blog-listing.facets';
 import type { BlogListingArticle, BlogListingProps } from './blog-listing.props';
+import {
+  DEFAULT_FILTER_FACETS,
+  articleNeedsDetails,
+  getPlaceholderImage,
+  getLayoutArticles,
+  mergeArticles,
+  resolveBlogsRoot,
+  toPublicHref,
+} from './blog-listing.util';
 
 const fieldText = (field?: { jsonValue?: { value?: string }; value?: string }): string => {
   const value = getFieldValue(field)?.value ?? field?.value;
@@ -42,11 +45,7 @@ const dateSortValue = (raw?: string): number => {
   return Number.isNaN(parsed.getTime()) ? 0 : parsed.getTime();
 };
 
-const getArticles = (fields?: BlogListingProps['fields']): BlogListingArticle[] => {
-  const fromRoot = fields?.data?.datasource?.blogsRoot?.targetItem?.children?.results;
-  const fromContext = fields?.data?.contextItem?.children?.results;
-  return (fromRoot?.length ? fromRoot : fromContext) ?? [];
-};
+export { isArticlePage } from './blog-listing.util';
 
 const BlogListingEmpty = (): JSX.Element => (
   <div className="component blog-listing">
@@ -58,57 +57,52 @@ const BlogListingEmpty = (): JSX.Element => (
 
 const BlogCard = ({
   article,
-  layout,
 }: {
   article: BlogListingArticle;
-  layout: 'row' | 'card';
 }): JSX.Element => {
   const title = fieldText(article.pageHeaderTitle) || fieldText(article.pageTitle) || article.name || 'Untitled';
   const summary = fieldText(article.pageSummary);
   const shortTitle = fieldText(article.pageShortTitle);
   const date = formatDisplayDate(fieldText(article.pageDisplayDate));
   const readTime = fieldText(article.pageReadTime);
-  const href = article.url?.path || '#';
-  const imageField = getFieldValue(article.pageThumbnail) ?? article.pageThumbnail?.jsonValue;
-  const hasImage = Boolean(imageField?.value?.src);
+  const href = toPublicHref(article.url?.path, article.name);
+  const image = getPlaceholderImage(article);
 
   return (
-    <Card
-      className={cn(
-        'border-border bg-background overflow-hidden shadow-none',
-        layout === 'row' && '@md:flex-row'
-      )}
+    <article
+      className="border-border @md:grid @md:grid-cols-2 @md:items-center @md:gap-10"
       data-testid="blog-listing-card"
     >
-      <Link href={href} className={cn('flex h-full', layout === 'row' ? 'flex-col @md:flex-row' : 'flex-col')}>
-        {hasImage && (
-          <div
-            className={cn(
-              'bg-muted relative overflow-hidden',
-              layout === 'row' ? 'aspect-[16/9] @md:w-72 @md:shrink-0 @md:aspect-auto' : 'aspect-[16/9]'
-            )}
-          >
-            <ContentSdkImage field={imageField} className="h-full w-full object-cover" />
-          </div>
-        )}
-        <CardContent className="flex flex-1 flex-col gap-3 p-6">
-          {shortTitle && (
-            <Badge variant="secondary" className="font-body w-fit text-xs tracking-wide uppercase">
-              {shortTitle}
-            </Badge>
-          )}
-          <h3 className="font-heading text-foreground text-pretty text-xl font-normal tracking-tight @md:text-2xl">
-            {title}
-          </h3>
-          {(date || readTime) && (
-            <p className="text-muted-foreground text-sm">
-              {[date, readTime].filter(Boolean).join(' · ')}
-            </p>
-          )}
-          {summary && <p className="text-muted-foreground line-clamp-3 text-base">{summary}</p>}
-        </CardContent>
+      <Link href={href} className="bg-muted relative block aspect-[16/10] overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={image.src} alt={image.alt} className="h-full w-full object-cover" />
       </Link>
-    </Card>
+      <div className="flex flex-col gap-4 py-6 @md:py-0">
+        {shortTitle && (
+          <Badge variant="secondary" className="font-body w-fit text-xs tracking-wide uppercase">
+            {shortTitle}
+          </Badge>
+        )}
+        <h3 className="font-heading text-foreground text-pretty text-2xl font-normal tracking-tight @md:text-4xl">
+          <Link href={href}>{title}</Link>
+        </h3>
+        {(date || readTime) && (
+          <p className="text-muted-foreground text-sm">
+            {[date, readTime].filter(Boolean).join(' · ')}
+          </p>
+        )}
+        {summary && (
+          <p className="text-muted-foreground line-clamp-3 text-base @md:text-lg" data-testid="blog-listing-summary">
+            {summary}
+          </p>
+        )}
+        <div>
+          <Link href={href} className="btn btn-primary" data-testid="blog-listing-read-more">
+            READ MORE
+          </Link>
+        </div>
+      </div>
+    </article>
   );
 };
 
@@ -123,14 +117,55 @@ const BlogListingView = ({
   const isEditing = Boolean(props.isPageEditing || page?.mode?.isEditing);
   const { styles, RenderingIdentifier } = props.params || {};
   const datasource = props.fields?.data?.datasource;
+  const hasAssignedDatasource = Boolean(datasource || props.rendering?.dataSource);
 
   const [query, setQuery] = useState('');
   const [activeFacet, setActiveFacet] = useState('all');
+  const [fetchedArticles, setFetchedArticles] = useState<BlogListingArticle[]>([]);
+  const [isLoadingArticles, setIsLoadingArticles] = useState(false);
 
-  const articles = useMemo(() => getArticles(props.fields), [props.fields]);
-  const facetConfig = parseFacetConfig(fieldText(datasource?.filterFacets));
-  const configuredFacets = hasFacetConfig(fieldText(datasource?.filterFacets));
-  const showFilters = isChecked(datasource?.showFilters) || isEditing;
+  const layoutArticles = useMemo(() => getLayoutArticles(props.fields), [props.fields]);
+  const articles = useMemo(
+    () => mergeArticles(layoutArticles, fetchedArticles),
+    [fetchedArticles, layoutArticles]
+  );
+  const needsDetails = layoutArticles.length === 0 || layoutArticles.some(articleNeedsDetails);
+  const authoredFacets = fieldText(datasource?.filterFacets);
+  const facetConfig = parseFacetConfig(authoredFacets || DEFAULT_FILTER_FACETS);
+  const configuredFacets = hasFacetConfig(authoredFacets || DEFAULT_FILTER_FACETS);
+  const showFilters = isChecked(datasource?.showFilters) || isEditing || configuredFacets;
+  const blogsRoot = resolveBlogsRoot(props, page);
+  const language = page?.locale || 'en';
+
+  useEffect(() => {
+    if (!needsDetails) return undefined;
+
+    let cancelled = false;
+    setIsLoadingArticles(true);
+
+    const ids = layoutArticles
+      .map((article) => article.id)
+      .filter((id): id is string => Boolean(id))
+      .join(',');
+    const params = new URLSearchParams({ root: blogsRoot, language });
+    if (ids) params.set('ids', ids);
+
+    fetch(`/api/blog-listing?${params.toString()}`)
+      .then((response) => (response.ok ? response.json() : { articles: [] }))
+      .then((data: { articles?: BlogListingArticle[] }) => {
+        if (!cancelled) setFetchedArticles(data.articles ?? []);
+      })
+      .catch(() => {
+        if (!cancelled) setFetchedArticles([]);
+      })
+      .finally(() => {
+        if (!cancelled) setIsLoadingArticles(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [blogsRoot, language, layoutArticles, needsDetails]);
 
   const taggedArticles = useMemo(
     () =>
@@ -152,10 +187,7 @@ const BlogListingView = ({
     [articles, configuredFacets, facetConfig]
   );
 
-  const visibleFacets = useMemo(() => {
-    const present = new Set(taggedArticles.flatMap((item) => item.tags));
-    return facetConfig.filter((facet) => present.has(facet.label));
-  }, [facetConfig, taggedArticles]);
+  const visibleFacets = facetConfig;
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -166,7 +198,7 @@ const BlogListingView = ({
     });
   }, [activeFacet, query, taggedArticles]);
 
-  if (!datasource && !isEditing) {
+  if (!hasAssignedDatasource && !isEditing) {
     return <BlogListingEmpty />;
   }
 
@@ -196,28 +228,28 @@ const BlogListingView = ({
         )}
 
         {showFilters && (
-          <div className="mt-8 flex flex-col gap-4 @md:flex-row @md:items-center">
-            <label className="sr-only" htmlFor="blog-listing-search">
-              Search articles
+          <div className="mt-8 grid gap-4 @md:grid-cols-2">
+            <label className="flex flex-col gap-2 text-sm">
+              <span className="text-muted-foreground">{searchPlaceholder}</span>
+              <Input
+                id="blog-listing-search"
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={searchPlaceholder}
+              />
             </label>
-            <Input
-              id="blog-listing-search"
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder={searchPlaceholder}
-              className="max-w-md"
-            />
-            {configuredFacets && visibleFacets.length > 0 && (
-              <label className="flex items-center gap-2 text-sm">
-                <span className="text-muted-foreground whitespace-nowrap">{facetLabel}</span>
+            {configuredFacets && (
+              <label className="flex flex-col gap-2 text-sm">
+                <span className="text-muted-foreground">{facetLabel}</span>
                 <select
-                  className="border-input bg-background h-9 rounded-md border px-3 text-sm"
+                  className="border-input bg-background h-9 w-full rounded-md border px-3 text-sm"
                   value={activeFacet}
                   onChange={(event) => setActiveFacet(event.target.value)}
                   aria-label={facetLabel}
+                  data-testid="blog-listing-topic-filter"
                 >
-                  <option value="all">All</option>
+                  <option value="all">All topics</option>
                   {visibleFacets.map((facet) => (
                     <option key={facet.label} value={facet.label}>
                       {facet.label}
@@ -259,19 +291,18 @@ const BlogListingView = ({
           </div>
         )}
 
-        {filtered.length === 0 ? (
+        {isLoadingArticles && articles.length === 0 ? (
+          <p className="text-muted-foreground mt-10" data-testid="blog-listing-loading">
+            Loading articles...
+          </p>
+        ) : filtered.length === 0 ? (
           <p className="text-muted-foreground mt-10" data-testid="blog-listing-empty">
             {emptyText}
           </p>
         ) : (
-          <div
-            className={cn(
-              'mt-10 grid gap-6',
-              layout === 'card' ? '@md:grid-cols-2 @lg:grid-cols-3' : 'grid-cols-1'
-            )}
-          >
+          <div className="mt-10 flex flex-col gap-12 @md:gap-16">
             {filtered.map((item) => (
-              <BlogCard key={item.article.id || item.title} article={item.article} layout={layout} />
+              <BlogCard key={item.article.id || item.title} article={item.article} />
             ))}
           </div>
         )}
@@ -285,5 +316,5 @@ export const Default = (props: BlogListingProps): JSX.Element => (
 );
 
 export const Cards = (props: BlogListingProps): JSX.Element => (
-  <BlogListingView props={props} layout="card" />
+  <BlogListingView props={props} layout="row" />
 );

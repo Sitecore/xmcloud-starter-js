@@ -5,6 +5,7 @@ export type BlogListingArticle = {
   id?: string;
   name?: string;
   url?: { path?: string };
+  template?: { id?: string; name?: string };
   pageTitle?: GraphQLField<Field<string>>;
   pageHeaderTitle?: GraphQLField<Field<string>>;
   pageShortTitle?: GraphQLField<Field<string>>;

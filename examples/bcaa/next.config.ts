@@ -51,6 +51,21 @@ const nextConfig: NextConfig = {
         hostname: '*.stylelabs.io',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: '*.sitecorecloud.io',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'edge.sitecorecloud.io',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'edge-platform.sitecorecloud.io',
+        port: '',
+      },
     ],
     // Optimize image sizes for responsive loading
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -63,7 +78,26 @@ const nextConfig: NextConfig = {
   
   // Sitemap, robots, and AI JSON endpoints via rewrites; handlers live under app/api/
   rewrites: async () => {
+    const edgeHost = (
+      process.env.NEXT_PUBLIC_SITECORE_EDGE_PLATFORM_HOSTNAME ||
+      process.env.SITECORE_EDGE_PLATFORM_HOSTNAME ||
+      ''
+    ).replace(/\/$/, '');
+    const edgeOrigin = edgeHost
+      ? edgeHost.startsWith('http')
+        ? edgeHost
+        : `https://${edgeHost}`
+      : '';
+
     return [
+      ...(edgeOrigin
+        ? [
+            {
+              source: '/-/media/:path*',
+              destination: `${edgeOrigin}/-/media/:path*`,
+            },
+          ]
+        : []),
       {
         // sitemap.xml serves the main sitemap
         source: '/sitemap.xml',

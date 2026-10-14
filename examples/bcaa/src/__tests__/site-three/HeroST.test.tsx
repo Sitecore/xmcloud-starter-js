@@ -263,7 +263,26 @@ describe('HeroST', () => {
       const { container } = render(<HeroSTBlogHeader {...mockProps} />);
       const section = container.querySelector('section');
       expect(section).not.toHaveClass('lg:min-h-[50rem]');
-      expect(container.innerHTML).toContain('max-h-[16rem]');
+      expect(container.innerHTML).toContain('min-h-[10rem]');
+    });
+
+    it('renders Image1 when the field is Sitecore media XML', () => {
+      const xmlImageProps: any = {
+        ...mockProps,
+        fields: {
+          ...mockProps.fields,
+          Image1: {
+            value: '<image mediaid="{8432420A-CA72-4BD8-94E9-4E509982205F}" alt="Auto service" />',
+          },
+        },
+      };
+
+      render(<HeroSTBlogHeader {...xmlImageProps} />);
+
+      expect(screen.getByAltText('Auto service')).toHaveAttribute(
+        'src',
+        '/-/media/8432420ACA724BD894E94E509982205F.ashx'
+      );
     });
 
     it('renders eyebrow and title', () => {
