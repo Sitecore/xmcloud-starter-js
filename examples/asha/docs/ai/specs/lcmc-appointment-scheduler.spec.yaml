@@ -1,0 +1,35 @@
+# LCMC Appointment Scheduler — component spec
+
+component:
+  name: LcmcAppointmentScheduler
+  kind: list
+  category: appointments
+  filePath: src/components/uiim/appointments/LcmcAppointmentScheduler.tsx
+  siteCollection: lcmc
+  siteName: lcmc
+
+source:
+  wordDoc: "Experience for finding an appointment and booking.docx"
+  screens:
+    - visit-types: Patient Appointments card grid (Check up, Sick visit, …)
+    - slots: Filters + relative-date availability + time buttons
+    - finish: Finish Scheduling with MyChart-style login vs guest
+    - post-login: no screenshots — demo login + confirmation invented for LCMC
+
+react:
+  propsShape: graphql-datasource
+  variants: [Default]
+  physicians:
+    source: /sitecore/content/lcmc/lcmc/Data/Physicians
+    api: /api/physician-listing
+    count: 26
+    demoEntWjmc:
+      name: Gabrielle Moreau, MD
+      itemId: "{24EB9BF3-BFD6-4D01-87A7-BAF6D3DA421C}"
+      specialty: ENT
+      location: West Jefferson Medical Center
+
+rendering:
+  datasourceRequired: true
+  useComponentQuery: true
+  componentName: LcmcAppointmentScheduler

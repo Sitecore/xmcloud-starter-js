@@ -1,0 +1,108 @@
+# Client Brand Theme — Amkor Technology
+# Wired into the app via the create-new-theme skill (data-theme="amkor").
+# Token CSS: src/assets/styles/themes/amkor.css
+
+client:
+  name: "Amkor Technology"
+  sourceUrl: "https://amkor.com/"
+  extractedAt: "2026-08-24"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#002D5B"
+  primaryForeground: "#ffffff"
+  secondary: "#F4F4F4"
+  secondaryForeground: "#002D5B"
+  accent: "#2B59FF"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#212529"
+  muted: "#F4F4F4"
+  mutedForeground: "#677385"
+  headerBackground: "#1E1E1E"
+  headerForeground: "#ffffff"
+  footerBackground: "#002D5B"
+  footerForeground: "#ffffff"
+  border: "#D4D4D4"
+  ring: "#2B59FF"
+    extra:
+    - name: "primary-hover"
+      value: "#00244A"
+    - name: "accent-hover"
+      value: "#244ADB"
+    - name: "footer-mid"
+      value: "#677385"
+    - name: "careers-magenta"
+      value: "#C2185B"
+    - name: "header-utility"
+      value: "#4E4E4E"
+    - name: "header-background"
+      value: "#1E1E1E"
+    - name: "header-menu"
+      value: "#111111"
+    - name: "header-muted"
+      value: "#A8A8A8"
+    - name: "header-lang-active"
+      value: "#3A3A3A"
+    - name: "utility-bar"
+      value: "#4E4E4E"
+    - name: "border-radius"
+      value: "0"
+
+typography:
+  headingFamily: "Open Sans"
+  headingWeight: "600"
+  bodyFamily: "Open Sans"
+  bodyWeight: "400"
+  googleFontsUrl: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  scale:
+    hero: "56px"
+    h1: "56px"
+    h2: "45px"
+    h3: "34px"
+    body: "16px"
+    small: "14px"
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "subtle"
+
+tone:
+  overall: "corporate-high-tech"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "technical-photography"
+  heroStyle: "full-bleed-image-with-overlay-text"
+  cardStyle: "flat-image-title"
+  navStyle: "two-tone-charcoal-bars"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#002D5B"
+      secondary: "#F4F4F4"
+      accent: "#2B59FF"
+  fontFamily:
+    heading: ["Open Sans", "Arial", "ui-sans-serif", "system-ui", "sans-serif"]
+    body: ["Open Sans", "Arial", "ui-sans-serif", "system-ui", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0"
+
+extraction:
+  confidence: "high"
+  method: "user-screenshot-primary + playwright-supplementary"
+  notes:
+    - "Screenshot is source of truth for two-tone charcoal header (utility #4E4E4E / main #1E1E1E) and vibrant hero CTA (#2B59FF). Navy #002D5B remains primary/footer."
+    - "Playwright computed styles returned muted gray body/footer (#677385) and Open Sans typography."
+    - "Google Fonts link confirms Open Sans 300/400/600/700 — already loaded via next/font as --font-open-sans."
+    - "Proprietary icon fonts (electricFont, mems) ignored; UI uses Open Sans."
+    - "Square geometry (0 radius) on buttons and cards. Live .button has no border-radius; CTAs are rectangular."
+    - "Hero photography uses white overlay type. HeroST Dark Image maps to white text (not primary-foreground)."
+    - "Hero primary CTA matches live .light_button (~#3858e9 / token accent #2B59FF), white uppercase label. Secondary matches live default .button (white fill, navy label)."
+    - "Careers section uses magenta/pink geometric band (~#C2185B) as brand accent extra."
+    - "Primary = navy chrome; accent = vibrant CTA blue; btn-primary styled to accent in fonts.css."

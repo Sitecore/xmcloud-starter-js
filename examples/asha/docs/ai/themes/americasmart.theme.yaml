@@ -1,0 +1,103 @@
+# Client Brand Theme — AmericasMart Atlanta
+# Screenshot primary; Playwright scraper timed out (page.goto load). Style guide + web for fonts.
+
+client:
+  name: "AmericasMart Atlanta"
+  sourceUrl: "https://www.americasmart.com/"
+  extractedAt: "2026-08-24T12:20:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#003B4F"
+  primaryForeground: "#ffffff"
+  secondary: "#F5F1EE"
+  secondaryForeground: "#003B4F"
+  accent: "#000000"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#1a1a1a"
+  muted: "#F2F2F2"
+  mutedForeground: "#5c6670"
+  headerBackground: "#ffffff"
+  headerForeground: "#1a1a1a"
+  footerBackground: "#ffffff"
+  footerForeground: "#1a1a1a"
+  border: "#e0e0e0"
+  ring: "#003B4F"
+  extra:
+    - { name: "heroBeige", value: "#F5F1EE" }
+    - { name: "sectionNavy", value: "#003B4F" }
+    - { name: "resourcesGray", value: "#F2F2F2" }
+
+typography:
+  headingFamily: "'Montserrat', sans-serif"
+  headingWeight: "700"
+  bodyFamily: "'Open Sans', sans-serif"
+  bodyWeight: "400"
+  monoFamily: ""
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+  scale:
+    hero: "3rem"
+    h1: "2.25rem"
+    h2: "1.75rem"
+    h3: "1.25rem"
+    body: "1rem"
+    small: "0.875rem"
+  headingTransform: "uppercase"
+  letterSpacing: "0.04em"
+  lineHeight: "relaxed"
+
+spacing:
+  density: "comfortable"
+  sectionGap: "4rem"
+  containerMaxWidth: "1280px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "0"
+  imageRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "subtle"
+
+tone:
+  overall: "professional wholesale marketplace — navy, beige, white"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "lifestyle product photography, oval collage hero"
+  heroStyle: "warm beige band, bold navy headline, solid navy CTA"
+  cardStyle: "whitespace-separated grids, no heavy borders/shadows"
+  navStyle: "slim white header, black logo wordmark"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#003B4F"
+      secondary: "#F5F1EE"
+      accent: "#000000"
+  fontFamily:
+    heading: ["Montserrat", "ui-sans-serif", "system-ui", "sans-serif"]
+    body: ["Open Sans", "ui-sans-serif", "system-ui", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0"
+    button: "0"
+    card: "0"
+
+cssVariables: |
+  --color-primary: #003B4F;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #F5F1EE;
+  --color-muted: #F2F2F2;
+  --color-accent: #000000;
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+
+extraction:
+  confidence: "medium"
+  method: "screenshot-primary + style-guide (Avenir) + brand cues; Playwright scraper timed out"
+  notes:
+    - "Proprietary Avenir 45/65 → Montserrat (headings) + Open Sans (body) Google Font substitutes"
+    - "Primary navy/teal #003B4F for bands, CTAs, hero headings"
+    - "Warm beige #F5F1EE hero surface; light gray #F2F2F2 resources"
+    - "Sharp rectangular buttons (radius 0); uppercase display headlines"

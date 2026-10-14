@@ -1,0 +1,40 @@
+# DFS Knowledge Hub IA
+
+Root: `/sitecore/content/dfs/dfs/Home/Knowledge Hub` `{384F9157-D1D0-4B57-8B75-2D0920BD56D8}` (pre-existing — do not recreate)
+
+Template: Detail Page `{0DEBCAB2-4EBA-47D8-A01C-42F0CEB6B223}`
+
+Status: **complete** (2026-08-20) — 6 L1 + 21 L2 Detail Pages created
+
+- Knowledge Hub `{384F9157-D1D0-4B57-8B75-2D0920BD56D8}`
+  - Getting Started `{09C3E73D-6E03-436B-901D-39AB28A00579}`
+    - Portal Overview `{55D323E0-5F49-4BDC-8C5C-CFCBAFE04EE9}`
+    - First Login Checklist `{592CC4A9-CF45-452F-99D2-9001F0C1A34A}`
+    - Store Manager Quick Start `{8BA19AA9-DED6-4B20-BA25-2F94BB3E8B41}`
+  - Help Articles `{022F7A43-3A2D-4B70-BACD-EF534DC2F22A}`
+    - How to Place an Order `{D3ECE3C3-2163-4B1E-AD23-A4FC07C0DE7A}`
+    - Track Shipments `{2C7652D6-7690-4CAE-813C-487AF67BE6B0}`
+    - Update Store Profile `{B35F3085-5801-4A2C-9FB0-6CDB9B1BC420}`
+    - Reset Password `{3FBE2FC5-307B-447B-95F0-2F4BCB35A12D}`
+    - Multi-Location Accounts `{8794E83F-2213-4B05-97EB-CD164B52207A}`
+  - Policies `{6AA41D90-FF8A-403B-AF67-12C801A457B3}`
+    - Ordering Policy `{2177EE3D-28DC-4B53-8E35-1FBD9849C198}`
+    - Delivery and Receiving `{2EF3734D-7514-4A38-85D9-D0CE86F5F62D}`
+    - Returns and Credits `{B6047FE8-49CD-4DBF-AEB5-0CD55A924E51}`
+    - Food Safety Compliance `{688E9E67-EAEC-4465-A7DC-AE8237A9A60D}`
+    - Acceptable Use `{CC9FE8FE-4CCA-4939-9A03-EB01FE3AEFD3}`
+  - Training `{C36DB300-1462-4C6D-876E-D692CB34EF03}`
+    - New Manager Orientation `{05931E2C-3931-4532-AC42-367B28BA8DB5}`
+    - Equipment Safety Basics `{79CAA0CE-E1B4-4492-8F95-44CE02F1B4AB}`
+    - Inventory Best Practices `{23EC6181-18F8-446A-9419-78A367C8D695}`
+    - Cold Chain Handling `{422C0AA8-4BD6-464D-B6DA-7715390A941F}`
+  - Service Documentation `{0585863A-8285-45B1-B2D9-886E477CB97B}`
+    - Equipment Warranty Guide `{4B9BF7B4-5689-4996-AEBC-76D8D015A294}`
+    - Maintenance Request Process `{ABC93C52-108F-4E76-BE6C-E2A05C5CF0B8}`
+    - Parts Catalog Overview `{B7460608-CBEE-4F1F-9C1B-90FE21B99B1E}`
+    - Service Level Agreements `{CEA7EBCB-EB89-4780-8A38-8FD750C66201}`
+  - FAQs `{D1B5CFC8-F0CA-49B9-8DEB-602F269CF166}`
+    - Ordering FAQs `{BAEF5842-64DF-411F-B863-A46F3C832CF3}`
+    - Billing FAQs `{4B476492-6A0F-4A64-8410-B24DD4737A4A}`
+    - Delivery FAQs `{0FE4A8B7-DEFA-4B78-A232-7882E08D41E5}`
+    - Account Access FAQs `{E3CE81B7-16B7-4949-A746-7D965A37F87E}`

@@ -1,0 +1,25 @@
+{
+  "colors": {
+    "bodyBackground": "rgba(0, 0, 0, 0)",
+    "bodyColor": "rgb(0, 0, 0)",
+    "headerBackground": null
+  },
+  "typography": {
+    "bodyFontFamily": "\"Times New Roman\"",
+    "bodyFontSize": "16px",
+    "bodyFontWeight": "400",
+    "bodyLineHeight": "normal",
+    "h1FontFamily": "Roboto, Arial, sans-serif",
+    "h1FontSize": "36px",
+    "h1FontWeight": "700",
+    "h1LetterSpacing": "normal",
+    "h1TextTransform": "none",
+    "pFontSize": "20px",
+    "pLineHeight": "28px"
+  },
+  "shape": {},
+  "spacing": {
+    "containerMaxWidth": null
+  },
+  "cssVariables": {}
+}

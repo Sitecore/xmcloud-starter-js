@@ -1,0 +1,938 @@
+[
+  {
+    "id": "a3caec3b-1a9d-4ffe-a8e1-926c1540e0ae",
+    "path": "/About-Us/Careers/Vietnam",
+    "name": "Vietnam",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in Vietnam\" />",
+    "detail": "Careers – Vietnam Amkor is committed to a long-term manufacturing presence in Vietnam and offers career growth opportunities. Explore careers in Vietnam"
+  },
+  {
+    "id": "74297bc9-7ea0-496d-a956-882befee3230",
+    "path": "/About-Us/Careers/United-States",
+    "name": "United States",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in the United States\" />",
+    "detail": "Careers – United States Amkor seeks dynamic professionals who blend creativity and experience with vision and cooperation. Explore U.S. careers"
+  },
+  {
+    "id": "0591f743-0efd-4d29-8f9f-36b1ca3fd8f7",
+    "path": "/About-Us/Careers/Taiwan",
+    "name": "Taiwan",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in Taiwan\" />",
+    "detail": "Careers – Taiwan Since 2001, Amkor has provided Taiwan customers with broad packaging and test capabilities. Explore careers in Taiwan"
+  },
+  {
+    "id": "be496562-4bea-4149-a834-878a9705495a",
+    "path": "/About-Us/Careers/Singapore",
+    "name": "Singapore",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in Singapore\" />",
+    "detail": "Careers – Singapore Amkor Technology Singapore focuses on sales and support operations and seeks dynamic professionals. Explore careers in Singapore"
+  },
+  {
+    "id": "e0c7ceb1-0ec3-4b9c-b96c-684c52dce4ab",
+    "path": "/About-Us/Careers/Portugal",
+    "name": "Portugal",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in Portugal\" />",
+    "detail": "Careers – Portugal Amkor Portugal offers a state-of-the-art environment where qualified teams deliver services beyond customer expectations. Explore careers in Portugal"
+  },
+  {
+    "id": "e6f535ce-2dd6-4c05-b48b-61e24b56753d",
+    "path": "/About-Us/Careers/Philippines",
+    "name": "Philippines",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in the Philippines\" />",
+    "detail": "Careers – Philippines Amkor's Philippines factories provide a full range of assembly and test services and seek dynamic professionals. Explore careers in the Philippines"
+  },
+  {
+    "id": "1d867eb1-ba61-43ab-aa09-802772f6c5ed",
+    "path": "/About-Us/Careers/Malaysia",
+    "name": "Malaysia",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in Malaysia\" />",
+    "detail": "Careers – Malaysia Amkor Technology Malaysia seeks committed professionals who blend creativity and experience with vision and cooperation. Explore careers in Malaysia"
+  },
+  {
+    "id": "f4f4b8b7-38c9-4990-9934-9a55a96cc425",
+    "path": "/About-Us/Careers/Korea",
+    "name": "Korea",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in Korea\" />",
+    "detail": "Careers – Korea Amkor Technology Korea provides advanced package and test services and is home to Amkor's R&amp;D Center. Explore careers in Korea"
+  },
+  {
+    "id": "254aca3f-5147-4fc8-a52b-8280ce28ee4a",
+    "path": "/About-Us/Careers/Japan",
+    "name": "Japan",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in Japan\" />",
+    "detail": "Careers – Japan Amkor Technology supports the electronics industry through assembly and test services and seeks employees committed to continuous company and personal growth. Explore careers in Japan"
+  },
+  {
+    "id": "5d82fb89-2858-4c0f-82a2-f51a6b4a2e4d",
+    "path": "/About-Us/Careers/Germany",
+    "name": "Germany",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in Germany\" />",
+    "detail": "Careers – Germany Amkor seeks dynamic professionals who combine creativity and experience with vision and cooperation. Explore careers in Germany"
+  },
+  {
+    "id": "924a3636-8b21-45b4-a0ec-c37eae4e6e1a",
+    "path": "/About-Us/Careers/France",
+    "name": "France",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in France\" />",
+    "detail": "Careers – France Amkor provides sales, technical support and logistics services to EMEA customers from France and seeks dynamic professionals. Explore careers in France"
+  },
+  {
+    "id": "e746baff-d4f8-4202-953d-6c491fa8f038",
+    "path": "/About-Us/Careers/China",
+    "name": "China",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor careers in China\" />",
+    "detail": "Careers – China Amkor is committed to long-term manufacturing expansion in China and seeks professionals who combine creativity, experience, vision and cooperation. Explore careers in China"
+  },
+  {
+    "id": "17d30160-59dd-44a9-9ada-a4aecc425f1c",
+    "path": "/About-Us/Mission",
+    "name": "Mission",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor Technology\" />",
+    "detail": "Our Mission Amkor's mission is to be the world's premier semiconductor assembly and test services company through customer satisfaction, leading-edge technology and financial performance. Learn more about Amkor"
+  },
+  {
+    "id": "e320a2ce-1336-4b69-9bbf-a4a037cb2f90",
+    "path": "/About-Us/Memberships-and-Partnerships",
+    "name": "Memberships and Partnerships",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor memberships and partnerships\" />",
+    "detail": "Memberships and Partnerships Amkor participates in global industry memberships and associations that support innovation and collaboration. View memberships and partnerships"
+  },
+  {
+    "id": "229db77c-8772-482b-863d-763554d4f19f",
+    "path": "/About-Us/Leadership",
+    "name": "Leadership",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor Technology\" />",
+    "detail": "Leadership Amkor's management team includes experienced semiconductor professionals who guide a strategic manufacturing resource serving leading semiconductor companies. Meet Amkor's leadership"
+  },
+  {
+    "id": "1bf4ddf7-3a85-4655-840f-81bb7d1478d1",
+    "path": "/About-Us/Corporate-Responsibility",
+    "name": "Corporate Responsibility",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor corporate responsibility\" />",
+    "detail": "Corporate Responsibility Amkor is committed to environmental stewardship, responsible business practices and creating value for stakeholders. Explore corporate responsibility"
+  },
+  {
+    "id": "08b4621b-314d-40b5-8d63-cf579db1ee28",
+    "path": "/About-Us/Company-History",
+    "name": "Company History",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor Technology\" />",
+    "detail": "Company History Amkor started its semiconductor business in Korea in 1968 and has grown into a global leader in outsourced semiconductor assembly and test. Explore Amkor's history"
+  },
+  {
+    "id": "6f39ec02-daa7-4fed-9e65-e31a9daf37f1",
+    "path": "/About-Us/Careers",
+    "name": "Careers",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor Technology careers\" />",
+    "detail": "Careers at Amkor Amkor has career opportunities around the world. Choose a country or region and take the next step toward joining the team. Explore Amkor careers"
+  },
+  {
+    "id": "b6b4da5a-f8b2-4ad1-bf08-02aadf88c82e",
+    "path": "/About-Us/Amkor-Overview",
+    "name": "Amkor Overview",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor Technology\" />",
+    "detail": "Amkor Overview Amkor combines customer service, engineering expertise and high-volume manufacturing excellence to solve complex semiconductor industry challenges. Read the Amkor overview"
+  },
+  {
+    "id": "f4903ca0-fbf5-4486-b2a9-80da52523bf9",
+    "path": "/Technology/2-5D-3D-TSV",
+    "name": "2-5D 3D TSV",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"2.5D and 3D TSV\" />",
+    "detail": "2.5D/3D TSV Amkor's technology portfolio includes Through Silicon Via and advanced 2.5D and 3D packaging solutions. Explore Amkor technology"
+  },
+  {
+    "id": "19478127-ae96-474e-ae08-9f6601dcda94",
+    "path": "/Technology/3D-Stacked-Die",
+    "name": "3D Stacked Die",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"3D stacked die\" />",
+    "detail": "3D Stacked Die Amkor develops high-volume 3D die stacking technologies for higher silicon integration and area efficiency. Explore 3D stacked die"
+  },
+  {
+    "id": "d6b40cff-cac3-436f-9c1e-5fc6dd652472",
+    "path": "/Technology/AiP-AoP",
+    "name": "AiP AoP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"AiP and AoP technology\" />",
+    "detail": "AiP/AoP Amkor's technology portfolio includes Antenna in Package and Antenna on Package solutions for advanced wireless applications. Explore Amkor technology"
+  },
+  {
+    "id": "cf68dbf5-9228-4cac-b321-6d71ffcb4975",
+    "path": "/Technology/Chip-on-Chip",
+    "name": "Chip-on-Chip",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Chip-on-Chip technology\" />",
+    "detail": "Chip-on-Chip Amkor Chip-on-Chip connects multiple dies with fine flip chip interconnects without requiring Through Silicon Vias. Explore Chip-on-Chip"
+  },
+  {
+    "id": "7e5c8a64-1aca-47ae-9c00-5bd02f82ac81",
+    "path": "/Technology/Copper-Pillar",
+    "name": "Copper Pillar",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Copper pillar technology\" />",
+    "detail": "Copper Pillar Copper pillar bump supports fine-pitch flip chip interconnect with density, compliance and electromigration advantages. Explore copper pillar"
+  },
+  {
+    "id": "371658f9-84d7-403c-a28a-fea5b30bc028",
+    "path": "/Technology/Edge-Protection",
+    "name": "Edge Protection",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Edge Protection technology\" />",
+    "detail": "Edge Protection™ Edge Protection is part of Amkor's advanced technology portfolio for robust semiconductor package designs. Explore Amkor technology"
+  },
+  {
+    "id": "65d76b35-6818-4960-9507-25c44ea92be9",
+    "path": "/Technology/Flip-Chip",
+    "name": "Flip Chip",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Flip chip technology\" />",
+    "detail": "Flip Chip Amkor offers a broad range of flip chip in-package solutions supporting performance, density and thermal requirements. Explore flip chip"
+  },
+  {
+    "id": "db60af32-8d68-46f2-b24a-afece62ebee0",
+    "path": "/Technology/Interconnect",
+    "name": "Interconnect",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Semiconductor interconnect\" />",
+    "detail": "Interconnect Amkor offers silver alloy, copper and palladium-coated copper wirebond alternatives for semiconductor interconnect. Explore interconnect"
+  },
+  {
+    "id": "a11ae558-fcaf-437e-93ca-64a7ac7f6e2d",
+    "path": "/Technology/Optical-Sensors",
+    "name": "Optical Sensors",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Optical sensor packaging\" />",
+    "detail": "Optical Sensors Amkor provides optical sensor packaging for automotive, consumer and advanced sensing applications. Explore optical sensors"
+  },
+  {
+    "id": "d36a3f10-8a1c-46e6-bffc-59f318c87129",
+    "path": "/Technology/Package-on-Package",
+    "name": "Package-on-Package",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Package-on-Package\" />",
+    "detail": "Package-on-Package Amkor PoP solutions combine stacked packages with small footprints for mobile, IoT and portable electronic products. Explore PoP"
+  },
+  {
+    "id": "1f93ed97-c9e0-4a5e-9b79-aba7befd2157",
+    "path": "/Technology/S-Connect",
+    "name": "S-Connect",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"S-Connect technology\" />",
+    "detail": "S-Connect™ S-Connect is Amkor's embedded silicon bridge interposer solution for enhanced power and signal integrity. Explore S-Connect"
+  },
+  {
+    "id": "661eebcd-90ee-4393-a085-f4ff6710a826",
+    "path": "/Technology/S-SWIFT",
+    "name": "S-SWIFT",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"S-SWIFT technology\" />",
+    "detail": "S-SWIFT™ S-SWIFT enables high-performance, cost-effective integration of multiple chiplets and memories. Explore S-SWIFT"
+  },
+  {
+    "id": "b49f5bee-b6d4-4e71-8249-d814522087a9",
+    "path": "/Technology/SWIFT",
+    "name": "SWIFT",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"SWIFT technology\" />",
+    "detail": "SWIFT® Amkor SWIFT high-density fan-out technology increases I/O and circuit density within reduced footprints and profiles. Explore SWIFT"
+  },
+  {
+    "id": "53463616-8870-4f0d-95c1-4371d992c7db",
+    "path": "/Technology",
+    "name": "Technology",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor technology\" />",
+    "detail": "Technology Amkor develops advanced packaging technologies including TSV, SiP, copper pillar, flip chip, MEMS, optical sensors and 3D solutions. Explore Amkor technology"
+  },
+  {
+    "id": "1efa1bc9-1495-4b58-8cc2-02e569b24a01",
+    "path": "/About-Us/Smart-Manufacturing-I40",
+    "name": "Smart Manufacturing I40",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor smart manufacturing\" />",
+    "detail": "Smart Factory Manufacturing Amkor's Industry 4.0 strategy uses automation, data-driven intelligence and advanced manufacturing technologies. Explore smart manufacturing"
+  },
+  {
+    "id": "df23610e-a0c4-4e95-a316-ab794cff927f",
+    "path": "/About-Us/Contact-Us",
+    "name": "Contact Us",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Contact Amkor\" />",
+    "detail": "Contact Amkor Find Amkor corporate locations and customer support centers around the world. View Amkor contact information"
+  },
+  {
+    "id": "8c417bb7-ed49-44d2-ba41-ff28327bc87d",
+    "path": "/About-Us/Customer-Center/Amkor-Mechanical-Samples",
+    "name": "Amkor Mechanical Samples",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor mechanical samples\" />",
+    "detail": "Amkor Mechanical Samples Mechanical samples are non-electrically functional packages for assembly process testing and may be available daisy-chained or with dummy die. Learn about mechanical samples"
+  },
+  {
+    "id": "9e1bc7d5-855f-4cd9-94dc-7d26e579d149",
+    "path": "/About-Us/Customer-Center/B2B-Integration-Services",
+    "name": "B2B Integration Services",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor B2B integration services\" />",
+    "detail": "B2B Integration Services Amkor provides customer resources that support collaboration across its global semiconductor packaging and test services. Contact Amkor for B2B integration support"
+  },
+  {
+    "id": "732461b7-be88-46a1-88d6-1ba797112060",
+    "path": "/About-Us/Customer-Center/Document-Library",
+    "name": "Document Library",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor document library\" />",
+    "detail": "Document Library Search Amkor technical documents, including data sheets, brochures, articles and white papers. Browse the document library"
+  },
+  {
+    "id": "41ff6cb6-eafe-4153-926f-bdff896db03c",
+    "path": "/About-Us/Customer-Center",
+    "name": "Customer Center",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor Customer Center\" />",
+    "detail": "Customer Center Access Amkor mechanical samples, B2B integration services and the technical document library. Browse customer resources"
+  },
+  {
+    "id": "518df9e7-844e-413a-9f74-42108efee527",
+    "path": "/Quality",
+    "name": "Quality",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor QualityFIRST\" />",
+    "detail": "Quality Policy Amkor's QualityFIRST initiative embeds consistent standards, accountability and continuous improvement across manufacturing and customer service. Explore Amkor quality"
+  },
+  {
+    "id": "10c697ec-265d-45f2-9007-eaa023c90a93",
+    "path": "/Services/Design-Services",
+    "name": "Design Services",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor design services\" />",
+    "detail": "Design Services Amkor's global design centers provide package engineering, co-design, design-for-cost and design-for-manufacturing expertise. Explore design services"
+  },
+  {
+    "id": "9d26ccbe-06c5-4098-beb7-b6a75cb65357",
+    "path": "/Services/Package-Characterization",
+    "name": "Package Characterization",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Package characterization\" />",
+    "detail": "Package Characterization Amkor provides electrical, mechanical, RF and thermal characterization to optimize package designs. Explore package characterization"
+  },
+  {
+    "id": "4332e3ea-a3af-413a-bc52-b32861d6392b",
+    "path": "/Services/Wafer-Bumping",
+    "name": "Wafer Bumping",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Wafer bumping\" />",
+    "detail": "Wafer Bumping Amkor provides production-certified wafer bumping and die-level interconnect technologies across strategic global locations. Explore wafer bumping"
+  },
+  {
+    "id": "e1435cb8-ede6-4a86-911f-58cb91c3300d",
+    "path": "/Services",
+    "name": "Services",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor services\" />",
+    "detail": "Services Amkor supports customers with package design, characterization, wafer probe, bumping and test across global facilities. Explore Amkor services"
+  },
+  {
+    "id": "2d3b2322-d080-4557-9e16-cb198f62c8aa",
+    "path": "/Applications/Artificial-Intelligence",
+    "name": "Artificial Intelligence",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Artificial intelligence packaging\" />",
+    "detail": "Artificial Intelligence Amkor advanced packaging supports AI acceleration, high-performance chiplet integration, memory and high-speed networking. Explore AI applications"
+  },
+  {
+    "id": "bc03eecc-5e7c-4897-8ace-7e834f2bed1e",
+    "path": "/Applications/Automotive",
+    "name": "Automotive",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Automotive semiconductor packaging\" />",
+    "detail": "Automotive Amkor provides automotive packaging technologies for body electronics, ADAS, electrification, infotainment, safety and powertrain applications. Explore automotive applications"
+  },
+  {
+    "id": "5559500a-a62e-480f-81af-fc453032ae38",
+    "path": "/Applications/Communications",
+    "name": "Communications",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Communications semiconductor packaging\" />",
+    "detail": "Communications Amkor packaging supports wired and wireless infrastructure, 5G products, routers, base stations, smartphones and connected devices. Explore communications applications"
+  },
+  {
+    "id": "24d543c6-0796-4451-ab0b-5dae2240f86a",
+    "path": "/Applications/Computing",
+    "name": "Computing",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Computing semiconductor packaging\" />",
+    "detail": "Computing Amkor packages address performance, integration and thermal challenges across PCs, data centers, high-performance computing and cloud systems. Explore computing applications"
+  },
+  {
+    "id": "2c473693-3137-409c-a698-cb2604c67b9d",
+    "path": "/Applications/Consumer",
+    "name": "Consumer",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Consumer electronics packaging\" />",
+    "detail": "Consumer Amkor packaging serves appliances, gaming, multimedia, television, wearables and other cost-competitive consumer electronics. Explore consumer applications"
+  },
+  {
+    "id": "7b96d5b1-7adc-487a-a990-2784e633dabc",
+    "path": "/Applications/Industrial",
+    "name": "Industrial",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Industrial semiconductor packaging\" />",
+    "detail": "Industrial Amkor packaging supports automation, energy management, medical, test and measurement, aerospace and industrial sensing applications. Explore industrial applications"
+  },
+  {
+    "id": "e7c78365-d02b-4d31-a898-e5c1d16709ab",
+    "path": "/Applications/Internet-of-Things",
+    "name": "Internet of Things",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Internet of Things packaging\" />",
+    "detail": "Internet of Things Amkor packaging supports wearables, connected cars, smart homes, smart cities, industrial IoT and healthcare monitoring. Explore IoT applications"
+  },
+  {
+    "id": "a3406ef6-d1d8-4c55-920a-80e56a32d49f",
+    "path": "/Applications/Networking",
+    "name": "Networking",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Networking semiconductor packaging\" />",
+    "detail": "Networking Amkor packaging addresses performance, thermal and integration challenges in networking, data centers and high-performance computing. Explore networking applications"
+  },
+  {
+    "id": "20e5730d-e035-4835-b224-bd494a0f3c99",
+    "path": "/Applications",
+    "name": "Applications",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor applications\" />",
+    "detail": "Applications Amkor packaging solutions address automotive, communications, computing, consumer, industrial, IoT, networking and artificial intelligence applications. Explore applications"
+  },
+  {
+    "id": "7f6b1f5b-a1e3-4bab-9ff0-c57f7a2aafd7",
+    "path": "/Packaging/Laminate/CABGA-FBGA",
+    "name": "CABGA FBGA",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"CABGA and FBGA packaging\" />",
+    "detail": "CABGA/FBGA Amkor's laminate portfolio supports high-performance semiconductor packaging with scalable, reliable and cost-effective solutions. Explore laminate packaging"
+  },
+  {
+    "id": "5c8d8e99-6b07-48d5-87a9-fa4a9509a243",
+    "path": "/Packaging/Laminate/DSMBGA",
+    "name": "DSMBGA",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"DSMBGA packaging\" />",
+    "detail": "DSMBGA Amkor's double-sided molded BGA technology increases integration for RF front-end modules used in smartphones and other mobile devices. Explore DSMBGA"
+  },
+  {
+    "id": "9d6bfbe6-df0a-4340-8f9b-2b353ba47ac1",
+    "path": "/Packaging/Laminate/FCBGA",
+    "name": "FCBGA",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"FCBGA packaging\" />",
+    "detail": "FCBGA Amkor FCBGA packages combine flip chip interconnect with high-density substrate technology for high I/O, high-performance applications. Explore FCBGA"
+  },
+  {
+    "id": "73c7a566-81a0-4529-8805-f5d2b3a595fa",
+    "path": "/Packaging/Laminate/fcCSP",
+    "name": "fcCSP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"fcCSP packaging\" />",
+    "detail": "fcCSP Amkor's flip chip CSP technology enables smaller form factors and enhanced electrical performance over standard wirebond technology. Explore fcCSP"
+  },
+  {
+    "id": "764cb846-8081-439c-bab5-a0ba97f45bf7",
+    "path": "/Packaging/Laminate/FlipStack-CSP",
+    "name": "FlipStack CSP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"FlipStack CSP packaging\" />",
+    "detail": "FlipStack® CSP FlipStack CSP combines Amkor's ChipArray BGA manufacturing capabilities with flip chip CSP technology for high-density die stacking. Explore FlipStack CSP"
+  },
+  {
+    "id": "2750629a-a0ad-4650-a73c-c0794107390f",
+    "path": "/Packaging/Laminate/Interposer-PoP",
+    "name": "Interposer PoP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Interposer PoP packaging\" />",
+    "detail": "Interposer PoP Amkor's Interposer PoP platform supports fine-pitch flip chip connection and high-density interconnect access to interposer-mounted devices. Explore Interposer PoP"
+  },
+  {
+    "id": "52232711-4e01-4e3c-bfc5-97e3136af3fc",
+    "path": "/Packaging/Laminate/PBGA-TEPBGA",
+    "name": "PBGA TEPBGA",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"PBGA and TEPBGA packaging\" />",
+    "detail": "PBGA/TEPBGA Amkor's laminate portfolio provides scalable packaging options for high-performance semiconductor applications. Explore laminate packaging"
+  },
+  {
+    "id": "da1bb148-e021-42fc-afbd-b120632bfd9c",
+    "path": "/Packaging/Laminate/Stacked-CSP",
+    "name": "Stacked CSP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Stacked CSP packaging\" />",
+    "detail": "Stacked CSP Amkor's Stacked CSP family supports high-density combinations of NAND, NOR, DRAM, mixed-signal and logic devices. Explore Stacked CSP"
+  },
+  {
+    "id": "5c75f9e0-0738-48c0-b618-cc3ced67108e",
+    "path": "/Packaging/Leadframe/ePad-LQFP-TQFP",
+    "name": "ePad LQFP TQFP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"ePad LQFP and TQFP packaging\" />",
+    "detail": "ePad LQFP/TQFP Amkor's ExposedPad LQFP/TQFP family increases thermal efficiency for power-constrained standard packages. Explore ePad LQFP/TQFP"
+  },
+  {
+    "id": "f46304e7-17d5-440b-aeff-2b3f40bb9e60",
+    "path": "/Packaging/Leadframe/ePad-TSSOP-SOIC-SSOP",
+    "name": "ePad TSSOP SOIC SSOP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"ePad leadframe packaging\" />",
+    "detail": "ePad TSSOP/SOIC/SSOP Amkor's leadframe portfolio includes thermally enhanced package options for demanding semiconductor applications. Explore leadframe packages"
+  },
+  {
+    "id": "6979b580-41f1-4926-a02e-05a06cc7ace8",
+    "path": "/Packaging/Leadframe/fcMLF",
+    "name": "fcMLF",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"fcMLF packaging\" />",
+    "detail": "fcMLF® Amkor's leadframe portfolio provides compact, high-performance packaging for power and RF applications. Explore leadframe packages"
+  },
+  {
+    "id": "69a12bb3-b802-4f53-a8e5-11887f50dabd",
+    "path": "/Packaging/Leadframe/LQFP",
+    "name": "LQFP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"LQFP packaging\" />",
+    "detail": "LQFP Amkor's low-profile quad flat packages help address board density, die shrink and thin product profile requirements. Explore LQFP"
+  },
+  {
+    "id": "6435b867-5b7c-42d8-a099-d790a35729a8",
+    "path": "/Packaging/Leadframe/MicroLeadFrame",
+    "name": "MicroLeadFrame",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Micro LeadFrame packaging\" />",
+    "detail": "Micro LeadFrame® Amkor's MLF package is a near chip-scale, plastic-encapsulated package with a copper leadframe substrate and exposed-pad options. Explore Micro LeadFrame"
+  },
+  {
+    "id": "89ec5db6-0475-4b7f-a5e3-c4b0fc99d32f",
+    "path": "/Packaging/Leadframe/SOIC",
+    "name": "SOIC",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"SOIC packaging\" />",
+    "detail": "SOIC SOIC is part of Amkor's broad industry-standard leadframe package portfolio. Explore leadframe packages"
+  },
+  {
+    "id": "798c52bf-ca05-448a-b884-2191a8582973",
+    "path": "/Packaging/Leadframe/SSOP-QSOP",
+    "name": "SSOP QSOP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"SSOP and QSOP packaging\" />",
+    "detail": "SSOP/QSOP SSOP and QSOP are available within Amkor's broad leadframe package portfolio. Explore leadframe packages"
+  },
+  {
+    "id": "5c29183d-34a2-4c34-95c5-73c1cc0c81c4",
+    "path": "/Packaging/Leadframe/TQFP",
+    "name": "TQFP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"TQFP packaging\" />",
+    "detail": "TQFP Amkor's thin quad flat packages address board density, thin profiles and broad automotive and industrial performance needs. Explore TQFP"
+  },
+  {
+    "id": "2b657b54-fab2-4c16-bfc7-ad21b3f6ffa0",
+    "path": "/Packaging/Leadframe/TSSOP-MSOP",
+    "name": "TSSOP MSOP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"TSSOP and MSOP packaging\" />",
+    "detail": "TSSOP/MSOP TSSOP and MSOP are available within Amkor's broad leadframe package portfolio. Explore leadframe packages"
+  },
+  {
+    "id": "874f21e1-91b9-44bd-be36-a5aef1a95055",
+    "path": "/Packaging/System-in-Package-SiP",
+    "name": "System in Package SiP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"System in Package\" />",
+    "detail": "System in Package (SiP) Amkor SiP technology integrates greater functionality in smaller form factors with design, assembly and test services. Explore SiP"
+  },
+  {
+    "id": "5ee5f38a-d624-4836-bf30-45b31c4a6def",
+    "path": "/Packaging/MEMS-and-Sensors",
+    "name": "MEMS and Sensors",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"MEMS and sensor packaging\" />",
+    "detail": "MEMS and Sensors Amkor provides MEMS and optical sensor packaging and test services for automotive, authentication, consumer, mobile and wearable applications. Explore packaging solutions"
+  },
+  {
+    "id": "0ebc33ff-8697-49b8-a276-19bd86e99074",
+    "path": "/Packaging/Memory",
+    "name": "Memory",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor memory packaging\" />",
+    "detail": "Memory Amkor memory and storage solutions support NAND, DRAM, eMMC, M.2 modules and custom products for mobile, automotive and data centers. Explore memory packaging"
+  },
+  {
+    "id": "b508eaf5-a373-43cd-a504-d5add51ae36b",
+    "path": "/Packaging/Laminate",
+    "name": "Laminate",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor laminate packages\" />",
+    "detail": "Laminate Packages Amkor offers laminate packaging for high-power and high-speed ICs requiring enhanced electrical and thermal performance. Explore laminate packages"
+  },
+  {
+    "id": "8b6d05c9-7940-49a3-b371-44bf34e1a02a",
+    "path": "/Packaging/Leadframe",
+    "name": "Leadframe",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor leadframe packages\" />",
+    "detail": "Leadframe Packages Amkor's leadframe portfolio includes compact, high-performance packaging for automotive, consumer, memory, power and RF applications. Explore leadframe packages"
+  },
+  {
+    "id": "e3ed9b77-117e-4c17-85f5-3157c0e8658f",
+    "path": "/Packaging/Power/D2PAK-TO-263",
+    "name": "D2PAK TO-263",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"D2PAK packaging\" />",
+    "detail": "D2PAK (TO-263) Amkor's JEDEC-standard D2PAK supports high-power discrete products and automotive motor driver, power supply and converter applications. Explore D2PAK"
+  },
+  {
+    "id": "62d4d8d7-f898-428a-a18e-2c8439dc17bd",
+    "path": "/Packaging/Power/DPAK-TO-252",
+    "name": "DPAK TO-252",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"DPAK packaging\" />",
+    "detail": "DPAK (TO-252) DPAK is part of Amkor's power discrete portfolio for automotive, communications and industrial applications. Explore power packaging"
+  },
+  {
+    "id": "80b6ab7b-4d84-4158-8bfe-ebef699d5278",
+    "path": "/Packaging/Power/HSON8",
+    "name": "HSON8",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"HSON8 packaging\" />",
+    "detail": "HSON8 HSON8 maintains a 5 x 6 mm footprint and uses an exposed die pad to enhance thermal performance for medium-power applications. Explore HSON8"
+  },
+  {
+    "id": "e9069de4-c0a4-4fea-97cb-06e892fedf49",
+    "path": "/Packaging/Power/LFPAK56",
+    "name": "LFPAK56",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"LFPAK56 packaging\" />",
+    "detail": "LFPAK56–SINGLE LFPAK56 is a space-saving medium-power package designed for low on-resistance and high-speed switching MOSFETs. Explore LFPAK56"
+  },
+  {
+    "id": "879ea064-5e63-4e4c-9e80-bf6f5a5ca40f",
+    "path": "/Packaging/Power/PowerCSP",
+    "name": "PowerCSP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"PowerCSP packaging\" />",
+    "detail": "PowerCSP™ PowerCSP is part of Amkor's high-performance power discrete portfolio for power-sensitive and mobile applications. Explore power packaging"
+  },
+  {
+    "id": "3c01a53a-09cc-4c0f-b168-1e643b2a6188",
+    "path": "/Packaging/Power/PQFN",
+    "name": "PQFN",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"PQFN packaging\" />",
+    "detail": "PQFN The Power Quad Flat No-lead package is a space-saving design for a wide range of higher-power applications. Explore PQFN"
+  },
+  {
+    "id": "7c96c701-07d0-42a1-94d1-45697894e954",
+    "path": "/Packaging/Power/SO8-FL",
+    "name": "SO8-FL",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"SO8-FL packaging\" />",
+    "detail": "SO8-FL SO8-FL is a thinner, thermally enhanced power discrete package for medium-power and high-speed-switching MOSFET applications. Explore SO8-FL"
+  },
+  {
+    "id": "264cd1da-08c1-436b-bd5b-29a76020122a",
+    "path": "/Packaging/Power/SOD123-FL",
+    "name": "SOD123-FL",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"SOD123-FL packaging\" />",
+    "detail": "SOD123-FL SOD123-FL is a compact surface-mount package for Schottky barrier, rectifier and Zener diodes. Explore SOD123-FL"
+  },
+  {
+    "id": "dee4efda-6968-409f-8277-19b5d5806a32",
+    "path": "/Packaging/Power/SOD128-FL",
+    "name": "SOD128-FL",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"SOD128-FL packaging\" />",
+    "detail": "SOD128-FL SOD128-FL is a compact, thermally enhanced surface-mount package for high-efficiency diodes. Explore SOD128-FL"
+  },
+  {
+    "id": "bb04af56-1e6c-446d-8b0d-4e52ab75e736",
+    "path": "/Packaging/Power/TO-220FP",
+    "name": "TO-220FP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"TO-220FP packaging\" />",
+    "detail": "TO-220FP Amkor's TO-220FP uses copper clip construction for heat dissipation in medium- to high-voltage MOSFET and IGBT applications. Explore TO-220FP"
+  },
+  {
+    "id": "06143d15-42c6-4c73-900f-cc5b434d3101",
+    "path": "/Packaging/Power/TOLL",
+    "name": "TOLL",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"TOLL packaging\" />",
+    "detail": "TOLL (TO-Leadless) TOLL is a space-saving package designed for high-current automotive and high-power switching applications. Explore TOLL"
+  },
+  {
+    "id": "6a634542-b10f-42aa-85cd-9130dc0112c6",
+    "path": "/Packaging/Power/TSON8-FL",
+    "name": "TSON8-FL",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"TSON8-FL packaging\" />",
+    "detail": "TSON8-FL TSON8-FL combines a smaller footprint with thermally enhanced power dissipation for medium-power applications. Explore TSON8-FL"
+  },
+  {
+    "id": "7d2dc1ec-89fc-49b9-a779-7a44a51d9c3c",
+    "path": "/Packaging/Power",
+    "name": "Power",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor power packaging\" />",
+    "detail": "Power Amkor's power packages serve automotive, communications and industrial applications with advanced copper clip attach and turnkey test services. Explore power packaging"
+  },
+  {
+    "id": "1f3236ad-d353-46ff-b55b-6c0b9d6add95",
+    "path": "/Packaging/Wafer-Level/WLCSP",
+    "name": "WLCSP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"WLCSP packaging\" />",
+    "detail": "WLCSP WLCSP is part of Amkor's wafer-level portfolio for compact, high-performance semiconductor packaging. Explore wafer-level packaging"
+  },
+  {
+    "id": "64565a95-2308-442b-beac-7b5092c4727a",
+    "path": "/Packaging/Wafer-Level/WLFO-WLCSP-Plus",
+    "name": "WLFO WLCSP Plus",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"WLFO and WLCSP Plus packaging\" />",
+    "detail": "WLFO/WLCSP+ WLFO and WLCSP+ are part of Amkor's wafer-level portfolio for advanced semiconductor integration. Explore wafer-level packaging"
+  },
+  {
+    "id": "2b721843-ce5d-4073-947d-77c302434b96",
+    "path": "/Packaging/Wafer-Level/WLSiP-WL3D",
+    "name": "WLSiP WL3D",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"WLSiP and WL3D packaging\" />",
+    "detail": "WLSiP/WL3D WLSiP and WL3D are part of Amkor's wafer-level portfolio for compact 3D semiconductor integration. Explore wafer-level packaging"
+  },
+  {
+    "id": "e612545e-ddf3-4da9-85d0-fa7bd8249855",
+    "path": "/Packaging/Wafer-Level",
+    "name": "Wafer Level",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Wafer level packaging\" />",
+    "detail": "Wafer Level Packaging Amkor offers wafer-level package form factors designed for bandwidth, speed, reliability and efficient production cycles. Explore wafer-level packaging"
+  },
+  {
+    "id": "cff1b3a2-45c1-44f9-8411-32c55f316627",
+    "path": "/Packaging",
+    "name": "Packaging",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor packaging\" />",
+    "detail": "Packaging Overview Amkor offers more than 3,000 package formats and sizes, spanning traditional leadframe ICs through wafer level, MEMS, flip chip, TSV and 3D packaging. Explore packaging solutions"
+  },
+  {
+    "id": "620cdba1-8f9d-4b45-bcc2-6f89bffd78c0",
+    "path": "/About-Us/News/Blog/Amkor-Semiconductor-Educator-Bootcamp",
+    "name": "Amkor Semiconductor Educator Bootcamp",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/06/SEE-Bootcamp-2-1.png\" alt=\"Amkor Semiconductor Educator Bootcamp\" />",
+    "detail": "Amkor Technology Launches Semiconductor Educator Bootcamp to Strengthen Future Workforce Pipeline June 8, 2026 Amkor Technology hosted its first educator bootcamp focused on semiconductor manufacturing and workforce opportunities. Read on amkor.com"
+  },
+  {
+    "id": "71f8e54c-5557-4bfd-b869-cb79994e42ca",
+    "path": "/About-Us/News/Blog/Amkor-2026-Investor-Day-Nasdaq",
+    "name": "Amkor 2026 Investor Day Nasdaq",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/05/IR-Day-2026.2-e1780083762138.png\" alt=\"Amkor 2026 Investor Day\" />",
+    "detail": "Amkor Technology Concludes 2026 Investor Day with Nasdaq Closing Bell Ceremony May 29, 2026 Amkor outlines its 2026 Investor Day strategy, highlighting advanced packaging, global expansion, and a Nasdaq closing bell milestone. Read on amkor.com"
+  },
+  {
+    "id": "8c43bf43-1fa2-42ca-b535-d18a528b0bac",
+    "path": "/About-Us/News/Blog/Amkor-Peoria-Number-One-Deal-North-America",
+    "name": "Amkor Peoria Number One Deal North America",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/05/ATA-Facility-Best-Deal-Blog-Content-Tile.png\" alt=\"Amkor Peoria project\" />",
+    "detail": "Amkor's Peoria Project Recognized as the Number One Deal in North America May 13, 2026 Amkor's Peoria project was named North America's Number One Deal, highlighting a $7 billion expansion and 3,000 high-wage jobs. Read on amkor.com"
+  },
+  {
+    "id": "d7eedc9a-29e8-4522-86f4-ed8faf88cb23",
+    "path": "/About-Us/News/Blog/Amkor-Receives-Kioxia-Best-Partner-Award",
+    "name": "Amkor Receives Kioxia Best Partner Award",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/01/Amkor-Kioxia-Award-Blog-Tile.jpg\" alt=\"Amkor Kioxia Best Partner Award\" />",
+    "detail": "Amkor Technology Receives Kioxia's Best Partner Award January 29, 2026 Amkor receives KIOXIA's Best Partner Award, recognizing excellence, strong collaboration, and leadership in advancing memory technologies. Read on amkor.com"
+  },
+  {
+    "id": "172ca403-7a83-4003-8abf-f3c174c4d2f8",
+    "path": "/About-Us/News/Blog/Arizona-Next-Chip-Leaders-CUSD-SEMI-CTE",
+    "name": "Arizona Next Chip Leaders CUSD SEMI CTE",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/01/CUSD-CTE-Blog-Tile.jpg\" alt=\"CUSD SEMI CTE program\" />",
+    "detail": "Arizona's Next Chip Leaders: CUSD's SEMI CTE Program Takes Off January 16, 2026 CUSD's SEMI CTE program strengthens the semiconductor workforce through hands-on learning and industry collaboration supported by Amkor. Read on amkor.com"
+  },
+  {
+    "id": "eddb8ef0-8c38-401c-92f5-f618a696a6ed",
+    "path": "/About-Us/News/Blog/Building-Talent-Pipeline-West-MEC-Students",
+    "name": "Building Talent Pipeline West-MEC Students",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2025/12/West-MEC-WP.png\" alt=\"West-MEC students at Amkor\" />",
+    "detail": "Building the Talent Pipeline with West-MEC Advanced Manufacturing Students December 4, 2025 Amkor builds ATA talent pipeline through West-MEC Advanced Manufacturing program, fostering future semiconductor professionals in Arizona. Read on amkor.com"
+  },
+  {
+    "id": "41a8a937-48e6-49a9-a547-f5656a9ad18f",
+    "path": "/About-Us/News/Blog/Amkor-Vietnam-Industry-Award-SEMIExpo-2025",
+    "name": "Amkor Vietnam Industry Award SEMIExpo 2025",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2025/11/D5_0423-1.png\" alt=\"Amkor Vietnam SEMIExpo award\" />",
+    "detail": "Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam November 14, 2025 Amkor Technology Vietnam wins the 2025 Semiconductor Industry Award at SEMIExpo, showcasing innovation and leadership in advanced packaging. Read on amkor.com"
+  },
+  {
+    "id": "0227d955-de71-4aa4-b1bd-ec944eac53d8",
+    "path": "/About-Us/News/Blog/Amkor-ECTC-2026-Advanced-Packaging",
+    "name": "Amkor ECTC 2026 Advanced Packaging",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/06/ECTC_Amkor-Booth-6.png\" alt=\"Amkor ECTC 2026 booth\" />",
+    "detail": "Amkor Showcases Next-Gen Packaging and U.S. Expansion at ECTC 2026 June 5, 2026 Amkor showcases advanced packaging and U.S. expansion at ECTC 2026, driving innovation in AI, HPC, and semiconductor manufacturing. Read on amkor.com"
+  },
+  {
+    "id": "09f401a4-fae0-42ce-b69a-a616d507e187",
+    "path": "/About-Us/News/Blog/Arizona-Korea-Semiconductor-Delegation",
+    "name": "Arizona Korea Semiconductor Delegation",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/08/Amkor-AZ-Economic-Delegation-Blog-Tile.jpg\" alt=\"Amkor Joins Arizona Economic Delegation to the Republic of Korea\" />",
+    "detail": "Amkor Joins Arizona Economic Delegation to the Republic of Korea August 13, 2026 Learn how Amkor is supporting the Arizona-Korea semiconductor delegation to strengthen innovation, investment and supply chain resilience. Read on amkor.com"
+  },
+  {
+    "id": "0c088ebe-1d07-45d5-91b5-6567ad0d7aac",
+    "path": "/About-Us/News/Blog/Amkor-Earns-Environmental-Leadership-CDP",
+    "name": "Amkor Earns Environmental Leadership CDP",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/01/2025-CDP_A_List_Blog-Tile.png\" alt=\"Amkor CDP environmental leadership\" />",
+    "detail": "Amkor Earns Environmental Leadership Recognition from CDP January 21, 2026 Amkor earns a CDP double \"A\" score for climate and water leadership, highlighting transparency, renewable energy use, and progress on emissions. Read on amkor.com"
+  },
+  {
+    "id": "86e9aaed-39b1-4e89-9e41-9c3e778f8e1d",
+    "path": "/About-Us",
+    "name": "About Us",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor Technology\" />",
+    "detail": "About Amkor Technology You may know Amkor for high-quality semiconductor packaging and test services. Customer service, engineering expertise and high-volume manufacturing excellence guide the company. Explore Amkor's company overview"
+  },
+  {
+    "id": "c39bc746-0c9c-4c76-a623-3de87ed527f0",
+    "path": "/Test-Services",
+    "name": "Test Services",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor test services\" />",
+    "detail": "Test Services Amkor provides wafer probe, package test, burn-in and system-level test solutions for AI, automotive, RF and other semiconductor applications. Explore test services"
+  },
+  {
+    "id": "a42872cf-6ef9-42da-a65e-02fe32e11a56",
+    "path": "/About-Us/News/Press-Releases/Amkor-Technology-Announces-Strategic-Partnership-with-NVIDIA",
+    "name": "Amkor Technology Announces Strategic Partnership with NVIDIA",
+    "found": true,
+    "image": "",
+    "detail": "Amkor Technology Announces Strategic Partnership with NVIDIA to Expand Advanced Packaging and Test for Next-Generation AI Infrastructure July 28, 2026 at 9:00 PM Amkor Technology and NVIDIA announced a strategic partnership to expand advanced packaging and test capacity supporting next-generation AI"
+  },
+  {
+    "id": "50289aa5-edc5-4b20-94bb-13b6b22f1d80",
+    "path": "/About-Us/News/Press-Releases/Amkor-Technology-Reports-Financial-Results-for-the-Second-Quarter-2026",
+    "name": "Amkor Technology Reports Financial Results for the Second Quarter 2026",
+    "found": true,
+    "image": "",
+    "detail": "Amkor Technology Reports Financial Results for the Second Quarter 2026 July 27, 2026 at 8:03 PM Amkor Technology, Inc. reported financial results for the second quarter of 2026, with commentary on advanced packaging demand, capacity investment and the outlook for the remainder of the year. Read on i"
+  },
+  {
+    "id": "f171370f-82d3-4e83-8596-6b1e78a2b958",
+    "path": "/About-Us/News/Press-Releases/Amkor-Technology-Declares-Quarterly-Dividend",
+    "name": "Amkor Technology Declares Quarterly Dividend",
+    "found": true,
+    "image": "",
+    "detail": "Amkor Technology Declares Quarterly Dividend August 12, 2026 at 4:12 PM Amkor Technology, Inc. announced that its board of directors declared a quarterly cash dividend on the company's common stock, payable to stockholders of record as of the announced date. Read on ir.amkor.com"
+  },
+  {
+    "id": "fd3b8e2a-d77f-4f95-9a33-1377ede6e7b4",
+    "path": "/About-Us/News/Events/ISIG-Executive-Summit-Europe",
+    "name": "ISIG Executive Summit Europe",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/01/ISIG-Logo.jpg\" alt=\"ISIG logo\" />",
+    "detail": "ISIG Executive Summit Europe September 15, 2026 Amkor attends the ISIG Executive Summit Europe, connecting with European semiconductor leaders on advanced packaging, test and regional capacity. Read on amkor.com"
+  },
+  {
+    "id": "bce8b541-b9b0-4732-9055-1f2d6328794c",
+    "path": "/About-Us/News/Events/ISIG-Executive-Summit-Korea",
+    "name": "ISIG Executive Summit Korea",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/01/ISIG-Logo.jpg\" alt=\"ISIG logo\" />",
+    "detail": "ISIG Executive Summit Korea August 26, 2026 Amkor joins semiconductor industry leaders at the ISIG Executive Summit Korea to discuss advanced packaging capacity, AI infrastructure and supply chain resilience. Read on amkor.com"
+  },
+  {
+    "id": "7066f5be-b478-43bb-bc5e-8cccbca8a321",
+    "path": "/About-Us/News/Events/Smart-Semiconductor-Academy",
+    "name": "Smart Semiconductor Academy",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2026/07/smart-semiconductor-academy-logo-1.png\" alt=\"Smart Semiconductor Academy logo\" />",
+    "detail": "Smart Semiconductor Academy August 24, 2026 Amkor hosts the Smart Semiconductor Academy, a hands-on program introducing students and educators to advanced packaging, assembly and test. Read on amkor.com"
+  },
+  {
+    "id": "5d1b8301-f3d2-4367-bc9a-a3a5fa3400c9",
+    "path": "/About-Us/News/Press-Releases",
+    "name": "Press Releases",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor press releases\" />",
+    "detail": "Amkor Press Releases Financial results, partnerships and corporate announcements from Amkor Technology. View all releases"
+  },
+  {
+    "id": "931add10-6857-451f-abf5-a9d14b1f1757",
+    "path": "/About-Us/News/Events",
+    "name": "Events",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor events\" />",
+    "detail": "Amkor Events Meet Amkor at industry summits, technical conferences and academy programs around the world. View Amkor events"
+  },
+  {
+    "id": "5f8ff7c8-88d8-429f-b8e9-cdf92b89863a",
+    "path": "/Packaging/Power/PSMC",
+    "name": "PSMC",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"PSMC packaging\" />",
+    "detail": "PSMC Amkor's PSMC package uses copper clip interconnects to reduce electrical resistance and enhance thermal performance. Explore PSMC"
+  },
+  {
+    "id": "893bbb60-2b8c-4a97-bb8e-541e744f2b33",
+    "path": "/About-Us/News/Blog",
+    "name": "Blog",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor blog\" />",
+    "detail": "Amkor Blog Explore insights on IC packaging, assembly and test services from Amkor's semiconductor experts. Read the Amkor blog"
+  },
+  {
+    "id": "be42d3f0-c644-4ade-9ceb-e72208acfd8e",
+    "path": "/About-Us/News",
+    "name": "News",
+    "found": true,
+    "image": "<image src=\"https://amkormarcomexternal.blob.core.windows.net/amkordotcom/wp-content/uploads/2017/11/Amkor-logo-PMS293-transparent.jpg\" alt=\"Amkor news\" />",
+    "detail": "Amkor News Stay updated with Amkor news, company updates and insights on semiconductor packaging innovation. View Amkor news"
+  },
+  {
+    "id": "bb13bf5a-b102-4fe8-b410-63e3da7aa448",
+    "path": "/",
+    "name": "Home",
+    "found": true,
+    "image": "",
+    "detail": ""
+  }
+]

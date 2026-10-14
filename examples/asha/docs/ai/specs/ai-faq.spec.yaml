@@ -1,0 +1,71 @@
+project:
+  reactComponentRoot: "src/components"
+  shadcnImportBase: "@/components/ui"
+  componentMapPath: ".sitecore/component-map.ts"
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"
+  usesTailwind: true
+  usesShadcn: true
+
+siteCollection: "progressive"
+siteName: "pkm"
+category: "Page Content"
+
+component:
+  namePascal: "AiFaq"
+  nameKebab: "ai-faq"
+  kind: "simple"
+  filePath: "src/components/ai-faq/AiFaq.tsx"
+  componentMapKey: "AiFaq"
+  componentMapImportAlias: "AiFaq"
+
+design:
+  references: []
+  extractedLayout:
+    summary: "Single Q&A block for Claims Advisors — question heading + multiline answer body"
+    visibleElements: ["question", "answer"]
+    inferredFields: ["Question", "Answer"]
+    repeatedItems: false
+    likelyVariantNames: ["Default"]
+  assumptions:
+    - "Reuse existing AIFAQ datasource template {73E57EAA-B54A-41E1-B689-BF7DAE9155AD}"
+    - "Do not create a new datasource template or folder template"
+    - "Datasource location targets Home/Questions and Answers tree"
+    - "React lives under src/components/ai-faq (repo convention; uiim not present)"
+
+templates:
+  parent:
+    create: false
+    path: "/sitecore/templates/Project/progressive/AIFAQ"
+    name: "AIFAQ"
+    itemId: "{73E57EAA-B54A-41E1-B689-BF7DAE9155AD}"
+    sectionName: "Question and Answer"
+    fields:
+      - { name: "Question", type: "Multi-Line Text" }
+      - { name: "Answer", type: "Multi-Line Text" }
+
+  folder:
+    create: false
+    name: "Page Folder"
+    path: "/sitecore/templates/Project/progressive/Page Folder"
+    itemId: "{D1DEC580-83CA-4700-8EA4-4DBB35D6E0C4}"
+
+  renderingParams:
+    create: true
+    path: "/sitecore/templates/Project/progressive/Rendering Parameters/AiFaq"
+    name: "AiFaq"
+
+rendering:
+  name: "AiFaq"
+  path: "/sitecore/layout/Renderings/Project/progressive/AiFaq"
+  componentName: "AiFaq"
+  datasourceRequired: true
+  useComponentQuery: false
+  componentQuery: ""
+  datasourceTemplatePath: "/sitecore/templates/Project/progressive/AIFAQ"
+  datasourceLocationQuery: "query:$site/*[@@name='Home']/*[@@name='Questions and Answers']"
+  addFieldEditorButton: "1"
+  fieldEditorFields: "Question|Answer"
+
+react:
+  propsShape: "default-jss"
+  variants: ["Default"]

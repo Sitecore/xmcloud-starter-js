@@ -1,0 +1,132 @@
+# Pillsbury Law IA tree — created 2026-08-04
+# Source: https://www.pillsburylaw.com/en/
+# Root: /sitecore/content/pillsbury/pillsburylaw/Home
+# Template: Services Page {B08EC32B-F183-474B-93F7-07512168DD6E}
+# Branch: {70BAA693-7AF4-48F7-9690-195685B0D73D} (create_page named items "name"; used create_content_item instead)
+
+siteName: pillsburylaw
+contentRootPath: /sitecore/content/pillsbury/pillsburylaw/Home
+contentRootItemId: "{104EEF4C-9D53-45BA-B447-C09560EF5359}"
+pageTemplateId: "{B08EC32B-F183-474B-93F7-07512168DD6E}"
+pageBranchId: "{70BAA693-7AF4-48F7-9690-195685B0D73D}"
+language: en
+createdAt: "2026-08-04T17:00:00Z"
+totalCreated: 81
+
+tree:
+  - displayName: Lawyers
+    name: Lawyers
+    itemId: "{28CDB0B8-594B-4FBE-97E2-8F224740EE79}"
+    path: /sitecore/content/pillsbury/pillsburylaw/Home/Lawyers
+    children:
+      - { displayName: "About Us", name: "About-Us", itemId: "{B2F2F374-B64F-44D0-980E-AD26F0BF463B}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/About-Us" }
+      - { displayName: "Careers", name: "Careers", itemId: "{C30AB91F-550F-4452-8725-5BCCAF1B674B}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Careers" }
+      - displayName: Offices
+        name: Offices
+        itemId: "{B9B2F762-37FD-4922-BDFC-014AF9043EE1}"
+        path: /sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Offices
+        children:
+          - { displayName: "Austin", name: "Austin", itemId: "{EAE5C0E9-9C0E-4B27-99C8-D6860955417C}" }
+          - { displayName: "Beijing", name: "Beijing", itemId: "{C9D161EE-7DE6-4E1A-B367-FB0A695E6DFD}" }
+          - { displayName: "Boston", name: "Boston", itemId: "{4F188944-DE9A-4A58-BDE8-8F57093C9724}" }
+          - { displayName: "Doha", name: "Doha", itemId: "{34569C24-8CA5-4D00-976D-0B1DB8BBBB18}" }
+          - { displayName: "Hong Kong", name: "Hong-Kong", itemId: "{3D1D4091-8B3C-4071-ADF4-8A93487E1696}" }
+          - { displayName: "Houston", name: "Houston", itemId: "{12C82E4A-084C-40DB-ADE2-9335D4370239}" }
+          - { displayName: "London", name: "London", itemId: "{90648A9A-0B21-4865-B172-F37727CB1CDA}" }
+          - { displayName: "Los Angeles", name: "Los-Angeles", itemId: "{DC557EA7-6572-49B3-A91F-5A675B8F399B}" }
+          - { displayName: "Miami", name: "Miami", itemId: "{50D647E4-7904-4CD8-BA3B-F5065B9B3D45}" }
+          - { displayName: "Nashville", name: "Nashville", itemId: "{1F199638-DC19-420B-91C1-2380C4400676}" }
+          - { displayName: "New York", name: "New-York", itemId: "{1569C0D4-48E7-40AD-9632-231EBE1614CE}" }
+          - { displayName: "Northern Virginia", name: "Northern-Virginia", itemId: "{DC83698B-023A-4153-9F9F-9E3E735E1F4B}" }
+          - { displayName: "Palm Beach", name: "Palm-Beach", itemId: "{97D58D84-BC74-408B-8B93-91371642AB6C}" }
+          - { displayName: "Riyadh", name: "Riyadh", itemId: "{7C69254F-E67D-4055-AA6D-91D91C1A7E97}" }
+          - { displayName: "Sacramento", name: "Sacramento", itemId: "{25C28B85-60FE-4019-8374-C133253DD9BB}" }
+          - { displayName: "San Diego", name: "San-Diego", itemId: "{1A32B4EF-A3B4-4A36-8B32-4DBF75C224BB}" }
+          - { displayName: "San Francisco", name: "San-Francisco", itemId: "{DFE95A2A-E152-49D2-B5F8-A177F9DA866C}" }
+          - { displayName: "Shanghai", name: "Shanghai", itemId: "{E45EFD6D-5044-435D-94A7-9A1059266790}" }
+          - { displayName: "Silicon Valley", name: "Silicon-Valley", itemId: "{BE61DA17-F973-4BE4-A8F2-213755E47392}" }
+          - { displayName: "Taipei", name: "Taipei", itemId: "{61B76BCB-CD30-48E9-8E59-AB28A130A06E}" }
+          - { displayName: "Tokyo", name: "Tokyo", itemId: "{586D4E95-BBCD-4F81-BF36-3F302ABD7970}" }
+          - { displayName: "Washington DC", name: "Washington-DC", itemId: "{9B787EA8-77C2-405B-A6AD-5C41B8A60D97}" }
+      - { displayName: "Bios", name: "Bios", itemId: "{5DAD4C5C-84CD-471A-80EF-C805570BE79A}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Lawyers/Bios" }
+
+  - displayName: Capabilities
+    name: Capabilities
+    itemId: "{95A249F3-4539-4F55-8F0C-3F4D6CFA3EDF}"
+    path: /sitecore/content/pillsbury/pillsburylaw/Home/Capabilities
+    children:
+      - { displayName: "Our Approach", name: "Our-Approach", itemId: "{20CBB76C-3D54-43B7-A44D-CCA9E4AAAFC7}" }
+      - displayName: Services
+        name: Services
+        itemId: "{C4118ECC-2A07-48B5-A72E-28CADC38AEE0}"
+        path: /sitecore/content/pillsbury/pillsburylaw/Home/Capabilities/Services
+        children:
+          - { displayName: "Technology", name: "Technology", itemId: "{67238660-A190-4D0D-99CB-9E69DBCDF5AA}" }
+          - { displayName: "Energy", name: "Energy", itemId: "{788F81BA-9FF0-4F5B-95AD-9DDD0D291658}" }
+          - { displayName: "Financial Services", name: "Financial-Services", itemId: "{CB4F938B-519A-4FF5-9CAF-09E3D4C50E9B}" }
+          - { displayName: "Life Sciences", name: "Life-Sciences", itemId: "{07BCCFDD-8AEA-4853-9AEA-EAA196F000B7}" }
+          - { displayName: "Real Estate and Construction", name: "Real-Estate-and-Construction", itemId: "{3D59EEC8-6F43-44F4-81E1-F451465B2432}" }
+          - { displayName: "Corporate and Transactional", name: "Corporate-and-Transactional", itemId: "{17D8DE59-4A76-4CD3-819B-AC26A4E14F67}" }
+          - { displayName: "Finance", name: "Finance", itemId: "{17A24E4E-96F0-4849-92CE-1E2B975789CF}" }
+          - { displayName: "Intellectual Property", name: "Intellectual-Property", itemId: "{81876C0A-A222-4431-9A1F-9C0552FA5460}" }
+          - { displayName: "Litigation", name: "Litigation", itemId: "{C7F88FB4-DAEC-4AEB-835C-C0EF31370F66}" }
+          - { displayName: "Regulatory", name: "Regulatory", itemId: "{266207E3-E1D5-4EE1-B53D-2D0BCFD7CAB5}" }
+          - { displayName: "Global Reach", name: "Global-Reach", itemId: "{668FD06E-D74F-4A55-B664-3574CD485496}" }
+          - { displayName: "Solutions Teams", name: "Solutions-Teams", itemId: "{431E4E29-CD38-48E6-B07A-BBA206BF3A93}" }
+
+  - displayName: Insights
+    name: Insights
+    itemId: "{C966373D-2596-47B3-B2C6-E8322F3FB444}"
+    path: /sitecore/content/pillsbury/pillsburylaw/Home/Insights
+    children:
+      - displayName: Events
+        name: Events
+        itemId: "{68761404-B4B5-45C4-B635-4530F5A59D00}"
+        children:
+          - { displayName: "Speaker", name: "Speaker", itemId: "{6858D3A2-8428-4BF0-84A5-D53CE4783353}" }
+          - { displayName: "Webinar", name: "Webinar", itemId: "{7F2E30D0-2C96-45F4-AD5B-C1AA26E76C2B}" }
+          - { displayName: "Sponsor", name: "Sponsor", itemId: "{8AF6A88E-AB26-47E1-B75E-1D9FBC2CA7FF}" }
+          - { displayName: "CLE", name: "CLE", itemId: "{FFCFEBCC-6616-4582-9436-3E83905B375E}" }
+          - { displayName: "Attendee", name: "Attendee", itemId: "{35196A53-38F3-43F7-8CCF-6DD839F39850}" }
+      - displayName: Blogs
+        name: Blogs
+        itemId: "{612AE84F-C0C8-451A-859B-1712FB3149D2}"
+        children:
+          - { displayName: "Gravel2Gavel", name: "Gravel2Gavel", itemId: "{7C03D29D-AED3-4915-B82C-B5894AF9D4B4}" }
+          - { displayName: "Internet and Social Media Law", name: "Internet-and-Social-Media-Law", itemId: "{3127BE64-41EA-486A-A9F4-AC5C04808A24}" }
+          - { displayName: "Comm Law Center", name: "Comm-Law-Center", itemId: "{3C524D65-4504-483C-A24E-1B1220301DFE}" }
+          - { displayName: "Policyholder Pulse", name: "Policyholder-Pulse", itemId: "{43ECC8DD-9FDE-479F-82C0-A9EA54E4FE12}" }
+          - { displayName: "SeeSalt Blog", name: "SeeSalt-Blog", itemId: "{373936CE-8FCB-4BD4-81E9-D3C44CF753F9}" }
+          - { displayName: "Global Trade and Sanctions Law", name: "Global-Trade-and-Sanctions-Law", itemId: "{293854C1-4AC7-4A62-BC52-D3A5AD626B39}" }
+          - { displayName: "Sourcing Speak", name: "Sourcing-Speak", itemId: "{091E54C9-4CC9-4891-99A4-FA9F27D88497}" }
+          - { displayName: "Investment Fund Law", name: "Investment-Fund-Law", itemId: "{007CB33D-DC67-4768-8C37-ABE43F67BF02}" }
+          - { displayName: "PFAS Observer", name: "PFAS-Observer", itemId: "{D68A9782-8C8B-4968-9813-E087FCA1A6C4}" }
+          - { displayName: "Consumer Protection Dispatch", name: "Consumer-Protection-Dispatch", itemId: "{E400E808-4CA5-4659-B2C3-82619277FD1E}" }
+          - { displayName: "The Bid Protest Debrief", name: "The-Bid-Protest-Debrief", itemId: "{8C9D86D3-84A3-40E5-8A76-834351768AB8}" }
+          - { displayName: "Unmanned Aircraft Systems LAW", name: "Unmanned-Aircraft-Systems-LAW", itemId: "{85041201-2587-443F-AAD7-786090D28014}" }
+      - displayName: Press
+        name: Press
+        itemId: "{F42D64DF-5C45-4E04-8E67-00B368C65196}"
+        children:
+          - { displayName: "Featured Press", name: "Featured-Press", itemId: "{D5672FB0-310F-4930-8394-38D683BCE480}" }
+          - { displayName: "Media Coverage", name: "Media-Coverage", itemId: "{A1E3C2B6-BDEA-4CF4-86B5-218FCF694D37}" }
+          - { displayName: "Press Release", name: "Press-Release", itemId: "{3D0352FB-6EDC-49AB-8BA5-AD565A65D959}" }
+          - { displayName: "Awards and Rankings", name: "Awards-and-Rankings", itemId: "{E8CB2CAF-31D0-412A-935E-7550D111F0F6}" }
+          - { displayName: "Statement", name: "Statement", itemId: "{1B3752D4-7F15-4F42-AEA6-75441CB902E7}" }
+      - displayName: Thought Leadership
+        name: Thought-Leadership
+        itemId: "{95DF641E-EAA8-4512-8507-9384815A16A6}"
+        children:
+          - { displayName: "Alert", name: "Alert", itemId: "{8CB51FA3-B19B-4D41-98A0-F6FDB00A85C0}" }
+          - { displayName: "Article", name: "Article", itemId: "{839E4DC2-1809-46D8-9E35-0F166C8B4F2F}" }
+          - { displayName: "Podcast", name: "Podcast", itemId: "{85EFB9D4-DF22-4E85-8C69-E49A63CD169C}" }
+          - { displayName: "Newsletter", name: "Newsletter", itemId: "{F7B91DC7-3AFF-43EC-95C8-1972723E731A}" }
+          - { displayName: "Video", name: "Video", itemId: "{B1485AF1-6213-43FE-B7C9-87EB11EBED86}" }
+          - { displayName: "Emerging Trends", name: "Emerging-Trends", itemId: "{628D3760-5ABA-4608-9443-AB929DC94AFF}" }
+          - { displayName: "Presentation", name: "Presentation", itemId: "{F1804D37-873B-47FD-B63D-7A6FBCC42A8B}" }
+          - { displayName: "White Paper", name: "White-Paper", itemId: "{975AA5BE-D851-4BC2-8098-2ECE9F81CACC}" }
+          - { displayName: "Book", name: "Book", itemId: "{ACA4A42D-1A40-465A-B5FC-7C3FF0A82F5F}" }
+          - { displayName: "Brochure", name: "Brochure", itemId: "{48076C73-6261-4427-8ED5-75C7A0982A25}" }
+
+  - { displayName: "Connect", name: "Connect", itemId: "{45B22262-6A63-4634-AD85-18DC652E0DA5}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Connect" }
+  - { displayName: "Contact", name: "Contact", itemId: "{EDAE745F-E44D-436D-A2C3-147DE6203E2F}", path: "/sitecore/content/pillsbury/pillsburylaw/Home/Contact" }

@@ -1,0 +1,17 @@
+variantSpecs:
+  - position: 1
+    componentName: "HeroST"
+    variantName: "Version1"
+    baseVariant: "SplitScreen"
+    visualDifferences:
+      layout: "Collage left / copy right on cream surface. Rectangular mosaic with white gutters plus optional Image1 portrait overlay. Not MediaCanvas ovals."
+      spacing: "Split columns, copy left-aligned with generous right padding (xl:pr-28), mosaic gutters gap-1.5"
+      typography: "Headline 2.35–4.35rem black uppercase terracotta; dates medium black below title; existing Eyebrow field maps to the dates line"
+      background: "Cream --color-hero-surface #FAF9F6; mosaic uses --color-hero-headline, --color-primary, --color-accent"
+      buttons: "Square 90° CTAs — primary olive REGISTER, secondary ghost black border LEARN MORE"
+      distinctive: "Image1 is composite cover when Image2 is empty; Image1 overlays mosaic when Image2 is set"
+    tailwindClasses:
+      section: "hero-st-version1 relative bg-[var(--color-hero-surface)]"
+      heading: "max-w-[11ch] font-black uppercase leading-[0.92] text-[var(--color-hero-headline)]"
+      dates: "mt-5 text-base font-medium text-[var(--color-foreground)]"
+      cta: "btn rounded-none px-6 py-3 text-sm font-bold uppercase tracking-wide"

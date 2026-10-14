@@ -1,0 +1,81 @@
+# Client Brand Theme — Atlanta Apparel
+# Wired into the app via the create-new-theme skill (data-theme="atlanta-apparel").
+# Token CSS: src/assets/styles/themes/atlanta-apparel.css
+
+client:
+  name: "Atlanta Apparel"
+  sourceUrl: "https://www.atlanta-apparel.com/"
+  extractedAt: "2026-08-24"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#4A5844"
+  primaryForeground: "#ffffff"
+  secondary: "#F4F4F4"
+  secondaryForeground: "#000000"
+  accent: "#8C6D52"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#000000"
+  muted: "#F4F4F4"
+  mutedForeground: "#6B6B6B"
+  headerBackground: "#ffffff"
+  headerForeground: "#000000"
+  footerBackground: "#ffffff"
+  footerForeground: "#000000"
+  border: "#E5E5E5"
+  ring: "#4A5844"
+  extra:
+    - name: "primary-hover"
+      value: "#3F4B3A"
+    - name: "utility-nav"
+      value: "#000000"
+    - name: "link"
+      value: "#EC5115"
+    - name: "section-heading"
+      value: "#8C6D52"
+    - name: "hero-headline"
+      value: "#9A5340"
+    - name: "hero-surface"
+      value: "#FAF9F6"
+    - name: "cta-band"
+      value: "#4A5844"
+    - name: "border-radius"
+      value: "0"
+
+typography:
+  headingFamily: "Montserrat"
+  headingWeight: "700"
+  bodyFamily: "Montserrat"
+  bodyWeight: "400"
+  googleFontsUrl: ""
+  headingTransform: "uppercase"
+  letterSpacing: "0.02em"
+  notes: "Live site uses proprietary Centra Andmore (andmore) + General Grotesque Mono. Substituted with Montserrat (already loaded via next/font)."
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "subtle"
+
+tone:
+  overall: "wholesale-fashion-marketplace"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "editorial-fashion-photography"
+  heroStyle: "split-collage-image-and-text-panel"
+  cardStyle: "flat-image-above-text"
+  navStyle: "black-utility-bar-plus-white-main-nav"
+
+extraction:
+  confidence: "medium"
+  method: "user-screenshot-primary + playwright-partial"
+  notes:
+    - "Screenshot is primary: dark olive #4A5844 CTAs / Let's Connect band; tan #8C6D52 hero headline; white surfaces; black text; light gray resource bar."
+    - "Playwright computed styles missed olive buttons (returned near-white button bg) and body bg transparency; link orange #EC5115 from DOM kept as --color-link."
+    - "Mobile capture timed out after desktop extraction succeeded."
+    - "Proprietary font family 'andmore' (CentraAndmore Light/Book/Bold/Black) → Montserrat Google Font substitute."
+    - "Square CTAs (0 radius) match live site and screenshot."
+    - "2026-09-01: Hero screenshot restyle — terracotta headline #9A5340 (--color-hero-headline), cream surface #FAF9F6 (--color-hero-surface); all .btn / btn-primary / btn-secondary / ghost forced to border-radius 0; secondary is ghost (black hairline)."

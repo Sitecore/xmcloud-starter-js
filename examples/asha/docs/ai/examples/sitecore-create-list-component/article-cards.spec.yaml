@@ -1,0 +1,228 @@
+project:  
+  reactComponentRoot: "src/components/uiim"  
+  shadcnImportBase: "@/components/ui"  
+  componentMapPath: ".sitecore/component-map.ts"  
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"  
+  usesTailwind: true  
+  usesShadcn: true  
+  
+tools:  
+  marketerMcp:  
+    preferred: true  
+    useFor:  
+      - "create or update Sitecore templates"  
+      - "create or update standard values"  
+      - "create or update folder templates"  
+      - "create or update datasource folders"  
+      - "create or update renderings"  
+      - "set datasource location and ComponentQuery"  
+      - "set insert options / __Masters"  
+  documentationMcp:  
+    allowed: true  
+    useWhen:  
+      - "official Sitecore behavior is unclear"  
+      - "GraphQL/rendering configuration is uncertain"  
+      - "the agent needs product documentation verification"  
+  
+siteCollection: "acme"  
+siteName: "main"  
+category: "Cards"  
+  
+component:  
+  namePascal: "ArticleCards"  
+  nameKebab: "article-cards"  
+  kind: "list"  
+  filePath: "src/components/uiim/cards/ArticleCards.tsx"  
+  componentMapKey: "article-cards"  
+  componentMapImportAlias: "articleCards"  
+  
+design:  
+  references: []  
+  extractedLayout:  
+    summary: "A section with a title and repeated article cards."  
+    visibleElements:  
+      - "Section title"  
+      - "Card image"  
+      - "Badge"  
+      - "Card title"  
+      - "Link"  
+    inferredFields:  
+      parent:  
+        - "Title"  
+      child:  
+        - "Title"  
+        - "Image"  
+        - "Link"  
+        - "BadgeText"  
+    repeatedItems: true  
+    likelyVariantNames:  
+      - "Default"  
+    responsiveViews: []  
+  assumptions:  
+    - "Cards are authorable as child datasource items"  
+  openQuestions: []  
+  
+context:  
+  usesRouteFields: false  
+  routeTemplateName: ""  
+  routeFields: []  
+  
+templates:  
+  parent:  
+    create: true  
+    path: "/sitecore/templates/Project/acme/Components/Cards/ArticleCards"  
+    name: "ArticleCards"  
+    sectionName: "Data"  
+    fields:  
+      - name: "Title"  
+        type: "Single-Line Text"  
+    baseTemplates:  
+      - "_HorizonDatasourceGrouping"  
+    standardValues:  
+      create: true  
+      defaults:  
+        Title: "Latest Articles"  
+      masters:  
+        - "ArticleCard"  
+      addHorizonDatasourceGrouping: true  
+  
+  child:  
+    create: true  
+    path: "/sitecore/templates/Project/acme/Components/Cards/ArticleCard"  
+    name: "ArticleCard"  
+    sectionName: "Data"  
+    fields:  
+      - name: "Title"  
+        type: "Single-Line Text"  
+      - name: "Image"  
+        type: "Image"  
+      - name: "Link"  
+        type: "General Link"  
+      - name: "BadgeText"  
+        type: "Single-Line Text"  
+    baseTemplates:
+      - "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"  # Standard Template
+      - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters  
+    standardValues:  
+      create: true  
+      defaults:  
+        Title: "$name"  
+        BadgeText: "ARTICLE"  
+      masters: []  
+  
+folderTemplate:  
+  create: true  
+  path: "/sitecore/templates/Project/acme/Folders/Article Cards Folder"  
+  name: "Article Cards Folder"  
+  standardValues:  
+    create: true  
+    masters:  
+      - "ArticleCards"  
+  
+datasourceFolder:  
+  create: true  
+  path: "/sitecore/content/acme/main/Data/ArticleCards"  
+  name: "ArticleCards"  
+  
+  insertOptions: []  # REQUIRED: set on the folder item itself
+  exampleItem:
+    create: true
+    name: "Article Cards"
+    fields: {}
+    exampleChildItems: 2
+renderingParamsTemplate:
+  create: true
+  path: "/sitecore/templates/Project/acme/Rendering Parameters/Cards/Article Cards"
+  name: "Article Cards"
+  baseTemplates:
+    - "{4247AAD4-EBDE-4994-998F-E067A51B1FE4}"  # IComponentVariant
+    - "{5C74E985-E055-43FF-B28C-DB6C6A6450A2}"  # IStyling
+    - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters
+    - "{3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}"  # IRenderingId
+
+headlessVariants:
+  create: true
+  containerPath: "/sitecore/content/acme/main/Presentation/Headless Variants/ArticleCards"
+  variants:
+  - "Default"
+
+availableRenderings:
+  register: true
+  targetPath: "/sitecore/content/acme/main/Presentation/Available Renderings/Page Content"
+
+rendering:
+  create: true  
+  path: "/sitecore/layout/Renderings/Project/acme/Cards/ArticleCards"  
+  name: "ArticleCards"  
+  componentName: "ArticleCards"  # MUST be PascalCase matching TSX filename exactly  
+  datasourceRequired: true  
+  datasourceTemplatePath: "/sitecore/templates/Project/acme/Components/Cards/ArticleCards"  
+  datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Article Cards Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Article Cards Folder']"  
+  dataSource: ""  
+  addFieldEditorButton: "1"  
+  useComponentQuery: true  
+  componentQuery: |  
+    query ArticleCards($datasource: String!, $language: String!) {  
+      datasource: item(path: $datasource, language: $language) {  
+        ... on ArticleCards {  
+          title {  
+            jsonValue  
+          }  
+        }  
+        children {  
+          results {  
+            ... on ArticleCard {  
+              id  
+              title {  
+                jsonValue  
+              }  
+              image {  
+                jsonValue  
+              }  
+              link {  
+                jsonValue  
+              }  
+              badgeText {  
+                jsonValue  
+              }  
+            }  
+          }  
+        }  
+      }  
+    }  
+  
+react:  
+  propsShape: "graphql-datasource"  
+  usesSitecoreJssHelpers: true  
+  usesShadcn: true  
+  usesTailwind: true  
+  variants:  
+    - "Default"  
+  
+mcp:  
+  useMcp: true  
+  planOnly: false  
+  
+verification:  
+  checks:  
+    - "Parent template exists"  
+    - "Child template exists"  
+    - "Parent __Standard Values exists"  
+    - "Child __Standard Values exists"  
+    - "Parent __Masters points to child"  
+    - "Parent inherits _HorizonDatasourceGrouping"  
+    - "Folder template exists"  
+    - "Folder template __Masters points to parent"  
+    - "Content folder exists under /Data"  
+    - "Rendering exists"  
+    - "Datasource Template uses full path"  
+    - "ComponentQuery exists and is valid"  
+    - "React file exists under src/components/uiim"  
+    - "TSX uses fields.data.datasource"  
+    - "TSX uses children.results"  
+    - "TSX uses jsonValue"  
+    - "Component map updated"  
+    - "Tailwind + shadcn/ui pattern used"  
+  
+notes:  
+  - "Prefer shadcn Card and Badge primitives with Sitecore JSS editable helpers."  

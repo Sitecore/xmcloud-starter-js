@@ -1,0 +1,154 @@
+project:  
+  reactComponentRoot: "src/components/uiim"  
+  shadcnImportBase: "@/components/ui"  
+  componentMapPath: ".sitecore/component-map.ts"  
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"
+  usesTailwind: true  
+  usesShadcn: true  
+  
+tools:  
+  marketerMcp:  
+    preferred: true  
+    useFor:  
+      - "create or update Sitecore templates"  
+      - "create or update standard values"  
+      - "create or update folder templates"  
+      - "create or update datasource folders"  
+      - "create or update renderings"  
+      - "set insert options / __Masters"  
+      - "set datasource location and ComponentQuery"  
+  documentationMcp:  
+    allowed: true  
+    useWhen:  
+      - "official Sitecore behavior is unclear"  
+      - "GraphQL/rendering configuration is uncertain"  
+      - "the agent needs product documentation verification"  
+  
+siteCollection: ""  # populated from docs/ai/config/project.yaml  
+siteName: ""        # populated from docs/ai/config/project.yaml  
+category: ""  
+  
+component:  
+  namePascal: ""  # e.g. "EurobankHeader" — used for TSX filename, Component Name [shared], rendering name, variant names
+  nameKebab: ""   # e.g. "eurobank-header" — used for folder name and component map key
+  kind: "" # simple | list | context-only  
+  filePath: ""    # e.g. "src/components/uiim/navigation/EurobankHeader.tsx" — folder is kebab-case, file is PascalCase
+  componentMapKey: ""  # kebab-case key in component-map.ts
+  componentMapImportAlias: ""  
+  
+design:  
+  references: []  
+  extractedLayout:  
+    summary: ""  
+    visibleElements: []  
+    inferredFields: []  
+    repeatedItems: false  
+    likelyVariantNames: []  
+    responsiveViews: []  
+  assumptions: []  
+  openQuestions: []  
+  
+context:  
+  usesRouteFields: false  
+  routeTemplateName: ""  
+  routeFields: []  
+  
+templates:  
+  parent:  
+    create: true  
+    path: ""  
+    name: ""  
+    sectionName: "Data"  
+    fields: []  
+    baseTemplates:  # REQUIRED for all datasource templates (not folder templates)
+      - "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"  # Standard Template
+      - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters  
+    standardValues:  
+      create: true  
+      defaults: {}  
+      masters: []  
+      addHorizonDatasourceGrouping: false  
+  
+  child:  
+    create: false  
+    path: ""  
+    name: ""  
+    sectionName: "Data"  
+    fields: []  
+    baseTemplates:  # REQUIRED for all datasource templates (not folder templates)
+      - "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"  # Standard Template
+      - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters  
+    standardValues:  
+      create: false  
+      defaults: {}  
+      masters: []  
+  
+folderTemplate:  
+  create: false  
+  path: ""  
+  name: ""  
+  standardValues:  
+    create: false  
+    masters: []  
+  
+datasourceFolder:  
+  create: false  
+  path: ""  
+  name: ""  
+  insertOptions: []  # REQUIRED: set insert options on the data folder instance itself, not only on the folder template __Standard Values
+  exampleItem:
+    create: false
+    name: ""   # e.g. component name — the item authors see first
+    fields: {}  # If screenshot/design provided: populate with content matching the design. If URL provided: extract real content. Otherwise: use __Standard Values defaults.
+  
+renderingParamsTemplate:
+  create: true
+  path: ""  # renderingParamsRoot + /<Category>/<ComponentName>
+  name: ""  # same as component name
+  baseTemplates:
+    - "{4247AAD4-EBDE-4994-998F-E067A51B1FE4}"  # IComponentVariant
+    - "{5C74E985-E055-43FF-B28C-DB6C6A6450A2}"  # IStyling
+    - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters
+    - "{3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}"  # IRenderingId
+
+headlessVariants:
+  create: true
+  containerPath: ""  # /sitecore/content/<siteCollection>/<siteName>/Presentation/Headless Variants/<ComponentName>
+  variants: []       # list of variant names — must match TSX named exports exactly
+
+availableRenderings:
+  register: true
+  # Always add the new rendering to the Page Content Available Renderings for the site
+  targetPath: "/sitecore/content/<siteCollection>/<siteName>/Presentation/Available Renderings/Page Content"
+  targetItemId: ""  # resolve via MCP — for eurobankgr use {C72B27E5-7DFF-4922-BBB0-8226D8DEC788}
+
+rendering:
+  create: true  
+  path: ""  
+  name: ""  
+  componentName: ""  # MUST be PascalCase and exactly match the TSX filename without extension (e.g. "EurobankHeader" for EurobankHeader.tsx)
+  datasourceRequired: true  
+  datasourceTemplatePath: ""  
+  datasourceLocationQuery: ""  
+  dataSource: ""  
+  addFieldEditorButton: "1"  
+  parametersTemplateId: ""  # MUST be the Item ID (GUID) of the Rendering Parameters template, NOT a path. Resolve via MCP after creating the template.
+  useComponentQuery: false
+  componentQuery: ""  
+  
+react:  
+  propsShape: "" # default-jss | graphql-datasource | context-route  
+  usesSitecoreJssHelpers: true  
+  usesShadcn: true  
+  usesTailwind: true  
+  variants:        # named exports in TSX — must match headlessVariants.variants exactly
+    - Default  
+  
+mcp:  
+  useMcp: true  
+  planOnly: false  
+  
+verification:  
+  checks: []  
+  
+notes: []  

@@ -1,0 +1,18 @@
+# Sitecore AI project configuration
+# Read by the AI agent at the start of every Sitecore task.
+# Commit this file to the repo. Update it when the project changes.
+
+# XM Cloud site identity
+siteCollection: "progressive"
+siteName: "pkm"
+
+# Sitecore SDK used by this repo's React components
+sdk: "@sitecore-content-sdk/nextjs"
+
+# Sitecore item root paths
+renderingsRoot: "/sitecore/layout/Renderings/Project/progressive"
+projectTemplatesRoot: "/sitecore/templates/Project/progressive"
+dataRoot: "/sitecore/content/progressive/pkm/Data"
+projectFoldersRoot: "/sitecore/templates/Project/progressive/Folders"
+renderingParamsRoot: "/sitecore/templates/Project/progressive/Rendering Parameters"
+headlessVariantsRoot: "/sitecore/content/progressive/pkm/Presentation/Headless Variants"

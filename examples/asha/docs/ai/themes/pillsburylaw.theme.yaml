@@ -1,0 +1,123 @@
+# Client Brand Theme — Pillsbury Law (McKinsey-inspired dark)
+# Inspired by: https://www.mckinsey.com/
+# Screenshot-first extraction (Playwright blocked: ERR_HTTP2_PROTOCOL_ERROR).
+
+client:
+  name: "Pillsbury Law"
+  sourceUrl: "https://www.mckinsey.com/"
+  extractedAt: "2026-08-04T14:00:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#0055FF"
+  primaryForeground: "#ffffff"
+  secondary: "#0A2A3C"
+  secondaryForeground: "#F5F7FA"
+  accent: "#0032A0"
+  accentForeground: "#ffffff"
+  background: "#051C2C"
+  foreground: "#F5F7FA"
+  muted: "#0D3347"
+  mutedForeground: "#9AABBA"
+  headerBackground: "#051C2C"
+  headerForeground: "#ffffff"
+  footerBackground: "#030F18"
+  footerForeground: "#9AABBA"
+  border: "#1A4055"
+  ring: "#0055FF"
+  extra:
+    - { name: "deepNavy", value: "#051C2C" }
+    - { name: "midnight", value: "#030F18" }
+    - { name: "lightSection", value: "#F0F0F0" }
+    - { name: "royalBlue", value: "#0055FF" }
+    - { name: "deepRoyal", value: "#0032A0" }
+
+typography:
+  headingFamily: "'Montserrat', Helvetica, Arial, sans-serif"
+  headingWeight: "600"
+  bodyFamily: "'Open Sans', Helvetica, Arial, ui-sans-serif, system-ui, sans-serif"
+  bodyWeight: "400"
+  monoFamily: "'ui-monospace', monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+  scale:
+    hero: "3.5rem"
+    h1: "2.5rem"
+    h2: "1.875rem"
+    h3: "1.375rem"
+    body: "1rem"
+    small: "0.875rem"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "relaxed"
+
+spacing:
+  density: "spacious"
+  sectionGap: "5rem"
+  containerMaxWidth: "1280px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "0"
+  imageRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "subtle"
+
+tone:
+  overall: "corporate"
+  colorMode: "dark"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "minimal-text"
+  cardStyle: "flat"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#0055FF"
+      secondary: "#051C2C"
+      accent: "#0032A0"
+  fontFamily:
+    heading: ["Montserrat", "Helvetica", "Arial", "sans-serif"]
+    body: ["Open Sans", "Helvetica", "Arial", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0"
+    button: "0"
+    card: "0"
+
+cssVariables: |
+  :root {
+    --brand-primary: #0055FF;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #0A2A3C;
+    --brand-secondary-foreground: #F5F7FA;
+    --brand-accent: #0032A0;
+    --brand-accent-foreground: #ffffff;
+    --brand-bg: #051C2C;
+    --brand-fg: #F5F7FA;
+    --brand-muted: #0D3347;
+    --brand-muted-fg: #9AABBA;
+    --brand-header-bg: #051C2C;
+    --brand-header-fg: #ffffff;
+    --brand-footer-bg: #030F18;
+    --brand-footer-fg: #9AABBA;
+    --brand-border: #1A4055;
+    --brand-ring: #0055FF;
+    --brand-heading-font: 'Montserrat', Helvetica, Arial, sans-serif;
+    --brand-body-font: 'Open Sans', Helvetica, Arial, sans-serif;
+    --brand-radius: 0;
+    --brand-button-radius: 0;
+    --brand-card-radius: 0;
+  }
+
+extraction:
+  confidence: "medium"
+  method: "screenshot-analysis"
+  notes:
+    - "Playwright scraper failed (ERR_HTTP2_PROTOCOL_ERROR). Theme extracted from user homepage screenshot + brand research."
+    - "Typography shifted off McKinsey Bower substitutes toward modern law-firm web norms: Montserrat headings + Open Sans body (Open Sans/Roboto dominate legal websites; Montserrat adds a more current display feel)."
+    - "Dark-first palette: deep navy #051C2C surfaces with white type; vivid royal blue #0055FF for CTAs."
+    - "McKinsey also uses light (#F0F0F0 / white) section breaks — mapped to --color-light for alternating bands."
+    - "Sharp rectangular buttons (border-radius 0) match McKinsey CTA style."

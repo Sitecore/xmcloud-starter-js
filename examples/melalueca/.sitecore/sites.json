@@ -1,0 +1,22 @@
+[
+  {
+    "name": "bcaa",
+    "hostName": "*",
+    "language": "en"
+  },
+  {
+    "name": "evo",
+    "hostName": "*",
+    "language": "en"
+  },
+  {
+    "name": "bcaa",
+    "hostName": "https://www.bcaa.com/",
+    "language": "en"
+  },
+  {
+    "name": "solterra",
+    "hostName": "*",
+    "language": "en"
+  }
+]

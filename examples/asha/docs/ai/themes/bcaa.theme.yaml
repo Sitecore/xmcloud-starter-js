@@ -1,0 +1,125 @@
+# Client Brand Theme — BCAA
+# User-supplied palette applied over the homepage screenshot and public stylesheet.
+
+client:
+  name: "BCAA"
+  sourceUrl: "https://www.bcaa.com"
+  extractedAt: "2026-10-05T21:30:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#0055A5"
+  primaryForeground: "#FFFFFF"
+  secondary: "#0072CE"
+  secondaryForeground: "#FFFFFF"
+  accent: "#0072CE"
+  accentForeground: "#FFFFFF"
+  background: "#FFFFFF"
+  foreground: "#666666"
+  muted: "#F5F5F5"
+  mutedForeground: "#666666"
+  headerBackground: "#FFFFFF"
+  headerForeground: "#003366"
+  footerBackground: "#003366"
+  footerForeground: "#FFFFFF"
+  border: "#D6D6D6"
+  ring: "#0055A5"
+  extra:
+    - { name: "dark", value: "#003366" }
+    - { name: "caaRed", value: "#DA291C" }
+
+typography:
+  headingFamily: "Nunito Sans"
+  headingWeight: "700"
+  bodyFamily: "Nunito Sans"
+  bodyWeight: "400"
+  monoFamily: "Lora"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Nunito+Sans:wght@400;500;600;700&display=swap"
+  scale:
+    hero: ""
+    h1: ""
+    h2: ""
+    h3: ""
+    body: "1rem"
+    small: ""
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "1.5"
+
+spacing:
+  density: "normal"
+  sectionGap: ""
+  containerMaxWidth: ""
+  containerPadding: ""
+
+shape:
+  borderRadius: "0.25rem"
+  buttonRadius: "0.25rem"
+  cardRadius: "0.25rem"
+  imageRadius: "9999px"
+  shadowStyle: "subtle"
+  borderStyle: "subtle"
+
+tone:
+  overall: "corporate"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "split-image-text"
+  cardStyle: "flat"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#0055A5"
+      secondary: "#0072CE"
+      accent: "#0072CE"
+  fontFamily:
+    heading: ["Nunito Sans", "ui-sans-serif", "system-ui", "sans-serif"]
+    body: ["Nunito Sans", "ui-sans-serif", "system-ui", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0.25rem"
+    button: "0.25rem"
+    card: "0.25rem"
+
+cssVariables: |
+  :root {
+    --color-primary: #0055A5;
+    --color-primary-foreground: #FFFFFF;
+    --color-primary-hover: #003366;
+    --color-secondary: #0072CE;
+    --color-secondary-foreground: #FFFFFF;
+    --color-secondary-hover: #0F70BE;
+    --color-accent: #0072CE;
+    --color-accent-foreground: #FFFFFF;
+    --color-background: #FFFFFF;
+    --color-foreground: #666666;
+    --color-muted: #F5F5F5;
+    --color-muted-foreground: #666666;
+    --color-card: #F5F5F5;
+    --color-border: #D6D6D6;
+    --color-ring: #0055A5;
+    --color-dark: #003366;
+    --color-dark-foreground: #FFFFFF;
+    --color-light: #F5F5F5;
+    --color-brand-black: #666666;
+    --color-brand-red: #DA291C;
+    --font-family-heading: var(--font-heading), 'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-family-body: var(--font-body), 'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-family-accent: var(--font-accent), 'Lora', ui-serif, Georgia, serif;
+    --border-radius-default: 0.25rem;
+  }
+
+extraction:
+  confidence: "high"
+  method: "user-overrides+stylesheet"
+  notes:
+    - "User-supplied hex values were applied as-is: primary #0055A5, dark/hover #003366, light blue #0072CE, CAA red #DA291C, white #FFFFFF, light gray #F5F5F5, body text #666666."
+    - "www.bcaa.org did not resolve. The homepage screenshot and stylesheet are from https://www.bcaa.com."
+    - "Playwright was not installed, so the site scraper did not run. Fonts and button shape came from the public stylesheet plus the screenshot."
+    - "Proprietary faces are BCAA Sans (body and headings) and BCAA Serif Bold Italic (accent, the italic word in headlines). Substitutes: Nunito Sans and Lora italic."
+    - "Header on the screenshot is white with dark text. Footer token uses the user dark blue #003366."
+    - "CAA red is exposed as --color-brand-red. Destructive red was left unchanged."
+    - "Button radius 0.25rem is from the screenshot. The base .a-btn rule does not set a radius."
+    - "Border #D6D6D6, overlay, and hover mixes were derived. Primary hover is the user dark blue, not a calculated mix."

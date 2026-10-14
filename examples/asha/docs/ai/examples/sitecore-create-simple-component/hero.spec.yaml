@@ -1,0 +1,184 @@
+project:  
+  reactComponentRoot: "src/components/uiim"  
+  shadcnImportBase: "@/components/ui"  
+  componentMapPath: ".sitecore/component-map.ts"  
+  sitecoreJssPackage: "@sitecore-content-sdk/nextjs"  
+  usesTailwind: true  
+  usesShadcn: true  
+  
+tools:  
+  marketerMcp:  
+    preferred: true  
+    useFor:  
+      - "create or update Sitecore templates"  
+      - "create or update standard values"  
+      - "create or update folder templates"  
+      - "create or update datasource folders"  
+      - "create or update renderings"  
+      - "set datasource location and ComponentQuery"  
+  documentationMcp:  
+    allowed: true  
+    useWhen:  
+      - "official Sitecore behavior is unclear"  
+      - "GraphQL/rendering configuration is uncertain"  
+      - "the agent needs product documentation verification"  
+  
+siteCollection: "acme"  
+siteName: "main"  
+category: "Banners"  
+  
+component:  
+  namePascal: "Hero"  
+  nameKebab: "hero"  
+  kind: "simple"  
+  filePath: "src/components/uiim/banners/Hero.tsx"  
+  componentMapKey: "hero"  
+  componentMapImportAlias: "Hero"  
+  
+design:  
+  references: []  
+  extractedLayout:  
+    summary: "A hero banner with title, rich text, background image, and CTA."  
+    visibleElements:  
+      - "Title"  
+      - "Description"  
+      - "Background image"  
+      - "CTA link"  
+    inferredFields:  
+      - "Title"  
+      - "Description"  
+      - "BackgroundImage"  
+      - "CtaLink"  
+    repeatedItems: false  
+    likelyVariantNames:  
+      - "Default"  
+    responsiveViews: []  
+  assumptions: []  
+  openQuestions: []  
+  
+context:  
+  usesRouteFields: false  
+  routeTemplateName: ""  
+  routeFields: []  
+  
+templates:  
+  parent:  
+    create: true  
+    path: "/sitecore/templates/Project/acme/Components/Banners/Hero"  
+    name: "Hero"  
+    sectionName: "Data"  
+    fields:  
+      - name: "Title"  
+        type: "Single-Line Text"  
+      - name: "Description"  
+        type: "Rich Text"  
+      - name: "BackgroundImage"  
+        type: "Image"  
+      - name: "CtaLink"  
+        type: "General Link"  
+    baseTemplates:
+      - "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"  # Standard Template
+      - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters
+    standardValues:  
+      create: true  
+      defaults:  
+        Title: "$name"  
+      masters: []  
+      addHorizonDatasourceGrouping: false  
+  
+  child:  
+    create: false  
+    path: ""  
+    name: ""  
+    sectionName: "Data"  
+    fields: []  
+    baseTemplates:
+      - "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"  # Standard Template
+      - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters  
+    standardValues:  
+      create: false  
+      defaults: {}  
+      masters: []  
+  
+folderTemplate:  
+  create: true  
+  path: "/sitecore/templates/Project/acme/Folders/Hero Folder"  
+  name: "Hero Folder"  
+  standardValues:  
+    create: true  
+    masters:  
+      - "Hero"  
+  
+datasourceFolder:  
+  create: true  
+  path: "/sitecore/content/acme/main/Data/Heroes"  
+  name: "Heroes"  
+  
+  insertOptions: []  # REQUIRED: set on the folder item itself
+  exampleItem:
+    create: true
+    name: "Hero"
+    fields: {}
+renderingParamsTemplate:
+  create: true
+  path: "/sitecore/templates/Project/acme/Rendering Parameters/Banners/Hero"
+  name: "Hero"
+  baseTemplates:
+    - "{4247AAD4-EBDE-4994-998F-E067A51B1FE4}"  # IComponentVariant
+    - "{5C74E985-E055-43FF-B28C-DB6C6A6450A2}"  # IStyling
+    - "{44A022DB-56D3-419A-B43B-E27E4D8E9C41}"  # Grid Parameters
+    - "{3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}"  # IRenderingId
+
+headlessVariants:
+  create: true
+  containerPath: "/sitecore/content/acme/main/Presentation/Headless Variants/Hero"
+  variants:
+  - "Default"
+
+availableRenderings:
+  register: true
+  targetPath: "/sitecore/content/acme/main/Presentation/Available Renderings/Page Content"
+
+rendering:
+  create: true  
+  path: "/sitecore/layout/Renderings/Project/acme/Banners/Hero"  
+  name: "Hero"  
+  componentName: "Hero"  # MUST be PascalCase matching TSX filename exactly
+  datasourceRequired: true  
+  datasourceTemplatePath: "/sitecore/templates/Project/acme/Components/Banners/Hero"  
+  datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Hero Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Hero Folder']"  
+  dataSource: ""  
+  addFieldEditorButton: "1"  
+  parametersTemplateId: ""  # MUST be Item ID (GUID) resolved via MCP — never a path
+  useComponentQuery: false
+  componentQuery: ""  
+  
+react:  
+  propsShape: "default-jss"  
+  usesSitecoreJssHelpers: true  
+  usesShadcn: true  
+  usesTailwind: true  
+  variants:  
+    - "Default"  
+  
+mcp:  
+  useMcp: true  
+  planOnly: false  
+  
+verification:  
+  checks:  
+    - "Template exists"  
+    - "__Standard Values exists"  
+    - "Folder template exists"  
+    - "Folder template __Masters points to Hero"  
+    - "Content folder exists under /Data"  
+    - "Rendering exists"  
+    - "Datasource Template uses full path"  
+    - "ComponentQuery is empty"  
+    - "React file exists under src/components/uiim"  
+    - "React uses top-level fields.Title / fields.Description / fields.BackgroundImage / fields.CtaLink"  
+    - "Component map updated"  
+    - "Tailwind + shadcn/ui pattern used"  
+  
+notes:  
+  - "Prefer shadcn Card/Button primitives with Sitecore JSS editable field helpers."  

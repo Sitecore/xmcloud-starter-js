@@ -1,0 +1,247 @@
+# Sitecore AI Manifest — Example (populated)
+# This is a reference example showing what the manifest looks like after
+# two components have been created. Do not commit this file — it is for
+# illustration only.
+
+generatedAt: "2026-03-20T09:00:00Z"
+lastUpdatedAt: "2026-03-21T14:37:00Z"
+lastUpdatedBy: "cursor"
+
+project:
+  siteCollection: "greece"
+  siteName: "eurobankgr"
+  sdk: "@sitecore-content-sdk/nextjs"
+  renderingsRoot: "/sitecore/layout/Renderings/Project/greece"
+  projectTemplatesRoot: "/sitecore/templates/Project/greece"
+  dataRoot: "/sitecore/content/greece/eurobankgr/Data"
+  projectFoldersRoot: "/sitecore/templates/Project/greece/Folders"
+  renderingParamsRoot: "/sitecore/templates/Project/greece/Rendering Parameters"
+  headlessVariantsRoot: "/sitecore/content/greece/eurobankgr/Presentation/Headless Variants"
+
+components:
+
+  - name: "Hero"
+    kind: "simple"
+    category: "Banners"
+    status: "complete"
+    createdAt: "2026-03-20T09:15:00Z"
+    updatedAt: "2026-03-20T10:02:00Z"
+
+    react:
+      filePath: "src/components/uiim/banners/Hero.tsx"
+      componentMapKey: "hero"
+      variants:
+        - "Default"
+
+    templates:
+      datasource:
+        name: "Hero"
+        path: "/sitecore/templates/Project/greece/Components/Banners/Hero"
+        itemId: "{A1B2C3D4-1111-2222-3333-AABBCCDDEEFF}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+          - { name: "BackgroundImage", type: "Image" }
+          - { name: "CtaLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{A1B2C3D4-4444-5555-6666-AABBCCDDEEFF}"
+          linked: true
+
+      child:
+        name: ""
+        path: ""
+        itemId: ""
+        sectionName: ""
+        fields: []
+        baseTemplatesSet: false
+        standardValues:
+          itemId: ""
+          linked: false
+
+      folder:
+        name: "Hero Folder"
+        path: "/sitecore/templates/Project/greece/Folders/Hero Folder"
+        itemId: "{F0F1F2F3-1111-2222-3333-FFEEDDCCBBAA}"
+        standardValues:
+          itemId: "{F0F1F2F3-4444-5555-6666-FFEEDDCCBBAA}"
+          linked: true
+          masters: ["Hero"]
+
+      renderingParams:
+        name: "Hero"
+        path: "/sitecore/templates/Project/greece/Rendering Parameters/Banners/Hero"
+        itemId: "{RP010203-1111-2222-3333-AABBCCDDEEFF}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "Heroes"
+      path: "/sitecore/content/greece/eurobankgr/Data/Heroes"
+      itemId: "{D5D6D7D8-1111-2222-3333-112233445566}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Hero"
+        itemId: "{E9E0E1E2-1111-2222-3333-AABBCCDDEEFF}"
+
+    rendering:
+      name: "Hero"
+      path: "/sitecore/layout/Renderings/Project/greece/Banners/Hero"
+      itemId: "{B5B6B7B8-1111-2222-3333-445566778899}"
+      componentName: "Hero"
+      datasourceTemplatePath: "/sitecore/templates/Project/greece/Components/Banners/Hero"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Hero Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Hero Folder']"
+      parametersTemplateId: "{RP010203-1111-2222-3333-AABBCCDDEEFF}"
+      componentQuery: ""
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: true
+
+    headlessVariants:
+      containerPath: "/sitecore/content/greece/eurobankgr/Presentation/Headless Variants/Hero"
+      containerId: "{HV010203-1111-2222-3333-AABBCCDDEEFF}"
+      variants:
+        - { name: "Default", itemId: "{VD010203-1111-2222-3333-AABBCCDDEEFF}" }
+
+    verification:
+      checkedAt: "2026-03-20T10:00:00Z"
+      passed:
+        - "Template exists at correct path"
+        - "Base templates set on datasource template"
+        - "Template section 'Data' exists"
+        - "Fields created with correct Type"
+        - "Standard Values created and linked"
+        - "Folder template exists"
+        - "Folder template Standard Values created and linked"
+        - "Datasource folder exists under /Data"
+        - "Rendering Parameters template created with base templates"
+        - "Rendering created as JSON Rendering"
+        - "Component Name is PascalCase (Hero)"
+        - "Parameters Template set to GUID"
+        - "React file created at src/components/uiim/banners/Hero.tsx"
+        - "Component map updated with key 'hero'"
+        - "Headless Variants container created"
+        - "Default Variant Definition item created"
+      failed: []
+      pendingManual:
+        - "Datasource Template on rendering (silent-write)"
+        - "Datasource Location on rendering (silent-write)"
+        - "__Masters on Hero Folder SV (silent-write)"
+        - "Insert options on Heroes folder instance (silent-write)"
+        - "Renderings on Available Renderings Page Content (silent-write)"
+
+    notes: []
+
+  - name: "ArticleCards"
+    kind: "list"
+    category: "Cards"
+    status: "partial"
+    createdAt: "2026-03-21T13:00:00Z"
+    updatedAt: "2026-03-21T14:37:00Z"
+
+    react:
+      filePath: "src/components/uiim/cards/ArticleCards.tsx"
+      componentMapKey: "article-cards"
+      variants:
+        - "Default"
+
+    templates:
+      datasource:
+        name: "Article Cards"
+        path: "/sitecore/templates/Project/greece/Components/Cards/Article Cards"
+        itemId: "{PARENT01-1111-2222-3333-AABBCCDDEEFF}"
+        sectionName: "Data"
+        fields:
+          - { name: "Title", type: "Single-Line Text" }
+          - { name: "Description", type: "Rich Text" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{PARENT01-4444-5555-6666-AABBCCDDEEFF}"
+          linked: true
+
+      child:
+        name: "Article Card"
+        path: "/sitecore/templates/Project/greece/Components/Cards/Article Card"
+        itemId: "{CHILD001-1111-2222-3333-AABBCCDDEEFF}"
+        sectionName: "Data"
+        fields:
+          - { name: "CardTitle", type: "Single-Line Text" }
+          - { name: "CardDescription", type: "Rich Text" }
+          - { name: "CardImage", type: "Image" }
+          - { name: "CardLink", type: "General Link" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{CHILD001-4444-5555-6666-AABBCCDDEEFF}"
+          linked: true
+
+      folder:
+        name: "Article Cards Folder"
+        path: "/sitecore/templates/Project/greece/Folders/Article Cards Folder"
+        itemId: "{FOLDER01-1111-2222-3333-AABBCCDDEEFF}"
+        standardValues:
+          itemId: "{FOLDER01-4444-5555-6666-AABBCCDDEEFF}"
+          linked: true
+          masters: ["Article Cards"]
+
+      renderingParams:
+        name: "ArticleCards"
+        path: "/sitecore/templates/Project/greece/Rendering Parameters/Cards/ArticleCards"
+        itemId: "{RP020203-1111-2222-3333-AABBCCDDEEFF}"
+        baseTemplatesSet: true
+
+    datasourceFolder:
+      name: "Article Cards"
+      path: "/sitecore/content/greece/eurobankgr/Data/Article Cards"
+      itemId: "{DATAFLD1-1111-2222-3333-AABBCCDDEEFF}"
+      insertOptionsSet: true
+      exampleItem:
+        name: "Article Cards"
+        itemId: "{EXAMPLE1-1111-2222-3333-AABBCCDDEEFF}"
+
+    rendering:
+      name: "Article Cards"
+      path: "/sitecore/layout/Renderings/Project/greece/Cards/Article Cards"
+      itemId: ""        # ← not yet created — status is partial
+      componentName: "ArticleCards"
+      datasourceTemplatePath: "/sitecore/templates/Project/greece/Components/Cards/Article Cards"
+      datasourceLocationQuery: "query:$site/*[@@name='Data']/*[@@templatename='Article Cards Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Article Cards Folder']"
+      parametersTemplateId: "{RP020203-1111-2222-3333-AABBCCDDEEFF}"
+      componentQuery: "query ($datasource: String!, $language: String!) { datasource: item(path: $datasource, language: $language) { ... on ArticleCards { Title { jsonValue } Description { jsonValue } children { results { ... on ArticleCard { CardTitle { jsonValue } CardDescription { jsonValue } CardImage { jsonValue } CardLink { jsonValue } } } } } } }"
+      addFieldEditorButton: "1"
+      registeredInAvailableRenderings: false
+
+    headlessVariants:
+      containerPath: "/sitecore/content/greece/eurobankgr/Presentation/Headless Variants/ArticleCards"
+      containerId: ""
+      variants: []
+
+    verification:
+      checkedAt: "2026-03-21T14:37:00Z"
+      passed:
+        - "Parent template created"
+        - "Child template created"
+        - "Base templates set on both"
+        - "Fields created with correct Type"
+        - "Standard Values linked on both"
+        - "Folder template created"
+        - "Datasource folder created"
+        - "Rendering Parameters template created"
+      failed:
+        - "Rendering not yet created (session interrupted)"
+      pendingManual: []
+
+    notes:
+      - "2026-03-21T14:37:00Z — Session interrupted before rendering creation. Resume from rendering step."
+
+# ─────────────────────────────────────────────
+# Lookup cache (optional) — frequently resolved items
+# ─────────────────────────────────────────────
+lookups:
+  - path: "/sitecore/content/greece/eurobankgr/Presentation/Available Renderings/Page Content"
+    itemId: "{C72B27E5-7DFF-4922-BBB0-8226D8DEC788}"
+    lastReadAt: "2026-03-20T10:00:00Z"
+    note: "Available Renderings Page Content — rendering IDs are appended here"
+
+  - path: "/sitecore/templates/Project/greece/Components"
+    itemId: "{COMP0001-1111-2222-3333-AABBCCDDEEFF}"
+    lastReadAt: "2026-03-20T09:15:00Z"
+    note: "Components folder under projectTemplatesRoot"

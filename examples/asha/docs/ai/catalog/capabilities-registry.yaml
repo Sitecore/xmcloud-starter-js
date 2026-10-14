@@ -1,0 +1,47 @@
+# Capabilities Registry
+# Machine-readable index of cross-cutting platform features that SEs enable manually.
+# Separate from component-registry.yaml (visual homepage sections) and
+# page-template-registry.yaml (page types).
+#
+# These are not detected by the Site Analyzer from screenshots — they are
+# platform capabilities that an SE decides to enable for a demo.
+
+capabilities:
+
+  - id: search
+    name: "Site Search"
+    description: "Full-text search with pagination or infinite scroll, configured via Page Builder"
+    approach: "OOTB SitecoreAI SearchExperience component from starter kit"
+    sdk: "@sitecore-content-sdk/nextjs/search"
+    sdkDependencies: []  # No new dependencies — uses existing Content SDK
+    initialization: null  # No global init needed — hooks work via SitecoreProvider
+    prerequisites:
+      - "Search sources available in the SitecoreAI environment (enabled by default)"
+      - "Search Configuration Manager Marketplace app installed"
+      - "SearchExperience component copied from starter kit into the project"
+      - "Content item created with JSON template (searchIndex + fieldsMapping)"
+    components:
+      - id: search-experience
+        name: "SearchExperience"
+        kind: simple
+        category: search
+        filePath: "src/components/search-experience/SearchExperience.tsx"
+        variants: [Default, LoadMore]
+        datasourceFields:
+          - { name: "Search", type: "Multi-Line Text", purpose: "JSON config with searchIndex GUID and fieldsMapping" }
+        renderingParams:
+          - { name: "columns", type: "Single-Line Text", purpose: "grid columns: 1, 2, or 3" }
+          - { name: "pageSize", type: "Single-Line Text", purpose: "results per page" }
+        placement: "any placeholder (typically headless-main)"
+        hooks:
+          - "useSearch (pagination variant)"
+          - "useInfiniteSearch (load-more variant)"
+    configuration:
+      - "In Page Builder: add SearchExperience component to a page"
+      - "Assign a content item with JSON template containing searchIndex and fieldsMapping"
+      - "Use the Search Configuration Manager tab to select source and map fields visually"
+      - "Configure columns and pageSize via rendering parameters"
+    gracefulDegradation:
+      - "Shows skeleton items in editing/preview mode"
+      - "Shows empty results message when search returns no matches"
+      - "Shows error state with retry button on API failure"

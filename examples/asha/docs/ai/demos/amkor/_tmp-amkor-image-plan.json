@@ -1,0 +1,730 @@
+[
+  {
+    "id": "a3caec3b-1a9d-4ffe-a8e1-926c1540e0ae",
+    "path": "/About-Us/Careers/Vietnam",
+    "query": "hanoi vietnam city",
+    "alt": "Vietnamese cityscape",
+    "url": "https://images.unsplash.com/photo-1543355890-20bc0a26fda1?w=1200&q=80"
+  },
+  {
+    "id": "74297bc9-7ea0-496d-a956-882befee3230",
+    "path": "/About-Us/Careers/United-States",
+    "query": "phoenix arizona city",
+    "alt": "Arizona cityscape, United States",
+    "url": "https://images.unsplash.com/photo-1729041534038-fdc1f9cf3d3a?w=1200&q=80"
+  },
+  {
+    "id": "0591f743-0efd-4d29-8f9f-36b1ca3fd8f7",
+    "path": "/About-Us/Careers/Taiwan",
+    "query": "taipei taiwan skyline",
+    "alt": "Taipei skyline, Taiwan",
+    "url": "https://images.unsplash.com/photo-1598935898639-81586f7d2129?w=1200&q=80"
+  },
+  {
+    "id": "be496562-4bea-4149-a834-878a9705495a",
+    "path": "/About-Us/Careers/Singapore",
+    "query": "singapore skyline",
+    "alt": "Singapore skyline",
+    "url": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80"
+  },
+  {
+    "id": "e0c7ceb1-0ec3-4b9c-b96c-684c52dce4ab",
+    "path": "/About-Us/Careers/Portugal",
+    "query": "lisbon portugal city",
+    "alt": "Lisbon cityscape, Portugal",
+    "url": "https://images.unsplash.com/photo-1501927023255-9063be98970c?w=1200&q=80"
+  },
+  {
+    "id": "e6f535ce-2dd6-4c05-b48b-61e24b56753d",
+    "path": "/About-Us/Careers/Philippines",
+    "query": "manila philippines city",
+    "alt": "Manila cityscape, Philippines",
+    "url": "https://images.unsplash.com/photo-1598258710957-db8614c2881e?w=1200&q=80"
+  },
+  {
+    "id": "1d867eb1-ba61-43ab-aa09-802772f6c5ed",
+    "path": "/About-Us/Careers/Malaysia",
+    "query": "kuala lumpur skyline",
+    "alt": "Kuala Lumpur skyline, Malaysia",
+    "url": "https://images.unsplash.com/photo-1574218732130-6b19257fd9db?w=1200&q=80"
+  },
+  {
+    "id": "f4f4b8b7-38c9-4990-9934-9a55a96cc425",
+    "path": "/About-Us/Careers/Korea",
+    "query": "seoul south korea city",
+    "alt": "Seoul skyline, South Korea",
+    "url": "https://images.unsplash.com/photo-1506816561089-5cc37b3aa9b0?w=1200&q=80"
+  },
+  {
+    "id": "254aca3f-5147-4fc8-a52b-8280ce28ee4a",
+    "path": "/About-Us/Careers/Japan",
+    "query": "tokyo skyline",
+    "alt": "Tokyo skyline, Japan",
+    "url": "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=1200&q=80"
+  },
+  {
+    "id": "5d82fb89-2858-4c0f-82a2-f51a6b4a2e4d",
+    "path": "/About-Us/Careers/Germany",
+    "query": "munich germany city",
+    "alt": "German cityscape",
+    "url": "https://images.unsplash.com/photo-1595867818082-083862f3d630?w=1200&q=80"
+  },
+  {
+    "id": "924a3636-8b21-45b4-a0ec-c37eae4e6e1a",
+    "path": "/About-Us/Careers/France",
+    "query": "paris cityscape",
+    "alt": "Paris cityscape, France",
+    "url": "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=1200&q=80"
+  },
+  {
+    "id": "e746baff-d4f8-4202-953d-6c491fa8f038",
+    "path": "/About-Us/Careers/China",
+    "query": "shanghai skyline",
+    "alt": "Shanghai city skyline, China",
+    "url": "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=1200&q=80"
+  },
+  {
+    "id": "17d30160-59dd-44a9-9ada-a4aecc425f1c",
+    "path": "/About-Us/Mission",
+    "query": "business team collaboration",
+    "alt": "Team collaborating on shared goals",
+    "url": "https://images.unsplash.com/photo-1622675363311-3e1904dc1885?w=1200&q=80"
+  },
+  {
+    "id": "e320a2ce-1336-4b69-9bbf-a4a037cb2f90",
+    "path": "/About-Us/Memberships-and-Partnerships",
+    "query": "business partnership meeting",
+    "alt": "Industry partnership meeting",
+    "url": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
+  },
+  {
+    "id": "229db77c-8772-482b-863d-763554d4f19f",
+    "path": "/About-Us/Leadership",
+    "query": "boardroom meeting",
+    "alt": "Leadership team in a boardroom",
+    "url": "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=1200&q=80"
+  },
+  {
+    "id": "1bf4ddf7-3a85-4655-840f-81bb7d1478d1",
+    "path": "/About-Us/Corporate-Responsibility",
+    "query": "solar panels sustainability",
+    "alt": "Renewable energy and sustainability",
+    "url": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80"
+  },
+  {
+    "id": "08b4621b-314d-40b5-8d63-cf579db1ee28",
+    "path": "/About-Us/Company-History",
+    "query": "vintage electronics circuit",
+    "alt": "Historic electronics technology",
+    "url": "https://images.unsplash.com/photo-1776107484031-7c2b46f46c65?w=1200&q=80"
+  },
+  {
+    "id": "6f39ec02-daa7-4fed-9e65-e31a9daf37f1",
+    "path": "/About-Us/Careers",
+    "query": "diverse team office",
+    "alt": "Colleagues working together",
+    "url": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80"
+  },
+  {
+    "id": "b6b4da5a-f8b2-4ad1-bf08-02aadf88c82e",
+    "path": "/About-Us/Amkor-Overview",
+    "query": "chip manufacturing",
+    "alt": "Semiconductor factory floor",
+    "url": "https://images.unsplash.com/photo-1592659762303-90081d34b277?w=1200&q=80"
+  },
+  {
+    "id": "f4903ca0-fbf5-4486-b2a9-80da52523bf9",
+    "path": "/Technology/2-5D-3D-TSV",
+    "query": "semiconductor technology",
+    "alt": "2 5D 3D TSV — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=80"
+  },
+  {
+    "id": "19478127-ae96-474e-ae08-9f6601dcda94",
+    "path": "/Technology/3D-Stacked-Die",
+    "query": "semiconductor technology",
+    "alt": "3D Stacked Die — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?w=1200&q=80"
+  },
+  {
+    "id": "d6b40cff-cac3-436f-9c1e-5fc6dd652472",
+    "path": "/Technology/AiP-AoP",
+    "query": "semiconductor technology",
+    "alt": "AiP AoP — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1562408590-e32931084e23?w=1200&q=80"
+  },
+  {
+    "id": "cf68dbf5-9228-4cac-b321-6d71ffcb4975",
+    "path": "/Technology/Chip-on-Chip",
+    "query": "semiconductor technology",
+    "alt": "Chip on Chip — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1675602488512-bdd631490fcb?w=1200&q=80"
+  },
+  {
+    "id": "7e5c8a64-1aca-47ae-9c00-5bd02f82ac81",
+    "path": "/Technology/Copper-Pillar",
+    "query": "semiconductor technology",
+    "alt": "Copper Pillar — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1651340765216-ba02df201308?w=1200&q=80"
+  },
+  {
+    "id": "371658f9-84d7-403c-a28a-fea5b30bc028",
+    "path": "/Technology/Edge-Protection",
+    "query": "semiconductor technology",
+    "alt": "Edge Protection — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1677442135136-760c813028c0?w=1200&q=80"
+  },
+  {
+    "id": "65d76b35-6818-4960-9507-25c44ea92be9",
+    "path": "/Technology/Flip-Chip",
+    "query": "semiconductor technology",
+    "alt": "Flip Chip — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1606206873764-fd15e242df52?w=1200&q=80"
+  },
+  {
+    "id": "db60af32-8d68-46f2-b24a-afece62ebee0",
+    "path": "/Technology/Interconnect",
+    "query": "semiconductor technology",
+    "alt": "Interconnect — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1651340550839-3b295d930048?w=1200&q=80"
+  },
+  {
+    "id": "a11ae558-fcaf-437e-93ca-64a7ac7f6e2d",
+    "path": "/Technology/Optical-Sensors",
+    "query": "semiconductor technology",
+    "alt": "Optical Sensors — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1582560469781-1965b9af903d?w=1200&q=80"
+  },
+  {
+    "id": "d36a3f10-8a1c-46e6-bffc-59f318c87129",
+    "path": "/Technology/Package-on-Package",
+    "query": "semiconductor technology",
+    "alt": "Package on Package — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1716436329476-fd6cbaa1fc71?w=1200&q=80"
+  },
+  {
+    "id": "1f93ed97-c9e0-4a5e-9b79-aba7befd2157",
+    "path": "/Technology/S-Connect",
+    "query": "semiconductor technology",
+    "alt": "S Connect — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1582719366794-4d27cd0a34a0?w=1200&q=80"
+  },
+  {
+    "id": "661eebcd-90ee-4393-a085-f4ff6710a826",
+    "path": "/Technology/S-SWIFT",
+    "query": "semiconductor technology",
+    "alt": "S SWIFT — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1587845323226-bad89242c735?w=1200&q=80"
+  },
+  {
+    "id": "b49f5bee-b6d4-4e71-8249-d814522087a9",
+    "path": "/Technology/SWIFT",
+    "query": "semiconductor technology",
+    "alt": "SWIFT — advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1724770388447-30b015a5cbb6?w=1200&q=80"
+  },
+  {
+    "id": "53463616-8870-4f0d-95c1-4371d992c7db",
+    "path": "/Technology",
+    "query": "semiconductor technology",
+    "alt": "Advanced semiconductor technology",
+    "url": "https://images.unsplash.com/photo-1733844982998-f31a1111c74d?w=1200&q=80"
+  },
+  {
+    "id": "1efa1bc9-1495-4b58-8cc2-02e569b24a01",
+    "path": "/About-Us/Smart-Manufacturing-I40",
+    "query": "smart factory automation",
+    "alt": "Smart manufacturing automation",
+    "url": "https://images.unsplash.com/photo-1647427060118-4911c9821b82?w=1200&q=80"
+  },
+  {
+    "id": "df23610e-a0c4-4e95-a316-ab794cff927f",
+    "path": "/About-Us/Contact-Us",
+    "query": "office reception desk",
+    "alt": "Corporate office reception",
+    "url": "https://images.unsplash.com/photo-1643292710805-0c32e5ca2a2d?w=1200&q=80"
+  },
+  {
+    "id": "8c417bb7-ed49-44d2-ba41-ff28327bc87d",
+    "path": "/About-Us/Customer-Center/Amkor-Mechanical-Samples",
+    "query": "engineering components samples",
+    "alt": "Mechanical sample components",
+    "url": "https://images.unsplash.com/photo-1769147339214-076740872485?w=1200&q=80"
+  },
+  {
+    "id": "9e1bc7d5-855f-4cd9-94dc-7d26e579d149",
+    "path": "/About-Us/Customer-Center/B2B-Integration-Services",
+    "query": "data server network",
+    "alt": "B2B data integration systems",
+    "url": "https://images.unsplash.com/photo-1762163516269-3c143e04175c?w=1200&q=80"
+  },
+  {
+    "id": "732461b7-be88-46a1-88d6-1ba797112060",
+    "path": "/About-Us/Customer-Center/Document-Library",
+    "query": "document archive shelves",
+    "alt": "Technical document library",
+    "url": "https://images.unsplash.com/photo-1597092451116-27787c07901d?w=1200&q=80"
+  },
+  {
+    "id": "41ff6cb6-eafe-4153-926f-bdff896db03c",
+    "path": "/About-Us/Customer-Center",
+    "query": "customer service office team",
+    "alt": "Customer support team at work",
+    "url": "https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=1200&q=80"
+  },
+  {
+    "id": "518df9e7-844e-413a-9f74-42108efee527",
+    "path": "/Quality",
+    "query": "precision inspection microscope",
+    "alt": "Precision inspection under a microscope",
+    "url": "https://images.unsplash.com/photo-1572884267966-02340ebc90ac?w=1200&q=80"
+  },
+  {
+    "id": "10c697ec-265d-45f2-9007-eaa023c90a93",
+    "path": "/Services/Design-Services",
+    "query": "engineer cad design computer",
+    "alt": "Engineer working on chip design software",
+    "url": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=1200&q=80"
+  },
+  {
+    "id": "9d26ccbe-06c5-4098-beb7-b6a75cb65357",
+    "path": "/Services/Package-Characterization",
+    "query": "laboratory measurement instrument",
+    "alt": "Package characterization laboratory equipment",
+    "url": "https://images.unsplash.com/photo-1602052577122-f73b9710adba?w=1200&q=80"
+  },
+  {
+    "id": "4332e3ea-a3af-413a-bc52-b32861d6392b",
+    "path": "/Services/Wafer-Bumping",
+    "query": "silicon wafer manufacturing",
+    "alt": "Wafer bumping process",
+    "url": "https://images.unsplash.com/photo-1672307613484-3254a04651fd?w=1200&q=80"
+  },
+  {
+    "id": "e1435cb8-ede6-4a86-911f-58cb91c3300d",
+    "path": "/Services",
+    "query": "semiconductor manufacturing equipment",
+    "alt": "Semiconductor production line",
+    "url": "https://images.unsplash.com/photo-1717386255773-1e3037c81788?w=1200&q=80"
+  },
+  {
+    "id": "2d3b2322-d080-4557-9e16-cb198f62c8aa",
+    "path": "/Applications/Artificial-Intelligence",
+    "query": "artificial intelligence data center",
+    "alt": "AI data center compute hardware",
+    "url": "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?w=1200&q=80"
+  },
+  {
+    "id": "bc03eecc-5e7c-4897-8ace-7e834f2bed1e",
+    "path": "/Applications/Automotive",
+    "query": "automotive electronics dashboard",
+    "alt": "Automotive electronics and dashboard technology",
+    "url": "https://images.unsplash.com/photo-1547076286-60c93f1a3652?w=1200&q=80"
+  },
+  {
+    "id": "5559500a-a62e-480f-81af-fc453032ae38",
+    "path": "/Applications/Communications",
+    "query": "telecom tower 5g",
+    "alt": "5G communications infrastructure",
+    "url": "https://images.unsplash.com/photo-1533664488202-6af66d26c44a?w=1200&q=80"
+  },
+  {
+    "id": "24d543c6-0796-4451-ab0b-5dae2240f86a",
+    "path": "/Applications/Computing",
+    "query": "server room computing",
+    "alt": "High-performance computing servers",
+    "url": "https://images.unsplash.com/photo-1691435828932-911a7801adfb?w=1200&q=80"
+  },
+  {
+    "id": "2c473693-3137-409c-a698-cb2604c67b9d",
+    "path": "/Applications/Consumer",
+    "query": "consumer electronics devices",
+    "alt": "Consumer electronics devices",
+    "url": "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=1200&q=80"
+  },
+  {
+    "id": "7b96d5b1-7adc-487a-a990-2784e633dabc",
+    "path": "/Applications/Industrial",
+    "query": "industrial automation robotics factory",
+    "alt": "Industrial automation and robotics",
+    "url": "https://images.unsplash.com/photo-1716191300020-b52dec5b70a8?w=1200&q=80"
+  },
+  {
+    "id": "e7c78365-d02b-4d31-a898-e5c1d16709ab",
+    "path": "/Applications/Internet-of-Things",
+    "query": "internet of things smart devices",
+    "alt": "Connected IoT smart devices",
+    "url": "https://images.unsplash.com/photo-1667984550708-a6beba23cb4c?w=1200&q=80"
+  },
+  {
+    "id": "a3406ef6-d1d8-4c55-920a-80e56a32d49f",
+    "path": "/Applications/Networking",
+    "query": "network switch data cables",
+    "alt": "Networking equipment and data cabling",
+    "url": "https://images.unsplash.com/photo-1683322499436-f4383dd59f5a?w=1200&q=80"
+  },
+  {
+    "id": "20e5730d-e035-4835-b224-bd494a0f3c99",
+    "path": "/Applications",
+    "query": "technology devices",
+    "alt": "Connected technology devices",
+    "url": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=1200&q=80"
+  },
+  {
+    "id": "7f6b1f5b-a1e3-4bab-9ff0-c57f7a2aafd7",
+    "path": "/Packaging/Laminate/CABGA-FBGA",
+    "query": "printed circuit board macro",
+    "alt": "CABGA FBGA — laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1580584126903-c17d41830450?w=1200&q=80"
+  },
+  {
+    "id": "5c8d8e99-6b07-48d5-87a9-fa4a9509a243",
+    "path": "/Packaging/Laminate/DSMBGA",
+    "query": "printed circuit board macro",
+    "alt": "DSMBGA — laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1631376178637-392efc9e356b?w=1200&q=80"
+  },
+  {
+    "id": "9d6bfbe6-df0a-4340-8f9b-2b353ba47ac1",
+    "path": "/Packaging/Laminate/FCBGA",
+    "query": "printed circuit board macro",
+    "alt": "FCBGA — laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1585051256362-eb56bf4d5ea3?w=1200&q=80"
+  },
+  {
+    "id": "73c7a566-81a0-4529-8805-f5d2b3a595fa",
+    "path": "/Packaging/Laminate/fcCSP",
+    "query": "printed circuit board macro",
+    "alt": "fcCSP — laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1586920740280-e7da670f7cb7?w=1200&q=80"
+  },
+  {
+    "id": "764cb846-8081-439c-bab5-a0ba97f45bf7",
+    "path": "/Packaging/Laminate/FlipStack-CSP",
+    "query": "printed circuit board macro",
+    "alt": "FlipStack CSP — laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=1200&q=80"
+  },
+  {
+    "id": "2750629a-a0ad-4650-a73c-c0794107390f",
+    "path": "/Packaging/Laminate/Interposer-PoP",
+    "query": "printed circuit board macro",
+    "alt": "Interposer PoP — laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1535136104956-115a2cd67fc4?w=1200&q=80"
+  },
+  {
+    "id": "52232711-4e01-4e3c-bfc5-97e3136af3fc",
+    "path": "/Packaging/Laminate/PBGA-TEPBGA",
+    "query": "printed circuit board macro",
+    "alt": "PBGA TEPBGA — laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1610878785620-3ab2d3a2ae7b?w=1200&q=80"
+  },
+  {
+    "id": "da1bb148-e021-42fc-afbd-b120632bfd9c",
+    "path": "/Packaging/Laminate/Stacked-CSP",
+    "query": "printed circuit board macro",
+    "alt": "Stacked CSP — laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1517055729445-fa7d27394b48?w=1200&q=80"
+  },
+  {
+    "id": "5c75f9e0-0738-48c0-b618-cc3ced67108e",
+    "path": "/Packaging/Leadframe/ePad-LQFP-TQFP",
+    "query": "electronic chip closeup",
+    "alt": "ePad LQFP TQFP — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1675602487652-3a4d8cdada94?w=1200&q=80"
+  },
+  {
+    "id": "f46304e7-17d5-440b-aeff-2b3f40bb9e60",
+    "path": "/Packaging/Leadframe/ePad-TSSOP-SOIC-SSOP",
+    "query": "electronic chip closeup",
+    "alt": "ePad TSSOP SOIC SSOP — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1675602488453-c3897a475af5?w=1200&q=80"
+  },
+  {
+    "id": "6979b580-41f1-4926-a02e-05a06cc7ace8",
+    "path": "/Packaging/Leadframe/fcMLF",
+    "query": "electronic chip closeup",
+    "alt": "fcMLF — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=1200&q=80"
+  },
+  {
+    "id": "69a12bb3-b802-4f53-a8e5-11887f50dabd",
+    "path": "/Packaging/Leadframe/LQFP",
+    "query": "electronic chip closeup",
+    "alt": "LQFP — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1782155789201-b6d7ea3704c6?w=1200&q=80"
+  },
+  {
+    "id": "6435b867-5b7c-42d8-a099-d790a35729a8",
+    "path": "/Packaging/Leadframe/MicroLeadFrame",
+    "query": "electronic chip closeup",
+    "alt": "MicroLeadFrame — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1613500625088-d5032ddc3e7e?w=1200&q=80"
+  },
+  {
+    "id": "89ec5db6-0475-4b7f-a5e3-c4b0fc99d32f",
+    "path": "/Packaging/Leadframe/SOIC",
+    "query": "electronic chip closeup",
+    "alt": "SOIC — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1651720602447-6ac17424598f?w=1200&q=80"
+  },
+  {
+    "id": "798c52bf-ca05-448a-b884-2191a8582973",
+    "path": "/Packaging/Leadframe/SSOP-QSOP",
+    "query": "electronic chip closeup",
+    "alt": "SSOP QSOP — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1532883031962-d3574f99541b?w=1200&q=80"
+  },
+  {
+    "id": "5c29183d-34a2-4c34-95c5-73c1cc0c81c4",
+    "path": "/Packaging/Leadframe/TQFP",
+    "query": "electronic chip closeup",
+    "alt": "TQFP — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1701720200175-c7a5d6572de2?w=1200&q=80"
+  },
+  {
+    "id": "2b657b54-fab2-4c16-bfc7-ad21b3f6ffa0",
+    "path": "/Packaging/Leadframe/TSSOP-MSOP",
+    "query": "electronic chip closeup",
+    "alt": "TSSOP MSOP — leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1782330136047-e9bbeed68a10?w=1200&q=80"
+  },
+  {
+    "id": "874f21e1-91b9-44bd-be36-a5aef1a95055",
+    "path": "/Packaging/System-in-Package-SiP",
+    "query": "microprocessor chip detail",
+    "alt": "System-in-Package microelectronics detail",
+    "url": "https://images.unsplash.com/photo-1494083306499-e22e4a457632?w=1200&q=80"
+  },
+  {
+    "id": "5ee5f38a-d624-4836-bf30-45b31c4a6def",
+    "path": "/Packaging/MEMS-and-Sensors",
+    "query": "electronic sensor module",
+    "alt": "MEMS sensor components",
+    "url": "https://images.unsplash.com/photo-1640955785023-1854685dae05?w=1200&q=80"
+  },
+  {
+    "id": "0ebc33ff-8697-49b8-a276-19bd86e99074",
+    "path": "/Packaging/Memory",
+    "query": "computer memory module",
+    "alt": "Memory modules on a circuit board",
+    "url": "https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?w=1200&q=80"
+  },
+  {
+    "id": "b508eaf5-a373-43cd-a504-d5add51ae36b",
+    "path": "/Packaging/Laminate",
+    "query": "printed circuit board macro",
+    "alt": "Laminate substrate circuitry detail",
+    "url": "https://images.unsplash.com/photo-1651340741844-48edcd3fe79c?w=1200&q=80"
+  },
+  {
+    "id": "8b6d05c9-7940-49a3-b371-44bf34e1a02a",
+    "path": "/Packaging/Leadframe",
+    "query": "electronic chip closeup",
+    "alt": "Leadframe package on a circuit board",
+    "url": "https://images.unsplash.com/photo-1766198998139-dce189e0f91d?w=1200&q=80"
+  },
+  {
+    "id": "e3ed9b77-117e-4c17-85f5-3157c0e8658f",
+    "path": "/Packaging/Power/D2PAK-TO-263",
+    "query": "power electronics",
+    "alt": "D2PAK TO 263 — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
+  },
+  {
+    "id": "62d4d8d7-f898-428a-a18e-2c8439dc17bd",
+    "path": "/Packaging/Power/DPAK-TO-252",
+    "query": "power electronics",
+    "alt": "DPAK TO 252 — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1557701197-2f99da0922dd?w=1200&q=80"
+  },
+  {
+    "id": "80b6ab7b-4d84-4158-8bfe-ebef699d5278",
+    "path": "/Packaging/Power/HSON8",
+    "query": "power electronics",
+    "alt": "HSON8 — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=1200&q=80"
+  },
+  {
+    "id": "e9069de4-c0a4-4fea-97cb-06e892fedf49",
+    "path": "/Packaging/Power/LFPAK56",
+    "query": "power electronics",
+    "alt": "LFPAK56 — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1589779255718-3c459da9ffeb?w=1200&q=80"
+  },
+  {
+    "id": "879ea064-5e63-4e4c-9e80-bf6f5a5ca40f",
+    "path": "/Packaging/Power/PowerCSP",
+    "query": "power electronics",
+    "alt": "PowerCSP — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1577962144759-8dec6b55c952?w=1200&q=80"
+  },
+  {
+    "id": "3c01a53a-09cc-4c0f-b168-1e643b2a6188",
+    "path": "/Packaging/Power/PQFN",
+    "query": "power electronics",
+    "alt": "PQFN — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1627355263723-42c86ea13fac?w=1200&q=80"
+  },
+  {
+    "id": "7c96c701-07d0-42a1-94d1-45697894e954",
+    "path": "/Packaging/Power/SO8-FL",
+    "query": "power electronics",
+    "alt": "SO8 FL — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1634246370421-15d6d198c4ab?w=1200&q=80"
+  },
+  {
+    "id": "264cd1da-08c1-436b-bd5b-29a76020122a",
+    "path": "/Packaging/Power/SOD123-FL",
+    "query": "power electronics",
+    "alt": "SOD123 FL — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1597092430960-9724170fcbbe?w=1200&q=80"
+  },
+  {
+    "id": "dee4efda-6968-409f-8277-19b5d5806a32",
+    "path": "/Packaging/Power/SOD128-FL",
+    "query": "electrical components",
+    "alt": "SOD128 FL — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1635335874521-7987db781153?w=1200&q=80"
+  },
+  {
+    "id": "bb04af56-1e6c-446d-8b0d-4e52ab75e736",
+    "path": "/Packaging/Power/TO-220FP",
+    "query": "electrical components",
+    "alt": "TO 220FP — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?w=1200&q=80"
+  },
+  {
+    "id": "06143d15-42c6-4c73-900f-cc5b434d3101",
+    "path": "/Packaging/Power/TOLL",
+    "query": "electrical components",
+    "alt": "TOLL — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1509390484649-e8f3d1bb0b6d?w=1200&q=80"
+  },
+  {
+    "id": "6a634542-b10f-42aa-85cd-9130dc0112c6",
+    "path": "/Packaging/Power/TSON8-FL",
+    "query": "electrical components",
+    "alt": "TSON8 FL — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1509390221805-d1c887a72a00?w=1200&q=80"
+  },
+  {
+    "id": "7d2dc1ec-89fc-49b9-a779-7a44a51d9c3c",
+    "path": "/Packaging/Power",
+    "query": "electrical components",
+    "alt": "Power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1566417110104-cd4f94af0fb3?w=1200&q=80"
+  },
+  {
+    "id": "1f3236ad-d353-46ff-b55b-6c0b9d6add95",
+    "path": "/Packaging/Wafer-Level/WLCSP",
+    "query": "silicon wafer",
+    "alt": "WLCSP — silicon wafer used in wafer-level packaging",
+    "url": "https://images.unsplash.com/photo-1717962688747-7e13dfa31538?w=1200&q=80"
+  },
+  {
+    "id": "64565a95-2308-442b-beac-7b5092c4727a",
+    "path": "/Packaging/Wafer-Level/WLFO-WLCSP-Plus",
+    "query": "silicon wafer",
+    "alt": "WLFO WLCSP Plus — silicon wafer used in wafer-level packaging",
+    "url": "https://images.unsplash.com/photo-1684675151061-62526b463983?w=1200&q=80"
+  },
+  {
+    "id": "2b721843-ce5d-4073-947d-77c302434b96",
+    "path": "/Packaging/Wafer-Level/WLSiP-WL3D",
+    "query": "silicon wafer",
+    "alt": "WLSiP WL3D — silicon wafer used in wafer-level packaging",
+    "url": "https://images.unsplash.com/photo-1649649089599-59782dff8d04?w=1200&q=80"
+  },
+  {
+    "id": "e612545e-ddf3-4da9-85d0-fa7bd8249855",
+    "path": "/Packaging/Wafer-Level",
+    "query": "silicon wafer",
+    "alt": "Silicon wafer used in wafer-level packaging",
+    "url": "https://images.unsplash.com/photo-1782330319355-cefebddac4fa?w=1200&q=80"
+  },
+  {
+    "id": "cff1b3a2-45c1-44f9-8411-32c55f316627",
+    "path": "/Packaging",
+    "query": "microchip macro",
+    "alt": "Close-up of an integrated circuit package",
+    "url": "https://images.unsplash.com/photo-1760842543713-108c3cadbba1?w=1200&q=80"
+  },
+  {
+    "id": "86e9aaed-39b1-4e89-9e41-9c3e778f8e1d",
+    "path": "/About-Us",
+    "query": "modern corporate office building",
+    "alt": "Modern corporate headquarters",
+    "url": "https://images.unsplash.com/photo-1624213012413-fda54df1810f?w=1200&q=80"
+  },
+  {
+    "id": "c39bc746-0c9c-4c76-a623-3de87ed527f0",
+    "path": "/Test-Services",
+    "query": "laboratory electronics",
+    "alt": "Electronics test and measurement laboratory",
+    "url": "https://images.unsplash.com/photo-1562568068-ea24dcbf3c78?w=1200&q=80"
+  },
+  {
+    "id": "a42872cf-6ef9-42da-a65e-02fe32e11a56",
+    "path": "/About-Us/News/Press-Releases/Amkor-Technology-Announces-Strategic-Partnership-with-NVIDIA",
+    "query": "gpu data center hardware",
+    "alt": "AI accelerator hardware in a data center",
+    "url": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=1200&q=80"
+  },
+  {
+    "id": "50289aa5-edc5-4b20-94bb-13b6b22f1d80",
+    "path": "/About-Us/News/Press-Releases/Amkor-Technology-Reports-Financial-Results-for-the-Second-Quarter-2026",
+    "query": "financial charts stock market",
+    "alt": "Financial results charts",
+    "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80"
+  },
+  {
+    "id": "f171370f-82d3-4e83-8596-6b1e78a2b958",
+    "path": "/About-Us/News/Press-Releases/Amkor-Technology-Declares-Quarterly-Dividend",
+    "query": "investment growth chart",
+    "alt": "Investment and dividend growth",
+    "url": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80"
+  },
+  {
+    "id": "5d1b8301-f3d2-4367-bc9a-a3a5fa3400c9",
+    "path": "/About-Us/News/Press-Releases",
+    "query": "newspaper press",
+    "alt": "Press releases and newspapers",
+    "url": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&q=80"
+  },
+  {
+    "id": "931add10-6857-451f-abf5-a9d14b1f1757",
+    "path": "/About-Us/News/Events",
+    "query": "business conference audience",
+    "alt": "Industry conference session",
+    "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80"
+  },
+  {
+    "id": "5f8ff7c8-88d8-429f-b8e9-cdf92b89863a",
+    "path": "/Packaging/Power/PSMC",
+    "query": "electrical components",
+    "alt": "PSMC — power semiconductor components",
+    "url": "https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=1200&q=80"
+  },
+  {
+    "id": "893bbb60-2b8c-4a97-bb8e-541e744f2b33",
+    "path": "/About-Us/News/Blog",
+    "query": "writing desk laptop",
+    "alt": "Writing desk with laptop",
+    "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200&q=80"
+  },
+  {
+    "id": "be42d3f0-c644-4ade-9ceb-e72208acfd8e",
+    "path": "/About-Us/News",
+    "query": "newsroom press media",
+    "alt": "Newsroom and press media",
+    "url": "https://images.unsplash.com/photo-1579532536935-619928decd08?w=1200&q=80"
+  },
+  {
+    "id": "bb13bf5a-b102-4fe8-b410-63e3da7aa448",
+    "path": "/",
+    "query": "semiconductor cleanroom factory",
+    "alt": "Semiconductor manufacturing cleanroom",
+    "url": "https://images.unsplash.com/photo-1669101602124-f5b78895d91c?w=1200&q=80"
+  }
+]

@@ -1,0 +1,56 @@
+# Client Brand Theme — Rockland Trust (official palette)
+# Wired into the app via the create-new-theme skill (data-theme="rockland").
+# Full token set: src/assets/styles/themes/rockland-tokens.css
+
+client:
+  name: "Rockland Trust"
+  sourceUrl: "https://www.rocklandtrust.com/"
+  extractedAt: "2026-07-07"
+  extractedBy: "Official brand guidelines (user-provided CSS tokens)"
+
+colors:
+  primary: "#005394"
+  primaryForeground: "#ffffff"
+  secondary: "#0a2876"
+  secondaryForeground: "#ffffff"
+  accent: "#ffc233"
+  accentForeground: "#0a0a0a"
+  accent2: "#f0ad4e"
+  tertiary: "#135e81"
+  background: "#ffffff"
+  foreground: "#1d1d1d"
+  muted: "#f2f2f2"
+  mutedForeground: "#6d6d6d"
+  success: "#288828"
+  warning: "#f0ad4e"
+  destructive: "#d03833"
+  info: "#005394"
+  headerBackground: "#ffffff"
+  headerForeground: "#1d1d1d"
+  footerBackground: "#005394"
+  footerForeground: "#ffffff"
+  border: "#d8d8d8"
+  ring: "#005394"
+  extra:
+    - name: "primary-background"
+      value: "#ebf1f6"
+    - name: "secondary-background"
+      value: "#ebeef4"
+    - name: "accent-background"
+      value: "#fffaef"
+
+typography:
+  headingFamily: "Montserrat"
+  headingWeight: "700"
+  bodyFamily: "Open Sans"
+  bodyWeight: "400"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+
+extraction:
+  confidence: "high"
+  method: "official-brand-guidelines"
+  notes:
+    - "Official brand CSS tokens provided by user — replaces earlier green (#007a3d) approximation."
+    - "Primary is Rockland blue (#005394), not green. Green exists only in success scale (#288828)."
+    - "Full semantic + scale tokens live in src/assets/styles/themes/rockland-tokens.css"
+    - "Dark mode tokens scoped to html[data-theme='rockland'].dark"

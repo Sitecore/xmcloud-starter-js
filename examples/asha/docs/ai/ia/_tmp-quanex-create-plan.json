@@ -1,0 +1,3586 @@
+[
+  {
+    "label": "Products",
+    "depth": 0,
+    "sitecoreName": "Products",
+    "itemName": "Products",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Products",
+    "sourceUrl": "https://www.quanex.com/product/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Residential &amp; Commercial Building Products"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Residential &amp; Commercial Building Products"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Products"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Residential &amp; Commercial Building Products"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Explore Quanex building products for residential and commercial applications, including windows, doors, access solutions, sealants, and more."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Explore Quanex building products for residential and commercial applications, including windows, doors, access solutions, sealants, and more.</p><p><a href=\"https://www.quanex.com/product/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Products | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Explore Quanex building products for residential and commercial applications, including windows, doors, access solutions, sealants, and more."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Products | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Explore Quanex building products for residential and commercial applications, including windows, doors, access solutions, sealants, and more."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Products\" />"
+      }
+    ]
+  },
+  {
+    "label": "Residential",
+    "depth": 1,
+    "sitecoreName": "Residential",
+    "itemName": "Residential",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Residential",
+    "sourceUrl": "https://www.quanex.com/product/residential/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Residential"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Residential"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Residential"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetic"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics.</p><p><a href=\"https://www.quanex.com/product/residential/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Residential | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Residential | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex is dedicated to delivering the residential products you need to improve performance, sustainability and aesthetics."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Residential\" />"
+      }
+    ]
+  },
+  {
+    "label": "Entry Door Components",
+    "depth": 2,
+    "sitecoreName": "Entry Door Components",
+    "itemName": "Entry Door Components",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Residential",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Residential/Entry Door Components",
+    "sourceUrl": "https://www.quanex.com/product/residential/entry-door-components/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "ENTRY DOOR COMPONENTS"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "ENTRY DOOR COMPONENTS"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Entry Door Components"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "ENTRY DOOR COMPONENTS"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers a range of residential entry door components to help manufacturers achieve quality and performance for any door application."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers a range of residential entry door components to help manufacturers achieve quality and performance for any door application.</p><p><a href=\"https://www.quanex.com/product/residential/entry-door-components/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Entry Door Components | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers a range of residential entry door components to help manufacturers achieve quality and performance for any door application."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Entry Door Components | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers a range of residential entry door components to help manufacturers achieve quality and performance for any door application."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Entry Door Components\" />"
+      }
+    ]
+  },
+  {
+    "label": "Insulating Glass Spacers",
+    "depth": 2,
+    "sitecoreName": "Insulating Glass Spacers",
+    "itemName": "Insulating Glass Spacers",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Residential",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Residential/Insulating Glass Spacers",
+    "sourceUrl": "https://www.quanex.com/product/insulating-glass-spacers/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Insulating Glass Spacers"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageSummary",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production.</p><p><a href=\"https://www.quanex.com/product/insulating-glass-spacers/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Insulating Glass Spacers | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Insulating Glass Spacers | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Insulating Glass Spacers\" />"
+      }
+    ]
+  },
+  {
+    "label": "Kitchen & Bath Components",
+    "depth": 2,
+    "sitecoreName": "Kitchen and Bath Components",
+    "itemName": "Kitchen and Bath Components",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Residential",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Residential/Kitchen and Bath Components",
+    "sourceUrl": "https://www.quanex.com/product/residential/kitchen-bath-components/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Kitchen &amp; Bath Components"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Kitchen &amp; Bath Components"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Kitchen & Bath Components"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Kitchen &amp; Bath Components"
+      },
+      {
+        "name": "pageSummary",
+        "value": "We combine our expertise in material science and process engineering to deliver innovative solutions for kitchen & bath components."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>We combine our expertise in material science and process engineering to deliver innovative solutions for kitchen & bath components.</p><p><a href=\"https://www.quanex.com/product/residential/kitchen-bath-components/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Kitchen & Bath Components | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "We combine our expertise in material science and process engineering to deliver innovative solutions for kitchen & bath components."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Kitchen & Bath Components | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "We combine our expertise in material science and process engineering to deliver innovative solutions for kitchen & bath components."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Kitchen & Bath Components\" />"
+      }
+    ]
+  },
+  {
+    "label": "Millwork",
+    "depth": 2,
+    "sitecoreName": "Millwork",
+    "itemName": "Millwork",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Residential",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Residential/Millwork",
+    "sourceUrl": "https://www.quanex.com/capabilities/millwork/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Millwork"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Millwork"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Millwork"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthe"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthetics of your products."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthetics of your products.</p><p><a href=\"https://www.quanex.com/capabilities/millwork/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Millwork | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthetics of your products."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Millwork | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthetics of your products."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Millwork\" />"
+      }
+    ]
+  },
+  {
+    "label": "Security Screens",
+    "depth": 2,
+    "sitecoreName": "Security Screens",
+    "itemName": "Security Screens",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Residential",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Residential/Security Screens",
+    "sourceUrl": "https://www.quanex.com/product/residential/security-screens/",
+    "contentOk": false,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Security Screens"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved.</p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Security Screens | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Security Screens | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Security Screens\" />"
+      }
+    ]
+  },
+  {
+    "label": "Solar Panel Components",
+    "depth": 2,
+    "sitecoreName": "Solar Panel Components",
+    "itemName": "Solar Panel Components",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Residential",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Residential/Solar Panel Components",
+    "sourceUrl": "https://www.quanex.com/product/residential/solar-panel-components/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Solar module Sealing solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Solar module Sealing solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Solar Panel Components"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Solar module Sealing solutions"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Solar module sealing solutions engineered to support PV durability, manufacturing efficiency, moisture management, and long-term module performance."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Solar module sealing solutions engineered to support PV durability, manufacturing efficiency, moisture management, and long-term module performance.</p><p><a href=\"https://www.quanex.com/product/residential/solar-panel-components/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Solar Panel Components | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Solar module sealing solutions engineered to support PV durability, manufacturing efficiency, moisture management, and long-term module performance."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Solar Panel Components | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Solar module sealing solutions engineered to support PV durability, manufacturing efficiency, moisture management, and long-term module performance."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2022/10/solar_1920x531.jpg\" alt=\"Solar Panel Components\" />"
+      }
+    ]
+  },
+  {
+    "label": "Window Components",
+    "depth": 2,
+    "sitecoreName": "Window Components",
+    "itemName": "Window Components",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Residential",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Residential/Window Components",
+    "sourceUrl": "https://www.quanex.com/product/residential/window-components/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Window Components"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Window Components"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Window Components"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and "
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and buildings anywhere."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and buildings anywhere.</p><p><a href=\"https://www.quanex.com/product/residential/window-components/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Window Components | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and buildings anywhere."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Window Components | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and buildings anywhere."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Window Components\" />"
+      }
+    ]
+  },
+  {
+    "label": "Commercial",
+    "depth": 1,
+    "sitecoreName": "Commercial",
+    "itemName": "Commercial",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Commercial",
+    "sourceUrl": "https://www.quanex.com/product/commercial/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Commercial Products"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Commercial Products"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Commercial"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Commercial Products"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex products are trusted to deliver high levels of performance and reliability in demanding commercial applications around the globe."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex products are trusted to deliver high levels of performance and reliability in demanding commercial applications around the globe.</p><p><a href=\"https://www.quanex.com/product/commercial/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Commercial | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex products are trusted to deliver high levels of performance and reliability in demanding commercial applications around the globe."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Commercial | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex products are trusted to deliver high levels of performance and reliability in demanding commercial applications around the globe."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Commercial\" />"
+      }
+    ]
+  },
+  {
+    "label": "Entry Door Components",
+    "depth": 2,
+    "sitecoreName": "Entry Door Components",
+    "itemName": "Entry Door Components",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Commercial",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Commercial/Entry Door Components",
+    "sourceUrl": "https://www.quanex.com/product/residential/entry-door-components/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "ENTRY DOOR COMPONENTS"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "ENTRY DOOR COMPONENTS"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Entry Door Components"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "ENTRY DOOR COMPONENTS"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers a range of residential entry door components to help manufacturers achieve quality and performance for any door application."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers a range of residential entry door components to help manufacturers achieve quality and performance for any door application.</p><p><a href=\"https://www.quanex.com/product/residential/entry-door-components/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Entry Door Components | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers a range of residential entry door components to help manufacturers achieve quality and performance for any door application."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Entry Door Components | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers a range of residential entry door components to help manufacturers achieve quality and performance for any door application."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Entry Door Components\" />"
+      }
+    ]
+  },
+  {
+    "label": "Window Components",
+    "depth": 2,
+    "sitecoreName": "Window Components",
+    "itemName": "Window Components",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Commercial",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Commercial/Window Components",
+    "sourceUrl": "https://www.quanex.com/product/residential/window-components/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Window Components"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Window Components"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Window Components"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and "
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and buildings anywhere."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and buildings anywhere.</p><p><a href=\"https://www.quanex.com/product/residential/window-components/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Window Components | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and buildings anywhere."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Window Components | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers high-performing residential window components and solutions for every need, helping you improve homes and buildings anywhere."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Window Components\" />"
+      }
+    ]
+  },
+  {
+    "label": "Insulating Glass Spacers",
+    "depth": 2,
+    "sitecoreName": "Insulating Glass Spacers",
+    "itemName": "Insulating Glass Spacers",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Commercial",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Commercial/Insulating Glass Spacers",
+    "sourceUrl": "https://www.quanex.com/product/insulating-glass-spacers/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Insulating Glass Spacers"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageSummary",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production.</p><p><a href=\"https://www.quanex.com/product/insulating-glass-spacers/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Insulating Glass Spacers | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Insulating Glass Spacers | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Insulating Glass Spacers\" />"
+      }
+    ]
+  },
+  {
+    "label": "Weatherseals",
+    "depth": 2,
+    "sitecoreName": "Weatherseals",
+    "itemName": "Weatherseals",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Commercial",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Commercial/Weatherseals",
+    "sourceUrl": "https://www.quanex.com/product/weatherseals/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Weatherseals"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Weatherseals"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Weatherseals"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engin"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engineered sealing solutions."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engineered sealing solutions.</p><p><a href=\"https://www.quanex.com/product/weatherseals/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Weatherseals | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engineered sealing solutions."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Weatherseals | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engineered sealing solutions."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Weatherseals\" />"
+      }
+    ]
+  },
+  {
+    "label": "Materials & Finishes",
+    "depth": 2,
+    "sitecoreName": "Materials and Finishes",
+    "itemName": "Materials and Finishes",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/Commercial",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Commercial/Materials and Finishes",
+    "sourceUrl": "https://www.quanex.com/product/commercial/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Commercial Products"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Commercial Products"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Materials & Finishes"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Commercial Products"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex products are trusted to deliver high levels of performance and reliability in demanding commercial applications around the globe."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex products are trusted to deliver high levels of performance and reliability in demanding commercial applications around the globe.</p><p><a href=\"https://www.quanex.com/product/commercial/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Materials & Finishes | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex products are trusted to deliver high levels of performance and reliability in demanding commercial applications around the globe."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Materials & Finishes | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex products are trusted to deliver high levels of performance and reliability in demanding commercial applications around the globe."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Materials & Finishes\" />"
+      }
+    ]
+  },
+  {
+    "label": "Insulating Glass Spacers",
+    "depth": 1,
+    "sitecoreName": "Insulating Glass Spacers",
+    "itemName": "Insulating Glass Spacers",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Insulating Glass Spacers",
+    "sourceUrl": "https://www.quanex.com/product/insulating-glass-spacers/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Insulating Glass Spacers"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "INSULATING GLASS SPACER Systems"
+      },
+      {
+        "name": "pageSummary",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production.</p><p><a href=\"https://www.quanex.com/product/insulating-glass-spacers/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Insulating Glass Spacers | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Insulating Glass Spacers | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "High-performance warm edge spacers for IG units. Improve thermal efficiency, reduce seal failures, and streamline IG production."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Insulating Glass Spacers\" />"
+      }
+    ]
+  },
+  {
+    "label": "Weatherseals",
+    "depth": 1,
+    "sitecoreName": "Weatherseals",
+    "itemName": "Weatherseals",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Weatherseals",
+    "sourceUrl": "https://www.quanex.com/product/weatherseals/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Weatherseals"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Weatherseals"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Weatherseals"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engin"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engineered sealing solutions."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engineered sealing solutions.</p><p><a href=\"https://www.quanex.com/product/weatherseals/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Weatherseals | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engineered sealing solutions."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Weatherseals | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex weatherseals help window and door manufacturers improve energy efficiency, durability, and performance with engineered sealing solutions."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Weatherseals\" />"
+      }
+    ]
+  },
+  {
+    "label": "Solar",
+    "depth": 1,
+    "sitecoreName": "Solar",
+    "itemName": "Solar",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Solar",
+    "sourceUrl": "https://www.quanex.com/product/residential/solar-panel-components/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Solar module Sealing solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Solar module Sealing solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Solar"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Solar module Sealing solutions"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Solar module sealing solutions engineered to support PV durability, manufacturing efficiency, moisture management, and long-term module performance."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Solar module sealing solutions engineered to support PV durability, manufacturing efficiency, moisture management, and long-term module performance.</p><p><a href=\"https://www.quanex.com/product/residential/solar-panel-components/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Solar | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Solar module sealing solutions engineered to support PV durability, manufacturing efficiency, moisture management, and long-term module performance."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Solar | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Solar module sealing solutions engineered to support PV durability, manufacturing efficiency, moisture management, and long-term module performance."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2022/10/solar_1920x531.jpg\" alt=\"Solar\" />"
+      }
+    ]
+  },
+  {
+    "label": "For Architects",
+    "depth": 1,
+    "sitecoreName": "For Architects",
+    "itemName": "For Architects",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/For Architects",
+    "sourceUrl": "https://www.quanex.com/architects/",
+    "contentOk": false,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "For Architects"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved.</p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "For Architects | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "ogTitle",
+        "value": "For Architects | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"For Architects\" />"
+      }
+    ]
+  },
+  {
+    "label": "Warm-Edge Spacers",
+    "depth": 2,
+    "sitecoreName": "Warm-Edge Spacers",
+    "itemName": "Warm-Edge Spacers",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/For Architects",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/For Architects/Warm-Edge Spacers",
+    "sourceUrl": "https://www.quanex.com/product/insulating-glass-spacers/dual-seal/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Dual-Seal Insulating Glass Spacers"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Dual-Seal Insulating Glass Spacers"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Warm-Edge Spacers"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Dual-Seal Insulating Glass Spacers"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Discover Super Spacer® dual-seal spacers. Improve IG durability, thermal performance, and condensation resistance for windows and doors."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Discover Super Spacer® dual-seal spacers. Improve IG durability, thermal performance, and condensation resistance for windows and doors.</p><p><a href=\"https://www.quanex.com/product/insulating-glass-spacers/dual-seal/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Warm-Edge Spacers | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Discover Super Spacer® dual-seal spacers. Improve IG durability, thermal performance, and condensation resistance for windows and doors."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Warm-Edge Spacers | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Discover Super Spacer® dual-seal spacers. Improve IG durability, thermal performance, and condensation resistance for windows and doors."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Warm-Edge Spacers\" />"
+      }
+    ]
+  },
+  {
+    "label": "Commercial Window & Door Systems",
+    "depth": 2,
+    "sitecoreName": "Commercial Window and Door Systems",
+    "itemName": "Commercial Window and Door Systems",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/For Architects",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/For Architects/Commercial Window and Door Systems",
+    "sourceUrl": "https://www.quanex.com/architects/",
+    "contentOk": false,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Commercial Window & Door Systems"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "404 NOT FOUND"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved.</p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Commercial Window & Door Systems | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Commercial Window & Door Systems | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Commercial Window & Door Systems\" />"
+      }
+    ]
+  },
+  {
+    "label": "Project Profiles",
+    "depth": 2,
+    "sitecoreName": "Project Profiles",
+    "itemName": "Project Profiles",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/For Architects",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/For Architects/Project Profiles",
+    "sourceUrl": "https://www.quanex.com/project-profiles/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Project Profiles"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Project Profiles"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Project Profiles"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our custome"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our customer examples."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our customer examples.</p><p><a href=\"https://www.quanex.com/project-profiles/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Project Profiles | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our customer examples."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Project Profiles | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our customer examples."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Project Profiles\" />"
+      }
+    ]
+  },
+  {
+    "label": "Sustainability",
+    "depth": 2,
+    "sitecoreName": "Sustainability",
+    "itemName": "Sustainability",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/For Architects",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/For Architects/Sustainability",
+    "sourceUrl": "https://www.quanex.com/sustainability/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Corporate Responsibility at Quanex"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Corporate Responsibility at Quanex"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Sustainability"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Corporate Responsibility at Quanex"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Sustainability - Quanex strives to make a positive impact with energy-efficient products and environmental, social and governance efforts."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Sustainability - Quanex strives to make a positive impact with energy-efficient products and environmental, social and governance efforts.</p><p><a href=\"https://www.quanex.com/sustainability/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Sustainability | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Sustainability - Quanex strives to make a positive impact with energy-efficient products and environmental, social and governance efforts."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Sustainability | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Sustainability - Quanex strives to make a positive impact with energy-efficient products and environmental, social and governance efforts."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Sustainability\" />"
+      }
+    ]
+  },
+  {
+    "label": "Continuing Education Resources",
+    "depth": 2,
+    "sitecoreName": "Continuing Education Resources",
+    "itemName": "Continuing Education Resources",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products/For Architects",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/For Architects/Continuing Education Resources",
+    "sourceUrl": "https://www.quanex.com/service-support/continuing-education-resources/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Continuing Education Resources"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Continuing Education Resources"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Continuing Education Resources"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay u"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay up to date."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay up to date.</p><p><a href=\"https://www.quanex.com/service-support/continuing-education-resources/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Continuing Education Resources | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay up to date."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Continuing Education Resources | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay up to date."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Continuing Education Resources\" />"
+      }
+    ]
+  },
+  {
+    "label": "Hardware Solutions",
+    "depth": 1,
+    "sitecoreName": "Hardware Solutions",
+    "itemName": "Hardware Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Hardware Solutions",
+    "sourceUrl": "https://www.quanex.com/about-us/hardware-solutions/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Hardware Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Hardware Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Hardware Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Discover innovative, cutting-edge window and door hardware solutions from Quanex, including Amesbury-Truth, ZOO, Giesse,"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Discover innovative, cutting-edge window and door hardware solutions from Quanex, including Amesbury-Truth, ZOO, Giesse, and Reguitti."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Discover innovative, cutting-edge window and door hardware solutions from Quanex, including Amesbury-Truth, ZOO, Giesse, and Reguitti.</p><p><a href=\"https://www.quanex.com/about-us/hardware-solutions/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Hardware Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Discover innovative, cutting-edge window and door hardware solutions from Quanex, including Amesbury-Truth, ZOO, Giesse, and Reguitti."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Hardware Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Discover innovative, cutting-edge window and door hardware solutions from Quanex, including Amesbury-Truth, ZOO, Giesse, and Reguitti."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Hardware Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Access Solutions",
+    "depth": 1,
+    "sitecoreName": "Access Solutions",
+    "itemName": "Access Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Access Solutions",
+    "sourceUrl": "https://www.quanex.com/about-us/custom-solutions/#access-solutions",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Access Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageSummary",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges.</p><p><a href=\"https://www.quanex.com/about-us/custom-solutions/#access-solutions\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Access Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Access Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Access Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Extruded Solutions",
+    "depth": 1,
+    "sitecoreName": "Extruded Solutions",
+    "itemName": "Extruded Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Extruded Solutions",
+    "sourceUrl": "https://www.quanex.com/about-us/extruded-solutions/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Extruded Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Extruded Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Extruded Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex delivers smart, sustainable extruded solutions for today’s most advanced residential and commercial applications."
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex delivers smart, sustainable extruded solutions for today’s most advanced residential and commercial applications."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex delivers smart, sustainable extruded solutions for today’s most advanced residential and commercial applications.</p><p><a href=\"https://www.quanex.com/about-us/extruded-solutions/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Extruded Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex delivers smart, sustainable extruded solutions for today’s most advanced residential and commercial applications."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Extruded Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex delivers smart, sustainable extruded solutions for today’s most advanced residential and commercial applications."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Extruded Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Mixing Solutions",
+    "depth": 1,
+    "sitecoreName": "Mixing Solutions",
+    "itemName": "Mixing Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Mixing Solutions",
+    "sourceUrl": "https://www.quanex.com/about-us/custom-solutions/#mixing-solutions",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Mixing Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageSummary",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges.</p><p><a href=\"https://www.quanex.com/about-us/custom-solutions/#mixing-solutions\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Mixing Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Mixing Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Mixing Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Wood Solutions",
+    "depth": 1,
+    "sitecoreName": "Wood Solutions",
+    "itemName": "Wood Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Products",
+    "path": "/sitecore/content/quanex/quanex/Home/Products/Wood Solutions",
+    "sourceUrl": "https://www.quanex.com/about-us/custom-solutions/#wood-solutions",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Wood Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Custom Solutions"
+      },
+      {
+        "name": "pageSummary",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges.</p><p><a href=\"https://www.quanex.com/about-us/custom-solutions/#wood-solutions\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Wood Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Wood Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "At Quanex, we can apply our expertise to identify and create custom solutions that meet your unique needs and challenges."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Wood Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Capabilities",
+    "depth": 0,
+    "sitecoreName": "Capabilities",
+    "itemName": "Capabilities",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "sourceUrl": "https://www.quanex.com/capabilities/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Manufacturing Capabilities that drive performance"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Manufacturing Capabilities that drive performance"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Capabilities"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Manufacturing Capabilities that drive performance"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Discover Quanex's advanced manufacturing capabilities for extrusions, hardware, and custom components—engineered for quality, efficiency, and innovation."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Discover Quanex's advanced manufacturing capabilities for extrusions, hardware, and custom components—engineered for quality, efficiency, and innovation.</p><p><a href=\"https://www.quanex.com/capabilities/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Capabilities | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Discover Quanex's advanced manufacturing capabilities for extrusions, hardware, and custom components—engineered for quality, efficiency, and innovation."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Capabilities | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Discover Quanex's advanced manufacturing capabilities for extrusions, hardware, and custom components—engineered for quality, efficiency, and innovation."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Capabilities\" />"
+      }
+    ]
+  },
+  {
+    "label": "Cabinet Components",
+    "depth": 1,
+    "sitecoreName": "Cabinet Components",
+    "itemName": "Cabinet Components",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Cabinet Components",
+    "sourceUrl": "https://www.quanex.com/capabilities/cabinet-components/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "BUILT TO SPECIFICATION"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "BUILT TO SPECIFICATION"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Cabinet Components"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "BUILT TO SPECIFICATION"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex Custom Components can help you solve your biggest cabinet components challenges with custom solutions for your unique business needs."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex Custom Components can help you solve your biggest cabinet components challenges with custom solutions for your unique business needs.</p><p><a href=\"https://www.quanex.com/capabilities/cabinet-components/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Cabinet Components | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex Custom Components can help you solve your biggest cabinet components challenges with custom solutions for your unique business needs."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Cabinet Components | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex Custom Components can help you solve your biggest cabinet components challenges with custom solutions for your unique business needs."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Cabinet Components\" />"
+      }
+    ]
+  },
+  {
+    "label": "Custom Mixing",
+    "depth": 1,
+    "sitecoreName": "Custom Mixing",
+    "itemName": "Custom Mixing",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Custom Mixing",
+    "sourceUrl": "https://www.quanex.com/capabilities/custom-mixing/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Advanced Rubber Compounding &amp; Custom Mixing Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Advanced Rubber Compounding &amp; Custom Mixing Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Custom Mixing"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Advanced Rubber Compounding &amp; Custom Mixing Solutions"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Explore Quanex's advanced rubber compounding capabilities, custom polymer mixing, sponge rubber, and elastomeric materials engineered for performance."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Explore Quanex's advanced rubber compounding capabilities, custom polymer mixing, sponge rubber, and elastomeric materials engineered for performance.</p><p><a href=\"https://www.quanex.com/capabilities/custom-mixing/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Custom Mixing | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Explore Quanex's advanced rubber compounding capabilities, custom polymer mixing, sponge rubber, and elastomeric materials engineered for performance."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Custom Mixing | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Explore Quanex's advanced rubber compounding capabilities, custom polymer mixing, sponge rubber, and elastomeric materials engineered for performance."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Custom Mixing\" />"
+      }
+    ]
+  },
+  {
+    "label": "Engineered Wood",
+    "depth": 1,
+    "sitecoreName": "Engineered Wood",
+    "itemName": "Engineered Wood",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Engineered Wood",
+    "sourceUrl": "https://www.quanex.com/capabilities/engineered-wood/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Engineered Wood"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Engineered Wood"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Engineered Wood"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Engineered wood products like MDF cabinet doors and drawer fronts from Quanex give homeowners the smooth cabinet finishe"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Engineered wood products like MDF cabinet doors and drawer fronts from Quanex give homeowners the smooth cabinet finishes they desire."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Engineered wood products like MDF cabinet doors and drawer fronts from Quanex give homeowners the smooth cabinet finishes they desire.</p><p><a href=\"https://www.quanex.com/capabilities/engineered-wood/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Engineered Wood | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Engineered wood products like MDF cabinet doors and drawer fronts from Quanex give homeowners the smooth cabinet finishes they desire."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Engineered Wood | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Engineered wood products like MDF cabinet doors and drawer fronts from Quanex give homeowners the smooth cabinet finishes they desire."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Engineered Wood\" />"
+      }
+    ]
+  },
+  {
+    "label": "Extrusion Capabilities",
+    "depth": 1,
+    "sitecoreName": "Extrusion Capabilities",
+    "itemName": "Extrusion Capabilities",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Extrusion Capabilities",
+    "sourceUrl": "https://www.quanex.com/capabilities/extrusion-capabilities/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Vinyl Extrusion Capabilities"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Vinyl Extrusion Capabilities"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Extrusion Capabilities"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Vinyl Extrusion Capabilities"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex delivers custom vinyl extrusion solutions with unmatched quality, innovation, and performance for any industry."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex delivers custom vinyl extrusion solutions with unmatched quality, innovation, and performance for any industry.</p><p><a href=\"https://www.quanex.com/capabilities/extrusion-capabilities/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Extrusion Capabilities | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex delivers custom vinyl extrusion solutions with unmatched quality, innovation, and performance for any industry."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Extrusion Capabilities | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex delivers custom vinyl extrusion solutions with unmatched quality, innovation, and performance for any industry."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Extrusion Capabilities\" />"
+      }
+    ]
+  },
+  {
+    "label": "Hardwood Residues",
+    "depth": 1,
+    "sitecoreName": "Hardwood Residues",
+    "itemName": "Hardwood Residues",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Hardwood Residues",
+    "sourceUrl": "https://www.quanex.com/capabilities/hardwood-residues-finger-joint-wood/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "hardwood residues and Finger Joint Wood Capabilities"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "hardwood residues and Finger Joint Wood Capabilities"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Hardwood Residues"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "hardwood residues and Finger Joint Wood Capabilities"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Finger joint wood from Quanex offers cost savings, sustainability, and strength by maximizing every piece of hardwood we process."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Finger joint wood from Quanex offers cost savings, sustainability, and strength by maximizing every piece of hardwood we process.</p><p><a href=\"https://www.quanex.com/capabilities/hardwood-residues-finger-joint-wood/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Hardwood Residues | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Finger joint wood from Quanex offers cost savings, sustainability, and strength by maximizing every piece of hardwood we process."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Hardwood Residues | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Finger joint wood from Quanex offers cost savings, sustainability, and strength by maximizing every piece of hardwood we process."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Hardwood Residues\" />"
+      }
+    ]
+  },
+  {
+    "label": "Material & Science Design",
+    "depth": 1,
+    "sitecoreName": "Material and Science Design",
+    "itemName": "Material and Science Design",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Material and Science Design",
+    "sourceUrl": "https://www.quanex.com/capabilities/material-science-design/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Material &amp; Science Design"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Material &amp; Science Design"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Material & Science Design"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Material &amp; Science Design"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Meet the toughest performance criteria with the material expertise and design assistance from the material & science design experts at Quanex."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Meet the toughest performance criteria with the material expertise and design assistance from the material & science design experts at Quanex.</p><p><a href=\"https://www.quanex.com/capabilities/material-science-design/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Material & Science Design | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Meet the toughest performance criteria with the material expertise and design assistance from the material & science design experts at Quanex."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Material & Science Design | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Meet the toughest performance criteria with the material expertise and design assistance from the material & science design experts at Quanex."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Material & Science Design\" />"
+      }
+    ]
+  },
+  {
+    "label": "Millwork",
+    "depth": 1,
+    "sitecoreName": "Millwork",
+    "itemName": "Millwork",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Millwork",
+    "sourceUrl": "https://www.quanex.com/capabilities/millwork/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Millwork"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Millwork"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Millwork"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthe"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthetics of your products."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthetics of your products.</p><p><a href=\"https://www.quanex.com/capabilities/millwork/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Millwork | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthetics of your products."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Millwork | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers a variety of millwork solutions and wood moulding profiles to suit a range of needs and enhance the aesthetics of your products."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Millwork\" />"
+      }
+    ]
+  },
+  {
+    "label": "Performance Solutions",
+    "depth": 1,
+    "sitecoreName": "Performance Solutions",
+    "itemName": "Performance Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Performance Solutions",
+    "sourceUrl": "https://www.quanex.com/capabilities/performance-solutions/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Performance Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Performance Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Performance Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Improve your products with unique performance solutions from Quanex, backed by our design expertise and suited to your n"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Improve your products with unique performance solutions from Quanex, backed by our design expertise and suited to your needs."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Improve your products with unique performance solutions from Quanex, backed by our design expertise and suited to your needs.</p><p><a href=\"https://www.quanex.com/capabilities/performance-solutions/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Performance Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Improve your products with unique performance solutions from Quanex, backed by our design expertise and suited to your needs."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Performance Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Improve your products with unique performance solutions from Quanex, backed by our design expertise and suited to your needs."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Performance Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Polymer Solutions",
+    "depth": 1,
+    "sitecoreName": "Polymer Solutions",
+    "itemName": "Polymer Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Polymer Solutions",
+    "sourceUrl": "https://www.quanex.com/capabilities/polymer-solutions/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Polymer Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Polymer Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Polymer Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Discover high-performance polymer solutions from Quanex. Our polymer experts engineer custom materials and technologies "
+      },
+      {
+        "name": "pageSummary",
+        "value": "Discover high-performance polymer solutions from Quanex. Our polymer experts engineer custom materials and technologies for demanding applications across industries."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Discover high-performance polymer solutions from Quanex. Our polymer experts engineer custom materials and technologies for demanding applications across industries.</p><p><a href=\"https://www.quanex.com/capabilities/polymer-solutions/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Polymer Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Discover high-performance polymer solutions from Quanex. Our polymer experts engineer custom materials and technologies for demanding applications across industries."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Polymer Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Discover high-performance polymer solutions from Quanex. Our polymer experts engineer custom materials and technologies for demanding applications across industries."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Polymer Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Roll Forming",
+    "depth": 1,
+    "sitecoreName": "Roll Forming",
+    "itemName": "Roll Forming",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Roll Forming",
+    "sourceUrl": "https://www.quanex.com/capabilities/roll-forming/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Roll Forming"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Roll Forming"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Roll Forming"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "As roll forming experts, Quanex can achieve an economic and efficient solution for metal forming to meet our customers n"
+      },
+      {
+        "name": "pageSummary",
+        "value": "As roll forming experts, Quanex can achieve an economic and efficient solution for metal forming to meet our customers needs."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>As roll forming experts, Quanex can achieve an economic and efficient solution for metal forming to meet our customers needs.</p><p><a href=\"https://www.quanex.com/capabilities/roll-forming/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Roll Forming | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "As roll forming experts, Quanex can achieve an economic and efficient solution for metal forming to meet our customers needs."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Roll Forming | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "As roll forming experts, Quanex can achieve an economic and efficient solution for metal forming to meet our customers needs."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Roll Forming\" />"
+      }
+    ]
+  },
+  {
+    "label": "Rolltrusion",
+    "depth": 1,
+    "sitecoreName": "Rolltrusion",
+    "itemName": "Rolltrusion",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Rolltrusion",
+    "sourceUrl": "https://www.quanex.com/capabilities/rolltrusion/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "RollTrusion®"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "RollTrusion®"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Rolltrusion"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "RollTrusion®"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex’s unique RollTrusion combines the best of rolled metal forming and thermoplastic performance to improve your products."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex’s unique RollTrusion combines the best of rolled metal forming and thermoplastic performance to improve your products.</p><p><a href=\"https://www.quanex.com/capabilities/rolltrusion/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Rolltrusion | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex’s unique RollTrusion combines the best of rolled metal forming and thermoplastic performance to improve your products."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Rolltrusion | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex’s unique RollTrusion combines the best of rolled metal forming and thermoplastic performance to improve your products."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Rolltrusion\" />"
+      }
+    ]
+  },
+  {
+    "label": "Sealant Solutions",
+    "depth": 1,
+    "sitecoreName": "Sealant Solutions",
+    "itemName": "Sealant Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Sealant Solutions",
+    "sourceUrl": "https://www.quanex.com/capabilities/sealant-solutions/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Advanced Sealant Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Advanced Sealant Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Sealant Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Advanced Sealant Solutions"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Industrial sealant solutions engineered for insulating glass, glazing, IGU manufacturing, solar panel edge sealing, and long-term durability."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Industrial sealant solutions engineered for insulating glass, glazing, IGU manufacturing, solar panel edge sealing, and long-term durability.</p><p><a href=\"https://www.quanex.com/capabilities/sealant-solutions/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Sealant Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Industrial sealant solutions engineered for insulating glass, glazing, IGU manufacturing, solar panel edge sealing, and long-term durability."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Sealant Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Industrial sealant solutions engineered for insulating glass, glazing, IGU manufacturing, solar panel edge sealing, and long-term durability."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2023/11/QCM_Cambridge_OH_DSC_2292-scaled.jpg\" alt=\"Sealant Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Silicone Foam Solutions",
+    "depth": 1,
+    "sitecoreName": "Silicone Foam Solutions",
+    "itemName": "Silicone Foam Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Capabilities",
+    "path": "/sitecore/content/quanex/quanex/Home/Capabilities/Silicone Foam Solutions",
+    "sourceUrl": "https://www.quanex.com/capabilities/silicone-foam-solutions/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Silicone Foam Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Silicone Foam Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Silicone Foam Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex’s silicone foam solutions are trusted for applications around the world and solve a diverse range of challenges i"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex’s silicone foam solutions are trusted for applications around the world and solve a diverse range of challenges in any industry."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex’s silicone foam solutions are trusted for applications around the world and solve a diverse range of challenges in any industry.</p><p><a href=\"https://www.quanex.com/capabilities/silicone-foam-solutions/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Silicone Foam Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex’s silicone foam solutions are trusted for applications around the world and solve a diverse range of challenges in any industry."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Silicone Foam Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex’s silicone foam solutions are trusted for applications around the world and solve a diverse range of challenges in any industry."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Silicone Foam Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "Service & Support",
+    "depth": 0,
+    "sitecoreName": "Service and Support",
+    "itemName": "Service and Support",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support",
+    "sourceUrl": "https://www.quanex.com/service-support/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Service &amp; support"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Service &amp; support"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Service & Support"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Service &amp; support"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex’s Service & Support team provide process improvement, on-site training and other support to help you get the most from your operation."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex’s Service & Support team provide process improvement, on-site training and other support to help you get the most from your operation.</p><p><a href=\"https://www.quanex.com/service-support/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Service & Support | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex’s Service & Support team provide process improvement, on-site training and other support to help you get the most from your operation."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Service & Support | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex’s Service & Support team provide process improvement, on-site training and other support to help you get the most from your operation."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Service & Support\" />"
+      }
+    ]
+  },
+  {
+    "label": "Account Management",
+    "depth": 1,
+    "sitecoreName": "Account Management",
+    "itemName": "Account Management",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Account Management",
+    "sourceUrl": "https://www.quanex.com/service-support/account-management/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Trusted Partnerships"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Trusted Partnerships"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Account Management"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Trusted Partnerships"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Through our dedicated account management services, we help customers solve their biggest challenges with custom solutions catered to their business needs."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Through our dedicated account management services, we help customers solve their biggest challenges with custom solutions catered to their business needs.</p><p><a href=\"https://www.quanex.com/service-support/account-management/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Account Management | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Through our dedicated account management services, we help customers solve their biggest challenges with custom solutions catered to their business needs."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Account Management | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Through our dedicated account management services, we help customers solve their biggest challenges with custom solutions catered to their business needs."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Account Management\" />"
+      }
+    ]
+  },
+  {
+    "label": "Continuing Education Resources",
+    "depth": 1,
+    "sitecoreName": "Continuing Education Resources",
+    "itemName": "Continuing Education Resources",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Continuing Education Resources",
+    "sourceUrl": "https://www.quanex.com/service-support/continuing-education-resources/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Continuing Education Resources"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Continuing Education Resources"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Continuing Education Resources"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay u"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay up to date."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay up to date.</p><p><a href=\"https://www.quanex.com/service-support/continuing-education-resources/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Continuing Education Resources | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay up to date."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Continuing Education Resources | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers continuing education resources that cover fenestration and green building design topics to help you stay up to date."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Continuing Education Resources\" />"
+      }
+    ]
+  },
+  {
+    "label": "Equipment",
+    "depth": 1,
+    "sitecoreName": "Equipment",
+    "itemName": "Equipment",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment",
+    "sourceUrl": "https://www.quanex.com/service-support/equipment/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Equipment Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Equipment Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Equipment"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Equipment Solutions"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex has expertise in insulating glass equipment and can help you determine the right solution for maximum production efficiency."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex has expertise in insulating glass equipment and can help you determine the right solution for maximum production efficiency.</p><p><a href=\"https://www.quanex.com/service-support/equipment/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Equipment | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex has expertise in insulating glass equipment and can help you determine the right solution for maximum production efficiency."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Equipment | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex has expertise in insulating glass equipment and can help you determine the right solution for maximum production efficiency."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Equipment\" />"
+      }
+    ]
+  },
+  {
+    "label": "Line Layouts",
+    "depth": 2,
+    "sitecoreName": "Line Layouts",
+    "itemName": "Line Layouts",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/Line Layouts",
+    "sourceUrl": "https://www.quanex.com/service-support/equipment/line-layouts/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Line Layouts"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Line Layouts"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Line Layouts"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex can help you optimize your insulating glass production line layouts in a way that makes sense for your plant and "
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex can help you optimize your insulating glass production line layouts in a way that makes sense for your plant and business needs."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex can help you optimize your insulating glass production line layouts in a way that makes sense for your plant and business needs.</p><p><a href=\"https://www.quanex.com/service-support/equipment/line-layouts/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Line Layouts | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex can help you optimize your insulating glass production line layouts in a way that makes sense for your plant and business needs."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Line Layouts | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex can help you optimize your insulating glass production line layouts in a way that makes sense for your plant and business needs."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Line Layouts\" />"
+      }
+    ]
+  },
+  {
+    "label": "Secondary Sealing Equipment Solutions",
+    "depth": 2,
+    "sitecoreName": "Secondary Sealing Equipment Solutions",
+    "itemName": "Secondary Sealing Equipment Solutions",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/Secondary Sealing Equipment Solutions",
+    "sourceUrl": "https://www.quanex.com/service-support/equipment/secondary-sealing-equipment-solutions/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Secondary Sealing Equipment Solutions"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Secondary Sealing Equipment Solutions"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Secondary Sealing Equipment Solutions"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex can help you identify the right secondary sealing equipment solutions to optimize your production capabilities."
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex can help you identify the right secondary sealing equipment solutions to optimize your production capabilities."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex can help you identify the right secondary sealing equipment solutions to optimize your production capabilities.</p><p><a href=\"https://www.quanex.com/service-support/equipment/secondary-sealing-equipment-solutions/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Secondary Sealing Equipment Solutions | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex can help you identify the right secondary sealing equipment solutions to optimize your production capabilities."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Secondary Sealing Equipment Solutions | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex can help you identify the right secondary sealing equipment solutions to optimize your production capabilities."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Secondary Sealing Equipment Solutions\" />"
+      }
+    ]
+  },
+  {
+    "label": "High-Speed Full Automation",
+    "depth": 2,
+    "sitecoreName": "High-Speed Full Automation",
+    "itemName": "High-Speed Full Automation",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/High-Speed Full Automation",
+    "sourceUrl": "https://www.quanex.com/service-support/equipment/high-speed-full-automation/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "High-Speed FULL AutomatION Equipment"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "High-Speed FULL AutomatION Equipment"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "High-Speed Full Automation"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "High-Speed FULL AutomatION Equipment"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex works with manufacturers to implement high-speed full automation insulating glass equipment and optimize their production strategies."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex works with manufacturers to implement high-speed full automation insulating glass equipment and optimize their production strategies.</p><p><a href=\"https://www.quanex.com/service-support/equipment/high-speed-full-automation/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "High-Speed Full Automation | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex works with manufacturers to implement high-speed full automation insulating glass equipment and optimize their production strategies."
+      },
+      {
+        "name": "ogTitle",
+        "value": "High-Speed Full Automation | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex works with manufacturers to implement high-speed full automation insulating glass equipment and optimize their production strategies."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"High-Speed Full Automation\" />"
+      }
+    ]
+  },
+  {
+    "label": "Semi-Automated IG Equipment",
+    "depth": 2,
+    "sitecoreName": "Semi-Automated IG Equipment",
+    "itemName": "Semi-Automated IG Equipment",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/Semi-Automated IG Equipment",
+    "sourceUrl": "https://www.quanex.com/service-support/equipment/semi-automated-ig-equipment/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Semi-Automated IG Equipment"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Semi-Automated IG Equipment"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Semi-Automated IG Equipment"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex offers semi-automated IG equipment to help you streamline and optimize your production of high-quality insulated "
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers semi-automated IG equipment to help you streamline and optimize your production of high-quality insulated glass units."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers semi-automated IG equipment to help you streamline and optimize your production of high-quality insulated glass units.</p><p><a href=\"https://www.quanex.com/service-support/equipment/semi-automated-ig-equipment/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Semi-Automated IG Equipment | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers semi-automated IG equipment to help you streamline and optimize your production of high-quality insulated glass units."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Semi-Automated IG Equipment | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers semi-automated IG equipment to help you streamline and optimize your production of high-quality insulated glass units."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Semi-Automated IG Equipment\" />"
+      }
+    ]
+  },
+  {
+    "label": "Manual Spacer Application",
+    "depth": 2,
+    "sitecoreName": "Manual Spacer Application",
+    "itemName": "Manual Spacer Application",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/Manual Spacer Application",
+    "sourceUrl": "https://www.quanex.com/service-support/equipment/manual-spacer-application/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Manual Spacer Application Equipment"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Manual Spacer Application Equipment"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Manual Spacer Application"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Manual Spacer Application Equipment"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex offers a variety of manual spacer application equipment to help you consistently make high-quality insulating glass units."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex offers a variety of manual spacer application equipment to help you consistently make high-quality insulating glass units.</p><p><a href=\"https://www.quanex.com/service-support/equipment/manual-spacer-application/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Manual Spacer Application | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex offers a variety of manual spacer application equipment to help you consistently make high-quality insulating glass units."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Manual Spacer Application | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex offers a variety of manual spacer application equipment to help you consistently make high-quality insulating glass units."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Manual Spacer Application\" />"
+      }
+    ]
+  },
+  {
+    "label": "Plant Transformation",
+    "depth": 1,
+    "sitecoreName": "Plant Transformation",
+    "itemName": "Plant Transformation",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/Plant Transformation",
+    "sourceUrl": "https://www.quanex.com/service-support/plant-transformation/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Plant Transformation"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Plant Transformation"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Plant Transformation"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Quanex is ready to help you achieve process improvements with automation technology as part of a Plant Transformation st"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex is ready to help you achieve process improvements with automation technology as part of a Plant Transformation strategy."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex is ready to help you achieve process improvements with automation technology as part of a Plant Transformation strategy.</p><p><a href=\"https://www.quanex.com/service-support/plant-transformation/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Plant Transformation | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex is ready to help you achieve process improvements with automation technology as part of a Plant Transformation strategy."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Plant Transformation | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex is ready to help you achieve process improvements with automation technology as part of a Plant Transformation strategy."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Plant Transformation\" />"
+      }
+    ]
+  },
+  {
+    "label": "Screens+",
+    "depth": 1,
+    "sitecoreName": "ScreensPlus",
+    "itemName": "ScreensPlus",
+    "parentPath": "/sitecore/content/quanex/quanex/Home/Service and Support",
+    "path": "/sitecore/content/quanex/quanex/Home/Service and Support/ScreensPlus",
+    "sourceUrl": "https://www.quanex.com/document/screens-plus-deluxe-series-patio-door-profile-sell-sheet/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Screens+ DELUXE Series Patio Door Profile Sell Sheet"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Screens+ DELUXE Series Patio Door Profile Sell Sheet"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Screens+"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Screens+ DELUXE Series Patio Door Profile Sell Sheet"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved.</p><p><a href=\"https://www.quanex.com/document/screens-plus-deluxe-series-patio-door-profile-sell-sheet/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Screens+ | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Screens+ | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Employee Access Copyright © document.write(new Date().getFullYear()); Quanex Building Products. All Rights Reserved."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Screens+\" />"
+      }
+    ]
+  },
+  {
+    "label": "About",
+    "depth": 0,
+    "sitecoreName": "About",
+    "itemName": "About",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/About",
+    "sourceUrl": "https://www.quanex.com/about-us/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Global Building Products Manufacturer &amp; Innovator"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Global Building Products Manufacturer &amp; Innovator"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "About"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Global Building Products Manufacturer &amp; Innovator"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Discover Quanex (NYSE:NX), a global leader in building products and solutions. Learn about our history, innovation, and commitment to communities worldwide."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Discover Quanex (NYSE:NX), a global leader in building products and solutions. Learn about our history, innovation, and commitment to communities worldwide.</p><p><a href=\"https://www.quanex.com/about-us/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "About | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Discover Quanex (NYSE:NX), a global leader in building products and solutions. Learn about our history, innovation, and commitment to communities worldwide."
+      },
+      {
+        "name": "ogTitle",
+        "value": "About | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Discover Quanex (NYSE:NX), a global leader in building products and solutions. Learn about our history, innovation, and commitment to communities worldwide."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"About\" />"
+      }
+    ]
+  },
+  {
+    "label": "Project Profiles",
+    "depth": 0,
+    "sitecoreName": "Project Profiles",
+    "itemName": "Project Profiles",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Project Profiles",
+    "sourceUrl": "https://www.quanex.com/project-profiles/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Project Profiles"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Project Profiles"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Project Profiles"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our custome"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our customer examples."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our customer examples.</p><p><a href=\"https://www.quanex.com/project-profiles/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Project Profiles | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our customer examples."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Project Profiles | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Project Profiles - Quanex products and solutions are used in a variety of applications around the world. See our customer examples."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Project Profiles\" />"
+      }
+    ]
+  },
+  {
+    "label": "Resources",
+    "depth": 0,
+    "sitecoreName": "Resources",
+    "itemName": "Resources",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Resources",
+    "sourceUrl": "https://www.quanex.com/resources/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "keeping you informed"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "keeping you informed"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Resources"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "keeping you informed"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Resources - View the Quanex library of technical bulletins—including product spec sheets, safety data sheets, certificates and more."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Resources - View the Quanex library of technical bulletins—including product spec sheets, safety data sheets, certificates and more.</p><p><a href=\"https://www.quanex.com/resources/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Resources | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Resources - View the Quanex library of technical bulletins—including product spec sheets, safety data sheets, certificates and more."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Resources | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Resources - View the Quanex library of technical bulletins—including product spec sheets, safety data sheets, certificates and more."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Resources\" />"
+      }
+    ]
+  },
+  {
+    "label": "Sustainability",
+    "depth": 0,
+    "sitecoreName": "Sustainability",
+    "itemName": "Sustainability",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Sustainability",
+    "sourceUrl": "https://www.quanex.com/sustainability/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Corporate Responsibility at Quanex"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Corporate Responsibility at Quanex"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Sustainability"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Corporate Responsibility at Quanex"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Sustainability - Quanex strives to make a positive impact with energy-efficient products and environmental, social and governance efforts."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Sustainability - Quanex strives to make a positive impact with energy-efficient products and environmental, social and governance efforts.</p><p><a href=\"https://www.quanex.com/sustainability/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Sustainability | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Sustainability - Quanex strives to make a positive impact with energy-efficient products and environmental, social and governance efforts."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Sustainability | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Sustainability - Quanex strives to make a positive impact with energy-efficient products and environmental, social and governance efforts."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Sustainability\" />"
+      }
+    ]
+  },
+  {
+    "label": "News",
+    "depth": 0,
+    "sitecoreName": "News",
+    "itemName": "News",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/News",
+    "sourceUrl": "https://www.quanex.com/news/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "NEWS at Quanex"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "NEWS at Quanex"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "News"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "NEWS at Quanex"
+      },
+      {
+        "name": "pageSummary",
+        "value": "News - See the latest news, posts and events from Quanex about our business, the industry, our people and more."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>News - See the latest news, posts and events from Quanex about our business, the industry, our people and more.</p><p><a href=\"https://www.quanex.com/news/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "News | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "News - See the latest news, posts and events from Quanex about our business, the industry, our people and more."
+      },
+      {
+        "name": "ogTitle",
+        "value": "News | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "News - See the latest news, posts and events from Quanex about our business, the industry, our people and more."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"News\" />"
+      }
+    ]
+  },
+  {
+    "label": "Careers",
+    "depth": 0,
+    "sitecoreName": "Careers",
+    "itemName": "Careers",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Careers",
+    "sourceUrl": "https://www.quanex.com/careers/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Careers at Quanex"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Careers at Quanex"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Careers"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Careers at Quanex"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Careers at Quanex- Interested in Production, Maintenance, Finance, HR, Operations, or R&D? We’ve got the manufacturing career for you!"
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Careers at Quanex- Interested in Production, Maintenance, Finance, HR, Operations, or R&D? We’ve got the manufacturing career for you!</p><p><a href=\"https://www.quanex.com/careers/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Careers | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Careers at Quanex- Interested in Production, Maintenance, Finance, HR, Operations, or R&D? We’ve got the manufacturing career for you!"
+      },
+      {
+        "name": "ogTitle",
+        "value": "Careers | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Careers at Quanex- Interested in Production, Maintenance, Finance, HR, Operations, or R&D? We’ve got the manufacturing career for you!"
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Careers\" />"
+      }
+    ]
+  },
+  {
+    "label": "Locations",
+    "depth": 0,
+    "sitecoreName": "Locations",
+    "itemName": "Locations",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Locations",
+    "sourceUrl": "https://www.quanex.com/locations/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Find a Facility"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Find a Facility"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Locations"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Find a Facility"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Quanex operates more than 67 facilities worldwide. Find a location by country, state, or product/service capabilities."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Quanex operates more than 67 facilities worldwide. Find a location by country, state, or product/service capabilities.</p><p><a href=\"https://www.quanex.com/locations/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Locations | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Quanex operates more than 67 facilities worldwide. Find a location by country, state, or product/service capabilities."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Locations | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Quanex operates more than 67 facilities worldwide. Find a location by country, state, or product/service capabilities."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Locations\" />"
+      }
+    ]
+  },
+  {
+    "label": "Contact Us",
+    "depth": 0,
+    "sitecoreName": "Contact Us",
+    "itemName": "Contact Us",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Contact Us",
+    "sourceUrl": "https://www.quanex.com/contact-us/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Questions? We&#8217;re here to help"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Questions? We&#8217;re here to help"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Contact Us"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Questions? We&#8217;re here to help"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Reach out to Quanex for general inquiries or product support. With nearly 100 years of innovation, we provide solutions for industries worldwide."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Reach out to Quanex for general inquiries or product support. With nearly 100 years of innovation, we provide solutions for industries worldwide.</p><p><a href=\"https://www.quanex.com/contact-us/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Contact Us | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Reach out to Quanex for general inquiries or product support. With nearly 100 years of innovation, we provide solutions for industries worldwide."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Contact Us | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Reach out to Quanex for general inquiries or product support. With nearly 100 years of innovation, we provide solutions for industries worldwide."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Contact Us\" />"
+      }
+    ]
+  },
+  {
+    "label": "Investors",
+    "depth": 0,
+    "sitecoreName": "Investors",
+    "itemName": "Investors",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Investors",
+    "sourceUrl": "https://investors.quanex.com/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "A PART OF SOMETHING BIGGER"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "A PART OF SOMETHING BIGGER"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Investors"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "A PART OF SOMETHING BIGGER"
+      },
+      {
+        "name": "pageSummary",
+        "value": "The Investor Relations website contains information about Quanex Building Products Corporation's business for stockholders, potential investors, and financial analysts."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>The Investor Relations website contains information about Quanex Building Products Corporation's business for stockholders, potential investors, and financial analysts.</p><p><a href=\"https://investors.quanex.com/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Investors | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "The Investor Relations website contains information about Quanex Building Products Corporation's business for stockholders, potential investors, and financial analysts."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Investors | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "The Investor Relations website contains information about Quanex Building Products Corporation's business for stockholders, potential investors, and financial analysts."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Investors\" />"
+      }
+    ]
+  },
+  {
+    "label": "Events",
+    "depth": 0,
+    "sitecoreName": "Events",
+    "itemName": "Events",
+    "parentPath": "/sitecore/content/quanex/quanex/Home",
+    "path": "/sitecore/content/quanex/quanex/Home/Events",
+    "sourceUrl": "https://www.quanex.com/events/",
+    "contentOk": true,
+    "fields": [
+      {
+        "name": "pageTitle",
+        "value": "Connect with Us"
+      },
+      {
+        "name": "pageHeaderTitle",
+        "value": "Connect with Us"
+      },
+      {
+        "name": "pageShortTitle",
+        "value": "Events"
+      },
+      {
+        "name": "pageSubtitle",
+        "value": "Connect with Us"
+      },
+      {
+        "name": "pageSummary",
+        "value": "Events - Quanex is committed to staying on top of industry trends, and attends the biggest events and tradeshows each year."
+      },
+      {
+        "name": "Detail",
+        "value": "<p>Events - Quanex is committed to staying on top of industry trends, and attends the biggest events and tradeshows each year.</p><p><a href=\"https://www.quanex.com/events/\">Learn more on Quanex.com</a></p>"
+      },
+      {
+        "name": "metadataTitle",
+        "value": "Events | Quanex"
+      },
+      {
+        "name": "metadataDescription",
+        "value": "Events - Quanex is committed to staying on top of industry trends, and attends the biggest events and tradeshows each year."
+      },
+      {
+        "name": "ogTitle",
+        "value": "Events | Quanex"
+      },
+      {
+        "name": "ogDescription",
+        "value": "Events - Quanex is committed to staying on top of industry trends, and attends the biggest events and tradeshows each year."
+      },
+      {
+        "name": "image",
+        "value": "<image src=\"https://www.quanex.com/wp-content/uploads/2025/09/QX_SocialMediaCoverImages_YouTube_2048x1152-scaled.jpg\" alt=\"Events\" />"
+      }
+    ]
+  }
+]

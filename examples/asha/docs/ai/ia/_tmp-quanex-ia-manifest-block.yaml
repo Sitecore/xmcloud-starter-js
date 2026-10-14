@@ -1,0 +1,112 @@
+  - name: "quanex-ia-tree"
+    kind: "ia-create"
+    category: "IA"
+    status: "complete"
+    createdAt: "2026-08-11T18:00:00Z"
+    updatedAt: "2026-08-11T19:30:00Z"
+    siteName: "quanex"
+    contentRootPath: "/sitecore/content/quanex/quanex/Home"
+    contentRootItemId: "{E6276198-3FC7-4D8B-BD14-8669B1701536}"
+    pageTemplateId: "{274FC64E-530F-457E-BD04-8B195DF94646}"
+    pageTemplateName: "Services Page"
+    iaSource: "docs/ai/ia/quanex-ia.md"
+    sourceSite: "https://www.quanex.com/"
+    createdCount: 64
+    notes: >
+      Created full Quanex IA tree (64 Services Page items) under Home from quanex-ia.md.
+      Content sourced from quanex.com (og:description / page copy). Detail + image confirmed
+      via MCP read-back. pageTitle/pageHeaderTitle/pageShortTitle/pageSubtitle/pageSummary/
+      metadata*/og* sent on create/update but are silent in MCP responses (inherited fields) —
+      verify in Content Editor. Image fields use external quanex.com URL XML (not DAM-uploaded).
+      Services Page was NOT in Home insert options; create_content_item still succeeded.
+      Item naming: spaces preserved; "&" -> "and"; "Screens+" -> "Screens Plus";
+      "Service & Support" -> "Service and Support". Pre-existing Speakers/Video/Data left untouched.
+    items:
+      - { name: "Products", itemId: "{C8A3F7B0-E2C4-4D27-AA20-D4018E333B38}", path: "/sitecore/content/quanex/quanex/Home/Products" }
+      - { name: "Residential", itemId: "{F57BAA07-A8BC-4859-B1DB-96E0153C4D23}", path: "/sitecore/content/quanex/quanex/Home/Products/Residential" }
+      - { name: "Entry Door Components (Residential)", itemId: "{53CAE3B0-2166-4109-BCB4-6BE9DCFE1184}", path: "/sitecore/content/quanex/quanex/Home/Products/Residential/Entry Door Components" }
+      - { name: "Insulating Glass Spacers (Residential)", itemId: "{2B002784-21DF-4113-8CCB-DCFB8B356362}", path: "/sitecore/content/quanex/quanex/Home/Products/Residential/Insulating Glass Spacers" }
+      - { name: "Kitchen and Bath Components", itemId: "{452A7A3B-E4AC-44E6-ABCA-A27B027BFED5}", path: "/sitecore/content/quanex/quanex/Home/Products/Residential/Kitchen and Bath Components" }
+      - { name: "Millwork (Residential)", itemId: "{A83E09E4-78DA-4902-AF17-1FA1CF177032}", path: "/sitecore/content/quanex/quanex/Home/Products/Residential/Millwork" }
+      - { name: "Security Screens", itemId: "{D74BD42A-FD7F-4DE9-9D51-F229D51BB24D}", path: "/sitecore/content/quanex/quanex/Home/Products/Residential/Security Screens" }
+      - { name: "Solar Panel Components", itemId: "{530AFCA4-7706-40B6-936C-05C4E27E5E17}", path: "/sitecore/content/quanex/quanex/Home/Products/Residential/Solar Panel Components" }
+      - { name: "Window Components (Residential)", itemId: "{F1D393BD-6D9B-4C36-A86C-B28E6261FBAF}", path: "/sitecore/content/quanex/quanex/Home/Products/Residential/Window Components" }
+      - { name: "Commercial", itemId: "{1573CCC9-E6D1-4610-9A38-EBFAB293F91B}", path: "/sitecore/content/quanex/quanex/Home/Products/Commercial" }
+      - { name: "Entry Door Components (Commercial)", itemId: "{64DD2760-F85F-4F66-9497-216F5C8219B4}", path: "/sitecore/content/quanex/quanex/Home/Products/Commercial/Entry Door Components" }
+      - { name: "Window Components (Commercial)", itemId: "{91445E93-B8F9-43E6-B132-3534C8185052}", path: "/sitecore/content/quanex/quanex/Home/Products/Commercial/Window Components" }
+      - { name: "Insulating Glass Spacers (Commercial)", itemId: "{FBB94D30-6988-4CEF-A9F4-B6268923B7A6}", path: "/sitecore/content/quanex/quanex/Home/Products/Commercial/Insulating Glass Spacers" }
+      - { name: "Weatherseals (Commercial)", itemId: "{2B0F74DE-529D-4800-88C7-3D50221B55F9}", path: "/sitecore/content/quanex/quanex/Home/Products/Commercial/Weatherseals" }
+      - { name: "Materials and Finishes", itemId: "{96BF6876-725A-4003-BB33-F48E7C9812D8}", path: "/sitecore/content/quanex/quanex/Home/Products/Commercial/Materials and Finishes" }
+      - { name: "Insulating Glass Spacers", itemId: "{9726E4D1-8FCD-4DD6-B5E9-BB4467655176}", path: "/sitecore/content/quanex/quanex/Home/Products/Insulating Glass Spacers" }
+      - { name: "Weatherseals", itemId: "{47DBF199-FB3B-4B43-9D50-F12D65441315}", path: "/sitecore/content/quanex/quanex/Home/Products/Weatherseals" }
+      - { name: "Solar", itemId: "{36C969E9-D8C1-4693-AA6C-B54F17B1E3DD}", path: "/sitecore/content/quanex/quanex/Home/Products/Solar" }
+      - { name: "For Architects", itemId: "{0377352D-5E48-4DAD-9516-808C09E2E86A}", path: "/sitecore/content/quanex/quanex/Home/Products/For Architects" }
+      - { name: "Warm-Edge Spacers", itemId: "{D33D7824-0D41-4A3A-AA78-EBD838EEE030}", path: "/sitecore/content/quanex/quanex/Home/Products/For Architects/Warm-Edge Spacers" }
+      - { name: "Commercial Window and Door Systems", itemId: "{759823DC-3DCB-4ADB-B1C5-E2FFB7FA9255}", path: "/sitecore/content/quanex/quanex/Home/Products/For Architects/Commercial Window and Door Systems" }
+      - { name: "Project Profiles (For Architects)", itemId: "{AB6E04A3-2525-4CD1-B68E-BFBD98D6629A}", path: "/sitecore/content/quanex/quanex/Home/Products/For Architects/Project Profiles" }
+      - { name: "Sustainability (For Architects)", itemId: "{EDE31BBC-014F-4A4E-B10F-F731D1765EF8}", path: "/sitecore/content/quanex/quanex/Home/Products/For Architects/Sustainability" }
+      - { name: "Continuing Education Resources (For Architects)", itemId: "{A7176E1D-7C1D-447E-90C9-C49D9E0E131F}", path: "/sitecore/content/quanex/quanex/Home/Products/For Architects/Continuing Education Resources" }
+      - { name: "Hardware Solutions", itemId: "{B8620C45-6876-4D82-B952-23F659BDF475}", path: "/sitecore/content/quanex/quanex/Home/Products/Hardware Solutions" }
+      - { name: "Access Solutions", itemId: "{86BDBB3E-0536-4DDD-9ADC-92CB089F7254}", path: "/sitecore/content/quanex/quanex/Home/Products/Access Solutions" }
+      - { name: "Extruded Solutions", itemId: "{FA947897-7340-4066-A011-42B5A8EAAB98}", path: "/sitecore/content/quanex/quanex/Home/Products/Extruded Solutions" }
+      - { name: "Mixing Solutions", itemId: "{D6FD78C9-DC8A-4581-AC3A-CED051C1A743}", path: "/sitecore/content/quanex/quanex/Home/Products/Mixing Solutions" }
+      - { name: "Wood Solutions", itemId: "{5628928F-AA2C-4671-9D8B-B11EE6FC848E}", path: "/sitecore/content/quanex/quanex/Home/Products/Wood Solutions" }
+      - { name: "Capabilities", itemId: "{FBAD5995-D416-453C-A8A7-DF4DDFDAE70F}", path: "/sitecore/content/quanex/quanex/Home/Capabilities" }
+      - { name: "Cabinet Components", itemId: "{63703930-8C86-456E-B281-ED2A344C96E6}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Cabinet Components" }
+      - { name: "Custom Mixing", itemId: "{48347864-D4AC-455E-A90A-A19AD340300E}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Custom Mixing" }
+      - { name: "Engineered Wood", itemId: "{A0D6ED2C-988B-424A-B0A5-BD8847C6BF03}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Engineered Wood" }
+      - { name: "Extrusion Capabilities", itemId: "{D83F6D57-2ED3-4597-B16D-D73769E7DD60}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Extrusion Capabilities" }
+      - { name: "Hardwood Residues", itemId: "{63557F72-40D3-4425-BC06-A704D09BDDF9}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Hardwood Residues" }
+      - { name: "Material and Science Design", itemId: "{F640E0A7-A45A-4CE4-A28C-1716083726B8}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Material and Science Design" }
+      - { name: "Millwork (Capabilities)", itemId: "{58E2A84E-7D58-41D1-8E77-0549B37DFAF6}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Millwork" }
+      - { name: "Performance Solutions", itemId: "{4787842D-57F3-4CF7-9CC8-D484D6B26DF6}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Performance Solutions" }
+      - { name: "Polymer Solutions", itemId: "{BE75F022-BF9A-4330-9D8E-F0B8A6A99204}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Polymer Solutions" }
+      - { name: "Roll Forming", itemId: "{3BA3C62D-A599-44FC-AC8D-51F34B8587FB}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Roll Forming" }
+      - { name: "Rolltrusion", itemId: "{F42772BE-B7C2-4F7D-9457-C5647C99B679}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Rolltrusion" }
+      - { name: "Sealant Solutions", itemId: "{AB26C458-C6D4-4569-AC5C-4DA2693E2695}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Sealant Solutions" }
+      - { name: "Silicone Foam Solutions", itemId: "{D084729D-0C0C-4FCC-BDCF-4A49C5C7C6EB}", path: "/sitecore/content/quanex/quanex/Home/Capabilities/Silicone Foam Solutions" }
+      - { name: "Service and Support", itemId: "{DE76695F-A5F5-40EA-B2D6-EC5E6624E08C}", path: "/sitecore/content/quanex/quanex/Home/Service and Support" }
+      - { name: "Account Management", itemId: "{BD42ABCC-775F-4B48-BA8B-91C6B938C92C}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Account Management" }
+      - { name: "Continuing Education Resources", itemId: "{BFD35C05-040F-4599-851A-3615B0ED58A8}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Continuing Education Resources" }
+      - { name: "Equipment", itemId: "{E8BDCE5F-1B3D-4107-9E53-B1DE29FEF771}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment" }
+      - { name: "Line Layouts", itemId: "{B9D629A4-B71C-488A-93AB-08C524926F57}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/Line Layouts" }
+      - { name: "Secondary Sealing Equipment Solutions", itemId: "{E260F630-A148-43F3-A735-7F36E779C4CD}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/Secondary Sealing Equipment Solutions" }
+      - { name: "High-Speed Full Automation", itemId: "{994291E1-EA10-4B0C-80A8-D2C42F5031DF}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/High-Speed Full Automation" }
+      - { name: "Semi-Automated IG Equipment", itemId: "{D524364A-D779-4960-86D6-ECDAAAD628F3}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/Semi-Automated IG Equipment" }
+      - { name: "Manual Spacer Application", itemId: "{6224AAF9-9499-442E-9305-B9C5FCCD89F5}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Equipment/Manual Spacer Application" }
+      - { name: "Plant Transformation", itemId: "{EE527620-7371-45DE-8A63-4857D143EFC6}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Plant Transformation" }
+      - { name: "Screens Plus", itemId: "{54889B49-D385-4ECB-A593-D6F4661B6237}", path: "/sitecore/content/quanex/quanex/Home/Service and Support/Screens Plus" }
+      - { name: "About", itemId: "{9955B25E-1542-4189-A646-76B59C12C7FB}", path: "/sitecore/content/quanex/quanex/Home/About" }
+      - { name: "Project Profiles", itemId: "{7BCBCF67-AFB6-4C79-8CFE-EDEDFBB3F612}", path: "/sitecore/content/quanex/quanex/Home/Project Profiles" }
+      - { name: "Resources", itemId: "{144E8B02-E31F-4059-B389-EFC605ED093B}", path: "/sitecore/content/quanex/quanex/Home/Resources" }
+      - { name: "Sustainability", itemId: "{353D671A-9A95-4F8E-BC7D-32FD1092A0AD}", path: "/sitecore/content/quanex/quanex/Home/Sustainability" }
+      - { name: "News", itemId: "{03AF7489-05AD-49CC-A2FD-FBB4DCAC3B05}", path: "/sitecore/content/quanex/quanex/Home/News" }
+      - { name: "Careers", itemId: "{A508286F-88C3-4A67-9B0E-5856DED4FCB3}", path: "/sitecore/content/quanex/quanex/Home/Careers" }
+      - { name: "Locations", itemId: "{E00843FB-81F0-4A32-BDB2-89E3A25E1C10}", path: "/sitecore/content/quanex/quanex/Home/Locations" }
+      - { name: "Contact Us", itemId: "{56EA6322-F923-44F1-B0AF-2A10F9B46C04}", path: "/sitecore/content/quanex/quanex/Home/Contact Us" }
+      - { name: "Investors", itemId: "{8F0B8006-0D2C-45A3-A0CF-9D2A8CEBA142}", path: "/sitecore/content/quanex/quanex/Home/Investors" }
+      - { name: "Events", itemId: "{EC97AF46-5F1A-4ACB-AFFE-AA0B5352C0B5}", path: "/sitecore/content/quanex/quanex/Home/Events" }
+    fieldsUpdated:
+      - Detail
+      - image
+      - pageTitle
+      - pageHeaderTitle
+      - pageShortTitle
+      - pageSubtitle
+      - pageSummary
+      - metadataTitle
+      - metadataDescription
+      - ogTitle
+      - ogDescription
+    verification:
+      checkedAt: "2026-08-11T19:30:00Z"
+      passed:
+        - "64 pages created under /sitecore/content/quanex/quanex/Home"
+        - "Detail + image confirmed via MCP get_content_item_by_path/by_id"
+        - "Products subtree children present"
+      failed: []
+      pendingManual:
+        - "Verify pageTitle/pageSummary/metadata*/og* in Content Editor (MCP silent for inherited fields)"
+        - "Replace external image XML with DAM assets when Content Hub credentials available"
+        - "Publish quanex Home tree for Edge"
+        - "Optionally add Services Page to Home insert options"

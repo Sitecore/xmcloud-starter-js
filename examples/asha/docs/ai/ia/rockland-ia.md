@@ -1,0 +1,161 @@
+# Rockland Trust — Sitecore Content Tree
+
+Site: `rockland`  
+Content root: `/sitecore/content/rockland/rockland/Home`  
+Template: Detail Page `{D47BDDDA-DA7C-491A-B1A0-F41E060F8839}`  
+Created: 2026-07-07 via `sitecore-create-ia` skill  
+State tracking: `docs/ai/ia/rockland-ia-state.json` (144 items)
+
+Field mapping (Page Content section):
+- `pageTitle` ← Title
+- `pageShortTitle` ← Short Title
+- `pageHeaderTitle` ← Header Title
+- `pageSummary` ← Summary
+- `pageSubtitle` ← Subtitle
+
+## Tree (creatable items only)
+
+- shared
+  - Deposit Protection
+  - Treasury Management
+  - Merchant Services
+  - Equipment Leasing
+  - International Banking
+  - Condo Association Banking and Lending
+  - Foreign Currency Exchange Locations
+  - Business Credit Cards
+  - Online Banking
+- Personal
+  - Banking
+    - Checking Products
+      - Checking Product Rates
+      - Free Checking
+      - Free Student Checking
+      - Advantage Checking
+      - Rockland Complete Checking
+      - Overdraft Services
+    - Savings Products
+      - Savings, CDs and Money Market Rates
+      - Free Savings
+      - Certificates of Deposit (CDs)
+      - Money Market Savings
+      - Rockland Complete Money Market Savings
+    - Credit Cards
+  - Loans
+    - Mortgage Products
+      - Fixed-Rate Mortgages
+      - Adjustable-Rate Mortgages
+      - Jumbo Mortgages
+      - Mortgage Refinancing
+      - First-Time Homebuyers
+      - Government Mortgage Programs
+      - Home Loan Pre-Approval
+      - Mortgage FAQs
+      - Construction Loans
+    - Home Equity Products
+      - Home Equity Rates
+      - Home Equity Lines of Credit
+      - Home Equity Loans
+      - Express Mortgage
+      - Home Equity FAQs
+  - Services
+    - NH Student Loans
+    - Online & Mobile Banking
+    - Branch Services
+    - Branches with Coin Counters
+    - Branches with Sunday Hours
+    - Debit Card
+  - Helpful Info
+    - Contact Us Form
+    - Mortgage Team
+    - First Time Home Buyers
+- Small Business
+  - Banking
+    - Business Checking
+    - Business Debit Cards
+    - Business Payments and Invoicing
+    - Savings, Money Markets & CDs
+  - Loans
+    - Small Business Loan Options
+    - SBA Loans
+    - Business Loans and Lines of Credit
+    - Business Equipment Loans
+  - Specialized Banking
+    - Premier Banking for Professionals
+  - Services
+    - Contact the Team
+    - Business Team
+- Commercial
+  - Banking
+    - Commercial Purchase Card
+    - Commercial Checking
+    - Savings, Money Markets & CDs
+  - Loans
+    - Asset-Based Loans
+    - Commercial Mortgage Loans
+    - Equipment Loans
+    - Security Alarm Lending
+    - Real Estate Owned Properties
+    - Franchise Financing
+    - Construction and Development Loans
+  - Specialized Banking
+    - Account Verification Services
+    - Non-Profit Banking and Lending
+    - Escrow Services
+    - Government and Municipal Banking
+  - Helpful Info
+    - Contact the Team
+    - Commercial Lending Centers
+    - Commercial Economic Insights
+- Wealth & Investments
+  - Individuals & Families
+    - Financial & Retirement Planning
+    - Investment Management
+    - Personal Insurance
+    - Trust & Estate Services
+    - Special Needs Services
+    - Premier Banking
+  - Business Owners
+    - Business Retirement Plan Services
+    - Business Insurance
+    - Business Financial Planning
+    - Business Investment Management
+    - Business Owner Advisory Services
+  - Institutions/Government
+    - Government & Municipal Investing
+    - Investing for Non-Profits
+    - Institutional Investing
+  - Getting Started
+  - Helpful Info
+    - Insights
+    - Contact Investment Management Group
+    - Investment Team
+- Learning Center
+  - Personal Banking Resources
+    - Everyday Finances
+    - Homebuying & Homeownership
+    - Planning for the Future
+    - Fraud Prevention
+    - Expert Insights
+    - Financial Tools
+    - Podcasts
+      - Behind The Curtain: Money Made Simple
+  - Business Banking Resources
+    - Finance & Cash Flow
+    - Plan & Manage
+    - Fraud Prevention
+    - Community Insights
+    - Business Webinars
+      - Rockland Trust Business Strategy Series
+  - Financial Literacy
+    - Ms. Money's Classroom
+    - About Ms. Money
+    - Credit for Life Fair - Money Management for Teens
+    - CFPB Multi-Lingual Resources
+  - Recent Articles
+- Locations
+- Careers
+- Contact Us
+- About Us
+- FAQs
+- Rates

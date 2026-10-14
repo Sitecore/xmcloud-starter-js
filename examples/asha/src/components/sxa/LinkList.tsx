@@ -1,0 +1,550 @@
+'use client';
+
+import React, { useEffect, useState, type JSX } from 'react';
+import { Link as ContentSdkLink, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import Link from 'next/link';
+import {
+  Briefcase,
+  Camera,
+  CircleHelp,
+  Globe,
+  Info,
+  Mail,
+  Map,
+  MessageCircle,
+  Newspaper,
+  Phone,
+  type LucideIcon,
+} from 'lucide-react';
+import type { LinkListItemProps, LinkListProps, ResultsFieldLink } from './sxa-link-list.props';
+
+const getUtilityIcon = (text: string): LucideIcon => {
+  const value = text.toLowerCase();
+  if (value.includes('connect')) return MessageCircle;
+  if (value.includes('blog')) return Newspaper;
+  if (value.includes('trip')) return Map;
+  if (value.includes('canada')) return Globe;
+  if (value.includes('media')) return Camera;
+  if (value.includes('career')) return Briefcase;
+  if (value.includes('about')) return Info;
+  if (value.includes('contact')) return Phone;
+  if (value.includes('faq')) return CircleHelp;
+  if (value.includes('email')) return Mail;
+  return Info;
+};
+
+const LinkListItem = (props: LinkListItemProps) => {
+  const { page } = useSitecore();
+  const isEditing = props.isPageEditing || page?.mode?.isEditing;
+  let className = `item${props.index}`;
+  className += (props.index + 1) % 2 == 0 ? ' even' : ' odd';
+  if (props.index == 0) {
+    className += ' first';
+  }
+  if (props.index + 1 == props.total) {
+    className += ' last';
+  }
+  return (
+    <li className={className}>
+      <div>
+        {isEditing ? (
+          <ContentSdkLink
+            className="text-gray-600 hover:underline focus:border focus:border-dashed focus:border-gray-500 inline-block px-2 py-2 focus:bg-gray-50 focus:outline focus:outline-dashed focus:ring-gray-500 aria-selected:bg-gray-100 text-nowrap word-break-[break-word] text-sm"
+            field={props.field}
+            prefetch={false}
+          />
+        ) : (
+          props.field?.value?.href && (
+            <Link
+              href={props.field.value.href}
+              className="text-gray-600 hover:underline focus:border focus:border-dashed focus:border-gray-500 inline-block px-2 py-2 focus:bg-gray-50 focus:outline focus:outline-dashed focus:ring-gray-500 aria-selected:bg-gray-100 text-nowrap word-break-[break-word] text-sm"
+              prefetch={false}
+            >
+              {props.field?.value?.text}
+            </Link>
+          )
+        )}
+      </div>
+    </li>
+  );
+};
+
+export const Default = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
+  const datasource = props.fields?.data?.datasource;
+  const styles = `max-w-xs p-5 font-sans ${props.params.styles}`.trimEnd();
+  const id = props.params.RenderingIdentifier;
+
+  if (datasource) {
+    const results = datasource.children?.results ?? [];
+    const list = results
+      .filter((element: ResultsFieldLink) => element?.field?.link)
+      .map((element: ResultsFieldLink, key: number) => (
+        <LinkListItem
+          index={key}
+          key={`${key}${element.field.link}`}
+          total={results.length}
+          field={element.field.link}
+          isPageEditing={isPageEditing}
+        />
+      ));
+
+    return (
+      <div data-class-change className={styles} id={id ? id : undefined}>
+        <div className="flex flex-col">
+          <Text
+            tag="h3"
+            field={datasource?.field?.title}
+            className="text-nowrap mb-5 text-xl font-bold text-gray-600"
+          />
+          <ul className="list-none p-0 m-0" aria-label="Navigation options">
+            {list}
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div data-class-change className={styles} id={id ? id : undefined}>
+      <div className="component-content">
+        <h3>Link List</h3>
+      </div>
+    </div>
+  );
+};
+
+export const AnchorNav = (props: LinkListProps): JSX.Element => {
+  const datasource = props.fields?.data?.datasource;
+  const styles = `${props.params.styles}`.trimEnd();
+  const id = props.params.RenderingIdentifier;
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]');
+    if (sections.length > 0) {
+      setActiveId(sections[0].id);
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries.find((entry) => entry.isIntersecting);
+        if (visibleEntry) {
+          setActiveId(visibleEntry.target.id);
+        }
+      },
+      {
+        rootMargin: '0px 0px -85% 0px',
+        threshold: 0.1,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
+  if (datasource) {
+    const results = datasource.children?.results ?? [];
+    const list = results
+      .filter((element: ResultsFieldLink) => element?.field?.link)
+      .map((element: ResultsFieldLink, key: number) => {
+        const link = element.field.link;
+        const href = link?.value?.href || '';
+        const targetId = href.replace('#', '');
+        const isActive = targetId === activeId;
+
+        return (
+          <li key={`${key}${href}`} className="list-none">
+            <a
+              href={href}
+              onClick={(e) => handleClick(e, href)}
+              className={`text-sm font-semibold py-4 transition-colors border-b-2 block ${
+                isActive ? 'border-black' : 'border-transparent'
+              }`}
+            >
+              {link?.value?.text}
+            </a>
+          </li>
+        );
+      });
+
+    return (
+      <div
+        data-class-change
+        className={`sticky top-0 shadow-lg bg-white z-20 ${styles}`}
+        id={id ? id : undefined}
+      >
+        <div className="container mx-auto px-4">
+          <ul
+            className="flex gap-12 list-none p-0 m-0"
+            aria-label="Navigation options"
+          >
+            {list}
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div data-class-change className={styles} id={id ? id : undefined}>
+      <div className="component-content">
+        <h3>Link List</h3>
+      </div>
+    </div>
+  );
+};
+
+export const FooterLinks = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
+  const datasource = props.fields?.data?.datasource;
+  const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
+  const id = props.params.RenderingIdentifier;
+
+  if (datasource) {
+    const results = datasource.children?.results ?? [];
+    const list = results
+      .filter((element: ResultsFieldLink) => element?.field?.link)
+      .map((element: ResultsFieldLink, key: number) => {
+        const link = element.field.link;
+        const href = link?.value?.href || '';
+
+        return (
+          <React.Fragment key={`${key}${href}`}>
+            {isPageEditing ? (
+              <ContentSdkLink
+                key={`${key}${href}-link`}
+                className="font-[inherit]"
+                field={element.field.link}
+                prefetch={false}
+              />
+            ) : (
+              href && (
+                <Link
+                  key={`${key}${href}-link`}
+                  href={href}
+                  className="font-[inherit]"
+                  prefetch={false}
+                >
+                  {link?.value?.text}
+                </Link>
+              )
+            )}
+            <span className="font-[inherit] last:!hidden hidden lg:[.with-separators_&]:inline-block">
+              /
+            </span>
+          </React.Fragment>
+        );
+      });
+
+    const parentBasedStyles =
+      'lg:[.list-vertical_&]:flex-col flex-wrap [.position-center_&]:items-center [.position-center_&]:justify-center [.position-right_&]:items-end [.position-right_&]:justify-end';
+
+    return (
+      <div className={` ${styles}`} id={id ? id : undefined} data-class-change>
+        <div
+          className={`flex flex-col lg:flex-row ${parentBasedStyles} gap-x-10 gap-y-6 font-[inherit]`}
+        >
+          {list}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div data-class-change className={styles} id={id ? id : undefined}>
+      <div className="component-content">
+        <h3>Link List</h3>
+      </div>
+    </div>
+  );
+};
+
+export const HeaderPrimaryLinks = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
+  const datasource = props.fields?.data?.datasource;
+  const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
+  const id = props.params.RenderingIdentifier;
+
+  if (datasource) {
+    const results = datasource.children?.results ?? [];
+    const list = results
+      .filter((element: ResultsFieldLink) => element?.field?.link)
+      .map((element: ResultsFieldLink, key: number) => {
+        const link = element.field.link;
+        const href = link?.value?.href || '';
+
+        return (
+          <li key={`${key}${href}-link`}>
+            {isPageEditing ? (
+              <ContentSdkLink field={element.field.link} prefetch={false} />
+            ) : (
+              href && (
+                <Link href={href} prefetch={false}>
+                  {link?.value?.text}
+                </Link>
+              )
+            )}
+          </li>
+        );
+      });
+
+    return (
+      <ul className={`flex flex-col gap-4 ${styles}`} id={id ? id : undefined} data-class-change>
+        {list}
+      </ul>
+    );
+  }
+
+  return (
+    <div data-class-change className={styles} id={id ? id : undefined}>
+      <div className="component-content">
+        <h3>Link List</h3>
+      </div>
+    </div>
+  );
+};
+
+export const HeaderSecondaryLinks = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
+  const datasource = props.fields?.data?.datasource;
+  const styles = `font-[inherit] ${props.params.styles}`.trimEnd();
+  const id = props.params.RenderingIdentifier;
+
+  if (datasource) {
+    const results = datasource.children?.results ?? [];
+    const list = results
+      .filter((element: ResultsFieldLink) => element?.field?.link)
+      .map((element: ResultsFieldLink, key: number) => {
+        const link = element.field.link;
+        const href = link?.value?.href || '';
+
+        return (
+          <li key={`${key}${href}-link`}>
+            {isPageEditing ? (
+              <ContentSdkLink field={element.field.link} prefetch={false} />
+            ) : (
+              href && (
+                <Link href={href} prefetch={false}>
+                  {link?.value?.text}
+                </Link>
+              )
+            )}
+          </li>
+        );
+      });
+
+    return (
+      <div className={`flex flex-col gap-2 ${styles}`} id={id ? id : undefined} data-class-change>
+        <h2 className="text-sm font-(family-name:--font-accent) font-medium text-secondary-foreground uppercase">
+          <Text field={datasource?.field?.title} />
+        </h2>
+        <ul className="flex flex-col gap-1">{list}</ul>
+      </div>
+    );
+  }
+
+  return (
+    <div data-class-change className={styles} id={id ? id : undefined}>
+      <div className="component-content">
+        <h3>Link List</h3>
+      </div>
+    </div>
+  );
+};
+
+const footerLinkItems = (
+  results: ResultsFieldLink[],
+  isPageEditing: boolean,
+  className: string
+) =>
+  results
+    .filter((element: ResultsFieldLink) => element?.field?.link)
+    .map((element: ResultsFieldLink, key: number) => {
+      const link = element.field.link;
+      const href = link?.value?.href || '';
+      const text = link?.value?.text || '';
+
+      return (
+        <li key={`${key}${href}`}>
+          {isPageEditing ? (
+            <ContentSdkLink field={link} className={className} prefetch={false} />
+          ) : (
+            href && (
+              <Link href={href} className={className} prefetch={false}>
+                {text}
+              </Link>
+            )
+          )}
+        </li>
+      );
+    });
+
+export const FooterColumn = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
+  const datasource = props.fields?.data?.datasource;
+  const styles = `${props.params.styles}`.trimEnd();
+  const id = props.params.RenderingIdentifier;
+
+  if (datasource) {
+    const results = datasource.children?.results ?? [];
+    const list = footerLinkItems(
+      results,
+      isPageEditing,
+      'text-sm text-primary-foreground/90 no-underline hover:underline'
+    );
+
+    return (
+      <nav
+        className={`text-primary-foreground ${styles}`}
+        id={id ? id : undefined}
+        data-class-change
+        data-testid="linklist-footer-column"
+      >
+        <h3 className="mb-4 text-sm font-bold uppercase tracking-wide">
+          <Text field={datasource?.field?.title} />
+        </h3>
+        <ul className="m-0 flex list-none flex-col gap-2 p-0">{list}</ul>
+      </nav>
+    );
+  }
+
+  return (
+    <div data-class-change className={styles} id={id ? id : undefined}>
+      <div className="component-content">
+        <h3>Link List</h3>
+      </div>
+    </div>
+  );
+};
+
+export const FooterUtility = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
+  const datasource = props.fields?.data?.datasource;
+  const styles = `${props.params.styles}`.trimEnd();
+  const id = props.params.RenderingIdentifier;
+
+  if (datasource) {
+    const results = datasource.children?.results ?? [];
+    const list = results
+      .filter((element: ResultsFieldLink) => element?.field?.link)
+      .map((element: ResultsFieldLink, key: number) => {
+        const link = element.field.link;
+        const href = link?.value?.href || '';
+        const text = link?.value?.text || '';
+        const Icon = getUtilityIcon(text);
+
+        return (
+          <li key={`${key}${href}`}>
+            {isPageEditing ? (
+              <ContentSdkLink
+                field={link}
+                className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-primary-foreground no-underline hover:underline"
+                prefetch={false}
+              />
+            ) : (
+              href && (
+                <Link
+                  href={href}
+                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-primary-foreground no-underline hover:underline"
+                  prefetch={false}
+                >
+                  <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  <span>{text}</span>
+                </Link>
+              )
+            )}
+          </li>
+        );
+      });
+
+    return (
+      <nav
+        className={styles}
+        id={id ? id : undefined}
+        data-class-change
+        data-testid="linklist-footer-utility"
+      >
+        <ul className="m-0 flex list-none flex-col gap-3 p-0">{list}</ul>
+      </nav>
+    );
+  }
+
+  return (
+    <div data-class-change className={styles} id={id ? id : undefined}>
+      <div className="component-content">
+        <h3>Link List</h3>
+      </div>
+    </div>
+  );
+};
+
+export const FooterCtas = (props: LinkListProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isPageEditing = page?.mode?.isEditing;
+  const datasource = props.fields?.data?.datasource;
+  const styles = `${props.params.styles}`.trimEnd();
+  const id = props.params.RenderingIdentifier;
+
+  if (datasource) {
+    const results = datasource.children?.results ?? [];
+    const list = results
+      .filter((element: ResultsFieldLink) => element?.field?.link?.value?.href)
+      .map((element: ResultsFieldLink, key: number) => {
+        const link = element.field.link;
+        const href = link?.value?.href || '';
+        const text = link?.value?.text || '';
+        const className =
+          'inline-flex w-full items-center justify-center bg-primary-foreground/15 px-4 py-3 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground no-underline hover:bg-primary-foreground/25';
+
+        return (
+          <li key={`${key}${href}`}>
+            {isPageEditing ? (
+              <ContentSdkLink field={link} className={className} prefetch={false} />
+            ) : (
+              <Link href={href} className={className} prefetch={false}>
+                {text}
+              </Link>
+            )}
+          </li>
+        );
+      });
+
+    return (
+      <nav
+        className={styles}
+        id={id ? id : undefined}
+        data-class-change
+        data-testid="linklist-footer-ctas"
+      >
+        <ul className="m-0 flex list-none flex-col gap-3 p-0">{list}</ul>
+      </nav>
+    );
+  }
+
+  return (
+    <div data-class-change className={styles} id={id ? id : undefined}>
+      <div className="component-content">
+        <h3>Link List</h3>
+      </div>
+    </div>
+  );
+};

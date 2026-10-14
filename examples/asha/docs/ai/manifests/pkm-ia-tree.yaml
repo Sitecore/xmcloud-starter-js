@@ -1,0 +1,152 @@
+# PKM content IA — created 2026-07-28 via Services Page branch
+# Root: /sitecore/content/progressive/pkm/Home
+# Branch: {EC16FA58-5F86-4B5A-BFAA-10FAFE515BA3}
+# Page template: Services Page {919189FF-6E09-4BFA-BB4C-367EB452378B}
+# Item names use "and" for "&"; display titles retain "&" in pageTitle fields.
+
+siteName: pkm
+contentRootPath: /sitecore/content/progressive/pkm/Home
+contentRootItemId: "{6D0A0F2F-BF24-4FA4-9562-00B59DD05063}"
+pageCountApprox: 101 # 7 L1 + ~94 L2/L3
+status: complete
+
+tree:
+  - name: Claims
+    itemId: "{4E985075-F29B-46E6-875F-B014AC5E5ED6}"
+    children:
+      - { name: "Claims overview", itemId: "{8F545561-92E9-47D6-AAB8-7C75760888F9}" }
+      - name: "Claim intake and standards"
+        itemId: "{60BD5A19-B447-4F69-81F2-274CD3987474}"
+        children:
+          - { name: "First notice of loss", itemId: "{6476ACC0-527E-4E3A-B00B-79D9E8E004CE}" }
+          - { name: "Intake checklist", itemId: "{6391B108-9B25-4ABE-8CFA-D79DFC1BBE84}" }
+          - { name: "Required documents", itemId: "{81E2F2B6-5B6A-47F9-9AE5-BAA710362A8B}" }
+          - { name: "Claim severity guidelines", itemId: "{7CC3D031-F7B5-4AE7-B368-8BED236ED07E}" }
+          - { name: "Standard response times", itemId: "{28489F55-0CDF-484D-BBE6-C86D23C1132B}" }
+      - name: "Claim status and tracking"
+        itemId: "{10911CF2-76A9-452D-8363-0A554D3E7CB0}"
+        children:
+          - { name: "Open claims", itemId: "{3FA0D2C5-BB4F-4496-A8C9-D954DF360894}" }
+          - { name: "Pending information", itemId: "{52545CFA-5850-4217-94EE-3D1025972775}" }
+          - { name: "In review", itemId: "{12B08E61-0C7E-4A4A-BB1F-2F3052B91634}" }
+          - { name: "Approved claims", itemId: "{B15110D2-5D51-4745-94A2-7FA174548E8E}" }
+          - { name: "Denied claims", itemId: "{C1DBB03C-191B-4835-8300-E8375EC1F816}" }
+          - { name: "Reopened claims", itemId: "{7BCC2497-9EF7-47A3-AF8E-8C86852AC6E6}" }
+      - name: "Coverage and eligibility"
+        itemId: "{ABDD8438-52F0-41DE-ABA2-712539637297}"
+        children:
+          - { name: "Policy verification", itemId: "{793A1C53-A2C3-4B70-95DF-C406AE5C14EF}" }
+          - { name: "Coverage lookup", itemId: "{6F46A604-BFC8-4B0F-9961-5B2CD016F463}" }
+          - { name: "Effective dates", itemId: "{63F82267-9B77-438A-BB0C-C55D24791D7F}" }
+          - { name: "Limits and deductibles", itemId: "{EE80B398-52AA-407A-A92D-2629C44FDCCF}" }
+          - { name: "Exclusions", itemId: "{D64B516C-1B77-4C0A-BFC1-7D4A23AD483A}" }
+          - { name: "Special handling", itemId: "{8790C1D3-DD7D-439B-8ED3-E75636CB899D}" }
+      - name: "Documentation requirements"
+        itemId: "{DEA65720-15F7-45CC-AC94-E2903297CFA5}"
+        children:
+          - { name: "Submission forms", itemId: "{A6C01584-2F14-4585-836F-627A29FB70C1}" }
+          - { name: "Photo requirements", itemId: "{0E319503-416F-427B-9096-7B49CB5645E0}" }
+          - { name: "Statement templates", itemId: "{A464A557-DD4E-4BC0-882D-2F0D7194EAAB}" }
+          - { name: "Medical or repair records", itemId: "{62665E82-9430-41F0-B08F-FA93F77F2D0F}" }
+          - { name: "Authentication rules", itemId: "{992E1C23-7413-4CCA-BA3F-1D9C6819F7B7}" }
+          - { name: "File naming standards", itemId: "{794004E3-B671-4DFB-8C02-1FF0B1530EA9}" }
+      - { name: "Escalations and exceptions", itemId: "{571990E4-6A13-46A2-BC13-991B5BEF36C5}" }
+      - { name: "Training and resources", itemId: "{E8696EBE-EF64-4FFB-9689-EF93B7A79F9A}" }
+
+  - name: Policyholder Service
+    itemId: "{F58DEFE9-BC53-45CF-9635-FA9B8328CD67}"
+    children:
+      - { name: "Service overview", itemId: "{3821C62D-D407-4C6F-B559-E4D4EE30EC22}" }
+      - { name: "Policy changes", itemId: "{E8DE604F-4FEF-47A1-AC4D-929E043D31D7}" }
+      - { name: "Billing and payments", itemId: "{4E99755C-EF3D-499C-A18E-98F0CDC54276}" }
+      - { name: "Policy documents", itemId: "{9CA95FA4-726B-44DE-B3D1-CB62FF83A6EA}" }
+      - { name: "Endorsements", itemId: "{C178D414-9430-4C71-A9C7-14939FA00539}" }
+      - { name: "Customer communications", itemId: "{97B5F178-B21B-4A22-B29E-97847994BBDE}" }
+
+  - name: Products
+    itemId: "{C4F18B58-7892-4570-A826-638BC2EC45C3}"
+    children:
+      - { name: "Product catalog", itemId: "{1F660AF4-159B-4EFF-8DCC-948E9A611FA9}" }
+      - { name: "Personal lines", itemId: "{9FE0723B-6237-4ACB-8CE2-9A0513FCB780}" }
+      - name: "Commercial lines"
+        itemId: "{9EA43B68-CB73-4A4E-B39E-9EDBB10F3F0D}"
+        children:
+          - { name: "General liability", itemId: "{19F8E897-DC03-490F-A5A5-A670D442F5BA}" }
+          - { name: "Property", itemId: "{6E9C8CD4-79AB-4B72-A94A-DA6E9C0A7A3C}" }
+          - { name: "Auto", itemId: "{B4FCA9FD-34F7-4127-AEA5-900E29B52696}" }
+          - { name: "Workers compensation", itemId: "{DDF327B1-553B-48CB-A8EB-E9F084019453}" }
+          - { name: "Umbrella", itemId: "{5850E659-BE13-4374-8DEB-B3B9DC782A60}" }
+          - { name: "Specialty lines", itemId: "{D6A52A91-7EFC-4882-B3FB-72E12957A931}" }
+      - { name: "Product guides", itemId: "{D0A649B0-DBBB-4059-88BB-943ACE4C5AFD}" }
+      - { name: "Eligibility rules", itemId: "{1FDB746E-CA79-4B93-AF47-B807C6657ED0}" }
+      - { name: "Underwriting notes", itemId: "{B8BAADD3-17BE-4A7A-95DC-67E497FC8A5D}" }
+
+  - name: Tools and Systems
+    itemId: "{A82B6DC7-67C6-4E5C-BE15-EE7FABDB164A}"
+    children:
+      - { name: "System access", itemId: "{520CE323-CF1F-44CE-A0D0-B9CF75C283BF}" }
+      - name: "Lookup tools"
+        itemId: "{FF6E3C41-562C-49C2-988D-ED156414F9B0}"
+        children:
+          - { name: "Policy lookup", itemId: "{BB1CA8F8-E7D1-4DF9-A07A-D0D95BA279D2}" }
+          - { name: "Claims lookup", itemId: "{695A04DE-49A6-4889-A59C-37DCE570E123}" }
+          - { name: "Customer lookup", itemId: "{CF6C592C-CA69-4B01-92DE-0BC80859086A}" }
+          - { name: "Provider lookup", itemId: "{F8EE5B64-CCE0-422A-A68A-1CD2A40D24B5}" }
+          - { name: "Agent lookup", itemId: "{CB13EAD4-5788-4608-AE6F-7C6291773CF9}" }
+          - { name: "Reference tables", itemId: "{0CF5FD67-5449-4291-B9F2-601A869EC1A4}" }
+      - { name: "Workflow tools", itemId: "{959F1DB5-0DCD-47CA-B774-220CE1D56F57}" }
+      - { name: "Forms and templates", itemId: "{396DFF38-0593-4652-9162-2BB789C8B8F8}" }
+      - { name: "Integrations", itemId: "{C7685832-F5EF-498F-B25D-77B9D557BE93}" }
+      - { name: "Troubleshooting", itemId: "{4447CBB3-E68C-4446-9274-3C3676B38319}" }
+
+  - name: Reports
+    itemId: "{A60D5A00-5D6D-479D-9829-56408C17272D}"
+    children:
+      - { name: "Standard reports", itemId: "{5544100E-8E0E-4C3B-9DA9-0A67144B3158}" }
+      - { name: "Operational metrics", itemId: "{4899D08C-C813-4A61-974A-1B1A7B6ED0E6}" }
+      - name: "Claims trends"
+        itemId: "{1D0D6C84-3040-42C2-9284-C20E8445DE4E}"
+        children:
+          - { name: "Volume trends", itemId: "{0EDBBBCA-75F6-4501-8E3C-2C0934C6F30D}" }
+          - { name: "Cycle time", itemId: "{525797DA-E83D-41C2-BF04-51D3CD39EF99}" }
+          - { name: "Closure rates", itemId: "{AEEB272A-56A9-4FE4-91B3-4F50F1A663F8}" }
+          - { name: "Severity analysis", itemId: "{FFD3F614-C5EF-4876-AE92-B0167891AEA2}" }
+          - { name: "Region breakdown", itemId: "{0D46B115-BBF3-449A-B752-D1A1D96E00AA}" }
+          - { name: "Product breakdown", itemId: "{010D8E29-1DFD-464D-8187-7962DB42882A}" }
+      - { name: "Exception reports", itemId: "{627C4C76-9E0A-4722-B09C-C8B24C5FEE94}" }
+      - { name: "Scheduled reports", itemId: "{DD1705F3-799F-4347-8B54-92A186BE91A9}" }
+
+  - name: Learning
+    itemId: "{05BFD1CD-FC98-49A3-929C-7BE5D5FEBF07}"
+    children:
+      - { name: "Learning paths", itemId: "{96F13AAA-6451-45DE-8699-8E2C944128F8}" }
+      - name: "Role-based training"
+        itemId: "{D4FC6759-AF7F-4F98-B012-639560A6820E}"
+        children:
+          - { name: "New advisor path", itemId: "{8F24F47E-0C6C-4E32-947A-7A182048162D}" }
+          - { name: "Senior advisor path", itemId: "{A6B82166-FD44-47EE-BD41-B9D1ED810A6D}" }
+          - { name: "Supervisor path", itemId: "{4F5702D1-8AD7-4057-AB65-A5F4D9D13B7D}" }
+          - { name: "Claims processor path", itemId: "{6F2B9B45-4E83-4FB4-908A-208750F0A514}" }
+          - { name: "Refresher courses", itemId: "{87C25F3C-FE6E-4E96-B18B-2B2E1D50D7E7}" }
+          - { name: "Assessment quizzes", itemId: "{580BAB1A-F0D9-4D56-9BBE-7373D1DBD391}" }
+      - { name: "New hire onboarding", itemId: "{B2E09F9C-E5D2-4176-9423-F07D78EBEABB}" }
+      - { name: "Microlearning", itemId: "{517F8C91-463C-4523-892B-DF1471849C35}" }
+      - { name: "Certifications", itemId: "{07A374D6-A610-4B6C-B4D0-70B8BBB7920B}" }
+      - { name: "Job aids", itemId: "{BB79AF06-06F6-4E4A-A53E-3CF92411B3AB}" }
+
+  - name: People and Teams
+    itemId: "{2CD69DB3-1052-4702-BF07-C366C4994063}"
+    children:
+      - { name: "Team directory", itemId: "{E877C730-6922-4DC0-B414-CB607AB481B0}" }
+      - { name: "Org chart", itemId: "{AEB21A2D-782A-4FC5-9D92-EC80DC3FAA2C}" }
+      - name: "Subject matter experts"
+        itemId: "{D5695A1C-4D51-4E9E-B839-BE0B254F09FA}"
+        children:
+          - { name: "Claims SMEs", itemId: "{9FD7A21C-9F81-47E4-BCAD-76FDE530A442}" }
+          - { name: "Product SMEs", itemId: "{7A6237C3-4833-4481-ABD9-FC8272A23DE6}" }
+          - { name: "Compliance contacts", itemId: "{3058770C-9DC4-4C14-BC23-B0478F7511F1}" }
+          - { name: "Operations contacts", itemId: "{74F3A30F-CD37-4723-8891-8FD64E4151E5}" }
+          - { name: "Escalation contacts", itemId: "{32452A9E-8A2C-47C9-92DC-27C43608B763}" }
+          - { name: "Regional leads", itemId: "{3ACAEBFD-4D12-4433-8FDC-DC534F71E2AD}" }
+      - { name: "Contact lists", itemId: "{67FB989C-C954-4649-8CBE-B20839EAC66B}" }
+      - { name: "Support channels", itemId: "{BB35BB0C-4DAC-4ABC-B59F-A6DCBACF402B}" }

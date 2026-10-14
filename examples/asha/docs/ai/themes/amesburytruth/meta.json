@@ -1,0 +1,55 @@
+{
+  "title": "Fenestration Products and Engineered Solutions | AmesburyTruth",
+  "themeColor": null,
+  "msColor": null,
+  "ogTitle": "Amesbury Truth",
+  "ogDescription": "Truth Hardware and Amesbury merged in 2013. By joining forces, AmesburyTruth became an industry-leading organization offering an extensive product line and considerable global resources. AmesburyTruth is now perfectly positioned to provide customers even greater opportunity to take advantage of engineered solutions.",
+  "ogImage": "/img/fb-post.png",
+  "ogSiteName": null,
+  "favicon": "https://www.amesburytruth.com/img/icons/favicon.ico",
+  "googleFontsLinks": [],
+  "fontFaces": [
+    {
+      "family": "Font Awesome 5 Brands",
+      "src": "url(\"../webfonts/fa-brands-400.woff2\") format(\"woff2\"), url(\"../webfonts/fa-brands-400.woff\") format(\"woff\"), url(\"../webfonts/fa-brands-400.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "Font Awesome 5 Pro",
+      "src": "url(\"../webfonts/fa-light-300.woff2\") format(\"woff2\"), url(\"../webfonts/fa-light-300.woff\") format(\"woff\"), url(\"../webfonts/fa-light-300.ttf\") format(\"truetype\")",
+      "weight": "300"
+    },
+    {
+      "family": "Font Awesome 5 Pro",
+      "src": "url(\"../webfonts/fa-regular-400.woff2\") format(\"woff2\"), url(\"../webfonts/fa-regular-400.woff\") format(\"woff\"), url(\"../webfonts/fa-regular-400.ttf\") format(\"truetype\")",
+      "weight": "400"
+    },
+    {
+      "family": "Font Awesome 5 Pro",
+      "src": "url(\"../webfonts/fa-solid-900.woff2\") format(\"woff2\"), url(\"../webfonts/fa-solid-900.woff\") format(\"woff\"), url(\"../webfonts/fa-solid-900.ttf\") format(\"truetype\")",
+      "weight": "900"
+    }
+  ],
+  "logoCandidates": [
+    "https://www.amesburytruth.com/v22/img/menu/resources_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/aboutus_160x94.jpg",
+    "https://www.amesburytruth.com/img/logos/AmesburyTruth-logo-color_445x72.png",
+    "https://www.amesburytruth.com/v22/img/menu/window_250x188.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/window-casement_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/window-hung_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/window-skylights_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/window-tilt_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/door_250x237.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/door-sliding_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/door-hinged_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/weatherseals-2_250x175.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/weatherseals-pile_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/window-weatherseals-3_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/door-weatherseals-2_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/extrusions_250x141.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/extrusions-2_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/resources_160x94.jpg",
+    "https://www.amesburytruth.com/v22/img/menu/aboutus_160x94.jpg"
+  ],
+  "heroBgImage": null
+}

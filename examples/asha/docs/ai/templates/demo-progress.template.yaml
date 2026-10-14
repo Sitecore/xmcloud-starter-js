@@ -1,0 +1,98 @@
+# Demo Progress Tracker
+# Created automatically at the start of a demo build.
+# Updated after each MCP call or phase completion.
+# Used by "resume demo" to skip completed work.
+
+client:
+  name: ""
+  sourceUrl: ""
+  startedAt: ""
+  lastUpdatedAt: ""
+
+phases:
+  phase0_inputs:
+    status: "pending"       # pending | complete
+    screenshot: false
+    url: ""
+
+  phase0_5_manifest:
+    status: "pending"       # pending | complete | skipped
+    validationMode: ""      # quick | full
+    result: ""              # pass | fail
+
+  phase1_theme:
+    status: "pending"       # pending | complete
+    themeFile: ""
+    userApproved: false
+
+  phase2_analysis:
+    status: "pending"       # pending | complete
+    buildPlanFile: ""
+    totalSections: 0
+    userApproved: false     # MANDATORY checkpoint
+
+  phase2_5_content:
+    status: "pending"       # pending | complete | failed
+    contentMapFile: ""
+    extractorUsed: false    # true = DOM extractor, false = screenshot fallback
+
+  phase3_content:
+    status: "pending"       # pending | partial | complete | failed
+    completedSections: 0
+    totalSections: 0
+
+  phase4_theme:
+    status: "pending"       # pending | complete
+    themeDelivery: ""       # globals-inlined (preferred) | globals-brand-import (fallback)
+    cssWritten: false       # true after :root block written
+    fontsAdded: false       # true after Google Fonts <link> added to layout.tsx
+
+  phase5_custom:
+    status: "pending"       # pending | complete | skipped
+    customComponentsNeeded: 0
+    customComponentsBuilt: 0
+
+  phase5_5_variants:
+    status: "pending"       # pending | partial | complete | skipped
+    variantsNeeded: 0       # sections needing custom variants
+    variantsCreated: 0      # variants successfully created (TSX + Sitecore)
+    variantSpecsFile: ""    # docs/ai/demos/<client>/variant-specs.yaml
+    skippedReason: ""       # if skipped: "user chose generic" or "all exact matches"
+
+  phase6_assembly:
+    status: "pending"       # pending | partial | complete | failed
+    componentsAdded: 0
+    datasourcesWired: 0
+    totalComponents: 0
+
+  phase7_summary:
+    status: "pending"       # pending | complete
+
+# Per-section tracking for Phase 3 (content population) and Phase 6 (assembly)
+# Each section maps to a build-plan position
+sections:
+  # Example:
+  # - position: 1
+  #   componentName: "AnnouncementBar"
+  #   kind: "simple"
+  #   phase3:
+  #     status: "pending"       # pending | created | populated | failed
+  #     itemId: ""              # filled after create_content_item
+  #     fieldsPopulated: false  # true after update_fields_on_content_item
+  #     childrenCreated: 0      # for list components
+  #     childrenExpected: 0
+  #     imagesUploaded: 0       # images uploaded via upload_asset
+  #     imagesExpected: 0       # total image fields for this section
+  #     imagesFailed: 0         # images that failed upload (added to manual list)
+  #     error: ""               # if failed, why
+  #   phase5_5:
+  #     status: "pending"       # pending | created | skipped
+  #     variantName: ""         # e.g. "PeopleCert"
+  #     exportAdded: false      # true after TSX export added
+  #     variantDefinitionId: "" # Sitecore Variant Definition item ID
+  #     error: ""
+  #   phase6:
+  #     status: "pending"       # pending | added | wired | skipped | failed
+  #     componentInstanceId: "" # from add_component_on_page response
+  #     datasourceWired: false  # true after set_component_datasource
+  #     error: ""

@@ -1,0 +1,32 @@
+{
+  "title": "ERA Everywhere",
+  "themeColor": null,
+  "msColor": null,
+  "ogTitle": null,
+  "ogDescription": null,
+  "ogImage": null,
+  "ogSiteName": "ERA Everywhere",
+  "favicon": "https://www.eraeverywhere.com/globalassets/era/sitewide-content2/75x100px.png",
+  "googleFontsLinks": [],
+  "fontFaces": [
+    {
+      "family": "Glyphicons Halflings",
+      "src": "url(\"/Static/css/fonts/glyphiconsglyphicons-halflings-regular.woff\") format(\"woff\"), url(\"/Static/css/fonts/glyphiconsglyphicons-halflings-regular.ttf\") format(\"truetype\")",
+      "weight": ""
+    },
+    {
+      "family": "FontAwesome",
+      "src": "url(\"/Static/fonts/fontawesome/fontawesome-webfont.woff?v=4.2.0\") format(\"woff\"), url(\"/Static/fonts/fontawesome/fontawesome-webfont.ttf?v=4.2.0\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "BlissMedium",
+      "src": "url(\"/Static/fonts/BlissMedium.woff2\") format(\"woff2\"), url(\"/Static/fonts/BlissMedium.woff\") format(\"woff\"), url(\"/Static/fonts/BlissMedium.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    }
+  ],
+  "logoCandidates": [
+    "https://www.eraeverywhere.com/globalassets/era/brand-logos/era-everywhere-new-logo.png?width=160"
+  ],
+  "heroBgImage": null
+}

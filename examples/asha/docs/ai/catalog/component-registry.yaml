@@ -1,0 +1,389 @@
+# Component Template Library — Registry
+# Machine-readable index used by the Site Analyzer (Step 4) to match
+# page sections to template components.
+#
+# For each component: visual keywords the analyzer looks for, the kind,
+# available variants, and which tone.* fields from the theme influence
+# variant selection.
+
+components:
+
+  - id: announcement-bar
+    name: "Announcement Bar"
+    kind: simple
+    category: Navigation
+    priority: 1  # page position — top of page
+    variants: [Default, Highlight]
+    visualKeywords:
+      - thin full-width bar at top
+      - promotional message
+      - dismissible banner
+      - alert bar
+      - notification strip
+    variantSelectionHints:
+      Default: "standard promotional bar"
+      Highlight: "urgent, flashing, or high-contrast alert"
+    fieldCount: 3
+
+  - id: navigation-header
+    name: "Navigation Header"
+    kind: list
+    category: Navigation
+    priority: 2
+    variants: [Default, Transparent, Minimal]
+    visualKeywords:
+      - logo with navigation links
+      - header bar
+      - site navigation
+      - menu bar
+      - nav with CTA button
+    variantSelectionHints:
+      Default: "solid background header bar"
+      Transparent: "transparent overlay on hero, usually with light text"
+      Minimal: "logo and hamburger icon only"
+    themeMapping: "tone.navStyle → Default=solid-bar, Transparent=transparent-overlay, Minimal=minimal"
+    parentFields:
+      - { name: "BrandLogo", type: "Image", purpose: "site logo image" }
+      - { name: "CtaLabel", type: "Single-Line Text", purpose: "CTA button text" }
+      - { name: "CtaLink", type: "General Link", purpose: "CTA button link" }
+    childFields:
+      - { name: "LinkText", type: "Single-Line Text", purpose: "nav link label" }
+      - { name: "LinkUrl", type: "General Link", purpose: "nav link URL" }
+    fieldCount: 5  # parent 3 + child 2
+
+  - id: hero-banner-carousel
+    name: "Hero Banner Carousel"
+    kind: list
+    category: Banners
+    priority: 2.5  # just before static hero
+    variants: [Default, WithThumbnails]
+    visualKeywords:
+      - hero carousel
+      - hero slider
+      - rotating banners
+      - slideshow hero
+      - multiple hero slides
+      - auto-playing banner
+    variantSelectionHints:
+      Default: "full-width slides with dot indicators and arrows, auto-play"
+      WithThumbnails: "thumbnail strip below main slide for navigation"
+    parentFields:
+      - { name: "Title", type: "Single-Line Text", purpose: "carousel aria label" }
+    childFields:
+      - { name: "SlideTitle", type: "Single-Line Text", purpose: "slide headline" }
+      - { name: "SlideSubtitle", type: "Rich Text", purpose: "slide subtext" }
+      - { name: "SlideImage", type: "Image", purpose: "slide background image" }
+      - { name: "PrimaryLink", type: "General Link", purpose: "primary CTA" }
+      - { name: "SecondaryLink", type: "General Link", purpose: "secondary CTA" }
+    fieldCount: 6  # parent 1 + child 5
+
+  - id: hero-banner
+    name: "Hero Banner"
+    kind: simple
+    category: Banners
+    priority: 3
+    variants: [Default, SplitImageText, BackgroundImage, VideoBackground, Minimal]
+    visualKeywords:
+      - large heading above the fold
+      - hero section
+      - main banner
+      - full-width intro
+      - headline with CTA
+      - splash section
+    variantSelectionHints:
+      Default: "dark or colored background, centered text, CTAs below"
+      SplitImageText: "50/50 grid, image on one side, text on the other"
+      BackgroundImage: "full-bleed photo with text overlay"
+      VideoBackground: "video playing behind text overlay"
+      Minimal: "text-only hero, large heading, no image"
+    themeMapping: "tone.heroStyle → Default=gradient|centered-overlay, SplitImageText=split-image-text, BackgroundImage=full-bleed-image, VideoBackground=video-background, Minimal=minimal-text"
+    fieldCount: 5
+
+  - id: tab-navigation
+    name: "Tab Navigation Section"
+    kind: list
+    category: Navigation
+    priority: 4
+    variants: [Default, Underline, Boxed]
+    visualKeywords:
+      - horizontal tabs
+      - category filter row
+      - product category pills
+      - segmented control
+      - tab bar
+    variantSelectionHints:
+      Default: "pill or rounded tab buttons"
+      Underline: "text tabs with active underline"
+      Boxed: "bordered or filled rectangular tabs"
+    fieldCount: 3  # parent 1 + child 2
+
+  - id: product-pricing-cards
+    name: "Product / Pricing Cards"
+    kind: list
+    category: Cards
+    priority: 5
+    variants: [Default, Horizontal, Compact, Highlighted]
+    visualKeywords:
+      - pricing cards
+      - product cards with price
+      - plan comparison
+      - service cards with CTA
+      - card grid with badges
+    variantSelectionHints:
+      Default: "vertical cards in 2-3 column grid"
+      Horizontal: "wide cards, image left, text right"
+      Compact: "smaller dense cards without images"
+      Highlighted: "one card visually emphasized as recommended"
+    fieldCount: 8  # parent 2 + child 6
+
+  - id: feature-highlight
+    name: "Feature Highlight Block"
+    kind: simple
+    category: Content
+    priority: 6
+    variants: [Default, Centered, WithVideo, IconLeft]
+    visualKeywords:
+      - feature showcase
+      - product highlight
+      - capability section
+      - text with image alongside
+      - content block with CTA
+    variantSelectionHints:
+      Default: "image on one side, text on the other"
+      Centered: "centered text, image above or below"
+      WithVideo: "embedded video or play button"
+      IconLeft: "small icon to the left of text block"
+    fieldCount: 5
+
+  - id: legal-compliance
+    name: "Legal / Compliance Banner"
+    kind: simple
+    category: Content
+    priority: 7
+    variants: [Default, WithImage]
+    visualKeywords:
+      - compliance notice
+      - regulatory banner
+      - certification section
+      - legal requirement
+      - trust seal
+      - law reference
+    variantSelectionHints:
+      Default: "centered text, accent or muted background"
+      WithImage: "compliance badge or seal image alongside text"
+    fieldCount: 4
+
+  - id: value-proposition-grid
+    name: "Value Proposition Grid"
+    kind: list
+    category: Content
+    priority: 8
+    variants: [Default, TwoColumn, FourColumn, Horizontal]
+    visualKeywords:
+      - value props
+      - benefits grid
+      - icon + text grid
+      - feature bullets
+      - why choose us
+      - key benefits row
+    variantSelectionHints:
+      Default: "3 items in a row with icons above text"
+      TwoColumn: "2 items side by side"
+      FourColumn: "4 compact items"
+      Horizontal: "icon left, text right, stacked vertically"
+    fieldCount: 6  # parent 2 + child 4
+
+  - id: trust-stats
+    name: "Trust Badges / Stats Row"
+    kind: list
+    category: Content
+    priority: 9
+    variants: [Default, WithIcons, LogoRow]
+    visualKeywords:
+      - statistics row
+      - numbers showcase
+      - key metrics
+      - trust indicators
+      - years of experience
+      - customer count
+      - partner logos row
+    variantSelectionHints:
+      Default: "big numbers with labels below"
+      WithIcons: "icon above each stat"
+      LogoRow: "partner or client logos instead of numbers"
+    fieldCount: 6  # parent 2 + child 4
+
+  - id: testimonial-quote
+    name: "Testimonial / Quote Block"
+    kind: list
+    category: Social Proof
+    priority: 10
+    variants: [Default, Carousel, Grid, WithPhoto]
+    visualKeywords:
+      - customer quote
+      - testimonial
+      - review
+      - client story
+      - quote marks
+      - customer feedback
+    variantSelectionHints:
+      Default: "single large quote, centered"
+      Carousel: "multiple quotes, swipeable"
+      Grid: "2-3 testimonial cards"
+      WithPhoto: "author photo alongside quote"
+    fieldCount: 7  # parent 1 + child 6
+
+  - id: cta-banner
+    name: "CTA Banner / Call to Action"
+    kind: simple
+    category: Banners
+    priority: 11
+    variants: [Default, WithImage, Split, Minimal]
+    visualKeywords:
+      - call to action
+      - conversion banner
+      - sign up section
+      - get started
+      - contact us banner
+      - bottom CTA
+    variantSelectionHints:
+      Default: "centered text, colored background, single prominent button"
+      WithImage: "background image behind CTA"
+      Split: "text on one side, form or button on the other"
+      Minimal: "subtle background, text link instead of button"
+    fieldCount: 5
+
+  - id: feature-cards-grid
+    name: "Feature Cards Grid"
+    kind: list
+    category: Cards
+    priority: 12
+    variants: [Default, TwoColumn, WithImages, Carousel]
+    visualKeywords:
+      - feature cards
+      - service cards
+      - capability cards
+      - offering grid
+      - info cards with icons
+      - horizontal card carousel
+      - card slider with dots
+      - scrollable cards with arrows
+    variantSelectionHints:
+      Default: "3-column cards with icons and text"
+      TwoColumn: "2 wider cards"
+      WithImages: "cards with top images instead of icons"
+      Carousel: "horizontal scrolling cards with portrait images, dot indicators and arrows — use for card carousels, destination cards, restaurant cards, category browsing rows"
+    fieldCount: 6  # parent 2 + child 4
+
+  - id: image-gallery
+    name: "Image Gallery / Full-Width Image"
+    kind: simple
+    category: Media
+    priority: 13
+    variants: [Default, Gallery, Parallax]
+    visualKeywords:
+      - full-width image
+      - photo banner
+      - image showcase
+      - visual break
+      - landscape photo
+      - parallax image
+    variantSelectionHints:
+      Default: "single full-width image"
+      Gallery: "2-4 images in a grid"
+      Parallax: "full-width with parallax scroll effect"
+    fieldCount: 3
+
+  - id: logo-cloud
+    name: "Logo Cloud / Partner Strip"
+    kind: list
+    category: Social Proof
+    priority: 14
+    variants: [Default, Grid, WithLabels]
+    visualKeywords:
+      - partner logos
+      - client logos
+      - trusted by
+      - as seen in
+      - logo strip
+      - brand logos row
+    variantSelectionHints:
+      Default: "single row of logos, may auto-scroll"
+      Grid: "multi-row grid of logos"
+      WithLabels: "logos with company name below"
+    fieldCount: 4  # parent 1 + child 3
+
+  - id: footer
+    name: "Footer"
+    kind: datasource
+    category: Navigation
+    priority: 99  # always last
+    variants: [Default, Minimal, MegaFooter]
+    visualKeywords:
+      - site footer
+      - bottom navigation
+      - footer links
+      - copyright
+      - social icons
+    variantSelectionHints:
+      Default: "multi-column links, logo, social icons"
+      Minimal: "single row with essential links"
+      MegaFooter: "extensive footer with newsletter, multiple sections"
+    parentFields:
+      - { name: "BrandLogo", type: "Image", purpose: "site logo for footer (inverted)" }
+    fieldCount: 1
+
+  - id: newsletter-signup
+    name: "Newsletter / Email Signup"
+    kind: simple
+    category: Forms
+    priority: 15
+    variants: [Default, Banner, Compact]
+    visualKeywords:
+      - email signup
+      - newsletter subscribe
+      - stay updated
+      - mailing list
+      - subscribe form
+    variantSelectionHints:
+      Default: "heading + input field + button"
+      Banner: "full-width colored background with form"
+      Compact: "just input + button, no heading"
+    fieldCount: 5
+
+  - id: faq-accordion
+    name: "FAQ / Accordion"
+    kind: list
+    category: Content
+    priority: 16
+    variants: [Default, AllOpen, TwoColumn]
+    visualKeywords:
+      - FAQ
+      - frequently asked questions
+      - accordion
+      - expandable questions
+      - Q&A section
+    variantSelectionHints:
+      Default: "standard accordion, one open at a time"
+      AllOpen: "all items expanded by default"
+      TwoColumn: "questions split into two columns"
+    fieldCount: 4  # parent 2 + child 2
+
+  - id: rich-text-block
+    name: "Rich Text / Content Block"
+    kind: simple
+    category: Content
+    priority: 17
+    variants: [Default, Centered, Narrow]
+    visualKeywords:
+      - text content
+      - article text
+      - body copy
+      - content section
+      - intro text
+      - paragraph block
+    variantSelectionHints:
+      Default: "left-aligned heading + body text"
+      Centered: "centered text, good for intros"
+      Narrow: "constrained max-width for readability"
+    fieldCount: 2

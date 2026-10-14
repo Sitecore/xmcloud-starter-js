@@ -1,0 +1,68 @@
+# Client Brand Theme — Quanex
+# Wired into the app via the create-new-theme skill (data-theme="quanex").
+# Token CSS: src/assets/styles/themes/quanex.css
+
+client:
+  name: "Quanex"
+  sourceUrl: "https://www.quanex.com/"
+  extractedAt: "2026-08-11"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#027223"
+  primaryForeground: "#ffffff"
+  secondary: "#f4f4f4"
+  secondaryForeground: "#1a1a1a"
+  accent: "#039a2f"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#1a1a1a"
+  muted: "#f4f4f4"
+  mutedForeground: "#54565a"
+  headerBackground: "#ffffff"
+  headerForeground: "#1a1a1a"
+  footerBackground: "#027223"
+  footerForeground: "#ffffff"
+  border: "#d4d4d4"
+  ring: "#027223"
+  extra:
+    - name: "primary-hover"
+      value: "#015f1d"
+    - name: "border-radius"
+      value: "0"
+
+typography:
+  headingFamily: "Roboto Condensed"
+  headingWeight: "700"
+  bodyFamily: "Roboto"
+  bodyWeight: "400"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+  headingTransform: "uppercase"
+  letterSpacing: "0.08em"
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "0"
+  shadowStyle: "none"
+  borderStyle: "subtle"
+
+tone:
+  overall: "industrial-corporate"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "full-bleed-image-with-solid-brand-panel"
+  cardStyle: "flat"
+  navStyle: "solid-bar"
+
+extraction:
+  confidence: "high"
+  method: "playwright-full + user-screenshot"
+  notes:
+    - "Primary green from live footer computed style: rgb(2, 114, 35) → #027223."
+    - "Body font Roboto; headings Roboto Condensed (site Google Fonts link also loads Montserrat 800 — used sparingly; we map headings to Roboto Condensed)."
+    - "Logo wordmark appears serif on site; UI type is sans — no proprietary serif substituted for body/UI."
+    - "Accent #039a2f is a brighter sibling of primary for gradients/hover emphasis (not an official published secondary)."
+    - "Zero border-radius throughout — architectural/industrial geometry."
+    - "Section titles often uppercase with increased letter-spacing."

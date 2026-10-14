@@ -1,0 +1,63 @@
+# HeaderST layout recipes (Version1, Version2, …)
+# Read before creating a new HeaderST variant. Reuse a matching VersionN instead of duplicating layouts.
+# Default and LoginRequired are reserved — never restyle them for a demo.
+
+component: HeaderST
+tsxPath: src/components/site-three/HeaderST.tsx
+datasourceTemplateId: "{3CB38973-6209-4407-B463-4B017E0467CD}"
+datasourceTemplatePath: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/HeaderST/HeaderST"
+renderingPath: "/sitecore/layout/Renderings/Project/click-click-launch/Global Elements/HeaderST"
+renderingItemId: "{90A922AA-E2A7-4553-A7AD-B89AC9318D6B}"
+parametersTemplateId: "{4B39645F-F45A-4099-817A-60A20E48DA25}"
+parametersTemplatePath: "/sitecore/templates/Project/click-click-launch/Sites/Site 3/HeaderST/Rendering Parameters/HeaderST Parameters"
+functionalitySectionId: "{0E23CA45-925A-4E01-899E-9FAE36D902F6}"
+
+reservedExports:
+  - Default
+  - LoginRequired
+
+existingParams:
+  - name: showSearchBox
+    type: Checkbox
+    itemId: "{CC0DE6CD-2EE2-4B94-88B8-C76361F85796}"
+    effect: "When true, render HeaderPreviewSearch; otherwise SearchLink as a text link"
+  - name: showMiniCart
+    type: Checkbox
+    itemId: "{5BB5BA3D-4FD2-41DA-B6C3-814CC2D71656}"
+    effect: "When true, render MiniCart drawer; otherwise CartLink as a cart icon"
+  - name: ReverseTheme
+    type: Checkbox
+    itemId: "{086782CC-6DC4-4918-86B1-4680EA595AB9}"
+    effect: "When true, second nav row uses bg-primary + primary-foreground"
+    note: "Do not create another ReverseTheme field — duplicates already exist under Functionality"
+  - name: HideCart
+    type: Checkbox
+    itemId: "{8DD858AB-1F52-4B3A-983B-B6CA90C90606}"
+    effect: "When true, do not render MiniCart or the cart icon. Unset keeps Default behavior."
+
+# Auth is orthogonal to layout. VersionN must honor RequireAuthForNav / LoginRequired detection.
+# Do not create Version1LoginRequired.
+
+versions:
+  - name: Version1
+    layout: "two-row inverted; langs left + utilities right on lighter top bar; MENU box + SEARCH... + logo-right on darker main bar; nav in overlay only"
+    paramsUsed: ["showSearchBox", "HideCart"]
+    usedBy: ["amkor"]
+    notes: "Language switcher and six Amkor utility links are Version1-hardcoded for the demo (same pattern as Version3 LCMC links) — do not add Sitecore fields on the shared HeaderST datasource. Langs: English (current, /) · 한국어 https://amkor.com/kr/ · 日本語 https://amkor.com/jp/ · 简体中文 https://amkor.com/cn/. Utilities: Document Library, Factory Certs, Investors (ir.amkor.com, new tab), Cloud Services (cloudservices.amkor.com, new tab), Careers, Contact Us. SupportLink still renders unless its text duplicates one of the six. MENU opens MegaMenuCascade overlay (L1→L2→L3 columns) fed by header-navigation MegaMenuItem + LinkList datasources. HideCart should be checked on the Amkor Header partial (live has no cart). Authors should upload a transparent white Amkor logo (Amkor-white.svg); CSS mix-blend lighten also drops a baked-in black plate."
+  - name: Version2
+    layout: "dark utility row; white main row; logo left; inline L1 nav; search icon right"
+    paramsUsed: ["HideCart", "showSearchBox"]
+    usedBy: ["atlanta-apparel", "americasmart"]
+    breakpoints: "lg (1024-1279px): logo caps at h-9/168px, main-row gap lg:gap-3, primary nav is flex-nowrap + justify-end + min-w-0 (no wrap, no overflow-hidden). Compact px-2/13px on a/span/button; lis forced w-auto/basis-auto so Sitecore col-12 cannot stretch items under the logo. City triggers use smaller tracking until xl. Full logo/nav spacing restored at xl."
+    notes: "ANDMORE city pull-downs (Atlanta/Las Vegas/High Point/New York) and Market Plan bookmark are Version2-hardcoded — HeaderST's shared datasource has no location-menu fields. Menus are accessible button+menu (hover or click). Destinations: Atlanta → AmericasMart, Atlanta Market, Atlanta Apparel (/), Casual Market Atlanta, ADAC; Las Vegas → Las Vegas Market + Las Vegas Apparel (live atlanta-apparel.com market page); High Point → ANDMORE at High Point Market + Shoppe Object; New York → Shoppe Object. Market Plan → /visit/plan-your-market (atlanta-apparel Plan Your Market). SupportLink styled as pill CTA (Register). LoginLink shown as Sign In text. Search is icon-only unless showSearchBox is on. Atlanta Apparel only: language dropdown at the top-right of the utility row (English / Japanese / Spanish → /en|/ja-JP|/es-ES), gated by page.siteName or ?site=atlanta-apparel so americasmart Version2 is unchanged. Default/LoginRequired/Version1/Version3 unchanged."
+  - name: Version3
+    layout: "single white bar; logo left; two stacked nav rows (utility teal + primary dark) beside logo; muted rounded search bar far right"
+    paramsUsed: ["showSearchBox", "HideCart"]
+    usedBy: ["lcmc"]
+    breakpoints: "lg (1024-1279px): logo caps at h-11/190px, container gap lg:gap-3. Primary nav is flex-nowrap + min-w-0 in a flex-1 column (no shrink-0, no overflow-hidden) so all L1 items stay in one row using space between logo and search. Compact px-2 on a/span/button; lis forced w-auto/basis-auto so Sitecore col-12 cannot stretch items. Utility row may wrap. Contained search min-width is 10rem until xl. Do not flex-wrap the primary nav — that stacked items one-per-line."
+    notes: "No cart, no dark utility bar, no desktop MENU hamburger. Utility row hardcodes LCMC's five links in live order (Notice of Non-Discrimination, Careers, Patient Portal/Pay my Bill, For Providers, Contact Us) via version3UtilityLinks in HeaderST.tsx — HeaderST's datasource only exposes one SupportLink and the template is shared with the other sites. SupportLink still renders after them unless its text duplicates one of the five. Careers is external and opens in a new tab; the other four target LCMC demo pages. Mega-menus out of scope — L1 lives in header-navigation placeholder. Search is a grey rounded bar when showSearchBox is on. EN/ES flag switcher sits in the right cluster immediately left of search (Version3-only): US flag → English (/en/…), Spain flag → Español (/es-CO/…, Sitecore Colombia Spanish). es-ES remains Atlanta Apparel Version2 only. Reuses useLanguageSwitcher + buildLanguageSwitchPathname; no new datasource fields. Do not put overflow-x-auto on the primary ul — MegaMenuContent is lg:absolute and a scroll container would trap the dropdown."
+  - name: Version4
+    layout: "single fixed row; logo left on a light plate; centered L1 nav; login icon, search icon, and hamburger on the right. Transparent over the hero, bg-primary after a short scroll, hidden after further downward scroll, shown again on scroll up."
+    paramsUsed: ["showSearchBox", "showMiniCart", "HideCart"]
+    usedBy: ["bcaa"]
+    notes: "Matches the BCAA header chrome. LoginLink and SearchLink render as outline icons. The hamburger stays visible at every breakpoint and opens the existing mobile nav. Cart is omitted unless showMiniCart is on; HideCart still suppresses it. No new datasource fields or rendering params. Default layout is unchanged. Scroll thresholds live in HeaderSTScrollFrame inside HeaderST.tsx (solid after 12px, hide after 180px while scrolling down)."

@@ -1,0 +1,121 @@
+# Client Brand Theme — Eurobank (example)
+# Extracted from: https://www.eurobank.gr
+# Reference example showing what a completed extraction looks like.
+
+client:
+  name: "Eurobank"
+  sourceUrl: "https://www.eurobank.gr"
+  extractedAt: "2026-03-21T15:00:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#00264d"
+  primaryForeground: "#ffffff"
+  secondary: "#0073b1"
+  secondaryForeground: "#ffffff"
+  accent: "#e30613"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#1a1a1a"
+  muted: "#f5f6f8"
+  mutedForeground: "#5a6872"
+  headerBackground: "#00264d"
+  headerForeground: "#ffffff"
+  footerBackground: "#00264d"
+  footerForeground: "#c0c8d0"
+  border: "#d8dde3"
+  ring: "#0073b1"
+  extra:
+    - { name: "success", value: "#28a745" }
+    - { name: "warning", value: "#ffc107" }
+
+typography:
+  headingFamily: "'Roboto', sans-serif"
+  headingWeight: "700"
+  bodyFamily: "'Roboto', sans-serif"
+  bodyWeight: "400"
+  monoFamily: "'Roboto Mono', monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+  scale:
+    hero: "3rem"
+    h1: "2.25rem"
+    h2: "1.75rem"
+    h3: "1.25rem"
+    body: "1rem"
+    small: "0.875rem"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "relaxed"
+
+spacing:
+  density: "normal"
+  sectionGap: "5rem"
+  containerMaxWidth: "1280px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "0.5rem"
+  buttonRadius: "0.375rem"
+  cardRadius: "0.75rem"
+  imageRadius: "0.5rem"
+  shadowStyle: "subtle"
+  borderStyle: "subtle"
+
+tone:
+  overall: "corporate"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "full-bleed-image"
+  cardStyle: "elevated"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#00264d"
+      secondary: "#0073b1"
+      accent: "#e30613"
+  fontFamily:
+    heading: ["Roboto", "sans-serif"]
+    body: ["Roboto", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0.5rem"
+    button: "0.375rem"
+    card: "0.75rem"
+
+cssVariables: |
+  :root {
+    --brand-primary: #00264d;
+    --brand-primary-foreground: #ffffff;
+    --brand-secondary: #0073b1;
+    --brand-secondary-foreground: #ffffff;
+    --brand-accent: #e30613;
+    --brand-accent-foreground: #ffffff;
+    --brand-bg: #ffffff;
+    --brand-fg: #1a1a1a;
+    --brand-muted: #f5f6f8;
+    --brand-muted-fg: #5a6872;
+    --brand-header-bg: #00264d;
+    --brand-header-fg: #ffffff;
+    --brand-footer-bg: #00264d;
+    --brand-footer-fg: #c0c8d0;
+    --brand-border: #d8dde3;
+    --brand-ring: #0073b1;
+    --brand-heading-font: 'Roboto', sans-serif;
+    --brand-body-font: 'Roboto', sans-serif;
+    --brand-radius: 0.5rem;
+    --brand-button-radius: 0.375rem;
+    --brand-card-radius: 0.75rem;
+  }
+
+extraction:
+  confidence: "medium"
+  method: "playwright-full"
+  notes:
+    - "Eurobank uses Roboto throughout — single font family for headings and body."
+    - "Primary dark navy (#00264d) is dominant in header and footer."
+    - "Secondary blue (#0073b1) used for links and interactive elements."
+    - "Accent red (#e30613) used sparingly for alerts and urgency CTAs."
+    - "Hero style varies by page — homepage uses full-bleed image with overlay text."
+    - "Card style is elevated with subtle box-shadow, light backgrounds."

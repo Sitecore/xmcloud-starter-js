@@ -1,0 +1,406 @@
+﻿[
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims",
+        "status":  "already-kmpage"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Policyholder Service",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim intake and standards",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim status and tracking",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claims overview",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Coverage and eligibility",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Documentation requirements",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Escalations and exceptions",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Training and resources",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Certifications",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Job aids",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Learning paths",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Microlearning",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/New hire onboarding",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Role-based training",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Contact lists",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Org chart",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Subject matter experts",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Support channels",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Team directory",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Policyholder Service/Billing and payments",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Policyholder Service/Customer communications",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Policyholder Service/Endorsements",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Policyholder Service/Policy changes",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Policyholder Service/Policy documents",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Policyholder Service/Service overview",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Commercial lines",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Eligibility rules",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Personal lines",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Product catalog",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Product guides",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Underwriting notes",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Claims trends",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Exception reports",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Operational metrics",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Scheduled reports",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Standard reports",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Forms and templates",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Integrations",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Lookup tools",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/System access",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Troubleshooting",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Workflow tools",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim intake and standards/Claim severity guidelines",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim intake and standards/First notice of loss",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim intake and standards/Intake checklist",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim intake and standards/Required documents",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim intake and standards/Standard response times",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim status and tracking/Approved claims",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim status and tracking/Denied claims",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim status and tracking/In review",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim status and tracking/Open claims",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim status and tracking/Pending information",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Claim status and tracking/Reopened claims",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Coverage and eligibility/Coverage lookup",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Coverage and eligibility/Effective dates",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Coverage and eligibility/Exclusions",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Coverage and eligibility/Limits and deductibles",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Coverage and eligibility/Policy verification",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Coverage and eligibility/Special handling",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Documentation requirements/Authentication rules",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Documentation requirements/File naming standards",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Documentation requirements/Medical or repair records",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Documentation requirements/Photo requirements",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Documentation requirements/Statement templates",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Claims/Documentation requirements/Submission forms",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Role-based training/Assessment quizzes",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Role-based training/Claims processor path",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Role-based training/New advisor path",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Role-based training/Refresher courses",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Role-based training/Senior advisor path",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Learning/Role-based training/Supervisor path",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Subject matter experts/Claims SMEs",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Subject matter experts/Compliance contacts",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Subject matter experts/Escalation contacts",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Subject matter experts/Operations contacts",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Subject matter experts/Product SMEs",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/People and Teams/Subject matter experts/Regional leads",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Commercial lines/Auto",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Commercial lines/General liability",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Commercial lines/Property",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Commercial lines/Specialty lines",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Commercial lines/Umbrella",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Products/Commercial lines/Workers compensation",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Claims trends/Closure rates",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Claims trends/Cycle time",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Claims trends/Product breakdown",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Claims trends/Region breakdown",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Claims trends/Severity analysis",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Reports/Claims trends/Volume trends",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Lookup tools/Agent lookup",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Lookup tools/Claims lookup",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Lookup tools/Customer lookup",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Lookup tools/Policy lookup",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Lookup tools/Provider lookup",
+        "status":  "updated"
+    },
+    {
+        "path":  "/sitecore/content/progressive/pkm/Home/Tools and Systems/Lookup tools/Reference tables",
+        "status":  "updated"
+    }
+]

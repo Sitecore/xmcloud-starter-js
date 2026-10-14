@@ -1,0 +1,73 @@
+# Client Brand Theme — AmesburyTruth
+# Wired into the app via the create-new-theme skill (data-theme="amesburytruth").
+# Token CSS: src/assets/styles/themes/amesburytruth.css
+
+client:
+  name: "AmesburyTruth"
+  sourceUrl: "https://www.amesburytruth.com/"
+  extractedAt: "2026-08-11"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#4b8b2a"
+  primaryForeground: "#ffffff"
+  secondary: "#f6f6f6"
+  secondaryForeground: "#002c73"
+  accent: "#002c73"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#55595c"
+  muted: "#f1f1f1"
+  mutedForeground: "#717074"
+  headerBackground: "#ffffff"
+  headerForeground: "#55595c"
+  footerBackground: "#002c73"
+  footerForeground: "#ffffff"
+  border: "#d4d4d4"
+  ring: "#4b8b2a"
+  extra:
+    - name: "atblue"
+      value: "#002c73"
+    - name: "atgreen"
+      value: "#4b8b2a"
+    - name: "atgray"
+      value: "#717074"
+    - name: "primary-hover"
+      value: "#3f7624"
+    - name: "border-radius"
+      value: "0"
+
+typography:
+  headingFamily: "Inter"
+  headingWeight: "600"
+  bodyFamily: "Inter"
+  bodyWeight: "300"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+  headingTransform: "none"
+  letterSpacing: "normal"
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "0"
+  shadowStyle: "subtle"
+  borderStyle: "subtle"
+
+tone:
+  overall: "industrial-b2b"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "product-photography"
+  heroStyle: "product-carousel-with-diagonal-overlays"
+  cardStyle: "elevated-shadow"
+  navStyle: "utility-bar-plus-white-nav"
+
+extraction:
+  confidence: "high"
+  method: "playwright-full + user-screenshot + site CSS tokens"
+  notes:
+    - "Official CSS vars from bootstrap/at-custom: --bs-atblue #002c73, --bs-atgreen #4b8b2a, --bs-atgray #717074."
+    - "Primary mapped to green (WHERE TO BUY / card LEARN MORE CTAs); navy mapped to accent/dark for footer and utility bar."
+    - "Typography is Inter (already loaded in layout) — body weight on site is 300; headings 600."
+    - "Zero border-radius; buttons often uppercase."
+    - "Diagonal SVG section transitions are site-specific chrome — not encoded as tokens."

@@ -1,0 +1,20 @@
+{
+  "services": [
+    {
+      "name": "Product Catalog Display",
+      "description": "Display and browse product catalogs with rich product information, images, and specifications.",
+      "category": "E-Commerce"
+    },
+    {
+      "name": "Product Filtering and Search",
+      "description": "Filter and search products by category, features, price range, and other product attributes.",
+      "category": "E-Commerce"
+    },
+    {
+      "name": "Multi-Locale Content Delivery",
+      "description": "Deliver localized content in multiple languages (English and Canadian English) with automatic locale detection.",
+      "category": "Localization"
+    }
+  ],
+  "lastModified": "2026-03-05T11:52:44Z"
+}

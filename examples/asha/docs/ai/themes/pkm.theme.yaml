@@ -1,0 +1,65 @@
+# Client Brand Theme — Progressive Knowledge Management (PKM)
+# Wired into the app via the create-new-theme skill (data-theme="pkm").
+# Full token set: src/assets/styles/themes/pkm-tokens.css
+
+client:
+  name: "Progressive Knowledge Management"
+  sourceUrl: "https://design.progressive.com/see.html"
+  extractedAt: "2026-07-28"
+  extractedBy: "Official Progressive brand guidelines + Claims Knowledge Base portal concept screenshot"
+
+colors:
+  primary: "#0077B3"
+  primaryForeground: "#ffffff"
+  secondary: "#0A3360"
+  secondaryForeground: "#ffffff"
+  accent: "#4EBEE5"
+  accentForeground: "#0A3360"
+  accent2: "#EFAB00"
+  tertiary: "#2862A4"
+  background: "#ffffff"
+  foreground: "#2D2D2D"
+  muted: "#F8F8F8"
+  mutedForeground: "#707070"
+  success: "#067462"
+  warning: "#C05711"
+  destructive: "#D41659"
+  info: "#0077B3"
+  headerBackground: "#0A3360"
+  headerForeground: "#ffffff"
+  footerBackground: "#ffffff"
+  footerForeground: "#2D2D2D"
+  border: "#CCCCCC"
+  ring: "#0077B3"
+  extra:
+    - name: "steel-blue-100"
+      value: "#F4F9FA"
+    - name: "blue-100"
+      value: "#F3F9FC"
+    - name: "sidebar-bg"
+      value: "#F4F9FA"
+    - name: "table-header-bg"
+      value: "#0077B3"
+    - name: "callout-info-bg"
+      value: "#F3F9FC"
+    - name: "link"
+      value: "#0077B3"
+
+typography:
+  headingFamily: "Source Sans 3"
+  headingWeight: "700"
+  bodyFamily: "Source Sans 3"
+  bodyWeight: "400"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+  notes:
+    - "Progressive proprietary face is 96 Sans; Source Sans 3 is the Google Fonts substitute (already loaded in layout.tsx)."
+
+extraction:
+  confidence: "high"
+  method: "official-brand-guidelines + concept-screenshot"
+  notes:
+    - "Primary Progressive Blue (Blue 700) #0077B3 from design.progressive.com."
+    - "Header/nav chrome uses Steel Blue 900 #0A3360 to match the Claims Knowledge Base concept."
+    - "Accent Blue 500 #4EBEE5 for highlights; Yellow 700 #EFAB00 as accent-2; Red 700 for errors/Common Errors."
+    - "Portal-specific tokens (--color-header-bg, --color-sidebar-bg, --color-table-header-bg, --color-callout-info-*) support KM layout components."
+    - "Full semantic + scale tokens live in src/assets/styles/themes/pkm-tokens.css"
