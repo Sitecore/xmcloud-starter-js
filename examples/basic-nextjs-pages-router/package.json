@@ -25,7 +25,7 @@
     "@sitecore-content-sdk/analytics-core": "^2.1.2",
     "@sitecore-content-sdk/personalize": "^2.1.0",
     "@sitecore-content-sdk/events": "^2.1.2",
-    "@sitecore-content-sdk/nextjs": "^2.4.0",
+    "@sitecore-content-sdk/nextjs": "^2.4.1",
     "@sitecore-feaas/clientside": "^0.6.0",
     "@sitecore/components": "~2.1.0",
     "font-awesome": "^4.7.0",
@@ -33,7 +33,7 @@
     "next-localization": "^0.12.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "sharp": "0.35.3"
+    "sharp": "0.35.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
