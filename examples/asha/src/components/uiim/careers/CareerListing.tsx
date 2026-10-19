@@ -8,7 +8,15 @@ import { RichText as ContentSdkRichText, Text } from '@sitecore-content-sdk/next
 import { getFieldValue } from '@/lib/component-props';
 import { cn } from '@/lib/utils';
 import type { CareerListingJob, CareerListingProps } from './career-listing.props';
-import { emptyFilters, matchesFilters, toCareerHref, uniqueOptions, type CareerFilterValues } from './career-listing.util';
+import {
+  careerJobsFromFields,
+  emptyFilters,
+  hasCareerDatasource,
+  matchesFilters,
+  toCareerHref,
+  uniqueOptions,
+  type CareerFilterValues,
+} from './career-listing.util';
 
 const fieldText = (field?: { jsonValue?: { value?: string }; value?: string }): string => {
   const value = getFieldValue(field)?.value ?? field?.value;
@@ -40,7 +48,7 @@ const toCard = (job: CareerListingJob, index: number): JobCard | undefined => {
   if (!title && !employer) return undefined;
   return {
     id: job.id || `${title}-${index}`,
-    href: toCareerHref(job.url?.path),
+    href: toCareerHref(job.url?.path || job.path),
     title: title || job.name || 'Career',
     employer,
     location: fieldText(job.location) || [fieldText(job.city), fieldText(job.state)].filter(Boolean).join(', '),
@@ -80,15 +88,15 @@ const FilterSelect = ({
   </label>
 );
 
-export const Default = ({ fields, params }: CareerListingProps): JSX.Element => {
+export const Default = ({ fields, params, rendering }: CareerListingProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params || {};
   const datasource = fields?.data?.datasource ?? fields?.datasource;
   const jobs = useMemo(
     () =>
-      (datasource?.parent?.parent?.children?.results || [])
+      (careerJobsFromFields(fields) as CareerListingJob[])
         .map(toCard)
         .filter((job): job is JobCard => Boolean(job)),
-    [datasource]
+    [fields]
   );
   const [filters, setFilters] = useState<CareerFilterValues>(emptyFilters);
   const filtered = jobs.filter((job) => matchesFilters(job, filters));
@@ -97,7 +105,7 @@ export const Default = ({ fields, params }: CareerListingProps): JSX.Element => 
   const setFilter = (key: keyof CareerFilterValues) => (value: string) =>
     setFilters((current) => ({ ...current, [key]: value }));
 
-  if (!datasource && jobs.length === 0) {
+  if (!hasCareerDatasource(fields, rendering?.dataSource) && jobs.length === 0) {
     return (
       <div className="component career-listing">
         <div className="component-content">

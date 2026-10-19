@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-10-19T13:30:00Z"
+lastUpdatedAt: "2026-10-19T19:40:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -21,6 +21,24 @@ availableRenderings:
   warning: "MCP cannot read this field — value may be stale if modified outside this session. Also: MCP write returned empty updatedFields — silent-write. Verify in Content Editor."
 
 components:
+  - name: "CareerListing"
+    kind: "list"
+    category: "Page Content"
+    status: "partial"
+    createdAt: "2026-10-19T19:40:00Z"
+    updatedAt: "2026-10-19T19:40:00Z"
+    react:
+      filePath: "src/components/uiim/careers/CareerListing.tsx"
+      componentName: "CareerListing"
+    rendering:
+      itemId: "{22528BC8-95C2-4891-AF63-EBAD5E286C2D}"
+      path: "/sitecore/layout/Renderings/Project/click-click-launch/Page Content/CareerListing"
+      componentName: "CareerListing"
+      parametersTemplate: "{92940554-3C1C-422C-8221-F62FE46ED159}"
+      useComponentQuery: true
+      componentQueryPattern: "generic-field-access"
+    notes:
+      - "2026-10-19: Careers page rendering c97d1ff9-453a-4723-83f9-56f357c19342 uses local datasource /sitecore/content/asha/asha/Home/Careers/Data/Careers_Board {67ABE2A1-B574-4F66-B467-44228BAB866D}. ComponentQuery now searches latest Career children of Home/Careers because children(first: 100) with job fields exceeds Edge complexity. Education is omitted so all 29 jobs fit. This dev Edge context returns isContentResolved true after the query update. No publish was performed."
   - name: "AnnouncementBar"
     kind: "simple"
     category: "Navigation"

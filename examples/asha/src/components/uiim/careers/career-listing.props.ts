@@ -4,6 +4,7 @@ import type { ComponentProps, GraphQLField } from '@/lib/component-props';
 export type CareerListingJob = {
   id?: string;
   name?: string;
+  path?: string;
   url?: { path?: string };
   jobTitle?: GraphQLField<Field<string>>;
   employer?: GraphQLField<Field<string>>;
@@ -35,6 +36,9 @@ export type CareerListingSource = {
 export type CareerListingFields = {
   data?: {
     datasource?: CareerListingSource;
+    jobs?: {
+      results?: CareerListingJob[];
+    };
   };
   datasource?: CareerListingSource;
 };

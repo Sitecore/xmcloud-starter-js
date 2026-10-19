@@ -32,6 +32,41 @@ export const matchesFilters = (
   (filters.state === ALL_FILTER || job.state === filters.state) &&
   (filters.education === ALL_FILTER || job.education === filters.education);
 
+export type CareerJobFields = {
+  data?: {
+    datasource?: {
+      parent?: {
+        parent?: {
+          children?: {
+            results?: unknown[];
+          };
+        };
+      };
+    };
+    jobs?: {
+      results?: unknown[];
+    };
+  };
+  datasource?: {
+    parent?: {
+      parent?: {
+        children?: {
+          results?: unknown[];
+        };
+      };
+    };
+  };
+};
+
+export const careerJobsFromFields = (fields?: CareerJobFields): unknown[] =>
+  fields?.data?.jobs?.results ??
+  fields?.data?.datasource?.parent?.parent?.children?.results ??
+  fields?.datasource?.parent?.parent?.children?.results ??
+  [];
+
+export const hasCareerDatasource = (fields?: CareerJobFields, dataSource?: string): boolean =>
+  Boolean(fields?.data?.datasource || fields?.datasource || dataSource?.trim());
+
 export const toCareerHref = (path?: string): string => {
   let href = (path || '').trim();
   const contentHome = '/sitecore/content/asha/asha/home';
