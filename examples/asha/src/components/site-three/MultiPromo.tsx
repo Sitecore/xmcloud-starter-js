@@ -11,7 +11,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { getDatasource, getFieldValue } from '@/lib/component-props';
 import { cn } from '@/lib/utils';
-import type { MultiPromoProps, PromoItemProps } from './multi-promo.props';
+import type { MultiPromoProps, PromoItemProps, SimplePromoFields } from './multi-promo.props';
 
 const TEXT_JUSTIFIED_CLASS = 'text-justified';
 
@@ -495,6 +495,143 @@ export const Carousel = (props: MultiPromoProps) => {
           )}
         </div>
       </div>
+    </section>
+  );
+};
+
+const COLOR_BAR_COLORS: Record<string, string> = {
+  purple: '#8B1E6D',
+  magenta: '#991E66',
+  orange: '#E36C1E',
+  teal: '#0E7C86',
+};
+
+const HEX_COLOR = /^#(?:[0-9a-f]{3}|[0-9a-f]{6})$/i;
+
+const resolveButtonColor = (value?: string): string => {
+  const token = value?.trim() ?? '';
+  const named = COLOR_BAR_COLORS[token.toLowerCase()];
+  if (named) return named;
+  if (HEX_COLOR.test(token)) return token;
+  return COLOR_BAR_COLORS.teal;
+};
+
+const ColorBarCard = ({ heading, description, link, buttonColor }: SimplePromoFields) => {
+  const linkField = getFieldValue(link);
+  const colorField = getFieldValue(buttonColor);
+  const color = resolveButtonColor(typeof colorField?.value === 'string' ? colorField.value : '');
+
+  return (
+    <article
+      className="flex h-full flex-col border border-[#cfc8bc] bg-white"
+      data-testid="multipromo-colorbar-card"
+    >
+      <div className="flex flex-1 flex-col px-6 py-8 text-center">
+        <h3 className="text-lg font-semibold uppercase tracking-wide text-[#00778B]">
+          <ContentSdkText field={getFieldValue(heading)} />
+        </h3>
+        <p className="mt-4 text-sm leading-relaxed text-[#5c564e]">
+          <ContentSdkText field={getFieldValue(description)} />
+        </p>
+      </div>
+      {linkField?.value?.href ? (
+        <ContentSdkLink
+          field={linkField}
+          className="mt-auto block px-4 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-white no-underline"
+          style={{ backgroundColor: color }}
+        />
+      ) : null}
+    </article>
+  );
+};
+
+const ColorBarGrid = ({ items }: { items: SimplePromoFields[] }) => (
+  <div className="grid grid-cols-1 gap-4 @md:grid-cols-3">
+    {items.map((promo) => (
+      <ColorBarCard key={promo.id} {...promo} />
+    ))}
+  </div>
+);
+
+export const ColorBarCards = (props: MultiPromoProps) => {
+  const datasource = useMemo(() => getDatasource(props.fields), [props.fields]);
+  const items = datasource?.children?.results?.filter(Boolean) ?? [];
+
+  if (!datasource) {
+    return <NoDataFallback componentName="MultiPromo" />;
+  }
+
+  return (
+    <section
+      className={cn('@container px-4 py-8 sm:px-8', props.params?.styles)}
+      id={props.params?.RenderingIdentifier}
+      data-testid="multipromo-colorbar-cards"
+    >
+      <ColorBarGrid items={items} />
+    </section>
+  );
+};
+
+export const ColorBarCarousel = (props: MultiPromoProps) => {
+  const datasource = useMemo(() => getDatasource(props.fields), [props.fields]);
+  const items = datasource?.children?.results?.filter(Boolean) ?? [];
+  const columns = 3;
+  const canSlide = items.length > columns;
+  const pageCount = Math.max(1, Math.ceil(items.length / columns));
+  const [page, setPage] = useState(0);
+
+  useEffect(() => {
+    setPage(0);
+  }, [items.length]);
+
+  if (!datasource) {
+    return <NoDataFallback componentName="MultiPromo" />;
+  }
+
+  return (
+    <section
+      className={cn('@container relative px-4 py-8 sm:px-8', props.params?.styles)}
+      id={props.params?.RenderingIdentifier}
+      data-testid="multipromo-colorbar-carousel"
+    >
+      {canSlide ? (
+        <div className="relative">
+          <button
+            type="button"
+            aria-label="Previous"
+            disabled={page === 0}
+            onClick={() => setPage((current) => Math.max(0, current - 1))}
+            className="absolute top-1/2 left-0 z-10 inline-flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#00778B] shadow disabled:opacity-40"
+          >
+            <ChevronLeft className="size-5" aria-hidden />
+          </button>
+          <div className="overflow-hidden px-12">
+            <div
+              className="flex w-full transition-transform duration-300 ease-out motion-reduce:transition-none"
+              style={{ transform: `translateX(-${page * 100}%)` }}
+              data-testid="multipromo-colorbar-track"
+            >
+              {Array.from({ length: pageCount }, (_, pageIndex) => (
+                <div key={pageIndex} className="w-full shrink-0">
+                  <ColorBarGrid items={items.slice(pageIndex * columns, pageIndex * columns + columns)} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <button
+            type="button"
+            aria-label="Next"
+            data-testid="multipromo-colorbar-next"
+            disabled={page >= pageCount - 1}
+            onClick={() => setPage((current) => Math.min(pageCount - 1, current + 1))}
+            className="absolute top-1/2 right-0 z-10 inline-flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#00778B] shadow disabled:opacity-40"
+          >
+            <ChevronRight className="size-5" aria-hidden />
+          </button>
+        </div>
+      ) : (
+        <ColorBarGrid items={items} />
+      )}
     </section>
   );
 };

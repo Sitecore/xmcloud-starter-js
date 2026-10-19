@@ -7,6 +7,8 @@ import {
   SingleColumn as MultiPromoSingleColumn,
   FlexColumn as MultiPromoFlexColumn,
   Carousel as MultiPromoCarousel,
+  ColorBarCards as MultiPromoColorBarCards,
+  ColorBarCarousel as MultiPromoColorBarCarousel,
 } from '@/components/site-three/MultiPromo';
 
 // Mock Sitecore SDK
@@ -16,8 +18,8 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
     // eslint-disable-next-line @next/next/no-img-element
     <img src={field?.value?.src || ''} alt={field?.value?.alt || ''} className={className} />
   ),
-  Link: ({ field, children, className }: any) => (
-    <a href={field?.value?.href || '#'} className={className}>
+  Link: ({ field, children, className, style }: any) => (
+    <a href={field?.value?.href || '#'} className={className} style={style}>
       {children || field?.value?.text || ''}
     </a>
   ),
@@ -469,6 +471,88 @@ describe('MultiPromo', () => {
         'true'
       );
       expect(screen.getByText('Product 1').closest('div')).toHaveClass('text-black');
+    });
+  });
+
+  describe('ColorBar variants', () => {
+    const colorBarProps = {
+      params: { styles: 'promo-band', RenderingIdentifier: 'site-promos' },
+      fields: {
+        data: {
+          datasource: {
+            title: { jsonValue: { value: '' } },
+            description: { jsonValue: { value: '' } },
+            children: {
+              results: [
+                {
+                  id: 'foundation',
+                  heading: { jsonValue: { value: 'ASHFoundation' } },
+                  description: { jsonValue: { value: 'Fund critical research and education.' } },
+                  image: { jsonValue: { value: {} } },
+                  link: { jsonValue: { value: { href: 'https://www.ashfoundation.org/ways-to-give/individual-donor-form/', text: 'Donate Now' } } },
+                  buttonColor: { jsonValue: { value: 'purple' } },
+                },
+                {
+                  id: 'nsslha',
+                  heading: { jsonValue: { value: 'NSSLHA' } },
+                  description: { jsonValue: { value: 'Join NSSLHA to stay current.' } },
+                  image: { jsonValue: { value: {} } },
+                  link: { jsonValue: { value: { href: 'https://www.nsslha.org/membership/', text: 'Join NSSLHA' } } },
+                  buttonColor: { jsonValue: { value: '#E36C1E' } },
+                },
+                {
+                  id: 'communities',
+                  heading: { jsonValue: { value: 'ASHA Communities' } },
+                  description: { jsonValue: { value: 'Explore member-led communities.' } },
+                  image: { jsonValue: { value: {} } },
+                  link: { jsonValue: { value: { href: 'https://www.asha.org/members/description-of-ashas-communities/', text: 'Learn More' } } },
+                  buttonColor: { jsonValue: { value: 'teal' } },
+                },
+              ],
+            },
+          },
+        },
+      },
+    };
+
+    it('renders bordered cards with a full-width color bar', () => {
+      render(<MultiPromoColorBarCards {...colorBarProps} />);
+
+      const section = screen.getByTestId('multipromo-colorbar-cards');
+      expect(section).toHaveAttribute('id', 'site-promos');
+      expect(section.firstElementChild).toHaveClass('grid', '@md:grid-cols-3');
+      expect(screen.getByRole('link', { name: 'Donate Now' })).toHaveStyle({ backgroundColor: '#8B1E6D' });
+      expect(screen.getByRole('link', { name: 'Join NSSLHA' })).toHaveStyle({ backgroundColor: '#E36C1E' });
+      expect(screen.getByRole('link', { name: 'Learn More' })).toHaveStyle({ backgroundColor: '#0E7C86' });
+      expect(screen.queryByRole('button', { name: 'Next' })).not.toBeInTheDocument();
+    });
+
+    it('keeps three cards as a grid and slides when there are more', () => {
+      const { rerender } = render(<MultiPromoColorBarCarousel {...colorBarProps} />);
+      expect(screen.queryByRole('button', { name: 'Next' })).not.toBeInTheDocument();
+
+      const extra = colorBarProps.fields.data.datasource.children.results[0];
+      rerender(
+        <MultiPromoColorBarCarousel
+          params={{}}
+          fields={{
+            data: {
+              datasource: {
+                ...colorBarProps.fields.data.datasource,
+                children: {
+                  results: [
+                    ...colorBarProps.fields.data.datasource.children.results,
+                    { ...extra, id: 'extra' },
+                  ],
+                },
+              },
+            },
+          }}
+        />
+      );
+
+      expect(screen.getByTestId('multipromo-colorbar-next')).toBeEnabled();
+      expect(screen.getByRole('button', { name: 'Previous' })).toBeDisabled();
     });
   });
 });

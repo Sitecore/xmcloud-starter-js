@@ -1,5 +1,5 @@
 ﻿generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-10-19T19:40:00Z"
+lastUpdatedAt: "2026-10-19T21:00:00Z"
 lastUpdatedBy: "cursor-agent"
 
 project:
@@ -21,6 +21,199 @@ availableRenderings:
   warning: "MCP cannot read this field — value may be stale if modified outside this session. Also: MCP write returned empty updatedFields — silent-write. Verify in Content Editor."
 
 components:
+  - name: "AshaFeatureBanner"
+    kind: "list"
+    category: "Page Content"
+    status: "complete"
+    createdAt: "2026-10-19T21:00:00Z"
+    updatedAt: "2026-10-19T21:00:00Z"
+    siteName: "asha"
+    siteCollection: "asha"
+    notes:
+      - "2026-10-19: SolidColorColumns is a layout variant on the original Banners FeatureBanner rendering {6850377F-83D9-4C25-B26D-4CE1BC80BA3D}. The extra Page Content FeatureBanner rendering was removed from Available Renderings. Columns are FeatureItem children. backgroundColor was added to the shared FeatureItem template. Datasource is not placed on a page."
+    react:
+      filePath: "src/components/site-three/FeatureBanner.tsx"
+      componentName: "FeatureBanner"
+      variants:
+        - "SolidColorColumns"
+    templates:
+      parent:
+        name: "FeatureBannerColumns"
+        path: "/sitecore/templates/Project/asha/FeatureBannerColumns"
+        itemId: "{03823191-F0D1-4AEA-9CDB-979AD737AD3B}"
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{F0254D84-EB7F-44A0-8955-A093DBB3CB00}"
+          linked: true
+          masters: ["FeatureBannerColumn"]
+      child:
+        name: "FeatureBannerColumn"
+        path: "/sitecore/templates/Project/asha/FeatureBannerColumn"
+        itemId: "{899A44A5-9792-49EA-A7A8-2E569AFE3E58}"
+        fields:
+          - { name: "Link", type: "General Link", itemId: "{CDF97CF5-210C-4106-9D0E-73BC332BF750}" }
+          - { name: "BackgroundColor", type: "Single-Line Text", itemId: "{08559301-98CC-431A-8C8D-82CFED94B1BB}" }
+        baseTemplatesSet: true
+        standardValues:
+          itemId: "{6492D947-78D5-49E2-94D6-6EDF93B301CE}"
+          linked: true
+      folder:
+        name: "FeatureBannerColumns Folder"
+        path: "/sitecore/templates/Project/asha/FeatureBannerColumns Folder"
+        itemId: "{7081694F-14E7-41EA-A3EF-D5CA7BF8E2DD}"
+        standardValues:
+          itemId: "{BE70BE20-D7DA-445C-A761-E9BD2C41864C}"
+          linked: true
+          masters: ["FeatureBannerColumns"]
+      renderingParams:
+        name: "FeatureBanner Parameters"
+        path: "/sitecore/templates/Project/asha/Rendering Parameters/FeatureBanner Parameters"
+        itemId: "{D678052C-3641-461B-A6FF-6B5032B63D9D}"
+        baseTemplatesSet: true
+    datasourceFolder:
+      name: "Feature Banners"
+      path: "/sitecore/content/asha/asha/Data/Feature Banners"
+      itemId: "{8AEF4010-2717-4D2F-B787-39EFD57E89AF}"
+      template: "FeatureBanner Folder"
+      exampleItem:
+        name: "ASHA Member Links"
+        itemId: "{E388EFE9-E5CA-4B86-83CE-A448EDABFF8B}"
+        path: "/sitecore/content/asha/asha/Data/Feature Banners/ASHA Member Links"
+        template: "FeatureBanner"
+        children:
+          - { name: "ASHA Member Center", itemId: "{749CCE71-1230-4C0C-BA1A-A17A4D95B1EE}", backgroundColor: "#0E7C86", url: "https://www.asha.org/members/" }
+          - { name: "Member Benefits", itemId: "{B25219D6-D97B-4C60-BC31-076F80291DC5}", backgroundColor: "#1B2A78", url: "https://www.asha.org/members/benefits/" }
+          - { name: "Certification Benefits", itemId: "{67D1A2E8-0827-4404-9561-D82A6CB2146D}", backgroundColor: "#9A2F73", url: "https://www.asha.org/certification/" }
+    rendering:
+      name: "FeatureBanner"
+      path: "/sitecore/layout/Renderings/Project/click-click-launch/Banners/FeatureBanner"
+      itemId: "{6850377F-83D9-4C25-B26D-4CE1BC80BA3D}"
+      componentName: "FeatureBanner"
+      registeredInAvailableRenderings: true
+      availableRenderingsPath: "/sitecore/content/asha/asha/Presentation/Available Renderings/click-click-launch"
+    variants:
+      containerPath: "/sitecore/content/asha/asha/Presentation/Headless Variants/FeatureBanner"
+      containerItemId: "{46F8640E-305D-498A-98C3-7B327BEC3A5E}"
+      compatibleRenderings: "{6850377F-83D9-4C25-B26D-4CE1BC80BA3D}"
+      definitions:
+        - { name: "SolidColorColumns", itemId: "{30EC777B-D611-4BEC-98D1-44B88E7077D1}", path: "/sitecore/content/asha/asha/Presentation/Headless Variants/FeatureBanner/SolidColorColumns" }
+    verification:
+      checkedAt: "2026-10-19T21:00:00Z"
+      passed:
+        - "Parent and child templates created under /sitecore/templates/Project/asha"
+        - "Link is General Link and BackgroundColor is Single-Line Text"
+        - "Rendering ComponentQuery uses field(name) for Link and BackgroundColor"
+        - "SolidColorColumns variant name matches the React export"
+        - "SolidColorColumns Compatible Renderings points at the original Banners FeatureBanner {6850377F-83D9-4C25-B26D-4CE1BC80BA3D}"
+        - "The extra Page Content FeatureBanner rendering was removed from Available Renderings"
+        - "ASHA Member Links and three children verified"
+        - "npm run type-check passed"
+      failed: []
+      pendingManual:
+        - "__Standard values link (silent-write)"
+        - "__Masters on parent SV, folder SV, and Feature Banner folder (silent-write)"
+        - "Publish Feature Banner folder before Edge delivery"
+  - name: "NewsListing"
+    kind: "list"
+    category: "Page Content"
+    status: "complete"
+    createdAt: "2026-10-19T21:20:00Z"
+    updatedAt: "2026-10-19T21:20:00Z"
+    siteName: "asha"
+    siteCollection: "asha"
+    notes:
+      - "2026-10-19: Homepage news grid. Articles are Article Page items under Publications/ASHA Headlines. Authors pick any item under Publications with the Articles treelist, or select a Publications page and the listing uses its children. Card links use sourceLink. titleAccent turns the ASHA Leader title magenta."
+    react:
+      filePath: "src/components/uiim/news/NewsListing.tsx"
+      componentName: "NewsListing"
+      variants: ["Default"]
+    templates:
+      parent:
+        name: "NewsListing"
+        path: "/sitecore/templates/Project/asha/NewsListing"
+        itemId: "{EF79B43B-3A79-4F5F-A834-AA627829B66C}"
+        fields:
+          - { name: "Title", type: "Single-Line Text", itemId: "{FB98A87E-AA19-48A9-B2A4-B4373D3D075E}" }
+          - { name: "Articles", type: "Treelist", itemId: "{70769C92-D2C8-4E7F-AFF3-41B70E96F8D2}", source: "/sitecore/content/asha/asha/Home/Publications" }
+      folder:
+        name: "NewsListing Folder"
+        path: "/sitecore/templates/Project/asha/NewsListing Folder"
+        itemId: "{946F4FBC-79AD-4494-A310-10775C7928CE}"
+      articleFields:
+        - { name: "sourceLink", type: "General Link", itemId: "{40BFCFA4-F3BC-4AD6-A7BE-B629DE740843}" }
+        - { name: "titleAccent", type: "Checkbox", itemId: "{9F5FB435-A1EF-4AF8-A001-86DFBDBEF2F8}" }
+    rendering:
+      name: "NewsListing"
+      path: "/sitecore/layout/Renderings/Project/click-click-launch/Page Content/NewsListing"
+      itemId: "{45E8B532-E022-4081-87A9-576EA3D09FC7}"
+      componentName: "NewsListing"
+      parametersTemplateId: "{C4E4565B-F5B7-49BC-8572-E7EE5CD12947}"
+      datasourceTemplatePath: "/sitecore/templates/Project/asha/NewsListing"
+      canSelectPageAsDatasource: true
+    datasource:
+      path: "/sitecore/content/asha/asha/Data/News Listings/Homepage News"
+      itemId: "{DF20CFF7-6A74-488E-B113-3027F8270AEA}"
+      title: "NEWS"
+    pagePlacement:
+      pagePath: "/sitecore/content/asha/asha/Home/Publications/ASHA Headlines"
+      pageId: "{9FD1BC68-F29F-42F3-BC77-8949C2CC6029}"
+      instanceId: "{4E14C0F9-BEF0-4946-8F72-FD088F69468A}"
+      placeholder: "headless-main"
+      variant: "Default"
+    articles:
+      - { name: "Audiology Related CPT Codes", itemId: "{443DCE8B-16DC-4EF9-8DE6-02E068029F48}", url: "https://www.asha.org/news/2026/audiology-related-cpt-codes-enter-routine-ruc-review-process/" }
+      - { name: "ASHA Voices Gene Therapy and Mild Hearing Loss", itemId: "{75B28959-2A16-415B-927E-C7FCE0A4227C}", url: "https://leader.pubs.asha.org/do/10.1044/2026-0924-podcast-aud-research-symposium-hearing-2026/full/" }
+      - { name: "Audiology Mentor Program", itemId: "{F6DE839D-397C-4B63-A0AF-46988B0FCAA4}", url: "https://www.asha.org/aud/audiology-mentor-program/" }
+      - { name: "Chinese-Speakers Who Stutter", itemId: "{D5E17CA3-EB44-4C83-A912-4905C6A5B0AE}", url: "https://leader.pubs.asha.org/do/10.1044/2026-0817-slp-telepractice-mandarin-stuttering-support/full/" }
+      - { name: "Educational Audiology Awareness Week", itemId: "{55B19EDC-9D25-4EC7-82B7-84C78EA70948}", url: "https://www.edaud.org/edaud-awareness-week" }
+      - { name: "Bold Solutions to Dysphagia Services", itemId: "{11BE9260-56EA-49A3-ACF2-B978247121ED}", url: "https://leader.pubs.asha.org/do/10.1044/leader.FTR3.31072026.slp-dysphagia-outreach-mobile-fees.58/full/", titleAccent: true }
+    verification:
+      checkedAt: "2026-10-19T21:20:00Z"
+      passed:
+        - "Six Article Page items created under ASHA Headlines"
+        - "Articles treelist source is Publications"
+        - "Homepage News selects the six articles"
+        - "NewsListing placed on ASHA Headlines with Default variant"
+        - "Jest NewsListing.test.tsx 3 tests passed"
+      failed: []
+      pendingManual:
+        - "Publish ASHA Headlines, the six articles, Homepage News, and the rendering for Edge"
+        - "Folder __Masters was a silent write"
+  - name: "PracticePortalComponent"
+    kind: "context"
+    category: "Page Content"
+    status: "complete"
+    createdAt: "2026-10-19T20:45:00Z"
+    updatedAt: "2026-10-19T20:45:00Z"
+    react:
+      filePath: "src/components/uiim/practice-portal/PracticePortalComponent.tsx"
+      componentName: "PracticePortalComponent"
+      variants:
+        - "Default"
+        - "WithTaxonomy"
+    rendering:
+      itemId: "{7A3260A8-D7DB-4D8D-A173-4532CD4FE400}"
+      path: "/sitecore/layout/Renderings/Project/click-click-launch/Page Content/PracticePortalComponent"
+      componentName: "PracticePortalComponent"
+    variants:
+      containerPath: "/sitecore/content/asha/asha/Presentation/Headless Variants/PracticePortalComponent"
+      containerItemId: "{7B58BC5F-E1F7-4DED-BCB8-F364BEB40AA0}"
+      compatibleRenderings: "{7A3260A8-D7DB-4D8D-A173-4532CD4FE400}"
+      definitions:
+        - { name: "Default", itemId: "{C358FF5E-206C-4418-BC05-AC28662FBDBD}", path: "/sitecore/content/asha/asha/Presentation/Headless Variants/PracticePortalComponent/Default" }
+        - { name: "WithTaxonomy", itemId: "{E262C069-C3EF-47D2-BBCE-49916744DCA1}", path: "/sitecore/content/asha/asha/Presentation/Headless Variants/PracticePortalComponent/WithTaxonomy" }
+    notes:
+      - "2026-10-19: Added WithTaxonomy headless variant. Default layout and page variant assignment were left unchanged. Accent Modification layout checklist fields are arrays of {id,name,displayName,fields}, not pipe-separated ids."
+    verification:
+      checkedAt: "2026-10-19T20:45:00Z"
+      passed:
+        - "Headless Variants container exists"
+        - "Default and WithTaxonomy Variant Definition items exist"
+        - "Compatible Renderings includes PracticePortalComponent"
+        - "Export names match item names"
+      failed: []
+      pendingManual:
+        - "Author selects WithTaxonomy in Pages. Existing pages stay on Default."
   - name: "CareerListing"
     kind: "list"
     category: "Page Content"
@@ -8012,10 +8205,11 @@ ia:
       - "2026-10-06: Added Presentation/Styles/FeatureBanner/Dark Theme (Value=dark-theme, Allowed Renderings=FeatureBanner). Default/Vertical apply bg-primary, primary-foreground text, compact bar, inverted icons when params.styles includes dark-theme. Select Dark Theme in Pages Styling — MCP cannot set instance Styles."
       - "2026-10-15: Vertical variant matches the Melaleuca category band: bold title case heading, subTitle underneath, circular images. ComponentQuery now selects subTitle. Product Categories subTitle set to Explore Our Product Categories."
       - "2026-10-06: Large-viewport Default/Accent packed the item group to the right (justify-between + shrink-wrapped nowrap). Items row is now flex-1 justify-evenly; each FeatureItem is flex-1 basis-0 so links share remaining width evenly and wrap on smaller viewports."
+      - "2026-10-19: SolidColorColumns uses the original FeatureBanner rendering and FeatureItem children. FeatureItem gained an optional backgroundColor field. The component query also returns link."
     react:
       filePath: "src/components/site-three/FeatureBanner.tsx"
       componentMapKey: "FeatureBanner"
-      variants: ["Default", "Vertical", "Accent", "ImagesOnly"]
+      variants: ["Default", "Vertical", "Accent", "ImagesOnly", "SolidColorColumns"]
     templates:
       parent:
         name: "FeatureBanner"
@@ -11689,7 +11883,7 @@ ia:
     category: "Promos"
     status: "complete"
     createdAt: "2026-08-25T13:45:00Z"
-    updatedAt: "2026-10-08T16:55:00Z"
+    updatedAt: "2026-10-19T21:25:00Z"
 
     react:
       filePath: "src/components/site-three/MultiPromo.tsx"
@@ -11705,7 +11899,9 @@ ia:
         - "Version2"
         - "FlexColumn"
         - "Carousel"
-      note: "Version1 named export implemented 2026-08-25. Teal/white split, three-up overlapping cards, optional portrait with concave white mask, carousel when more than 3 children. LCMC Headless Variants synced 2026-09-10 including tab variants and Version2. 2026-10-07: FlexColumn added for bcaa (centered title + brand-red underline + horizontal overflow cards). Existing Default/Stacked/SingleColumn unchanged. 2026-10-08: TextAlignment Droplist on MultiPromo Parameters Styling (Pages Advanced styling, same pattern as Number of Columns). Default + FlexColumn swap header classes from params.TextAlignment; MutationObserver + CSS cover Pages class toggles without a full refresh."
+        - "ColorBarCards"
+        - "ColorBarCarousel"
+      note: "2026-10-19: ColorBarCards matches the ASHA bordered cards with a full-width color bar. ColorBarCarousel uses the same cards and slides in pages of three when there are more than three children. Optional SimplePromo buttonColor. ASHA datasource is Data/MultiPromos/Foundation and Communities. Version1 named export implemented 2026-08-25. Teal/white split, three-up overlapping cards, optional portrait with concave white mask, carousel when more than 3 children. LCMC Headless Variants synced 2026-09-10 including tab variants and Version2. 2026-10-07: FlexColumn added for bcaa (centered title + brand-red underline + horizontal overflow cards). Existing Default/Stacked/SingleColumn unchanged. 2026-10-08: TextAlignment Droplist on MultiPromo Parameters Styling (Pages Advanced styling, same pattern as Number of Columns). Default + FlexColumn swap header classes from params.TextAlignment; MutationObserver + CSS cover Pages class toggles without a full refresh."
 
     sitecoreEnvironment:
       siteName: "lcmc"

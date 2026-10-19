@@ -5,6 +5,7 @@ import {
   Default as FeatureBannerDefault,
   Vertical as FeatureBannerVertical,
   Accent as FeatureBannerAccent,
+  SolidColorColumns as FeatureBannerSolidColorColumns,
 } from '@/components/site-three/FeatureBanner';
 
 // Mock Sitecore SDK
@@ -13,6 +14,11 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
   NextImage: ({ field, className }: any) => (
     // eslint-disable-next-line @next/next/no-img-element
     <img src={field?.value?.src || ''} alt={field?.value?.alt || ''} className={className} />
+  ),
+  Link: ({ field, className, style, children, ...props }: any) => (
+    <a href={field?.value?.href || field?.value?.url || ''} className={className} style={style} {...props}>
+      {field?.value?.text || children || ''}
+    </a>
   ),
 }));
 
@@ -293,6 +299,87 @@ describe('FeatureBanner', () => {
       // Check that the section still renders with the accent styling
       expect(document.querySelector('section')).toBeInTheDocument();
       expect(document.querySelector('.bg-primary')).toBeInTheDocument();
+    });
+  });
+
+  describe('SolidColorColumns variant', () => {
+    const columnProps = {
+      params: { styles: 'inset-row', RenderingIdentifier: 'member-links' },
+      fields: {
+        data: {
+          datasource: {
+            title: { jsonValue: { value: '' } },
+            link: { jsonValue: { value: { href: '', text: '' } } },
+            children: {
+              results: [
+                {
+                  id: 'column-1',
+                  link: {
+                    jsonValue: {
+                      value: {
+                        href: 'https://www.asha.org/members/',
+                        text: 'ASHA Member Center',
+                      },
+                    },
+                  },
+                  backgroundColor: { jsonValue: { value: 'teal' } },
+                },
+                {
+                  id: 'column-2',
+                  link: {
+                    jsonValue: {
+                      value: {
+                        href: 'https://www.asha.org/members/benefits/',
+                        text: 'Member Benefits',
+                      },
+                    },
+                  },
+                  backgroundColor: { jsonValue: { value: 'navy' } },
+                },
+                {
+                  id: 'column-3',
+                  link: {
+                    jsonValue: {
+                      value: {
+                        href: 'https://www.asha.org/certification/',
+                        text: 'Certification Benefits',
+                      },
+                    },
+                  },
+                  backgroundColor: { jsonValue: { value: '#9A2F73' } },
+                },
+              ],
+            },
+          },
+        },
+      },
+    };
+
+    it('renders equal solid-color link columns with the label as the accessible name', () => {
+      render(<FeatureBannerSolidColorColumns {...columnProps} />);
+
+      const banner = screen.getByTestId('feature-banner-solid-color-columns');
+      expect(banner).toHaveClass('@container', 'px-6');
+      expect(banner).toHaveAttribute('id', 'member-links');
+      expect(banner.firstElementChild).toHaveClass('grid', 'grid-cols-1', 'gap-5', '@md:grid-cols-3');
+
+      const memberCenter = screen.getByRole('link', { name: 'ASHA Member Center' });
+      const memberBenefits = screen.getByRole('link', { name: 'Member Benefits' });
+      const certification = screen.getByRole('link', { name: 'Certification Benefits' });
+
+      expect(memberCenter).toHaveAttribute('href', 'https://www.asha.org/members/');
+      expect(memberCenter).toHaveClass('text-white', 'font-semibold', 'no-underline', 'min-h-14');
+      expect(memberCenter).toHaveStyle({ backgroundColor: '#0E7C86' });
+      expect(memberBenefits).toHaveStyle({ backgroundColor: '#1B2A78' });
+      expect(certification).toHaveStyle({ backgroundColor: '#9A2F73' });
+      expect(screen.queryAllByRole('img')).toHaveLength(0);
+    });
+
+    it('renders the empty-state fallback when fields are missing', () => {
+      render(<FeatureBannerSolidColorColumns params={{}} fields={undefined as any} />);
+
+      expect(screen.getByText(/Feature Banner/i)).toBeInTheDocument();
+      expect(screen.queryByTestId('feature-banner-solid-color-columns')).not.toBeInTheDocument();
     });
   });
 

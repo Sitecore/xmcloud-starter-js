@@ -70,10 +70,43 @@ export interface RouteFields {
   thumbnailImage?: ImageField;
 }
 
+const renderingUsesAshaHeader = (nodes: unknown): boolean => {
+  if (!Array.isArray(nodes)) return false;
+
+  return nodes.some((node) => {
+    if (!node || typeof node !== 'object') return false;
+
+    const rendering = node as {
+      componentName?: string;
+      params?: { FieldNames?: string };
+      placeholders?: Record<string, unknown>;
+    };
+
+    if (rendering.componentName === 'HeaderST' && rendering.params?.FieldNames === 'Asha') {
+      return true;
+    }
+
+    const placeholders = rendering.placeholders;
+    if (!placeholders) return false;
+
+    return Object.values(placeholders).some((child) => renderingUsesAshaHeader(child));
+  });
+};
+
+const routeUsesAshaHeader = (placeholders: unknown): boolean => {
+  if (!placeholders || typeof placeholders !== 'object') return false;
+
+  return Object.values(placeholders as Record<string, unknown>).some((child) =>
+    renderingUsesAshaHeader(child)
+  );
+};
+
 const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {
   const { layout } = page;
   const { route } = layout.sitecore;
   const { isEditing } = page.mode;
+  const isAshaHeader = routeUsesAshaHeader(route?.placeholders);
+  const pinnedHeaderClassName = `sticky ${isEditing ? 'lg:relative' : 'lg:fixed'} top-0 left-0 right-0 -mb-[38px] lg:mb-0 z-50`;
   const isPartialDesignEditing = route?.templateName === 'Partial Design';
   const mainClassPartialDesignEditing = isPartialDesignEditing ? 'partial-editing-mode' : '';
   const mainClassPageEditing = isEditing ? 'editing-mode' : 'prod-mode';
@@ -112,9 +145,7 @@ const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {
             )
           ) : (
             <>
-              <header
-                className={`sticky ${isEditing ? 'lg:relative' : 'lg:fixed'} top-0 left-0 right-0 -mb-[38px] lg:mb-0 z-50`}
-              >
+              <header className={isAshaHeader ? undefined : pinnedHeaderClassName}>
                 <nav id="header" aria-label="Main navigation">
                   {route && (
                     <AppPlaceholder

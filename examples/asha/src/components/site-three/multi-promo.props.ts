@@ -7,6 +7,7 @@ export interface SimplePromoFields {
   description: CompatibleField<Field<string>>;
   image: CompatibleField<ImageField>;
   link: CompatibleField<LinkField>;
+  buttonColor?: CompatibleField<Field<string>>;
 }
 
 export interface MultiPromoFields {

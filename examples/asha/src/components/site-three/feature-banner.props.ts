@@ -3,8 +3,10 @@ import type { ImageField, LinkField, Field } from '@sitecore-content-sdk/nextjs'
 
 export interface FeatureItemFields {
   id: string;
-  image: CompatibleField<ImageField>;
-  heading: CompatibleField<Field<string>>;
+  image?: CompatibleField<ImageField>;
+  heading?: CompatibleField<Field<string>>;
+  link?: CompatibleField<LinkField>;
+  backgroundColor?: CompatibleField<Field<string>>;
 }
 
 export interface FeatureBannerFields {

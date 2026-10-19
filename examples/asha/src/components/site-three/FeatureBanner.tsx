@@ -1,6 +1,10 @@
 'use client';
 
-import { Text as ContentSdkText, NextImage as ContentSdkImage } from '@sitecore-content-sdk/nextjs';
+import {
+  Text as ContentSdkText,
+  NextImage as ContentSdkImage,
+  Link as ContentSdkLink,
+} from '@sitecore-content-sdk/nextjs';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { FeatureBannerProps, FeatureItemFields } from './feature-banner.props';
 import { getDatasource, getFieldValue } from '@/lib/component-props';
@@ -182,6 +186,82 @@ export const Vertical = (props: FeatureBannerProps) => {
             )) || []}
           </div>
         </div>
+      </div>
+    </section>
+  );
+};
+
+const SOLID_COLUMN_COLORS: Record<string, string> = {
+  teal: '#0E7C86',
+  navy: '#1B2A78',
+  magenta: '#9A2F73',
+};
+
+const HEX_COLOR = /^#(?:[0-9a-f]{3}|[0-9a-f]{6})$/i;
+
+const resolveSolidColumnColor = (value?: string): string => {
+  const token = value?.trim() ?? '';
+  const named = SOLID_COLUMN_COLORS[token.toLowerCase()];
+  if (named) return named;
+  if (HEX_COLOR.test(token)) return token;
+  return SOLID_COLUMN_COLORS.teal;
+};
+
+const darkenHex = (hex: string): string => {
+  const normalized =
+    hex.length === 4 ? `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}` : hex;
+  const channels = [1, 3, 5].map((start) =>
+    Math.max(0, Math.round(parseInt(normalized.slice(start, start + 2), 16) * 0.88))
+  );
+
+  return `#${channels.map((channel) => channel.toString(16).padStart(2, '0')).join('')}`;
+};
+
+const SolidColorColumn = ({ heading, link, backgroundColor }: FeatureItemFields) => {
+  const headingField = getFieldValue(heading);
+  const linkField = getFieldValue(link);
+  const colorField = getFieldValue(backgroundColor);
+  const colorValue = typeof colorField?.value === 'string' ? colorField.value : '';
+  const color = resolveSolidColumnColor(colorValue);
+  const [isHovered, setIsHovered] = useState(false);
+  const label = typeof headingField?.value === 'string' ? headingField.value.trim() : '';
+
+  if (!linkField) {
+    return null;
+  }
+
+  return (
+    <ContentSdkLink
+      field={linkField}
+      className="flex min-h-14 items-center justify-center border-0 px-4 text-center text-base font-semibold text-white no-underline"
+      style={{ backgroundColor: isHovered ? darkenHex(color) : color }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {label ? <ContentSdkText field={headingField} /> : undefined}
+    </ContentSdkLink>
+  );
+};
+
+export const SolidColorColumns = (props: FeatureBannerProps) => {
+  const datasource = useMemo(() => getDatasource(props.fields), [props.fields]);
+
+  if (!datasource) {
+    return <FeatureBannerFallback />;
+  }
+
+  const columns = datasource.children?.results ?? [];
+
+  return (
+    <section
+      className={cn('@container px-6 py-4 sm:px-10', props?.params?.styles)}
+      id={props?.params?.RenderingIdentifier}
+      data-testid="feature-banner-solid-color-columns"
+    >
+      <div className="grid grid-cols-1 gap-5 @md:grid-cols-3">
+        {columns.map((item) => (
+          <SolidColorColumn key={item.id} {...item} />
+        ))}
       </div>
     </section>
   );
