@@ -11,6 +11,7 @@ Use this skill when:
 
 ## Do not use this skill when
 
+- the user wants a **site-named** HeaderST and FooterST variant, with Mega Menu items and Link Lists filled from the IA — use `sitecore-update-header-footer`
 - the work is a new component (not HeaderST) — use the create-component / add-variants skills
 - the user wants pixel-perfect variants for **page body** components — use `sitecore-create-demo-variants` (HeaderST is excluded there)
 - the user wants a new Skin / `data-theme` — use `create-new-theme` first, then return here for header layout

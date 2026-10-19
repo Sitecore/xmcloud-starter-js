@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Default as HeaderSTDefault, Version4 as HeaderSTVersion4, Version5 as HeaderSTVersion5 } from '../../components/site-three/HeaderST';
+import { Default as HeaderSTDefault, Version4 as HeaderSTVersion4, Version5 as HeaderSTVersion5, Asha as HeaderSTAsha } from '../../components/site-three/HeaderST';
 import { mockPageEditing } from '../test-utils/mockPage';
 import {
   defaultHeaderSTProps,
@@ -36,6 +36,18 @@ jest.mock('@fortawesome/free-solid-svg-icons', () => ({
     iconName: 'shopping-cart',
     prefix: 'fas',
   },
+  faMusic: {
+    iconName: 'music',
+    prefix: 'fas',
+  },
+}));
+
+jest.mock('@fortawesome/free-brands-svg-icons', () => ({
+  faFacebook: { iconName: 'facebook', prefix: 'fab' },
+  faInstagram: { iconName: 'instagram', prefix: 'fab' },
+  faLinkedinIn: { iconName: 'linkedin-in', prefix: 'fab' },
+  faXTwitter: { iconName: 'x-twitter', prefix: 'fab' },
+  faYoutube: { iconName: 'youtube', prefix: 'fab' },
 }));
 
 jest.mock('lucide-react', () => ({
@@ -648,6 +660,19 @@ describe('HeaderST Component', () => {
     it('does not offset the page while editing', () => {
       render(<HeaderSTVersion5 {...headerSTPropsBasic} page={mockPageEditing} />);
       expect(document.head.innerHTML + document.body.innerHTML).not.toContain('padding-top: 8.75rem');
+    });
+  });
+
+  describe('Asha', () => {
+    it('renders the ASHA header chrome and audience bar', () => {
+      render(<HeaderSTAsha {...headerSTPropsBasic} />);
+      expect(screen.getByTestId('header-st-asha')).toBeInTheDocument();
+      expect(screen.getByText('American Speech-Language-Hearing Association')).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'About' })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Audiologists' })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Public' })).toBeInTheDocument();
+      expect(screen.getByPlaceholderText('Search')).toBeInTheDocument();
+      expect(screen.getByTestId('header-st-asha-social')).toBeInTheDocument();
     });
   });
 

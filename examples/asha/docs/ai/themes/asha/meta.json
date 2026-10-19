@@ -1,0 +1,87 @@
+{
+  "title": "American Speech-Language-Hearing Association | ASHA",
+  "themeColor": null,
+  "msColor": null,
+  "ogTitle": "American Speech-Language-Hearing Association | ASHA",
+  "ogDescription": "The American Speech-Language-Hearing Association (ASHA) is the national professional, scientific, and credentialing association for 247,000 members, certificate holders, and affiliates who are audiologists; speech-language pathologists; speech, language, and hearing scientists; audiology and speech-language pathology assistants; and students.",
+  "ogImage": "https://www.asha.org/siteassets/logos/ASHA-logo-fb-share.png",
+  "ogSiteName": "American Speech-Language-Hearing Association",
+  "favicon": "https://www.asha.org/Static/themes/asha/favicons/favicon.ico",
+  "googleFontsLinks": [],
+  "fontFaces": [
+    {
+      "family": "Simple-Line-Icons",
+      "src": "url(\"fonts/Simple-Line-Icons.woff\") format(\"woff\"), url(\"fonts/Simple-Line-Icons.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "FontAwesome",
+      "src": "url(\"../fonts/fontawesome-webfont.woff2?v=4.3.0\") format(\"woff2\"), url(\"../fonts/fontawesome-webfont.woff?v=4.3.0\") format(\"woff\"), url(\"../fonts/fontawesome-webfont.ttf?v=4.3.0\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "Glyphicons Halflings",
+      "src": "url(\"/Static/themes/asha/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2\") format(\"woff2\"), url(\"/Static/themes/asha/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff\") format(\"woff\"), url(\"/Static/themes/asha/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf\") format(\"truetype\")",
+      "weight": ""
+    },
+    {
+      "family": "urw-geometric",
+      "src": "url(\"/Static/themes/asha/css/fonts/urw-geometric-100-web.woff2\") format(\"woff2\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-100-web.woff\") format(\"woff\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-100-web.ttf\") format(\"truetype\")",
+      "weight": "100"
+    },
+    {
+      "family": "urw-geometric",
+      "src": "url(\"/Static/themes/asha/css/fonts/urw-geometric-300-web.woff2\") format(\"woff2\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-300-web.woff\") format(\"woff\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-300-web.ttf\") format(\"truetype\")",
+      "weight": "300"
+    },
+    {
+      "family": "urw-geometric",
+      "src": "url(\"/Static/themes/asha/css/fonts/urw-geometric-400-web.woff2\") format(\"woff2\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-400-web.woff\") format(\"woff\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-400-web.ttf\") format(\"truetype\")",
+      "weight": "400"
+    },
+    {
+      "family": "urw-geometric",
+      "src": "url(\"/Static/themes/asha/css/fonts/urw-geometric-500-web.woff2\") format(\"woff2\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-500-web.woff\") format(\"woff\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-500-web.ttf\") format(\"truetype\")",
+      "weight": "500"
+    },
+    {
+      "family": "urw-geometric",
+      "src": "url(\"/Static/themes/asha/css/fonts/urw-geometric-600-web.woff2\") format(\"woff2\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-600-web.woff\") format(\"woff\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-600-web.ttf\") format(\"truetype\")",
+      "weight": "600"
+    },
+    {
+      "family": "urw-geometric",
+      "src": "url(\"/Static/themes/asha/css/fonts/urw-geometric-700-web.woff2\") format(\"woff2\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-700-web.woff\") format(\"woff\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-700-web.ttf\") format(\"truetype\")",
+      "weight": "700"
+    },
+    {
+      "family": "urw-geometric",
+      "src": "url(\"/Static/themes/asha/css/fonts/urw-geometric-800-web.woff2\") format(\"woff2\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-800-web.woff\") format(\"woff\"), url(\"/Static/themes/asha/css/fonts/urw-geometric-800-web.ttf\") format(\"truetype\")",
+      "weight": "800"
+    },
+    {
+      "family": "slick",
+      "src": "url(\"/Static/themes/asha/fonts/slick.woff\") format(\"woff\"), url(\"/Static/themes/asha/fonts/slick.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "Roboto-Regular",
+      "src": "url(\"https://talkdeskchatsdk.talkdeskapp.com/03523cf578d69fa92322.ttf\") format(\"truetype\")",
+      "weight": "normal"
+    },
+    {
+      "family": "Roboto-Regular",
+      "src": "url(\"https://talkdeskchatsdk.talkdeskapp.com/4f39c5796e60c9d8e732.ttf\") format(\"truetype\")",
+      "weight": "bold"
+    },
+    {
+      "family": "SourceSansPro",
+      "src": "url(\"https://talkdeskchatsdk.talkdeskapp.com/efa76f8326aa5cee3bdd.ttf\") format(\"truetype\")",
+      "weight": "400"
+    }
+  ],
+  "logoCandidates": [
+    "https://www.asha.org/link/33c379849e054875be60cb40471c9e65.aspx"
+  ],
+  "heroBgImage": null
+}

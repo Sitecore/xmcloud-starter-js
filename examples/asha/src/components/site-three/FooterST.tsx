@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import {
   faFacebook,
   faInstagram,
@@ -355,6 +356,158 @@ const MELALEUCA_SOCIAL = [
   { href: 'https://www.instagram.com/melaleuca/', label: 'Instagram', icon: faInstagram },
   { href: 'https://x.com/Melaleuca', label: 'X', icon: faXTwitter },
 ] as const;
+
+const ashaFooterLinkClass = 'text-sm text-primary hover:underline';
+
+const AshaFooterColumn = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: ReactNode;
+}) => (
+  <div>
+    <h2 className="border-b border-foreground/30 pb-2 text-xs font-semibold uppercase tracking-[0.14em] text-foreground">
+      {title}
+    </h2>
+    <div className="mt-3">{children}</div>
+  </div>
+);
+
+export const Asha = (_props: FooterSTProps) => (
+  <footer className="w-full" data-class-change data-testid="footerst-asha">
+    <div className="bg-muted text-foreground">
+      <div className="mx-auto grid max-w-[90rem] gap-10 px-6 py-10 md:grid-cols-3">
+        <AshaFooterColumn title="About ASHA">
+          <p className="text-sm leading-relaxed">
+            The American Speech-Language-Hearing Association (ASHA) is the national professional,
+            scientific, and credentialing association for 247,000 members, certificate holders, and
+            affiliates who are audiologists; speech-language pathologists; speech, language, and
+            hearing scientists; audiology and speech-language pathology assistants; and students.
+          </p>
+          <a href="https://www.asha.org/about/" className={`${ashaFooterLinkClass} mt-3 inline-block uppercase`}>
+            Read more
+          </a>
+          <ul className="mt-4 space-y-1">
+            <li>
+              <a href="https://www.asha.org/" className={ashaFooterLinkClass}>
+                All ASHA Websites
+              </a>
+            </li>
+            <li>
+              <a href="https://www.asha.org/careers/asha-jobs/" className={ashaFooterLinkClass}>
+                Work at ASHA
+              </a>
+            </li>
+            <li>
+              <a href="https://www.asha.org/" className={ashaFooterLinkClass}>
+                Marketing Solutions
+              </a>
+            </li>
+          </ul>
+        </AshaFooterColumn>
+
+        <div className="space-y-8">
+          <AshaFooterColumn title="Information For">
+            <ul className="space-y-1">
+              {[
+                'Audiologists',
+                'Speech-Language Pathologists',
+                'Academic & Faculty',
+                'Audiology & SLP Assistants',
+                'Students',
+                'Public',
+              ].map((label) => (
+                <li key={label}>
+                  <a href="https://www.asha.org/" className={ashaFooterLinkClass}>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </AshaFooterColumn>
+          <AshaFooterColumn title="Get Involved">
+            <ul className="space-y-1">
+              {['ASHA Community', 'Become a Mentor', 'Become a Volunteer'].map((label) => (
+                <li key={label}>
+                  <a href="https://www.asha.org/" className={ashaFooterLinkClass}>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </AshaFooterColumn>
+        </div>
+
+        <div className="space-y-8">
+          <AshaFooterColumn title="Connect With ASHA">
+            <p className="text-sm font-semibold">American Speech-Language-Hearing Association</p>
+            <p className="mt-1 text-sm">2200 Research Blvd., Rockville, MD 20850</p>
+            <p className="mt-2 text-sm">Members: 800-498-2071</p>
+            <p className="text-sm">Non-Member: 800-638-8255</p>
+            <p className="mt-4 text-xs font-semibold uppercase tracking-[0.12em]">More ways to connect</p>
+            <ul className="mt-2 space-y-1">
+              <li>
+                <a href="https://www.asha.org/" className={ashaFooterLinkClass}>
+                  E-mail the Action Center
+                </a>
+              </li>
+              <li>
+                <a href="https://www.asha.org/" className={ashaFooterLinkClass}>
+                  Provide Feedback to the Board of Directors
+                </a>
+              </li>
+            </ul>
+          </AshaFooterColumn>
+          <AshaFooterColumn title="Media Resources">
+            <ul className="space-y-1">
+              <li>
+                <a href="https://www.asha.org/about/press-room/" className={ashaFooterLinkClass}>
+                  Press Room
+                </a>
+              </li>
+              <li>
+                <a href="https://www.asha.org/about/press-room/" className={ashaFooterLinkClass}>
+                  Press Queries
+                </a>
+              </li>
+            </ul>
+          </AshaFooterColumn>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-dark text-dark-foreground">
+      <div className="mx-auto flex max-w-[90rem] flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between">
+        <div className="text-xs">
+          <p className="uppercase tracking-wide">
+            <a href="https://www.asha.org/" className="hover:underline">
+              Site Help
+            </a>
+            <span className="px-2">|</span>
+            <a href="https://www.asha.org/" className="hover:underline">
+              A–Z Topic Index
+            </a>
+            <span className="px-2">|</span>
+            <a href="https://www.asha.org/" className="hover:underline">
+              Privacy Statement
+            </a>
+            <span className="px-2">|</span>
+            <a href="https://www.asha.org/" className="hover:underline">
+              Terms of Use
+            </a>
+          </p>
+          <p className="mt-2 normal-case">© 1997-2026 American Speech-Language-Hearing Association</p>
+        </div>
+        <img
+          src="/asha-logo.png"
+          alt="ASHA"
+          className="h-12 w-auto brightness-0 invert"
+        />
+      </div>
+    </div>
+  </footer>
+);
 
 export const Version3 = (props: FooterSTProps) => (
   <section

@@ -6,6 +6,7 @@ import {
   Centered as FooterSTCentered,
   Version2 as FooterSTVersion2,
   Version3 as FooterSTVersion3,
+  Asha as FooterSTAsha,
 } from '@/components/site-three/FooterST';
 import { mockPage } from '../test-utils/mockPage';
 
@@ -168,6 +169,19 @@ describe('FooterST', () => {
       expect(screen.getByTestId('footerst-version3-social')).toBeInTheDocument();
       expect(screen.queryByTestId('placeholder-footer-primary-links-test-id')).not.toBeInTheDocument();
       expect(screen.getAllByTestId('font-awesome-icon')).toHaveLength(3);
+    });
+  });
+
+  describe('Asha variant', () => {
+    it('renders the ASHA footer columns and legal bar', () => {
+      render(<FooterSTAsha {...mockProps} />);
+      expect(screen.getByTestId('footerst-asha')).toBeInTheDocument();
+      expect(screen.getByText('About ASHA')).toBeInTheDocument();
+      expect(screen.getByText('Information For')).toBeInTheDocument();
+      expect(screen.getByText('Connect With ASHA')).toBeInTheDocument();
+      expect(screen.getByText('2200 Research Blvd., Rockville, MD 20850')).toBeInTheDocument();
+      expect(screen.getByText('© 1997-2026 American Speech-Language-Hearing Association')).toBeInTheDocument();
+      expect(screen.queryByTestId('placeholder-footer-primary-links-test-id')).not.toBeInTheDocument();
     });
   });
 });

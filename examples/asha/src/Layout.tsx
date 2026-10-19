@@ -6,30 +6,30 @@ import { Field, ImageField, Page, AppPlaceholder } from '@sitecore-content-sdk/n
 import Scripts from 'src/Scripts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Providers from 'src/Providers';
-import { Roboto } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import { DesignLibraryApp } from '@sitecore-content-sdk/nextjs';
 import componentMap from '.sitecore/component-map';
 import { generateOrganizationSchema, generateWebSiteSchema } from 'src/lib/structured-data/schema';
 import { StructuredData } from 'src/components/structured-data/StructuredData';
 
-const heading = Roboto({
-  weight: ['400', '500', '700'],
+const heading = Outfit({
+  weight: ['400', '500', '600', '700'],
   variable: '--font-heading',
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
   preload: false,
 });
 
-const body = Roboto({
-  weight: ['300', '400', '500', '700'],
+const body = Outfit({
+  weight: ['400', '500', '600', '700'],
   variable: '--font-body',
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
   preload: true,
 });
 
-const accent = Roboto({
-  weight: ['500', '700'],
+const accent = Outfit({
+  weight: ['500', '600'],
   variable: '--font-accent',
   subsets: ['latin', 'latin-ext'],
   display: 'swap',

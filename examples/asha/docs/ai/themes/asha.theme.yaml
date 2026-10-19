@@ -1,0 +1,127 @@
+# Client Brand Theme — ASHA
+# Computed CSS from https://www.asha.org/ plus the full homepage screenshot.
+
+client:
+  name: "American Speech-Language-Hearing Association"
+  sourceUrl: "https://www.asha.org/"
+  extractedAt: "2026-10-19T13:20:00Z"
+  extractedBy: "cursor"
+
+colors:
+  primary: "#00778B"
+  primaryForeground: "#FFFFFF"
+  secondary: "#151F6D"
+  secondaryForeground: "#FFFFFF"
+  accent: "#991E66"
+  accentForeground: "#FFFFFF"
+  background: "#FFFFFF"
+  foreground: "#6E6259"
+  muted: "#F1F0ED"
+  mutedForeground: "#7E7467"
+  headerBackground: "#FFFFFF"
+  headerForeground: "#6E6259"
+  footerBackground: "#F1F0ED"
+  footerForeground: "#6E6259"
+  border: "#DDDDDD"
+  ring: "#00778B"
+  extra:
+    - { name: "dark", value: "#423F3E" }
+    - { name: "audienceBar", value: "#00778B" }
+    - { name: "ctaOrange", value: "#D1350F" }
+    - { name: "sectionRule", value: "#991E66" }
+
+typography:
+  headingFamily: "Outfit"
+  headingWeight: "500"
+  bodyFamily: "Outfit"
+  bodyWeight: "400"
+  monoFamily: ""
+  googleFontsUrl: "https://fonts.google.com/specimen/Outfit"
+  scale:
+    hero: "22px"
+    h1: "22px"
+    h2: "22px"
+    h3: "22px"
+    body: "16px"
+    small: "14px"
+  headingTransform: "uppercase"
+  letterSpacing: "normal"
+  lineHeight: "1.6"
+
+spacing:
+  density: "normal"
+  sectionGap: ""
+  containerMaxWidth: ""
+  containerPadding: ""
+
+shape:
+  borderRadius: "0"
+  buttonRadius: "0"
+  cardRadius: "0"
+  imageRadius: "0"
+  shadowStyle: "subtle"
+  borderStyle: "1px solid #DDDDDD"
+
+tone:
+  overall: "institutional"
+  colorMode: "light"
+  contrast: "medium"
+  imagery: "photography"
+  heroStyle: "logo-search-and-promo-buttons"
+  cardStyle: "flat-bordered"
+  navStyle: "white-bar-over-teal-audience-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#00778B"
+      secondary: "#151F6D"
+      accent: "#991E66"
+  fontFamily:
+    heading: ["Outfit", "ui-sans-serif", "system-ui", "sans-serif"]
+    body: ["Outfit", "ui-sans-serif", "system-ui", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0"
+    button: "0"
+    card: "0"
+
+cssVariables: |
+  :root {
+    --color-primary: #00778B;
+    --color-primary-foreground: #FFFFFF;
+    --color-primary-hover: #1F8799;
+    --color-secondary: #151F6D;
+    --color-secondary-foreground: #FFFFFF;
+    --color-secondary-hover: #22296A;
+    --color-accent: #991E66;
+    --color-accent-foreground: #FFFFFF;
+    --color-background: #FFFFFF;
+    --color-foreground: #6E6259;
+    --color-muted: #F1F0ED;
+    --color-muted-foreground: #7E7467;
+    --color-card: #FFFFFF;
+    --color-border: #DDDDDD;
+    --color-ring: #00778B;
+    --color-tertiary: #F1F0ED;
+    --color-dark: #423F3E;
+    --color-dark-foreground: #FFFFFF;
+    --color-light: #FFFFFF;
+    --color-brand-black: #6E6259;
+    --color-brand-red: #991E66;
+    --font-family-heading: var(--font-heading), 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    --font-family-body: var(--font-body), 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    --font-family-accent: var(--font-accent), 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    --border-radius-default: 0;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-computed-css+screenshot+button-image-sample"
+  notes:
+    - "No user color overrides. Primary #00778B is the computed fill of Learn More, the search button, the audience bar, and in-content links. Text on that fill is white."
+    - "Body text is rgb(110, 98, 89) / #6E6259. Page background is white. Card borders and the footer surface are #DDDDDD and #F1F0ED. The legal bar is #423F3E."
+    - "Navy #151F6D and magenta #991E66 were sampled from the Member Benefits and Certification Benefits button images. Magenta is also the NEWS heading rule and the Donate button. Orange #D1350F is the Join NSSLHA button only."
+    - "Buttons and cards are square (border-radius 0)."
+    - "The live face is proprietary urw-geometric (weights 400, 500, 600). Outfit is the Google Font substitute loaded in Layout.tsx. Accent uses the same family."
+    - "Primary hover is the teal lightened about 12 percent. Secondary hover mixes navy 15 percent toward the body taupe."
+    - "--color-brand-red is the magenta section rule so the previous #DA291C does not remain on multipromo underlines."

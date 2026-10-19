@@ -1,7 +1,14 @@
 'use client';
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedinIn,
+  faXTwitter,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
+import { faMusic, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Link as ContentSdkLink,
@@ -459,3 +466,151 @@ const HeaderSTVersion5View = (props: HeaderSTProps) => {
 };
 
 export const Version5 = (props: HeaderSTProps) => <HeaderSTVersion5View {...props} />;
+
+const ashaUtilityLinks = [
+  { label: 'About', path: 'About' },
+  { label: 'Join ASHA', path: 'Join ASHA' },
+  { label: 'ASHA Store', href: 'https://www.asha.org/' },
+  { label: 'My Account', href: 'https://www.asha.org/' },
+  { label: 'Login', href: 'https://www.asha.org/' },
+] as const;
+
+const ashaAudienceLinks = [
+  { label: 'Audiologists', path: 'Audiologists' },
+  { label: 'Speech-Language Pathologists', path: 'Speech-Language Pathologists' },
+  { label: 'Academic & Faculty', path: 'Academic and Faculty' },
+  { label: 'Audiology & SLP Assistants', path: 'Audiology and SLP Assistants' },
+  { label: 'Students', path: 'Students' },
+  { label: 'Public', path: 'Public' },
+] as const;
+
+const ashaSocialLinks = [
+  { label: 'Facebook', href: 'https://www.facebook.com/ASHAorg', icon: faFacebook },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/american-speech-language-hearing-association', icon: faLinkedinIn },
+  { label: 'Instagram', href: 'https://www.instagram.com/ashaweb', icon: faInstagram },
+  { label: 'X', href: 'https://x.com/ASHAWeb', icon: faXTwitter },
+  { label: 'ASHA Stream', href: 'https://www.asha.org/', icon: faMusic },
+  { label: 'YouTube', href: 'https://www.youtube.com/user/ASHAWeb', icon: faYoutube },
+] as const;
+
+const ashaPrimaryNavClass = [
+  '[&_a]:text-[11px] [&_a]:font-medium [&_a]:uppercase [&_a]:tracking-[0.08em] [&_a]:text-foreground',
+  '[&_span]:text-[11px] [&_span]:font-medium [&_span]:uppercase [&_span]:tracking-[0.08em] [&_span]:text-foreground',
+  '[&_span.inline-block]:!px-2 [&_span.inline-block]:!py-3',
+  '[&_li]:w-auto [&_li]:shrink-0',
+].join(' ');
+
+const HeaderSTAshaView = (props: HeaderSTProps) => {
+  const pageContext = props.page as { siteName?: string; locale?: string } | undefined;
+  const site = pageContext?.siteName || 'asha';
+  const locale = pageContext?.locale || 'en';
+  const placeholderName = `header-navigation-${props.params?.DynamicPlaceholderId}`;
+  const searchLink = getFieldValue(getDatasource(props.fields)?.SearchLink);
+  const pageHref = (path: string) =>
+    path ? `/${site}/${locale}/${encodeURI(path)}` : `/${site}/${locale}`;
+
+  return (
+    <header
+      className={cn(props.params?.styles, 'w-full bg-background text-foreground')}
+      data-class-change
+      data-testid="header-st-asha"
+    >
+      <div className="mx-auto flex max-w-[90rem] items-start justify-between gap-6 px-6 pt-4">
+        <Link href={pageHref('')} prefetch={false} aria-label="ASHA home" className="shrink-0">
+          <img src="/asha-logo.png" alt="ASHA" className="h-14 w-auto" />
+        </Link>
+        <div className="flex flex-col items-end gap-2">
+          <nav aria-label="Utility" className="flex flex-wrap justify-end gap-x-4 gap-y-1">
+            {ashaUtilityLinks.map((item) => (
+              <Link
+                key={item.label}
+                href={'href' in item ? item.href : pageHref(item.path)}
+                prefetch={false}
+                className="text-[11px] font-medium uppercase tracking-[0.12em] text-foreground hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="flex items-center gap-2 text-foreground" data-testid="header-st-asha-social">
+            {ashaSocialLinks.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                aria-label={item.label}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex size-7 items-center justify-center hover:text-primary"
+              >
+                <FontAwesomeIcon icon={item.icon} className="size-3.5" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto flex max-w-[90rem] items-end justify-between gap-8 px-6 pb-4 pt-2">
+        <div>
+          <p className="text-lg font-semibold leading-tight text-foreground">
+            American Speech-Language-Hearing Association
+          </p>
+          <p className="mt-1 text-sm text-foreground">
+            Making effective communication, a human right, accessible and achievable for all.
+          </p>
+        </div>
+        <form
+          action={searchLink?.value?.href || pageHref('')}
+          role="search"
+          className="flex w-full max-w-xs shrink-0"
+        >
+          <label htmlFor="asha-header-search" className="sr-only">
+            Search
+          </label>
+          <input
+            id="asha-header-search"
+            name="q"
+            type="search"
+            placeholder="Search"
+            className="h-9 min-w-0 flex-1 border border-border bg-background px-3 text-sm text-foreground outline-none"
+          />
+          <button
+            type="submit"
+            aria-label="Search"
+            className="grid size-9 shrink-0 place-items-center bg-primary text-primary-foreground"
+          >
+            <Search className="size-4" aria-hidden />
+          </button>
+        </form>
+      </div>
+
+      <nav aria-label="Primary" className={cn('border-t border-border', ashaPrimaryNavClass)}>
+        <ul className="mx-auto flex max-w-[90rem] items-center justify-between px-4">
+          <AppPlaceholder
+            name={placeholderName}
+            rendering={props.rendering}
+            page={props.page}
+            componentMap={getComponentMap()}
+          />
+        </ul>
+      </nav>
+
+      <nav aria-label="Audiences" className="bg-primary text-primary-foreground">
+        <ul className="mx-auto flex max-w-[90rem] items-center justify-between gap-3 px-4">
+          {ashaAudienceLinks.map((item) => (
+            <li key={item.path}>
+              <Link
+                href={pageHref(item.path)}
+                prefetch={false}
+                className="inline-block px-2 py-2.5 text-[13px] text-primary-foreground hover:underline"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export const Asha = (props: HeaderSTProps) => <HeaderSTAshaView {...props} />;
