@@ -475,15 +475,6 @@ const ashaUtilityLinks = [
   { label: 'Login', href: 'https://www.asha.org/' },
 ] as const;
 
-const ashaAudienceLinks = [
-  { label: 'Audiologists', path: 'Audiologists' },
-  { label: 'Speech-Language Pathologists', path: 'Speech-Language Pathologists' },
-  { label: 'Academic & Faculty', path: 'Academic and Faculty' },
-  { label: 'Audiology & SLP Assistants', path: 'Audiology and SLP Assistants' },
-  { label: 'Students', path: 'Students' },
-  { label: 'Public', path: 'Public' },
-] as const;
-
 const ashaSocialLinks = [
   { label: 'Facebook', href: 'https://www.facebook.com/ASHAorg', icon: faFacebook },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/american-speech-language-hearing-association', icon: faLinkedinIn },
@@ -493,19 +484,52 @@ const ashaSocialLinks = [
   { label: 'YouTube', href: 'https://www.youtube.com/user/ASHAWeb', icon: faYoutube },
 ] as const;
 
+// Pages forces each mega-menu panel to static and fully open. That stretches every
+// primary item to the width of its link list, so only Careers and a sliver of the
+// next item stay in the row. Keep the panels out of the row in this variant.
+const ashaMenuPanelClass = [
+  'relative',
+  // Sitecore grid styles set basis-full on each Mega Menu, which makes the first
+  // item consume the row and pushes the rest off the right edge.
+  '[&_li]:!flex-none [&_li]:!w-auto',
+  '[.partial-editing-mode_&_li>div]:!absolute',
+  '[.partial-editing-mode_&_li>div]:!top-full',
+  '[.partial-editing-mode_&_li>div]:!right-0',
+  '[.partial-editing-mode_&_li>div]:!left-0',
+  '[.partial-editing-mode_&_li>div]:!h-auto',
+  '[.partial-editing-mode_&_li>div]:!w-full',
+  '[.partial-editing-mode_&_li>div]:!opacity-0',
+  '[.partial-editing-mode_&_li>div]:!pointer-events-none',
+  '[.partial-editing-mode_&_li:hover>div]:!opacity-100',
+  '[.partial-editing-mode_&_li:hover>div]:!pointer-events-auto',
+  '[.partial-editing-mode_&_li:focus-within>div]:!opacity-100',
+  '[.partial-editing-mode_&_li:focus-within>div]:!pointer-events-auto',
+].join(' ');
+
 const ashaPrimaryNavClass = [
+  ashaMenuPanelClass,
   '[&_a]:text-[11px] [&_a]:font-medium [&_a]:uppercase [&_a]:tracking-[0.08em] [&_a]:text-foreground',
   '[&_span]:text-[11px] [&_span]:font-medium [&_span]:uppercase [&_span]:tracking-[0.08em] [&_span]:text-foreground',
   '[&_span.inline-block]:!px-2 [&_span.inline-block]:!py-3',
-  '[&_li]:w-auto [&_li]:shrink-0',
+].join(' ');
+
+const ashaAudienceNavClass = [
+  ashaMenuPanelClass,
+  '[&_a]:text-[13px] [&_a]:font-normal [&_a]:normal-case [&_a]:tracking-normal [&_a]:text-primary-foreground',
+  '[&_span]:text-[13px] [&_span]:font-normal [&_span]:normal-case [&_span]:tracking-normal [&_span]:text-primary-foreground',
+  '[&_span.inline-block]:!px-2 [&_span.inline-block]:!py-2.5',
 ].join(' ');
 
 const HeaderSTAshaView = (props: HeaderSTProps) => {
+  const fields = getDatasource(props.fields);
   const pageContext = props.page as { siteName?: string; locale?: string } | undefined;
   const site = pageContext?.siteName || 'asha';
   const locale = pageContext?.locale || 'en';
-  const placeholderName = `header-navigation-${props.params?.DynamicPlaceholderId}`;
-  const searchLink = getFieldValue(getDatasource(props.fields)?.SearchLink);
+  const dynamicId = props.params?.DynamicPlaceholderId;
+  const placeholderName = `header-navigation-${dynamicId}`;
+  const audiencePlaceholderName = `header-audience-${dynamicId}`;
+  const identityPlaceholderName = `header-identity-${dynamicId}`;
+  const searchLink = getFieldValue(fields?.SearchLink);
   const pageHref = (path: string) =>
     path ? `/${site}/${locale}/${encodeURI(path)}` : `/${site}/${locale}`;
 
@@ -517,7 +541,7 @@ const HeaderSTAshaView = (props: HeaderSTProps) => {
     >
       <div className="mx-auto flex max-w-[90rem] items-start justify-between gap-6 px-6 pt-4">
         <Link href={pageHref('')} prefetch={false} aria-label="ASHA home" className="shrink-0">
-          <img src="/asha-logo.png" alt="ASHA" className="h-14 w-auto" />
+          <ContentSdkImage field={getFieldValue(fields?.Logo)} className="h-14 w-auto object-contain" />
         </Link>
         <div className="flex flex-col items-end gap-2">
           <nav aria-label="Utility" className="flex flex-wrap justify-end gap-x-4 gap-y-1">
@@ -550,13 +574,13 @@ const HeaderSTAshaView = (props: HeaderSTProps) => {
       </div>
 
       <div className="mx-auto flex max-w-[90rem] items-end justify-between gap-8 px-6 pb-4 pt-2">
-        <div>
-          <p className="text-lg font-semibold leading-tight text-foreground">
-            American Speech-Language-Hearing Association
-          </p>
-          <p className="mt-1 text-sm text-foreground">
-            Making effective communication, a human right, accessible and achievable for all.
-          </p>
+        <div className="min-w-0 [&_.component-content_p:first-child]:text-lg [&_.component-content_p:first-child]:font-semibold [&_.component-content_p:first-child]:leading-tight [&_.component-content_p+p]:mt-1 [&_.component-content_p+p]:text-sm">
+          <AppPlaceholder
+            name={identityPlaceholderName}
+            rendering={props.rendering}
+            page={props.page}
+            componentMap={getComponentMap()}
+          />
         </div>
         <form
           action={searchLink?.value?.href || pageHref('')}
@@ -584,7 +608,7 @@ const HeaderSTAshaView = (props: HeaderSTProps) => {
       </div>
 
       <nav aria-label="Primary" className={cn('border-t border-border', ashaPrimaryNavClass)}>
-        <ul className="mx-auto flex max-w-[90rem] items-center justify-between px-4">
+        <ul className="mx-auto flex w-full max-w-[90rem] items-center justify-between px-4 [&>div]:flex [&>div]:w-full [&>div]:items-center [&>div]:justify-between">
           <AppPlaceholder
             name={placeholderName}
             rendering={props.rendering}
@@ -594,19 +618,14 @@ const HeaderSTAshaView = (props: HeaderSTProps) => {
         </ul>
       </nav>
 
-      <nav aria-label="Audiences" className="bg-primary text-primary-foreground">
-        <ul className="mx-auto flex max-w-[90rem] items-center justify-between gap-3 px-4">
-          {ashaAudienceLinks.map((item) => (
-            <li key={item.path}>
-              <Link
-                href={pageHref(item.path)}
-                prefetch={false}
-                className="inline-block px-2 py-2.5 text-[13px] text-primary-foreground hover:underline"
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
+      <nav aria-label="Audiences" className={cn('bg-primary text-primary-foreground', ashaAudienceNavClass)}>
+        <ul className="mx-auto flex w-full max-w-[90rem] items-center justify-between gap-3 px-4 [&>div]:flex [&>div]:w-full [&>div]:items-center [&>div]:justify-between">
+          <AppPlaceholder
+            name={audiencePlaceholderName}
+            rendering={props.rendering}
+            page={props.page}
+            componentMap={getComponentMap()}
+          />
         </ul>
       </nav>
     </header>

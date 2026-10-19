@@ -664,15 +664,21 @@ describe('HeaderST Component', () => {
   });
 
   describe('Asha', () => {
-    it('renders the ASHA header chrome and audience bar', () => {
+    it('renders the ASHA header chrome, logo field, and audience placeholder', () => {
       render(<HeaderSTAsha {...headerSTPropsBasic} />);
       expect(screen.getByTestId('header-st-asha')).toBeInTheDocument();
-      expect(screen.getByText('American Speech-Language-Hearing Association')).toBeInTheDocument();
+      expect(screen.getByTestId('sitecore-image')).toHaveAttribute('alt', 'SYNC Logo');
       expect(screen.getByRole('link', { name: 'About' })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: 'Audiologists' })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: 'Public' })).toBeInTheDocument();
       expect(screen.getByPlaceholderText('Search')).toBeInTheDocument();
       expect(screen.getByTestId('header-st-asha-social')).toBeInTheDocument();
+      const placeholders = screen.getAllByTestId('app-placeholder').map((node) => node.getAttribute('data-name'));
+      expect(placeholders).toEqual(
+        expect.arrayContaining([
+          'header-navigation-main-nav',
+          'header-identity-main-nav',
+          'header-audience-main-nav',
+        ])
+      );
     });
   });
 
