@@ -6,6 +6,7 @@ import {
   Stacked as MultiPromoStacked,
   SingleColumn as MultiPromoSingleColumn,
   FlexColumn as MultiPromoFlexColumn,
+  Carousel as MultiPromoCarousel,
 } from '@/components/site-three/MultiPromo';
 
 // Mock Sitecore SDK
@@ -425,6 +426,49 @@ describe('MultiPromo', () => {
       const emptyProps = { params: {}, fields: undefined } as any;
       render(<MultiPromoFlexColumn {...emptyProps} />);
       expect(screen.getByTestId('no-data-fallback')).toBeInTheDocument();
+    });
+  });
+
+  describe('Carousel variant', () => {
+    it('distributes the cards equally and hides the slider', () => {
+      render(<MultiPromoCarousel {...mockProps} params={{ numColumns: '3' }} />);
+
+      expect(screen.getAllByTestId('multipromo-carousel-card')).toHaveLength(2);
+      expect(screen.queryByRole('button', { name: 'Next' })).not.toBeInTheDocument();
+      expect(screen.getByTestId('multipromo-carousel-track').firstElementChild).toHaveStyle({
+        flex: '0 0 50%',
+      });
+    });
+
+    it('shows next when there are more cards than columns', () => {
+      const extraItem = mockProps.fields.data.datasource.children.results[0];
+      render(
+        <MultiPromoCarousel
+          params={{ numColumns: '1' }}
+          fields={{
+            data: {
+              datasource: {
+                ...mockProps.fields.data.datasource,
+                children: {
+                  results: [extraItem, { ...extraItem, id: 'promo-3' }, { ...extraItem, id: 'promo-4' }],
+                },
+              },
+            },
+          }}
+        />
+      );
+
+      expect(screen.getByTestId('multipromo-carousel-next')).toBeEnabled();
+    });
+
+    it('overlays black text when Text overlay is selected', () => {
+      render(<MultiPromoCarousel {...mockProps} params={{ TextOverlay: '1', numColumns: '3' }} />);
+
+      expect(screen.getAllByTestId('multipromo-carousel-card')[0]).toHaveAttribute(
+        'data-text-overlay',
+        'true'
+      );
+      expect(screen.getByText('Product 1').closest('div')).toHaveClass('text-black');
     });
   });
 });

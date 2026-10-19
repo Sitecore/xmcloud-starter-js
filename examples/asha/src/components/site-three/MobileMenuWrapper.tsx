@@ -8,6 +8,8 @@ export const MobileMenuWrapper = ({
   children,
   alwaysVisible = false,
   className,
+  label,
+  panelClassName,
 }: MobileMenuWrapperProps) => {
   const {
     isVisible: isMobileMenuVisible,
@@ -26,9 +28,12 @@ export const MobileMenuWrapper = ({
     >
       {/* Mobile Menu Toggle Button */}
       <button
-        className="relative w-5 h-4 flex items-center justify-center"
+        className={cn(
+          'relative flex items-center justify-center',
+          label ? 'gap-2' : 'h-4 w-5'
+        )}
         onClick={() => setIsMobileMenuVisible(!isMobileMenuVisible)}
-        aria-label="Toggle mobile menu"
+        aria-label={label || 'Toggle mobile menu'}
         aria-expanded={isMobileMenuVisible}
       >
         <span className="relative w-5 h-4">
@@ -48,18 +53,19 @@ export const MobileMenuWrapper = ({
             }`}
           />
         </span>
+        {label ? (
+          <span className="text-xs font-medium uppercase tracking-[0.14em]">{label}</span>
+        ) : null}
       </button>
 
       {/* Mobile Menu Content */}
       <div
-        className={`${
-          isMobileMenuVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }
-          fixed left-0 right-0
-          ${alwaysVisible ? 'top-[4.5rem] h-[calc(100vh-4.5rem)]' : 'top-14 h-[calc(100vh-3.5rem)]'}
-          flex flex-col items-center justify-center
-          p-4
-          overflow-auto bg-background text-foreground transition-all duration-300 ease-in-out z-50`}
+        className={cn(
+          isMobileMenuVisible ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
+          'fixed left-0 right-0 z-50 flex flex-col items-center justify-center overflow-auto bg-background p-4 text-foreground transition-all duration-300 ease-in-out',
+          alwaysVisible ? 'top-[4.5rem] h-[calc(100vh-4.5rem)]' : 'top-14 h-[calc(100vh-3.5rem)]',
+          panelClassName
+        )}
       >
         {children}
       </div>

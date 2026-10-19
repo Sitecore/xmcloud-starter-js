@@ -339,3 +339,152 @@ export const Version2 = (props: FooterSTProps) => {
     </section>
   );
 };
+
+const MELALEUCA_FOOTER_LINKS = [
+  { label: 'Product Store', href: 'https://www.melaleuca.com/productstore' },
+  { label: 'Our Story', href: 'https://www.melaleuca.com/our-story' },
+  { label: 'Ingredients Philosophy', href: 'https://www.melaleuca.com/ingredients' },
+  { label: 'Privacy Policy', href: 'https://www.melaleuca.com/privacy-policy' },
+  { label: 'Income Statistics', href: 'https://www.melaleuca.com/income-statistics' },
+  { label: 'Terms of Use', href: 'https://www.melaleuca.com/terms-of-use' },
+  { label: 'Careers', href: 'https://www.melaleuca.com/careers' },
+] as const;
+
+const MELALEUCA_SOCIAL = [
+  { href: 'https://www.facebook.com/Melaleuca', label: 'Facebook', icon: faFacebook },
+  { href: 'https://www.instagram.com/melaleuca/', label: 'Instagram', icon: faInstagram },
+  { href: 'https://x.com/Melaleuca', label: 'X', icon: faXTwitter },
+] as const;
+
+export const Version3 = (props: FooterSTProps) => (
+  <section
+    className={`relative overflow-hidden bg-[#10261c] text-white ${props.params?.styles || ''}`}
+    style={{
+      backgroundImage:
+        'radial-gradient(900px 420px at 12% 0%, rgba(86, 122, 78, 0.28), transparent 60%), radial-gradient(1100px 640px at 88% 100%, rgba(22, 58, 36, 0.72), transparent 58%), linear-gradient(180deg, rgba(10, 24, 16, 0.72), rgba(8, 18, 12, 0.88))',
+    }}
+    data-class-change
+    data-testid="footerst-version3"
+  >
+    <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8 lg:py-16">
+      <div className="mb-10 flex justify-center lg:mb-12" aria-label="Melaleuca">
+        <div className="text-center">
+          <svg viewBox="0 0 48 48" className="mx-auto mb-2 h-10 w-10" aria-hidden="true">
+            <path
+              d="M24 4c2 8 2 12 0 18 6-2 12-1 16 4-6 1-10 4-12 10 2-8 1-14 0-20-4 3-8 4-14 3 6-4 10-8 10-15z"
+              fill="currentColor"
+            />
+          </svg>
+          <p className="font-serif text-4xl leading-none tracking-wide">Melaleuca</p>
+          <p className="mt-1 text-[11px] tracking-[0.28em] uppercase">The Wellness Company</p>
+        </div>
+      </div>
+
+      <div className="grid gap-10 lg:grid-cols-3 lg:gap-8">
+        <div className="text-sm leading-6">
+          <p>Melaleuca, Inc.</p>
+          <p>4609 West 65th South</p>
+          <p>Idaho Falls, ID 83402</p>
+          <p className="mt-4">
+            <a href="tel:+12085220700" className="hover:underline">
+              (208) 522-0700
+            </a>
+          </p>
+          <p>
+            <a href="mailto:info@melaleuca.com" className="hover:underline">
+              info@melaleuca.com
+            </a>
+          </p>
+          <div className="mt-6 flex items-start gap-3">
+            <svg viewBox="0 0 60 32" className="mt-1 h-6 w-10 shrink-0" aria-hidden="true">
+              <rect width="60" height="32" fill="#b22234" />
+              <rect y="2.46" width="60" height="2.46" fill="#fff" />
+              <rect y="7.38" width="60" height="2.46" fill="#fff" />
+              <rect y="12.3" width="60" height="2.46" fill="#fff" />
+              <rect y="17.22" width="60" height="2.46" fill="#fff" />
+              <rect y="22.15" width="60" height="2.46" fill="#fff" />
+              <rect y="27.07" width="60" height="2.46" fill="#fff" />
+              <rect width="24" height="17.2" fill="#3c3b6e" />
+            </svg>
+            <p className="max-w-[16rem] text-xs leading-5">
+              Wellness products made in America from exceptional unique ingredients sourced from all
+              over the globe
+            </p>
+          </div>
+          <div
+            className="mt-6 flex h-24 w-24 items-center justify-center rounded-full border border-white/80 p-2 text-center text-[9px] leading-tight tracking-wide uppercase"
+            aria-label="Member of Direct Selling Association"
+          >
+            Member of Direct Selling Association
+          </div>
+        </div>
+
+        <ul className="space-y-3 text-xs tracking-[0.16em] uppercase">
+          {MELALEUCA_FOOTER_LINKS.map((link) => (
+            <li key={link.label}>
+              <a href={link.href} className="hover:underline">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div>
+          <p className="text-xs tracking-[0.16em] uppercase">Become a Member Today!</p>
+          <a href="https://www.melaleuca.com/" className="mt-3 inline-block text-sm hover:underline">
+            Learn how you can become a Melaleuca Member.
+          </a>
+          <div
+            className="mt-6 inline-flex items-center gap-2 border border-white/80 px-3 py-2"
+            aria-label="BBB Accredited Business"
+          >
+            <span className="text-lg font-bold leading-none">BBB</span>
+            <span className="text-[10px] leading-tight tracking-wide uppercase">
+              Accredited
+              <br />
+              Business
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <hr className="my-8 border-white/80" />
+
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <label
+            htmlFor="melaleuca-footer-language"
+            className="mb-2 block text-[11px] tracking-[0.18em] uppercase"
+          >
+            Select language
+          </label>
+          <select
+            id="melaleuca-footer-language"
+            defaultValue="en-US"
+            className="min-w-56 border border-white/80 bg-transparent px-3 py-2 text-sm"
+          >
+            <option value="en-US" className="text-black">
+              United States - English
+            </option>
+          </select>
+        </div>
+        <div className="flex gap-3" data-testid="footerst-version3-social">
+          {MELALEUCA_SOCIAL.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              aria-label={item.label}
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white hover:bg-white/10"
+            >
+              <FontAwesomeIcon icon={item.icon} width={14} height={14} />
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <p className="mt-10 text-center text-xs">© Copyright 2025 Melaleuca Inc. All Rights Reserved</p>
+    </div>
+  </section>
+);

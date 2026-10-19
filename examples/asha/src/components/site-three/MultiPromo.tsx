@@ -5,7 +5,9 @@ import {
   Text as ContentSdkText,
   NextImage as ContentSdkImage,
   Link as ContentSdkLink,
+  type LinkField,
 } from '@sitecore-content-sdk/nextjs';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { NoDataFallback } from '@/utils/NoDataFallback';
 import { getDatasource, getFieldValue } from '@/lib/component-props';
 import { cn } from '@/lib/utils';
@@ -333,4 +335,166 @@ export const FlexColumn = (props: MultiPromoProps) => {
   }
 
   return <NoDataFallback componentName="MultiPromo" />;
+};
+
+const visibleColumnCount = (params?: { [key: string]: string }) => {
+  const match = params?.numColumns?.match(/\d+/);
+  const parsed = match ? Number.parseInt(match[0], 10) : 3;
+  return parsed > 0 ? parsed : 3;
+};
+
+const isTextOverlayFromParams = (params?: { [key: string]: string }) => {
+  const flag = params?.TextOverlay?.trim().toLowerCase();
+  if (flag === '1' || flag === 'true') {
+    return true;
+  }
+
+  return Boolean(
+    params?.styles
+      ?.split(/[\s|]+/)
+      .map((token) => token.trim().toLowerCase())
+      .includes('text-overlay')
+  );
+};
+
+const CarouselCard = ({
+  promo,
+  textOverlay,
+}: {
+  promo: PromoItemProps;
+  textOverlay: boolean;
+}) => {
+  const imageField = getFieldValue(promo.image);
+  const headingField = getFieldValue(promo.heading);
+  const descriptionField = getFieldValue(promo.description);
+  const linkField = getFieldValue(promo.link);
+  const linkText = linkField?.value?.text?.trim();
+  const descriptionText =
+    typeof descriptionField?.value === 'string' ? descriptionField.value.trim() : '';
+  const showDescription = Boolean(descriptionText) && descriptionText !== linkText;
+
+  return (
+    <article
+      className="relative h-full overflow-hidden"
+      data-testid="multipromo-carousel-card"
+      data-text-overlay={textOverlay ? 'true' : 'false'}
+    >
+      <ContentSdkImage
+        field={imageField}
+        className={
+          textOverlay
+            ? 'aspect-[5/3] h-full w-full object-cover'
+            : 'aspect-square w-full object-cover'
+        }
+      />
+      <div
+        className={
+          textOverlay
+            ? 'absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-black'
+            : 'pt-4 text-left'
+        }
+      >
+        <h3 className={textOverlay ? 'text-lg font-bold leading-tight' : 'mb-2 text-xl uppercase'}>
+          <ContentSdkText field={headingField} />
+        </h3>
+        {showDescription && (
+          <p className={textOverlay ? 'mt-2 text-sm leading-snug' : 'mb-2 lg:text-lg'}>
+            <ContentSdkText field={descriptionField} />
+          </p>
+        )}
+        {linkField?.value?.href && (
+          <ContentSdkLink
+            field={linkField}
+            className={
+              textOverlay ? 'mt-2 text-sm leading-snug text-black no-underline' : 'btn btn-ghost'
+            }
+          />
+        )}
+      </div>
+    </article>
+  );
+};
+
+export const Carousel = (props: MultiPromoProps) => {
+  const datasource = useMemo(() => getDatasource(props.fields), [props.fields]);
+  const items = datasource?.children?.results?.filter(Boolean) ?? [];
+  const columns = visibleColumnCount(props.params);
+  const textOverlay = isTextOverlayFromParams(props.params);
+  const canSlide = items.length > columns;
+  const pageCount = Math.max(1, Math.ceil(items.length / Math.max(columns, 1)));
+  const basis = canSlide ? 100 / columns : 100 / Math.max(items.length, 1);
+  const [page, setPage] = useState(0);
+  const titleField = getFieldValue(datasource?.title);
+  const descriptionField = getFieldValue(datasource?.description);
+
+  useEffect(() => {
+    setPage(0);
+  }, [items.length, columns]);
+
+  if (!datasource) {
+    return <NoDataFallback componentName="MultiPromo" />;
+  }
+
+  return (
+    <section
+      className={cn('relative', props.params?.styles)}
+      data-class-change
+      data-testid="multipromo-carousel"
+    >
+      <div className="container mx-auto px-4 py-16">
+        {(titleField?.value || descriptionField?.value) && (
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            {titleField?.value && (
+              <h2 className="mb-4 text-2xl uppercase lg:text-5xl">
+                <ContentSdkText field={titleField} />
+              </h2>
+            )}
+            {descriptionField?.value && (
+              <p className="text-lg">
+                <ContentSdkText field={descriptionField} />
+              </p>
+            )}
+          </div>
+        )}
+        <div className="relative">
+          {canSlide && (
+            <button
+              type="button"
+              aria-label="Previous"
+              disabled={page === 0}
+              onClick={() => setPage((current) => Math.max(0, current - 1))}
+              className="absolute top-1/2 left-2 z-10 inline-flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-black shadow disabled:opacity-40"
+            >
+              <ChevronLeft className="size-5" aria-hidden />
+            </button>
+          )}
+          <div className="overflow-hidden">
+            <div
+              className="flex w-full transition-transform duration-300 ease-out motion-reduce:transition-none"
+              style={{ transform: `translateX(-${page * 100}%)` }}
+              data-testid="multipromo-carousel-track"
+            >
+              {items.map((promo) => (
+                <div key={promo?.id} className="shrink-0 px-2" style={{ flex: `0 0 ${basis}%` }}>
+                  <CarouselCard promo={promo} textOverlay={textOverlay} />
+                </div>
+              ))}
+            </div>
+          </div>
+          {canSlide && (
+            <button
+              type="button"
+              aria-label="Next"
+              data-testid="multipromo-carousel-next"
+              disabled={page >= pageCount - 1}
+              onClick={() => setPage((current) => Math.min(pageCount - 1, current + 1))}
+              className="absolute top-1/2 right-2 z-10 inline-flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-black shadow disabled:opacity-40"
+            >
+              <ChevronRight className="size-5" aria-hidden />
+            </button>
+          )}
+        </div>
+      </div>
+    </section>
+  );
 };

@@ -6,35 +6,34 @@ import { Field, ImageField, Page, AppPlaceholder } from '@sitecore-content-sdk/n
 import Scripts from 'src/Scripts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Providers from 'src/Providers';
-import { Lora, Nunito_Sans } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import { DesignLibraryApp } from '@sitecore-content-sdk/nextjs';
 import componentMap from '.sitecore/component-map';
 import { generateOrganizationSchema, generateWebSiteSchema } from 'src/lib/structured-data/schema';
 import { StructuredData } from 'src/components/structured-data/StructuredData';
 
-const heading = Nunito_Sans({
-  weight: ['400', '600', '700'],
+const heading = Roboto({
+  weight: ['400', '500', '700'],
   variable: '--font-heading',
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
-  preload: true,
+  preload: false,
 });
 
-const body = Nunito_Sans({
-  weight: ['400', '500', '600', '700'],
+const body = Roboto({
+  weight: ['300', '400', '500', '700'],
   variable: '--font-body',
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
   preload: true,
 });
 
-const accent = Lora({
-  weight: ['600'],
-  style: ['italic'],
+const accent = Roboto({
+  weight: ['500', '700'],
   variable: '--font-accent',
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
-  preload: true,
+  preload: false,
 });
 
 // tailwindcss-safelist

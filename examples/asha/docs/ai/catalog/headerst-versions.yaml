@@ -61,3 +61,8 @@ versions:
     paramsUsed: ["showSearchBox", "showMiniCart", "HideCart"]
     usedBy: ["bcaa"]
     notes: "Matches the BCAA header chrome. LoginLink and SearchLink render as outline icons. The hamburger stays visible at every breakpoint and opens the existing mobile nav. Cart is omitted unless showMiniCart is on; HideCart still suppresses it. No new datasource fields or rendering params. Default layout is unchanged. Scroll thresholds live in HeaderSTScrollFrame inside HeaderST.tsx (solid after 12px, hide after 180px while scrolling down)."
+  - name: Version5
+    layout: "three rows: dark utility links, green main row with menu, Logo field, inline search, and sign-in outline, dark category row from the header-navigation placeholder"
+    paramsUsed: ["showMiniCart", "HideCart"]
+    usedBy: ["melaleuca"]
+    notes: "Melaleuca header. Utility links Product Store, Our Story, R3, and Riverbend Ranch are Version5-only and resolve under the current site and locale. Search is an inline pill. Sign In uses LoginLink when that field exists; this environment's HeaderST template has no LoginLink, so the control renders as text. Cart stays hidden unless showMiniCart is on. Language switcher is not part of HeaderST. Default and Version4 are unchanged."

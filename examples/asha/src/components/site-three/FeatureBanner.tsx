@@ -46,20 +46,35 @@ const featureItemsRowClassName =
 
 const FeatureItem = ({
   isDarkTheme,
+  shape = 'icon',
   ...props
-}: FeatureItemFields & { isDarkTheme?: boolean }) => {
+}: FeatureItemFields & { isDarkTheme?: boolean; shape?: 'icon' | 'circle' }) => {
+  const isCircle = shape === 'circle';
+
   return (
     <div
       className={cn(
-        'flex min-w-[6.5rem] flex-1 basis-0 flex-col items-center justify-start gap-1 px-2',
+        'flex flex-col items-center justify-start',
+        isCircle ? 'w-28 gap-3 sm:w-36 lg:w-40' : 'min-w-[6.5rem] flex-1 basis-0 gap-1 px-2',
         isDarkTheme && 'text-primary-foreground'
       )}
     >
       <ContentSdkImage
         field={getFieldValue(props?.image)}
-        className={cn('h-6 w-6 object-contain', isDarkTheme && 'brightness-0 invert')}
+        className={cn(
+          isCircle
+            ? 'aspect-square w-full rounded-full object-cover'
+            : 'h-6 w-6 object-contain',
+          isDarkTheme && !isCircle && 'brightness-0 invert'
+        )}
       />
-      <p className={cn('text-center', isDarkTheme ? 'text-sm text-primary-foreground' : 'text-base')}>
+      <p
+        className={cn(
+          'text-center',
+          isCircle ? 'text-sm text-black' : 'text-base',
+          isDarkTheme && 'text-primary-foreground'
+        )}
+      >
         <ContentSdkText field={getFieldValue(props?.heading)} />
       </p>
     </div>
@@ -118,6 +133,8 @@ export const Default = (props: FeatureBannerProps) => {
 export const Vertical = (props: FeatureBannerProps) => {
   const datasource = useMemo(() => getDatasource(props.fields), [props.fields]);
   const { ref, isDarkTheme } = useDarkTheme(props?.params?.styles);
+  const titleField = getFieldValue(datasource?.title);
+  const subTitleField = getFieldValue(datasource?.subTitle);
 
   if (!datasource) {
     return <FeatureBannerFallback />;
@@ -127,32 +144,41 @@ export const Vertical = (props: FeatureBannerProps) => {
     <section
       ref={ref}
       className={cn(
-        isDarkTheme ? 'bg-primary py-6' : 'py-16',
+        isDarkTheme ? 'bg-primary py-10' : 'bg-background py-14 md:py-16',
         props?.params?.styles,
         isDarkTheme && DARK_THEME_CLASS
       )}
       data-class-change
       data-feature-banner-theme={isDarkTheme ? 'dark' : 'default'}
+      data-testid="feature-banner-vertical"
     >
-      <div className={cn(isDarkTheme ? 'w-full px-6 lg:px-12' : 'container mx-auto px-4')}>
-        <div
-          className={cn(
-            'flex flex-col items-center gap-8 lg:gap-12',
-            isDarkTheme ? 'py-2' : 'border-b border-t border-border py-12'
-          )}
-        >
+      <div className="container mx-auto px-4">
+        <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
           <h2
             className={cn(
-              isDarkTheme
-                ? 'text-xl font-normal text-primary-foreground lg:text-2xl'
-                : 'text-2xl uppercase lg:text-5xl'
+              'max-w-4xl text-2xl font-bold tracking-tight md:text-3xl',
+              isDarkTheme ? 'text-primary-foreground' : 'text-black'
             )}
           >
-            <ContentSdkText field={getFieldValue(datasource?.title)} />
+            <ContentSdkText field={titleField} />
           </h2>
-          <div className={featureItemsRowClassName} data-testid="feature-banner-items">
+          {subTitleField && (
+            <p
+              className={cn(
+                'mt-3 text-lg font-normal md:text-xl',
+                isDarkTheme ? 'text-primary-foreground' : 'text-black'
+              )}
+              data-testid="feature-banner-subtitle"
+            >
+              <ContentSdkText field={subTitleField} />
+            </p>
+          )}
+          <div
+            className="mt-10 flex w-full flex-wrap items-start justify-center gap-x-6 gap-y-8 sm:gap-x-10"
+            data-testid="feature-banner-items"
+          >
             {datasource?.children?.results?.map((item) => (
-              <FeatureItem key={item.id} {...item} isDarkTheme={isDarkTheme} />
+              <FeatureItem key={item.id} {...item} isDarkTheme={isDarkTheme} shape="circle" />
             )) || []}
           </div>
         </div>

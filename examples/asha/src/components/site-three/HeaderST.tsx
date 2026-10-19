@@ -8,7 +8,7 @@ import {
   NextImage as ContentSdkImage,
   AppPlaceholder,
 } from '@sitecore-content-sdk/nextjs';
-import { Search, User } from 'lucide-react';
+import { ChevronRight, Search, User } from 'lucide-react';
 import Link from 'next/link';
 import { MiniCart } from './non-sitecore/MiniCart';
 import { SearchBox } from './non-sitecore/SearchBox';
@@ -299,3 +299,163 @@ export const Version4 = (props: HeaderSTProps) => (
     <HeaderSTVersion4View {...props} />
   </HeaderSTScrollFrame>
 );
+
+const version5HeaderHeight = '8.75rem';
+
+const version5UtilityLinks = [
+  { label: 'Product Store', path: '' },
+  { label: 'Our Story', path: 'Our Story' },
+  { label: 'R3', path: 'R3' },
+  { label: 'Riverbend Ranch', path: 'Riverbend Ranch' },
+] as const;
+
+const version5CategoryClass = [
+  'flex min-w-0 flex-1 items-center',
+  '[&_a]:whitespace-nowrap [&_a]:px-3 [&_a]:py-3 [&_a]:text-xs [&_a]:font-medium [&_a]:uppercase [&_a]:tracking-wide [&_a]:text-primary-foreground',
+  '[&_span]:whitespace-nowrap [&_span]:text-xs [&_span]:font-medium [&_span]:uppercase [&_span]:tracking-wide [&_span]:text-primary-foreground',
+  '[&_button]:whitespace-nowrap [&_button]:text-xs [&_button]:font-medium [&_button]:uppercase [&_button]:tracking-wide [&_button]:text-primary-foreground',
+  '[&_li]:w-auto [&_li]:shrink-0 [&_li]:basis-auto',
+].join(' ');
+
+const HeaderSTVersion5View = (props: HeaderSTProps) => {
+  const fields = getDatasource(props.fields);
+  const showMiniCart = Boolean(props.params?.showMiniCart) && !isChecked(props.params?.HideCart);
+  const searchLink = getFieldValue(fields?.SearchLink);
+  const loginLink = getFieldValue(fields?.LoginLink);
+  const cartLink = getFieldValue(fields?.CartLink);
+  const placeholderName = `header-navigation-${props.params?.DynamicPlaceholderId}`;
+  const pageContext = props.page as { siteName?: string; locale?: string } | undefined;
+  const site = pageContext?.siteName || 'melaleuca';
+  const locale = pageContext?.locale || 'en';
+  const categoryRowRef = useRef<HTMLUListElement>(null);
+  const searchHref = searchLink?.value?.href || `/${site}/${locale}`;
+
+  const contentHref = (path: string) =>
+    path ? `/${site}/${locale}/${encodeURI(path)}` : `/${site}/${locale}`;
+
+  const isEditing = Boolean(props.page?.mode?.isEditing);
+
+  return (
+    <header
+      className={cn(props.params?.styles, 'w-full text-primary-foreground')}
+      data-class-change
+      data-testid="header-st-version5"
+    >
+      {!isEditing && (
+        <style>{`@media (min-width: 64rem) { header[class~="lg:fixed"] + main { padding-top: ${version5HeaderHeight}; } }`}</style>
+      )}
+      <div className="bg-dark">
+        <div className="mx-auto flex h-9 max-w-[90rem] items-center px-4 lg:px-6">
+          <nav aria-label="Sections" className="flex items-center gap-5">
+            {version5UtilityLinks.map((item) => (
+              <Link
+                key={item.label}
+                href={contentHref(item.path)}
+                prefetch={false}
+                className="text-[11px] font-medium uppercase tracking-[0.14em] text-primary-foreground hover:opacity-80"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      <div className="bg-primary">
+        <div className="mx-auto flex h-16 max-w-[90rem] items-center gap-3 px-3 lg:gap-5 lg:px-6">
+          <ul className="flex shrink-0 items-center">
+            <MobileMenuWrapper
+              alwaysVisible
+              label="Menu"
+              className="p-0 text-primary-foreground"
+              panelClassName="top-[8.75rem] h-[calc(100vh-8.75rem)]"
+            >
+              <div className="flex h-full w-full flex-col">
+                <ul className="flex flex-col bg-background text-center text-foreground">
+                  <AppPlaceholder
+                    name={placeholderName}
+                    rendering={props.rendering}
+                    page={props.page}
+                    componentMap={getComponentMap()}
+                  />
+                </ul>
+              </div>
+            </MobileMenuWrapper>
+          </ul>
+
+          <Link
+            href={contentHref('')}
+            className="flex h-10 shrink-0 items-center"
+            prefetch={false}
+            aria-label="Home"
+          >
+            <ContentSdkImage
+              field={getFieldValue(fields?.Logo)}
+              className="h-10 w-auto max-w-[14rem] object-contain object-left"
+            />
+          </Link>
+
+          <form action={searchHref} className="mx-2 hidden min-w-0 flex-1 md:block" role="search">
+            <label htmlFor="header-search" className="sr-only">
+              Search
+            </label>
+            <input
+              id="header-search"
+              name="q"
+              type="search"
+              placeholder="Search"
+              className="h-10 w-full rounded-full border-0 bg-background px-4 text-sm text-foreground outline-none placeholder:text-muted-foreground"
+            />
+          </form>
+
+          <div className="ml-auto flex items-center gap-2">
+            {loginLink?.value?.href ? (
+              <ContentSdkLink
+                field={loginLink}
+                prefetch={false}
+                className="inline-flex h-10 items-center rounded-md border border-primary-foreground px-4 text-xs font-medium uppercase tracking-[0.14em] text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              />
+            ) : (
+              <Link
+                href={contentHref('Our Story/Become a Member')}
+                prefetch={false}
+                className="inline-flex h-10 items-center rounded-md border border-primary-foreground px-4 text-xs font-medium uppercase tracking-[0.14em] text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              >
+                Sign In
+              </Link>
+            )}
+            {showMiniCart && cartLink ? <MiniCart cartLink={cartLink} /> : null}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-dark">
+        <div className="mx-auto flex max-w-[90rem] items-center pr-2">
+          <nav aria-label="Primary" className={version5CategoryClass}>
+            <ul
+              ref={categoryRowRef}
+              className="flex min-w-0 flex-1 items-center overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+            >
+              <AppPlaceholder
+                name={placeholderName}
+                rendering={props.rendering}
+                page={props.page}
+                componentMap={getComponentMap()}
+              />
+            </ul>
+          </nav>
+          <button
+            type="button"
+            aria-label="More categories"
+            className="inline-flex size-9 shrink-0 items-center justify-center rounded-full text-primary-foreground hover:bg-primary-foreground/10"
+            onClick={() => categoryRowRef.current?.scrollBy({ left: 240, behavior: 'smooth' })}
+          >
+            <ChevronRight className="size-5" aria-hidden />
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export const Version5 = (props: HeaderSTProps) => <HeaderSTVersion5View {...props} />;

@@ -238,6 +238,32 @@ describe('FeatureBanner', () => {
       render(<FeatureBannerVertical {...emptyProps} />);
       expect(screen.getByText('Our Features')).toBeInTheDocument();
     });
+
+    it('renders a bold title, subtitle, and circular images', () => {
+      render(
+        <FeatureBannerVertical
+          {...mockProps}
+          fields={{
+            data: {
+              datasource: {
+                ...mockProps.fields.data.datasource,
+                subTitle: {
+                  jsonValue: { value: 'Explore Our Product Categories' },
+                },
+              },
+            },
+          }}
+        />
+      );
+
+      const heading = screen.getByRole('heading', { name: 'Our Features' });
+      expect(heading).toHaveClass('font-bold');
+      expect(heading.className).not.toContain('uppercase');
+      expect(screen.getByTestId('feature-banner-subtitle')).toHaveTextContent(
+        'Explore Our Product Categories'
+      );
+      expect(screen.getAllByRole('img')[0]).toHaveClass('rounded-full');
+    });
   });
 
   describe('Accent variant', () => {

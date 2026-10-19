@@ -38,6 +38,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'mrfbasech2.sitecoresandbox.cloud',
+        port: '',
+      },
+      {
+        protocol: 'https',
         hostname: '*.sitecorecontenthub.cloud',
         port: '',
       },
@@ -64,6 +69,16 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'edge-platform.sitecorecloud.io',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdnsc1.melaleuca.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'video-us.melaleuca.com',
         port: '',
       },
     ],

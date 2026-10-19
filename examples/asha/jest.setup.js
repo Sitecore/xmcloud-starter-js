@@ -32,4 +32,8 @@ jest.mock('@sitecore-content-sdk/nextjs', () => ({
 // Avoid loading lucide-react ESM in Jest runtime.
 jest.mock('lucide-react', () => ({
   Image: (props) => React.createElement('svg', { ...props, 'data-testid': 'lucide-image-icon' }),
+  ChevronLeft: (props) => React.createElement('svg', { ...props, 'data-testid': 'lucide-chevron-left' }),
+  ChevronRight: (props) => React.createElement('svg', { ...props, 'data-testid': 'lucide-chevron-right' }),
+  Play: (props) => React.createElement('svg', { ...props, 'data-testid': 'lucide-play' }),
+  Pause: (props) => React.createElement('svg', { ...props, 'data-testid': 'lucide-pause' }),
 }));

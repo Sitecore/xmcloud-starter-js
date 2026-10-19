@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Default as HeaderSTDefault, Version4 as HeaderSTVersion4 } from '../../components/site-three/HeaderST';
+import { Default as HeaderSTDefault, Version4 as HeaderSTVersion4, Version5 as HeaderSTVersion5 } from '../../components/site-three/HeaderST';
 import { mockPageEditing } from '../test-utils/mockPage';
 import {
   defaultHeaderSTProps,
@@ -41,6 +41,7 @@ jest.mock('@fortawesome/free-solid-svg-icons', () => ({
 jest.mock('lucide-react', () => ({
   User: (props: any) => <svg data-testid="login-icon" {...props} />,
   Search: (props: any) => <svg data-testid="search-icon" {...props} />,
+  ChevronRight: (props: any) => <svg data-testid="chevron-right" {...props} />,
 }));
 
 // Mock component-map to avoid circular dependency
@@ -596,6 +597,57 @@ describe('HeaderST Component', () => {
       fireEvent.scroll(window);
       expect(header).toHaveAttribute('data-header-chrome', 'editing');
       window.scrollY = 0;
+    });
+  });
+
+  describe('Version5', () => {
+    it('renders the three-row Melaleuca header with utility links, search, and sign in', () => {
+      render(
+        <HeaderSTVersion5
+          {...headerSTPropsBasic}
+          page={{ ...headerSTPropsBasic.page, siteName: 'melaleuca', locale: 'en' } as any}
+          fields={{
+            ...headerSTPropsBasic.fields,
+            LoginLink: {
+              value: { href: '/become-a-member', text: 'Sign In' },
+            },
+            SearchLink: {
+              value: { href: '/melaleuca/en', text: 'Search' },
+            },
+          }}
+        />
+      );
+
+      const header = screen.getByTestId('header-st-version5');
+      expect(header.className).toContain('text-primary-foreground');
+      expect(screen.getByRole('link', { name: 'Product Store' })).toHaveAttribute(
+        'href',
+        '/melaleuca/en'
+      );
+      expect(screen.getByRole('link', { name: 'Our Story' })).toHaveAttribute(
+        'href',
+        '/melaleuca/en/Our%20Story'
+      );
+      expect(screen.getByRole('link', { name: 'R3' })).toHaveAttribute('href', '/melaleuca/en/R3');
+      expect(screen.getByPlaceholderText('Search')).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Sign In' })).toHaveAttribute(
+        'href',
+        '/become-a-member'
+      );
+      expect(screen.getByRole('button', { name: 'Menu' })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'More categories' })).toBeInTheDocument();
+      expect(screen.getByRole('navigation', { name: 'Primary' }).querySelector('ul')).toHaveClass(
+        'overflow-x-auto',
+        '[scrollbar-width:none]'
+      );
+      expect(screen.getAllByTestId('app-placeholder').length).toBeGreaterThan(0);
+      expect(screen.queryByTestId('fontawesome-icon')).not.toBeInTheDocument();
+      expect(document.head.innerHTML + document.body.innerHTML).toContain('padding-top: 8.75rem');
+    });
+
+    it('does not offset the page while editing', () => {
+      render(<HeaderSTVersion5 {...headerSTPropsBasic} page={mockPageEditing} />);
+      expect(document.head.innerHTML + document.body.innerHTML).not.toContain('padding-top: 8.75rem');
     });
   });
 

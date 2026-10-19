@@ -3,6 +3,7 @@ import type { ComponentProps } from '@/lib/component-props';
 
 export type ArticleContentRouteFields = {
   Content?: RichTextField;
+  content?: RichTextField;
   pageHeaderTitle?: Field<string>;
   pageShortTitle?: Field<string>;
   pageSubtitle?: Field<string>;

@@ -110,6 +110,53 @@ describe('ArticleContent', () => {
     expect(screen.getByText(/no page fields to display/i)).toBeInTheDocument();
   });
 
+  it('hides the page content field until Show content is on', () => {
+    const page = {
+      ...pageWithFields,
+      layout: {
+        sitecore: {
+          context: {},
+          route: {
+            fields: {
+              pageHeaderTitle: { value: 'Ready, Set, Reset!' },
+              content: { value: '<p>Start the year right with the Reset Challenge in January.</p>' },
+            },
+          },
+        },
+      },
+    } as unknown as Page;
+
+    const { rerender } = render(<ArticleContent {...defaultProps} page={page} />);
+    expect(screen.queryByTestId('article-body')).not.toBeInTheDocument();
+
+    rerender(
+      <ArticleContent {...defaultProps} page={page} params={{ ...defaultProps.params, ShowContent: '1' }} />
+    );
+    expect(screen.getByTestId('article-body').innerHTML).toContain('Reset Challenge');
+  });
+
+  it('does not render a meta bullet when date and read time are empty', () => {
+    const page = {
+      ...mockPageEditing,
+      layout: {
+        sitecore: {
+          context: {},
+          route: {
+            fields: {
+              pageHeaderTitle: { value: 'Ready, Set, Reset!' },
+              pageSubtitle: { value: 'Three Challenges to Look Forward to Each Year' },
+              pageSummary: { value: 'Each challenge lasts six weeks.' },
+            },
+          },
+        },
+      },
+    } as unknown as Page;
+
+    render(<ArticleContent {...defaultProps} page={page} />);
+    expect(screen.queryByText('•')).not.toBeInTheDocument();
+    expect(screen.getByText('Three Challenges to Look Forward to Each Year')).toBeInTheDocument();
+  });
+
   it('keeps empty fields visible while editing', () => {
     const page = {
       ...mockPageEditing,

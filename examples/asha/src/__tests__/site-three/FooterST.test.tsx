@@ -5,6 +5,7 @@ import {
   Default as FooterSTDefault,
   Centered as FooterSTCentered,
   Version2 as FooterSTVersion2,
+  Version3 as FooterSTVersion3,
 } from '@/components/site-three/FooterST';
 import { mockPage } from '../test-utils/mockPage';
 
@@ -147,6 +148,26 @@ describe('FooterST', () => {
       expect(screen.getByTestId('placeholder-footer-primary-links-test-id')).toBeInTheDocument();
       expect(screen.getByTestId('placeholder-footer-secondary-links-test-id')).toBeInTheDocument();
       expect(screen.getAllByTestId('font-awesome-icon').length).toBeGreaterThanOrEqual(4);
+    });
+  });
+
+  describe('Version3 variant', () => {
+    it('renders the Melaleuca footer from the screenshot', () => {
+      render(<FooterSTVersion3 {...mockProps} />);
+      expect(screen.getByTestId('footerst-version3')).toBeInTheDocument();
+      expect(screen.getByText('Melaleuca')).toBeInTheDocument();
+      expect(screen.getByText('4609 West 65th South')).toBeInTheDocument();
+      expect(screen.getByText('Product Store')).toBeInTheDocument();
+      expect(screen.getByText('Become a Member Today!')).toBeInTheDocument();
+      expect(screen.getByLabelText('Select language')).toBeInTheDocument();
+      expect(screen.getByText('© Copyright 2025 Melaleuca Inc. All Rights Reserved')).toBeInTheDocument();
+    });
+
+    it('renders social links and does not use the shared link placeholders', () => {
+      render(<FooterSTVersion3 {...mockProps} />);
+      expect(screen.getByTestId('footerst-version3-social')).toBeInTheDocument();
+      expect(screen.queryByTestId('placeholder-footer-primary-links-test-id')).not.toBeInTheDocument();
+      expect(screen.getAllByTestId('font-awesome-icon')).toHaveLength(3);
     });
   });
 });

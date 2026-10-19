@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
-import { CTALeft, Default as CarouselDefault } from '../../components/carousel/Carousel';
+import { CTALeft, Default as CarouselDefault, Version2 } from '../../components/carousel/Carousel';
 import {
   defaultCarouselProps,
   carouselWithSingleSlide,
@@ -282,5 +282,63 @@ describe('Carousel CTALeft', () => {
     render(<CTALeft {...carouselWithChildrenArray} />);
 
     expect(screen.getAllByTestId('carousel-dash-indicator')).toHaveLength(3);
+  });
+});
+
+describe('Carousel Version2', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    act(() => {
+      jest.runOnlyPendingTimers();
+    });
+    jest.useRealTimers();
+  });
+
+  it('centers slide copy over a full-bleed image with side arrows and a dot pill', () => {
+    render(<Version2 {...defaultCarouselProps} />);
+
+    const carousel = screen.getByRole('group').closest('[aria-roledescription="carousel"]');
+    expect(carousel).toHaveAttribute('data-carousel-layout', 'version2');
+    expect(screen.getByText('Sustainable Energy').closest('div')).toHaveClass('text-center');
+    expect(screen.getByText('Sustainable Energy').closest('div')).toHaveClass('text-white');
+    expect(screen.getByLabelText('Previous slide')).toBeInTheDocument();
+    expect(screen.getByLabelText('Next slide')).toBeInTheDocument();
+    expect(screen.getByLabelText('Pause carousel')).toBeInTheDocument();
+    expect(screen.getAllByTestId('carousel-dot-indicator')).toHaveLength(3);
+    expect(screen.getByTestId('carousel-link')).toHaveClass('uppercase');
+    expect(screen.getByTestId('carousel-link')).toHaveClass('text-primary');
+    expect(carousel).toHaveAttribute('data-image-tone', 'dark');
+  });
+
+  it('uses dark text and a dark button when the image tone is light', () => {
+    render(
+      <Version2
+        {...defaultCarouselProps}
+        params={{ ...defaultCarouselProps.params, ImageTone: 'Light' }}
+      />
+    );
+
+    const carousel = screen.getByRole('group').closest('[aria-roledescription="carousel"]');
+    expect(carousel).toHaveAttribute('data-image-tone', 'light');
+    expect(screen.getByText('Sustainable Energy').closest('h2')).toHaveClass('text-foreground');
+    expect(screen.getByText('Committed to renewable energy sources').closest('p')).toHaveClass(
+      'text-foreground'
+    );
+    expect(screen.getByTestId('carousel-link')).toHaveClass('text-white');
+  });
+
+  it('moves to the selected dot', async () => {
+    render(<Version2 {...defaultCarouselProps} />);
+
+    const indicators = screen.getAllByTestId('carousel-dot-indicator');
+    fireEvent.click(indicators[2]);
+
+    await waitFor(() => {
+      expect(indicators[2]).toHaveAttribute('aria-selected', 'true');
+    });
   });
 });

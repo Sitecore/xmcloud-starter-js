@@ -1,0 +1,81 @@
+{
+  "title": "Welcome to Melaleuca, The Wellness Company",
+  "themeColor": null,
+  "msColor": null,
+  "ogTitle": "Melaleuca, The Wellness Company",
+  "ogDescription": "Welcome to the largest online wellness shopping club.  Our mission is to enhance the lives of those we touch by helping people reach their goals.",
+  "ogImage": "https://cdnsc1.melaleuca.com/na/images/about-us/Melaleuca-OG.jpg",
+  "ogSiteName": null,
+  "favicon": "https://cdnsc1.melaleuca.com/na/images/common/android-chrome-150x150.png",
+  "googleFontsLinks": [
+    "https://fonts.googleapis.com/",
+    "https://fonts.gstatic.com/",
+    "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,700i,900%20|Material+Icons&display=swap",
+    "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+  ],
+  "fontFaces": [
+    {
+      "family": "century-gothic",
+      "src": "url(\"https://use.typekit.net/af/471ad1/00000000000000003b9b1f20/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/471ad1/00000000000000003b9b1f20/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/471ad1/00000000000000003b9b1f20/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\")",
+      "weight": "700"
+    },
+    {
+      "family": "century-gothic",
+      "src": "url(\"https://use.typekit.net/af/fb6c60/00000000000000003b9b1f22/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/fb6c60/00000000000000003b9b1f22/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/fb6c60/00000000000000003b9b1f22/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "century-gothic",
+      "src": "url(\"https://use.typekit.net/af/afc5c6/00000000000000003b9b1f23/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/afc5c6/00000000000000003b9b1f23/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/afc5c6/00000000000000003b9b1f23/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "mr-eaves-modern",
+      "src": "url(\"https://use.typekit.net/af/7a479b/00000000000000003b9adbb9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a479b/00000000000000003b9adbb9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a479b/00000000000000003b9adbb9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "mr-eaves-modern",
+      "src": "url(\"https://use.typekit.net/af/31bed2/00000000000000003b9adbba/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/31bed2/00000000000000003b9adbba/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/31bed2/00000000000000003b9adbba/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\")",
+      "weight": "700"
+    },
+    {
+      "family": "mr-eaves-modern",
+      "src": "url(\"https://use.typekit.net/af/f119df/00000000000000003b9adbbe/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f119df/00000000000000003b9adbbe/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f119df/00000000000000003b9adbbe/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\")",
+      "weight": "700"
+    },
+    {
+      "family": "mr-eaves-modern",
+      "src": "url(\"https://use.typekit.net/af/06602b/00000000000000003b9adbbf/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/06602b/00000000000000003b9adbbf/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/06602b/00000000000000003b9adbbf/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "mr-eaves-sans",
+      "src": "url(\"https://use.typekit.net/af/6cda96/00000000000000003b9adbc6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/6cda96/00000000000000003b9adbc6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/6cda96/00000000000000003b9adbc6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "mr-eaves-sans",
+      "src": "url(\"https://use.typekit.net/af/49cf3f/00000000000000003b9adbca/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/49cf3f/00000000000000003b9adbca/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/49cf3f/00000000000000003b9adbca/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\")",
+      "weight": "400"
+    },
+    {
+      "family": "mr-eaves-sans",
+      "src": "url(\"https://use.typekit.net/af/22fdb3/00000000000000003b9adbcb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/22fdb3/00000000000000003b9adbcb/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/22fdb3/00000000000000003b9adbcb/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\")",
+      "weight": "700"
+    },
+    {
+      "family": "mr-eaves-sans",
+      "src": "url(\"https://use.typekit.net/af/b745b5/00000000000000003b9adbcc/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/b745b5/00000000000000003b9adbcc/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/b745b5/00000000000000003b9adbcc/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\")",
+      "weight": "700"
+    }
+  ],
+  "logoCandidates": [
+    "https://cdnsc1.melaleuca.com/na/images/product-store/country-selector-flags/canada-flag.jpg",
+    "https://cdnsc1.melaleuca.com/na/images/product-store/melaleuca-logo-reverse.svg",
+    "https://cdnsc1.melaleuca.com/cdn-cgi/image/quality=85/na/images/header/search2x.png",
+    "https://cdnsc1.melaleuca.com/na/images/footer/Melaleuca%20wellness%20co%20hor-0114_white.png",
+    "https://cdnsc1.melaleuca.com/na/images/footer/footer-bbb--en-US.svg"
+  ],
+  "heroBgImage": null
+}

@@ -207,6 +207,16 @@ describe('HeroST', () => {
       render(<HeroSTSplitScreen {...propsWithoutTitle} />);
       expect(screen.getByText('New Collection')).toBeInTheDocument();
     });
+
+    it('covers the split screen with one background image', () => {
+      const { container } = render(
+        <HeroSTSplitScreen {...mockProps} params={{ ...mockProps.params, ImageCount: '1' }} />
+      );
+      const images = screen.getAllByRole('img');
+      expect(images).toHaveLength(1);
+      expect(images[0]).toHaveAttribute('src', '/images/hero-bg.jpg');
+      expect(container.querySelector('[data-hero-background="full"]')).toBeInTheDocument();
+    });
   });
 
   describe('Stacked variant', () => {
@@ -237,6 +247,13 @@ describe('HeroST', () => {
       const images = screen.getAllByRole('img');
       // Should render multiple images (Image1 and Image2 fields)
       expect(images.length).toBeGreaterThan(1);
+    });
+
+    it('uses Image1 as the full background and hides Image2', () => {
+      render(<HeroSTStacked {...mockProps} params={{ ...mockProps.params, ImageCount: '1' }} />);
+      const images = screen.getAllByRole('img');
+      expect(images).toHaveLength(1);
+      expect(images[0]).toHaveAttribute('src', '/images/hero-bg.jpg');
     });
 
     it('handles missing Image2 in stacked variant', () => {
@@ -353,6 +370,38 @@ describe('HeroST', () => {
       };
       render(<HeroSTDefault {...propsWithoutStyles} />);
       expect(screen.getByText('Premium Audio Experience')).toBeInTheDocument();
+    });
+
+    it('sets the hero to the selected viewport height', () => {
+      const { container } = render(
+        <HeroSTDefault {...mockProps} params={{ ...mockProps.params, HeroHeight: '40' }} />
+      );
+      const hero = container.querySelector('[data-hero-height="40vh"]');
+      expect(hero).toHaveStyle({ height: '40vh', minHeight: '40vh' });
+      expect(screen.getByRole('heading', { name: 'Premium Audio Experience' })).toHaveClass(
+        'lg:text-[clamp(1.5rem,12cqh,4.5rem)]'
+      );
+    });
+
+    it('uses one full-background image when Images is 1', () => {
+      const { container } = render(
+        <HeroSTDefault {...mockProps} params={{ ...mockProps.params, ImageCount: '1' }} />
+      );
+      expect(container.querySelector('[data-hero-images="1"]')).toBeInTheDocument();
+      expect(screen.getAllByRole('img')).toHaveLength(1);
+      expect(container.querySelector('[data-hero-background="full"] img')).toHaveClass('object-cover');
+    });
+
+    it('keeps the blur overlay unless it is turned off', () => {
+      const { container, rerender } = render(<HeroSTDefault {...mockProps} />);
+      expect(container.querySelector('[data-blur-overlay="on"]')).toHaveClass('backdrop-blur-[20px]');
+
+      rerender(
+        <HeroSTDefault {...mockProps} params={{ ...mockProps.params, BlurOverlay: 'Off' }} />
+      );
+      expect(container.querySelector('[data-blur-overlay="off"]')).not.toHaveClass(
+        'backdrop-blur-[20px]'
+      );
     });
   });
 });

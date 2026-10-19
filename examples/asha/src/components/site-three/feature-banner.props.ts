@@ -9,6 +9,7 @@ export interface FeatureItemFields {
 
 export interface FeatureBannerFields {
   title: CompatibleField<Field<string>>;
+  subTitle?: CompatibleField<Field<string>>;
   link: CompatibleField<LinkField>;
   children: {
     results: FeatureItemFields[];

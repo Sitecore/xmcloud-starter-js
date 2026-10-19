@@ -15,7 +15,7 @@
 
 @layer base {
   html {
-    font-family: 'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
+    font-family: 'Roboto', ui-sans-serif, system-ui, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 400;

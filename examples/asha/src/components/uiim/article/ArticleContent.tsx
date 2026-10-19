@@ -41,6 +41,7 @@ export const Default = ({ params, page }: ArticleContentProps): JSX.Element => {
   const fields = (page?.layout?.sitecore?.route?.fields || {}) as ArticleContentRouteFields;
   const {
     Content,
+    content,
     pageHeaderTitle,
     pageShortTitle,
     pageSubtitle,
@@ -49,15 +50,17 @@ export const Default = ({ params, page }: ArticleContentProps): JSX.Element => {
     pageDisplayDate,
     pageReadTime,
   } = fields;
+  const showContentField = params?.ShowContent === '1' || params?.ShowContent?.toLowerCase() === 'true';
+  const bodyField = showContentField ? content ?? Content : Content;
 
   const headingField = hasText(pageHeaderTitle) || isEditing ? pageHeaderTitle : pageTitle;
   const hasHeading = hasText(headingField);
-  const showShortTitle = hasText(pageShortTitle) || isEditing;
-  const showSubtitle = hasText(pageSubtitle) || isEditing;
-  const showSummary = hasText(pageSummary) || isEditing;
-  const showContent = hasRichText(Content) || isEditing;
-  const showDate = hasText(pageDisplayDate) || isEditing;
-  const showReadTime = hasText(pageReadTime) || isEditing;
+  const showShortTitle = hasText(pageShortTitle) || (isEditing && pageShortTitle !== undefined);
+  const showSubtitle = hasText(pageSubtitle) || (isEditing && pageSubtitle !== undefined);
+  const showSummary = hasText(pageSummary) || (isEditing && pageSummary !== undefined);
+  const showContent = hasRichText(bodyField) || (isEditing && bodyField !== undefined);
+  const showDate = hasText(pageDisplayDate) || (isEditing && pageDisplayDate !== undefined);
+  const showReadTime = hasText(pageReadTime) || (isEditing && pageReadTime !== undefined);
   const showMeta = showDate || showReadTime;
 
   if (!hasHeading && !showShortTitle && !showSubtitle && !showSummary && !showContent && !showMeta) {
@@ -106,7 +109,9 @@ export const Default = ({ params, page }: ArticleContentProps): JSX.Element => {
                   {formatDisplayDate(pageDisplayDate?.value)}
                 </time>
               ))}
-            {showDate && showReadTime && <span aria-hidden="true">•</span>}
+            {hasText(pageDisplayDate) && hasText(pageReadTime) && (
+              <span aria-hidden="true">•</span>
+            )}
             {showReadTime && <Text field={pageReadTime} />}
           </div>
         )}
@@ -135,7 +140,7 @@ export const Default = ({ params, page }: ArticleContentProps): JSX.Element => {
               '[&_a]:text-primary [&_a]:underline'
             )}
           >
-            <ContentSdkRichText field={Content} />
+            <ContentSdkRichText field={bodyField} />
           </div>
         )}
       </div>
