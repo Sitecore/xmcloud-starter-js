@@ -41,7 +41,7 @@ export const Default = ({ fields, params, page }: PracticePortalComponentProps):
   const content = hasPortalContent(routeFields) ? routeFields : fields;
   const titleField = hasText(content?.pageTitle) ? content?.pageTitle : content?.Title;
   const visibleSections = sections.filter(({ key }) => hasRichText(content?.[key]) || isEditing);
-  const defaultOpen = visibleSections.some(({ key }) => key === 'AboutThisContent')
+  const defaultOpen: PracticePortalSectionKey[] = visibleSections.some(({ key }) => key === 'AboutThisContent')
     ? ['AboutThisContent']
     : visibleSections.slice(0, 1).map(({ key }) => key);
   const [openKeys, setOpenKeys] = useState<PracticePortalSectionKey[]>(defaultOpen);
@@ -64,10 +64,10 @@ export const Default = ({ fields, params, page }: PracticePortalComponentProps):
         <Text field={titleField} tag="h1" className="text-4xl font-medium tracking-tight text-[#6d645b] md:text-5xl" />
       )}
       <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-        {(hasLink(content?.TopicsLink) || isEditing) && (
-          <ContentSdkLink field={content?.TopicsLink} className="text-sm text-[#00778b] hover:underline">
+        {content?.TopicsLink && (hasLink(content.TopicsLink) || isEditing) && (
+          <ContentSdkLink field={content.TopicsLink} className="text-sm text-[#00778b] hover:underline">
             <span aria-hidden="true">◂ </span>
-            {content?.TopicsLink?.value?.text || 'View All Portal Topics'}
+            {content.TopicsLink.value?.text || 'View All Portal Topics'}
           </ContentSdkLink>
         )}
         {visibleSections.length > 0 && (
