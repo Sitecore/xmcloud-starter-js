@@ -2,241 +2,143 @@
 
 import type React from 'react';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
+import { ChevronDown, Globe, Menu } from 'lucide-react';
 import { CompatibleLink } from '@/components/content-sdk/CompatibleLink';
-import { Menu } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { cn } from '@/lib/utils';
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from '@/components/ui/navigation-menu';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Default as ImageWrapper } from '@/components/image/ImageWrapper.dev';
 import type { GlobalHeaderProps } from './global-header.props';
 import { Button } from '@/components/ui/button';
-import { useMatchMedia } from '@/hooks/use-match-media';
-import { AnimatedHoverNav } from '@/components/ui/animated-hover-nav';
 import { getFieldValue } from '@/lib/component-props';
 
+/** Shown when no logo image has been set on the header datasource. */
+const FALLBACK_WORDMARK = 'williams lea';
+
+/**
+ * Two-tier corporate header: a slim brand-colour utility bar above a white
+ * navigation bar with the logo, primary links and a contact button.
+ */
 export const GlobalHeaderDefault: React.FC<GlobalHeaderProps> = (props) => {
   const { fields, isPageEditing } = props ?? {};
-  const { logo, primaryNavigationLinks, headerContact } = fields?.data?.item ?? {};
+  const { logo, primaryNavigationLinks, utilityNavigationLinks, headerContact } =
+    fields?.data?.item ?? {};
   const logoField = getFieldValue(logo as any);
   const headerContactField = getFieldValue(headerContact as any);
+  const primaryItems = primaryNavigationLinks?.targetItems ?? [];
+  const utilityItems = utilityNavigationLinks?.targetItems ?? [];
   const [isOpen, setIsOpen] = useState(false);
-  const [sheetAnimationComplete, setSheetAnimationComplete] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const [prevScrollY, setPrevScrollY] = useState(0);
-  const isReducedMotion = useMatchMedia('(prefers-reduced-motion: reduce)');
-  const navRef = useRef<HTMLDivElement>(null);
-  // Reset sheet animation state when sheet closes
-  useEffect(() => {
-    if (!isOpen) {
-      setSheetAnimationComplete(false);
-    }
-  }, [isOpen]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY < 10) {
-        setVisible(true);
-      } else if (currentScrollY < prevScrollY) {
-        setVisible(true);
-      } else if (currentScrollY > 10 && currentScrollY > prevScrollY) {
-        setVisible(false);
-      }
-      setPrevScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollY]);
-
-  // Sheet animation duration in seconds
-  const sheetAnimationDuration = isReducedMotion ? 0 : 0.3;
+  const logoContent = logoField?.value?.src ? (
+    <ImageWrapper
+      image={logoField}
+      className="h-9 w-auto object-contain"
+      sizes="160px"
+      alt="Home"
+    />
+  ) : (
+    <span className="flex items-center gap-2 text-[22px] leading-none tracking-tight text-primary">
+      <span className="inline-block size-3 rounded-full border-[3px] border-current" aria-hidden="true" />
+      {FALLBACK_WORDMARK}
+    </span>
+  );
 
   return (
-    <AnimatePresence mode="wait" data-component="GlobalHeader">
-      <motion.header
-        initial={{ opacity: 1 }}
-        animate={{ opacity: visible ? 1 : 0 }}
-        transition={{ duration: isReducedMotion ? 0 : 0.2 }}
-        className={cn(
-          'bg-background/80 @container sticky top-0 z-50 flex h-[96px] w-full items-center justify-center border-b backdrop-blur-md'
-        )}
-      >
-        <div className="@xl:px-8 mx-auto flex h-16 w-full max-w-screen-2xl items-center px-4">
-          <div className="mr-8">
-            <div className="flex w-[112px] items-stretch space-x-2 [&_.image-container]:w-full">
-              {!isPageEditing ? (
-                <Link href="/" className="" prefetch={false} aria-label="Home">
-                  <ImageWrapper
-                    image={logoField}
-                    className="w-full object-contain"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    alt="Home"
-                  />
-                </Link>
-              ) : (
-                <ImageWrapper
-                  image={logoField}
-                  className="w-full object-contain"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Home"
-                />
-              )}
-            </div>
-          </div>
-          {/* Desktop Navigation */}
-          <nav className="@lg:flex @lg:flex-1 hidden" ref={navRef} aria-label="Main navigation">
-            <NavigationMenu className="w-full">
-              <div className="relative w-full">
-                <AnimatedHoverNav
-                  mobileBreakpoint="md"
-                  parentRef={navRef}
-                  indicatorClassName="bg-primary rounded-default absolute inset-0 -z-10 block"
-                >
-                  <NavigationMenuList className="flex w-full justify-between">
-                    {primaryNavigationLinks?.targetItems &&
-                      primaryNavigationLinks.targetItems.length > 0 &&
-                      primaryNavigationLinks?.targetItems.map((item, index) => (
-                        <NavigationMenuItem
-                          key={`${getFieldValue(item.link as any)?.value?.text}-${index}`}
-                        >
-                          {getFieldValue(item.link as any) &&
-                            (isPageEditing || getFieldValue(item.link as any)?.value?.href) && (
-                            <Button
-                              variant="ghost"
-                              asChild
-                              className="font-body bg-transparent text-base font-medium hover:bg-transparent"
-                            >
-                              <CompatibleLink
-                                field={getFieldValue(item.link as any)}
-                                editable={isPageEditing}
-                                prefetch={false}
-                              />
-                            </Button>
-                            )}
-                        </NavigationMenuItem>
-                      ))}
-                  </NavigationMenuList>
-                </AnimatedHoverNav>
-              </div>
-            </NavigationMenu>
-          </nav>
-          {/* Desktop CTA */}
-          {headerContactField?.value && (
-            <div className="@lg:flex @lg:items-center @lg:justify-end hidden">
-              <Button asChild className="font-heading text-base font-medium">
-                <CompatibleLink
-                  field={headerContactField}
-                  editable={isPageEditing}
-                  prefetch={false}
-                />
-              </Button>
-            </div>
+    <header data-component="GlobalHeader" className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      {/* Utility bar */}
+      <div className="bg-primary text-primary-foreground hidden lg:block">
+        <ul className="mx-auto flex h-9 max-w-screen-2xl items-center justify-end gap-7 px-12 text-sm">
+          {utilityItems.map((item, index) => {
+            const link = getFieldValue(item.link as any);
+            if (!link || (!isPageEditing && !link?.value?.href)) return null;
+            return (
+              <li key={`${link?.value?.text}-${index}`}>
+                <CompatibleLink field={link} editable={isPageEditing} prefetch={false} className="hover:underline" />
+              </li>
+            );
+          })}
+          <li className="flex items-center gap-1">
+            <Globe className="size-3.5" aria-hidden="true" />
+            English
+          </li>
+        </ul>
+      </div>
+
+      {/* Main bar */}
+      <div className="border-b border-border">
+        <div className="mx-auto flex h-[57px] max-w-screen-2xl items-center justify-between gap-6 px-4 lg:px-12">
+          {isPageEditing ? (
+            logoContent
+          ) : (
+            <Link href="/" prefetch={false} aria-label="Home">
+              {logoContent}
+            </Link>
           )}
-          {/* Mobile Navigation */}
-          <nav className="@lg:hidden flex flex-1 justify-end" aria-label="Mobile navigation">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="bg-background/30 fixed inset-0 z-40 backdrop-blur-sm"
-                    onClick={() => setIsOpen(false)}
-                    aria-hidden="true"
-                  />
-                )}
-              </AnimatePresence>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="hover:bg-transparent [&_svg]:size-8" aria-label="Toggle navigation menu">
-                  <Menu />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent
-                side="bottom"
-                className="bg-background/60 h-[100dvh] border-t-0 p-0 backdrop-blur-md [&>button_svg]:size-8"
-              >
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                  transition={{
-                    duration: sheetAnimationDuration,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  onAnimationComplete={() => setSheetAnimationComplete(true)}
-                  className="my-12 flex h-full w-full flex-col p-6"
-                >
-                  <AnimatePresence>
-                    {sheetAnimationComplete && (
-                      <motion.nav
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        className="flex flex-col space-y-4"
-                        aria-label="Mobile navigation menu"
-                      >
-                        {primaryNavigationLinks?.targetItems &&
-                          primaryNavigationLinks.targetItems.length > 0 &&
-                          primaryNavigationLinks?.targetItems.map((item, index) => (
-                            <motion.div
-                              key={`${getFieldValue(item.link as any)?.value?.text}-mobile`}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{
-                                delay: 0.05 * index,
-                                duration: isReducedMotion ? 0 : 0.3,
-                              }}
-                              className="flex justify-center"
-                            >
-                              <Button variant="ghost" asChild onClick={() => setIsOpen(false)}>
-                                <CompatibleLink
-                                  field={getFieldValue(item.link as any)}
-                                  editable={isPageEditing}
-                                  prefetch={false}
-                                />
-                              </Button>
-                            </motion.div>
-                          ))}
-                        {headerContactField?.value && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{
-                              delay: primaryNavigationLinks?.targetItems?.length
-                                ? 0.05 * primaryNavigationLinks.targetItems.length
-                                : 0,
-                              duration: isReducedMotion ? 0 : 0.3,
-                            }}
-                            className="flex justify-center"
-                          >
-                            <Button asChild onClick={() => setIsOpen(false)}>
-                              <CompatibleLink
-                                field={headerContactField}
-                                editable={isPageEditing}
-                                prefetch={false}
-                              />
-                            </Button>
-                          </motion.div>
-                        )}
-                      </motion.nav>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              </SheetContent>
-            </Sheet>
+
+          <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
+            <ul className="flex items-center gap-8 text-sm">
+              {primaryItems.map((item, index) => {
+                const link = getFieldValue(item.link as any);
+                if (!link || (!isPageEditing && !link?.value?.href)) return null;
+                return (
+                  <li key={`${link?.value?.text}-${index}`} className="flex items-center gap-1.5">
+                    <CompatibleLink
+                      field={link}
+                      editable={isPageEditing}
+                      prefetch={false}
+                      className="text-foreground hover:text-primary py-4 transition-colors"
+                    />
+                    <ChevronDown className="size-3" aria-hidden="true" />
+                  </li>
+                );
+              })}
+            </ul>
+            {(headerContactField?.value?.href || isPageEditing) && (
+              <Button asChild className="rounded-none">
+                <CompatibleLink field={headerContactField} editable={isPageEditing} prefetch={false} />
+              </Button>
+            )}
           </nav>
+
+          {/* Mobile navigation */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-transparent lg:hidden [&_svg]:size-6"
+                aria-label="Toggle navigation menu"
+              >
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-80 bg-white p-6">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <nav className="mt-10 flex flex-col" aria-label="Mobile navigation">
+                {[...primaryItems, ...utilityItems].map((item, index) => {
+                  const link = getFieldValue(item.link as any);
+                  if (!link?.value?.href) return null;
+                  return (
+                    <CompatibleLink
+                      key={`${link?.value?.text}-mobile-${index}`}
+                      field={link}
+                      editable={false}
+                      prefetch={false}
+                      className="border-b border-border py-3.5 text-base"
+                      onClick={() => setIsOpen(false)}
+                    />
+                  );
+                })}
+                {headerContactField?.value?.href && (
+                  <Button asChild className="mt-6 rounded-none" onClick={() => setIsOpen(false)}>
+                    <CompatibleLink field={headerContactField} editable={false} prefetch={false} />
+                  </Button>
+                )}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
-      </motion.header>
-    </AnimatePresence>
+      </div>
+    </header>
   );
 };

@@ -1,4 +1,4 @@
-import { Field } from '@sitecore-content-sdk/nextjs';
+import { Field, LinkField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { EnumValues } from '@/enumerations/generic.enum';
 import { ThemeLimited as Theme } from '@/enumerations/ThemeLimited.enum';
@@ -12,6 +12,7 @@ export type TextBannerFields = {
   fields: {
     heading: Field<string>; // Sitecore editable text field
     description?: Field<string>; // Sitecore editable text field
+    link?: LinkField; // Optional call to action
   };
   isPageEditing?: boolean;
 };

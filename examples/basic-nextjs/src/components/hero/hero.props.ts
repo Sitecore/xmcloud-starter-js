@@ -9,6 +9,7 @@ export interface HeroFields {
   title: Field<string>;
   image: ImageField;
   description?: Field<string>;
+  badge?: Field<string>;
   bannerText?: Field<string>;
   bannerCTA?: LinkField;
   searchLink?: LinkField;

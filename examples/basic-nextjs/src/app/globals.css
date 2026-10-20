@@ -12,8 +12,9 @@
   --color-accent: #ff9e25;
   --color-accent-foreground: #000000;
   --color-ring: #004e97;
-  --color-secondary: #f5f5f5;
-  --color-secondary-foreground: #333d47;
+  --color-secondary: #ffffff;
+  --color-secondary-foreground: #004e97;
+  --color-brand-navy: #0b2a5b;
   --color-muted: #f5f5f5;
   --color-muted-foreground: #5b6573;
   --color-dark: #0b2a5b;
@@ -41,6 +42,39 @@
 /* Footer typography uses Montserrat; scoping the variable keeps the kit's `*` rule consistent. */
 footer [class*='footer'] {
   --font-body: var(--font-wl-footer), 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Full-bleed decorations (hero rings, watermarks) must never cause sideways scrolling. */
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* Brand backgrounds shared by the restyled kit components. */
+@utility bg-brand-hero {
+  background:
+    radial-gradient(ellipse at 18% 28%, rgb(130 160 210 / 0.55) 0%, rgb(30 55 105 / 0) 42%),
+    radial-gradient(ellipse at 82% 18%, rgb(100 130 190 / 0.45) 0%, rgb(20 40 80 / 0) 40%),
+    radial-gradient(ellipse at 62% 82%, rgb(70 100 160 / 0.5) 0%, rgb(10 25 60 / 0) 50%),
+    linear-gradient(160deg, #1b2f5c 0%, #2c4778 40%, #22396a 65%, #0f1f44 100%);
+}
+
+@utility bg-brand-outcomes {
+  background:
+    radial-gradient(ellipse at 28% 105%, rgb(140 90 200 / 0.55), rgb(0 0 0 / 0) 55%),
+    radial-gradient(ellipse at 85% 40%, rgb(170 70 150 / 0.45), rgb(0 0 0 / 0) 50%),
+    linear-gradient(180deg, #7b7fb8 0%, #3d3f86 35%, #151640 70%, #05051a 100%);
+}
+
+@utility bg-brand-cta {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgb(122 63 160 / 0.6), rgb(0 0 0 / 0) 55%),
+    radial-gradient(ellipse at 85% 50%, rgb(31 138 163 / 0.5), rgb(0 0 0 / 0) 55%),
+    linear-gradient(90deg, #0b2a5b 0%, #004e97 100%);
 }
 
 /* Kit base styles, kept in the base layer so they never override component or theme classes. */

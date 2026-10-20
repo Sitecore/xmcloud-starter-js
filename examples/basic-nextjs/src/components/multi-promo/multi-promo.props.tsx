@@ -32,6 +32,9 @@ export type MultiPromoItemProps = {
   heading: {
     jsonValue: Field<string>;
   };
+  description?: {
+    jsonValue: Field<string>;
+  };
   image: {
     jsonValue: ImageField;
   };

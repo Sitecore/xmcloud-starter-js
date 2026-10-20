@@ -1,6 +1,7 @@
 'use client';
 
 import { Text } from '@sitecore-content-sdk/nextjs';
+import { Mail } from 'lucide-react';
 import { SubscriptionBannerProps } from './subscription-banner.props';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -12,53 +13,37 @@ type FormValues = {
   email: string;
 };
 
+/**
+ * Brand-blue newsletter strip: icon, title and supporting line on the left,
+ * an inline email form on the right.
+ */
 export const Default: React.FC<SubscriptionBannerProps> = ({ fields }) => {
-  const {
-    titleRequired,
-    descriptionOptional,
-    buttonLink,
-    emailPlaceholder,
-    emailErrorMessage,
-    thankYouMessage,
-  } = fields || {};
+  const { titleRequired, descriptionOptional, buttonLink, emailPlaceholder, emailErrorMessage, thankYouMessage } =
+    fields || {};
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const form = useForm<FormValues>({
-    defaultValues: {
-      email: '',
-    },
-    mode: 'onTouched',
-  });
+  const form = useForm<FormValues>({ defaultValues: { email: '' }, mode: 'onTouched' });
 
-  const onSubmit = async (data: FormValues) => {
-    // Handle form submission
-    console.log(data);
+  const onSubmit = async () => {
     setIsSubmitted(true);
-    // Reset the form to clear the input, then set the thank you message
-    form.reset({ email: thankYouMessage?.value || 'Thank you' });
+    form.reset({ email: thankYouMessage?.value || 'Thank you for subscribing' });
   };
 
   return (
-    <section className="w-full mx-auto px-4 py-16 text-center">
-      <div className="max-w-5xl mx-auto @container">
-        {titleRequired && (
-          <Text
-            tag="h2"
-            field={titleRequired}
-            className="text-primary font-heading font-normal leading-tight tracking-tight mb-6 [font-size:clamp(theme(fontSize.3xl),5cqi,theme(fontSize.7xl))]"
-          />
-        )}
-        {descriptionOptional && (
-          <Text
-            tag="p"
-            field={descriptionOptional}
-            className="font-body text-lg text-secondary-foreground mb-12"
-          />
-        )}
+    <section data-component="SubscriptionBanner" className="w-full bg-white px-6 py-12">
+      <div className="bg-primary text-primary-foreground mx-auto flex max-w-[1311px] flex-col gap-6 px-8 py-8 md:flex-row md:items-center md:justify-between md:px-10">
+        <div className="flex items-start gap-4">
+          <Mail className="mt-1 size-7 shrink-0" aria-hidden="true" />
+          <div>
+            {titleRequired && (
+              <Text tag="h2" field={titleRequired} className="text-xl font-light leading-snug md:text-[1.375rem]" />
+            )}
+            {descriptionOptional?.value && (
+              <Text tag="p" field={descriptionOptional} className="mt-1 text-sm font-light text-white/80" />
+            )}
+          </div>
+        </div>
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-6 justify-center items-center max-w-md mx-auto"
-          >
+          <form onSubmit={form.handleSubmit(onSubmit)} className="flex w-full flex-col gap-3 sm:flex-row md:max-w-md">
             <FormField
               control={form.control}
               name="email"
@@ -66,7 +51,7 @@ export const Default: React.FC<SubscriptionBannerProps> = ({ fields }) => {
                 required: 'Email is required',
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: emailErrorMessage?.value || 'Email format is invalid',
+                  message: emailErrorMessage?.value || 'Please enter a valid email address',
                 },
               }}
               render={({ field }) => (
@@ -74,21 +59,17 @@ export const Default: React.FC<SubscriptionBannerProps> = ({ fields }) => {
                   <FormControl>
                     <Input
                       type="email"
-                      placeholder={emailPlaceholder?.value || 'Enter your email address'}
-                      className="flex-1 w-full rounded-full px-6 py-3 border-input"
+                      placeholder={emailPlaceholder?.value || 'Your work email'}
+                      className="h-11 w-full rounded-none border-white bg-white text-black"
                       disabled={isSubmitted}
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage className="text-destructive text-sm mt-2" />
+                  <FormMessage className="mt-2 text-sm text-white" />
                 </FormItem>
               )}
             />
-            <Button
-              type="submit"
-              className="flex-1 rounded-full px-8 py-2.5"
-              disabled={isSubmitted}
-            >
+            <Button type="submit" variant="secondary" className="h-11 rounded-none px-5" disabled={isSubmitted}>
               {buttonLink?.value?.text || 'Subscribe'}
             </Button>
           </form>
