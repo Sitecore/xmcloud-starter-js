@@ -88,7 +88,7 @@ export const GlobalHeaderDefault: React.FC<GlobalHeaderProps> = (props) => {
                       prefetch={false}
                       className="text-foreground hover:text-primary py-4 transition-colors"
                     />
-                    <ChevronDown className="size-3" aria-hidden="true" />
+                    {link?.value?.href !== '/' && <ChevronDown className="size-3" aria-hidden="true" />}
                   </li>
                 );
               })}
