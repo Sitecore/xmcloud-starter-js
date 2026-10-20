@@ -123,6 +123,7 @@ components:
     siteCollection: "asha"
     notes:
       - "2026-10-19: Homepage news grid. Articles are Article Page items under Publications/ASHA Headlines. Authors pick any item under Publications with the Articles treelist, or select a Publications page and the listing uses its children. Card links use sourceLink. titleAccent turns the ASHA Leader title magenta."
+      - "2026-10-19: Layout left isContentResolved false because the first ComponentQuery also expanded page fields and pageThumbnail jsonValue, which Edge layout rejected. Query now returns Title plus Articles targetItems and children, with pageThumbnail as raw value XML. React reads that XML for the card image."
     react:
       filePath: "src/components/uiim/news/NewsListing.tsx"
       componentName: "NewsListing"

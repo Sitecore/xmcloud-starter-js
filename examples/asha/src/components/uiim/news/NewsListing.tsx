@@ -32,8 +32,25 @@ const articleHref = (article: NewsListingArticle): string => {
   return article.url?.path || '#';
 };
 
+const xmlAttribute = (xml: string, name: string): string => {
+  const match = xml.match(new RegExp(`${name}="([^"]*)"`, 'i'));
+  return (match?.[1] ?? '')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+};
+
 const articleImage = (article: NewsListingArticle): { src: string; alt: string } => {
-  const image = getFieldValue(article.pageThumbnail)?.value;
+  const thumbnail = article.pageThumbnail;
+  const rawXml = thumbnail && 'value' in thumbnail && typeof thumbnail.value === 'string' ? thumbnail.value : '';
+  if (rawXml) {
+    return {
+      src: xmlAttribute(rawXml, 'src'),
+      alt: xmlAttribute(rawXml, 'alt') || articleTitle(article),
+    };
+  }
+
+  const image = getFieldValue(thumbnail && 'jsonValue' in thumbnail ? thumbnail : undefined)?.value;
   return {
     src: typeof image?.src === 'string' ? image.src : '',
     alt: typeof image?.alt === 'string' ? image.alt : articleTitle(article),

@@ -7,7 +7,7 @@ export type NewsListingArticle = {
   url?: { path?: string };
   pageTitle?: GraphQLField<Field<string>>;
   pageHeaderTitle?: GraphQLField<Field<string>>;
-  pageThumbnail?: GraphQLField<ImageField>;
+  pageThumbnail?: GraphQLField<ImageField> | { value?: string };
   sourceLink?: GraphQLField<LinkField>;
   titleAccent?: GraphQLField<Field<boolean | string>>;
 };

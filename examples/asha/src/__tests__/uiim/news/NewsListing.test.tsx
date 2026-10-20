@@ -96,6 +96,42 @@ describe('NewsListing', () => {
     );
   });
 
+  it('reads an external image stored as image XML', () => {
+    render(
+      <Default
+        rendering={{ componentName: 'NewsListing' }}
+        page={mockPage}
+        params={{}}
+        fields={{
+          data: {
+            datasource: {
+              title: { jsonValue: { value: 'NEWS' } },
+              articles: {
+                targetItems: [
+                  {
+                    id: 'cpt',
+                    name: 'cpt',
+                    pageTitle: { jsonValue: { value: 'Audiology related CPT codes' } },
+                    pageThumbnail: {
+                      value:
+                        '<image src="https://www.asha.org/siteassets/homepage/news/news-aud-cpt-code-ruc.png" alt="CPT review" />',
+                    },
+                    sourceLink: { jsonValue: { value: { href: 'https://www.asha.org/news/cpt/', text: 'Read' } } },
+                  },
+                ],
+              },
+            },
+          },
+        }}
+      />
+    );
+
+    expect(screen.getByRole('img', { name: 'CPT review' })).toHaveAttribute(
+      'src',
+      'https://www.asha.org/siteassets/homepage/news/news-aud-cpt-code-ruc.png'
+    );
+  });
+
   it('asks for a datasource when fields are missing', () => {
     render(<Default rendering={{ componentName: 'NewsListing' }} page={mockPage} params={{}} />);
 
