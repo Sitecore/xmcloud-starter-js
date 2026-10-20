@@ -24,6 +24,8 @@
   --background-image-gradient: linear-gradient(160deg, #1b2f5c 0%, #2c4778 40%, #0f1f44 100%);
   --background-image-gradient-secondary: linear-gradient(90deg, #0b2a5b 0%, #004e97 100%);
   --border-radius-default: 0.25rem;
+  /* Tailwind v4 builds `rounded-*` utilities from --radius-*; the kit tokens use v3 naming. */
+  --radius-default: 0.25rem;
   --font-family-heading: var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
   --font-family-body: var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
   --font-family-accent: var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
