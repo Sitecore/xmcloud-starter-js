@@ -37,7 +37,6 @@
 }
 
 /* Footer typography uses Montserrat; scoping the variable keeps the kit's `*` rule consistent. */
-.wl-footer,
 footer [class*='footer'] {
   --font-body: var(--font-wl-footer), 'Helvetica Neue', Arial, sans-serif;
 }

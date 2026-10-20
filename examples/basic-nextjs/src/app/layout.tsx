@@ -1,6 +1,5 @@
 import { Figtree, Montserrat } from 'next/font/google';
 import './globals.css';
-import '../assets/williamslea.css';
 
 const sansFont = Figtree({
   subsets: ['latin'],
