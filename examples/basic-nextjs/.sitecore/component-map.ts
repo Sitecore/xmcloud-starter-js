@@ -4,6 +4,24 @@ import { BYOCServerWrapper, NextjsContentSdkComponent, FEaaSServerWrapper } from
 import { Form } from '@sitecore-content-sdk/nextjs';
 
 // end of built-in components
+import * as Signaldev from 'src/components/icon/svg/signal.dev';
+import * as Playdev from 'src/components/icon/svg/play.dev';
+import * as LinePlaydev from 'src/components/icon/svg/line-play.dev';
+import * as Diversitydev from 'src/components/icon/svg/diversity.dev';
+import * as CrossArrowsdev from 'src/components/icon/svg/cross-arrows.dev';
+import * as Communitiesdev from 'src/components/icon/svg/communities.dev';
+import * as ArrowUpRightdev from 'src/components/icon/svg/arrow-up-right.dev';
+import * as ArrowRightdev from 'src/components/icon/svg/arrow-right.dev';
+import * as ArrowLeftdev from 'src/components/icon/svg/arrow-left.dev';
+import * as YoutubeIcondev from 'src/components/icon/svg/YoutubeIcon.dev';
+import * as TwitterIcondev from 'src/components/icon/svg/TwitterIcon.dev';
+import * as LinkedInIcondev from 'src/components/icon/svg/LinkedInIcon.dev';
+import * as InternalIcondev from 'src/components/icon/svg/InternalIcon.dev';
+import * as InstagramIcondev from 'src/components/icon/svg/InstagramIcon.dev';
+import * as FileIcondev from 'src/components/icon/svg/FileIcon.dev';
+import * as FacebookIcondev from 'src/components/icon/svg/FacebookIcon.dev';
+import * as ExternalIcondev from 'src/components/icon/svg/ExternalIcon.dev';
+import * as EmailIcondev from 'src/components/icon/svg/EmailIcon.dev';
 import * as TopicListing from 'src/components/topic-listing/TopicListing';
 import * as TopicItemdev from 'src/components/topic-listing/TopicItem.dev';
 import * as TextBannerTextTopdev from 'src/components/text-banner/TextBannerTextTop.dev';
@@ -68,6 +86,25 @@ import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
+  ['success-compact', { ...SuccessCompactdev }],
+  ['line-play', { ...LinePlaydev }],
+  ['cross-arrows', { ...CrossArrowsdev }],
+  ['arrow-up-right', { ...ArrowUpRightdev }],
+  ['arrow-right', { ...ArrowRightdev }],
+  ['arrow-left', { ...ArrowLeftdev }],
+  ['signal', { ...Signaldev }],
+  ['play', { ...Playdev }],
+  ['diversity', { ...Diversitydev }],
+  ['communities', { ...Communitiesdev }],
+  ['YoutubeIcon', { ...YoutubeIcondev }],
+  ['TwitterIcon', { ...TwitterIcondev }],
+  ['LinkedInIcon', { ...LinkedInIcondev }],
+  ['InternalIcon', { ...InternalIcondev }],
+  ['InstagramIcon', { ...InstagramIcondev }],
+  ['FileIcon', { ...FileIcondev }],
+  ['FacebookIcon', { ...FacebookIcondev }],
+  ['ExternalIcon', { ...ExternalIcondev }],
+  ['EmailIcon', { ...EmailIcondev }],
   ['TopicListing', { ...TopicListing }],
   ['TopicItem', { ...TopicItemdev }],
   ['TextBannerTextTop', { ...TextBannerTextTopdev }],
