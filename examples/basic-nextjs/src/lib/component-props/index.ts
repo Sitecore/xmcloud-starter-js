@@ -33,6 +33,12 @@ export type GraphQLImageField = GraphQLField<ImageField>;
 export type GraphQLLinkField = GraphQLField<LinkField>;
 export type GraphQLRichTextField = GraphQLField<RichTextField>;
 
+// Deprecated aliases kept for incremental migration from legacy IGQL naming.
+export type IGQLTextField = GraphQLTextField;
+export type IGQLImageField = GraphQLImageField;
+export type IGQLLinkField = GraphQLLinkField;
+export type IGQLRichTextField = GraphQLRichTextField;
+
 export type GraphQLDatasource<T> = {
   data: {
     datasource: T;
@@ -64,13 +70,46 @@ export const getDatasource = <T>(
   return graphFields?.data?.datasource ?? graphFields?.data?.contextItem ?? (fields as T);
 };
 
-export const getFieldValue = <T>(field: CompatibleField<T> | null | undefined): T | undefined => {
+export const getFieldValue = <T>(
+  field: CompatibleField<T> | { jsonValue?: T } | null | undefined
+): T | undefined => {
   if (!field) return undefined;
 
-  const maybeWrapped = field as { jsonValue?: T };
-  if ('jsonValue' in maybeWrapped) {
-    return maybeWrapped.jsonValue;
+  const value = field as GraphQLField<T>;
+  return value?.jsonValue !== undefined ? value.jsonValue : (field as T);
+};
+
+const isPlainObject = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null && !Array.isArray(value);
+
+const looksLikeFieldValue = (value: Record<string, unknown>): boolean => 'value' in value;
+
+export const normalizeFieldShape = <T>(value: T): T => {
+  if (Array.isArray(value)) {
+    return value.map((item) => normalizeFieldShape(item)) as T;
   }
 
-  return field as T;
+  if (!isPlainObject(value)) {
+    return value;
+  }
+
+  if ('jsonValue' in value) {
+    return {
+      ...value,
+      jsonValue: normalizeFieldShape(value.jsonValue),
+    } as T;
+  }
+
+  if (looksLikeFieldValue(value)) {
+    return {
+      jsonValue: value,
+    } as T;
+  }
+
+  const normalizedObject: Record<string, unknown> = {};
+  for (const [key, child] of Object.entries(value)) {
+    normalizedObject[key] = normalizeFieldShape(child);
+  }
+
+  return normalizedObject as T;
 };
