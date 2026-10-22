@@ -1,1 +1,208 @@
+@import '../assets/styles/kit-theme.css';
 @import 'tailwindcss';
+
+/*
+ * Williams Lea brand overrides for the kit design tokens (kit-theme.css is the kit's generated
+ * token file and stays untouched). Later @theme declarations win over earlier ones.
+ */
+@theme {
+  --color-primary: #004e97;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #0b2a5b;
+  --color-accent: #ff9e25;
+  --color-accent-foreground: #000000;
+  --color-ring: #004e97;
+  --color-secondary: #ffffff;
+  --color-secondary-foreground: #004e97;
+  --color-brand-navy: #0b2a5b;
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #5b6573;
+  --color-dark: #0b2a5b;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #004e97;
+  --color-border: #d9dee5;
+  --color-input: #d9dee5;
+  --background-image-gradient: linear-gradient(160deg, #1b2f5c 0%, #2c4778 40%, #0f1f44 100%);
+  --background-image-gradient-secondary: linear-gradient(90deg, #0b2a5b 0%, #004e97 100%);
+  --border-radius-default: 0.25rem;
+  /* Tailwind v4 builds `rounded-*` utilities from --radius-*; the kit tokens use v3 naming. */
+  --radius-default: 0.25rem;
+  --font-family-heading: var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
+  --font-family-body: var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
+  --font-family-accent: var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Kit components read these font variables directly (they were set by next/font in the kit). */
+:root {
+  --font-heading: halyard-display, var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
+  --font-body: halyard-display, var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
+  --font-accent: halyard-display, var(--font-wl-sans), 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Footer typography uses Montserrat; scoping the variable keeps the kit's `*` rule consistent. */
+footer [class*='footer'] {
+  --font-body: var(--font-wl-footer), 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Full-bleed decorations (hero rings, watermarks) must never cause sideways scrolling. */
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* Brand backgrounds shared by the restyled kit components. */
+@utility bg-brand-hero {
+  background:
+    radial-gradient(ellipse at 18% 28%, rgb(130 160 210 / 0.55) 0%, rgb(30 55 105 / 0) 42%),
+    radial-gradient(ellipse at 82% 18%, rgb(100 130 190 / 0.45) 0%, rgb(20 40 80 / 0) 40%),
+    radial-gradient(ellipse at 62% 82%, rgb(70 100 160 / 0.5) 0%, rgb(10 25 60 / 0) 50%),
+    linear-gradient(160deg, #1b2f5c 0%, #2c4778 40%, #22396a 65%, #0f1f44 100%);
+}
+
+@utility bg-brand-outcomes {
+  background:
+    radial-gradient(ellipse at 28% 105%, rgb(140 90 200 / 0.55), rgb(0 0 0 / 0) 55%),
+    radial-gradient(ellipse at 85% 40%, rgb(170 70 150 / 0.45), rgb(0 0 0 / 0) 50%),
+    linear-gradient(180deg, #7b7fb8 0%, #3d3f86 35%, #151640 70%, #05051a 100%);
+}
+
+@utility bg-brand-cta {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgb(122 63 160 / 0.6), rgb(0 0 0 / 0) 55%),
+    radial-gradient(ellipse at 85% 50%, rgb(31 138 163 / 0.5), rgb(0 0 0 / 0) 55%),
+    linear-gradient(90deg, #0b2a5b 0%, #004e97 100%);
+}
+
+/* Kit base styles, kept in the base layer so they never override component or theme classes. */
+@layer base {
+  * {
+    font-family: var(--font-body);
+  }
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-family: var(--font-heading);
+    @apply leading-tight;
+
+    span {
+      font-family: inherit;
+    }
+  }
+
+  h1,
+  .h1 {
+    @apply text-5xl font-light md:text-6xl;
+  }
+
+  h2,
+  .h2 {
+    @apply text-4xl font-light md:text-5xl;
+  }
+
+  h3,
+  .h3 {
+    @apply text-3xl font-normal md:text-4xl;
+  }
+
+  h4,
+  .h4 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h5,
+  .h5 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .btn {
+    font-family: var(--font-accent);
+    @apply inline-block text-sm font-medium transition-colors;
+
+    &.btn-primary {
+      @apply bg-primary text-primary-foreground rounded-default px-5 py-3;
+
+      &:hover {
+        @apply bg-primary-hover;
+      }
+    }
+
+    &.btn-secondary {
+      @apply bg-light text-secondary-foreground hover:bg-light-hover rounded-default px-5 py-3;
+    }
+
+    &.btn-ghost {
+      @apply py-2;
+    }
+
+    &.btn-sharp {
+      @apply rounded-none;
+    }
+
+    &.btn-outline {
+      @apply bg-primary rounded-default px-5 py-3 outline;
+    }
+  }
+}
+
+.sc-jss-empty-placeholder {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.content-sdk-rich-text ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+/* Fade-in animations used by the kit's AnimatedSection */
+.animate .fade-section {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.8s ease-out,
+    transform 1s ease-out;
+  will-change: opacity, visibility;
+}
+
+.animate .fade-section.fade-up {
+  transform: translateY(200px);
+}
+
+.animate .fade-section.fade-side {
+  transform: translateX(200px);
+}
+
+.animate .fade-section.is-visible,
+.editing-mode .animate .fade-section {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+@media (width <= 40rem) {
+  .animate .fade-section {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
+
+.partial-editing-mode header {
+  @apply static mb-0 overflow-hidden;
+}

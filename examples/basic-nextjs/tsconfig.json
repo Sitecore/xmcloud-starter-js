@@ -19,6 +19,9 @@
       ],
       "next/*": [
         "node_modules/next/*"
+      ],
+      "@/*": [
+        "./src/*"
       ]
     },
     "target": "ES2017",
