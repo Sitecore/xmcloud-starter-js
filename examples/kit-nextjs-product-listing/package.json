@@ -61,7 +61,7 @@
     "@radix-ui/themes": "^3.2.1",
     "@sitecore-content-sdk/analytics-core": "^2.1.2",
     "@sitecore-content-sdk/events": "^2.1.2",
-    "@sitecore-content-sdk/nextjs": "^2.4.1",
+    "@sitecore-content-sdk/nextjs": "^2.5.0",
     "@sitecore-content-sdk/personalize": "^2.1.0",
     "@sitecore-feaas/clientside": "^0.6.0",
     "@sitecore/components": "~2.1.0",
@@ -112,7 +112,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@sitecore-content-sdk/cli": "^2.3.0",
+    "@sitecore-content-sdk/cli": "^2.4.0",
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
