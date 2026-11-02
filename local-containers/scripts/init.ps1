@@ -16,10 +16,38 @@ Param (
         ParameterSetName = "env-init")]
     [string]$AdminPassword,
 
-    [Parameter(Mandatory = $false, HelpMessage = "Specifies os version of the base image.")]
-    [ValidateSet("ltsc2019", "ltsc2022")]
+    [Parameter(Mandatory = $false, HelpMessage = "Specifies the Windows LTSC version of the container base images (ltsc2019, ltsc2022, or ltsc2025). Must be compatible with the host OS.")]
+    [ValidateSet("ltsc2019", "ltsc2022", "ltsc2025")]
     [string]$baseOs = "ltsc2022"
 )
+
+function Get-LocalContainerOsImageSettings {
+    param (
+        [Parameter(Mandatory = $true)]
+        [ValidateSet("ltsc2019", "ltsc2022", "ltsc2025")]
+        [string]$BaseOs
+    )
+
+    # Pin Traefik to tags that exist on Docker Hub for each Windows base.
+    # Traefik dropped windowsservercore-1809 after v3.4.1; v3.6.4 is not published for ltsc2025.
+    $traefikImageByOs = @{
+        ltsc2019 = "traefik:v3.4.1-windowsservercore-1809"
+        ltsc2022 = "traefik:v3.6.4-windowsservercore-ltsc2022"
+        ltsc2025 = "traefik:v3.6.23-windowsservercore-ltsc2025"
+    }
+
+    # Sitecore XM Cloud CM/init images exist for ltsc2025, but nonproduction SQL/Solr
+    # (and tools assets) are still published only for ltsc2022. Keep that suffix on 2022
+    # when opting into ltsc2025 so compose can pull supporting images.
+    $externalImageTagSuffix = if ($BaseOs -eq "ltsc2025") { "ltsc2022" } else { $BaseOs }
+
+    return [pscustomobject]@{
+        SitecoreVersion          = "1-$BaseOs"
+        ExternalImageTagSuffix   = $externalImageTagSuffix
+        NodeJsParentImage        = "mcr.microsoft.com/windows/nanoserver:$BaseOs"
+        TraefikImage             = $traefikImageByOs[$BaseOs]
+    }
+}
 
 $ErrorActionPreference = "Stop";
 
@@ -172,11 +200,12 @@ if ($InitEnv) {
     # SITECORE_ADMIN_PASSWORD
     Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword -Path $envFileLocation
 
-    # SITECORE_VERSION
-    Set-EnvFileVariable "SITECORE_VERSION" -Value "1-$baseOS" -Path $envFileLocation
+    $osImages = Get-LocalContainerOsImageSettings -BaseOs $baseOs
 
-    # EXTERNAL_IMAGE_TAG_SUFFIX
-    Set-EnvFileVariable "EXTERNAL_IMAGE_TAG_SUFFIX" -Value $baseOS -Path $envFileLocation
+    Set-EnvFileVariable "SITECORE_VERSION" -Value $osImages.SitecoreVersion -Path $envFileLocation
+    Set-EnvFileVariable "EXTERNAL_IMAGE_TAG_SUFFIX" -Value $osImages.ExternalImageTagSuffix -Path $envFileLocation
+    Set-EnvFileVariable "NODEJS_PARENT_IMAGE" -Value $osImages.NodeJsParentImage -Path $envFileLocation
+    Set-EnvFileVariable "TRAEFIK_IMAGE" -Value $osImages.TraefikImage -Path $envFileLocation
 }
 
 Write-Host "Done!" -ForegroundColor Green
