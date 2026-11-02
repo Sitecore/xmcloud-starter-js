@@ -1,8 +1,12 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { USER_ZIPCODE } from '@/lib/constants';
 import { hasNavigator, hasSessionStorage, isBrowser } from '@/utils/browser';
+import {
+  clearZipcodeFromSession,
+  readZipcodeFromSession,
+  storeZipcodeInSession,
+} from '@/utils/zipcode-storage';
 
 type ZipcodeState = {
   zipcode: string | null;
@@ -10,8 +14,6 @@ type ZipcodeState = {
   error: string | null;
   showModal: boolean;
 };
-
-const STORAGE_KEY = USER_ZIPCODE;
 
 const GEOLOCATION_TIMEOUT = 8000; // 8 seconds timeout before showing modal
 
@@ -83,7 +85,7 @@ export function useZipcode(defaultZipcode: string) {
 
         if (data.postal) {
           if (hasSessionStorage()) {
-            sessionStorage.setItem(STORAGE_KEY, data.postal);
+            storeZipcodeInSession(data.postal);
           }
 
           setState((prev) => ({
@@ -141,7 +143,7 @@ export function useZipcode(defaultZipcode: string) {
           if (zipcode) {
             // Save to sessionStorage
             if (hasSessionStorage()) {
-              sessionStorage.setItem(STORAGE_KEY, zipcode);
+              storeZipcodeInSession(zipcode);
             }
 
             setState((prev) => {
@@ -235,9 +237,9 @@ export function useZipcode(defaultZipcode: string) {
   const updateZipcode = useCallback((newZipcode: string | null) => {
     if (hasSessionStorage()) {
       if (newZipcode) {
-        sessionStorage.setItem(STORAGE_KEY, newZipcode);
+        storeZipcodeInSession(newZipcode);
       } else {
-        sessionStorage.removeItem(STORAGE_KEY);
+        clearZipcodeFromSession();
       }
     }
 
@@ -273,7 +275,7 @@ export function useZipcode(defaultZipcode: string) {
     }
 
     // Try to get zipcode from sessionStorage first (synchronous & fast)
-    const storedZipcode = hasSessionStorage() ? sessionStorage.getItem(STORAGE_KEY) : null;
+    const storedZipcode = hasSessionStorage() ? readZipcodeFromSession() : null;
 
     if (storedZipcode) {
       setState((prev) => ({
