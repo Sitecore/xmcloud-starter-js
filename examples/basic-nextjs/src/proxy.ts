@@ -1,4 +1,4 @@
-import { type NextRequest } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   defineProxy,
   PreviewProxy,
@@ -10,6 +10,12 @@ import {
 import sites from '.sitecore/sites.json';
 import scConfig from 'sitecore.config';
 import { routing } from './i18n/routing';
+import {
+  LOCALE_COOKIE,
+  LOCALE_COOKIE_MAX_AGE,
+  localeFromPath,
+  preferredLocaleRedirect,
+} from './i18n/locale-preference';
 import client from './lib/sitecore-client';
 
 const preview = new PreviewProxy({
@@ -75,8 +81,39 @@ const personalize = new PersonalizeProxy({
   skip: () => false,
 });
 
-export default function proxy(req: NextRequest) {
-  return defineProxy(preview, locale, multisite, redirects, personalize).exec(req);
+/**
+ * Visitor page requests only: Pages editing and preview run in draft mode and pick their
+ * language from Sitecore, so they never follow the remembered visitor language.
+ */
+const isVisitorPageRequest = (req: NextRequest) =>
+  (req.method === 'GET' || req.method === 'HEAD') &&
+  !req.cookies.has('__prerender_bypass') &&
+  !req.nextUrl.searchParams.has('sc_itemid');
+
+export default async function proxy(req: NextRequest) {
+  const visitor = isVisitorPageRequest(req);
+  const remembered = req.cookies.get(LOCALE_COOKIE)?.value;
+
+  // Sitecore links carry no language prefix: keep the visitor in the language they chose
+  // (src/i18n/locale-preference.ts).
+  const target = visitor ? preferredLocaleRedirect(req.nextUrl.pathname, remembered, routing) : null;
+  if (target) {
+    const url = req.nextUrl.clone();
+    url.pathname = target;
+    return NextResponse.redirect(url, 307);
+  }
+
+  const res = await defineProxy(preview, locale, multisite, redirects, personalize).exec(req);
+
+  const fromPath = visitor ? localeFromPath(req.nextUrl.pathname, routing.locales) : undefined;
+  if (fromPath && fromPath !== remembered) {
+    res.cookies.set(LOCALE_COOKIE, fromPath, {
+      path: '/',
+      maxAge: LOCALE_COOKIE_MAX_AGE,
+      sameSite: 'lax',
+    });
+  }
+  return res;
 }
 
 export const config = {

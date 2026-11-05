@@ -15,6 +15,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { getBaseUrl } from "lib/utils";
 import { isIndexingAllowed } from "lib/indexing";
+import { directionFor } from "src/i18n/locale-preference";
+import { DocumentLocale } from "src/components/i18n/DocumentLocale";
 
 type PageProps = {
   params: Promise<{
@@ -60,9 +62,13 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <NextIntlClientProvider>
-      <Providers page={page} componentProps={componentProps}>
-        <Layout page={page} />
-      </Providers>
+      {/* display: contents — sets the language and text direction without a layout box */}
+      <div lang={page.locale} dir={directionFor(page.locale)} className="contents">
+        <DocumentLocale locale={page.locale} />
+        <Providers page={page} componentProps={componentProps}>
+          <Layout page={page} />
+        </Providers>
+      </div>
     </NextIntlClientProvider>
   );
 }

@@ -15,6 +15,7 @@ import { ComponentProps } from 'lib/component-props';
 import { cn } from '@/lib/utils';
 import { TypeaheadSearchBox } from '@/lib/search-ui/TypeaheadSearchBox';
 import { SITECORE_GRADIENT } from '@/lib/demo-ui/sitecore-ui';
+import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher';
 
 interface NavigationLinkFields {
   id: string;
@@ -252,6 +253,7 @@ export const Default = ({
           <NavLinks items={links} />
           <div className="flex items-center gap-3">
             <HeaderSearch datasource={datasource} page={page} rendering={rendering} />
+            <LanguageSwitcher page={page} className="text-[color:var(--brand-header-fg,inherit)]" />
             <CtaButton
               label={datasource.ctaLabel?.jsonValue}
               link={datasource.ctaLink?.jsonValue}
@@ -311,6 +313,13 @@ export const Transparent = ({ fields, params, page }: NavigationHeaderProps): JS
             )}
           />
           <div className="flex items-center gap-2">
+            <LanguageSwitcher
+              page={page}
+              className={cn(
+                'transition-colors duration-300',
+                scrolled ? 'text-[color:var(--brand-header-fg,inherit)]' : 'text-white drop-shadow-sm',
+              )}
+            />
             <CtaButton
               label={datasource.ctaLabel?.jsonValue}
               link={datasource.ctaLink?.jsonValue}
@@ -387,6 +396,7 @@ export const Sitecore = ({
           </div>
           <div className="flex items-center gap-4">
             <HeaderSearch datasource={datasource} page={page} rendering={rendering} />
+            <LanguageSwitcher page={page} />
             {(ctaLink?.value?.href || isEditing) && (
               <ContentSdkLink
                 field={ctaLink}
