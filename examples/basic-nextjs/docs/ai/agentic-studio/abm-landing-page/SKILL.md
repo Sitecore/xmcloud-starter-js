@@ -15,7 +15,7 @@ The marketer is the authority on the account; the web fills the gaps. Sitecore i
 | Example page (never change it, never duplicate it) | `Example Landing Page`, `ff0d2a81-31a5-4b8d-8a53-a1d03734c178` |
 | Brand context (what Sitecore sells) | `Sitecore`, `43723db2-802c-4960-8d86-09fea574c117` (read it yourself, see step 1) |
 | Brand Kit (how Sitecore writes) | the **published** kit named exactly `Sitecore Brand Kit` |
-| Customer Evidence v2 availability | **Sitecore registration verified; frontend deployment pending — use quote-only fallback.** The three fields and `CustomerEvidence` Variant Definition were created/read back on 2026-11-04; new Standard Values are blank. Omit the three v2 field names from write batches until the updated live/editing renderer is deployed and verified. Update this row to enabled only after deployment; a registered variant alone does not make the old rendering host support it. |
+| Customer Evidence v2 availability | **Enabled.** Three live fields/Types and the `CustomerEvidence` Variant Definition are created/read-back verified; new defaults are blank and the four serialized items are committed. Both live and editing rendering hosts served frontend commit `411d14d0` on 2026-11-05. Write the v2 fields together from a published source story, or empty all three when no story is available. |
 | Default goal | `Book a SitecoreAI briefing` → `https://www.sitecore.com/request-a-demo` |
 | Secondary hero link | `Explore the platform` → `https://www.sitecore.com/platform` |
 | Content Hub | Connected DAM at `https://ffde.sitecoresandbox.cloud`; use the connection as configured |
@@ -126,7 +126,7 @@ Name only products and capabilities found in the brand context or Sitecore knowl
 
 ## Field map
 
-Write every existing field below on every run. "Empty" means `""`. **Exception: the three Customer Evidence v2 fields are omitted entirely (not sent as empty strings) while activation is pending in Site facts.** Once enabled, write all three together from the same source story, or empty all three when no story is available. Keep fixed slots; unused stat/FAQ pairs are empty, not filler.
+Write every field below on every run. "Empty" means `""`. Customer Evidence v2 is enabled in this environment: write all three fields together from the same published source story, or empty all three when no story is available. Keep fixed slots; unused stat/FAQ pairs are empty, not filler.
 
 ### Page
 
@@ -177,9 +177,9 @@ Stats describe Sitecore outcomes only; account facts belong in the copy. Use onl
 | `testimonialAuthorImage` | Image | **Manual-only optional:** new page `""`; update preserves the existing value unless replacement/clear is explicitly approved. No portrait search |
 | `partnerLogosImage` | Image | **Manual-only optional:** new page `""`; update preserves the existing value unless replacement/clear is explicitly approved. No logo/strip search |
 
-The quote/author text remains optional and verbatim; portrait/logo fields remain manual-only under *Images*. While v2 activation is pending, the default is A's quote-only presentation. Once enabled, use the source-linked Customer Evidence card below; do not invent a quotation when a story summary is sufficient.
+The quote/author text remains optional and verbatim; portrait/logo fields remain manual-only under *Images*. Use the enabled source-linked Customer Evidence card below. When no customer story is available, leave its three fields empty and use a real quote-only fallback if available; do not invent a quotation when a sourced story summary is sufficient.
 
-### Customer Evidence v2 (enabled only after registration and frontend deployment)
+### Customer Evidence v2 (enabled)
 
 | Field | Type | Rule |
 |---|---|---|

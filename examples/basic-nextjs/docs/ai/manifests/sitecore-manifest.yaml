@@ -1,6 +1,6 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-11-04T16:56:27Z"
-lastUpdatedBy: "pi-agent (Customer Evidence fields/variant created and verified; deployment pending)"
+lastUpdatedAt: "2026-11-05T09:46:54.076Z"
+lastUpdatedBy: "pi-agent (Customer Evidence registration/serialization/deployment verified; Studio skill enabled)"
 
 project:
   siteCollection: "main"
@@ -4086,7 +4086,7 @@ landing-page-customer-evidence-v2:
     path: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingSocialProof/CustomerEvidence"
     itemId: "{4669F382-F588-4560-A69E-54C0C0220BF8}"
     status: "complete"
-  activation: "Default/Sitecore auto-select the card only for complete new fields; optional explicit variant after registration. No shared partial-design edits."
+  activation: "Enabled after live/editor hosts served frontend 411d14d0; Default/Sitecore select the card for complete new fields. Shared layout unchanged."
   verification:
     checkedAt: "2026-11-04T17:04:52.900Z"
     passed:
@@ -4096,15 +4096,23 @@ landing-page-customer-evidence-v2:
       - "New fields present in live template schema; owning Standard Values returns empty values for all three."
       - "Default/Sitecore Variant Definitions retained; CustomerEvidence created/read back under the existing container, allowed on Landing Page Template."
       - "Scoped CLI pull verified the matching environment marker and 4 item IDs/parents/types; only those 4 generated YAML files copied. Inherited descriptions and sort order verified from CLI output."
+      - "Frontend/serialized items pushed as 411d14d0fa82b877ae2bf5b176029b1eb27329d3; both live and editing hosts returned that build SHA with HTTP 200."
+      - "Customer Evidence v2 enabled in the Studio skill/catalog after host verification."
       - "Full offline gate passed: 438 tests across 41 suites, TypeScript, agents:check, 33 component registrations, and scoped serialization validation. Existing unrelated validator review warnings remain non-blocking; no page/shared layout updated."
     pending:
-      - "Commit/push the scoped frontend + 4 serialized items, then verify the live/editing rendering hosts serve the new build."
-      - "Deploy new frontend to live and editing rendering hosts; current live X-Build-Sha is pre-B commit 45993eef."
-      - "Enable Studio v2 availability after deployment; verify a sourced evidence page/card and get the current agent export."
+      - "Run an approved Studio customer-story page draft/write/read-back test; capture current agent export."
     readbackNotes:
       - "Field-list reads returned 50 before and after adding 3 fields. Priority, Page Design and SxaTags were omitted after the additions; returned previous values were unchanged."
       - "No Standard Values update was sent: new field defaults were already blank; no existing defaults were written."
       - "__Short description and __Sortorder were verified in the approved scoped CLI serialized output on 2026-11-05."
+  deployment:
+    frontendCommit: "411d14d0fa82b877ae2bf5b176029b1eb27329d3"
+    verifiedAt: "2026-11-05T09:40:26.908Z"
+    liveUrl: "https://sitecore-live-demo.vercel.app"
+    editingUrl: "https://sitecore-demo-editing-host.vercel.app"
+    bothHostsHttpStatus: 200
+    bothHostsBuildShaMatch: true
+    studioSkillEnabled: true
   serializedFiles:
     checkedAt: "2026-11-05T09:25:27.256Z"
     paths:
@@ -4113,5 +4121,5 @@ landing-page-customer-evidence-v2:
       - "authoring/items/main-templates/items/main-templates/main/Page Types/Landing Page Template/Social Proof Data/customerEvidenceLink.yml"
       - "authoring/items/content/items/site-content/main-website/Presentation/Headless Variants/LandingSocialProof/CustomerEvidence.yml"
   notes:
-    - "Sitecore registration and scoped serialization are verified; feature remains partial until frontend deployment and Studio acceptance."
+    - "Sitecore registration, scoped serialization and frontend deployment are verified; feature readiness is enabled. Status remains partial only for Studio page acceptance/current export."
     - "Shared Landing Page Layout and all existing pages are unchanged."

@@ -15,13 +15,13 @@ These files are **not** a repo skill: they live outside `.agents/skills/` so `np
 |---|---|---|
 | Landing Page Template, `/Home/lp` parent | Exist (IDs in `SKILL.md`) | — |
 | Existing `Sitecore` variants for the six landing sections | Original Variant Definitions verified 2026-10-29; existing shared layout is retained | — |
-| Customer Evidence v2 fields + `CustomerEvidence` Variant Definition | **Created and read-back verified 2026-11-04.** Scoped serialization is verified; frontend deployment is pending. Keep Studio on A until the rendering hosts support B | Agent / Marketer |
+| Customer Evidence v2 fields + `CustomerEvidence` Variant Definition | **Enabled.** Sitecore registration/read-back and scoped serialization verified; both rendering hosts served frontend `411d14d0` on 2026-11-05 | — |
 | Sitecore brand context `43723db2-…` | Exists (built from sitecore.com 2026-09-16) | — |
 | Brand Kit named exactly `Sitecore Brand Kit`, published, current naming (SitecoreAI, Agentic Studio) | Recreated and published 2026-10-30 as `717ec50a-…` in `org_BMSdm6mLMr270Wnk`, named `Sitecore`: **rename it to `Sitecore Brand Kit` in the UI**, since the skill finds it by exact name (the ID is for reference only) | Marketer |
 | Content Hub MCP for `https://ffde.sitecoresandbox.cloud` | Connected in Studio per marketer; read-only MCP and delivery probes passed here 2026-11-03. Studio namespace/selection still needs checking in the current agent and recording from its export | Marketer |
 | Hero image with a public link | Selected automatically with the found + public-link rule. Social proof defaults to quote + author text; portraits/logo strips are optional manual content, not agent prerequisites | Agent / Marketer |
 
-## Customer Evidence v2 — registered; deployment pending
+## Customer Evidence v2 — enabled and deployed
 
 The frontend adds `CustomerEvidence` to `LandingSocialProof`, plus three route fields:
 
@@ -33,9 +33,9 @@ The frontend adds `CustomerEvidence` to `LandingSocialProof`, plus three route f
 
 Variant Definition: `4669f382-f588-4560-a69e-54c0c0220bf8`. Titles/types/name validation were verified through MCP; inherited `__Short description` / `__Sortorder` values were verified in the approved scoped CLI serialized output on 2026-11-05.
 
-The live fields/Types and Variant Definition are now created and read-back verified; the new Standard Values were already blank, so no existing default was updated. The live rendering host still serves pre-B commit `45993eef`, while the B frontend is uncommitted locally. **Keep the Studio skill on quote-only fallback and omit the new field names until serialization and frontend deployment are complete.** Enable its *Site facts* availability row only after the live/editing hosts support the new card.
+Sitecore field Types/labels/validation and the Variant Definition are read-back verified; new defaults remain blank. The four generated items are serialized and committed. Both live and editing hosts served frontend commit `411d14d0` on 2026-11-05, so **Customer Evidence v2 is enabled in this skill**. Upload the current Markdown/update the existing Studio skill to use it; a real Studio draft/write/read-back run and current agent export are still pending.
 
-### Registration/deployment checklist (Sitecore steps 1–5 completed here)
+### Completed registration/deployment checklist (retained for reference)
 
 1. Connect the Marketer MCP and check `/sitecore/content/Environment Markers`: `sitecore-demo` must be the only child before any write.
 2. Read template ID `50af6ec7-85fd-4b9b-adf7-1fde9d9136fe` to obtain its current path. Serialization names it `/sitecore/templates/Project/main/Page Types/Landing Page Template`; older manifest lookups say `Landing Page`. Resolve the template and its `Social Proof Data` section by live path, and correct the cached lookup only after reading it.
@@ -43,7 +43,7 @@ The live fields/Types and Variant Definition are now created and read-back verif
 4. Read the owning template's `__Standard Values` (recorded ID `0014cd13-f3f1-4049-a866-3f30f508202e`); set/verify only the new field defaults as blank, preserving all existing defaults and designs.
 5. Resolve `/sitecore/content/main/main-website/Presentation/Headless Variants/LandingSocialProof`, reuse its existing container, and add `CustomerEvidence` with the Variant Definition template. Read it back and record the ID. Existing `Default`/`Sitecore` items remain intact.
 6. After approval, pull the new/updated serialized items with the repo's serialization workflow and verify help/sort-order metadata. **No hand-editing `authoring/items/`.**
-7. With approval, commit/push the feature branch to deploy the updated frontend; verify the new build SHA on both live and editing hosts. Only then enable the Studio skill's v2 availability row and run an approved page draft/write/read-back test. The manifest upgrade remains partial until these steps succeed.
+7. Completed: pushed frontend/serialized items in `411d14d0`; both hosts returned that exact build SHA and HTTP 200. Enabled the skill's v2 availability row afterward. Next: run an approved Studio page draft/write/read-back test and synchronize its agent export; those are the remaining acceptance checks.
 
 Activation needs no shared layout mutation: complete new company/summary/link values automatically select the card through existing `Default`/`Sitecore`; absent/incomplete new data keeps the legacy presentation outside editing. The explicit variant exposes empty fields in the editor. Never change the shared Landing Page Layout to force activation across older pages.
 
@@ -147,3 +147,4 @@ Earlier entries document superseded image workflows. Current defaults are decisi
 | 2026-11-04 | Approved scoped serialization/deployment attempt | User approved pull/commit/push. Used an isolated CLI workspace with only environment-marker verification and the 4 new items; no repository serialization/module edits. Pull was blocked by expired CLI cloud refresh token; requested `dotnet sitecore cloud login`. Private scratch credential copy removed. Nothing committed/pushed; deployment/Studio activation still pending |
 | 2026-11-05 | Scoped serialization after CLI login | Refreshed CLI login succeeded. Pulled marker verification + exactly 4 new items in a private temporary module; CLI marker IDs matched the MCP environment. Verified field/variant IDs, parents, types, descriptions, validation and sort order, then copied only the 4 generated YAML files to their existing module paths. No marker/module/auth files added to the repository; no Sitecore push or page publishing. Frontend commit/deployment and Studio acceptance remain pending |
 | 2026-11-05 | Pre-deployment offline gate | Full suite: 438 tests/41 suites passed. TypeScript, agents:check, 33/33 component registrations and read-only Main.Templates/FmcCustomDemo.Content serialization validation passed. Existing SearchTypeahead/NavigationHeader review warnings were left untouched. Ready to commit/push the scoped deployment; Studio activation remains gated until both hosts serve it |
+| 2026-11-05 | Deployment and Studio-skill activation | Pushed scoped frontend/serialized-items commit `411d14d0` to `sitecore-demo`. Both `sitecore-live-demo.vercel.app` and `sitecore-demo-editing-host.vercel.app` served that exact SHA with HTTP 200 after 48 seconds. Enabled Customer Evidence v2 in the skill/catalog only after verification. Existing `/lp/sage-briefing` live URL returned 404; no publication was attempted, and no live evidence-page acceptance is claimed. Studio run/current export remain pending |

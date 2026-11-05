@@ -99,9 +99,9 @@ pageTemplates:
     description: "Campaign / conversion / ABM landing page with deterministic fixed-shape structure. All content fields live on the page template — no datasource components. Agentic Studio fills fields directly from a marketer prompt. Personalize swaps field values per ABM account."
     designIntent: "agent-fillable fixed slots with optional content: 0-3 stats, 3-5 FAQ pairs, text-first customer evidence; no child datasources. Legacy fields/presentations retained."
     customerEvidenceV2:
-      status: "sitecore-registered-frontend-deploy-pending"
+      status: "enabled"
       fields: ["customerEvidenceName", "customerEvidenceSummary", "customerEvidenceLink"]
-      activation: "Sitecore fields/VD verified 2026-11-04; complete new fields select CustomerEvidence only after the new frontend is deployed. Keep Studio writes disabled until deployment/read-back verification."
+      activation: "Sitecore fields/VD verified and serialized; both rendering hosts served 411d14d0 on 2026-11-05. Complete new fields select CustomerEvidence; existing empty v2 data retains legacy UI. Studio skill is enabled; full Studio page acceptance pending."
 
     # Six sections in page render order. Field names are verbose semantic and position-indexed
     # so an LLM can map brief sentence → field name unambiguously.
