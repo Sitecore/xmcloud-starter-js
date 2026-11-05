@@ -1,0 +1,48 @@
+﻿---
+ID: "4669f382-f588-4560-a69e-54c0c0220bf8"
+Parent: "1077b0d2-420d-48e4-ada2-853c6c0e880a"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingSocialProof/CustomerEvidence"
+SharedFields:
+- ID: "696c70e2-eb4e-425d-81e4-802bab6a03cf"
+  Hint: AllowedInTemplates
+  Value: "{50AF6EC7-85FD-4B9B-ADF7-1FDE9D9136FE}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2000
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "17e39462-ddd7-4360-a80a-c90dfc243f07"
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "67656e68-e56a-45e9-9620-7a68b8f129bf"
+  - ID: "9541e67d-ce8c-4225-803d-33f7f29f09ef"
+    Hint: __Short description
+    Value: "Text-first customer evidence: company name, published story summary and source link; optional real quote, without portrait/logo dependencies."
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261104T165247Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fa0d0179-d78b-4f32-b7d5-40a432f34829"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261104T165247Z

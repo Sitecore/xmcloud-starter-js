@@ -1,16 +1,16 @@
-import React, { JSX } from 'react';
-import { hasRichText, hasText } from '@/lib/field-utils';
-import * as LucideIcons from 'lucide-react';
-import { Sparkles } from 'lucide-react';
+import React, { JSX } from "react";
+import { hasRichText, hasText } from "@/lib/field-utils";
+import * as LucideIcons from "lucide-react";
+import { Sparkles } from "lucide-react";
 import {
   Field,
   RichTextField,
   Text,
   RichText as ContentSdkRichText,
-} from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from 'lib/component-props';
-import { cn } from '@/lib/utils';
-import { SitecoreFrame, SITECORE_GRADIENT } from '@/lib/demo-ui/sitecore-ui';
+} from "@sitecore-content-sdk/nextjs";
+import { ComponentProps } from "lib/component-props";
+import { cn } from "@/lib/utils";
+import { SitecoreFrame, SITECORE_GRADIENT } from "@/lib/demo-ui/sitecore-ui";
 
 interface LandingFeaturesRouteFields {
   feature1IconName?: Field<string>;
@@ -32,7 +32,9 @@ const LandingFeaturesDefaultComponent = (): JSX.Element => (
   </div>
 );
 
-function getRouteFields(page: ComponentProps['page']): LandingFeaturesRouteFields | null {
+function getRouteFields(
+  page: ComponentProps["page"],
+): LandingFeaturesRouteFields | null {
   const fields = page?.layout?.sitecore?.route?.fields;
   return fields ? (fields as unknown as LandingFeaturesRouteFields) : null;
 }
@@ -49,14 +51,17 @@ function FeatureCard({
   isEditing?: boolean;
 }) {
   const iconKey = iconName?.value;
-  const hasContent = iconKey || hasText(title?.value) || hasRichText(description?.value);
+  const hasContent = hasText(title?.value) || hasRichText(description?.value);
   if (!hasContent && !isEditing) return null;
 
   const Icon =
     iconKey && (LucideIcons as Record<string, unknown>)[iconKey]
-      ? (LucideIcons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[
-          iconKey
-        ]
+      ? (
+          LucideIcons as unknown as Record<
+            string,
+            React.ComponentType<{ className?: string }>
+          >
+        )[iconKey]
       : Sparkles;
 
   return (
@@ -76,7 +81,10 @@ function FeatureCard({
         />
       )}
       {(hasRichText(description?.value) || isEditing) && (
-        <div className="mt-2 text-sm text-gray-600" data-testid="feature-description">
+        <div
+          className="mt-2 text-sm text-gray-600"
+          data-testid="feature-description"
+        >
           <ContentSdkRichText field={description} />
         </div>
       )}
@@ -84,17 +92,54 @@ function FeatureCard({
   );
 }
 
+function visibleCount(
+  fields: LandingFeaturesRouteFields,
+  isEditing?: boolean,
+): number {
+  if (isEditing) return 3;
+  return [
+    [fields.feature1Title, fields.feature1Description],
+    [fields.feature2Title, fields.feature2Description],
+    [fields.feature3Title, fields.feature3Description],
+  ].filter(
+    ([title, description]) =>
+      hasText(title?.value) || hasRichText(description?.value),
+  ).length;
+}
+
+function columns(count: number): string {
+  return count === 1
+    ? "md:grid-cols-1"
+    : count === 2
+      ? "md:grid-cols-2"
+      : "md:grid-cols-3";
+}
+
 export const Default = ({ params, page }: ComponentProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;
   const routeFields = getRouteFields(page);
   if (!routeFields) return <LandingFeaturesDefaultComponent />;
+  const count = visibleCount(routeFields, isEditing);
+  if (!count)
+    return (
+      <div
+        className={cn("component landing-features", styles)}
+        id={RenderingIdentifier}
+      />
+    );
 
   return (
-    <div className={cn('component landing-features', styles)} id={RenderingIdentifier}>
-      <section className="bg-gray-50 py-16 md:py-24" data-testid="landing-features">
+    <div
+      className={cn("component landing-features", styles)}
+      id={RenderingIdentifier}
+    >
+      <section
+        className="bg-gray-50 py-16 md:py-24"
+        data-testid="landing-features"
+      >
         <div className="mx-auto max-w-7xl px-4">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className={cn("grid gap-6", columns(count))}>
             <FeatureCard
               iconName={routeFields.feature1IconName}
               title={routeFields.feature1Title}
@@ -137,13 +182,16 @@ function SitecoreFeatureCard({
   isEditing?: boolean;
 }) {
   const iconKey = iconName?.value;
-  const hasContent = iconKey || hasText(title?.value) || hasRichText(description?.value);
+  const hasContent = hasText(title?.value) || hasRichText(description?.value);
   if (!hasContent && !isEditing) return null;
   const Icon =
     iconKey && (LucideIcons as Record<string, unknown>)[iconKey]
-      ? (LucideIcons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[
-          iconKey
-        ]
+      ? (
+          LucideIcons as unknown as Record<
+            string,
+            React.ComponentType<{ className?: string }>
+          >
+        )[iconKey]
       : Sparkles;
 
   return (
@@ -167,14 +215,14 @@ function SitecoreFeatureCard({
           field={title}
           tag="h3"
           className="font-heading text-[22px] font-medium leading-[1.25] tracking-[-0.01em] md:text-[24px]"
-          style={{ color: 'var(--brand-fg)' }}
+          style={{ color: "var(--brand-fg)" }}
           data-testid="feature-title"
         />
       )}
       {(hasRichText(description?.value) || isEditing) && (
         <div
           className="mt-3 font-body text-[17px] leading-[1.6] [&_p]:m-0"
-          style={{ color: 'var(--brand-muted-foreground)' }}
+          style={{ color: "var(--brand-muted-foreground)" }}
           data-testid="feature-description"
         >
           <ContentSdkRichText field={description} />
@@ -189,11 +237,30 @@ export const Sitecore = ({ params, page }: ComponentProps): JSX.Element => {
   const isEditing = page?.mode?.isEditing;
   const routeFields = getRouteFields(page);
   if (!routeFields) return <LandingFeaturesDefaultComponent />;
+  const count = visibleCount(routeFields, isEditing);
+  if (!count)
+    return (
+      <div
+        className={cn("component landing-features", styles)}
+        id={RenderingIdentifier}
+      />
+    );
 
   return (
-    <div className={cn('component landing-features', styles)} id={RenderingIdentifier}>
-      <SitecoreFrame testId="landing-features" style={{ background: 'var(--brand-muted)' }}>
-        <div className="grid gap-6 px-2 py-16 md:grid-cols-3 md:px-10 md:py-24">
+    <div
+      className={cn("component landing-features", styles)}
+      id={RenderingIdentifier}
+    >
+      <SitecoreFrame
+        testId="landing-features"
+        style={{ background: "var(--brand-muted)" }}
+      >
+        <div
+          className={cn(
+            "grid gap-6 px-2 py-16 md:px-10 md:py-24",
+            columns(count),
+          )}
+        >
           <SitecoreFeatureCard
             iconName={routeFields.feature1IconName}
             title={routeFields.feature1Title}

@@ -1,5 +1,5 @@
-import React, { JSX } from 'react';
-import { hasRichText, hasText } from '@/lib/field-utils';
+import React, { JSX } from "react";
+import { hasRichText, hasText } from "@/lib/field-utils";
 import {
   Field,
   LinkField,
@@ -7,10 +7,10 @@ import {
   Text,
   Link as ContentSdkLink,
   RichText as ContentSdkRichText,
-} from '@sitecore-content-sdk/nextjs';
-import { ComponentProps } from 'lib/component-props';
-import { cn } from '@/lib/utils';
-import { SitecoreFrame, SitecorePill } from '@/lib/demo-ui/sitecore-ui';
+} from "@sitecore-content-sdk/nextjs";
+import { ComponentProps } from "lib/component-props";
+import { cn } from "@/lib/utils";
+import { SitecoreFrame, SitecorePill } from "@/lib/demo-ui/sitecore-ui";
 
 interface LandingFinalCTARouteFields {
   finalCtaHeadline?: Field<string>;
@@ -26,7 +26,9 @@ const LandingFinalCTADefaultComponent = (): JSX.Element => (
   </div>
 );
 
-function getRouteFields(page: ComponentProps['page']): LandingFinalCTARouteFields | null {
+function getRouteFields(
+  page: ComponentProps["page"],
+): LandingFinalCTARouteFields | null {
   const fields = page?.layout?.sitecore?.route?.fields;
   return fields ? (fields as unknown as LandingFinalCTARouteFields) : null;
 }
@@ -38,10 +40,29 @@ export const Default = ({ params, page }: ComponentProps): JSX.Element => {
   if (!routeFields) return <LandingFinalCTADefaultComponent />;
 
   const { finalCtaHeadline, finalCtaSubhead, finalCtaButton } = routeFields;
+  if (
+    !isEditing &&
+    !hasText(finalCtaHeadline?.value) &&
+    !hasRichText(finalCtaSubhead?.value) &&
+    !finalCtaButton?.value?.href
+  ) {
+    return (
+      <div
+        className={cn("component landing-final-cta", styles)}
+        id={RenderingIdentifier}
+      />
+    );
+  }
 
   return (
-    <div className={cn('component landing-final-cta', styles)} id={RenderingIdentifier}>
-      <section className="bg-gray-900 py-16 md:py-24" data-testid="landing-final-cta">
+    <div
+      className={cn("component landing-final-cta", styles)}
+      id={RenderingIdentifier}
+    >
+      <section
+        className="bg-gray-900 py-16 md:py-24"
+        data-testid="landing-final-cta"
+      >
         {(hasText(finalCtaHeadline?.value) ||
           isEditing ||
           hasRichText(finalCtaSubhead?.value) ||
@@ -92,17 +113,29 @@ export const Sitecore = ({ params, page }: ComponentProps): JSX.Element => {
   const { finalCtaHeadline, finalCtaSubhead, finalCtaButton } = routeFields;
   const showHeadline = hasText(finalCtaHeadline?.value) || isEditing;
   const showSubhead = hasRichText(finalCtaSubhead?.value) || isEditing;
-  const showButton = !!finalCtaButton && (finalCtaButton.value?.href || isEditing);
+  const showButton =
+    !!finalCtaButton && (finalCtaButton.value?.href || isEditing);
   if (!showHeadline && !showSubhead && !showButton) {
-    return <div className={cn('component landing-final-cta', styles)} id={RenderingIdentifier} />;
+    return (
+      <div
+        className={cn("component landing-final-cta", styles)}
+        id={RenderingIdentifier}
+      />
+    );
   }
 
   return (
-    <div className={cn('component landing-final-cta', styles)} id={RenderingIdentifier}>
+    <div
+      className={cn("component landing-final-cta", styles)}
+      id={RenderingIdentifier}
+    >
       <SitecoreFrame
         testId="landing-final-cta"
         className="relative overflow-hidden"
-        style={{ background: 'var(--brand-hero-wash, var(--brand-bg))', color: 'var(--brand-fg)' }}
+        style={{
+          background: "var(--brand-hero-wash, var(--brand-bg))",
+          color: "var(--brand-fg)",
+        }}
       >
         <div className="relative mx-auto max-w-[880px] px-2 py-20 text-center md:px-10 md:py-28">
           {showHeadline && (

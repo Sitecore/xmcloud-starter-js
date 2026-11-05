@@ -164,6 +164,12 @@ Observed 2026-08-05: `delete_content` returned `success: true` twice for a page 
 
 **Workaround:** Always verify with `get_content_item_by_id` after `delete_content`. If the item still resolves, mark the deletion `pendingManual` and delete in Content Editor.
 
+### Bounded field reads (observed 2026-11-04)
+
+Adding three fields to Landing Page Template increased its business/base field set beyond 50. `get_content_item_by_id`, `get_content_item_by_path` and `get_page_template_by_id` still returned 50 entries; the last inherited fields (`Priority`, `Page Design`, `SxaTags`) stopped appearing. The returned previous values were unchanged. A missing key in this bounded projection is **not** proof of clearing or deletion; compare key presence separately from value changes and do not repair unseen fields blindly.
+
+The template's new custom fields and blank Standard Values were readable. Inherited metadata such as `__Short description`/`__Sortorder` on Template field/Variant Definition items is not echoed in these reads; verify that metadata through the approved serialized output or authoring UI. `validation:false` in the page-template schema response is not a read-back of the field's actual `Validation` string—read the Template field item for that.
+
 ### `create_page` fields format
 
 `create_page` does **not** use the `{name, value}` pair format that `create_content_item` / `update_fields_on_item` use. Passing pairs fails with `Cannot find a field with the name name`.

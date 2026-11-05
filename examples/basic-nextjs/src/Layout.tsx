@@ -90,6 +90,10 @@ export interface RouteFields extends PageMetadataFields {
   testimonialAuthorTitle?: Field<string>;
   testimonialAuthorImage?: ImageField;
   partnerLogosImage?: ImageField;
+  // Landing Page — Customer Evidence (additive v2 fields)
+  customerEvidenceName?: Field<string>;
+  customerEvidenceSummary?: RichTextField;
+  customerEvidenceLink?: LinkField;
   // Landing Page — FAQ Data
   faq1Question?: Field<string>;
   faq1Answer?: RichTextField;
@@ -114,8 +118,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
 
   const routeFields = (route?.fields ?? {}) as RouteFields;
   const bgHex = routeFields?.BackgroundColor?.value?.toString?.()?.trim();
-  const isValidHex =
-    bgHex && /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/.test(bgHex);
+  const isValidHex = bgHex && /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/.test(bgHex);
   const rootStyle = isValidHex
     ? { backgroundColor: bgHex, minHeight: "100vh" }
     : undefined;
@@ -149,7 +152,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
                 )}
               </div>
             </header>
-            <main >             
+            <main>
               <div id="content">
                 {route && (
                   <AppPlaceholder

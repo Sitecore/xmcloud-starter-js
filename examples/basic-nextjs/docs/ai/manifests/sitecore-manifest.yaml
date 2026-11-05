@@ -1,6 +1,6 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-10-29T00:00:00Z"
-lastUpdatedBy: "pi-agent (landing Sitecore Variant Definitions created and verified, sitecore-demo env)"
+lastUpdatedAt: "2026-11-04T16:56:27Z"
+lastUpdatedBy: "pi-agent (Customer Evidence fields/variant created and verified; deployment pending)"
 
 project:
   siteCollection: "main"
@@ -2523,7 +2523,7 @@ components:
     react:
       filePath: "src/components/uiim/landing/LandingSocialProof.tsx"
       componentMapKey: "LandingSocialProof"
-      variants: ["Default"]
+      variants: ["Default", "Sitecore", "CustomerEvidence"]
     templates:
       renderingParams:
         name: "LandingSocialProof"
@@ -2543,6 +2543,8 @@ components:
       containerPath: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingSocialProof"
       definitions:
         - { name: "Default", itemId: "{8ED8A4F7-10C3-4867-AC0E-B3F79BECC356}" }
+        - { name: "Sitecore", itemId: "{44331DF5-2282-44B9-87E6-4A261C7A3484}" }
+        - { name: "CustomerEvidence", itemId: "{4669F382-F588-4560-A69E-54C0C0220BF8}" }
     verification:
       renderingExists: passed
       componentNamePascalCase: passed
@@ -2779,8 +2781,8 @@ pageTemplates:
 
     templates:
       pageTemplate:
-        name: "Landing Page"
-        path: "/sitecore/templates/Project/main/Page Types/Landing Page"
+        name: "Landing Page Template"
+        path: "/sitecore/templates/Project/main/Page Types/Landing Page Template"
         itemId: "{50AF6EC7-85FD-4B9B-ADF7-1FDE9D9136FE}"
         sections:
           - { name: "Hero Data", itemId: "{C4C0EAC9-964E-42D2-B4CD-BE26344026EB}" }
@@ -2821,6 +2823,10 @@ pageTemplates:
           - { name: "testimonialAuthorTitle", type: "Single-Line Text", itemId: "{80F81BB3-7127-48AF-A8CD-553858610C66}", validation: "^.{1,80}$" }
           - { name: "testimonialAuthorImage", type: "Image", itemId: "{A5CCB94C-223D-4B12-AC4B-59DCBF5945BB}" }
           - { name: "partnerLogosImage", type: "Image", itemId: "{EF14FB95-FBF5-46FC-87EC-3A6B1A1AA8FE}" }
+          # Customer Evidence v2 (created/verified 2026-11-04)
+          - { name: "customerEvidenceName", type: "Single-Line Text", itemId: "{183E3666-188E-4AC9-A74F-3DD852E993A9}", validation: "^.{0,80}$" }
+          - { name: "customerEvidenceSummary", type: "Rich Text", itemId: "{9D283560-78E5-4AD1-99C6-CD01ED6130D0}" }
+          - { name: "customerEvidenceLink", type: "General Link", itemId: "{D05FC4C8-F524-4DF2-BC1B-3EA8A63F0AA1}" }
           # FAQ Data (10)
           - { name: "faq1Question", type: "Single-Line Text", itemId: "{A210B32E-FF19-4909-AFEA-6AFDE0D1E41B}", validation: "^.{1,140}$" }
           - { name: "faq1Answer", type: "Rich Text", itemId: "{6900EAA8-748F-4A12-864B-2115BE3C5E5E}" }
@@ -3246,9 +3252,9 @@ lookups:
     lastReadAt: "2026-05-18T12:00:00Z"
 
   # Landing Page lookups (added 2026-06-09)
-  - path: "/sitecore/templates/Project/main/Page Types/Landing Page"
+  - path: "/sitecore/templates/Project/main/Page Types/Landing Page Template"
     itemId: "{50AF6EC7-85FD-4B9B-ADF7-1FDE9D9136FE}"
-    lastReadAt: "2026-06-09T00:00:00Z"
+    lastReadAt: "2026-11-04T16:54:03.082Z"
   - path: "/sitecore/templates/Project/fmc-custom-demo/Rendering Parameters/Landing"
     itemId: "{3F3D0A73-3486-4AEA-9F4F-CDC12F6ADC4A}"
     lastReadAt: "2026-06-09T00:00:00Z"
@@ -3270,6 +3276,30 @@ lookups:
   - path: "/sitecore/content/main/main-website/Presentation/Page Designs/Landing Page"
     itemId: "{E38ABC20-C7EA-43C8-AAAF-22CA71342814}"
     lastReadAt: "2026-06-09T00:00:00Z"
+
+
+  # Customer Evidence v2 verified lookups (2026-11-04)
+  - path: "/sitecore/templates/Project/main/Page Types/Landing Page Template/Social Proof Data"
+    itemId: "{296F0E42-A06B-4A84-B107-5518ADA4286B}"
+    lastReadAt: "2026-11-04T16:56:27Z"
+  - path: "/sitecore/templates/Project/main/Page Types/Landing Page Template/__Standard Values"
+    itemId: "{0014CD13-F3F1-4049-A866-3F30F508202E}"
+    lastReadAt: "2026-11-04T16:56:27Z"
+  - path: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingSocialProof"
+    itemId: "{1077B0D2-420D-48E4-ADA2-853C6C0E880A}"
+    lastReadAt: "2026-11-04T16:56:27Z"
+  - path: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingSocialProof/CustomerEvidence"
+    itemId: "{4669F382-F588-4560-A69E-54C0C0220BF8}"
+    lastReadAt: "2026-11-04T16:56:27Z"
+  - path: "/sitecore/templates/Project/main/Page Types/Landing Page Template/Social Proof Data/customerEvidenceName"
+    itemId: "{183E3666-188E-4AC9-A74F-3DD852E993A9}"
+    lastReadAt: "2026-11-04T16:56:27Z"
+  - path: "/sitecore/templates/Project/main/Page Types/Landing Page Template/Social Proof Data/customerEvidenceSummary"
+    itemId: "{9D283560-78E5-4AD1-99C6-CD01ED6130D0}"
+    lastReadAt: "2026-11-04T16:56:27Z"
+  - path: "/sitecore/templates/Project/main/Page Types/Landing Page Template/Social Proof Data/customerEvidenceLink"
+    itemId: "{D05FC4C8-F524-4DF2-BC1B-3EA8A63F0AA1}"
+    lastReadAt: "2026-11-04T16:56:27Z"
 
 # Search v4 serialized framework items (backlog B2, 2026-10-27). Pulled from the sitecore-demo
 # environment with a scoped ser pull so IDs are identical in every environment; deployed as
@@ -4030,3 +4060,58 @@ demoContent:
   # but item still resolves via get_content_item_by_id afterwards — delete did NOT
   # take effect. Status: pendingManual — DELETE MANUALLY in Content Editor before
   # publishing /Home/Articles.
+
+landing-page-customer-evidence-v2:
+  status: "partial"
+  createdAt: "2026-11-04T16:13:39Z"
+  updatedAt: "2026-11-04T21:06:18.232Z"
+  scope: "Additive customer-evidence route fields/presentation and collapse empty optional section content; legacy values/layout retained."
+  siteCollection: "main"
+  siteName: "main-website"
+  template:
+    itemId: "{50AF6EC7-85FD-4B9B-ADF7-1FDE9D9136FE}"
+    path: "/sitecore/templates/Project/main/Page Types/Landing Page Template"
+    pathSource: "Verified live by ID and path; cached Landing Page path corrected to Landing Page Template."
+    sectionName: "Social Proof Data"
+    sectionId: "{296F0E42-A06B-4A84-B107-5518ADA4286B}"
+    standardValuesId: "{0014CD13-F3F1-4049-A866-3F30F508202E}"
+    fields:
+      - { name: "customerEvidenceName", type: "Single-Line Text", itemId: "{183E3666-188E-4AC9-A74F-3DD852E993A9}", status: "complete" }
+      - { name: "customerEvidenceSummary", type: "Rich Text", itemId: "{9D283560-78E5-4AD1-99C6-CD01ED6130D0}", status: "complete" }
+      - { name: "customerEvidenceLink", type: "General Link", itemId: "{D05FC4C8-F524-4DF2-BC1B-3EA8A63F0AA1}", status: "complete" }
+  variant:
+    name: "CustomerEvidence"
+    component: "LandingSocialProof"
+    containerId: "{1077B0D2-420D-48E4-ADA2-853C6C0E880A}"
+    path: "/sitecore/content/main/main-website/Presentation/Headless Variants/LandingSocialProof/CustomerEvidence"
+    itemId: "{4669F382-F588-4560-A69E-54C0C0220BF8}"
+    status: "complete"
+  activation: "Default/Sitecore auto-select the card only for complete new fields; optional explicit variant after registration. No shared partial-design edits."
+  verification:
+    checkedAt: "2026-11-04T17:04:52.900Z"
+    passed:
+      - "Environment markers read: sitecore-demo is the only marker."
+      - "Live Landing Page Template and Social Proof Data resolved by ID/path; stale template lookup corrected."
+      - "All 3 Template field items created/read back: name, path, Type, display Title, and optional-name Validation verified."
+      - "New fields present in live template schema; owning Standard Values returns empty values for all three."
+      - "Default/Sitecore Variant Definitions retained; CustomerEvidence created/read back under the existing container, allowed on Landing Page Template."
+      - "Scoped CLI pull verified the matching environment marker and 4 item IDs/parents/types; only those 4 generated YAML files copied. Inherited descriptions and sort order verified from CLI output."
+      - "Full offline gate passed: 438 tests across 41 suites, TypeScript, agents:check, 33 component registrations, and scoped serialization validation. Existing unrelated validator review warnings remain non-blocking; no page/shared layout updated."
+    pending:
+      - "Commit/push the scoped frontend + 4 serialized items, then verify the live/editing rendering hosts serve the new build."
+      - "Deploy new frontend to live and editing rendering hosts; current live X-Build-Sha is pre-B commit 45993eef."
+      - "Enable Studio v2 availability after deployment; verify a sourced evidence page/card and get the current agent export."
+    readbackNotes:
+      - "Field-list reads returned 50 before and after adding 3 fields. Priority, Page Design and SxaTags were omitted after the additions; returned previous values were unchanged."
+      - "No Standard Values update was sent: new field defaults were already blank; no existing defaults were written."
+      - "__Short description and __Sortorder were verified in the approved scoped CLI serialized output on 2026-11-05."
+  serializedFiles:
+    checkedAt: "2026-11-05T09:25:27.256Z"
+    paths:
+      - "authoring/items/main-templates/items/main-templates/main/Page Types/Landing Page Template/Social Proof Data/customerEvidenceName.yml"
+      - "authoring/items/main-templates/items/main-templates/main/Page Types/Landing Page Template/Social Proof Data/customerEvidenceSummary.yml"
+      - "authoring/items/main-templates/items/main-templates/main/Page Types/Landing Page Template/Social Proof Data/customerEvidenceLink.yml"
+      - "authoring/items/content/items/site-content/main-website/Presentation/Headless Variants/LandingSocialProof/CustomerEvidence.yml"
+  notes:
+    - "Sitecore registration and scoped serialization are verified; feature remains partial until frontend deployment and Studio acceptance."
+    - "Shared Landing Page Layout and all existing pages are unchanged."

@@ -97,7 +97,11 @@ pageTemplates:
     name: "Landing Page"
     inheritsFrom: "base-page-template"  # resolved via MCP at implementation time (same Page base as Article)
     description: "Campaign / conversion / ABM landing page with deterministic fixed-shape structure. All content fields live on the page template — no datasource components. Agentic Studio fills fields directly from a marketer prompt. Personalize swaps field values per ABM account."
-    designIntent: "agent-fillable, fixed counts, per-section variant swaps for ABM, no variable lists"
+    designIntent: "agent-fillable fixed slots with optional content: 0-3 stats, 3-5 FAQ pairs, text-first customer evidence; no child datasources. Legacy fields/presentations retained."
+    customerEvidenceV2:
+      status: "sitecore-registered-frontend-deploy-pending"
+      fields: ["customerEvidenceName", "customerEvidenceSummary", "customerEvidenceLink"]
+      activation: "Sitecore fields/VD verified 2026-11-04; complete new fields select CustomerEvidence only after the new frontend is deployed. Keep Studio writes disabled until deployment/read-back verification."
 
     # Six sections in page render order. Field names are verbose semantic and position-indexed
     # so an LLM can map brief sentence → field name unambiguously.
@@ -139,8 +143,11 @@ pageTemplates:
           - { name: "testimonialQuote", type: "Rich Text", help: "Customer quote, 1-3 sentences, 100-250 chars. Should reference a measurable outcome. Real customer voice, not marketing speak." }
           - { name: "testimonialAuthorName", type: "Single-Line Text", validation: "^.{1,60}$", help: "Full name. Max 60 chars. Example: 'Sarah Chen'." }
           - { name: "testimonialAuthorTitle", type: "Single-Line Text", validation: "^.{1,80}$", help: "Job title + Company. Max 80 chars. Example: 'VP of Engineering, Northwind'." }
-          - { name: "testimonialAuthorImage", type: "Image", help: "Author headshot. Square crop, min 200x200." }
-          - { name: "partnerLogosImage", type: "Image", help: "Single composite image with 5-7 partner/customer logos in a horizontal strip. Min 1200px wide, transparent PNG preferred." }
+          - { name: "testimonialAuthorImage", type: "Image", help: "Optional legacy/manual author image. ABM automation leaves this empty on new pages and preserves it on updates; not needed for text-first evidence." }
+          - { name: "partnerLogosImage", type: "Image", help: "Optional legacy/manual composite logo strip. ABM automation does not search for this asset; text-first evidence uses company name and source link instead." }
+          - { name: "customerEvidenceName", type: "Single-Line Text", validation: "^.{0,80}$", status: "created-and-verified", help: "Reference customer/company name as published in the linked customer story. Max 80 chars; not automatically the target ABM account." }
+          - { name: "customerEvidenceSummary", type: "Rich Text", status: "created-and-verified", help: "1-3 sentences summarizing the linked published customer story in <p>. A factual summary, not a fabricated quotation. Images are not required." }
+          - { name: "customerEvidenceLink", type: "General Link", status: "created-and-verified", help: "Link to that published customer story, with readable link text. Required for the evidence card; keep new Standard Values blank." }
 
       - name: "FAQ Data"
         fields:
@@ -196,8 +203,8 @@ pageTemplates:
         filePath: "src/components/uiim/landing/LandingFeatures.tsx"
         routeFieldsUsed: ["feature1IconName", "feature1Title", "feature1Description", "feature2IconName", "feature2Title", "feature2Description", "feature3IconName", "feature3Title", "feature3Description"]
         variants:
-          - { name: "Default", description: "3-up card grid. Icon + title + description per card. Responsive: 3 cols desktop, 1 col mobile." }
-          - { name: "Sitecore", description: "sitecore-demo only. White 9px cards on a lavender band, gradient icon tile, gradient top edge on hover." }
+          - { name: "Default", description: "Up to three text-led feature cards with icons; adaptive grid. Icon-only/empty cards are not display content outside editing." }
+          - { name: "Sitecore", description: "White cards on lavender with gradient icon tile/top edge. Adaptive populated-card grid; empty section content collapses while editing controls remain." }
 
       - id: landing-stats
         name: "LandingStats"
@@ -205,17 +212,18 @@ pageTemplates:
         filePath: "src/components/uiim/landing/LandingStats.tsx"
         routeFieldsUsed: ["stat1Number", "stat1Label", "stat2Number", "stat2Label", "stat3Number", "stat3Label"]
         variants:
-          - { name: "Default", description: "3-up stat tiles. Large number + label below. Responsive: 3 cols desktop, stacked mobile." }
-          - { name: "Sitecore", description: "sitecore-demo only. Red→violet gradient numbers, sentence-case labels, hairline column dividers." }
+          - { name: "Default", description: "0-3 stat tiles; grid follows populated slots. Empty section content collapses outside editing; all three slots remain editable." }
+          - { name: "Sitecore", description: "Red→violet sourced numbers and labels with adaptive column count. Empty section frames/padding collapse; 0 is valid content, not an empty number." }
 
       - id: landing-social-proof
         name: "LandingSocialProof"
         category: "landing"
         filePath: "src/components/uiim/landing/LandingSocialProof.tsx"
-        routeFieldsUsed: ["testimonialQuote", "testimonialAuthorName", "testimonialAuthorTitle", "testimonialAuthorImage", "partnerLogosImage"]
+        routeFieldsUsed: ["testimonialQuote", "testimonialAuthorName", "testimonialAuthorTitle", "testimonialAuthorImage", "partnerLogosImage", "customerEvidenceName", "customerEvidenceSummary", "customerEvidenceLink"]
         variants:
-          - { name: "Default", description: "Testimonial card (quote + author block) above the partner logo strip image. Logo strip hidden when partnerLogosImage is empty (unless editing)." }
-          - { name: "Sitecore", description: "sitecore-demo only. Navy testimonial panel with gradient glow and gradient quote mark; partner logo strip in a white framed band below." }
+          - { name: "Default", description: "Legacy testimonial/manual logo strip when new evidence fields are absent. Complete new fields select the text-first evidence card. Empty section content collapses outside editing." }
+          - { name: "Sitecore", description: "Legacy navy quote panel/manual logo band when new fields are absent. Complete new evidence fields select CustomerEvidence; partial fields in editing expose its controls. Existing shared layout unchanged." }
+          - { name: "CustomerEvidence", status: "created-and-verified", description: "Company name, sourced story summary and source link; optional real quote/author text. No portrait/logo dependency. Incomplete evidence collapses outside editing; empty fields stay editable." }
 
       - id: landing-faq
         name: "LandingFAQ"
@@ -223,8 +231,8 @@ pageTemplates:
         filePath: "src/components/uiim/landing/LandingFAQ.tsx"
         routeFieldsUsed: ["faq1Question", "faq1Answer", "faq2Question", "faq2Answer", "faq3Question", "faq3Answer", "faq4Question", "faq4Answer", "faq5Question", "faq5Answer"]
         variants:
-          - { name: "Default", description: "shadcn Accordion, 5 items, all collapsed by default. Empty Q/A pairs hidden in non-editing mode." }
-          - { name: "Sitecore", description: "sitecore-demo only. White shadowed cards on a lavender band, plus/minus circle icons, violet open state, first item open; all items open in the editor. No hardcoded section heading." }
+          - { name: "Default", description: "Five authoring slots; render complete Q/A pairs only, collapsed by default. No empty section frame; all slots editable." }
+          - { name: "Sitecore", description: "White cards on lavender; first populated pair open, all five open in editing. Supports 3-5 useful authored pairs without filler; incomplete pairs/empty frames omitted outside editing." }
 
       - id: landing-final-cta
         name: "LandingFinalCTA"
@@ -232,7 +240,7 @@ pageTemplates:
         filePath: "src/components/uiim/landing/LandingFinalCTA.tsx"
         routeFieldsUsed: ["finalCtaHeadline", "finalCtaSubhead", "finalCtaButton"]
         variants:
-          - { name: "Default", description: "Centered headline + subhead + single button on a contrast background band. Full-width." }
+          - { name: "Default", description: "Centered headline/subhead/button on a contrast band. Entire empty section content collapses outside editing; wrapper and editor fields retained." }
           - { name: "Sitecore", description: "sitecore-demo only. Centred light headline, copy and gradient pill on the soft hero wash." }
 
     partialDesign:

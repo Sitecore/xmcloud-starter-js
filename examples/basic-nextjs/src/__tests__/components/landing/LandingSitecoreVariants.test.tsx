@@ -2,11 +2,27 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import type { ComponentProps } from "lib/component-props";
 import { Sitecore as HeroSitecore } from "@/components/uiim/landing/LandingHero";
-import { Sitecore as FeaturesSitecore } from "@/components/uiim/landing/LandingFeatures";
-import { Sitecore as StatsSitecore } from "@/components/uiim/landing/LandingStats";
-import { Sitecore as SocialProofSitecore } from "@/components/uiim/landing/LandingSocialProof";
-import { Sitecore as FAQSitecore } from "@/components/uiim/landing/LandingFAQ";
-import { Sitecore as FinalCTASitecore } from "@/components/uiim/landing/LandingFinalCTA";
+import {
+  Default as FeaturesDefault,
+  Sitecore as FeaturesSitecore,
+} from "@/components/uiim/landing/LandingFeatures";
+import {
+  Default as StatsDefault,
+  Sitecore as StatsSitecore,
+} from "@/components/uiim/landing/LandingStats";
+import {
+  Default as SocialProofDefault,
+  Sitecore as SocialProofSitecore,
+  CustomerEvidence,
+} from "@/components/uiim/landing/LandingSocialProof";
+import {
+  Default as FAQDefault,
+  Sitecore as FAQSitecore,
+} from "@/components/uiim/landing/LandingFAQ";
+import {
+  Default as FinalCTADefault,
+  Sitecore as FinalCTASitecore,
+} from "@/components/uiim/landing/LandingFinalCTA";
 
 type MockField = { value?: unknown };
 type LinkValue = { href?: string; text?: string };
@@ -189,7 +205,113 @@ describe("Landing Sitecore variants", () => {
     expect(screen.getByText("20+")).toBeInTheDocument();
   });
 
+  describe("CustomerEvidence", () => {
+    const evidenceFields = {
+      customerEvidenceName: f("Example customer"),
+      customerEvidenceSummary: f("<p>A sourced customer-story summary.</p>"),
+      customerEvidenceLink: link(
+        "https://www.sitecore.com/customers/example",
+        "Read customer story",
+      ),
+    };
+
+    it("renders a text-first customer card and editable source link without images", () => {
+      render(<CustomerEvidence {...makeProps(evidenceFields)} />);
+      expect(screen.getByTestId("customer-evidence-name")).toHaveTextContent(
+        "Example customer",
+      );
+      expect(screen.getByTestId("customer-evidence-summary")).toHaveTextContent(
+        "A sourced customer-story summary.",
+      );
+      expect(screen.getByTestId("customer-evidence-link")).toHaveAttribute(
+        "href",
+        "https://www.sitecore.com/customers/example",
+      );
+      expect(screen.queryAllByTestId("sdk-image")).toHaveLength(0);
+    });
+
+    it.each([
+      ["Default", SocialProofDefault],
+      ["Sitecore", SocialProofSitecore],
+    ] as const)(
+      "%s switches to evidence only when the new fields are complete",
+      (_name, Variant) => {
+        const { rerender } = render(
+          <Variant {...makeProps({ ...routeFields, ...evidenceFields })} />,
+        );
+        expect(screen.getByTestId("customer-evidence")).toBeInTheDocument();
+        expect(screen.queryByTestId("partner-logos")).not.toBeInTheDocument();
+        rerender(
+          <Variant
+            {...makeProps({
+              ...routeFields,
+              customerEvidenceName: f("Partial"),
+            })}
+          />,
+        );
+        expect(
+          screen.queryByTestId("customer-evidence"),
+        ).not.toBeInTheDocument();
+        expect(screen.getByTestId("testimonial-author-name")).toHaveTextContent(
+          "Jane Smith",
+        );
+      },
+    );
+
+    it("renders an optional sourced quote and author text without legacy media", () => {
+      render(
+        <CustomerEvidence
+          {...makeProps({ ...routeFields, ...evidenceFields })}
+        />,
+      );
+      expect(screen.getByTestId("customer-evidence-quote")).toHaveTextContent(
+        "SitecoreAI changed how we work.",
+      );
+      expect(
+        screen.getByTestId("customer-evidence-author-name"),
+      ).toHaveTextContent("Jane Smith");
+      expect(screen.queryAllByTestId("sdk-image")).toHaveLength(0);
+    });
+
+    it("keeps empty fields editable but collapses incomplete evidence outside editing", () => {
+      const { container, rerender } = render(
+        <CustomerEvidence
+          {...makeProps({ customerEvidenceName: f("Partial") })}
+        />,
+      );
+      expect(container.querySelector("section")).toBeNull();
+      expect(container.firstElementChild).toHaveAttribute("id", "rid");
+      rerender(<CustomerEvidence {...makeProps({}, true)} />);
+      expect(screen.getByTestId("customer-evidence-name")).toBeInTheDocument();
+      expect(
+        screen.getByTestId("customer-evidence-summary"),
+      ).toBeInTheDocument();
+      expect(screen.getByTestId("customer-evidence-link")).toBeInTheDocument();
+    });
+  });
+
   describe("LandingSocialProof", () => {
+    it("renders quote-only social proof without a portrait or logo strip", () => {
+      render(
+        <SocialProofSitecore
+          {...makeProps(
+            without(routeFields, "testimonialAuthorImage", "partnerLogosImage"),
+          )}
+        />,
+      );
+      expect(
+        screen.getByText("SitecoreAI changed how we work."),
+      ).toBeInTheDocument();
+      expect(screen.getByTestId("testimonial-author-name")).toHaveTextContent(
+        "Jane Smith",
+      );
+      expect(screen.getByTestId("testimonial-author-title")).toHaveTextContent(
+        "CMO, Example",
+      );
+      expect(screen.queryByTestId("partner-logos")).not.toBeInTheDocument();
+      expect(screen.queryAllByTestId("sdk-image")).toHaveLength(0);
+    });
+
     it("renders the quote, author and logo strip", () => {
       render(<SocialProofSitecore {...makeProps(routeFields)} />);
       expect(
@@ -211,6 +333,60 @@ describe("Landing Sitecore variants", () => {
     });
   });
 
+  describe("Empty optional sections", () => {
+    const optionalVariants = [
+      ["Features Default", FeaturesDefault],
+      ["Features Sitecore", FeaturesSitecore],
+      ["Stats Default", StatsDefault],
+      ["Stats Sitecore", StatsSitecore],
+      ["Social proof Default", SocialProofDefault],
+      ["Social proof Sitecore", SocialProofSitecore],
+      ["FAQ Default", FAQDefault],
+      ["FAQ Sitecore", FAQSitecore],
+      ["CTA Default", FinalCTADefault],
+      ["CTA Sitecore", FinalCTASitecore],
+    ] as const;
+
+    it.each(optionalVariants)(
+      "%s collapses content but keeps the rendering wrapper",
+      (_name, Variant) => {
+        const { container, rerender } = render(<Variant {...makeProps({})} />);
+        expect(container.querySelector("section")).toBeNull();
+        expect(container.firstElementChild).toHaveClass(
+          "component",
+          "custom-style",
+        );
+        expect(container.firstElementChild).toHaveAttribute("id", "rid");
+        rerender(
+          <Variant {...makeProps({ finalCtaButton: link("", "") }, true)} />,
+        );
+        expect(container.querySelector("section")).not.toBeNull();
+      },
+    );
+
+    it("does not treat an icon-only feature as content", () => {
+      render(
+        <FeaturesSitecore {...makeProps({ feature1IconName: f("Bot") })} />,
+      );
+      expect(screen.queryByTestId("feature-card")).not.toBeInTheDocument();
+    });
+
+    it("adapts the stat grid to the number of populated slots", () => {
+      render(
+        <StatsSitecore
+          {...makeProps({
+            stat1Number: f("0"),
+            stat1Label: f("A sourced metric"),
+          })}
+        />,
+      );
+      expect(screen.getAllByTestId("stat-tile")).toHaveLength(1);
+      expect(screen.getByTestId("stat-tile").parentElement).toHaveClass(
+        "md:grid-cols-1",
+      );
+    });
+  });
+
   describe("LandingFAQ", () => {
     it("hides empty pairs and opens the first item by default", () => {
       render(<FAQSitecore {...makeProps(routeFields)} />);
@@ -218,6 +394,39 @@ describe("Landing Sitecore variants", () => {
       expect(buttons).toHaveLength(2);
       expect(buttons[0]).toHaveAttribute("aria-expanded", "true");
       expect(buttons[1]).toHaveAttribute("aria-expanded", "false");
+    });
+
+    it("opens the first populated pair even when earlier slots are empty", () => {
+      render(
+        <FAQSitecore
+          {...makeProps({
+            faq3Question: f("A relevant question?"),
+            faq3Answer: f("<p>A sourced answer.</p>"),
+          })}
+        />,
+      );
+      expect(screen.getAllByRole("button")).toHaveLength(1);
+      expect(screen.getByRole("button")).toHaveAttribute(
+        "aria-expanded",
+        "true",
+      );
+      fireEvent.click(screen.getByRole("button"));
+      expect(screen.getByRole("button")).toHaveAttribute(
+        "aria-expanded",
+        "false",
+      );
+    });
+
+    it("omits incomplete question/answer pairs outside the editor", () => {
+      render(
+        <FAQSitecore
+          {...makeProps({
+            faq1Question: f("No answer yet?"),
+            faq2Answer: f("<p>No question yet.</p>"),
+          })}
+        />,
+      );
+      expect(screen.queryAllByRole("button")).toHaveLength(0);
     });
 
     it("toggles items on click", () => {

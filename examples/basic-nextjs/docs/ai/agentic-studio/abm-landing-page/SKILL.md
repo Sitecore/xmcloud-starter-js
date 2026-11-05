@@ -15,9 +15,10 @@ The marketer is the authority on the account; the web fills the gaps. Sitecore i
 | Example page (never change it, never duplicate it) | `Example Landing Page`, `ff0d2a81-31a5-4b8d-8a53-a1d03734c178` |
 | Brand context (what Sitecore sells) | `Sitecore`, `43723db2-802c-4960-8d86-09fea574c117` (read it yourself, see step 1) |
 | Brand Kit (how Sitecore writes) | the **published** kit named exactly `Sitecore Brand Kit` |
+| Customer Evidence v2 availability | **Sitecore registration verified; frontend deployment pending — use quote-only fallback.** The three fields and `CustomerEvidence` Variant Definition were created/read back on 2026-11-04; new Standard Values are blank. Omit the three v2 field names from write batches until the updated live/editing renderer is deployed and verified. Update this row to enabled only after deployment; a registered variant alone does not make the old rendering host support it. |
 | Default goal | `Book a SitecoreAI briefing` → `https://www.sitecore.com/request-a-demo` |
 | Secondary hero link | `Explore the platform` → `https://www.sitecore.com/platform` |
-| Hero image tag | `abm-hero` |
+| Content Hub | Connected DAM at `https://ffde.sitecoresandbox.cloud`; use the connection as configured |
 | Page builder link | `https://pages.sitecorecloud.io/editor?organization=org_BMSdm6mLMr270Wnk&tenantName=sitecoresaabad7-fmccustomde3703-sitecoredem3db4&sc_site=main-website&sc_itemid={ITEM-ID}&sc_lang=en&sc_version={VERSION}` |
 
 The page design (header, footer and the six landing sections with their variants) comes from the template. Never change the layout.
@@ -31,22 +32,25 @@ Every statement on the page is backed by **evidence**: a source you can name in 
 | The account | The marketer's answers (always win), then public web sources (official site, annual report, reputable press) |
 | What Sitecore sells and how it sounds | Sitecore brand context documents; Sitecore Brand Kit for voice and terms |
 | What a SitecoreAI capability does | Sitecore documentation search, then sitecore.com pages |
-| Customer quotes and outcome figures | Customer evidence in the Sitecore brand context or a published sitecore.com customer story, copied verbatim |
+| Customer story summary/source | One published Sitecore customer story, accurately summarized and linked; the reference customer may differ from the target account |
+| Customer quotes and outcome figures | Evidence in the Sitecore brand context or that published customer story, copied verbatim |
+| Automatic hero image | A search result with an existing public link, assumed usable for this demo through *Images* |
 
-A statement without evidence is left out. A field without evidence stays empty and is reported as a **gap**; empty fields are hidden on the live page.
+A factual statement without evidence is left out. Unsupported copy, figures and quotes stay empty and are reported as **gaps**; empty fields are hidden on the live page. Images use the simple findable + public-link rule; no catalog or image-evidence audit is required.
 
 ## Tools
 
-Tools load on demand: load these namespaces with `ToolSearch` in step 1.
+Tools load on demand. Load the required namespaces with `ToolSearch` in step 1; discover the Content Hub connector when choosing images as described in *Images*.
 
-| Namespace | Tools this skill uses |
+| Namespace / connector | Tools this skill uses |
 |---|---|
 | `marketer_mcp` | `get_brand_context`, `get_brand_context_items`, `list_brandkits`, `get_brandkit_by_id`, `get_content_item_by_path`, `get_content_item_by_id`, `search_assets`, `create_page`, `update_fields_on_item`, `update_content` |
+| Content Hub MCP | `visual_search` / `search` with `thumbnails: false`, `public_link` with `action: "list"`, `get_entity` only for missing formatting values |
 | `web_search` | `web_search` |
 | `sitecore_documentation_mcp` | `search_sitecore_knowledge_sources` |
 | `skill_runtime` | `bash` (character counts) |
 
-The **write tools** are `create_page`, `update_fields_on_item` and `update_content`, all in `marketer_mcp`. Call them only in step 6 and step 7, only on the confirmed target page, and only as the process describes. Page work goes through `marketer_mcp` alone: tools with similar names in other namespaces (`pages`, `content`) create page versions and are outside this skill.
+The **only write tools** are `create_page`, `update_fields_on_item` and `update_content`, all in `marketer_mcp`. Call them only in step 6 and step 7, only on the confirmed target page, and only after draft approval. Page work goes through `marketer_mcp` alone: tools with similar names in other namespaces (`pages`, `content`) create page versions and are outside this skill. Content Hub is **read-only**: use the tools above, with the explicit `public_link` action; its default is `create`, which is outside this skill.
 
 The page open in Page builder, if any, is context only. It becomes the target only when it is this account's page and the marketer chose "update" in intake.
 
@@ -77,11 +81,11 @@ The page open in Page builder, if any, is context only. It becomes the target on
    - **Recipient**: the role the page is written for.
    - **Existing page**: read `/sitecore/content/main/main-website/Home/lp` with `get_content_item_by_path` and check its children. If a page for this account exists, ask: update it (new version), create a new page, or stop. Otherwise ask to confirm the page name, with `<account>-<goal>` in lowercase with hyphens as the recommended option, for example `ikea-briefing`.
 
-   Ask about relationship status (prospect, existing customer, partner, unknown), known pains or the hero image only when research left them unclear. Done when the marketer has confirmed the dossier and answered every question. Write nothing to Sitecore before that.
+   Ask about relationship status (prospect, existing customer, partner, unknown) or known pains only when research left them unclear. Choose the hero image yourself through *Images* unless the marketer already supplied one; image tags and asset nomination do not need an intake question. Done when the marketer has confirmed the dossier and answered every question. Write nothing to Sitecore before that.
 
-4. **Choose the angle.** Pick the one SitecoreAI angle that best fits the account and recipient (see *Angles*). Map 2–3 account pains to SitecoreAI capabilities, each capability backed by evidence. Find one published Sitecore customer story for the testimonial, preferring the account's industry (retail, home and furnishing, consumer brands). Done when every feature, stat and FAQ answer you plan has its evidence.
+4. **Choose the angle and reference story.** Pick the SitecoreAI angle that best fits the account/recipient and map 2–3 account pains to evidenced capabilities. Find one published Sitecore customer story relevant to the account's industry or pain. When Customer Evidence v2 is enabled in *Site facts*, capture its company name, a factual 1–3 sentence summary and source URL; an exact quote from the same story is optional. If no exact quote exists, use the sourced summary rather than inventing a quote. If v2 is pending, use the existing quote-only fallback and omit the new fields. Do not hunt for portraits/logos, three stats, or extra FAQ filler. Done when planned facts have sources and the story/quote-only result (or lack of source) is recorded.
 
-5. **Build every field** as described in *Field map*, in the Brand Kit voice. Count the characters of every limited field with `bash` rather than estimating. Then run the *Checklist*; rewrite any failing field and run the full checklist again. Done when every check passes.
+5. **Build and review the draft.** Build every field as described in *Field map*, in the Brand Kit voice, and choose only the hero image through *Images*. For a new page, set `testimonialAuthorImage` and `partnerLogosImage` to `""`. For an update, reuse the target page's current values for these two fields; if they are not already in context, read the selected target once with `get_content_item_by_id` before preparing the draft. Preserve these existing values unless the marketer explicitly asks to replace/clear them, and show that change in the draft for approval. No portrait/logo search is needed. Count the characters of every limited field with `bash` rather than estimating. Run the *Checklist*; rewrite any failing field and run the full checklist again. Show a draft table of values, counts and evidence, including each chosen image's public URL/preview and basic field value (or a missing-result/public-link gap). The agent makes the image choice; there is no separate image-selection approval or nomination step. Ask the marketer to approve the whole page draft before any write. Draft approval is separate from the intake questions. Done when every check passes and the marketer has approved the exact draft.
 
 6. **Write.**
    - New page: `create_page` with `parentId` = landing pages parent, `templateId` = page template, `name` = confirmed page name, `language` = `en`, and `fields` = `[{"Title": "<Title value>"}]` (single-key objects keyed by field name). Then **one** `update_fields_on_item` call on the new page ID with every other field as `{"name": "<field>", "value": "<value>"}` pairs; it edits version 1 in place.
@@ -90,6 +94,24 @@ The page open in Page builder, if any, is context only. It becomes the target on
 7. **Verify.** Read the page back with `get_content_item_by_id`. Compare every field with the value you sent; write any field that differs or is missing once more with `update_fields_on_item`, and read it back again. Build the **Page builder link** from the pattern in *Site facts*: `{ITEM-ID}` = the page's item ID in lowercase with hyphens and no braces, `{VERSION}` = the version you wrote (`1` for a new page; the version returned by `update_content` for an update). Use only this link: preview URLs from other tools carry an access token. Done when every field matches or is listed as a failed write, and the link is built.
 
 8. **Report** as described in *Output*.
+
+## Images
+
+**Only `heroImage` is populated automatically.** Social proof is quote + author text by default: `testimonialAuthorImage` and `partnerLogosImage` are manual-only optional fields. For new pages write both as `""`; for updates carry forward their current values unless the marketer explicitly requests and approves a replacement or clear. Never search Content Hub or the media library for these two fields. They stay in the template and renderer for manually authored content. If the marketer supplies an existing image field value/asset/public URL for one, use the supplied value with normal field formatting—no discovery search.
+
+**For the hero, an image found in search with an existing public link is assumed usable. Find it, take the public URL, and use it.** There are no tag, brand, ownership, rights, lifecycle, approval, expiry, MIME, identity or image-review gates; do not run an image audit or ask extra image questions. Do not impose a separate image-call budget or candidate-validation workflow. The ordinary whole-page draft approval still applies.
+
+1. **Find an image.** Reuse a candidate already returned or use Content Hub `visual_search` / `search` for a suitable picture (`take: 3`, `thumbnails: false` keeps the response small). Use the connected instance as configured; no tenant/schema/model/relationship inspection is needed for image selection.
+2. **Retrieve public links before deciding.** When search returns candidate IDs, the next image operation is **one batch** `public_link` call with `action: "list"`, `assets: ["<candidate-ID>", ...]` for all returned candidates, and `by: "id"`. Skip this lookup only when a public URL is already supplied/returned, in which case use it immediately. Temporary signed thumbnails in search results do not establish whether public links exist. This automatic lookup is for the hero only; do not start portrait or logo searches. Select a candidate with a returned public URL and use it. Only report no public image after the lookup returns no URL for the candidates. This is the required retrieval step, not an audit; Content Hub remains read-only with no upload or public-link creation.
+3. **Format the field and continue the draft.** Use the identifier/title/size already returned. Only if needed, read `get_entity` with `idOrIdentifier: "<ID>"`, `by: "id"`, `members: "Title,SC.Asset.AltText,MainFile"` to obtain formatting values—not to decide eligibility. Parse `MainFile` if it is JSON text. Use available link-size or main-file width/height; if absent, use `1200` × `675` so the SDK image helper has dimensions. Use a short descriptive alt value. No metadata-completeness check or provenance report is required. Done when the image's public URL is assigned, or no result with a public link is available; continue to the page draft in the same turn.
+
+Content Hub image XML uses the asset identifier as `dam-id` and the public URL for `src` / `thumbnailsrc`. Escape XML attribute values:
+
+```xml
+<Image src="<PUBLIC-URL>" dam-id="<ASSET-IDENTIFIER>" width="<W>" height="<H>" alt="<ALT-TEXT>" dam-content-type="Image" thumbnailsrc="<PUBLIC-URL>" />
+```
+
+Dimensions and XML encoding are rendering details, not image-eligibility checks. Show the chosen public preview in the ordinary page draft; no separate image approval is needed. Use the public link, not a temporary signed search thumbnail. For an XM media-library result, use its media item GUID in `<image mediaid="{GUID}" />`; a Content Hub identifier belongs in `dam-id`, not `mediaid`.
 
 ## Angles
 
@@ -104,7 +126,7 @@ Name only products and capabilities found in the brand context or Sitecore knowl
 
 ## Field map
 
-Write every field below on every run. "Empty" means the value `""`.
+Write every existing field below on every run. "Empty" means `""`. **Exception: the three Customer Evidence v2 fields are omitted entirely (not sent as empty strings) while activation is pending in Site facts.** Once enabled, write all three together from the same source story, or empty all three when no story is available. Keep fixed slots; unused stat/FAQ pairs are empty, not filler.
 
 ### Page
 
@@ -123,10 +145,10 @@ Write every field below on every run. "Empty" means the value `""`.
 | `heroSubhead` | Single-Line Text | 200 | 1–2 sentences tied to a dossier fact |
 | `heroPrimaryCta` | General Link | text 3–6 words | The goal: `<link text="…" linktype="external" url="<goal URL verbatim>" anchor="" target="_blank" />` |
 | `heroSecondaryCta` | General Link | — | The secondary hero link from *Site facts* |
-| `heroImage` | Image | — | The marketer's image if given; else the best `search_assets` result with `tags` = `["abm-hero"]` and `type` = image: `<image mediaid="{ASSET-ID}" />`; else empty |
+| `heroImage` | Image | — | Chosen and encoded through *Images*: Content Hub DAM XML or a verified Sitecore media GUID; else empty |
 | `heroVideo` | General Link | — | Empty unless the marketer supplies a video URL |
 
-### Features (3)
+### Features (2–3 populated cards, three authoring slots)
 
 | Field | Type | Limit | Rule |
 |---|---|---|---|
@@ -134,14 +156,16 @@ Write every field below on every run. "Empty" means the value `""`.
 | `feature{1,2,3}Title` | Single-Line Text | 40 | 2–4 words, outcome-led |
 | `feature{1,2,3}Description` | Rich Text | 100–180 chars inside `<p>` | One account pain → the SitecoreAI capability that solves it, as an outcome. Name the account in at least 2 of the 3 |
 
-### Stats (3)
+Use 2–3 useful feature cards. An unused card has empty icon/title/description fields; do not create icon-only filler. At least two populated descriptions name the account.
+
+### Stats (0–3 populated slots)
 
 | Field | Type | Limit | Rule |
 |---|---|---|---|
 | `stat{1,2,3}Number` | Single-Line Text | 8 | A Sitecore outcome figure from a published source, copied exactly |
 | `stat{1,2,3}Label` | Single-Line Text | 30 | What it measures, with the customer name when it fits |
 
-Stats describe Sitecore outcomes only; account facts belong in the copy. A slot without a sourced figure stays empty (both fields).
+Stats describe Sitecore outcomes only; account facts belong in the copy. Use only the sourced figures already available for this page; do not force three. Unused slots stay empty (both fields) and are normal optional omissions. The renderer adapts columns and collapses the section content when all slots are empty.
 
 ### Social proof
 
@@ -150,19 +174,29 @@ Stats describe Sitecore outcomes only; account facts belong in the copy. A slot 
 | `testimonialQuote` | Rich Text | A published Sitecore customer quote, verbatim, in `<p>`, without surrounding quotation marks |
 | `testimonialAuthorName` | Single-Line Text | The person's name as published |
 | `testimonialAuthorTitle` | Single-Line Text | `<Role>, <Company>` as published, max 80 chars |
-| `testimonialAuthorImage` | Image | Empty unless the asset library holds that person's approved photo |
-| `partnerLogosImage` | Image | Empty unless the marketer supplies the image |
+| `testimonialAuthorImage` | Image | **Manual-only optional:** new page `""`; update preserves the existing value unless replacement/clear is explicitly approved. No portrait search |
+| `partnerLogosImage` | Image | **Manual-only optional:** new page `""`; update preserves the existing value unless replacement/clear is explicitly approved. No logo/strip search |
 
-No published quote found: all five fields empty, reported as a gap.
+The quote/author text remains optional and verbatim; portrait/logo fields remain manual-only under *Images*. While v2 activation is pending, the default is A's quote-only presentation. Once enabled, use the source-linked Customer Evidence card below; do not invent a quotation when a story summary is sufficient.
 
-### FAQ (5)
+### Customer Evidence v2 (enabled only after registration and frontend deployment)
+
+| Field | Type | Rule |
+|---|---|---|
+| `customerEvidenceName` | Single-Line Text | Reference customer's/company name as published; max 80 chars. It need not be the target ABM account |
+| `customerEvidenceSummary` | Rich Text | 1–3 factual sentences from the linked story in `<p>`; a summary, not invented direct speech |
+| `customerEvidenceLink` | General Link | The published story URL with text such as `Read customer story`, formatted as the other external links |
+
+All three are populated together from one source, or all three are empty. An optional quote and its author must be from that same story; otherwise those text fields stay empty. Complete evidence fields automatically select the new presentation in `Default`/`Sitecore`; older pages without them keep the legacy presentation. The agent changes page fields only, not variants/layout/shared partial designs.
+
+### FAQ (3–5 populated pairs, five authoring slots)
 
 | Field | Type | Limit | Rule |
 |---|---|---|---|
-| `faq{1..5}Question` | Single-Line Text | 140 | A question the recipient would ask. At least 3 of 5 name the account |
+| `faq{1..5}Question` | Single-Line Text | 140 | A useful recipient question. At least two populated questions name the account |
 | `faq{1..5}Answer` | Rich Text | 1–3 sentences in `<p>` | Direct and concrete, backed by evidence |
 
-Cover, in this order: time to value or migration; integration with the account's stack (from the dossier); security, compliance and data residency; AI governance and brand control; the goal (`faq5`: what the account gets from the briefing, event or meeting, naming it).
+Choose 3–5 useful questions across time to value/migration, integration with the account's stack, security/compliance/data residency, AI governance, and the confirmed goal. The last populated question explains the goal and what the account gets. Fill consecutive slots; unused remaining pairs are `""`. Do not invent filler to reach five. Complete pairs render in order; incomplete/empty pairs and an entirely empty FAQ section collapse outside editing.
 
 ### Final CTA
 
@@ -178,12 +212,12 @@ Allowed tags: `p`, `strong`, `a`. No headings, lists, inline styles, classes, im
 
 ## Checklist
 
-- Every Single-Line Text field is within its limit; every icon name is from the list.
+- Every populated Single-Line Text field is within its limit; every populated icon name is from the list. Unused stat/FAQ/feature slots are empty.
 - Every General Link is `<link text="…" linktype="external" url="https://…" anchor="" target="_blank" />`; every Rich Text value is wrapped in `<p>`.
-- The account name appears 5–10 times across all fields, including `heroHeadline`, `heroSubhead`, 2 of 3 feature descriptions, 3 of 5 FAQ questions and `finalCtaHeadline`.
+- The account name appears 5–10 times across authored text, including `heroHeadline`, `heroSubhead`, 2 of 3 feature descriptions, at least two populated FAQ questions and `finalCtaHeadline`.
 - `heroPrimaryCta` and `finalCtaButton` use the goal URL exactly as the marketer gave it.
 - Every account fact traces to the marketer or a dossier source; every Sitecore claim, figure and quote traces to its evidence.
-- The testimonial is a real published quote with its real author, or all social proof fields are empty.
+- Quote/author text is real published evidence or empty. Enabled Customer Evidence fields share one published story and are all populated or all empty; pending v2 fields are absent from write batches.
 - The tone is peer-to-peer for the recipient: concrete outcomes, second person, no superlatives the evidence does not support.
 
 ## Guardrails
@@ -193,15 +227,15 @@ Allowed tags: `p`, `strong`, `a`. No headings, lists, inline styles, classes, im
 - **Never publish** and never change workflow or publishing settings. The marketer reviews the page in Pages and publishes it.
 - **Page fields only.** Leave the layout, partial designs, shared content, the example page and other accounts' pages untouched.
 - **One account per page.** Update an existing page only after the marketer chose "update" in intake.
-- **Missing tool, stop.** When a tool you need is unavailable, stop and report it; use only the tools the process names, for their stated purpose.
-- **Images:** use only the marketer's image or an `abm-hero` library asset; account logos and account imagery stay off the page.
+- **Missing required tool, stop.** When a required context or page-writing tool is unavailable, stop and report it. Image-tool failures follow the fallback/gap path in *Images*. Use only the named tools for their stated purpose.
+- **Images:** automate the hero only with the found + public-link rule. Portrait/logo fields are manual-only: empty on new pages, preserved on updates unless an explicit replacement/clear is approved. Content Hub stays read-only.
 - **English only.**
 
 ## Output
 
 1. The page: name, path, item ID, version, and the line **Open in Page builder: <link>**; new page or new version of an existing page.
 2. The dossier summary and the chosen angle (one sentence each).
-3. A table of every field: name, value (shortened for rich text) and evidence (marketer, URL, brand context or Sitecore knowledge).
-4. **Gaps:** fields left empty and why (no published quote, no sourced stat, no `abm-hero` image, Brand Kit not applied).
-5. **Review checklist** for the marketer: account facts and sources; Sitecore figures and quote; goal URL; gaps; the `Sitecore` variants visible on the page.
+3. A table of every field: name, value (shortened for rich text) and evidence (marketer, URL, brand context or Sitecore knowledge). For images, the public URL/preview is sufficient; no image verification/provenance table or audit notes.
+4. **Gaps:** missing source for customer evidence/quote fallback, missing hero result/public link, unavailable hero-image tool, or Brand Kit not applied. Report pending v2 deployment/activation as **pending enhancement**, not failed content. Unused stat/FAQ slots and manual portrait/logo defaults are optional omissions, not missing assets/filler; mark existing images **preserved** on updates. Images still use the found + public-link rule.
+5. **Review checklist** for the marketer: account facts and sources; Sitecore figures and quote; goal URL; gaps; the `Sitecore` variants visible on the page. Image choice is already part of the ordinary draft, not a separate review gate.
 6. The line: "Review in Pages before publishing. Nothing was published."
