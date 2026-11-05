@@ -11,6 +11,7 @@ import { navigateTo } from '@/lib/search-ui/navigate';
 import { useDebouncedValue } from '@/lib/search-ui/useDebouncedValue';
 import { useSearchLabels } from '@/lib/search-ui/useSearchLabels';
 import { useSearchEvents } from '@/lib/search-ui/useSearchEvents';
+import { searchLocale } from '@/lib/search-ui/locale';
 
 export interface TypeaheadFields {
   SearchIndex?: Field<string>;
@@ -77,8 +78,10 @@ export const TypeaheadSearchBox = ({
   // "Autocomplete" setting) + preview documents (source "Result preview").
   // The hook has no limit option — the source config sets the server cap,
   // MaxSuggestions can only trim further.
+  const locale = searchLocale(page);
   const suggest = useSuggest<SearchDoc>({
     searchIndexId,
+    locale,
     enabled: live && !!searchIndexId && !!query,
     query,
   });
@@ -94,6 +97,7 @@ export const TypeaheadSearchBox = ({
     searchIndexId,
     page: 1,
     pageSize: maxSuggestions,
+    locale,
     enabled: live && !!searchIndexId && !!query && suggestEmpty,
     query,
   });

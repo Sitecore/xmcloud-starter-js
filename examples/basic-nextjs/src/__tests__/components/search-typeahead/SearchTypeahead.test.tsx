@@ -115,6 +115,16 @@ describe('suggest request', () => {
     );
   });
 
+  it('sends the page locale for translated pages and omits it for the default language', () => {
+    render(<Default {...baseProps} />);
+    typeAndSettle('can');
+    expect(mockUseSuggest).toHaveBeenLastCalledWith(expect.objectContaining({ locale: undefined }));
+
+    render(<Default {...baseProps} page={{ ...livePage, locale: 'de-DE' }} />);
+    expect(mockUseSuggest).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'de-DE' }));
+    expect(mockUseSearch).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'de-DE' }));
+  });
+
   it('does not suggest or open the dropdown with an empty input', () => {
     render(<Default {...baseProps} />);
 

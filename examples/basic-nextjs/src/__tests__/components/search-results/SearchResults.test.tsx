@@ -120,6 +120,14 @@ describe('SearchResults cards', () => {
 });
 
 describe('search flow', () => {
+  it('sends the page locale for translated pages and omits it for the default language', () => {
+    render(<Default {...baseProps} />);
+    expect(mockUseSearch).toHaveBeenLastCalledWith(expect.objectContaining({ locale: undefined }));
+
+    render(<Default {...baseProps} page={{ ...livePage, locale: 'ar-AE' }} />);
+    expect(mockUseSearch).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'ar-AE' }));
+  });
+
   it('passes index, page size, and debounced query to useSearch', () => {
     jest.useFakeTimers();
     render(<Default {...baseProps} />);

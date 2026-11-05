@@ -12,6 +12,7 @@ import { DEFAULT_MAX_ITEMS } from '@/lib/search-ui/constants';
 import { stripHtml, formatDate, extractImageUrl } from '@/lib/search-ui/text';
 import { useSearchLabels } from '@/lib/search-ui/useSearchLabels';
 import { useSearchEvents } from '@/lib/search-ui/useSearchEvents';
+import { searchLocale } from '@/lib/search-ui/locale';
 import { normalizeItemId } from '@/lib/search-ui/facets';
 
 interface SearchCollectionFields {
@@ -121,6 +122,7 @@ export const Default = (props: SearchCollectionProps) => {
     page: 1,
     pageSize: related ? maxItems + 1 : maxItems,
     sort,
+    locale: searchLocale(page),
     enabled: live && !!searchIndexId && (!related || !!seedItemId),
     ...(related ? { seedItemId: seedItemId || undefined } : { query: '' }),
   });

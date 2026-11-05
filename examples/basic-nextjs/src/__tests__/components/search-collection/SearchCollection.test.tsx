@@ -113,6 +113,14 @@ describe('SearchCollection browse query', () => {
     );
   });
 
+  it('sends the page locale for translated pages and omits it for the default language', () => {
+    render(<Default {...baseProps} />);
+    expect(mockUseSearch).toHaveBeenLastCalledWith(expect.objectContaining({ locale: undefined }));
+
+    render(<Default {...baseProps} page={{ ...livePage, locale: 'ja-JP' }} />);
+    expect(mockUseSearch).toHaveBeenLastCalledWith(expect.objectContaining({ locale: 'ja-JP' }));
+  });
+
   it('sorts ascending when SortOrder is asc and omits sort without SortBy', () => {
     render(
       <Default {...baseProps} fields={{ ...baseFields, SortOrder: field('asc') }} />

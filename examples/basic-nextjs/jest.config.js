@@ -20,6 +20,8 @@ module.exports = {
         '^components/(.*)$': '<rootDir>/src/components/$1',
         '^lib/(.*)$': '<rootDir>/src/lib/$1',
         '^src/(.*)$': '<rootDir>/src/$1',
+        // tsconfig baseUrl import used by client code (e.g. src/lib/search-ui/locale.ts)
+        '^sitecore\\.config$': '<rootDir>/sitecore.config.ts',
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
       },
       setupFilesAfterEnv: ['<rootDir>/src/__tests__/setup.ts'],

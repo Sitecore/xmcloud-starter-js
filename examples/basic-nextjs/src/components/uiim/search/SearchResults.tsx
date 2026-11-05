@@ -15,6 +15,7 @@ import { useDebouncedValue } from '@/lib/search-ui/useDebouncedValue';
 import { readUrlParam, useUrlMirror } from '@/lib/search-ui/useUrlMirror';
 import { useSearchLabels } from '@/lib/search-ui/useSearchLabels';
 import { useSearchEvents } from '@/lib/search-ui/useSearchEvents';
+import { searchLocale } from '@/lib/search-ui/locale';
 import {
   FacetDefinition,
   FacetSelection,
@@ -327,6 +328,7 @@ export const Default = (props: SearchResultsProps) => {
       pageSize,
       sort,
       facet,
+      locale: searchLocale(page),
       enabled: live && !!searchIndexId,
       query,
     });
