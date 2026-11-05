@@ -69,6 +69,9 @@ Working records go to `--directory`: `docs/ai/demos/<client>/search-setup` in a 
 - **Serialized fields:** `Facets`, `RelatedToCurrentPage`, `ArticleTopic` and the Article Topics tags arrive with the environment's deploy. If they're missing, deploy the environment. Creating them through MCP assigns new IDs and duplicates the fields.
 - **Mapping casing:** mappings use the source's **lowercase** document attributes (`title`, `articlecontent`, …). `Facets` uses the facet **display name** (`ArticleTopic`, optionally `ArticleTopic:Topic`). A wrong facet name makes SearchResults fall back to no facets.
 - **Rendering modes:** search renders skeletons in editing and preview. Verify on the live or local site.
+- **Translated sites:** connect writes only the `en` versions of the search datasources. On a source with `searchLocales`, copy the English values of `SearchIndex`, the `*Mapping` fields, `SortBy`, `SortOrder` and `Facets` into every other language version (`update_content` with `language`), then read them back.
+  - Check for translated config values too. Machine translation turns them into values like `TitleMapping="Titel"` or `SortOrder="descripción"`, which match no source attribute.
+  - The components send the page's locale, except for the default language.
 
 ## Scripts
 
@@ -76,8 +79,8 @@ Working records go to `--directory`: `docs/ai/demos/<client>/search-setup` in a 
 |---|---|
 | `search-setup.cjs --phase seed\|connect` | Seed the articles, or connect search (hand-off, journaled, read back) |
 | `prepare-article-images.mjs [--directory d]` | Download the article images for upload to this environment's Content Hub |
-| `push-articles.mjs [--dry-run] [--site-url <origin>] [--delete ids]` | Sync published articles from Edge into the push source |
-| `search-probe.mjs [indexGuid] [keyphrase] [--facet N] [--filter N=a\|b] [--seed id] [--sort attr:desc] [--suggest]` | Query the endpoint directly (bypasses React). The index defaults to the configured source. |
+| `push-articles.mjs [--dry-run] [--language <codes>\|all] [--site-url <origin>] [--delete ids]` | Sync published articles from Edge into the push source: one document per article per language in `project.yaml` `searchLocales` (default `en`). Non-default languages get a `/<language>` URL prefix |
+| `search-probe.mjs [indexGuid] [keyphrase] [--locale <code>] [--facet N] [--filter N=a\|b] [--seed id] [--sort attr:desc] [--suggest]` | Query the endpoint directly (bypasses React). The index defaults to the configured source. |
 | `search-verify.mjs [baseUrl]` | Browser protocol: SearchResults, including facets |
 | `collection-verify.mjs [baseUrl]` | Browser protocol: Latest on Home, Related on an article |
 | `typeahead-verify.mjs [baseUrl]` | Browser protocol: suggestion terms and top results |

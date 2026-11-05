@@ -5,7 +5,8 @@ There's no API for creating a search source, so the user does this in **Content 
 **Get it right at creation: a source can't be edited afterwards.** Field options (Searchable, Filterable, Sortable) and the advanced settings are fixed once the source is saved (seen 2026-10-28 on `main`'s environment). A wrong source means creating a new one, which has a new ID: update `project.yaml`, rerun connect, push again, and delete the old source. Check every row of step 3 and every switch of step 4 before saving.
 
 1. **Basic configuration:** name `Articles`, with a description such as "Pushed by push-articles.mjs".
-2. **Locales:** English only. Every extra locale multiplies the Searchable allowance, and every push must name its locale.
+2. **Locales:** English only, unless the articles are translated. Every extra locale multiplies the Searchable allowance, and every push must name its locale.
+   - **Translated articles:** select every site language that has article versions (check with `get_all_languages`). The UI's codes equal the Sitecore language names. List them in `project.yaml` as `searchLocales` (for example `["en", "ja-JP", "de-DE"]`) so `push-articles.mjs` pushes each one.
 3. **Fields.** Type the names as shown; the UI stores them lowercase. Facet requests still use the display name (`ArticleTopic`).
 
    | Field | Type | Include | Searchable | Filterable | Sortable |

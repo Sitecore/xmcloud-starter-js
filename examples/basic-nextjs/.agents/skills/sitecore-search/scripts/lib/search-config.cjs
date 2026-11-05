@@ -40,4 +40,18 @@ function readSearchSource(app, env = process.env) {
   return readEnvVar(app, 'SITECORE_SEARCH_PUSH_SOURCE_ID', env);
 }
 
-module.exports = { readSearchSource, readEnvVar, readProjectYaml };
+/**
+ * The Sitecore languages pushed to the articles source (project.yaml `searchLocales`). They must
+ * equal the source's locale codes, which can't be changed after the source is saved. Defaults to
+ * English only.
+ */
+function readSearchLocales(app) {
+  const fromProject = readProjectYaml(app)?.searchLocales;
+  if (Array.isArray(fromProject)) {
+    const locales = fromProject.map((x) => String(x).trim()).filter(Boolean);
+    if (locales.length) return locales;
+  }
+  return ['en'];
+}
+
+module.exports = { readSearchSource, readSearchLocales, readEnvVar, readProjectYaml };

@@ -20,7 +20,12 @@ environmentMarker: "sitecore-demo"
 # (.agents/skills/sitecore-search/references/push-source-setup.md); read by search-setup.cjs,
 # push-articles.mjs, search-probe.mjs and Start Check. The push API key never goes here.
 searchSources:
-  articles: "d09b2998-b210-4f62-b788-51cac4e3caa0"
+  articles: "da8872c8-2b01-4ffc-a52c-0720bfcc8f1d"
+
+# Search locales (optional): the Sitecore languages push-articles.mjs pushes to the articles source.
+# Must equal the locale codes chosen when the source was created (they can't be edited later).
+# Omit for an English-only source.
+searchLocales: ["en", "ja-JP", "de-DE", "ar-AE", "es-ES"]
 
 # Sitecore SDK used by this repo's React components
 sdk: "@sitecore-content-sdk/nextjs"

@@ -12,6 +12,7 @@
 //   --seed <itemId>           More Like This by item ID (dashed lowercase GUID) instead of keyphrase
 //   --sort <attr>[:asc|desc]  sort by a (lowercase) document attribute
 //   --suggest                 call /v1/search/suggest (autocomplete terms + preview results)
+//   --locale <code>           document locale (e.g. ja-JP); required by sources with locales configured
 //
 // Reads NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID (or SITECORE_EDGE_CONTEXT_ID) from .env.
 
@@ -26,6 +27,7 @@ const filters = {};
 let seed = '';
 let sortArg = '';
 let suggest = false;
+let locale = '';
 for (let i = 0; i < argv.length; i++) {
   const a = argv[i];
   if (a === '--facet') facetNames.add(argv[++i]);
@@ -36,6 +38,7 @@ for (let i = 0; i < argv.length; i++) {
   } else if (a === '--seed') seed = argv[++i];
   else if (a === '--sort') sortArg = argv[++i];
   else if (a === '--suggest') suggest = true;
+  else if (a === '--locale') locale = argv[++i];
   else positional.push(a);
 }
 // The index is optional: without a GUID first, use the environment's configured source
@@ -75,9 +78,10 @@ if (!contextId) {
 
 const [sortName, sortOrder = 'desc'] = sortArg.split(':');
 const body = suggest
-  ? { config: { id: indexId }, query: { keyphrase } }
+  ? { config: { id: indexId }, query: { keyphrase }, ...(locale && { locale }) }
   : {
       config: { id: indexId },
+      ...(locale && { locale }),
       limit: 10,
       offset: 0,
       query: seed ? { seedItemId: seed } : { keyphrase },

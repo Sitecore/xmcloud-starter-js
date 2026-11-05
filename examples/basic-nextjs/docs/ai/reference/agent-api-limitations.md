@@ -299,6 +299,11 @@ Phase 3 Step 3: Agent reads `imageFieldXml` from manifest, includes Image fields
   - **The UI lowercases names on save.** Push and read them lowercase.
   - All values are sent as strings. `upsert` merges, and an empty string clears a field.
 - **History:** none is kept. To rebuild, push everything again. Pushes are live immediately: there's no dry run or publish step.
+- **Locales** (verified 2026-11-05 on a 5-locale push source, `sitecore-demo` environment):
+  - Chosen at source creation and fixed afterwards. The UI offers the Sitecore language names (`en`, `ja-JP`, `de-DE`, `ar-AE`, `es-ES`), so push and query with those codes.
+  - With locales configured, every push operation needs `locale`. Each locale is a separate document; reuse the item ID as `id` in every locale.
+  - Queries (`/v1/search` and `/suggest`) return only the requested locale's documents. **Omitting `locale` returns the default (`en`) documents**, exactly like `locale: 'en'`. An unknown locale returns 422.
+  - Facets, filters, sort, More Like This (`seedItemId`) and suggest all work per locale.
 - **Pushing into content or site sources:** possible, but temporary. A reindex or crawl replaces the changes.
 
 ### Content source caveats (the indexes created before push sources)

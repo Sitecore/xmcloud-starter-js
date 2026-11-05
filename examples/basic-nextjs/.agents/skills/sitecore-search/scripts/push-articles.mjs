@@ -9,8 +9,14 @@
 //   --source <id>        push source config_id (default: project.yaml searchSources.articles,
 //                        then SITECORE_SEARCH_PUSH_SOURCE_ID)
 //   --dry-run            print the operations payload; send nothing
-//   --locale <code>      document locale (default: en)
-//   --language <code>    Sitecore content language to read (default: en)
+//   --language <codes>   Sitecore content languages to read and push, comma-separated, or `all`
+//                        (default: project.yaml searchLocales, then en). One document per article
+//                        per language, same id across languages (Ingestion API: locale variants
+//                        are separate documents; a source with locales requires `locale`).
+//   --locale <code>      document locale; only with a single --language (default: the language code,
+//                        which matches the source's locale codes in SitecoreAI)
+//   --default-language   language served without a URL prefix (default: en). Other languages get
+//                        /<language> prepended to ArticleUrl/sc_url (next-intl localePrefix as-needed)
 //   --path <itemPath>    articles parent (default: /sitecore/content/main/main-website/Home/Articles)
 //   --site-url <url>     absolute site origin; when set, sc_url = <site-url><path> (clickable results)
 //   --delete <ids>       comma-separated document ids to delete (runs after upserts)
@@ -60,10 +66,15 @@ const readEnvVar = (name) => {
 
 const dryRun = flag('dry-run');
 // Source ID: --source, then project.yaml searchSources.articles, then SITECORE_SEARCH_PUSH_SOURCE_ID.
-const { readSearchSource } = createRequire(import.meta.url)('./lib/search-config.cjs');
+const { readSearchSource, readSearchLocales } = createRequire(import.meta.url)('./lib/search-config.cjs');
 const sourceId = opt('source', readSearchSource(process.cwd()));
-const locale = opt('locale', 'en');
-const language = opt('language', 'en');
+// Languages: --language, then project.yaml searchLocales, then en.
+const languageArg = opt('language', '');
+const languages = (!languageArg || languageArg === 'all' ? readSearchLocales(process.cwd()) : languageArg.split(','))
+  .map((s) => s.trim())
+  .filter(Boolean);
+const localeOverride = opt('locale', '');
+const defaultLanguage = opt('default-language', 'en');
 const parentPath = opt('path', '/sitecore/content/main/main-website/Home/Articles');
 const siteUrl = opt('site-url', '')?.replace(/\/$/, '');
 const includeEmpty = flag('include-empty');
@@ -79,6 +90,8 @@ const fail = (msg) => {
   process.exit(1);
 };
 
+if (!languages.length) fail('No languages: pass --language <codes> or set project.yaml searchLocales');
+if (localeOverride && languages.length > 1) fail('--locale needs a single --language');
 if (!contextId) fail('No SITECORE_EDGE_CONTEXT_ID / NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID in env, .env.local, or .env');
 if (!dryRun) {
   if (!sourceId) fail('Missing source: --source <configId>, project.yaml searchSources.articles, or SITECORE_SEARCH_PUSH_SOURCE_ID');
@@ -174,26 +187,41 @@ const edge = async (variables) => {
   return body.data;
 };
 
-const articles = [];
-let after = null;
-do {
-  const data = await edge({ path: parentPath, language, template: ARTICLE_TEMPLATE_ID, after });
-  if (!data?.item) fail(`Parent not found (or not published) on Edge: ${parentPath}`);
-  const page = data.item.children;
-  articles.push(...page.results);
-  after = page.pageInfo.hasNext ? page.pageInfo.endCursor : null;
-} while (after);
+const readArticles = async (language) => {
+  const articles = [];
+  let after = null;
+  do {
+    const data = await edge({ path: parentPath, language, template: ARTICLE_TEMPLATE_ID, after });
+    if (!data?.item) fail(`Parent not found (or not published in ${language}) on Edge: ${parentPath}`);
+    const page = data.item.children;
+    articles.push(...page.results);
+    after = page.pageInfo.hasNext ? page.pageInfo.endCursor : null;
+  } while (after);
+  return articles;
+};
 
 // ---------- map to operations ----------
 const warnings = [];
 const skipped = [];
-const pushable = articles.filter((a) => {
-  if (includeEmpty || stripHtml(a.content?.value)) return true;
-  skipped.push(`${a.name} (${dashedGuid(a.id)})`);
-  return false;
-});
-const operations = pushable.map((a) => {
-  const path = a.url?.path || a.articleUrl?.value || '';
+const readCounts = [];
+const operations = [];
+
+/** One upsert per published article in `language`, keyed by the item ID (same id in every locale). */
+const toOperations = (articles, language, locale) => {
+  const pushable = articles.filter((a) => {
+    if (includeEmpty || stripHtml(a.content?.value)) return true;
+    skipped.push(`[${language}] ${a.name} (${dashedGuid(a.id)})`);
+    return false;
+  });
+  // Edge returns the same url.path in every language; the host serves non-default
+  // languages under /<language> (next-intl localePrefix "as-needed").
+  const prefix = language === defaultLanguage ? '' : `/${language}`;
+  return pushable.map((a) => toOperation(a, language, locale, prefix));
+};
+
+const toOperation = (a, language, locale, prefix) => {
+  const edgePath = a.url?.path || a.articleUrl?.value || '';
+  const path = edgePath ? `${prefix}${edgePath}` : '';
   const fields = {
     Title: a.title?.value || a.name,
     ArticleContent: stripHtml(a.content?.value),
@@ -203,9 +231,9 @@ const operations = pushable.map((a) => {
     ArticleTopic: a.topic?.value || '',
     ArticleAuthor: authorName(a.author?.jsonValue),
   };
-  for (const [k, v] of Object.entries(fields)) if (!v) warnings.push(`${a.name}: empty ${k}`);
+  for (const [k, v] of Object.entries(fields)) if (!v) warnings.push(`[${language}] ${a.name}: empty ${k}`);
   if (a.articleUrl?.value && a.url?.path && a.articleUrl.value !== a.url.path) {
-    warnings.push(`${a.name}: ArticleUrl field "${a.articleUrl.value}" != Edge url.path "${a.url.path}" (using Edge path)`);
+    warnings.push(`[${language}] ${a.name}: ArticleUrl field "${a.articleUrl.value}" != Edge url.path "${a.url.path}" (using Edge path)`);
   }
   const op = {
     action: 'upsert',
@@ -215,11 +243,17 @@ const operations = pushable.map((a) => {
   };
   if (siteUrl && path) op.sc_url = `${siteUrl}${path}`;
   return op;
-});
+};
 
-for (const id of deleteIds) operations.push({ action: 'delete', id: dashedGuid(id), locale });
+for (const language of languages) {
+  const locale = localeOverride || language;
+  const articles = await readArticles(language);
+  readCounts.push(`${language}: ${articles.length}`);
+  operations.push(...toOperations(articles, language, locale));
+  for (const id of deleteIds) operations.push({ action: 'delete', id: dashedGuid(id), locale });
+}
 
-console.log(`Read ${articles.length} published article(s) from Edge under ${parentPath}`);
+console.log(`Read published articles from Edge under ${parentPath} (${readCounts.join(', ')})`);
 if (skipped.length) {
   console.log(`Skipped ${skipped.length} with empty ArticleContent (use --include-empty to push; --delete <id> to remove an already-pushed stub):\n  - ${skipped.join('\n  - ')}`);
 }
@@ -258,7 +292,7 @@ for (let i = 0; i < operations.length; i += BATCH_SIZE) {
     else {
       failed += 1;
       const src = batch[r.index];
-      console.error(`  FAILED ${r.action} ${src?.id} (${src?.fields?.Title ?? ''}): ${r.statusCode} ${r.errorMessage ?? ''}`);
+      console.error(`  FAILED ${r.action} ${src?.id} [${src?.locale}] (${src?.fields?.title ?? ''}): ${r.statusCode} ${r.errorMessage ?? ''}`);
     }
   }
   console.log(`Batch ${i / BATCH_SIZE + 1}: HTTP ${res.status} status=${body.status}`);
