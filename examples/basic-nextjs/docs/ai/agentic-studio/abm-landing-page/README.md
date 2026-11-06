@@ -4,10 +4,13 @@ Sitecore demo artifact (branch `sitecore-demo`). An Agentic Studio standard agen
 
 These files are **not** a repo skill: they live outside `.agents/skills/` so `npm run agents:sync` ignores them. The repo's `sitecore-abm-page` skill (Pi, Claude Code, Cursor) is separate and unchanged.
 
+When resuming this iteration, read the [2026-11-05 handoff](ITERATION-2026-11-05.md) first for agent/Brand Context changes, verified versus pending state, the XP-focus correction and safe next steps.
+
 | File | What it is |
 |---|---|
-| `SKILL.md` | Skill content, uploaded in Agentic Studio as **ABM Landing Page For One Account** |
-| `agent.json` | Last Studio export (skill `525f11e3-c359-4ac6-b980-4b2ba0e557a4`), **pending a fresh export with the Content Hub connector and prompt amendment**. Keep the current Studio configuration; replace this file with its export, not a guessed connector ID |
+| `SKILL.md` | Updated local skill for **ABM Landing Page For One Account**, including index → selected-story retrieval; marketer reports Studio replacement done, acceptance/current export pending |
+| [`customer-evidence/`](customer-evidence/README.md) | Six source-checked pilot records and Story Index uploaded/read-back verified 2026-11-05; verified IDs included; local retrieval amendment ready, not yet verified in Studio |
+| `agent.json` | Agent definition; **only `prompt` updated locally** for SitecoreAI-first behavior. All other attributes/config remain the older export (skill `525f11e3-c359-4ac6-b980-4b2ba0e557a4`). Copy the prompt value into the connected Studio agent; do not import the full stale config. Current export synchronization still pending |
 
 ## Prerequisites (sitecore-demo environment)
 
@@ -51,13 +54,21 @@ The card needs no portraits or logo strips. Empty optional feature/stat/FAQ/CTA 
 
 ## Install / update
 
-### Update the existing Studio agent (Content Hub integration)
+### Indexed customer evidence — local amendment ready
+
+**Studio status (2026-11-05):** The original retrieval update was marketer-reported. A subsequent full Sage run exposed product-focus drift after the marketer confirmed an XP relationship. The local SitecoreAI-first correction is now prepared, but its skill/prompt replacement and updated index metadata are not installed/read-back verified. Current export, expanded tool details, repeat runs and timing remain pending.
+
+The index and six stories passed read-back on 2026-11-05. The local skill now defers customer documents until angle selection and follows [Customer evidence retrieval](SKILL.md#customer-evidence-retrieval): index → one applicable ready record, same-source fields/optional proof, and bounded failure handling. Product, audience and voice loading remain; hero-only discovery and page-writing safeguards are preserved. This is prompt-guided selection, not a new ranking service.
+
+Before replacing the Studio skill, capture repeatable baseline runs for Sage, AEGEAN and another industry with the current skill/model/settings. The local edit has not changed Studio, so that baseline is still possible. Then replace the existing skill content and conflicting prompt rule using the steps below. Keep the connected MCP selections; no new connector is needed. For the SitecoreAI-first correction, update the existing Story Index content once as described in the library guide; the six source-story documents need no re-upload. Obtain the current agent export before auditing/editing its configuration, and export again afterward; never import the stale repo JSON over it. Studio installation, functional acceptance and measured performance comparison are pending—no speedup is claimed from local checks.
+
+### Update the existing Studio agent (retrieval and image policy)
 
 1. Edit the existing **ABM Landing Page For One Account** skill and replace its content with `SKILL.md`. Editing in place keeps its ID (`525f11e3-…`); creating a copy produces a new ID, which must be selected on the agent.
 2. On the existing agent, under **Tools & skills → MCP**, keep **Marketer MCP** and select the **Content Hub MCP** connected to `ffde.sitecoresandbox.cloud`. Keep the existing tool selections, including image generation **off**. Do not infer the custom connector's `defaultContext` identifier from its display name or from Pi's namespace.
-3. **Replace all previous automatic portrait/logo and image-audit rules** in the current agent's system prompt with this rule; do not append it alongside conflicting rules:
+3. **Replace conflicting customer-story loading/selection rules, automatic portrait/logo rules and image-audit rules** in the current agent's system prompt with this rule; do not append it beside older instructions. Preserve unrelated prompt content and actual connector identifiers:
 
-   > Keep account research, intake and page-writing safeguards. Use Customer Evidence v2 only when its Site facts availability is enabled: one published customer's company name, factual story summary and source link, with an optional verbatim quote from that same story. While registration is pending, omit the new field names and use quote-only fallback. Portrait/logo fields are empty on new pages and preserved on updates unless an explicit replacement/clear is approved; never search for them. Choose only the hero image automatically with the found + public-link workflow. Use available sourced stats and 3–5 useful FAQ pairs rather than filler; unused slots are empty. Complete the page draft and obtain approval before writes. Do not change shared designs or publish.
+   The system prompt's source of truth is the **`prompt` attribute in `agent.json`**. Copy that decoded string into the existing agent's system-prompt field, replacing its old prompt; do not paste the whole JSON or this README. The local change affects only `prompt`, not `config`, tools, skills or connector identifiers. Because the remaining config is still the older export, do not import the full file over the already-connected agent; synchronize it from a current Studio export afterward.
 
 4. Save, export the updated agent, and replace the repo's `agent.json` with that export, preserving its connector identifiers and tool selections. **Until this export is received, do not import the old repo JSON over the already-connected agent.**
 5. Run the read-only Studio tool check below before the acceptance test.
@@ -69,6 +80,22 @@ Create/upload the skill, select its resulting ID on an agent imported from `agen
 The read-only boundary is a **skill policy**, not a server-side tool restriction: this MCP also exposes writes. For enforcement, give its Studio connection a Content Hub identity restricted to the required reads, without entity/schema creation, updates, deletes or lifecycle transitions. Existing public links avoid needing link-creation permissions.
 
 ## Test
+
+### Read-only customer-evidence check
+
+Run each fixture in a fresh Studio chat after installing the skill, using the same model/settings. Repeat to assess consistency. These are **synthetic test assumptions**, not researched assertions about an account's actual systems or pain:
+
+| Account fixture | Recipient | Opportunity / angle |
+|---|---|---|
+| Sage | CMO | Faster global B2B marketing production and personalization |
+| AEGEAN | CDO | Personalized multilingual traveler information across touchpoints |
+| Mayo Clinic | Digital experience leader | A connected website/patient-portal experience for personalized access to care |
+
+Prompt (substitute the fixture):
+
+> Run only the skill's customer-evidence lookup. For this read-only fixture, assume research/intake are complete: account = <account>, recipient = <role>, opportunity = <opportunity>. Choose the angle, then follow Customer evidence retrieval. Return the selected story and reason, official URL, factual summary, optional exact quote/attribution and achieved stats that fit the field limits. Report customer-document titles/IDs, call count and returned characters from existing responses. No account research, extra questions, image queries, page/asset writes or publishing in this test.
+
+Inspect the trace: apply the SitecoreAI proof-fit filter before ranking; an XP relationship is not permission to select FIS/Microsoft/Fujitsu or classic XM-led WellSpan automatically. The normal eligible lookup is one index + one record, not a legacy/folder/all-story fetch. If no relevant direct/foundation row fits, bounded current-product search or empty proof is correct. The earlier FIS/WellSpan smoke selections are historical policy results, not acceptance under this correction. Missing optional quote/metrics must not cause another lookup. Test an explicit story choice, no applicable ready entry, an unavailable index/record, unknown dates, historical XP/XM products, and FIS's `more than 200%` value (over the 8-character stat limit: omit it as a stat rather than strip the qualifier). If no baseline exists, record performance as unmeasured rather than infer an improvement. Full draft timing and approved page write/read-back still require the normal end-to-end acceptance run below.
 
 ### Read-only Studio tool check
 
@@ -88,6 +115,11 @@ Run with `IKEA`, answer intake and approve the page draft. While v2 registration
 | v2 enabled, published customer story but no exact quote | Source-linked company/summary card without quote or images |
 | v2 enabled, exact quote available from the same story | Card may also show the real quote and author text; no portrait/logo dependency |
 | No published story/quote | Evidence/quote fields empty; no invented proof and no empty section frame |
+| Normal indexed lookup | After angle selection, one index + one applicable ready record; selection explained; no routine web reread |
+| Missing optional quote/metric | Summary/link remain useful; no alternate/search to fill optional content |
+| Unreadable index / no applicable ready row | Bounded official fallback or empty proof; no required-context false stop |
+| First selected record fails | At most one alternate record for a genuine failure, not an exhaustive library sweep |
+| Historical products / projected figures / long qualifier | Preserve source applicability and meaning; no current-AI substitution, forecast-as-outcome or qualifier removal |
 | Older page without new evidence fields | Legacy Default/Sitecore quote/manual images remain unchanged |
 | Empty optional sections / partial FAQ pairs | No content frames/padding in live mode; wrappers preserved and editor fields remain visible |
 | Existing page with authored portrait/logos | Reuse current field values without Content Hub lookups; no silent clear |
@@ -116,6 +148,7 @@ Read-only HTTP probes from this harness passed 2026-11-03 for an existing public
 | 12 | Tools | All page work goes through `marketer_mcp`; tools load on demand via `ToolSearch`. The Marketer MCP is attached through `defaultContext` (`marketer-mcp`). Agent API Sites, Pages, Content and Brand Kits stay on by the marketer's choice, for reads only: the `pages` namespace has no `create_page`, and its `update_page_*` tools create a version per call, so the skill keeps all page writes in `marketer_mcp`. Lengths are counted with `skill_runtime.bash`. The page open in Page builder is never the target unless the marketer chose to update it. |
 | 13 | Content Hub (hero-only automation) | Hero search → batch public_link(action: list) → image assignment; reuse supplied hero URLs and metadata. No portrait/logo discovery, image audit, or pending-work loop. Manual social-proof values are copied/supplied, not searched. Preserve Studio connector configuration; uploads/link creation stay outside scope. |
 | 14 | Customer Evidence v2 (2026-11-04) | User approved B: additive route fields and an explicit CustomerEvidence presentation, data-driven activation through legacy exports, no shared layout switch; optional section frames collapse with editor wrappers retained. Live registration/serialization remain pending. |
+| 15 | Indexed customer evidence (2026-11-05) | Six stories/index uploaded and verified. Local skill uses deferred index → one selected ready record with ranked applicability, same-source proof and bounded fallback. Studio installation/export and before/after comparison remain pending. |
 
 ## Test log (historical)
 
@@ -148,3 +181,8 @@ Earlier entries document superseded image workflows. Current defaults are decisi
 | 2026-11-05 | Scoped serialization after CLI login | Refreshed CLI login succeeded. Pulled marker verification + exactly 4 new items in a private temporary module; CLI marker IDs matched the MCP environment. Verified field/variant IDs, parents, types, descriptions, validation and sort order, then copied only the 4 generated YAML files to their existing module paths. No marker/module/auth files added to the repository; no Sitecore push or page publishing. Frontend commit/deployment and Studio acceptance remain pending |
 | 2026-11-05 | Pre-deployment offline gate | Full suite: 438 tests/41 suites passed. TypeScript, agents:check, 33/33 component registrations and read-only Main.Templates/FmcCustomDemo.Content serialization validation passed. Existing SearchTypeahead/NavigationHeader review warnings were left untouched. Ready to commit/push the scoped deployment; Studio activation remains gated until both hosts serve it |
 | 2026-11-05 | Deployment and Studio-skill activation | Pushed scoped frontend/serialized-items commit `411d14d0` to `sitecore-demo`. Both `sitecore-live-demo.vercel.app` and `sitecore-demo-editing-host.vercel.app` served that exact SHA with HTTP 200 after 48 seconds. Enabled Customer Evidence v2 in the skill/catalog only after verification. Existing `/lp/sage-briefing` live URL returned 404; no publication was attempted, and no live evidence-page acceptance is claimed. Studio run/current export remain pending |
+| 2026-11-05 | Indexed evidence smoke test — Sage / CMO / global B2B marketing production (marketer response) | FIS selected with a relevant rationale; official URL, summary, verbatim quote/attribution and historical XP/SXA/JSS note match the verified record. 85% fits the stat limit; more than 200% is correctly retained in the summary but omitted from the constrained stat field. Reported index/FIS IDs and lengths match: 2 document-content calls, 7,646 characters. Content/relevance passes; actual tool trace, timing, repeat runs and page-write acceptance are not supplied/verified. |
+| 2026-11-05 | Indexed evidence smoke test — AEGEAN / CDO / multilingual traveler information (marketer response) | United Airlines selection, source URL, scoped summary, XM Cloud/CDP/Personalize context and no invented quote pass. Reported index/United IDs and lengths match: 2 content calls, 7,375 characters; actual trace/timing unverified. Stat eligibility is not passed: 1,800 is scale and 82% is feedback, both summary facts rather than achieved-outcome stat slots under current policy; the proposed 82% label is also 75 characters versus the 30-character limit. Follow-up should reuse the loaded record and return actual stat field values, with no extra fetch/search. |
+| 2026-11-05 | Fresh AEGEAN field-map fixture (marketer response; stat-kind/limits explicit) | United Airlines selected; three evidence fields have correct customer, qualified Rich Text summary and General Link XML/source. Quote/author and all stat pairs are proposed empty; scale/feedback are kept in the summary, not outcome slots. Field-value review passes; blank display markers must serialize as actual empty strings. Agent reports one metadata tree read, 2 content calls / 7,375 characters and no writes/asset queries; trace, timing, unconstrained repeat behavior and page-write acceptance remain unverified. |
+| 2026-11-05 | Healthcare field-map fixture — Mayo Clinic / digital experience leader (marketer response) | WellSpan selected; official URL, Rich Text/General Link, Sitecore XM (not XM Cloud), and 20% new accounts during the first two months after launch match the verified record. 20% is 3 characters and its label 28, within limits. Quote/author and unused stat pairs are empty; reported 2 content calls / 6,994 characters match index + record. Functional output/field review passes. Optional proof omissions are not gaps; phrase quotation absence as no verified quote in the retrieved record, not proof the official source has no quotation. Portrait empty is a new-page default, not permission to clear an existing manual value. Actual trace/timing and full-page draft/write/read-back remain unverified. |
+| 2026-11-05 | Full Sage run / product-focus rejection (marketer trace) | Intake selected VP Digital Experience and confirmed an existing XP relationship. Agent then made XP the angle, used Build from XP / XP FAQs/CTA and FIS historical proof, and reports creating sage-briefing (4bde5ca1-b53f-4628-bebc-1a2956a45d00, version 1) after approval. Sourced facts alone did not satisfy the SitecoreAI campaign focus. Local correction separates account background from the offer, filters legacy-led proof before ranking, scopes claims to the current official platform overview and adds index Proof fit. Earlier FIS/WellSpan selection passes do not satisfy this new scope. Updated index/Studio policy and a revised whole-page draft approval remain pending; assistant has not changed the page. |
