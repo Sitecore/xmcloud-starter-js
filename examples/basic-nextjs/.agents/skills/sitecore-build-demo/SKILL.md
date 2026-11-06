@@ -332,7 +332,7 @@ Report component instance IDs, datasource wiring, relative order, exceptions, ve
 
 Follow **"Set up search for an environment"** in `.agents/skills/sitecore-search/SKILL.md`, using `--directory docs/ai/demos/<client>/search-setup` and the approved `--home-placement`.
 - Run it after Phase 6, so connect reads the assembled Home and anchors Latest Articles there.
-- The user publishes once at the end, for the build and search together. Then push the articles, redeploy the showcase (it serves cached pages until its next deploy), and verify in Phase 8.
+- The user publishes once at the end, for the build and search together. Then push the articles, wait about a minute (the showcase re-renders pages at most 60 seconds after publishing), and verify in Phase 8.
 - Report `seed-result.json` and `connect-result.json` in the summary: `sharedSandboxImages`, `manualPlacements` and `cleanupDatasources` go under Manual Tasks.
 - If the environment has no push source yet, the setup checklist (`.agents/skills/sitecore-search/references/push-source-setup.md`) is a user task. Seeding and connecting can run before it exists, but connect needs the source ID.
 

@@ -18,6 +18,12 @@ import { isIndexingAllowed } from "lib/indexing";
 import { directionFor } from "src/i18n/locale-preference";
 import { DocumentLocale } from "src/components/i18n/DocumentLocale";
 
+// Incremental Static Regeneration: a rendered page is reused for at most 60 seconds, then
+// re-rendered from Experience Edge in the background on the next request. Publishing in
+// SitecoreAI therefore reaches the live site within about a minute, without a redeploy.
+// Draft mode (Pages editing and preview) always renders fresh.
+export const revalidate = 60;
+
 type PageProps = {
   params: Promise<{
     site: string;
