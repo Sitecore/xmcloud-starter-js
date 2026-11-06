@@ -54,6 +54,7 @@ Working records go to `--directory`: `docs/ai/demos/<client>/search-setup` in a 
    - *Done when* `connect-result.json` reports `complete`. A `partial` result with `manualPlacements` means those become Pages tasks for the user (Agent API down; see `agent-api-limitations.md` §4). Also list `cleanupDatasources` for Content Editor.
 6. **Publish.** The user publishes the site once.
    - A deployed showcase re-renders each page at most 60 seconds after its last render (`revalidate = 60` on the catch-all page). Wait about a minute after publishing before step 8. The first request after that may still get the old page (with the old `SearchIndex`, so HTTP 404 `no search index found`) while it refreshes in the background; the next request gets the new one. A redeploy is needed only for code changes.
+   - With the publish webhook (ADR 0015; check with `npm run edge:webhook -- list`), pages refresh within seconds of the publish instead.
 7. **Push:**
    ```bash
    node .agents/skills/sitecore-search/scripts/push-articles.mjs --dry-run
