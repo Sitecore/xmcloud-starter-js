@@ -1,6 +1,6 @@
 generatedAt: "2026-03-20T09:00:00Z"
-lastUpdatedAt: "2026-11-05T09:46:54.076Z"
-lastUpdatedBy: "pi-agent (Customer Evidence registration/serialization/deployment verified; Studio skill enabled)"
+lastUpdatedAt: "2026-11-06T15:20:00Z"
+lastUpdatedBy: "pi-agent (auto-translate webhook: Sample Workflow submit action, authorization item, page template default workflow)"
 
 project:
   siteCollection: "main"
@@ -4123,3 +4123,49 @@ landing-page-customer-evidence-v2:
   notes:
     - "Sitecore registration, scoped serialization and frontend deployment are verified; feature readiness is enabled. Status remains partial only for Studio page acceptance/current export."
     - "Shared Landing Page Layout and all existing pages are unchanged."
+
+autoTranslate:
+  status: "complete"
+  createdAt: "2026-11-06T14:30:00Z"
+  updatedAt: "2026-11-06T15:00:00Z"
+  description: "Approving an English page in Sample Workflow calls the Azure Function in integrations/auto-translate-function, which starts SitecoreAI AI translation (Pages API TranslatePage) into the site's other languages."
+  azure:
+    subscription: "SA-EMEA-SE-DEMO-INT-CHBE-3000"
+    resourceGroup: "rg-sitecore-autotranslate"
+    functionApp: "func-sc-autotranslate-vdzoy"
+    webhookUrl: "https://func-sc-autotranslate-vdzoy.azurewebsites.net/api/sitecore/workflow-approved"
+    keyVault: "kv-sc-autotr-vdzoy"
+  items:
+    - name: "Auto Translate Function Key"
+      path: "/sitecore/system/Settings/Webhooks/Authorizations/Auto Translate Function Key"
+      itemId: "{100FA7BA-9FB3-43A1-AA50-E90E3745BE07}"
+      template: "ApiKey"
+      fields: { Key: "x-functions-key", Value: "<function key; never record>", "Add to": "Header" }
+      serialized: false
+      verified: true
+    - name: "Auto Translate"
+      path: "/sitecore/system/Workflows/Sample Workflow/Approved/Auto Translate"
+      itemId: "{E9B06897-0976-408B-B90E-FEEA71A3BBEF}"
+      template: "Webhook Submit Action"
+      fields: { Enabled: "1", Url: "https://func-sc-autotranslate-vdzoy.azurewebsites.net/api/sitecore/workflow-approved", "Serialization Type": "JSON", Authorization: "{100FA7BA-9FB3-43A1-AA50-E90E3745BE07}" }
+      serialized: false
+      verified: true
+  standardValuesChanges:
+    field: "__Default workflow = {A5BC37E7-ED96-4C1E-8590-A26E64DB55EA} (Sample Workflow)"
+    items:
+      - { template: "Blank Page Template", itemId: "{0AE3B1EF-EC50-41D1-9235-F5051A3A9462}", verified: true }
+      - { template: "Article Page Template", itemId: "{D7A5FCBA-77AA-4863-9322-69691462EB46}", verified: true }
+      - { template: "Landing Page Template", itemId: "{0014CD13-F3F1-4049-A866-3F30F508202E}", verified: true }
+    verifiedBy: "a new page from each template started in Sample Workflow/Draft (2026-11-06)"
+    serialized: "authoring/items/main-templates/.../__Standard Values.yml for all three (field ca9b9f52-4fb0-4f87-a79f-24dea62cda65)"
+  appSettings:
+    TRANSLATION_WORKFLOW_STATE: "{190B1C84-F1BE-47ED-AA41-F42193D9C8FC} (Sample Workflow/Draft)"
+  testItems: []
+  notes:
+    - "2026-11-06: Simulated approval of the test page produced ja-JP, de-DE, ar-AE, es-ES versions in ~45s. TranslatePage returns a job handle; jobs/{handle}/status is 404 after completion."
+    - "Existing pages were deliberately NOT put into the workflow (their language versions would need an Approved state to stay publishable)."
+    - "2026-11-06 14:40: real Page builder approval of the test page worked end to end. Auto Publish published en only. Translations arrived in state Approved (copied from en), not Draft: publishable but not live."
+    - "2026-11-06 14:40: four parallel per-language jobs left the de-DE HeroBanner datasource (/Data/HeroBanners/Translation Test) untranslated; de-DE alone afterwards worked. Function changed to one page message, languages sequential with job polling, batchSize 1, Flex max instances 1."
+    - "2026-11-06 15:07: function now moves new translations from Approved to Draft (Pages API PATCH __Workflow state, app setting TRANSLATION_WORKFLOW_STATE = Sample Workflow Draft {190B1C84-F1BE-47ED-AA41-F42193D9C8FC}). Verified: ja-JP v4, de-DE v5, ar-AE v4, es-ES v4 -> Draft; previous Approved versions untouched."
+    - "2026-11-06 15:15: test items removed: marked __Never publish, republished (job_bf99b85a91d24eb88da23b50b4680f10: 4 items deleted from Edge, live URL 404), then deleted (recycle bin): /Home/auto-translate-test (+ workflow-check, check-article, check-landing) and /Data/HeroBanners/Translation Test."
+    - "Known gap: datasources not in a workflow (e.g. the test HeroBanner) are publishable as soon as they're translated."
