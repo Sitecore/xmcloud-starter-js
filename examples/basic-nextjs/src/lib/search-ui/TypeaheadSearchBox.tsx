@@ -56,7 +56,7 @@ export const TypeaheadSearchBox = ({
   compact?: boolean;
   onDark?: boolean;
 }) => {
-  const label = useSearchLabels();
+  const label = useSearchLabels(page?.siteName);
 
   const isEditing = page?.mode?.isEditing ?? false;
   const isPreview = page?.mode?.isPreview ?? false;

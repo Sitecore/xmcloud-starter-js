@@ -72,6 +72,7 @@ Working records go to `--directory`: `docs/ai/demos/<client>/search-setup` in a 
 - **Translated sites:** connect writes only the `en` versions of the search datasources. On a source with `searchLocales`, copy the English values of `SearchIndex`, the `*Mapping` fields, `SortBy`, `SortOrder` and `Facets` into every other language version (`update_content` with `language`), then read them back.
   - Check for translated config values too. Machine translation turns them into values like `TitleMapping="Titel"` or `SortOrder="descripción"`, which match no source attribute.
   - The components send the page's locale, except for the default language.
+  - **Translated labels:** in `Facets`, keep the name and translate only the label (`ArticleTopic:Tema`). The search UI labels are the `SearchExperience_*` entries in the site Dictionary (keys in `src/lib/search-ui/constants.ts`). Give every entry a version in each language.
 
 ## Scripts
 

@@ -80,7 +80,7 @@ const EmptyStateFallback = () => (
 
 export const Default = (props: SearchCollectionProps) => {
   const { fields, params, page, rendering } = props;
-  const label = useSearchLabels();
+  const label = useSearchLabels(page?.siteName);
 
   const isEditing = page?.mode?.isEditing ?? false;
   const isPreview = page?.mode?.isPreview ?? false;
@@ -179,7 +179,7 @@ export const Default = (props: SearchCollectionProps) => {
               const description = docValue(doc, mapping.description);
               const image = extractImageUrl(mapping.image ? doc[mapping.image] : '');
               const link = docValue(doc, mapping.link);
-              const date = formatDate(docValue(doc, mapping.date) || undefined);
+              const date = formatDate(docValue(doc, mapping.date) || undefined, page?.locale || 'en');
 
               return (
                 <Card key={docValue(doc, 'sc_item_id') || title} className="overflow-hidden">
