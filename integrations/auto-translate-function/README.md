@@ -70,15 +70,21 @@ curl -i -X POST http://localhost:7071/api/sitecore/workflow-approved \
 
 Function keys aren't checked locally. Tests: `npm test`. Types: `npm run type-check`.
 
-## Deploy to Azure (Flex Consumption)
+## First-time setup in Azure (Flex Consumption)
+
+Only for a new environment. The `sitecore-demo` environment is already set up; to change it, see [Maintaining and deploying](#maintaining-and-deploying).
 
 ```bash
-RG=rg-sitecore-autotranslate  LOC=westeurope  ST=stsitecoreautotr$RANDOM  APP=func-sitecore-autotranslate
+SUF=$RANDOM
+RG=rg-sitecore-autotranslate  LOC=westeurope  ST=stscautotr$SUF  APP=func-sc-autotranslate-$SUF  KV=kv-sc-autotr-$SUF
+printf 'RG=%s\nLOC=%s\nST=%s\nAPP=%s\nKV=%s\n' $RG $LOC $ST $APP $KV > .azure-resources.env   # gitignored
 
 az group create -n $RG -l $LOC
 az storage account create -n $ST -g $RG -l $LOC --sku Standard_LRS --allow-blob-public-access false
 az functionapp create -g $RG -n $APP --storage-account $ST \
   --flexconsumption-location $LOC --runtime node --runtime-version 24
+# One instance, so two pages never run translation jobs at the same time (see "Why one language at a time")
+az functionapp scale config set -g $RG -n $APP --maximum-instance-count 1
 
 # Key Vault with access policies (works with Contributor; RBAC role assignments would need Owner)
 az keyvault create -n $KV -g $RG -l $LOC --enable-rbac-authorization false
@@ -101,7 +107,7 @@ az functionapp function keys list -g $RG -n $APP --function-name workflowWebhook
 
 ## Configure SitecoreAI
 
-Needs a developer or admin role. These are serialized Sitecore items; agree the change with the team first.
+Needs a developer or admin role. The webhook and authorization items are **not** serialized: the authorization item holds the function key. They exist only in the environment. The page templates' default workflow **is** serialized (`authoring/items/main-templates`).
 
 1. **Pages must be in a workflow.** Check the page template's `__Standard Values` → *Default workflow*. Without a workflow there is no approval to hook into. The out-of-the-box **Basic Workflow** (`Draft` → *Approve* → `Approved`) is enough.
    - In the `sitecore-demo` environment, the site's pages (Home, About, Articles) currently have **no workflow**, so this step is still to do.
@@ -115,6 +121,130 @@ Needs a developer or admin role. These are serialized Sitecore items; agree the 
    - Serialization Type: JSON
    - Authorization: the item from step 2
 4. Approve an English page, then check the function's logs (Application Insights → traces, filter on `[webhook]`, `[plan]`, `[translate]`) and the page's other language versions.
+
+## Maintaining and deploying
+
+Azure is **not** updated automatically. Merging to `main` changes nothing in Azure: a change goes live only when someone deploys it with the steps below. The Sitecore template change (default workflow) is the exception; it travels with the normal Sitecore deployment.
+
+### What exists where (sitecore-demo)
+
+| Where | What |
+|---|---|
+| Azure subscription `SA-EMEA-SE-DEMO-INT-CHBE-3000`, resource group `rg-sitecore-autotranslate` (West Europe) | Function app `func-sc-autotranslate-vdzoy` (Flex Consumption, Node 24, max 1 instance), storage `stscautotrvdzoy` (queues), Key Vault `kv-sc-autotr-vdzoy` (Sitecore client ID and secret), Application Insights `func-sc-autotranslate-vdzoy` (logs) |
+| Sitecore, `/sitecore/system/Workflows/Sample Workflow/Approved/Auto Translate` | Webhook Submit Action calling `https://func-sc-autotranslate-vdzoy.azurewebsites.net/api/sitecore/workflow-approved` |
+| Sitecore, `/sitecore/system/Settings/Webhooks/Authorizations/Auto Translate Function Key` | Sends the function key as `x-functions-key` |
+| Sitecore, page templates' `__Standard Values` (Blank, Article, Landing) | `__Default workflow` = Sample Workflow (also in `authoring/items/main-templates`) |
+| SitecoreAI Deploy, environment credentials | The **Automation** client the function uses |
+| `docs/ai/manifests/sitecore-manifest.yaml` → `autoTranslate` | IDs, history, verification of all of the above |
+
+`.azure-resources.env` (gitignored) holds the Azure names for the commands below. If it's missing, recreate it from the table.
+
+### Prerequisites
+
+```bash
+export PATH="$HOME/.azcli/bin:$PATH"     # az is installed there on the demo machine
+az login                                 # as an account with Contributor on the subscription
+az account set -s SA-EMEA-SE-DEMO-INT-CHBE-3000
+func --version                           # Azure Functions Core Tools 4 (npm i -g azure-functions-core-tools@4)
+cd integrations/auto-translate-function && source .azure-resources.env && npm install
+```
+
+### Change and deploy the code
+
+1. Work on a feature branch; change `src/`, and add or adjust tests in `test/`.
+2. Check locally:
+   ```bash
+   npm test && npm run type-check
+   ```
+3. If the change alters a **queue message shape** (`src/messages.ts`), make sure the queues are empty first, so old messages aren't read by new code:
+   ```bash
+   CS=$(az storage account show-connection-string -n $ST -g $RG --query connectionString -o tsv)
+   for q in translate-requests translate-pages; do echo "$q: $(az storage message peek -q $q --num-messages 32 --connection-string "$CS" --query 'length(@)' -o tsv)"; done
+   ```
+4. Deploy (takes 1–2 minutes; it restarts the app):
+   ```bash
+   npm run clean && npm run build && func azure functionapp publish $APP --typescript
+   ```
+   The output must list `planTranslations`, `translatePage` and `workflowWebhook`, and end with `The deployment was successful!`.
+5. Smoke test. This calls only the webhook and translates nothing: a Japanese version is always skipped.
+   ```bash
+   KEY=$(az functionapp function keys list -g $RG -n $APP --function-name workflowWebhook --query default -o tsv)
+   node -e 'const s=require("./samples/workflow-approved.json"); s.DataItem.Language="ja-JP"; process.stdout.write(JSON.stringify(s))' \
+     | curl -s -X POST https://$APP.azurewebsites.net/api/sitecore/workflow-approved \
+         -H "x-functions-key: $KEY" -H 'Content-Type: application/json' --data @-
+   # expected: {"queued":false,"reason":"Item language \"ja-JP\" is not the source language \"en\"."}
+   ```
+6. For changes to the translation logic, also do a real test: approve an English test page in the Page builder, check the logs (below), then remove the test page (mark it *Never publish*, publish it, delete it).
+7. Commit and open a PR as usual.
+
+### Read the logs
+
+Azure portal → Application Insights `func-sc-autotranslate-vdzoy` → Logs → `traces`. Or from the terminal (logs arrive 1–3 minutes late):
+
+```bash
+APPID=$(az resource show -g $RG -n $APP --resource-type microsoft.insights/components --query properties.AppId -o tsv)
+Q='traces | where timestamp > ago(1h) | where message has_any ("[webhook]","[plan]","[translate]") | order by timestamp asc | project timestamp, message'
+az rest --method post --resource https://api.applicationinsights.io \
+  --url "https://api.applicationinsights.io/v1/apps/$APPID/query" \
+  --body "$(node -e 'console.log(JSON.stringify({query:process.argv[1]}))' "$Q")" --query "tables[0].rows" -o tsv
+```
+
+A healthy run: `[webhook] queued`, `[plan] page ... en -> ...`, one `[translate] ... translated in Ns; workflow vN: Approved -> Draft` per language, then `finished`. Lines with `GAVE UP` or `REVIEW BEFORE PUBLISHING` need action (see Troubleshooting).
+
+### Change a setting
+
+```bash
+az functionapp config appsettings set -g $RG -n $APP --settings TARGET_LANGUAGES=de-DE,ja-JP   # for example
+```
+
+The app restarts by itself. See [Settings](#settings) for the list. Settings live only in Azure, so record non-default values in the manifest.
+
+### Switch it off quickly
+
+- **From Sitecore (preferred):** clear **Enabled** on `/sitecore/system/Workflows/Sample Workflow/Approved/Auto Translate`. Approvals keep working; nothing is translated.
+- **From Azure:** `az functionapp stop -g $RG -n $APP` (start again with `az functionapp start`). Sitecore's webhook calls then fail, but approvals still go through.
+
+### Roll back a bad deploy
+
+There are no deployment slots. Redeploy the last good commit:
+
+```bash
+git worktree add /tmp/autotranslate-rollback <good-commit>
+cd /tmp/autotranslate-rollback/integrations/auto-translate-function
+npm ci && npm run build && func azure functionapp publish func-sc-autotranslate-vdzoy --typescript
+cd - && git worktree remove /tmp/autotranslate-rollback
+```
+
+### Rotate secrets
+
+- **Sitecore automation client:**
+  1. Create a new Automation client in SitecoreAI Deploy.
+  2. Store it in Key Vault:
+     ```bash
+     az keyvault secret set --vault-name $KV -n sitecore-client-id --value '<new id>'
+     az keyvault secret set --vault-name $KV -n sitecore-client-secret --value '<new secret>'
+     az functionapp restart -g $RG -n $APP
+     ```
+  3. Run the smoke test and a real approval, then delete the old client in Deploy.
+- **Function key:**
+  1. Create a new key and copy its value without pasting it into chat or tickets:
+     ```bash
+     az functionapp function keys set -g $RG -n $APP --function-name workflowWebhook --key-name sitecore
+     ```
+  2. Paste the value into **Value** of `/sitecore/system/Settings/Webhooks/Authorizations/Auto Translate Function Key`.
+  3. Run the smoke test.
+  4. Delete the old key:
+     ```bash
+     az functionapp function keys delete -g $RG -n $APP --function-name workflowWebhook --key-name default
+     ```
+
+### Remove everything
+
+1. Delete the **Auto Translate** webhook action and the **Auto Translate Function Key** authorization item in Sitecore.
+2. If page workflow is no longer wanted, clear `__Default workflow` on the three templates in Sitecore *and* in `authoring/items/main-templates`.
+3. Delete the Azure resources: `az group delete -n rg-sitecore-autotranslate`.
+4. Delete the Automation client in SitecoreAI Deploy.
+5. Update the manifest.
 
 ## Troubleshooting
 
