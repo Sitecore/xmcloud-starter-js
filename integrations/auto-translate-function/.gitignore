@@ -1,0 +1,8 @@
+node_modules/
+dist/
+local.settings.json
+__azurite_db*.json
+__blobstorage__/
+__queuestorage__/
+*.zip
+.azure-resources.env

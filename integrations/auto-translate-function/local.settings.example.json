@@ -1,0 +1,16 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+
+    "SITECORE_CLIENT_ID": "<automation client ID from SitecoreAI Deploy>",
+    "SITECORE_CLIENT_SECRET": "<automation client secret>",
+    "SITECORE_SITE_NAME": "main-website",
+    "SITECORE_ENVIRONMENT_ID": "",
+
+    "SOURCE_LANGUAGE": "en",
+    "TARGET_LANGUAGES": "",
+    "TRANSLATION_STRATEGY": "AddVersion"
+  }
+}

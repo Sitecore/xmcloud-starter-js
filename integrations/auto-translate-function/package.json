@@ -1,0 +1,28 @@
+{
+  "name": "sitecore-auto-translate-function",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Azure Functions app that runs SitecoreAI AI page translation when an English page is approved in workflow.",
+  "main": "dist/functions/*.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "prestart": "npm run clean && npm run build",
+    "start": "func start",
+    "test": "vitest run",
+    "type-check": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "rimraf": "^6.1.4",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

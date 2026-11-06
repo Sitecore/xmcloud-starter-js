@@ -1,0 +1,15 @@
+*.js.map
+*.ts
+!dist/**
+.git*
+.vscode
+local.settings.json
+local.settings.example.json
+test/
+samples/
+tsconfig*.json
+vitest.config.*
+README.md
+__azurite_db*.json
+__blobstorage__/
+__queuestorage__/
