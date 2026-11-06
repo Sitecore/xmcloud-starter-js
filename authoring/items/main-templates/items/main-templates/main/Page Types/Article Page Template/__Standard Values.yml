@@ -3,6 +3,10 @@ ID: "d7a5fcba-77aa-4863-9322-69691462eb46"
 Parent: "74360ad2-d3df-4fce-834c-2f5420488677"
 Template: "74360ad2-d3df-4fce-834c-2f5420488677"
 Path: /sitecore/templates/Project/main/Page Types/Article Page Template/__Standard Values
+SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}"
 Languages:
 - Language: en
   Versions:
