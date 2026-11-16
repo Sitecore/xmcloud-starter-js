@@ -8,7 +8,7 @@ on:
     branches: [dmz]
 
 env:
-  NODE_VERSION: "24.22.1"
+  NODE_VERSION: "24.22.3"
 
 jobs:
   validate-dmz:

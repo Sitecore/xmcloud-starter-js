@@ -327,7 +327,7 @@ To ensure the DMZ workflow provides maximum security, the following branch prote
 
 The workflows use the following environment variables:
 
-- `NODE_VERSION`: Set to `24.22.1` (matches xmcloud.build.json, required by `@sitecore-content-sdk/*@2.0.2` which needs Node `>=24`)
+- `NODE_VERSION`: Set to `24.22.3` (matches xmcloud.build.json, required by `@sitecore-content-sdk/*@2.0.2` which needs Node `>=24`)
 - `GITHUB_TOKEN`: Automatically provided by GitHub Actions
 
 ### Starter Applications
