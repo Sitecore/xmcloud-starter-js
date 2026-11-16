@@ -4,17 +4,22 @@ import { LayoutServiceData, HTMLLink } from '@sitecore-content-sdk/nextjs';
 import client from 'src/lib/sitecore-client';
 
 /**
- * Converts a preload link to a stylesheet once loaded so it does not block initial render.
- * Reduces LCP by moving Sitecore edge styles (e.g. content-styles.css) off the critical path.
+ * Promotes a preload link to a stylesheet as soon as the element is mounted.
+ * A cached file can finish loading before React attaches onLoad, and React does not
+ * replay that event. Switching rel here reuses the preloaded file.
  */
-const applyStylesheetOnLoad = (link: HTMLLinkElement): void => {
-  link.onload = null;
+const promotePreloadedStylesheet = (link: HTMLLinkElement | null): void => {
+  if (!link || link.rel === 'stylesheet') {
+    return;
+  }
+
   link.rel = 'stylesheet';
 };
 
 /**
  * Renders Sitecore style links in a non-render-blocking way.
- * Stylesheet links use rel="preload" + onload to apply after load; other links render as-is.
+ * Stylesheet links use rel="preload" in server HTML, then become stylesheets on mount.
+ * Other links render as-is.
  */
 const SitecoreStyles = ({
   layoutData,
@@ -42,7 +47,7 @@ const SitecoreStyles = ({
                 rel="preload"
                 href={href}
                 as="style"
-                onLoad={(e) => applyStylesheetOnLoad(e.currentTarget)}
+                ref={promotePreloadedStylesheet}
               />
               <noscript>
                 <link rel="stylesheet" href={href} />
